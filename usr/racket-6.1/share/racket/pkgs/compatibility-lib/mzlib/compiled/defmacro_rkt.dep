@@ -1,0 +1,1 @@
+("6.1" ("aa03bc672afb828b2bead7e8d3a275975a8152d7" . "cec7ce03a57290eff646395c3b7a7f8b7ca1707c") (collects #"compatibility" #"defmacro.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

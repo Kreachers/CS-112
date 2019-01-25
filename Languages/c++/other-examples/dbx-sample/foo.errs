@@ -1,0 +1,9 @@
+<rtc> Read from unallocated (rua):
+Attempting to read 4 bytes through NULL pointer
+=>[1] __rwstd::__rw_basis<char*,std::allocator<char> >::data(this = (nil)), line 109 in "memory"
+  [2] std::basic_string<char,std::char_traits<char>,std::allocator<char> >::__pref(this = (nil)), line 755 in "string"
+  [3] std::basic_string<char,std::char_traits<char>,std::allocator<char> >::length(this = (nil)), line 1293 in "string"
+  [4] std::operator<< <char,std::char_traits<char>,std::allocator<char> >(os = CLASS, s = CLASS), line 526 in "ostream"
+  [5] operator<<(out = CLASS, node = STRUCT), line 22 in "foo.cc"
+  [6] main(argc = 1, argv = 0xffbef3d4), line 41 in "foo.cc"
+

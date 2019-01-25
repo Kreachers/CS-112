@@ -1,0 +1,1 @@
+("6.1" ("1db2c92fbfe3b74c6a657b9f6e520d92c228ce8d" . "73efc87760233174bbda2038d8e63d5b5863bf18") (collects #"scheme" #"base.rkt") (collects #"scribble" #"private" #"indirect-renderer.rkt") (collects #"scribble" #"latex-render.rkt") (collects #"scribble" #"private" #"run-pdflatex.rkt") (collects #"scheme" #"runtime-config.rkt"))

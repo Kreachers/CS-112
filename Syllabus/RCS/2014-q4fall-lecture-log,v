@@ -1,0 +1,68 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2015.09.22.00.51.20;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@
+Fall 2014
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Mon Oct  6 - intro; syllabus; 1-Introduction; 2-History
+ 2. Wed Oct  8 - Perl: "Taming Camel", Perl-notes.dir
+
+week  2:
+ 4. Mon Oct 13 - asg1 details, code/ subdir; 3-Design
+ 5. Wed Oct 15 - 3-Design
+
+week  3:
+ 7. Mon Oct 20 - 5-Basic Semantics
+ 8. Wed Oct 22 - Smalltalk; asg2
+
+week  4:
+10. Mon Oct 27 - review asg2; object-oriented programming
+11. Wed Oct 29 - TEST 1; OOP implementation
+
+week  5:
+13. Mon Nov  3 - intro Scheme
+14. Wed Nov  5 - program 3; Scheme higher-order functions
+
+week  6:
+16. Mon Nov 10 - Scheme higher-order functions; program 3
+17. Wed Nov 12 - lambda calculus; data types
+
+week  7:
+19. Mon Nov 17 - introduction Ocaml
+20. Wed Nov 19 - TEST 2; project 4
+
+week  8:
+22. Mon Nov 24 - project 4 dc; more Ocaml
+23. Wed Nov 26 - Ocaml higher-order functions
+
+week  9:
+25. Mon Dec  1 - Prolog
+26. Wed Dec  3 - Prolog; data types; exprs & stmts; procs & envs
+
+week 10:
+28. Mon Dec  8 - procs & envs; delayed (lazy) evaluation & Haskell
+29. Wed Dec 10 - review old exams
+
+$Id: Lecture-log-2014-q4fall,v 1.22 2014-12-11 16:21:44-08 - - $
+@

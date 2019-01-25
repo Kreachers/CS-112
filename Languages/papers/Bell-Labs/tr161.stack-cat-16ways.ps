@@ -1,0 +1,1829 @@
+%!PS
+%%Version: 3.3
+%%DocumentFonts: (atend)
+%%Pages: (atend)
+%%EndComments
+%
+% Version 3.3 prologue for troff files.
+%
+
+/#copies 1 store
+/aspectratio 1 def
+/formsperpage 1 def
+/landscape false def
+/linewidth .3 def
+/magnification 1 def
+/margin 0 def
+/orientation 0 def
+/resolution 720 def
+/rotation 1 def
+/xoffset 0 def
+/yoffset 0 def
+
+/roundpage true def
+/useclippath true def
+/pagebbox [0 0 612 792] def
+
+/R  /Times-Roman def
+/I  /Times-Italic def
+/B  /Times-Bold def
+/BI /Times-BoldItalic def
+/H  /Helvetica def
+/HI /Helvetica-Oblique def
+/HB /Helvetica-Bold def
+/HX /Helvetica-BoldOblique def
+/CW /Courier def
+/CO /Courier def
+/CI /Courier-Oblique def
+/CB /Courier-Bold def
+/CX /Courier-BoldOblique def
+/PA /Palatino-Roman def
+/PI /Palatino-Italic def
+/PB /Palatino-Bold def
+/PX /Palatino-BoldItalic def
+/Hr /Helvetica-Narrow def
+/Hi /Helvetica-Narrow-Oblique def
+/Hb /Helvetica-Narrow-Bold def
+/Hx /Helvetica-Narrow-BoldOblique def
+/KR /Bookman-Light def
+/KI /Bookman-LightItalic def
+/KB /Bookman-Demi def
+/KX /Bookman-DemiItalic def
+/AR /AvantGarde-Book def
+/AI /AvantGarde-BookOblique def
+/AB /AvantGarde-Demi def
+/AX /AvantGarde-DemiOblique def
+/NR /NewCenturySchlbk-Roman def
+/NI /NewCenturySchlbk-Italic def
+/NB /NewCenturySchlbk-Bold def
+/NX /NewCenturySchlbk-BoldItalic def
+/ZD /ZapfDingbats def
+/ZI /ZapfChancery-MediumItalic def
+/S  /S def
+/S1 /S1 def
+/GR /Symbol def
+
+/inch {72 mul} bind def
+/min {2 copy gt {exch} if pop} bind def
+
+/setup {
+	counttomark 2 idiv {def} repeat pop
+
+	landscape {/orientation 90 orientation add def} if
+	/scaling 72 resolution div def
+	linewidth setlinewidth
+	1 setlinecap
+
+	pagedimensions
+	xcenter ycenter translate
+	orientation rotation mul rotate
+	width 2 div neg height 2 div translate
+	xoffset inch yoffset inch neg translate
+	margin 2 div dup neg translate
+	magnification dup aspectratio mul scale
+	scaling scaling scale
+
+	/Symbol /S Sdefs cf
+	/Times-Roman /S1 S1defs cf
+	0 0 moveto
+} def
+
+/pagedimensions {
+	useclippath userdict /gotpagebbox known not and {
+		/pagebbox [clippath pathbbox newpath] def
+		roundpage currentdict /roundpagebbox known and {roundpagebbox} if
+	} if
+	pagebbox aload pop
+	4 -1 roll exch 4 1 roll 4 copy
+	landscape {4 2 roll} if
+	sub /width exch def
+	sub /height exch def
+	add 2 div /xcenter exch def
+	add 2 div /ycenter exch def
+	userdict /gotpagebbox true put
+} def
+
+/pagesetup {
+	/page exch def
+	currentdict /pagedict known currentdict page known and {
+		page load pagedict exch get cvx exec
+	} if
+} def
+
+/decodingdefs [
+	{counttomark 2 idiv {y moveto show} repeat}
+	{neg /y exch def counttomark 2 idiv {y moveto show} repeat}
+	{neg moveto {2 index stringwidth pop sub exch div 0 32 4 -1 roll widthshow} repeat}
+	{neg moveto {spacewidth sub 0.0 32 4 -1 roll widthshow} repeat}
+	{counttomark 2 idiv {y moveto show} repeat}
+	{neg setfunnytext}
+] def
+
+/setdecoding {/t decodingdefs 3 -1 roll get bind def} bind def
+
+/w {neg moveto show} bind def
+/m {neg dup /y exch def moveto} bind def
+/done {/lastpage where {pop lastpage} if} def
+
+/f {
+	dup /font exch def findfont exch
+	dup /ptsize exch def scaling div dup /size exch def scalefont setfont
+	linewidth ptsize mul scaling 10 mul div setlinewidth
+	/spacewidth ( ) stringwidth pop def
+} bind def
+
+/changefont {
+	/fontheight exch def
+	/fontslant exch def
+	currentfont [
+		1 0
+		fontheight ptsize div fontslant sin mul fontslant cos div
+		fontheight ptsize div
+		0 0
+	] makefont setfont
+} bind def
+
+/sf {f} bind def
+
+/cf {
+	dup length 2 idiv
+	/entries exch def
+	/chtab exch def
+	/newfont exch def
+
+	findfont dup length 1 add dict
+	/newdict exch def
+	{1 index /FID ne {newdict 3 1 roll put} {pop pop} ifelse} forall
+
+	newdict /Metrics entries dict put
+	newdict /Metrics get
+	begin
+		chtab aload pop
+		1 1 entries {pop def} for
+		newfont newdict definefont pop
+	end
+} bind def
+
+%
+% A few arrays used to adjust reference points and character widths in some
+% of the printer resident fonts. If square roots are too high try changing
+% the lines describing /radical and /radicalex to,
+%
+%	/radical	[0 -75 550 0]
+%	/radicalex	[-50 -75 500 0]
+%
+% Move braceleftbt a bit - default PostScript character is off a bit.
+%
+
+/Sdefs [
+	/bracketlefttp		[201 500]
+	/bracketleftbt		[201 500]
+	/bracketrighttp		[-81 380]
+	/bracketrightbt		[-83 380]
+	/braceleftbt		[203 490]
+	/bracketrightex		[220 -125 500 0]
+	/radical		[0 0 550 0]
+	/radicalex		[-50 0 500 0]
+	/parenleftex		[-20 -170 0 0]
+	/integral		[100 -50 500 0]
+	/infinity		[10 -75 730 0]
+] def
+
+/S1defs [
+	/underscore		[0 80 500 0]
+	/endash			[7 90 650 0]
+] def
+%
+% Tries to round clipping path dimensions, as stored in array pagebbox, so they
+% match one of the known sizes in the papersizes array. Lower left coordinates
+% are always set to 0.
+%
+
+/roundpagebbox {
+    7 dict begin
+	/papersizes [8.5 inch 11 inch 14 inch 17 inch] def
+
+	/mappapersize {
+		/val exch def
+		/slop .5 inch def
+		/diff slop def
+		/j 0 def
+		0 1 papersizes length 1 sub {
+			/i exch def
+			papersizes i get val sub abs
+			dup diff le {/diff exch def /j i def} {pop} ifelse
+		} for
+		diff slop lt {papersizes j get} {val} ifelse
+	} def
+
+	pagebbox 0 0 put
+	pagebbox 1 0 put
+	pagebbox dup 2 get mappapersize 2 exch put
+	pagebbox dup 3 get mappapersize 3 exch put
+    end
+} bind def
+
+%%EndProlog
+%%BeginSetup
+mark
+/linewidth 0.5 def
+/xoffset 0 def
+/yoffset 0 def
+/#copies 1 store
+/magnification 1 def
+%%FormsPerPage: 1
+/formsperpage 1 def
+
+/landscape false def
+/resolution 720 def
+setup
+2 setdecoding
+%%EndSetup
+%%Page: 1 1
+/saveobj save def
+mark
+1 pagesetup
+12 B f
+(Sixteen Ways to Stack a Cat)5 1444 1 2158 1230 t
+10 I f
+(Bjarne Stroustrup)1 720 1 2520 1470 t
+10 R f
+(AT&T Bell Laboratories)2 993 1 2383 1650 t
+(Murray Hill, New Jersey 07974)4 1267 1 2246 1770 t
+10 I f
+(ABSTRACT)2643 2150 w
+10 R f
+( In)1 139( presents a series of examples of how to represent stacks in a program.)13 2888(This paper)1 429 3 1224 2410 t
+( of the fundamental techniques and tradeoffs of data hiding)9 2377(doing so it demonstrates some)4 1223 2 1080 2530 t
+( all the examples are written in)6 1255( Since)1 276( Ada.)1 220(as seen in languages such as C, Modula2, and)8 1849 4 1080 2650 t
+(C)1080 2770 w
+(++)1137 2764 w
+(it also demonstrates the flexibility of C)6 1609 1 1280 2770 t
+(++)2879 2764 w
+('s mechanisms for expressing data hiding)5 1691 1 2989 2770 t
+(and access.)1 448 1 1080 2890 t
+10 B f
+(1 Introduction)1 670 1 720 3250 t
+10 R f
+( issues will affect our)4 926( Several)1 367( program.)1 406(Consider representing a stack of objects of some type in a)10 2477 4 864 3430 t
+( will)1 191( We)1 198(design of the stack class: ease of use, run time efficiency, cost of recompilation after a change.)16 3931 3 720 3550 t
+( around with the representation is unacceptable so that data hiding for the representa-)13 3486(assume that messing)2 834 2 720 3670 t
+( stacks is of)3 469( type of the elements on the)6 1110( The)1 206( will assume that many stacks are necessary.)7 1781( We)1 189(tion is a must.)3 565 6 720 3790 t
+( simply call it)3 572(no interest here so we will)5 1086 2 720 3910 t
+10 CW f
+(cat)2411 3910 w
+10 R f
+( implementations of the various versions of stacks are)8 2211(. The)1 238 2 2591 3910 t
+(left as an exercise for the reader.)6 1297 1 720 4030 t
+( best)1 189(Please note that the purpose is to illustrate the diversity of data hiding techniques, not to show how)17 3987 2 864 4150 t
+(to represent stacks in C)4 936 1 720 4270 t
+(++)1646 4264 w
+( variety of types \261 most of which are more)9 1694( techniques shown here apply to a)6 1359(. The)1 231 3 1756 4270 t
+( example, if you actu-)4 901( For)1 196( techniques.)1 484(interesting than stacks \261 and will be used in conjunction with other)11 2739 4 720 4390 t
+(ally wanted to build a better stack for C)8 1645 1 720 4510 t
+(++)2355 4504 w
+(you would probably start by making)5 1492 1 2498 4510 t
+10 CW f
+(cat)4023 4510 w
+10 R f
+(a parameter, that is,)3 805 1 4235 4510 t
+(use templates\262.)1 616 1 720 4630 t
+(This paper is a fairly lighthearted play with C)8 1900 1 864 4750 t
+(++)2754 4744 w
+( something to)2 567( think it has)3 500( I)1 93(features and techniques.)2 981 4 2899 4750 t
+( horrify novices and seasoned C)5 1308(delight and possibly)2 820 2 720 4870 t
+(++)2838 4864 w
+( of the techniques shown)4 1017( Most)1 262(programmers alike.)1 782 3 2979 4870 t
+(have serious uses, though.)3 1046 1 720 4990 t
+10 B f
+( as Modules)2 506(2 Files)1 325 2 720 5230 t
+10 R f
+( we define the interface as a header file:)8 1588( First)1 234(Consider the traditional C notion of a file as a module.)10 2179 3 864 5410 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 5575 t
+(typedef int stack_id;)2 1134 1 1080 5785 t
+(stack_id create_stack\(int\);)1 1458 1 1080 5995 t
+(void destroy_stack\(stack_id\);)1 1566 1 1080 6100 t
+(void push_stack\(stack_id,cat\);)1 1620 1 1080 6310 t
+(cat pop_stack\(stack_id\);)1 1296 1 1080 6415 t
+10 R f
+(The integer argument to)3 1004 1 720 6595 t
+10 CW f
+(create_stack)1763 6595 w
+10 R f
+( can now use)3 563( We)1 203( maximum size of the desired stack.)6 1524(is the)1 228 4 2522 6595 t
+(stacks like this:)2 617 1 720 6715 t
+8 S1 f
+(__________________)720 6980 w
+8 R f
+(\262 See Chapter 14 of Ellis&Stroustrup: The Annotated C)8 1785 1 720 7080 t
+(++)2497 7076 w
+( 1990.)1 220( Wesley.)1 278( Addison)1 311(Reference Manual.)1 604 4 2606 7080 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 1 1
+%%Page: 2 2
+/saveobj save def
+mark
+2 pagesetup
+10 R f
+(- 2 -)2 166 1 2797 480 t
+9 CW f
+(#include "stack.h")1 972 1 1080 885 t
+(void f\(int sz, cat kitty\))4 1350 1 1080 1095 t
+({)1080 1200 w
+(stack_id s = create_stack\(sz\);)3 1620 1 1512 1305 t
+(push_stack\(s,kitty\);)1512 1410 w
+(cat c2 = pop_stack\(s\);)3 1188 1 1512 1515 t
+(destroy_stack\(s\);)1512 1620 w
+(})1080 1725 w
+10 R f
+( than named; the concept of the address of)8 1717( are numbered, rather)3 861( Stacks)1 314(This is rather primitive, though.)4 1284 4 864 1905 t
+( exclusively under control of)4 1152(a stack is ill defined; copying of stacks is undefined; the lifetimes of stacks are)14 3168 2 720 2025 t
+( the technique relies on the convention of)7 1699(the users;)1 386 2 720 2145 t
+10 CW f
+(.h)2837 2145 w
+10 R f
+(files and on comments to express the concept of a)9 2051 1 2989 2145 t
+(stack; the names of the stack functions are clumsy.)8 2027 1 720 2265 t
+(From a C)2 402 1 864 2385 t
+(++)1256 2379 w
+( not)1 166( stacks do)2 418( These)1 300(perspective, the problem is that there are no stack objects defined.)10 2753 4 1403 2385 t
+( little ``cookies'' \(the)3 854( Instead,)1 364( rules for naming, creation, destruction, access, etc.)7 2052(obey the general language)3 1050 4 720 2505 t
+10 CW f
+(stack_id)720 2625 w
+10 R f
+(s\) are passed to functions that manipulate stack representations.)8 2537 1 1200 2625 t
+( Not)1 216( on a stack.)3 497(Note that in many contexts it would be reasonable not to impose a maximum size)14 3463 3 864 2745 t
+( this would)2 455( However,)1 445( would allow a noticeable simplification of the stack interface.)9 2535(imposing a maximum)2 885 4 720 2865 t
+( the stack example as a vehicle for discussion of general data hiding issues because)14 3455(decrease the value of)3 865 2 720 2985 t
+(most types do require arguments to the operations that create objects.)10 2765 1 720 3105 t
+10 B f
+( Identifiers)1 469(3 Stack)1 364 2 720 3345 t
+10 R f
+(We can do a little better. First let us make)9 1670 1 864 3525 t
+10 CW f
+(stack_id)2559 3525 w
+10 R f
+(a genuine type:)2 610 1 3064 3525 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 3690 t
+(struct stack_id { int i; };)5 1458 1 1080 3900 t
+(stack_id create_stack\(int\);)1 1458 1 1080 4110 t
+(void destroy_stack\(stack_id\);)1 1566 1 1080 4215 t
+(void push_stack\(stack_id,cat\);)1 1620 1 1080 4425 t
+(cat pop_stack\(stack_id\);)1 1296 1 1080 4530 t
+10 R f
+(This at least will prevent us from accidentally mixing up stack identifiers and integers:)13 3460 1 720 4710 t
+9 CW f
+(#include "stack.h")1 972 1 1080 4875 t
+(void f\(int sz, cat kitty\))4 1350 1 1080 5085 t
+({)1080 5190 w
+(stack_id s = create_stack\(sz\);)3 1620 1 1512 5295 t
+(push_stack\(s,kitty\);)1512 5400 w
+(cat c2 = pop_stack\(sz\); // error: stack_id argument expected)8 3240 1 1512 5505 t
+(destroy_stack\(s\);)1512 5610 w
+(})1080 5715 w
+10 R f
+( of)1 110(This error would not have been caught by the compiler given the first definition)13 3200 2 720 5895 t
+10 CW f
+(stack_id)4057 5895 w
+10 R f
+( first)1 188(. These)1 315 2 4537 5895 t
+( that the implementation is completely hidden so that it can be)11 2617(two versions both have the nice property)6 1703 2 720 6015 t
+(changed without requiring recompilation of user code as long as the interface remains unchanged.)13 3908 1 720 6135 t
+10 B f
+(4 Modules)1 492 1 720 6375 t
+10 R f
+( avoid polluting the glo-)4 979( that will allow us to)5 830( Doing)1 302(Now let us use a class to specify this stack module.)10 2065 4 864 6555 t
+( stack's inter-)2 545(bal name space and relying on convention and comments to specify what is and isn't part of a)17 3775 2 720 6675 t
+(face:)720 6795 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 2 2
+%%Page: 3 3
+/saveobj save def
+mark
+3 pagesetup
+10 R f
+(- 3 -)2 166 1 2797 480 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 885 t
+(class stack {)2 702 1 1080 1095 t
+(public:)1080 1200 w
+(struct id { int i; };)5 1134 1 1512 1305 t
+(static id create\(int\);)2 1188 1 1512 1515 t
+(static void destroy\(id\);)2 1296 1 1512 1620 t
+(static void push\(id,cat\);)2 1350 1 1512 1830 t
+(static cat pop\(id\);)2 1026 1 1512 1935 t
+(};)1080 2040 w
+10 R f
+(We can use this module like this:)6 1327 1 720 2220 t
+9 CW f
+(#include "stack.h")1 972 1 1080 2385 t
+(void f\(int sz, cat kitty\))4 1350 1 1080 2595 t
+({)1080 2700 w
+(stack::id s = stack::create\(sz\);)3 1728 1 1512 2805 t
+(stack::push\(s,kitty\);)1512 2910 w
+(cat c2 = stack::pop\(s\);)3 1242 1 1512 3015 t
+(stack::destroy\(s\);)1512 3120 w
+(})1080 3225 w
+10 R f
+( don't have a `with' or `use' construct to avoid the repe-)11 2247( We)1 189( Modula-2 module.)2 771(This looks very much like a)5 1113 4 720 3405 t
+(tition of ``)2 411 1 720 3525 t
+10 CW f
+(stack::)1131 3525 w
+10 R f
+( example:)1 391(''. For)1 280 2 1551 3525 t
+9 CW f
+(void f\(int sz, cat kitty\))4 1350 1 1080 3690 t
+({)1080 3795 w
+( pseudo code)2 648( //)1 1134(use \(stack\) {)2 702 3 1512 3900 t
+(id s = create\(sz\);)3 972 1 1944 4005 t
+(push\(s,kitty\);)1944 4110 w
+(cat c2 = pop\(s\);)3 864 1 1944 4215 t
+(destroy\(s\);)1944 4320 w
+(})1512 4425 w
+(})1080 4530 w
+10 R f
+( lead to more)3 542(However, such a construct for merging name spaces is a syntactic detail and does not always)15 3778 2 720 4710 t
+( an even more radical simplification of the notation is achieved in section 10.)13 3079( Further,)1 369(readable code.)1 575 3 720 4830 t
+(Note that)1 369 1 864 4950 t
+10 CW f
+(static)1258 4950 w
+10 R f
+( used to indicate that the member functions do not operate on)11 2455(member functions were)2 942 2 1643 4950 t
+(specific objects of class)3 948 1 720 5070 t
+10 CW f
+(stack)1693 5070 w
+10 R f
+(; rather, class)2 529 1 1993 5070 t
+10 CW f
+(stack)2547 5070 w
+10 R f
+(is only used to provide a name space for)8 1608 1 2872 5070 t
+10 CW f
+(stack)4505 5070 w
+10 R f
+(oper-)4830 5070 w
+( will be made explicit below.)5 1160(ations. This)1 492 2 720 5190 t
+10 B f
+( with Sealed Identifiers)3 986(5 Modules)1 492 2 720 5430 t
+10 R f
+( stop people from messing)4 1095(To make the correspondence to Modula-2 modules more exact, we need to)11 3081 2 864 5610 t
+(around with the stack identifiers and stop them from trying to create \(C)12 2846 1 720 5730 t
+(++)3556 5724 w
+(style\) stack objects:)2 788 1 3691 5730 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 3 3
+%%Page: 4 4
+/saveobj save def
+mark
+4 pagesetup
+10 R f
+(- 4 -)2 166 1 2797 480 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 885 t
+(class stack {)2 702 1 1080 1095 t
+(public:)1080 1200 w
+(class id {)2 540 1 1512 1305 t
+(friend stack;)1 702 1 1944 1410 t
+(private:)1512 1515 w
+(int i;)1 324 1 1944 1620 t
+(};)1512 1725 w
+(static id create\(int\);)2 1188 1 1512 1935 t
+(static void destroy\(id\);)2 1296 1 1512 2040 t
+(static void push\(id,cat\);)2 1350 1 1512 2250 t
+(static cat pop\(id\);)2 1026 1 1512 2355 t
+(private:)1080 2460 w
+(virtual dummy\(\) = 0;)3 1080 1 1512 2565 t
+(};)1080 2670 w
+10 R f
+(The representation of an)3 1035 1 720 2850 t
+10 I f
+(id)1801 2850 w
+10 R f
+(is now accessible only to class)5 1323 1 1925 2850 t
+10 CW f
+(stack)3295 2850 w
+10 R f
+(, ``the implementation module for)4 1445 1 3595 2850 t
+10 CW f
+(stack)720 2970 w
+10 R f
+(s,'' and class)2 518 1 1020 2970 t
+10 CW f
+(stack)1563 2970 w
+10 R f
+(is an abstract class so that no objects of class)9 1789 1 1888 2970 t
+10 CW f
+(stack)3702 2970 w
+10 R f
+(can be created:)2 597 1 4027 2970 t
+9 CW f
+( error: declaration of object of abstract class stack)8 2862( //)1 216(stack x;)1 432 3 1080 3135 t
+10 R f
+( An)1 179( virtual function to prevent the creation of objects is a bit obscure, but effective.)14 3281(The use of a pure)4 716 3 864 3315 t
+(alternative technique would have been to give)6 1835 1 720 3435 t
+10 CW f
+(stack)2580 3435 w
+10 R f
+(a private constructor.)2 845 1 2905 3435 t
+(Naturally, the example of stack usage from section 4 works exactly as before.)12 3098 1 864 3555 t
+10 B f
+(6 Packages)1 519 1 720 3795 t
+10 R f
+(In the style of Modula-2, we are now passing around ``little cookies'' \(opaque types\) used by the imple-)17 4176 1 864 3975 t
+( we want we can pass around the objects themselves \(or point-)11 2536( If)1 120(mentation module to identify the objects.)5 1664 3 720 4095 t
+(ers to them\) in the style of Ada:)7 1268 1 720 4215 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 4380 t
+(class stack {)2 702 1 1080 4590 t
+(public:)1080 4695 w
+(class rep {)2 594 1 1512 4800 t
+(friend stack;)1 702 1 1944 4905 t
+(private:)1512 5010 w
+(// actual representation of a stack object)6 2268 1 1944 5115 t
+(};)1512 5220 w
+(typedef rep* id;)2 864 1 1512 5430 t
+(static id create\(int\);)2 1188 1 1512 5640 t
+(static void destroy\(id\);)2 1296 1 1512 5745 t
+(static void push\(id,cat\);)2 1350 1 1512 5955 t
+(static cat pop\(id\);)2 1026 1 1512 6060 t
+(private:)1080 6165 w
+(virtual dummy\(\) = 0;)3 1080 1 1512 6270 t
+(};)1080 6375 w
+10 R f
+(The typedef is redundant, but it allows our user code to remain unchanged:)12 2992 1 720 6555 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 4 4
+%%Page: 5 5
+/saveobj save def
+mark
+5 pagesetup
+10 R f
+(- 5 -)2 166 1 2797 480 t
+9 CW f
+(#include "stack.h")1 972 1 1080 885 t
+(void f\(int sz, cat kitty\))4 1350 1 1080 1095 t
+({)1080 1200 w
+(stack::id s = stack::create\(sz\);)3 1728 1 1512 1305 t
+(stack::push\(s,kitty\);)1512 1410 w
+(cat c2 = stack::pop\(s\);)3 1242 1 1512 1515 t
+(stack::destroy\(s\);)1512 1620 w
+(})1080 1725 w
+10 R f
+(That)720 1905 w
+10 CW f
+(rep)928 1905 w
+10 R f
+( can pass it around but not look into it.)9 1539( Users)1 277(is very much like an Ada private type.)7 1525 3 1133 1905 t
+(One disadvantage is that by placing the representation of stacks in the declaration of class)14 3694 1 864 2025 t
+10 CW f
+(stack)4591 2025 w
+10 R f
+(we)4924 2025 w
+( can lead to a major increase in)7 1315( This)1 239( that representation changes.)3 1169(force recompilation of user code when)5 1597 4 720 2145 t
+( this recompilation isn't necessary, because the user code)8 2289( Actually,)1 419(compilation time.)1 706 3 720 2265 t
+10 I f
+(and)4160 2265 w
+10 R f
+(that code's use of)3 704 1 4336 2265 t
+( reasonably smart dependency analyser could)5 1829( A)1 126( implementation was left unchanged.)4 1489(information about the)2 876 4 720 2385 t
+( necessary after even a radical change to the representation.)9 2477(deduce that no recompilation of user code is)7 1843 2 720 2505 t
+(However, a dumb \(that is, time stamp on source-file based\) dependency analyser will not deduce that and)16 4320 1 720 2625 t
+( smart dependency analyser will)4 1322( A)1 131( was changed.)2 580(will recompile user code just because the representation)7 2287 4 720 2745 t
+( smaller units of change, on understanding of the semantics of C)11 2580(rely on)1 282 2 720 2865 t
+(++)3572 2859 w
+(, or on both to minimize recompi-)6 1358 1 3682 2865 t
+( dependency analysers are rumored to exist, but they are not widely available.)12 3104(lation. Smart)1 542 2 720 2985 t
+( the compiler when compiling)4 1243(On the positive side, the representation information is now available to)10 2933 2 864 3105 t
+(user code so that genuine local variables can be declared and used:)11 2662 1 720 3225 t
+9 CW f
+(#include "stack.h")1 972 1 1080 3390 t
+(void g\(int sz, cat kitty\))4 1350 1 1080 3600 t
+({)1080 3705 w
+(stack::rep s;)1 702 1 1512 3810 t
+(stack::push\(&s,kitty\);)1512 3915 w
+(cat c2 = stack::pop\(&s\);)3 1296 1 1512 4020 t
+(})1080 4125 w
+10 R f
+( the implementation, though, unless some mechanism for)7 2292(This is unlikely to work without additional code in)8 2028 2 720 4305 t
+( could be done by adding suitable constructors and destructors)9 2488( This)1 228( exists.)1 278(initializing a stack representation)3 1326 4 720 4425 t
+(to class)1 299 1 720 4545 t
+10 CW f
+(rep)1046 4545 w
+10 R f
+( It)1 114( it would be more in the spirit of packages to provide an explicit initialization function.)15 3520(, but)1 180 3 1226 4545 t
+(would also be natural to support use reference arguments to eliminate most explicit pointers.)13 3695 1 720 4665 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 4830 t
+(class stack {)2 702 1 1080 5040 t
+(public:)1080 5145 w
+(class rep {)2 594 1 1512 5250 t
+(friend stack;)1 702 1 1944 5355 t
+(// actual representation of a stack object)6 2268 1 1944 5460 t
+(};)1512 5565 w
+(static rep* create\(int\);)2 1296 1 1512 5775 t
+(static void destroy\(rep&\);)2 1404 1 1512 5880 t
+(static void initialize\(rep&,int\);)2 1782 1 1512 6090 t
+(static void cleanup\(rep&\);)2 1404 1 1512 6195 t
+(static void push\(rep&,cat\);)2 1458 1 1512 6405 t
+(static cat pop\(rep&\);)2 1134 1 1512 6510 t
+(private:)1080 6615 w
+(virtual dummy\(\) = 0;)3 1080 1 1512 6720 t
+(};)1080 6825 w
+10 R f
+(The)720 7005 w
+10 CW f
+(create\(\))902 7005 w
+10 R f
+( redundant \(a user can write one without special help from the class\), but I)14 3005(function is now)2 626 2 1409 7005 t
+( needed, it could be made to return a ref-)9 1623( If)1 116( that relies on it.)4 647(have left it in to cater for code and coding styles)10 1934 4 720 7125 t
+(erence instead of a pointer.)4 1077 1 720 7245 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 5 5
+%%Page: 6 6
+/saveobj save def
+mark
+6 pagesetup
+10 R f
+(- 6 -)2 166 1 2797 480 t
+9 CW f
+(#include "stack.h")1 972 1 1080 885 t
+(void h\(int sz, cat kitty\))4 1350 1 1080 1095 t
+({)1080 1200 w
+(stack::rep s;)1 702 1 1512 1305 t
+(stack::initialize\(s,sz\);)1512 1410 w
+(stack::push\(s,kitty\);)1512 1515 w
+(cat c2 = stack::pop\(s\);)3 1242 1 1512 1620 t
+(stack::cleanup\(s\);)1512 1725 w
+(})1080 1830 w
+10 R f
+(The)864 2010 w
+10 CW f
+(cleanup\(\))1063 2010 w
+10 R f
+(operation is needed because the)4 1339 1 1647 2010 t
+10 CW f
+(initialize\(\))3030 2010 w
+10 R f
+(operation and/or the)2 842 1 3794 2010 t
+10 CW f
+(push\(\))4680 2010 w
+10 R f
+( we want to rely on a garbage col-)8 1381( Unless)1 325( hold the elements.)3 764(operation are likely to grab some free store to)8 1850 4 720 2130 t
+(lector we must clean up or accept a memory leak.)9 1978 1 720 2250 t
+( the compiler to make inlining of operations such as)9 2406(Now enough information is available to)5 1770 2 864 2370 t
+10 CW f
+(initialize\(\))720 2490 w
+10 R f
+(,)1440 2490 w
+10 CW f
+(push\(\))1494 2490 w
+10 R f
+(, and)1 198 1 1854 2490 t
+10 CW f
+(pop\(\))2081 2490 w
+10 R f
+( genuine separate compi-)3 1009(feasible even in an implementation with)5 1621 2 2410 2490 t
+( definitions of the functions we want inlined can simply be placed with the type definition:)15 3622(lation. The)1 458 2 720 2610 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 2775 t
+(class stack {)2 702 1 1080 2985 t
+(public:)1080 3090 w
+(class rep {)2 594 1 1512 3195 t
+(friend stack;)1 702 1 1944 3300 t
+(// actual representation of a stack object)6 2268 1 1944 3405 t
+(};)1512 3510 w
+(// ...)1 324 1 1512 3825 t
+(static cat pop\(rep& x\))3 1188 1 1512 4035 t
+( extract a cat from the representation of stack x)9 2646({ //)1 540 2 1512 4140 t
+(// return that cat)3 972 1 1944 4245 t
+(})1512 4350 w
+(// ...)1 324 1 1512 4560 t
+(};)1080 4665 w
+10 R f
+( appli-)1 261(Inlining and genuine local variables can be essential to make data hiding techniques affordable in)14 3915 2 864 4845 t
+(cations where run time efficiency is at a premium.)8 2004 1 720 4965 t
+10 B f
+( with Controlled Representations)3 1413(7 Packages)1 519 2 720 5205 t
+10 R f
+(Alternatively, if we did not want users to allocate)8 1980 1 864 5385 t
+10 CW f
+(rep)2870 5385 w
+10 R f
+( creation and copy-)3 773(s directly we could control the)5 1217 2 3050 5385 t
+(ing of)1 236 1 720 5505 t
+10 CW f
+(rep)981 5505 w
+10 R f
+(s by making these operations private:)5 1490 1 1161 5505 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 6 6
+%%Page: 7 7
+/saveobj save def
+mark
+7 pagesetup
+10 R f
+(- 7 -)2 166 1 2797 480 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 885 t
+(class stack {)2 702 1 1080 1095 t
+(public:)1080 1200 w
+(class rep {)2 594 1 1512 1305 t
+(friend stack;)1 702 1 1944 1410 t
+(// actual representation of a stack object)6 2268 1 1944 1620 t
+( constructor)1 648(rep\(int\); //)1 1620 2 1944 1830 t
+( copy constructor)2 918( //)1 756(rep\(const rep&\);)1 864 3 1944 1935 t
+(void operator=\(const rep&\); // assignment operator)5 2700 1 1944 2040 t
+(};)1512 2145 w
+(static rep* create\(int\);)2 1296 1 1512 2355 t
+(static void destroy\(rep&\);)2 1404 1 1512 2460 t
+(static void initialize\(rep&,int\);)2 1782 1 1512 2670 t
+(static void cleanup\(rep&\);)2 1404 1 1512 2775 t
+(static void push\(rep&,cat\);)2 1458 1 1512 2985 t
+(static cat pop\(rep&\);)2 1134 1 1512 3090 t
+(private:)1080 3195 w
+(virtual dummy\(\) = 0;)3 1080 1 1512 3300 t
+(};)1080 3405 w
+10 R f
+(This ensures that only the)4 1027 1 720 3585 t
+10 CW f
+(stack)1772 3585 w
+10 R f
+(functions can create)2 797 1 2097 3585 t
+10 CW f
+(rep)2919 3585 w
+10 R f
+(s:)3099 3585 w
+9 CW f
+(stack::rep* stack::create\(int i\))2 1728 1 1080 3750 t
+({)1080 3855 w
+( fine: create is a member of stack)7 1836( //)1 324(rep* p = new rep\(i\);)4 1080 3 1512 3960 t
+(// ...)1 324 1 1512 4065 t
+(return p;)1 486 1 1512 4170 t
+(})1080 4275 w
+(f\(\))1080 4500 w
+({)1080 4605 w
+(stack::rep s\(10\); // error: f\(\) cannot access rep::rep\(\): private member)9 3888 1 1512 4710 t
+(})1080 4815 w
+10 R f
+(Naturally, the example of stack usage from section 6 works exactly as before.)12 3098 1 864 4995 t
+10 B f
+( with Implicit Indirection)3 1081(8 Packages)1 519 2 720 5235 t
+10 R f
+( in inlining but prefer to minimize recompilation costs even when we don't have)13 3249(If we are not interested)4 927 2 864 5415 t
+(a smart dependency analyser, we can place the representation ``elsewhere:'')9 3033 1 720 5535 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 7 7
+%%Page: 8 8
+/saveobj save def
+mark
+8 pagesetup
+10 R f
+(- 8 -)2 166 1 2797 480 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 885 t
+(class stack_rep;)1 864 1 1080 1095 t
+(class stack {)2 702 1 1080 1305 t
+(public:)1080 1410 w
+(typedef stack_rep* id;)2 1188 1 1512 1515 t
+(static id create\(int\);)2 1188 1 1512 1725 t
+(static void destroy\(id\);)2 1296 1 1512 1830 t
+(static void push\(id,cat\);)2 1350 1 1512 2040 t
+(static cat pop\(id\);)2 1026 1 1512 2145 t
+(private:)1080 2250 w
+(virtual dummy\(\) = 0;)3 1080 1 1512 2355 t
+(};)1080 2460 w
+10 R f
+( this)1 181( With)1 261( also out of sight.)4 736(This scheme keeps implementation details not only inaccessible to users but)10 3142 4 720 2640 t
+( cannot allocate)2 636(definition \(alone\) a user)3 974 2 720 2760 t
+10 CW f
+(stack_rep)2360 2760 w
+10 R f
+( C)1 97(s. Unfortunately)1 679 2 2900 2760 t
+(++)3666 2754 w
+(does not allow you to define a)6 1234 1 3806 2760 t
+(class ``elsewhere'')1 750 1 720 2880 t
+10 I f
+(and)1496 2880 w
+10 R f
+( the name)2 390( Consequently,)1 626(have its name local to another class.)6 1445 3 1672 2880 t
+10 CW f
+(stack_rep)4159 2880 w
+10 R f
+(must be)1 315 1 4725 2880 t
+(global.)720 3000 w
+( use of)2 284(The indirection \(implied by the)4 1281 2 864 3120 t
+10 CW f
+(id)2463 3120 w
+10 R f
+(\) is implicit to the users of stacks and explicit in the imple-)12 2457 1 2583 3120 t
+(mentation of stacks.)2 802 1 720 3240 t
+10 B f
+( Minded Types)2 640(9 Simple)1 420 2 720 3480 t
+10 R f
+(One simple improvement would be to put the operations that create and destroy)12 3359 1 864 3660 t
+10 CW f
+(stack_rep)4264 3660 w
+10 R f
+(s into)1 236 1 4804 3660 t
+(class)720 3780 w
+10 CW f
+(stack_rep)947 3780 w
+10 R f
+( C)1 99( for a)2 226(. Actually,)1 452 3 1487 3780 t
+(++)2254 3774 w
+(programmer it would be natural to put all the operations into the)11 2644 1 2396 3780 t
+10 CW f
+(rep)720 3900 w
+10 R f
+(and rename it ``)3 634 1 925 3900 t
+10 CW f
+(stack)1559 3900 w
+10 R f
+(:'')1859 3900 w
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 4065 t
+(class stack {)2 702 1 1080 4275 t
+(// actual representation of a stack object)6 2268 1 1512 4380 t
+(public:)1080 4485 w
+(typedef stack* id;)2 972 1 1512 4590 t
+(static id create\(int\);)2 1188 1 1512 4800 t
+(static void destroy\(id\);)2 1296 1 1512 4905 t
+(static void initialize\(id,int\);)2 1674 1 1512 5115 t
+(static void cleanup\(id\);)2 1296 1 1512 5220 t
+(static void push\(id,cat\);)2 1350 1 1512 5430 t
+(static cat pop\(id\);)2 1026 1 1512 5535 t
+(};)1080 5640 w
+10 R f
+(so that we can write:)4 826 1 720 5820 t
+9 CW f
+(#include "stack.h")1 972 1 1080 5985 t
+(void f\(int sz, cat kitty\))4 1350 1 1080 6195 t
+({)1080 6300 w
+(stack s;)1 432 1 1512 6405 t
+(stack::initialize\(&s,sz\);)1512 6510 w
+(stack::push\(&s,kitty\);)1512 6615 w
+(cat c2 = stack::pop\(&s\);)3 1296 1 1512 6720 t
+(stack::cleanup\(&s\);)1512 6825 w
+(})1080 6930 w
+10 R f
+(The redundant use of the typedef ensures that our original program still compiles:)12 3262 1 720 7110 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 8 8
+%%Page: 9 9
+/saveobj save def
+mark
+9 pagesetup
+10 R f
+(- 9 -)2 166 1 2797 480 t
+9 CW f
+(#include "stack.h")1 972 1 1080 885 t
+(void g\(int sz, cat kitty\))4 1350 1 1080 1095 t
+({)1080 1200 w
+(stack* p = stack::create\(sz\);)3 1566 1 1512 1305 t
+(stack::push\(p,kitty\);)1512 1410 w
+(cat c2 = stack::pop\(p\);)3 1242 1 1512 1515 t
+(stack::destroy\(p\);)1512 1620 w
+(})1080 1725 w
+10 R f
+(The likely difference between)3 1223 1 720 1905 t
+10 CW f
+(f\(\))1978 1905 w
+10 R f
+(and)2193 1905 w
+10 CW f
+(g\(\))2372 1905 w
+10 R f
+(is two memory management operations \(a)5 1728 1 2587 1905 t
+10 CW f
+(new)4350 1905 w
+10 R f
+(in)4566 1905 w
+10 CW f
+(create)4680 1905 w
+10 R f
+(and a)1 213 1 720 2025 t
+10 CW f
+(delete)958 2025 w
+10 R f
+(in)1343 2025 w
+10 CW f
+(destroy)1446 2025 w
+10 R f
+(\).)1866 2025 w
+10 B f
+(10 Types)1 431 1 720 2265 t
+10 R f
+( have to do is to make the functions non-static and give the constructor and destructor their)16 3708(Now all we)2 468 2 864 2445 t
+(proper names:)1 568 1 720 2565 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 2730 t
+(class stack {)2 702 1 1080 2940 t
+(// actual representation of a stack object)6 2268 1 1512 3045 t
+(public:)1080 3150 w
+(stack\(int size\);)1 864 1 1512 3255 t
+(\304stack\(\);)1512 3360 w
+(void push\(cat\);)1 810 1 1512 3570 t
+(cat pop\(\);)1 540 1 1512 3675 t
+(};)1080 3780 w
+10 R f
+(We can now use the C)5 895 1 720 3960 t
+(++)1605 3954 w
+(member access notation:)2 987 1 1740 3960 t
+9 CW f
+(#include "stack.h")1 972 1 1080 4125 t
+(void f\(int sz, cat kitty\))4 1350 1 1080 4335 t
+({)1080 4440 w
+(stack s\(sz\);)1 648 1 1512 4545 t
+(s.push\(kitty\);)1512 4650 w
+(cat c2 = s.pop\(\);)3 918 1 1512 4755 t
+(})1080 4860 w
+10 R f
+(Here we rely on the implicit calls of the constructor and destructor to shorten the code.)15 3460 1 720 5040 t
+10 B f
+( with Implicit Indirection)3 1081(11 Types)1 431 2 720 5280 t
+10 R f
+( a stack without forcing the recompilation of users)8 2040(If we want the ability to change the representation of)9 2136 2 864 5460 t
+(of a stack we must reintroduce a representation class)8 2212 1 720 5580 t
+10 CW f
+(rep)2971 5580 w
+10 R f
+(and let)1 283 1 3190 5580 t
+10 CW f
+(stack)3511 5580 w
+10 R f
+(objects hold only pointers to)4 1191 1 3849 5580 t
+10 CW f
+(rep)720 5700 w
+10 R f
+(s:)900 5700 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 9 9
+%%Page: 10 10
+/saveobj save def
+mark
+10 pagesetup
+10 R f
+(- 10 -)2 216 1 2772 480 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 885 t
+(class stack {)2 702 1 1080 1095 t
+(struct rep {)2 648 1 1512 1305 t
+(// actual representation of a stack object)6 2268 1 1944 1410 t
+(};)1512 1515 w
+(rep* p;)1 378 1 1512 1725 t
+(public:)1080 1830 w
+(stack\(int size\);)1 864 1 1512 1935 t
+(\304stack\(\);)1512 2040 w
+(void push\(cat\);)1 810 1 1512 2250 t
+(cat pop\(\);)1 540 1 1512 2355 t
+(};)1080 2460 w
+10 R f
+(The indirection is invisible to the user.)6 1541 1 720 2640 t
+( code after changes to the)5 1031(Naturally, to take advantage of this indirection to avoid re-compilation of user)11 3145 2 864 2760 t
+(implementation we must avoid inline functions in)6 2031 1 720 2880 t
+10 CW f
+(stack)2783 2880 w
+10 R f
+( might)1 265( our dependency analyser is dumb we)6 1544(. If)1 148 3 3083 2880 t
+(have to pace representation class)4 1307 1 720 3000 t
+10 CW f
+(rep)2052 3000 w
+10 R f
+(``elsewhere'' as was done in section 8 above.)7 1811 1 2257 3000 t
+10 B f
+( Representations)1 713(12 Multiple)1 542 2 720 3240 t
+10 R f
+( operation to be per-)4 861(In all of the examples above, the binding between the name used to specify the)14 3315 2 864 3420 t
+(formed \(e.g.)1 495 1 720 3540 t
+10 CW f
+(push)1270 3540 w
+10 R f
+( fol-)1 173( The)1 209( necessary.)1 441( is not)2 255( This)1 233(\) and the function invoked were fixed at compile time.)9 2219 6 1510 3540 t
+( example, we could have several kinds)6 1574( For)1 195(lowing examples show different ways to organize this binding.)8 2551 3 720 3660 t
+(of stacks with a common user interface:)6 1591 1 720 3780 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 3945 t
+(class stack {)2 702 1 1080 4155 t
+(public:)1080 4260 w
+(virtual void push\(cat\) = 0;)4 1458 1 1512 4365 t
+(virtual cat pop\(\) = 0;)4 1188 1 1512 4470 t
+(};)1080 4575 w
+10 R f
+( used, but not cre-)4 734( allows stacks to be)4 789( This)1 231(Only pure virtual functions are supplied as part of the interface.)10 2566 4 720 4755 t
+(ated:)720 4875 w
+9 CW f
+(#include "stack.h")1 972 1 1080 5040 t
+(void f\(stack& s, cat kitty\))4 1458 1 1080 5250 t
+({)1080 5355 w
+(s.push\(kitty\);)1512 5460 w
+(cat c2 = s.pop\(\);)3 918 1 1512 5565 t
+(})1080 5670 w
+10 R f
+( in the stack interface, its users are totally insulated from implementa-)11 2878(Since no representation is specified)4 1442 2 720 5850 t
+(tion details.)1 467 1 720 5970 t
+( example, we can provide a stack)6 1369( For)1 197( several distinct implementations of stacks.)5 1761(We can now provide)3 849 4 864 6090 t
+(implemented using an array)3 1112 1 720 6210 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 10 10
+%%Page: 11 11
+/saveobj save def
+mark
+11 pagesetup
+10 R f
+(- 11 -)2 216 1 2772 480 t
+9 CW f
+(// array stack interface, astack.h:)4 1890 1 1080 885 t
+(#include "stack.h")1 972 1 1080 1095 t
+(class astack : public stack {)5 1566 1 1080 1305 t
+(// actual representation of a stack object)6 2268 1 1512 1410 t
+(// in this case an array)5 1296 1 1512 1515 t
+(// ...)1 324 1 1512 1620 t
+(public:)1080 1725 w
+(astack\(int size\);)1 918 1 1512 1830 t
+(\304astack\(\);)1512 1935 w
+(void push\(cat\);)1 810 1 1512 2145 t
+(cat pop\(\);)1 540 1 1512 2250 t
+(};)1080 2355 w
+10 R f
+(and elsewhere a stack implemented using a linked list:)8 2175 1 720 2535 t
+9 CW f
+(// linked list stack interface, lstack.h:)5 2214 1 1080 2700 t
+(#include "stack.h")1 972 1 1080 2910 t
+(class lstack : public stack {)5 1566 1 1080 3120 t
+(// actual representation of a stack object)6 2268 1 1512 3225 t
+(// in this case a linked list)6 1566 1 1512 3330 t
+(// ...)1 324 1 1512 3435 t
+(public:)1080 3540 w
+(lstack\(int size\);)1 918 1 1512 3645 t
+(\304lstack\(\);)1512 3750 w
+(void push\(cat\);)1 810 1 1512 3960 t
+(cat pop\(\);)1 540 1 1512 4065 t
+(};)1080 4170 w
+10 R f
+(We can now create and use stacks:)6 1384 1 720 4350 t
+9 CW f
+(#include "astack.h")1 1026 1 1080 4515 t
+(#include "lstack.h")1 1026 1 1080 4620 t
+(void g\(\))1 432 1 1080 4830 t
+({)1080 4935 w
+(lstack s1\(100\);)1 810 1 1512 5040 t
+(astack s2\(100\);)1 810 1 1512 5145 t
+(cat ginger;)1 594 1 1512 5355 t
+(cat blackie;)1 648 1 1512 5460 t
+(f\(s1,ginger\);)1512 5670 w
+(f\(s2,snowball\);)1512 5775 w
+(})1080 5880 w
+10 B f
+( Operations)1 503(13 Changing)1 593 2 720 6180 t
+10 R f
+( replace a function binding while a program is run-)9 2059(Occasionally, it is necessary or simply convenient to)7 2117 2 864 6360 t
+( example, one might want to replace)6 1486(ning. For)1 398 2 720 6480 t
+10 CW f
+(lstack::push\(\))2635 6480 w
+10 R f
+(and)3506 6480 w
+10 CW f
+(lstack::pop\(\))3681 6480 w
+10 R f
+(with new and)2 548 1 4492 6480 t
+( by taking)2 410( is fairly easily achieved)4 986( This)1 232(improved versions without terminating and restarting the program.)7 2692 4 720 6600 t
+( are indirect through some sort of table of virtual func-)10 2249(advantage of the fact that calls of virtual functions)8 2071 2 720 6720 t
+(tions \(often called the)3 868 1 720 6840 t
+10 CW f
+(vtbl)1613 6840 w
+10 R f
+(\).)1853 6840 w
+(The only portable way of doing this requires cooperation from the)10 2710 1 864 6960 t
+10 CW f
+(lstack)3606 6960 w
+10 R f
+(class; it must have a con-)5 1042 1 3998 6960 t
+(structor that does no work except for setting up the)9 2033 1 720 7080 t
+10 CW f
+(vtbl)2778 7080 w
+10 R f
+(that all constructors do implicitly:)4 1356 1 3043 7080 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 11 11
+%%Page: 12 12
+/saveobj save def
+mark
+12 pagesetup
+10 R f
+(- 12 -)2 216 1 2772 480 t
+9 CW f
+(class noop {};)2 756 1 1080 885 t
+(lstack::lstack\(noop\) {} // make an uninitialized lstack)6 2970 1 1080 1095 t
+10 R f
+( constructor can be added to the program source text without requiring recompilation that)13 3582(Fortunately such a)2 738 2 720 1275 t
+(might affect the running program that we are trying to update \(enhance and repair\).)13 3319 1 720 1395 t
+(Using this extra constructor we define a new class which is identical to)12 2942 1 864 1515 t
+10 CW f
+(lstack)3840 1515 w
+10 R f
+( the rede-)2 396(except for)1 410 2 4234 1515 t
+(fined operations:)1 674 1 720 1635 t
+9 CW f
+(// modified linked list stack interface, llstack.h:)6 2754 1 1080 1800 t
+(#include "stack.h")1 972 1 1080 2010 t
+(class llstack : public lstack {)5 1674 1 1080 2220 t
+(public:)1080 2325 w
+(llstack\(int size\) : lstack\(size\) {})4 1890 1 1512 2430 t
+(llstack\(noop x\) : lstack\(x\) {})4 1620 1 1512 2535 t
+(void push\(cat\);)1 810 1 1512 2745 t
+(cat pop\(\);)1 540 1 1512 2850 t
+(};)1080 2955 w
+10 R f
+(Given an)1 374 1 720 3135 t
+10 CW f
+(lstack)1130 3135 w
+10 R f
+( to its table of virtual functions \(its)7 1470(object we can now update its pointer)6 1530 2 1526 3135 t
+10 CW f
+(vtbl)4563 3135 w
+10 R f
+(\) thus)1 237 1 4803 3135 t
+(ensuring that future operations on the object will use the)9 2250 1 720 3255 t
+10 CW f
+(llstack)2995 3255 w
+10 R f
+(variants of)1 424 1 3440 3255 t
+10 CW f
+(push\(\))3889 3255 w
+10 R f
+(and)4274 3255 w
+10 CW f
+(pop\(\))4443 3255 w
+10 R f
+(:)4743 3255 w
+9 CW f
+(#include "llstack.h")1 1080 1 1080 3420 t
+(void g\(lstack& s\))2 918 1 1080 3630 t
+({)1080 3735 w
+(noop xx;)1 432 1 1512 3840 t
+( turns s into an llstack!)5 1350( //)1 324(new\(&s\) llstack\(xx\);)1 1080 3 1512 3945 t
+(})1080 4050 w
+10 R f
+( on some form of dynamic linking to make it possible to add)12 2452(Naturally, we must rely)3 949 2 720 4230 t
+10 CW f
+(g\(\))4149 4230 w
+10 R f
+(to a running pro-)3 683 1 4357 4230 t
+( systems provide some such facility.)5 1449(gram. Most)1 486 2 720 4350 t
+(This use of)2 444 1 864 4470 t
+10 CW f
+(operator new)1 685 1 1333 4470 t
+10 R f
+(assumes that)1 508 1 2043 4470 t
+9 CW f
+(// place an object at address `p':)6 1836 1 1080 4635 t
+(void* operator new\(size_t,void* p\) { return p; })7 2592 1 1080 4740 t
+10 R f
+(has been defined and relies on the)6 1658 1 720 4920 t
+10 CW f
+(llstack::llstack\(noop\))2454 4920 w
+10 R f
+( suppressing)1 549(constructor for)1 641 2 3850 4920 t
+(\(re\)initialization of the data of)4 1203 1 720 5040 t
+10 CW f
+(s)1948 5040 w
+10 R f
+(and for updating)2 660 1 2033 5040 t
+10 CW f
+(s)2718 5040 w
+10 R f
+('s)2778 5040 w
+10 CW f
+(vtbl)2875 5040 w
+10 R f
+(.)3115 5040 w
+(This trick allows us to change the)6 1373 1 864 5160 t
+10 CW f
+(vtbl)2267 5160 w
+10 R f
+( of)1 114(for particular objects without relying on specific properties)7 2389 2 2537 5160 t
+( is no language protection against misuse of this trick.)9 2154( There)1 282(an implementation \(that is, portably\).)4 1488 3 720 5280 t
+(Changing the)1 536 1 864 5400 t
+10 CW f
+(vtbl)1425 5400 w
+10 R f
+( of class)2 329(for every object)2 631 2 1690 5400 t
+10 CW f
+(lstack)2676 5400 w
+10 R f
+(in one operation, that is, changing the contents of)8 1978 1 3062 5400 t
+(the)720 5520 w
+10 CW f
+(vtbl)873 5520 w
+10 R f
+(for class)1 340 1 1143 5520 t
+10 CW f
+(lstack)1513 5520 w
+10 R f
+(rather than simply changing pointers to)5 1593 1 1903 5520 t
+10 CW f
+(vtbl)3526 5520 w
+10 R f
+(s in the individual objects, can-)5 1274 1 3766 5520 t
+( since that operation will be messy and non-portable I will not give an)13 2976( However,)1 454( done portably.)2 630(not be)1 260 4 720 5640 t
+(example of it.)2 552 1 720 5760 t
+10 B f
+( Representations)1 713(14 Changing)1 593 2 720 6000 t
+10 R f
+( to replace both the representation and)6 1578(A more interesting \261 and probably more realistic \261 challenge is)10 2598 2 864 6180 t
+( example, convert a stack from an array representation to a)10 2460( For)1 201(the operations for an object at run time.)7 1659 3 720 6300 t
+( ensure that the cutover from one repre-)7 1602( To)1 164( time without affecting its users.)5 1303(linked list representation at run)4 1251 4 720 6420 t
+(sentation to another can be done by a single assignment we reintroduce the)12 3085 1 720 6540 t
+10 CW f
+(rep)3838 6540 w
+10 R f
+( make)1 248(type and)1 349 2 4051 6540 t
+10 CW f
+(push\(\))4680 6540 w
+10 R f
+(and)720 6660 w
+10 CW f
+(pop\(\))889 6660 w
+10 R f
+(simple forwarding functions to operations on the)6 1948 1 1214 6660 t
+10 CW f
+(rep)3187 6660 w
+10 R f
+(:)3367 6660 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 12 12
+%%Page: 13 13
+/saveobj save def
+mark
+13 pagesetup
+10 R f
+(- 13 -)2 216 1 2772 480 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 885 t
+(class stack {)2 702 1 1080 1095 t
+(rep* p;)1 378 1 1512 1200 t
+(public:)1080 1305 w
+(stack\(int size\);)1 864 1 1512 1410 t
+(\304stack\(\);)1512 1515 w
+(rep* get_rep\(\) { return p; })5 1512 1 1512 1725 t
+(void put_rep\(rep* q\) { p = q; })7 1674 1 1512 1830 t
+(void push\(cat c\) { p->push\(c\); })5 1728 1 1512 2040 t
+(cat pop\(\) { return p->pop\(\); })5 1620 1 1512 2145 t
+(int size\(\) { return p->size\(\); })5 1728 1 1512 2355 t
+(};)1080 2460 w
+10 R f
+( that convert between the different representations and then let them use)11 3050(The idea is to have operations)5 1270 2 720 2640 t
+10 CW f
+(get_rep\(\))720 2760 w
+10 R f
+(and)1292 2760 w
+10 CW f
+(put_rep\(\))1468 2760 w
+10 R f
+( a real system)3 564( In)1 139( the pointer to the representation.)5 1350(to update)1 376 4 2040 2760 t
+10 CW f
+(get_rep\(\))4500 2760 w
+10 R f
+(and)720 2880 w
+10 CW f
+(put_rep\(\))889 2880 w
+10 R f
+(would most likely not be publicly accessible functions.)7 2199 1 1454 2880 t
+(First we define)2 599 1 864 3000 t
+10 CW f
+(rep)1488 3000 w
+10 R f
+(exactly as we did)3 690 1 1693 3000 t
+10 CW f
+(stack)2408 3000 w
+10 R f
+(before :)1 307 1 2733 3000 t
+9 CW f
+(// stack interface, rep.h:)3 1404 1 1080 3165 t
+(class rep {)2 594 1 1080 3375 t
+(public:)1080 3480 w
+(virtual void push\(cat\) = 0;)4 1458 1 1512 3585 t
+(virtual cat pop\(\) = 0;)4 1188 1 1512 3690 t
+(virtual int size\(\) = 0;)4 1242 1 1512 3795 t
+(};)1080 3900 w
+10 R f
+(and use it as a base for the different implementations:)9 2138 1 720 4080 t
+9 CW f
+(// array stack interface, astack.h:)4 1890 1 1080 4245 t
+(#include "rep.h")1 864 1 1080 4455 t
+(class astack : public rep {)5 1458 1 1080 4665 t
+(// actual representation of a stack object)6 2268 1 1512 4770 t
+(// in this case an array)5 1296 1 1512 4875 t
+(// ...)1 324 1 1512 4980 t
+(public:)1080 5085 w
+(astack\(int size\);)1 918 1 1512 5190 t
+(\304astack\(\);)1512 5295 w
+(void push\(cat\);)1 810 1 1512 5505 t
+(cat pop\(\);)1 540 1 1512 5610 t
+(int size\(\);)1 594 1 1512 5820 t
+(};)1080 5925 w
+10 R f
+(Elsewhere we can define a stack implemented using a linked list:)10 2601 1 720 6105 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 13 13
+%%Page: 14 14
+/saveobj save def
+mark
+14 pagesetup
+10 R f
+(- 14 -)2 216 1 2772 480 t
+9 CW f
+(// linked list stack interface, lstack.h:)5 2214 1 1080 885 t
+(#include "rep.h")1 864 1 1080 1095 t
+(class lstack : public rep {)5 1458 1 1080 1305 t
+(// actual representation of a stack object)6 2268 1 1512 1410 t
+(// in this case a linked list)6 1566 1 1512 1515 t
+(// ...)1 324 1 1512 1620 t
+(public:)1080 1725 w
+(lstack\(int size\);)1 918 1 1512 1830 t
+(\304lstack\(\);)1512 1935 w
+(void push\(cat\);)1 810 1 1512 2145 t
+(cat pop\(\);)1 540 1 1512 2250 t
+(int size\(\);)1 594 1 1512 2460 t
+(};)1080 2565 w
+10 R f
+(Now we can convert the representation of a)7 1904 1 720 2745 t
+10 CW f
+(stack)2674 2745 w
+10 R f
+(from a)1 288 1 3024 2745 t
+10 CW f
+(astack*)3362 2745 w
+10 R f
+(to a)1 172 1 3832 2745 t
+10 CW f
+(lstack*)4054 2745 w
+10 R f
+(by changing)1 516 1 4524 2745 t
+10 CW f
+(stack::p)720 2865 w
+10 R f
+(using)1238 2865 w
+10 CW f
+(stack::get_rep\(\))1493 2865 w
+10 R f
+(and)2491 2865 w
+10 CW f
+(stack::put_rep\(\))2672 2865 w
+10 R f
+(and \(in general\) also copying the)5 1371 1 3669 2865 t
+(elements:)720 2985 w
+9 CW f
+(rep* convert_from_a_to_l\(stack& s\))2 1836 1 1080 3150 t
+({)1080 3255 w
+(rep* rp = s.get_rep\(\);)3 1188 1 1512 3360 t
+(astack* ap = new astack\(s.size\(\)\);)4 1836 1 1512 3465 t
+(// copy s's elements to *ap)5 1458 1 1512 3570 t
+(s.put_rep\(ap\);)1512 3675 w
+(return rp;)1 540 1 1512 3780 t
+(})1080 3885 w
+10 R f
+( assumes that the size)4 892( This)1 236(In other words, we solve the problem by introducing yet another indirection\262.)11 3192 3 720 4065 t
+( so that it can be used as the argu-)9 1377(argument from the original constructor has been stored away somewhere)9 2943 2 720 4185 t
+(ment to the new)3 659 1 720 4305 t
+10 CW f
+(astack)1410 4305 w
+10 R f
+( a real system we would also need to check that)10 1966(. In)1 165 2 1770 4305 t
+10 CW f
+(s)3933 4305 w
+10 R f
+(really had an appropriate)3 1015 1 4025 4305 t
+( most likely also have to provide some further consistency checking and interlock-)12 3307(representation and would)2 1013 2 720 4425 t
+( the fundamental idea is illustrated.)5 1404(ing. However,)1 593 2 720 4545 t
+10 B f
+( the Set of Operations)4 927(15 Changing)1 593 2 720 4785 t
+10 R f
+( a version of the stack example that is somewhat un-C)10 2268(Finally, I will show)3 814 2 864 4965 t
+(++)3936 4959 w
+(-like in that it dispenses)4 994 1 4046 4965 t
+( completely disconnect the users and the imple-)7 1942( idea is to)3 407( The)1 212(with static type checking of the operations.)6 1759 4 720 5085 t
+( on such techniques can make)5 1259( Overreliance)1 578( type-checked language.)2 994(menters and simulate a dynamically)4 1489 4 720 5205 t
+( the)1 149( the flexibility offered can be important in localized contexts where)10 2719( However,)1 443(systems slow and messy.)3 1009 4 720 5325 t
+(inevitable problems caused by lack of formal structure and of run-time checking can be contained.)14 3927 1 720 5445 t
+( programming techniques)2 1035(In this and the following examples a bit of scaffolding is needed to make the)14 3141 2 864 5565 t
+( define but does not, in fact, noticeably)7 1682( makes the toy examples somewhat longer to)7 1928(convenient. This)1 710 3 720 5685 t
+( most primitive building block for this example)7 1920( The)1 209( of a realistic system relying on them.)7 1532(increase the size)2 659 4 720 5805 t
+(is lists of \(operation)3 797 1 720 5925 t
+10 S f
+(_)1517 5925 w
+10 R f
+(identifier,function\) pairs:)1 1004 1 1567 5925 t
+8 S1 f
+(__________________)720 6980 w
+8 R f
+(\262 The first law of computer science: Every problem is solved by yet another indirection.)14 2802 1 720 7080 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 14 14
+%%Page: 15 15
+/saveobj save def
+mark
+15 pagesetup
+10 R f
+(- 15 -)2 216 1 2772 480 t
+9 CW f
+(typedef cat \(*PcatF\)\(void*,cat\);)2 1728 1 1080 885 t
+(struct oper_link {)2 972 1 1080 1095 t
+(oper_link* next;)1 864 1 1512 1200 t
+(int oper;)1 486 1 1512 1305 t
+(PcatF fct;)1 540 1 1512 1410 t
+(oper_link\(int oo, PcatF ff, oper_link* nn\))5 2268 1 1512 1620 t
+(: oper\(oo\), fct\(ff\), next\(nn\) {})4 1728 1 1944 1725 t
+(};)1080 1830 w
+10 R f
+(Using)720 2010 w
+10 CW f
+(oper_link)991 2010 w
+10 R f
+( a class)2 304(s we can specify)3 677 2 1531 2010 t
+10 CW f
+(cat_object)2545 2010 w
+10 R f
+(that allows us to invoke an unspecified set of)8 1862 1 3178 2010 t
+(functions on an unspecified representation:)4 1719 1 720 2130 t
+9 CW f
+(class cat_object {)2 972 1 1080 2295 t
+( pointer to representation)3 1404( //)1 540(void* p;)1 432 3 1512 2400 t
+(oper_link* oper_table; // list of operations)5 2376 1 1512 2505 t
+(public:)1080 2610 w
+(cat_object\(oper_link* tbl = 0, void* rep = 0\))7 2430 1 1512 2715 t
+(: oper_table\(tbl\), p\(rep\) { })4 1566 1 1944 2820 t
+(cat operator\(\)\(int oper, cat arg = 0\);)6 2052 1 1512 3030 t
+(void add_oper\(int, PcatF\);)2 1404 1 1512 3240 t
+(void remove_oper\(int\);)1 1188 1 1512 3345 t
+(};)1080 3450 w
+10 R f
+( the programmer the bother of specifying arguments where they are not)11 2890(Default arguments are user to spare)5 1430 2 720 3630 t
+( technique is elaborated in section 16 below.)7 1775( This)1 228(in fact necessary for a particular operation.)6 1708 3 720 3750 t
+(The application operator simply looks for an operation in its list and executes it \(if found\):)15 3610 1 864 3870 t
+9 CW f
+(cat cat_object::operator\(\)\(int oper, cat arg\))4 2430 1 1080 4035 t
+({)1080 4140 w
+(for \(oper_link* pp = oper_table; pp; pp = pp->next\))8 2754 1 1512 4245 t
+(if \(oper == pp->oper\) return pp->fct\(p,arg\);)5 2376 1 1944 4350 t
+(return bad_cat;)1 810 1 1512 4455 t
+(})1080 4560 w
+10 R f
+(If the operation fails the distinguished object)6 1787 1 720 4740 t
+10 CW f
+(bad_cat)2532 4740 w
+10 R f
+(is returned.)1 449 1 2977 4740 t
+(Given this feeble framework we can now build a stack:)9 2203 1 864 4860 t
+9 CW f
+(// stack interface, stack.h:)3 1512 1 1080 5025 t
+(enum stack_oper { stack_destroy = 99, stack_push, stack_pop };)8 3348 1 1080 5130 t
+(cat_object* make_stack\(cat_object* = 0\);)3 2160 1 1080 5340 t
+10 R f
+( here is a hint:)4 566( However,)1 440(As usual, the implementation of the stack is left as an exercise to the reader.)14 3033 3 720 5520 t
+9 CW f
+(#include "stack.h")1 972 1 1080 5685 t
+(struct rep {)2 648 1 1080 5895 t
+(// ...)1 324 1 1512 6000 t
+(void push\(cat\);)1 810 1 1512 6105 t
+(cat pop\(\);)1 540 1 1512 6210 t
+(};)1080 6315 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 15 15
+%%Page: 16 16
+/saveobj save def
+mark
+16 pagesetup
+10 R f
+(- 16 -)2 216 1 2772 480 t
+9 CW f
+(static cat stack_push_fct\(void* p, cat c\))5 2214 1 1080 885 t
+({)1080 990 w
+(\(\(rep*\) p\)->push\(c\);)1 1080 1 1512 1095 t
+(return bad_cat;)1 810 1 1512 1200 t
+(})1080 1305 w
+(static cat stack_pop_fct\(void* p, cat\))4 2052 1 1080 1515 t
+({)1080 1620 w
+(return \(\(rep*\) p\)->pop\(\);)2 1350 1 1512 1725 t
+(})1080 1830 w
+(static cat stack_destroy_fct\(void* p, cat\) { /* ... */ })9 3024 1 1080 2040 t
+(cat_object* make_stack\(cat_object* p\))2 1998 1 1080 2265 t
+({)1080 2370 w
+( get a clean object)4 1026( //)1 216(if \(p == 0\) p = new cat_object\(0,new rep\);)8 2268 3 1512 2475 t
+( and make it)3 648(p->add_oper\(stack_push,&stack_push_fct\); //)1 2646 2 1512 2580 t
+( behave)1 378(p->add_oper\(stack_pop,&stack_pop_fct\); //)1 2646 2 1512 2685 t
+(p->add_oper\(stack_destroy,&stack_destroy_fct\); // like a stack)4 3348 1 1512 2790 t
+(return p;)1 486 1 1512 2895 t
+(})1080 3000 w
+10 R f
+(We can now create and use stacks:)6 1384 1 720 3180 t
+9 CW f
+(#include "stack.h")1 972 1 1080 3345 t
+(void g\(cat kitty\))2 918 1 1080 3555 t
+({)1080 3660 w
+(cat_object& s = *make_stack\(\);)3 1620 1 1512 3765 t
+(s\(stack_push,kitty\);)1512 3870 w
+(cat c2 = s\(stack_pop\);)3 1188 1 1512 3975 t
+(s\(stack_destroy\);)1512 4080 w
+(})1080 4185 w
+10 R f
+( we might want an operation for peeking at)8 1759( example,)1 392( For)1 193(We can add operations to a stack at run time.)9 1832 4 864 4365 t
+(the top)1 275 1 720 4485 t
+10 CW f
+(cat)1020 4485 w
+10 R f
+(without popping:)1 687 1 1225 4485 t
+9 CW f
+(enum { stack_peek = stack_pop+1 };)5 1836 1 1080 4650 t
+(cat stack_peek_fct\(void*,cat\);)1 1620 1 1080 4755 t
+(void h\(cat_object& s\))2 1134 1 1080 4965 t
+({)1080 5070 w
+(s.add_oper\(stack_peek,&stack_peek_fct\);)1512 5175 w
+(cat top = s\(stack_peek\);)3 1296 1 1512 5385 t
+(})1080 5490 w
+10 R f
+( between address)2 691(Note that the operations on these stacks do not involve addresses; they can be transmitted)14 3629 2 720 5670 t
+( technique for invoking operations is often called message passing.)9 2674( This)1 228(spaces without special effort.)3 1164 3 720 5790 t
+10 B f
+(16 Tailoring)1 576 1 720 6030 t
+10 R f
+( example, the operation)3 994( For)1 208( ways.)1 274(The dynamically typed stack above could be improved in many)9 2700 4 864 6210 t
+( be added, the naming of operations could be)8 1818(lookup could be made faster, an inheritance mechanism could)8 2502 2 720 6330 t
+( and safer, the method for passing arguments could be made more general and safer, etc.)15 3554(made more general)2 766 2 720 6450 t
+(Here I will just demonstrate two techniques of more general interest.)10 2742 1 720 6570 t
+( behind an interface that provides notational con-)7 1981(Firstly, the message passing mechanism can be hidden)7 2195 2 864 6690 t
+( point is that combinations of the techniques)7 1860( The)1 218( safety for the key stack operations.)6 1494(venience and type)2 748 4 720 6810 t
+( particular, any data abstraction tech-)5 1509( In)1 139( be used to handle more delicate cases.)7 1588(described in this paper can)4 1084 4 720 6930 t
+(nique can be used to hide ugliness in an implementation:)9 2268 1 720 7050 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 16 16
+%%Page: 17 17
+/saveobj save def
+mark
+17 pagesetup
+10 R f
+(- 17 -)2 216 1 2772 480 t
+9 CW f
+(// improved stack interface, Stack.h:)4 1998 1 1080 885 t
+(#include "stack.h")1 972 1 1080 1095 t
+(class stack : public cat_object {)5 1782 1 1080 1200 t
+(public:)1080 1305 w
+(stack\(\) { make_stack\(this\); })3 1566 1 1512 1410 t
+(\304stack\(\) { \(*this\)\(stack_destroy\); })3 1944 1 1512 1515 t
+(void push\(cat c\) { \(*this\)\(stack_push,c\); })5 2322 1 1512 1620 t
+(cat pop\(\) { return \(*this\)\(stack_pop\); })5 2160 1 1512 1725 t
+(};)1080 1830 w
+10 R f
+(This allows us to write)4 911 1 720 2010 t
+9 CW f
+(#include "Stack.h")1 972 1 1080 2175 t
+(void g\(int sz, cat kitty\))4 1350 1 1080 2385 t
+({)1080 2490 w
+(stack s;)1 432 1 1512 2595 t
+(// compile time checked uses:)4 1566 1 1512 2805 t
+(s.push\(kitty\);)1512 3015 w
+(cat c2 = s.pop\(\);)3 918 1 1512 3120 t
+(// run time checked uses:)4 1350 1 1512 3330 t
+(s.add_oper\(stack_peek,&stack_peek_fct\);)1512 3540 w
+(cat top = s\(stack_peek\);)3 1296 1 1512 3645 t
+(})1080 3750 w
+10 R f
+(This uses the unchecked ``message passing'' notation only where needed.)9 2949 1 720 3930 t
+( the dynamically typed stack example I dodged the issue of argument types and argument)14 3670(Secondly, in)1 506 2 864 4050 t
+( I simply had all)4 670( Similarly,)1 453( fixed number of arguments of fixed type.)7 1704(type checking by simply providing a)5 1493 4 720 4170 t
+(operations return a)2 758 1 720 4290 t
+10 CW f
+(cat)1508 4290 w
+10 R f
+( for which you)3 603( is surprisingly often a viable choice for the sort of interfaces)11 2486(. That)1 263 3 1688 4290 t
+( of problems can be handled by allowing arguments of a)10 2306( larger class)2 490( A)1 129(actually need ``message passing.'')3 1395 4 720 4410 t
+( example:)1 391( For)1 189(fixed number of types.)3 904 3 720 4530 t
+9 CW f
+(class argument {)2 864 1 1080 4695 t
+(enum type_indicator { non_arg, int_arg, ptr_arg, string_arg, cat_arg };)8 3834 1 1512 4800 t
+(type_indicator t;)1 918 1 1512 4905 t
+(union {)1 378 1 1512 5010 t
+(int i;)1 324 1 1944 5115 t
+(void* p;)1 432 1 1944 5220 t
+(char* s;)1 432 1 1944 5325 t
+(cat c;)1 324 1 1944 5430 t
+(};)1512 5535 w
+(public:)1080 5640 w
+(argument\(noop\) :t\(non_arg\) { })3 1620 1 1512 5745 t
+(argument\(int ii\) : i\(ii\), t\(int_arg\) { })6 2160 1 1512 5850 t
+(argument\(void* pp\) : p\(pp\), t\(ptr_arg\) { })6 2268 1 1512 5955 t
+(argument\(char* ss\) : s\(ss\), t\(string_arg\) { })6 2430 1 1512 6060 t
+(argument\(cat cc\) : c\(cc\), t\(cat_arg\) { })6 2160 1 1512 6165 t
+(operator int\(\) { return t==int_arg ? i : -1; })9 2484 1 1512 6375 t
+(operator void*\(\) { return t==ptr_arg ? p : 0; })9 2538 1 1512 6480 t
+(operator char*\(\) { return t==string_arg ? s : 0; })9 2700 1 1512 6585 t
+(operator cat\(\) { return t==cat_arg ? c : bad_cat; })9 2754 1 1512 6690 t
+(};)1080 6795 w
+10 R f
+(This assumes that)2 711 1 720 6975 t
+10 CW f
+(cat)1456 6975 w
+10 R f
+(is declared so that)3 718 1 1661 6975 t
+10 CW f
+(==)2404 6975 w
+10 R f
+(and)2549 6975 w
+10 CW f
+(?:)2718 6975 w
+10 R f
+(can be applied.)2 601 1 2863 6975 t
+( handling for the conversion operators could be improved, but even as it stands this would)15 3791(The error)1 385 2 864 7095 t
+(allow the cat)2 510 1 720 7215 t
+10 S f
+(_)1230 7215 w
+10 R f
+(object class to be written:)4 1021 1 1280 7215 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 17 17
+%%Page: 18 18
+/saveobj save def
+mark
+18 pagesetup
+10 R f
+(- 18 -)2 216 1 2772 480 t
+9 CW f
+(typedef argument \(*PargumentF\)\(void*,argument\);)2 2538 1 1080 885 t
+(struct oper_link {)2 972 1 1080 1095 t
+(oper_link* next;)1 864 1 1512 1200 t
+(int oper;)1 486 1 1512 1305 t
+(PargumentF fct;)1 810 1 1512 1410 t
+(oper_link\(int oo, PcatF ff, oper_link* nn\))5 2268 1 1512 1620 t
+(: oper\(oo\), fct\(ff\), next\(nn\) {})4 1728 1 1944 1725 t
+(};)1080 1830 w
+10 R f
+(and can be used like this:)5 1007 1 1080 2205 t
+9 CW f
+(#include "stack.h")1 972 1 1440 2355 t
+(void g\(cat kitty\))2 918 1 1440 2535 t
+({)1440 2625 w
+(argument_object& s = *make_stack\(\);)3 1890 1 1872 2715 t
+( converts `kitty' to argument)4 1566(s\(stack_push,kitty\); //)1 1404 2 1872 2805 t
+( converts argument to cat)4 1350( //)1 216(cat c2 = s\(stack_pop\);)3 1188 3 1872 2895 t
+(s\(stack_destroy\);)1872 2985 w
+(})1440 3075 w
+10 R f
+(The object)1 424 1 1080 3240 t
+10 CW f
+(no_arg)1529 3240 w
+10 R f
+(is passed \(by default\) to indicate that no argument was specified by the user.)13 3050 1 1914 3240 t
+( have noticed that the size argument to the stack create operation disappeared when)13 3439(You may)1 377 2 1224 3360 t
+( avoid the complication of dealing with)6 1577( reason was to)3 574( The)1 207(we moved to the message passing style.)6 1602 4 1080 3480 t
+( that argument back in)4 917( Putting)1 346( so.)1 145(arguments of different types until we had the mechanism to do)10 2552 4 1080 3600 t
+(is now left as an exercise to the reader.)8 1548 1 1080 3720 t
+(Adding ``list of)2 630 1 1224 3840 t
+10 CW f
+(argument)1883 3840 w
+10 R f
+(s'' to the list of acceptable)5 1076 1 2363 3840 t
+10 CW f
+(argument)3468 3840 w
+10 R f
+( as yet another)3 594(types is left)2 469 2 3977 3840 t
+( again increases the range of applications for which the)9 2233( such lists)2 405( Allowing)1 433(exercise to the reader.)3 889 4 1080 3960 t
+(message passing technique is acceptable.)4 1638 1 1080 4080 t
+10 B f
+( Classes)1 336(17 Dynamic)1 558 2 1080 4320 t
+10 R f
+( Each)1 253( above.)1 292(Note that the concept of a class was almost lost in the message passing examples)14 3271 3 1224 4500 t
+( of acceptable operations that could be modified independently of the lists of)12 3074(object had its own list)4 886 2 1080 4620 t
+( applications and also not sufficiently)5 1506( could be seen as too flexible for many)8 1555( This)1 229(any other object.)2 670 4 1080 4740 t
+( problems can be alleviated by re-introducing the)7 1967( These)1 289( space and time optimizations.)4 1217(amenable to)1 487 4 1080 4860 t
+( we will)2 344( Here)1 254( common to a set of objects.)6 1190(notion of a class as an object containing information)8 2172 4 1080 4980 t
+(only represent the set of acceptable operations on an object of one of these ``dynamic classes.'')15 3801 1 1080 5100 t
+9 CW f
+(class argument_class_rep {)2 1404 1 1440 5265 t
+(public:)1440 5370 w
+(oper_link* oper_table; // list of operations)5 2376 1 1872 5475 t
+(void add_oper\(int, PargumentF\);)2 1674 1 1872 5685 t
+(void remove_oper\(int\);)1 1188 1 1872 5790 t
+(};)1440 5895 w
+10 R f
+(The reader can easily extend this notion, though.)7 1944 1 1080 6075 t
+( an)1 127(The objects looks much as they did before. The only change is that an indirection through)15 3689 2 1224 6195 t
+(object representing a class has been introduced on the path to the table of operations:)14 3388 1 1080 6315 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 18 18
+%%Page: 19 19
+/saveobj save def
+mark
+19 pagesetup
+10 R f
+(- 19 -)2 216 1 2772 480 t
+9 CW f
+(class argument_object {)2 1242 1 1440 885 t
+( pointer to representation)3 1404( //)1 540(void* p;)1 432 3 1872 990 t
+(argument_class_rep* crep; // class)3 1836 1 1872 1095 t
+(public:)1440 1200 w
+(argument_object\(argument_class_rep* cc, void* rep = 0\))5 2916 1 1872 1305 t
+(: crep\(cc\), p\(rep\) { })4 1188 1 2304 1410 t
+(argument operator\(\)\(int oper, argument arg = no_arg\);)6 2862 1 1872 1620 t
+(};)1440 1725 w
+10 R f
+( object representing stacks and provide an operation for gaining access)10 2851(Given this we can create an)5 1109 2 1080 1905 t
+(to it:)1 187 1 1080 2025 t
+9 CW f
+( the object representing stacks)4 1674( //)1 216(static argument_class_rep stack_class;)2 2052 3 1440 2190 t
+(argument_class_rep* get_stack_class\(\))1 1998 1 1440 2400 t
+({)1440 2505 w
+(if \(stack_class->oper_table == 0\) {)4 1890 1 1872 2610 t
+(stack_class.add_oper\(stack_push,&stack_push_fct\);)2304 2715 w
+(stack_class.add_oper\(stack_pop,&stack_pop_fct\);)2304 2820 w
+(stack_class.add_oper\(stack_destroy,&stack_destroy_fct\);)2304 2925 w
+(})1872 3030 w
+(return &stack_class;)1 1080 1 1872 3135 t
+(})1440 3240 w
+10 R f
+(Finally, we can provide a function for making stacks)8 2105 1 1080 3420 t
+9 CW f
+(argument_object* make_stack\(\))1 1566 1 1440 3585 t
+({)1440 3690 w
+(return new argument_object\(get_stack_class\(\)\);)2 2484 1 1872 3795 t
+(})1440 3900 w
+10 R f
+(and use it exactly as the previous versions:)7 1706 1 1080 4080 t
+9 CW f
+(void g\(cat kitty\))2 918 1 1440 4245 t
+({)1440 4350 w
+(argument_object& s = *make_stack\(\);)3 1890 1 1872 4455 t
+( converts `kitty' to argument)4 1566(s\(stack_push,kitty\); //)1 1404 2 1872 4560 t
+( converts argument to cat)4 1350( //)1 216(cat c2 = s\(stack_pop\);)3 1188 3 1872 4665 t
+(s\(stack_destroy\);)1872 4770 w
+(})1440 4875 w
+10 R f
+( does how-)2 446( It)1 115( individual object to change.)4 1151(This version, however, does not allow operations for an)8 2248 4 1080 5055 t
+(ever, open the possibility of trivially changing the operations on all objects of a dynamic class.)15 3782 1 1080 5175 t
+10 B f
+(18 Conclusions)1 693 1 1080 5415 t
+10 R f
+(C)1224 5595 w
+(++)1281 5589 w
+( Modula-)1 373(covers the spectrum of data hiding techniques from C \(files as modules\) through)12 3248 2 1419 5595 t
+(2 \(modules\) and Ada \(packages\) to C)6 1563 1 1080 5715 t
+(++)2633 5709 w
+( a free choice a C)5 749( Given)1 305( beyond.)1 355(\(classes\), and)1 549 4 2780 5715 t
+(++)4728 5709 w
+(pro-)4874 5715 w
+(grammer would naturally choose one of the class-based strongly-typed techniques \(sections 10, 11,)12 3960 1 1080 5835 t
+(or 12\), but the other techniques can occasionally be useful.)9 2348 1 1080 5955 t
+10 B f
+(19 Acknowledgements)1 1002 1 1080 6195 t
+10 R f
+(Andrew Koenig, Brian Kernighan, and Doug McIlroy lent ears and blackboard to some of)13 3816 1 1224 6375 t
+( to)1 117( Coplien suggested the extension of the range of examples)9 2462( Jim)1 210(these little puzzle programs.)3 1171 4 1080 6495 t
+( Dave)1 249( nine-plus cat lives in this paper are dedicated to)9 2044( The)1 218(include function binding examples.)3 1449 4 1080 6615 t
+( the death penalty for presenting ``yet another stack)8 2128(McQueen who once in desperation proposed)5 1832 2 1080 6735 t
+( thanks to Andy for giving me a practical demonstration of the difficulty of stack-)14 3290(example.'' Also)1 670 2 1080 6855 t
+(ing cats.)1 333 1 1080 6975 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 19 19
+%%Trailer
+done
+%%Pages: 19
+%%DocumentFonts: Courier Times-Bold Times-Italic Times-Roman Times-Roman Symbol

@@ -1,0 +1,1 @@
+("6.1" ("cb8fb625cd9b319f54b26396381d24b9b3242dfc" . "1b9245f7fd785063360d64bfe9b17ad69c94c75c") (collects #"deinprogramm" #"DMdA-deflam.rkt") (collects #"deinprogramm" #"DMdA.rkt") (collects #"syntax" #"docprovide.rkt") (collects #"scheme" #"runtime-config.rkt") (collects #"deinprogramm" #"DMdA" #"lang" #"reader.rkt"))

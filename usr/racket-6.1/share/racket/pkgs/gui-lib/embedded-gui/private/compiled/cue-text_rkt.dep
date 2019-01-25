@@ -1,0 +1,1 @@
+("6.1" ("08e80e8c1e294425952a1c4e0c04c78c6e871a70" . "8a28f26fabe652488260423b57ad078110ae56b0") (collects #"mzscheme" #"main.rkt") (collects #"mred" #"main.rkt") (collects #"framework" #"main.rkt") (collects #"mzlib" #"etc.rkt") (collects #"mzlib" #"class.rkt"))

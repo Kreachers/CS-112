@@ -1,0 +1,1 @@
+("6.1" ("49d3449d11cd9400d93bff0d0edb77bbaf1f991d" . "b3f3dda231d4af7b77086174b647f51a4b5d629f") (collects #"scheme" #"base.rkt") (collects #"deinprogramm" #"quickcheck" #"quickcheck.rkt") (collects #"stepper" #"private" #"syntax-property.rkt") (collects #"scheme" #"promise.rkt") (collects #"mzlib" #"struct.rkt") (collects #"scheme" #"runtime-config.rkt"))

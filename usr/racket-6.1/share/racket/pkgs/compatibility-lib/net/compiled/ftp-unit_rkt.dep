@@ -1,0 +1,1 @@
+("6.1" ("e997f7093d3d7ce1de622f16a193400dfce4ff9d" . "cd539851fec99693d480ef916a462a4c2404a979") (collects #"racket" #"unit.rkt") (collects #"net" #"ftp.rkt") (collects #"net" #"ftp-sig.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

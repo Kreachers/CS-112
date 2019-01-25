@@ -1,0 +1,5 @@
+#! /bin/sh
+test "${ZSH_VERSION+set}" = set && alias -g '${1+"$@"}'='"$@"'
+cd '/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/tests'
+exec ${CONFIG_SHELL-/bin/sh} "/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/tests/./testsuite" -v -d  AUTOTEST_PATH='/afs/cats.ucsc.edu/courses/cmps112-wm/usr/smalltalk-3.2.5/bin' 126 ${1+"$@"}
+exit 1

@@ -1,0 +1,1 @@
+("6.1" ("bf59d09342afa39094b5677a3f354e949115836c" . "40124f3fb8279ffc3d6f54b36e50c44c3cdec2c6") (collects #"framework" #"private" #"decorated-editor-snip.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

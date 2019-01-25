@@ -1,0 +1,1 @@
+("6.1" ("c2fdad9a8938d83b784fdcafa234053c2e808966" . "7add4eb8f7a7ae93535954295ba5827634036232") (collects #"syntax" #"kerncase.rkt") (collects #"syntax" #"stx.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

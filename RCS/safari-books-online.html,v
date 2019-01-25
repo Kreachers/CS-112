@@ -1,0 +1,70 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2016.10.10.20.22.20;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@<TITLE>Safari Books Online</TITLE>
+<STYLE>
+body {
+   max-width: 40em;
+   color: #2FFF2F;
+   background-color: #2F2F2F;
+}
+A:link {color: #2FFFFF}
+A:visited {color: #FFFF2F}
+A:hover {color: #FF2F2F}
+</STYLE>
+<BODY>
+Safari Books Online allows you to read many of the books from O'Reilly 
+(<A HREF=http://www.oreilly.com/
+        >http://www.oreilly.com/</A>)
+for free if you use a UCSC computer.
+<P>
+From on campus:
+<BR>
+<A HREF=http://proquest.safaribooksonline.com/>
+        http://proquest.safaribooksonline.com/</A>
+<P>
+If you are not on campus, you must first authenticate:
+<BR>
+<A HREF=http://proquest.safaribooksonline.com.oca.ucsc.edu>
+        http://proquest.safaribooksonline.com.oca.ucsc.edu</A>
+<P>
+The library has further information at:
+<BR>
+<A HREF=http://library.ucsc.edu/services/off-campus-access-faq>
+        http://library.ucsc.edu/services/off-campus-access-faq</A>
+<P>
+Once you have accessed the Safari web page, you can search for:
+<UL>
+<LI>Learning Gnu Emacs</LI>
+<LI>Learning the Bash Shell</LI>
+<LI>Learning the Vi and Vim Editors</LI>
+<LI>Linux in a Nutshell</LI>
+<LI>Managing Projects with Gnu Make</LI>
+</UL>
+<P>
+<A HREF=../:>Parent Directory</A>
+<P>
+<TT><SMALL><SMALL>
+$Id: safari-books-online.html,v 1.1 2016-04-18 16:04:34-07 - - $
+</SMALL></SMALL></TT>
+</BODY>
+@

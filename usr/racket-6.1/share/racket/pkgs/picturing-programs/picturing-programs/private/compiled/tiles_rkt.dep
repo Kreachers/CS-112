@@ -1,0 +1,1 @@
+("6.1" ("d4ad99f9ab0a9eb41840d0e4896934c35e95b818" . "8ffe52e727cb22d5e882f93cb7674c48844e7fab") (collects #"2htdp" #"image.rkt") (collects #"lang" #"error.rkt") (collects #"test-engine" #"racket-tests.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"picturing-programs" #"private" #"book-pictures.rkt"))

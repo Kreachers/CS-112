@@ -1,0 +1,1 @@
+("6.1" ("abbba4e48c960e4c96015ab3f808a32023c02cc7" . "adfcde23bc89f666b92ea472aee8e9d1d692d91c") (collects #"htdp" #"image.rkt") (collects #"lang" #"htdp-intermediate-lambda.rkt") (collects #"2htdp" #"universe.rkt") (collects #"2htdp" #"uchat" #"auxiliaries.rkt") (collects #"lang" #"htdp-intermediate-lambda-reader.rkt"))

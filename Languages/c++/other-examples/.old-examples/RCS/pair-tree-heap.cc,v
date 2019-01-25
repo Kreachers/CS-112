@@ -1,0 +1,240 @@
+head	320.7;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+320.7
+date	2002.01.29.19.09.20;	author -;	state -;
+branches;
+next	320.6;
+
+320.6
+date	2002.01.29.19.00.32;	author -;	state -;
+branches;
+next	320.5;
+
+320.5
+date	2002.01.29.18.57.56;	author -;	state -;
+branches;
+next	320.4;
+
+320.4
+date	2002.01.29.18.53.41;	author -;	state -;
+branches;
+next	320.3;
+
+320.3
+date	2002.01.29.18.53.05;	author -;	state -;
+branches;
+next	320.2;
+
+320.2
+date	2002.01.29.18.50.45;	author -;	state -;
+branches;
+next	320.1;
+
+320.1
+date	2002.01.29.18.47.25;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+320.7
+log
+@-
+@
+text
+@// $Id: pair-heap.cc,v 320.29 2002-01-11 20:12:33-08 - - $
+
+#include <iostream>
+#include <queue>
+#include <vector>
+
+using namespace std;
+
+// This example really ought to be done in 3 .cc files and their 
+// .h's.  The double lines of //'s separate the various modules.
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//
+// Read in Pairs and print them out sorted.
+// A Pair is an integer and a character,
+// alternating in the input stream.
+//
+
+class Pair{
+   public:
+      Pair( int count = 0, char byte = '\0' ):
+            count( count ), byte( byte ) {};
+      friend ostream &operator<< ( ostream &, const Pair & );
+      friend inline bool operator>= ( const Pair &, const Pair & );
+   private:
+      int count;
+      unsigned char byte;
+};
+
+inline bool operator>= ( const Pair &left, const Pair &right ){
+   return left.count != right.count
+        ? left.count >= right.count
+        : left.byte >= right.byte;
+};
+
+ostream &operator<< ( ostream &out, const Pair &pair ){
+   return out << "(" << pair.count << "," << pair.byte << ")";
+};
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//
+// Generic version of Tree, showing only how to hold a Pair
+// in it.
+//
+
+template <class Item>
+class Tree{
+   public:
+      Tree(){};
+      Tree( Item newitem ): item( newitem ){};
+      friend ostream &operator<< ( ostream &, const Tree<Item> & );
+      Item getitem() const{ return item; };
+   private:
+      Item item;
+};
+
+// The following is broken.  It appears that templates classes
+// can not have template friends.
+#ifdef __COMPILE_TEMPLATES_FRIENDS_
+template <class Item>
+ostream &operator<< ( ostream &out, const Tree<Item> &tree ){
+   return out << "Tree{ " << tree.item << " } ";
+};
+#endif
+
+// The following is a hacked version, explicitly defined with
+// Pair, and friendship works here, but this is not a template
+// operator.
+ostream &operator<< ( ostream &out, const Tree<Pair> &tree ){
+   return out << "Tree{ " << tree.item << " } ";
+};
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//
+// The following is part of the main program.  >= is defined without
+// any internal knowledge of the Tree itself.  Perhaps it should also
+// have been defined as a friend or member.  We don't here, because
+// the >= relationship between trees depends on what a Pair is.
+//
+
+template <class Item>
+bool operator>= ( const Tree<Item> &left, const Tree<Item> &right ){
+   return left.getitem() >= right.getitem();
+};
+
+int main(){
+
+   priority_queue< Tree<Pair>, vector<Tree<Pair> >,
+                   greater_equal<Tree<Pair> > > heap;
+   int count;
+   char byte;
+
+   // Read in some Tree<Pair>.
+   while( cin >> count >> byte ){
+      cout << "input = " << count << "(" << byte << ")" << endl;
+      heap.push( Tree<Pair>( Pair( count, byte )));
+   };
+
+   // Write out the Tree<Pair>s.
+   while( ! heap.empty() ){
+      cout << "output = " << heap.top() << endl;
+      heap.pop();
+   };
+};
+@
+
+
+320.6
+log
+@-
+@
+text
+@d9 5
+d41 2
+d59 3
+d66 1
+d68 6
+a73 3
+// ostream &operator<< ( ostream &out, const Tree<Pair> &tree ){
+//    return out << "Tree{ " << tree.item << " } ";
+// };
+d75 2
+@
+
+
+320.5
+log
+@-
+@
+text
+@d52 6
+a57 3
+// *** The following is broken.
+// template <class Item>
+// ostream &operator<< ( ostream &out, const Tree<Item> &tree ){
+d61 6
+a66 3
+ostream &operator<< ( ostream &out, const Tree<Pair> &tree ){
+   return out << "Tree{ " << tree.item << " } ";
+};
+@
+
+
+320.4
+log
+@-
+@
+text
+@d52 7
+a58 2
+template <class Item>
+ostream &operator<< ( ostream &out, const Tree<Item> &tree ){
+@
+
+
+320.3
+log
+@-
+@
+text
+@d47 1
+a47 1
+      Item getitem(){ return item; };
+@
+
+
+320.2
+log
+@-
+@
+text
+@d47 1
+d57 5
+@
+
+
+320.1
+log
+@-
+@
+text
+@d45 1
+a45 1
+      Tree( Item newitem ): item( newitem )();
+@

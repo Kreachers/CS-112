@@ -1,0 +1,1 @@
+("6.1" ("0561d92f64606632cd4912f4cb3cd24d0dfdaad9" . "6b37132dee5be0e0e63907f8cbd58e81166c0543") (collects #"drscheme" #"drscheme.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

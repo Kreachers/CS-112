@@ -1,0 +1,73 @@
+head	1.3;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.3
+date	2016.09.30.23.29.51;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2016.09.30.23.28.52;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2016.09.30.23.26.54;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@-
+@
+text
+@#!/usr/bin/perl
+# $Id: duedates.perl,v 1.2 2016-09-30 16:28:52-07 - - $
+
+use HTTP::Date qw (str2time);
+use POSIX qw (strftime);
+
+$time = str2time "2016-10-10 12:00:00";
+for $asg (1..4) {
+   $date = strftime "%a %b %d", localtime $time;
+   print ". $date. ASG $asg DUE.\n";
+   $time += 24 * 3600 * 17;
+}
+@
+
+
+1.2
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: duedates.perl,v 1.1 2016-09-30 16:26:54-07 - - $
+d9 1
+a9 1
+   $date = strftime "%a %m %d", localtime $time;
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id$
+d9 1
+a9 1
+   $date = strftime "%a %m %d, localtime $time";
+@

@@ -1,0 +1,1 @@
+("6.1" ("2b8eb50cefb758d8e180276becd06a3e5ca5f05b" . "05c201a3915ff20f2d70adda3b630d86307d8afc") (collects #"racket" #"set.rkt") (collects #"unstable" #"2d" #"dir-chars.rkt") (collects #"racket" #"port.rkt") (collects #"unstable" #"2d" #"private" #"read-util.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

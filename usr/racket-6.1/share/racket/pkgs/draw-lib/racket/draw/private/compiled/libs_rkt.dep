@@ -1,0 +1,1 @@
+("6.1" ("c60e3219b205726d6441bfb5c8be5be196d9b3fa" . "98cc5860244b294945be6339d4e875071c9ebcec") (collects #"racket" #"runtime-path.rkt") (collects #"ffi" #"unsafe.rkt") (collects #"ffi" #"winapi.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

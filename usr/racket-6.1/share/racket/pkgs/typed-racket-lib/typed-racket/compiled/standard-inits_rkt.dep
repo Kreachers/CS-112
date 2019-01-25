@@ -1,0 +1,1 @@
+("6.1" ("9f0982dbb3847ec38e9b95af2ab8076a0749ec8d" . "8538f6f1923e2df3c2bf7ac21eefa349ee407c99") (collects #"racket" #"lazy-require.rkt") (collects #"typed-racket" #"utils" #"timing.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"typed-racket" #"env" #"env-req.rkt"))

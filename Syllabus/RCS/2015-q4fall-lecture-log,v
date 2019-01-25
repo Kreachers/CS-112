@@ -1,0 +1,81 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2017.03.30.00.50.38;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@
+Fall 2015
+CMPS-112 -- Comparative Programming Languages
+
+week  0:
+ 1. Fri Sep 25 - syllabus, etc.; 01-introduction.pdf
+
+week  1:
+ 2. Mon Sep 28 - Scheme (intro notes)
+ 3. Wed Sep 30 - project 1; Scheme (notes)
+ 4. Fri Oct  2 - Scheme (notes)
+
+week  2:
+ 5. Mon Oct  5 - Scheme (examples); Scheme higher-order fns
+ 6. Wed Oct  7 - Scheme higher-order fns
+ 7. Fri Oct  9 - Scheme higher-order fns
+
+week  3:
+ 8. Mon Oct 12 - intro Ocaml
+ 9. Wed Oct 14 - Ocaml (notes); project 2
+10. Fri Oct 16 - project 2 bigint
+
+week  4:
+11. Mon Oct 19 - Ocaml (notes)
+12. Wed Oct 21 - Ocaml higher-order fns
+13. Fri Oct 23 - Ocaml higher-order fns
+
+week  5:
+14. Mon Oct 26 - Intro Smalltalk
+15. Wed Oct 28 - TEST #1.
+16. Fri Oct 30 - smalltalk/{Examples/,angelfire-notes-smalltalk}
+
+week  6:
+17. Mon Nov  2 - smalltalk/Examples
+18. Wed Nov  4 - asg3; language processors; history
+19. Fri Nov  6 - 3. language design; 5. basic semantics
+
+week  7:
+20. Mon Nov  9 - Object-oriented programming
+    Wed Nov 11 - HOLIDAY
+21. Fri Nov 13 - OOP; Lambda calculus
+
+week  8:
+22. Mon Nov 16 - Intro Perl
+23. Wed Nov 18 - TEST #2.
+24. Fri Nov 20 - Perl.
+
+week  9:
+25. Mon Nov 23 - Program 5; finish Perl.
+26. Wed Nov 25 - Lambda calculus; intro Prolog
+    Fri Nov 27 - HOLIDAY
+
+week 10:
+27. Mon Nov 30 - Prolog
+28. Wed Dec  2 - finish Prolog; lazy evaluation & Haskell
+29. Fri Dec  4 - Haskell; lazy eval; review
+
+$Id: Lecture-log-2015-q4fall,v 1.30 2015-12-07 12:56:59-08 - - $
+@

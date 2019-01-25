@@ -1,0 +1,1 @@
+("6.1" ("c6473dd46c34f7e33170b1a0a157c097f064ed75" . "bb510f324cb95bf53985b654f1cc4bdf57300cf5") (collects #"racket" #"draw" #"private" #"font-syms.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"mred" #"private" #"kernel.rkt") (collects #"racket" #"base.rkt"))

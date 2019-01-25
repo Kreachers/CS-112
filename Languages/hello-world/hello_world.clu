@@ -1,0 +1,4 @@
+% hello.clu
+hello = proc()
+  stream$puts(stream$primary_output(),"Hello, world\n")
+end

@@ -1,0 +1,270 @@
+# $RCSfile: Notes.readers_writers,v $$Revision: 950421.1 $
+
+THE READERS AND WRITERS PROBLEM.
+
+-----------------------------------------------------
+Extracted from "Ada Rationale", chapter 13, "Tasking"
+-----------------------------------------------------
+
+In many situations it is desirable to enforce a protocol on the use of
+entries. This  can be  done by  placing the task within a package body
+and then  providing access  to the  entries via procedures declared in
+the package  specification. This  technique also illustrates the point
+that a  package provides  visibility control  whereas a  task provides
+parallelism.
+
+As an  example consider  an extension  of the task PROTECTED_VARIABLE,
+which allows  several tasks  to READ  simultaneously but  only one  to
+WRITE, and  then only  when no  tasks are  reading. It is written as a
+package READER_WRITER containing a task CONTROL.
+
+<<<< See FIGURE 1 >>>>
+
+In this  example READ  and  WRITE  are  procedures  and  not  entries.
+However, since  entries are  called in the same way as procedures, the
+effective interface  from the  point of  view of  the  caller  remains
+unchanged. Of  course the  compiled calling code may be different, but
+this need not concern the user.
+
+This example  also  illustrates  the  use  of  more  than  one  accept
+statement  corresponding   to  the   internal  entry  WRITE  (in  this
+particular example  the bodies  are the same, but this need not be the
+case). It  shows that  a task  can be  viewed as  a sort of coroutine,
+where entry  calls can  achieve different  actions  depending  on  the
+current point of execution of the task.
+
+We now  consider a  further elaboration  of this  example that gives a
+better distribution  of priority between readers and writers. Normally
+writers have  priority over  readers, and  a new  reader should not be
+permitted to start if there is a writer waiting.
+
+Moreover, all  waiting readers  at the  end of  a  write  should  have
+priority over  the next  writer. In  order to program this strategy we
+use the  attribute E'COUNT  of an entry E, which denotes the number of
+tasks waiting  in the  queue for  the entry. The use of this attribute
+requires some  care as  explained below.  We illustrate  this point by
+means of  two different  formulations of  this problem.  In the  first
+formulation the declaration
+
+   STILL_WAITING :  INTEGER  :=  0;
+
+is added  to the  declarative part  of the  body of  CONTROL  and  the
+statement part now becomes as follows:
+
+<<<< See FIGURE 2 >>>>
+
+In this  formulation, STILL_WAITING  is the  number of  readers  still
+waiting of those who were waiting when the previous write finished.
+
+
+The first-in-first-out  queue discipline  is necessary for the correct
+working of  this example.  At the  end of  each write,  the number  of
+readers waiting  is noted  in STILL_WAITING.  A reader  is accepted if
+there are  still old  readers waiting  to be  served, or  if nobody is
+waiting to  write; hence  the test  of STILL_WAITING  in the  guard of
+accept START_READ and the decrement of STILL_WAITING after the body of
+START_READ. Similarly,  the guard  of accept  WRITE ensures that a new
+writer is  only served  if there  are neither  current readers nor old
+readers still waiting.
+
+The above  formulation should  be treated  with caution. Thus consider
+what happens  if one  of the  waiting readers  is aborted while in the
+queue on the entry START_READ, and after the value of START_READ'COUNT
+has been  assigned to  STILL_WAITING. The  value of STILL_WAITING will
+then become  inconsistent and  the next writer will be further delayed
+until a new reader arrives.
+
+This illustrates  a general  danger with  using the COUNT attribute in
+guards, since  any task  that has  issued an entry call can be aborted
+between the  evaluation of  COUNT  and  the  execution  of  an  accept
+statement based on the value of COUNT.
+
+We will now reformulate the above example by introducing the else part
+of the  select statement.  A select statement may contain an else part
+following the  various possibly  guarded alternatives.  The else  part
+cannot be guarded. If all guards are false, or an immediate rendezvous
+is not  possible, then  the else  part is  obeyed. If there is an else
+part then PROGRAM_ERROR cannot arise.
+
+In the  reformulated example,  STILL_WAITING is no longer required and
+the main loop now becomes as follows:
+
+<<<< See FIGURE 3 >>>>
+
+After accepting  a WRITE the task loops, accepting as many START_READs
+as can  immediately be processed. Of course the behavior is marginally
+different, but the general objective is satisfied. The loop ought also
+to follow  the initial  WRITE, but  because of  the constraints on the
+position of an accept statement it cannot be placed in a procedure.
+
+It should be observed that none of the above solutions to this problem
+is satisfactory  if the  calling tasks  are aborted.  They  have  been
+introduced in  order to  illustrate various features of Ada and not as
+solutions to the classic readers and writers problem.
+
+It is  worth noting  that the entries in the various alternatives need
+not be  distinct (although they usually will be). If two or more prove
+to be  the same  then the  usual rule  of arbitrary selection applies.
+This may  be felt  surprising. One motivation here is the fact that if
+several alternatives  are open,  one of them is chosen arbitrarily and
+there  is   hence  no  reason  to  disallow  the  same  entry  in  two
+alternatives. Another  motivation is  the  existence  of  families  of
+entries. If  E(I) and  E(J) were  two  entries  and  they  had  to  be
+different, then  a tedious  runtime check would be necessary. The rule
+thus allows  different actions to be programmed in a simple way on the
+same entry but according to different guards.
+
+
+Note that  the guards  are all  evaluated at  the start  of the select
+statement only.  The alternative  semantics of evaluating a guard only
+when an  entry is  called was  considered and  rejected.  The  problem
+concerns the  indivisibility of evaluating the guard and accepting the
+call together.  One could  not afford  to make  the  guard  evaluation
+indivisible, and  so it  would be  possible for the calling task to be
+aborted during  the guard  evaluation. This  would cause  havoc if the
+guard proved to be true.
+
+Guard evaluation  at the  start  of  the  select  statement  could  be
+criticized on  the grounds that the value of a guard may be changed by
+another task  before an  alternative is  chosen. This  is not  a  good
+argument since even if the guard were evaluated when the corresponding
+alternative is  chosen, there  is no  guarantee that  it might  not be
+immediately changed.  In either case there is a danger with the use of
+asynchronously modifiable  guards (such  as  those  containing  COUNT,
+CLOCK, and  so on). Note that in practice most guards are local to the
+task that  contains the  select statement.  In addition  they are most
+often  very   simple.  Consequently  several  optimizations  of  guard
+evaluation are possible.
+
+The rule  for choosing one of the open alternatives has been stated to
+be arbitrary.  This should  be interpreted  as meaning  that it is not
+defined by  the language  but is  rather left to the implementation to
+choose an appropriate efficient algorithm. However, the algorithm used
+should not  be unduly  predictable, and  any program  that relies on a
+particular algorithm  is not  portable. Thus  one could not assume for
+instance that  the alternatives were taken in some order. If a uniform
+strategy is  desired, then  it must be programmed by using appropriate
+guarding conditions.
+
+The need for the else part has been adequately demonstrated by earlier
+examples. It  should be  observed that  the select  statement allows a
+server to  choose between  different accept  statements. There  is  no
+corresponding mechanism  for a  caller to  choose between the first of
+several calls.  This is  because of  a fundamental  design decision: a
+task can  be on  at most  one queue at a time. The main motivation for
+this decision is simplicity and efficiency of implementation.
+
+
+-- FIGURE 1.
+
+   package READER_WRITER is
+     procedure READ (V :  out ITEM);
+     procedure WRITE(E :  in ITEM);
+   end;
+   
+   package body READER_WRITER is
+     VARIABLE :  ITEM;
+   
+     task CONTROL is
+       entry START_READ;
+       entry STOP_READ;
+       entry WRITE(E :  in ITEM);
+     end;
+   
+
+
+     task body CONTROL is
+       READERS :  NATURAL  :=  0;
+     begin
+       accept WRITE(E :  in ITEM) do
+         VARIABLE :=  E;
+       end;
+   
+       loop
+         select
+           accept START_READ;
+           READERS :=  READERS + 1;
+         or
+           accept STOP_READ;
+           READERS :=  READERS - 1;
+         or
+           when READERS = 0  =>
+             accept WRITE(E :  in ITEM) do
+               VARIABLE :=  E;
+             end;
+         end select;
+       end loop;
+     end CONTROL;
+   
+     procedure READ(V :  out ITEM) is
+     begin
+       CONTROL.START_READ;
+       V :=  VARIABLE;
+       CONTROL.STOP_READ;
+     end;
+   
+     procedure WRITE(E :  in ITEM) is
+     begin
+       CONTROL.WRITE(E);
+     end;
+   
+   end READER_WRITER;
+
+
+-- FIGURE 2.
+
+   begin
+     accept WRITE(E :  in ITEM) do
+       VARIABLE :=  E;
+       STILL_WAITING :=  START_READ'COUNT;
+     end;
+   
+     loop
+       select
+         when WRITE'COUNT = 0 or STILL_WAITING > 0  =>
+           accept START_READ;
+           READERS :=  READERS + 1;
+           if STILL_WAITING > 0 then
+             STILL_WAITING :=  STILL_WAITING - 1;
+           end if;
+       or
+         accept STOP_READ;
+         READERS :=  READERS - 1;
+       or
+         when READERS = 0 and STILL_WAITING = 0  =>
+           accept WRITE(E :  in ITEM) do
+             VARIABLE :=  E;
+             STILL_WAITING :=  START_READ'COUNT;
+           end;
+       end select;
+     end loop;
+   end;
+
+
+-- FIGURE 3.
+
+   loop
+     select
+       when WRITE'COUNT = 0  =>
+         accept START_READ;
+         READERS :=  READERS + 1;
+     or
+         accept STOP_READ;
+         READERS :=  READERS - 1;
+     or
+       when READERS = 0  =>
+         accept WRITE(E :  in ITEM) do
+           VARIABLE :=  E;
+         end;
+         loop
+           select
+             accept START_READ;
+             READERS :=  READERS + 1;
+           else
+             exit;
+           end select;
+         end loop;
+     end select;
+   end loop;
+
+

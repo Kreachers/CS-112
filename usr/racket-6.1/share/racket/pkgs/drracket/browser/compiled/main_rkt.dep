@@ -1,0 +1,1 @@
+("6.1" ("333ef990e68251abc15ca9748727a0fdf773180d" . "a44c7f96d153df4d909301261a63d671523957b1") (collects #"browser" #"browser.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

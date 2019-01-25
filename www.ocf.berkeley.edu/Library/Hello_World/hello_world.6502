@@ -1,0 +1,14 @@
+; 6502 for Commodore 64
+*	=	$c000
+screen	=	$0400
+start
+	ldy	#(datend-data+1)
+loop
+	lda	data-1,y
+	sta	screen-1,y
+	dey
+	bne	loop
+	rts
+data	.byt	'Hello, world'
+datend
+	.end

@@ -1,0 +1,217 @@
+Charlie McDowell's notes:  Java in an Hour.
+________________________________________________________________________
+Java as a better C
+	* true arrays
+		* range checked
+		* allocation vs declaration
+		* int[] x   or   int x[]
+		* x.length
+	* no pointer arithmetic
+	* no address of operator - no pointers to primitive values
+	* garbage collection
+	* boolean type - no if(x=3) ...  causes syntax error
+	* Strings with concatenation operator and coversion from ALL types
+	* definite order of evaluation
+		* regular & short circuit booleans and/or
+	* can call C routines for low level hacking
+	* function overloading
+	* Unicode character set (16 bit)
+	* platform independence including networking and graphics
+		* standard numeric types - size specified
+	* standard package (library) for stacks, hash tables, vectors
+________________________________________________________________________
+	int x[]={1,2,3,4,5,6,7,8,9,10};
+	int i;
+	int sum=0;
+	float average;
+	for(i=0; i<10; i++){
+	    sum = sum+x[i];
+	}
+	average = sum/10;
+
+
+Non-OOP syntax
+	* same for, while, switch, if-else, arrays, string literals,
+	  char literals, casting, function declaration, variable declaration
+	* package-class-method (chart)
+________________________________________________________________________
+Getting Started
+	* one public class per file
+	* classes in unnamed package unless you do something
+	* ``javac Foo.java'' creates Foo.class
+	* ``java Foo'' starts JVM and calls method main in class Foo
+	* import packages (java.lang automatically imported)
+	* ``appletviewer Foo.html'' to test an applet
+	* ~charlie/java/cmp60g
+________________________________________________________________________
+import cmp60g.*;
+//import java.io.DataInputStream;
+
+public class Average2{
+    public static void main(String[] args) throws java.io.IOException
+    {
+//	DataInputStream input = new DataInputStream(System.in);
+	ReadInput input = new ReadInput(System.in);
+
+	int x[]=new int[10];
+	int i;
+	int sum=0;
+	float average;
+
+        System.out.println("Type in 10 integers.");
+	for(i=0; i<10; i++){
+	    x[i] = input.readInt();
+//	    x[i] = (new Integer(input.readLine())).intValue();
+//	    x[i] = Integer.valueOf(input.readLine()).intValue();
+	}
+	    
+	for(i=0; i<10; i++){
+	    sum = sum+x[i];
+	}
+	average = sum/10;
+	System.out.println(average);
+    }
+}
+________________________________________________________________________
+What is OOP?
+	* encapsulation (ADTs)
+	* inheritance
+	* polymorphism
+		* function overloading
+		* dynamic typing and function dispatch
+________________________________________________________________________
+public class StackTest {
+    public static void main(String[] args){
+	Stack stack = new Stack();
+	stack.push("Testing");
+	stack.push("One");
+	stack.push(new Integer(99));
+	System.out.println(stack.pop());
+	System.out.println(stack.pop());
+	System.out.println(stack.pop());
+	System.out.println(stack.pop());
+    }
+}
+________________________________________________________________________
+public class Stack {
+    private StackElement top;
+    private int count=0;
+    public void push(Object obj){
+	StackElement element = new StackElement(obj);
+	element.next = top;
+	top = element;
+	count++;
+    }
+    public Object pop(){
+	if(top == null) return null;
+	Object obj = top.value;
+	top = top.next;
+	count--;
+	return obj;
+    }
+}
+
+class StackElement {
+    Object value;
+    StackElement next;
+    StackElement(Object obj){
+	value = obj;
+	next = null;
+    }
+}
+________________________________________________________________________
+Encapsulation - Classes
+	* methods
+	* contructors
+	* instances (objects)
+	* instance variables
+	* polymorphism
+		* every class derives from Object - in push and pop
+		* every class implements toString - println(stack.pop())
+	* user of a class need not ever see implementation (no .h equiv)
+________________________________________________________________________
+Inheritance -
+	* for subtyping - saw it with Object in Stack
+	* for code reuse - show Button example
+	* interface (alternative to multiple inheritance)
+________________________________________________________________________
+import java.awt.*;
+
+public class ButtonExample {
+    public static void main (String args[])
+    {
+	Frame plainWindow = new Frame();
+
+        plainWindow.setLayout(new BorderLayout());
+	plainWindow.add("North",new QuitButton());
+	plainWindow.add("Center",new Button("nothing"));
+	plainWindow.add("South",new PlainButton("Do Something"));
+	plainWindow.pack();
+	plainWindow.show();
+    }
+}
+
+class QuitButton extends Button {
+    public QuitButton(){
+	super("Quit");
+    }
+    public boolean action(Event e,Object x){
+	System.out.println("goodbye!");
+	System.exit(0);
+	return true;
+    }
+}
+
+class PlainButton extends Button {
+    public PlainButton(String label){
+	super(label);
+    }
+    public boolean action(Event e,Object x){
+	System.out.println("Do Something Here!");
+	return true;
+    }
+}
+________________________________________________________________________
+Java as a simpler C++
+	* no multiple inheritance (interfaces instead)
+	* no copy constructors (everything is a reference)
+	* no operator overloading
+	* garbage collection
+	* no private inheritance
+	* packages
+________________________________________________________________________
+Applets - what are they?
+	* no file I/O
+	* network connection back to origin only
+	* JavaWorld - how to utilize idle cpu time
+	* ButtonExample
+________________________________________________________________________
+/* <applet code="SimpleApplet.class" width=500 height=500></applet> */
+import java.awt.*;
+import java.applet.*;
+
+public class SimpleApplet extends Applet{
+    TextField input;
+    Button doit;
+    public void init(){
+	input = new TextField(10);
+	doit = new Button("Do It!");
+	add(input);
+	add(doit);
+    }
+    public boolean action(Event e, Object o){
+	if(o instanceof String) {
+	    if((String) o == "Do It!"){
+		showStatus("Doing it!..."+input.getText());
+	    }
+	}
+	return false;
+    }
+}
+________________________________________________________________________
+Resources:
+	http://java.sun.com/doc/language_specification/index.html
+	http://www.cse.ucsc.edu/tutorials/api/
+	~charlie/java/cmp60g
+	The Java Programming Language by Ken Arnold and James Gosling
+	The Java Handbook by Patrick Naughton

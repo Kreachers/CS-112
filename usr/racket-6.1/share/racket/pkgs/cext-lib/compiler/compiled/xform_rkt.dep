@@ -1,0 +1,1 @@
+("6.1" ("3485e65a12428942cc42274e17a87ca1a7590191" . "b2e014c2e440cfb69f25d1260f4be6231a98a97c") (collects #"scheme" #"base.rkt") (collects #"setup" #"dirs.rkt") (collects #"compiler" #"private" #"xform.rkt") (collects #"dynext" #"compile.rkt") (collects #"scheme" #"runtime-config.rkt"))

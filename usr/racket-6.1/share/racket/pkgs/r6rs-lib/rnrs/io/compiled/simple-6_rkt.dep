@@ -1,0 +1,1 @@
+("6.1" ("fec64d8addae5ae5077f2c7a8c865baa821d804d" . "e8d6f9e426eede8ea760cf8507bcd1db5c221cec") (collects #"scheme" #"base.rkt") (collects #"rnrs" #"io" #"ports-6.rkt") (collects #"scheme" #"runtime-config.rkt"))

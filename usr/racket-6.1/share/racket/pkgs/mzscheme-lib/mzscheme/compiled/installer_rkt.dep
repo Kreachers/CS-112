@@ -1,0 +1,1 @@
+("6.1" ("d02f49bef54c8431f2df510ad4a6b5c639e2c908" . "a810e9a9f578b53e21ec80b364768d9876b78f7d") (collects #"scheme" #"base.rkt") (collects #"launcher" #"main.rkt") (collects #"compiler" #"embed.rkt") (collects #"scheme" #"runtime-config.rkt"))

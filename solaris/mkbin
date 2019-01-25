@@ -1,0 +1,11 @@
+#!/bin/sh -x
+# $Id: mkbin,v 1.3 2009-02-24 14:53:18-08 - - $
+mkdir bin
+for dir in `find [a-z]* -name bin -type d`
+do
+   for file in $dir/*
+   do
+      rm bin/`basename $file`
+      ln -s ../$file bin/`basename $file`
+   done
+done

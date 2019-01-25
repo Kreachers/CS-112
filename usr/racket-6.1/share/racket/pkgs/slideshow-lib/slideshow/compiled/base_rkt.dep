@@ -1,0 +1,1 @@
+("6.1" ("ea641e549322ad5a54dcdc6601ad576efb8a5b9a" . "a843031f00ed7e70e3e244f2382e66dcca7530c3") (collects #"scheme" #"base.rkt") (collects #"slideshow" #"slide.rkt") (collects #"slideshow" #"core.rkt") (collects #"scheme" #"gui" #"base.rkt") (collects #"scheme" #"runtime-config.rkt"))

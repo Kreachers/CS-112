@@ -1,0 +1,24 @@
+Following was used to create and run an Ada program.
+Login to zoltar, then:
+
+% amklib adalib
+    -- create the Ada library context.
+
+% setenv ADALIB @adalib
+    -- set up the environment variable.
+    -- Note the @
+    -- Didn't I see that symbol frequently on VMS?
+
+% ada hello_world.ada
+    -- compile an Ada program.
+    -- binary & symtab go in the adalib subdirectory.
+
+% ald -o hello_world hello_world    
+    -- link the ada program to an executable.
+    -- the operand of -o is the filename to be created.
+    -- the last operand is the name of the main procedure,
+    -- not the name of a file.
+
+% ./hello_world
+    -- run it.
+

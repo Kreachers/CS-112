@@ -1,0 +1,259 @@
+head	330.5;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+330.5
+date	2003.01.24.04.53.40;	author -;	state -;
+branches;
+next	330.4;
+
+330.4
+date	2003.01.24.04.52.11;	author -;	state -;
+branches;
+next	330.3;
+
+330.3
+date	2003.01.24.04.38.16;	author -;	state -;
+branches;
+next	330.2;
+
+330.2
+date	2003.01.24.04.26.07;	author -;	state -;
+branches;
+next	330.1;
+
+330.1
+date	2003.01.24.04.06.22;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+330.5
+log
+@-
+@
+text
+@// $Id: mystring.cc,v 330.4 2003-01-23 20:52:11-08 - - $
+
+//
+// implementation of class mystring
+//
+
+#include <cstring>
+#include <typeinfo>
+
+using namespace std;
+
+#include "mystring.h"
+
+char* strdup( char* that ){
+   char* result = new char[ strlen(that) + 1 ];
+   strcpy( result, that );
+   return result;
+};
+
+mystring::mystring(): dim(default_dim), len(0){
+   buf = new char[dim];
+   buf[0] = '\0';
+   dump( "mystring::mystring()" );
+};
+
+mystring::mystring( const mystring& that ): dim(that.dim),
+                                            len(that.len){
+   buf = new char[dim];
+   strcpy( buf, that.buf );
+   dump( "mystring::mystring(const mystring&)" );
+};
+
+mystring::~mystring(){
+   dump( "mystring::~mystring()" );
+   delete buf;  // get rid of what is pointed at
+};
+
+mystring& mystring::operator=( const mystring& that ){
+   if( this != &that ){
+      // DANGER if the copy from and copy to are the same thing.
+      if( dim < that.dim ){
+         delete buf;
+         dim = that.dim;
+         buf = new char[dim];
+      };
+      len = that.len;
+      strcpy( buf, that.buf );
+   };
+   dump( "mystring& mystring::operator=(const mystring&)" );
+   return *this;
+};
+
+mystring& mystring::operator+=( const mystring& that ){
+   char* thatbuf = that.buf;
+   if( this == &that ){
+      // make a temporary copy to avoid strcat'ting to itself.
+      thatbuf = strdup( that.buf );
+   };
+   if( dim < len + that.len + 1 ){
+      // Buffer too short so make it longer.
+      dim = len + that.len + 1;
+      char* oldbuf = buf;
+      buf = new char[dim];
+      strcpy( buf, oldbuf );
+      delete oldbuf;
+   };
+   strcat( buf, thatbuf );
+   len = strlen( buf );
+   if( this == &that ){
+      // delete the temporary we made above
+      delete thatbuf;
+   };
+   dump( "mystring& mystring::operator+=(const mystring&)" );
+   return *this;
+};
+
+mystring::mystring( const char *cstring ): len(strlen(cstring)){
+   dim = len + 1;
+   buf = new char[dim];
+   strcpy( buf, cstring );
+   dump( "mystring::mystring(const char*)" );
+};
+
+mystring::mystring( int initlen ): len(initlen){
+   dim = len + 1;
+   buf = new char[dim];
+   buf[0] = '\0';
+   dump( "mystring::mystring(int)" );
+};
+
+int mystring::size(){
+   return len;
+};
+
+void mystring::dump( const char* message ){
+   cout << message << ":" << endl
+        << "(" << typeid(this).name() << ")@@"
+        << static_cast<void*>(this) << " -> " << endl
+        << "        dim=" << dim << endl
+        << "        len=" << len << endl
+        << "        buf=[" << buf << "]" << endl;
+};
+
+ostream& operator<<( ostream& out, mystring str ){
+   return out << str.buf;
+};
+@
+
+
+330.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: mystring.cc,v 330.3 2003-01-23 20:38:16-08 - - $
+d96 2
+a97 1
+   cout << message << ": (" << typeid(this).name() << ")@@"
+@
+
+
+330.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: mystring.cc,v 330.2 2003-01-23 20:26:07-08 - - $
+d98 3
+a100 2
+        << "        dim=" << dim << ", len=" << len
+        << ", buf=[" << buf << "]" << endl;
+@
+
+
+330.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id$
+d99 1
+a99 1
+        << "buf=[" << buf << "]" << endl;
+d102 1
+a102 1
+std::ostream& operator<<( const ostream& out, mystring str ){
+@
+
+
+330.1
+log
+@-
+@
+text
+@d8 1
+d14 6
+d23 1
+d26 2
+a27 2
+mystring::mystring( const mystring& that ): dim(that->dim),
+                                            len(that->len){
+d29 2
+a30 1
+   strcpy( buf, that->buf );
+d34 1
+d39 1
+a39 1
+   if( this != that ){
+d41 1
+a41 1
+      if( dim < that->dim ){
+d43 1
+a43 1
+         dim = that->dim;
+d46 2
+a47 2
+      len = that->len;
+      strcpy( buf, that->buf );
+d49 2
+a50 1
+   return this;
+d54 2
+a55 2
+   char *thatbuf = that->buf;
+   if( this == that ){
+d57 1
+a57 1
+      thatbuf = strdup( that->buf );
+d59 1
+a59 1
+   if( dim < len + that->len + 1 ){
+d61 2
+a62 2
+      dim = len + that->len + 1;
+      char *oldbuf = buf;
+d69 1
+a69 1
+   if( this == that ){
+d73 2
+a74 1
+   return this;
+d77 1
+a77 1
+mystring::mystring( char *cstring ): len(strlen(cstring)){
+d81 1
+d84 1
+a84 1
+explicit mystring::mystring( int len ): len(len){
+d88 1
+d94 11
+@

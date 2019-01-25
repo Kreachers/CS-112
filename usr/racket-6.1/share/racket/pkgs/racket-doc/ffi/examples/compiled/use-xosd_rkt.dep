@@ -1,0 +1,1 @@
+("6.1" ("cc50c4ffbe31fdad95a896cfac119d427933b603" . "733d43b94635ea804770fbc61ce2a12dd7d403d0") (collects #"ffi" #"examples" #"xosd.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

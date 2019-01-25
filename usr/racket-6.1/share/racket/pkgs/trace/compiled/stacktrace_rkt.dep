@@ -1,0 +1,1 @@
+("6.1" ("cc79372b332b3e66cfeebfa2ed850e3b8c602bff" . "0e8e5f1a56b235c1ef182937e7fc0877f7414b9b") (collects #"scheme" #"base.rkt") (collects #"syntax" #"kerncase.rkt") (collects #"mzlib" #"unit.rkt") (collects #"syntax" #"stx.rkt") (collects #"scheme" #"runtime-config.rkt"))

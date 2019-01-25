@@ -1,0 +1,1 @@
+("6.1" ("4758bbe18e8b9544af933b2a5f77b47af079d9e6" . "917912d497c5d8fe7a31382dd1d1c9ce047ba27d") (collects #"racket" #"unit.rkt") (collects #"frtime" #"animation" #"graphics-posn-less-unit.rkt") (collects #"mred" #"mred-sig.rkt") (collects #"frtime" #"animation" #"graphics-sig.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

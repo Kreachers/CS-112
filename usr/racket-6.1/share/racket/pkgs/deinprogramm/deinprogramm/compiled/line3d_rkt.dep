@@ -1,0 +1,1 @@
+("6.1" ("c0d6c37d728dc71d605fbb53334f42c16c171089" . "9213cb898e130fe11338544c208c6ae928ebfca7") (collects #"deinprogramm" #"define-record-procedures.rkt") (collects #"mzscheme" #"main.rkt") (collects #"deinprogramm" #"world.rkt") (collects #"deinprogramm" #"DMdA-vanilla.rkt") (collects #"mzlib" #"include.rkt") (ext collects #"deinprogramm" #"line3d.scm"))

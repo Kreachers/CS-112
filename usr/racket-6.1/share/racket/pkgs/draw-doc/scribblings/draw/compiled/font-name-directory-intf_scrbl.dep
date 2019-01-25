@@ -1,0 +1,1 @@
+("6.1" ("edce5c7ffea3a33108d37c91586ddc664c5a0626" . "5bdb41faf42bc825b51ce4c7225f1cd16fcdd788") (collects #"scribble" #"doclang.rkt") (collects #"scribble" #"bnf.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribblings" #"draw" #"common.rkt") (collects #"syntax" #"parse" #"private" #"runtime-report.rkt") (collects #"scribble" #"doc" #"lang" #"reader.rkt"))

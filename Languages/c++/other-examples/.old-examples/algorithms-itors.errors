@@ -1,0 +1,4 @@
+"/opt/SUNWspro/SC5.0/include/CC/./algorithm.cc", line 2592: Error: The function std::operator==(const std::istream_iterator<int, char, std::char_traits<char>, int>&, const std::istream_iterator<int, char, std::char_traits<char>, int>&) has not had a body defined.
+"algorithms-itors.cc", line 25:     Where: While instantiating "std::copy<std::istream_iterator<int, char, std::char_traits<char>, int>, std::back_insert_iterator<std::vector<int, std::allocator<int>>>>(std::istream_iterator<int, char, std::char_traits<char>, int>, std::istream_iterator<int, char, std::char_traits<char>, int>, std::back_insert_iterator<std::vector<int, std::allocator<int>>>)".
+"algorithms-itors.cc", line 25:     Where: Instantiated from non-template code.
+1 Error(s) detected.

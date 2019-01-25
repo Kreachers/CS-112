@@ -1,0 +1,118 @@
+head	320.3;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+320.3
+date	2002.01.23.02.06.02;	author -;	state -;
+branches;
+next	320.2;
+
+320.2
+date	2002.01.23.02.04.49;	author -;	state -;
+branches;
+next	320.1;
+
+320.1
+date	2002.01.23.02.04.15;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+320.3
+log
+@-
+@
+text
+@//
+// $Id: foo.cc,v 320.2 2002-01-22 18:04:49-08 - - $
+//
+// This program has a bug in it.  It puts everything in argv into
+// a list, then prints out the list.  However, there is no loop
+// termination check, and the program crashes at end of list.
+//
+
+#include <cassert>
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct List{
+   string item;
+   List *next;
+};
+
+ostream &operator<< ( ostream &out, List &node ){
+   out << &node << "-> List{ " << node.item << ", "
+       << node.next << " }";
+   return out;
+};
+
+int main( int argc, char **argv ){
+
+   List *list = NULL;
+
+   for( int index = argc - 1; index > 0; index-- ){
+      List *node = new List();
+      assert( node != NULL );
+      node->item = argv[index];
+      node->next = list->next;
+      cout << node << endl;
+      list = node;
+   };
+
+   for( List *itor = list; true; itor = itor->next ){
+      cout << *itor << endl;
+   };
+
+   return EXIT_SUCCESS;
+};
+@
+
+
+320.2
+log
+@-
+@
+text
+@d2 1
+a2 1
+// $Id$
+d9 1
+d33 1
+@
+
+
+320.1
+log
+@-
+@
+text
+@a14 1
+template <class Type>
+d16 1
+a16 1
+   Type item;
+d20 2
+a21 3
+template <class Type>
+ostream &operator<< ( ostream &out, List<Type> &node ){
+   out << &node << "-> List<string>{ " << node.item << ", "
+d28 1
+a28 1
+   List<string> *list = NULL;
+d31 1
+a31 1
+      List<string> *node = new List<string>();
+d38 1
+a38 1
+   for( List<string> *itor = list; true; itor = itor->next ){
+@

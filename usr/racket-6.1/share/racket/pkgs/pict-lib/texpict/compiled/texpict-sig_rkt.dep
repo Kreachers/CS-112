@@ -1,0 +1,1 @@
+("6.1" ("343b37c2017f79d79f3b5a433c1657bd590e6b92" . "f78104327ebe45a96ad24aa11674489495bbe429") (collects #"mzscheme" #"main.rkt") (collects #"mzlib" #"unit.rkt") (collects #"texpict" #"private" #"common-sig.rkt") (collects #"texpict" #"private" #"texpict-sig.rkt"))

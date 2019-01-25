@@ -1,0 +1,495 @@
+head	1.22;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.22
+date	2011.05.27.02.48.09;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2011.05.21.03.13.06;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2011.05.17.23.54.07;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2011.05.14.00.36.53;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2011.05.13.03.45.25;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2011.05.12.23.16.47;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2011.05.10.23.44.07;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2011.05.07.00.04.43;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2011.05.05.22.00.38;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2011.05.04.02.56.32;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2011.04.26.21.32.39;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2011.04.23.01.38.57;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2011.04.22.01.48.58;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2011.04.20.01.42.46;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2011.04.15.01.08.11;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2011.04.14.21.04.51;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2011.04.09.00.29.54;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2011.04.07.21.34.38;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2011.04.05.20.32.42;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2011.03.30.01.24.25;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.03.23.23.14.49;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.03.23.23.11.43;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.22
+log
+@-
+@
+text
+@
+Spring 2011
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Mon Mar 28 - syllabus; introduction & overview
+ 2. Wed Mar 30 - beginning perl 1, 2
+ 3. Fri Apr  1 - beginning perl 2, 3
+
+week  2:
+ 4. Mon Apr  4 - perl regex; subs; finish ch.2
+ 5. Wed Apr  6 - PL history
+ 6. Fri Apr  8 - language design, ch.3
+
+week  3:
+ 7. Mon Apr 11 - chapter.5
+ 8. Wed Apr 13 - Scheme
+ 9. Fri Apr 15 - Scheme
+
+week  4:
+10. Mon Apr 18 - Scheme higher order fns.
+11. Wed Apr 20 - Scheme: higher order fns.
+12. Fri Apr 22 - chapter.6
+
+week  5:
+13. Mon Apr 25 - intro ocaml
+14. Wed Apr 27 - TEST 1.
+15. Fri Apr 29 - Ocaml
+
+week  6:
+16. Mon May  2 - prog 3 - Ocaml details
+17. Wed May  4 - finish Ocaml
+18. Fri May  6 - chapter.6, 7; intro Smalltalk
+
+week  7:
+19. Mon May  9 - Smalltalk
+20. Wed May 11 - Smalltalk. program 4.
+21. Fri May 13 - chapter.8
+
+week  8:
+22. Mon May 16 - chapter.9, 10
+23. Wed May 18 - TEST 2.
+24. Fri May 20 - Prolog
+
+week  9:
+25. Mon May 23 - Prolog
+26. Wed May 25 - Prolog
+27. Fri May 27 -
+
+week 10:
+28. Mon May 30 - HOLIDAY. NO CLASS.
+29. Wed Jun  1 -
+30. Fri Jun  3 -
+
+$Id: Lecture-log-2011-q2spring,v 1.21 2011-05-20 20:13:06-07 - - $
+@
+
+
+1.21
+log
+@-
+@
+text
+@d46 2
+a47 2
+25. Mon May 23 -
+26. Wed May 25 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.20 2011-05-17 16:54:07-07 - - $
+@
+
+
+1.20
+log
+@-
+@
+text
+@d43 1
+a43 1
+24. Fri May 20 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.19 2011-05-13 17:36:53-07 - - $
+@
+
+
+1.19
+log
+@-
+@
+text
+@d41 1
+a41 1
+22. Mon May 16 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.18 2011-05-12 20:45:25-07 - - $
+@
+
+
+1.18
+log
+@-
+@
+text
+@d38 1
+a38 1
+21. Fri May 13 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.17 2011-05-12 16:16:47-07 - - $
+@
+
+
+1.17
+log
+@-
+@
+text
+@d37 1
+a37 1
+20. Wed May 11 - Smalltalk
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.16 2011-05-10 16:44:07-07 - - $
+@
+
+
+1.16
+log
+@-
+@
+text
+@d37 1
+a37 1
+20. Wed May 11 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.15 2011-05-06 17:04:43-07 - - $
+@
+
+
+1.15
+log
+@-
+@
+text
+@d36 1
+a36 1
+19. Mon May  9 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.14 2011-05-05 15:00:38-07 - - $
+@
+
+
+1.14
+log
+@-
+@
+text
+@d33 1
+a33 1
+18. Fri May  6 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.13 2011-05-03 19:56:32-07 - - $
+@
+
+
+1.13
+log
+@-
+@
+text
+@d32 1
+a32 1
+17. Wed May  4 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.12 2011-04-26 14:32:39-07 - - $
+@
+
+
+1.12
+log
+@-
+@
+text
+@d28 1
+a28 1
+15. Fri Apr 29 -
+d31 1
+a31 1
+16. Mon May  2 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.11 2011-04-22 18:38:57-07 - - $
+@
+
+
+1.11
+log
+@-
+@
+text
+@d26 1
+a26 1
+13. Mon Apr 25 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.10 2011-04-21 18:48:58-07 - - $
+@
+
+
+1.10
+log
+@-
+@
+text
+@d23 1
+a23 1
+12. Fri Apr 22 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.9 2011-04-19 18:42:46-07 - - $
+@
+
+
+1.9
+log
+@-
+@
+text
+@d22 1
+a22 1
+11. Wed Apr 20 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.8 2011-04-14 18:08:11-07 - - $
+@
+
+
+1.8
+log
+@-
+@
+text
+@d18 1
+a18 1
+ 9. Fri Apr 15 -
+d21 1
+a21 1
+10. Mon Apr 18 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.7 2011-04-14 14:04:51-07 - - $
+@
+
+
+1.7
+log
+@-
+@
+text
+@d16 1
+a16 1
+ 7. Mon Apr 11 - 
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.6 2011-04-08 17:29:54-07 - - $
+@
+
+
+1.6
+log
+@-
+@
+text
+@d16 2
+a17 2
+ 7. Mon Apr 11 -
+ 8. Wed Apr 13 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.5 2011-04-07 14:34:38-07 - - $
+@
+
+
+1.5
+log
+@-
+@
+text
+@d13 1
+a13 1
+ 6. Fri Apr  8 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.4 2011-04-05 13:32:42-07 - - $
+@
+
+
+1.4
+log
+@-
+@
+text
+@d12 1
+a12 1
+ 5. Wed Apr  6 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.3 2011-03-29 18:24:25-07 - - $
+@
+
+
+1.3
+log
+@-
+@
+text
+@d7 2
+a8 2
+ 2. Wed Mar 30 -
+ 3. Fri Apr  1 -
+d11 1
+a11 1
+ 4. Mon Apr  4 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.2 2011-03-23 16:14:49-07 - - $
+@
+
+
+1.2
+log
+@-
+@
+text
+@d6 1
+a6 1
+ 1. Mon Mar 28 -
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.1 2011-03-23 16:11:43-07 - - $
+@
+
+
+1.1
+log
+@-
+@
+text
+@d27 1
+a27 1
+14. Wed Apr 27 -
+d42 1
+a42 1
+23. Wed May 18 -
+d51 1
+a51 1
+28. Mon May 30 -
+d55 1
+a55 1
+$Id$
+@

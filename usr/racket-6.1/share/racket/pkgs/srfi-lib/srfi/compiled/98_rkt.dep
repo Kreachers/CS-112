@@ -1,0 +1,1 @@
+("6.1" ("0771b5119f3ec7b309becce89998b96a27950e04" . "951bafea7fc7d043836ec64b0b0cd66fd07e70fc") (collects #"scheme" #"base.rkt") (collects #"ffi" #"unsafe" #"cvector.rkt") (collects #"scheme" #"foreign.rkt") (collects #"ffi" #"vector.rkt") (collects #"ffi" #"unsafe.rkt") (collects #"scheme" #"runtime-config.rkt"))

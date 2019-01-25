@@ -1,0 +1,1 @@
+("6.1" ("eafe61ce3c464e2539c0d5d22f10e0b87e9b6c5e" . "1b5eefa28efb49371c45e1592f599695d761c23b") (collects #"mzscheme" #"main.rkt") (collects #"syntax" #"stx.rkt") (collects #"srfi" #"features.rkt") (collects #"mzlib" #"include.rkt"))

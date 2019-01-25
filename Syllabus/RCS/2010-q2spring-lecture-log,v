@@ -1,0 +1,78 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2015.09.22.00.51.20;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@
+Spring 2011
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Mon Mar 28 - syllabus; introduction & overview
+ 2. Wed Mar 30 - beginning perl 1, 2
+ 3. Fri Apr  1 - beginning perl 2, 3
+
+week  2:
+ 4. Mon Apr  4 - perl regex; subs; finish ch.2
+ 5. Wed Apr  6 - PL history
+ 6. Fri Apr  8 - language design, ch.3
+
+week  3:
+ 7. Mon Apr 11 - chapter.5
+ 8. Wed Apr 13 - Scheme
+ 9. Fri Apr 15 - Scheme
+
+week  4:
+10. Mon Apr 18 - Scheme higher order fns.
+11. Wed Apr 20 - Scheme: higher order fns.
+12. Fri Apr 22 - chapter.6
+
+week  5:
+13. Mon Apr 25 - intro ocaml
+14. Wed Apr 27 - TEST 1.
+15. Fri Apr 29 - Ocaml
+
+week  6:
+16. Mon May  2 - prog 3 - Ocaml details
+17. Wed May  4 - finish Ocaml
+18. Fri May  6 - chapter.6, 7; intro Smalltalk
+
+week  7:
+19. Mon May  9 - Smalltalk
+20. Wed May 11 - Smalltalk. program 4.
+21. Fri May 13 - chapter.8
+
+week  8:
+22. Mon May 16 - chapter.9, 10
+23. Wed May 18 - TEST 2.
+24. Fri May 20 - Prolog
+
+week  9:
+25. Mon May 23 - Prolog
+26. Wed May 25 - Prolog
+27. Fri May 27 -
+
+week 10:
+28. Mon May 30 - HOLIDAY. NO CLASS.
+29. Wed Jun  1 -
+30. Fri Jun  3 -
+
+$Id: Lecture-log-2011-q2spring,v 1.22 2011-05-26 19:48:09-07 - - $
+@

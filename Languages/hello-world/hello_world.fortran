@@ -1,0 +1,5 @@
+c	hello.f
+c	for fortran 4
+  10	format(12hHello, world)
+	write(6,10)
+	end

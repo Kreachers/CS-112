@@ -1,0 +1,500 @@
+head	1.22;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.22
+date	2012.03.15.03.15.50;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2012.03.14.03.53.04;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2012.03.08.03.15.38;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2012.03.06.03.09.50;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2012.03.03.03.38.48;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2012.02.28.03.12.09;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2012.02.23.03.13.00;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2012.02.18.01.13.10;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2012.02.16.03.19.08;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2012.02.14.03.12.39;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2012.02.11.01.35.27;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2012.02.08.05.12.57;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2012.02.07.03.32.58;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2012.02.04.04.44.17;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2012.02.02.04.23.39;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2012.01.31.03.11.42;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2012.01.28.04.44.04;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2012.01.20.01.46.15;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2012.01.14.01.23.12;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2012.01.10.03.30.20;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.12.14.03.02.04;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.12.14.03.01.51;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.22
+log
+@-
+@
+text
+@
+Winter 2012
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Mon Jan  9 - syllabus; what is PL?
+ 2. Wed Jan 11 - finish intro, start Perl
+ 3. Fri Jan 13 - Perl-notes.dir
+
+week  2:
+ 4. Mon Jan 16 - Holiday. No class.
+ 5. Wed Jan 18 - finish Perl
+ 6. Fri Jan 20 - PL history, PL design, basic semantics
+
+week  3:
+ 7. Mon Jan 23 - basic semantics
+ 8. Wed Jan 25 - intro scheme
+ 9. Fri Jan 27 - more scheme; program 2
+
+week  4:
+10. Mon Jan 30 - scheme heigher order functions
+11. Wed Feb  1 - finish Scheme.  cont basic semantics
+12. Fri Feb  3 - basic semantics
+
+week  5:
+13. Mon Feb  6 - intro Ocaml
+14. Wed Feb  8 - TEST.
+15. Fri Feb 10 - Ocaml; asg3
+
+week  6:
+16. Mon Feb 13 - asg3, Ocaml, dc.
+17. Wed Feb 15 - ocaml make; fn types; currying; higher-order fnz
+18. Fri Feb 17 - finish Ocaml; intro Haskell
+
+week  7:
+19. Mon Feb 20 - Holiday. No class.
+20. Wed Feb 22 - Ocaml HOF, lazy thunks; Haskell
+21. Fri Feb 24 - intro Smalltalk
+
+week  8:
+22. Mon Feb 27 - Smalltalk classes, inheritance, files.
+23. Wed Feb 29 - TEST.
+24. Fri Mar  2 - Smalltalk; asg4; OOP in general.
+
+week  9:
+25. Mon Mar  5 - finish OO; intro Prolog
+26. Wed Mar  7 - Prolog
+27. Fri Mar  9 - Prolog
+
+week 10:
+28. Mon Mar 12 - Expressions & Statements
+29. Wed Mar 14 - Processes & threads.
+30. Fri Mar 16 -
+
+$Id: Lecture-log-2012-q1winter,v 1.21 2012-03-13 20:53:04-07 - - $
+
+@
+
+
+1.21
+log
+@-
+@
+text
+@d52 1
+a52 1
+29. Wed Mar 14 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.20 2012-03-07 19:15:38-08 - - $
+@
+
+
+1.20
+log
+@-
+@
+text
+@d48 1
+a48 1
+27. Fri Mar  9 -
+d51 1
+a51 1
+28. Mon Mar 12 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.19 2012-03-05 19:09:50-08 - - $
+@
+
+
+1.19
+log
+@-
+@
+text
+@d47 1
+a47 1
+26. Wed Mar  7 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.18 2012-03-02 19:38:48-08 - - $
+@
+
+
+1.18
+log
+@-
+@
+text
+@d46 1
+a46 1
+25. Mon Mar  5 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.17 2012-02-27 19:12:09-08 - - $
+@
+
+
+1.17
+log
+@-
+@
+text
+@d43 1
+a43 1
+24. Fri Mar  2 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.16 2012-02-22 19:13:00-08 - - $
+@
+
+
+1.16
+log
+@-
+@
+text
+@d38 1
+a38 1
+21. Fri Feb 24 -
+d41 1
+a41 1
+22. Mon Feb 27 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.15 2012-02-17 17:13:10-08 - - $
+@
+
+
+1.15
+log
+@-
+@
+text
+@d37 1
+a37 1
+20. Wed Feb 22 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.14 2012-02-15 19:19:08-08 - - $
+@
+
+
+1.14
+log
+@-
+@
+text
+@d33 1
+a33 1
+18. Fri Feb 17 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.13 2012-02-13 19:12:39-08 - - $
+@
+
+
+1.13
+log
+@-
+@
+text
+@d32 1
+a32 1
+17. Wed Feb 15 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.12 2012-02-10 17:35:27-08 - - $
+@
+
+
+1.12
+log
+@-
+@
+text
+@d31 1
+a31 1
+16. Mon Feb 13 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.11 2012-02-07 21:12:57-08 - - $
+@
+
+
+1.11
+log
+@-
+@
+text
+@d28 1
+a28 1
+15. Fri Feb 10 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.10 2012-02-06 19:32:58-08 - - $
+@
+
+
+1.10
+log
+@-
+@
+text
+@d27 1
+a27 1
+14. Wed Feb  8 -
+d42 1
+a42 1
+23. Wed Feb 29 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.9 2012-02-03 20:44:17-08 - - $
+@
+
+
+1.9
+log
+@-
+@
+text
+@d26 1
+a26 1
+13. Mon Feb  6 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.8 2012-02-01 20:23:39-08 - - $
+@
+
+
+1.8
+log
+@-
+@
+text
+@d22 2
+a23 2
+11. Wed Feb  1 - finish Scheme.  cont ~asic semantics
+12. Fri Feb  3 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.7 2012-01-30 19:11:42-08 - - $
+@
+
+
+1.7
+log
+@-
+@
+text
+@d13 1
+a13 1
+ 6. Fri Jan 20 - ch02-history, ch03-design, start ch 4
+d16 1
+a16 1
+ 7. Mon Jan 23 - chap.4
+d22 1
+a22 1
+11. Wed Feb  1 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.6 2012-01-27 20:44:04-08 - - $
+@
+
+
+1.6
+log
+@-
+@
+text
+@d21 1
+a21 1
+10. Mon Jan 30 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.5 2012-01-19 17:46:15-08 - - $
+@
+
+
+1.5
+log
+@-
+@
+text
+@d13 1
+a13 1
+ 6. Fri Jan 20 -
+d16 3
+a18 3
+ 7. Mon Jan 23 -
+ 8. Wed Jan 25 -
+ 9. Fri Jan 27 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.4 2012-01-13 17:23:12-08 - - $
+@
+
+
+1.4
+log
+@-
+@
+text
+@d12 1
+a12 1
+ 5. Wed Jan 18 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.3 2012-01-09 19:30:20-08 - - $
+@
+
+
+1.3
+log
+@-
+@
+text
+@d7 2
+a8 2
+ 2. Wed Jan 11 -
+ 3. Fri Jan 13 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.2 2011-12-13 19:02:04-08 - - $
+@
+
+
+1.2
+log
+@-
+@
+text
+@d6 1
+a6 1
+ 1. Mon Jan  9 -
+d55 1
+a55 1
+$Id: Lecture-log-2012-q1winter,v 1.1 2011-12-13 19:01:51-08 - - $
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+Spring 2011
+d55 1
+a55 1
+$Id: Lecture-log-2011-q2spring,v 1.22 2011-05-26 19:48:09-07 - - $
+@

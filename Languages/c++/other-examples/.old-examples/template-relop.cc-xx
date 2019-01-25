@@ -1,0 +1,53 @@
+// $Id: template-relop.cc,v 320.21 2002-01-25 16:04:41-08 - - $
+//
+// This is the answer.  Keith knows the question.
+//
+// Example testing operators as members of a template class.
+//
+
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+template< class type >
+class Box{
+   public:
+      // use default // Box(){};
+      // use default // Box( const Box & );
+      // use default // ~Box();
+      // use default // Box operator=( const Box & );
+      Box( const type &value );
+      bool operator>=( const Box & );
+      // the following does not work.  apparently template
+      // classes can not have friends.
+      //friend bool operator<( const Box<type> &, const Box<type> & );
+   private:
+      type value;
+};
+
+template< class type >
+Box<type>::Box( const type &value ): value( value ){
+};
+
+template< class type >
+bool Box<type>::operator>=( const Box &that ){
+   return value >= that.value;
+};
+
+// This function will compile but will be ignored if it is
+// a friend of the class.  It works as a non-friend if the
+// value field is public.
+// template< class type >
+// bool operator< ( const Box<type> &thiss, const Box<type> &that ){
+   // return thiss.value < that.value;
+// };
+
+#define DEBUG(X) ( cout << #X << " = " << (X) << endl )
+int main(){
+   Box<string> foo = string( "foo" );
+   Box<string> bar = string( "bar" );
+   DEBUG( foo >= bar );
+   //DEBUG( foo < bar );
+};
+

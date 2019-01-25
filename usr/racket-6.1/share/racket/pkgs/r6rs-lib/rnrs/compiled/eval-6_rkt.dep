@@ -1,0 +1,1 @@
+("6.1" ("ecc6b5bfdf63172bbee1422ffc1c60e4228dc528" . "0facf19ee946e1285f42f836f175db9109f727d4") (collects #"scheme" #"base.rkt") (collects #"r6rs" #"private" #"prelims.rkt") (collects #"r6rs" #"main.rkt") (collects #"scheme" #"mpair.rkt") (collects #"r6rs" #"private" #"parse-ref.rkt") (collects #"scheme" #"runtime-config.rkt"))

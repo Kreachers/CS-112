@@ -1,0 +1,1 @@
+("6.1" ("23d8e59c4058d240b90cefb4d6caa49afd6453cd" . "118e24285966b6d2ad1e1a8474c9d50ecb014bc8") (collects #"scheme" #"base.rkt") (collects #"scribblings" #"reference" #"ellipses-defn.rkt") (collects #"scribble" #"manual.rkt") (collects #"scheme" #"runtime-config.rkt"))

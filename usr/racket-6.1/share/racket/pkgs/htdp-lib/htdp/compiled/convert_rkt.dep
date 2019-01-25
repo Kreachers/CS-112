@@ -1,0 +1,1 @@
+("6.1" ("d00b6aac4232509f263e5f08835e63ac7b9b8ca9" . "1533755db68bbd939ed5c999053413de7d6bf37c") (collects #"htdp" #"error.rkt") (collects #"lang" #"prim.rkt") (collects #"racket" #"gui.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"mzlib" #"etc.rkt") (collects #"lang" #"htdp-langs-save-file-prefix.rkt") (collects #"racket" #"base.rkt"))

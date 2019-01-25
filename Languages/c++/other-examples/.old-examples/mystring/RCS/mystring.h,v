@@ -1,0 +1,107 @@
+head	330.3;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+330.3
+date	2003.01.24.04.38.16;	author -;	state -;
+branches;
+next	330.2;
+
+330.2
+date	2003.01.24.04.26.07;	author -;	state -;
+branches;
+next	330.1;
+
+330.1
+date	2003.01.24.04.06.22;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+330.3
+log
+@-
+@
+text
+@// $Id: mystring.h,v 330.2 2003-01-23 20:26:07-08 - - $
+
+//
+// class mystring - duplicate some of the functions of string
+//
+
+#ifndef __MYSTRING_H__
+#define __MYSTRING_H__
+
+#include <iostream>
+
+class mystring{
+   public:
+      // four members that are defaulted if not supplied
+      mystring();                             // default ctor
+      mystring( const mystring& );            // copy ctor
+      virtual ~mystring();                    // dtor
+      mystring& operator=( const mystring& ); // operator=
+
+      // some other useful members.
+      mystring( const char* );                // conversion ctor
+      explicit mystring( int );               // length-specified ctor
+      mystring& operator+=( const mystring& );
+      int size();
+
+      friend ostream& operator<<( ostream&, mystring );
+
+   private:
+      static const int default_dim = 128;
+      char *buf;   // array of characters to represent string
+      int dim;     // dimension of the array
+      int len;     // current length of the string
+      void dump( const char* label ); // debug dumper routine
+};
+
+#endif
+
+@
+
+
+330.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: mystring.h,v 330.1 2003-01-23 20:06:22-08 - - $
+d26 1
+a26 1
+      friend std::ostream& operator<<( const ostream&, mystring );
+d37 1
+@
+
+
+330.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id$
+d7 5
+d21 1
+a21 1
+      mystring( char* );                      // conversion ctor
+d26 2
+d30 4
+a33 3
+      char *buf; // array of characters to represent string
+      int dim;   // dimension of the array
+      int len;   // current length of the string
+d35 2
+@

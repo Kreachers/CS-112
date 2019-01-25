@@ -1,0 +1,78 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2007.12.10.22.17.29;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@
+$Id: Lecture-log-2006-q1winter,v 360.2 2006-01-31 18:48:51-08 - - $
+
+CMPS-112 - Comparative Programming Languages - 2006 Winter
+
+Week  1:
+ 1. Fri Jan  6 - syllabus; ch1 intro; lang categories; ch2 history
+ 2. Mon Jan  9 - Perl: intro, basic statements, arrays, hashes
+ 3. Wed Jan 11 - Perl: regex matching; subs; file access
+
+Week  2:
+ 4. Fri Jan 13 - Perl: refs; anon arrays, hashes; closures, scoping
+ 5. Mon Jan 16 - HOLIDAY - class cancelled
+ 6. Wed Jan 18 - ch3 language design
+
+Week  3:
+ 7. Fri Jan 20 - ch5 basic semantics
+ 8. Mon Jan 23 - ch6 data types
+ 9. Wed Jan 25 - C++: iostream, STL, templates
+
+Week  4:
+10. Fri Jan 27 - C++: classes, pri/pub, methods
+11. Mon Jan 30 - C++: finish; ch6 data types
+12. Wed Feb  1 - ch6 data types; ch7 expr stmts
+
+Week  5:
+13. Fri Feb  3 -
+14. Mon Feb  6 -
+15. Wed Feb  8 - MIDTERM TEST #1.
+
+Week  6:
+16. Fri Feb 10 -
+17. Mon Feb 13 -
+18. Wed Feb 15 -
+
+Week  7:
+19. Fri Feb 17 -
+20. Mon Feb 20 - HOLIDAY - class cancelled
+21. Wed Feb 22 -
+
+Week  8:
+22. Fri Feb 24 -
+23. Mon Feb 27 -
+24. Wed Mar  1 - MIDTERM TEST #2.
+
+Week  9:
+25. Fri Mar  3 -
+26. Mon Mar  6 -
+27. Wed Mar  8 -
+
+Week 10:
+28. Fri Mar 10 -
+29. Mon Mar 13 -
+30. Wed Mar 15 - Cave Idvs Martias
+
+@

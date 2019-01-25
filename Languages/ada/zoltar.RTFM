@@ -1,0 +1,33 @@
+Ada-related manpages on Zoltar.
+
+ada       - Invokes the DEC Ada compiler to compile one or more Ada
+            source files.
+
+acat      - Displays the copied source file for Ada compilation units.
+
+acp       - Copies one or more Ada units from one program library
+            context to another.
+
+aimport   - Imports a foreign body as an Ada library specification.
+
+ald       - Links an object file containing Ada units.
+
+als       - Lists Ada units in the program library context.
+
+amake     - Compiles, recompiles, completes, and links Ada programs.
+
+amklib    - Creates a DEC Ada program library.
+
+aprintlib - Lists information about one or more DEC Ada program
+            libraries.
+
+areport   - Lists information about the execution closure of one or
+            more Ada units.
+
+arm       - Deletes one or more Ada units from a program library.
+
+armlib    - Deletes a DEC Ada program library.
+
+axargs    - Executes a DEC Ada command for a list of units read
+            from standard input.
+

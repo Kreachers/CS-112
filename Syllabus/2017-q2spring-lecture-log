@@ -1,0 +1,45 @@
+
+Spring 2017
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Mon Apr  3 - intro; syllabus; 01-introduction.pdf; 02-history.pdf
+ 2. Wed Apr  5 - scheme-1-language.pdf; Languages/scheme/Examples/
+
+week  2:
+ 4. Mon Apr 10 - proj1 spec; Examples; scheme-1-language.pdf
+ 5. Wed Apr 12 - scheme-2-higherorder.pdf; Examples
+
+week  3:
+ 7. Mon Apr 17 - 03-design.pdf; 100 lines ocaml; ocaml-1-notes.pdf
+ 8. Wed Apr 19 - ocaml Examples; proj 2 {code,arithmetic}
+
+week  4:
+10. Mon Apr 24 - scheme-2-higherorder.pdf; ocaml Examples
+11. Wed Apr 26 - lambda-calculus; 05-basic-semantics
+
+week  5:
+13. Mon May  1 - 05-basic-semantics; expressions-statements; data-types
+14. Wed May  3 - intro Smalltalk; examples; angelfire-notes-smalltalk
+
+week  6:
+16. Mon May  8 - asg3 specs; gst examples; expressions-statements
+17. Wed May 10 - MIDTERM TEST
+
+week  7:
+19. Mon May 15 - procedures-environments; object-oriented
+20. Wed May 17 - return test; lazy & haskell; parallel/concurrent
+
+week  8:
+22. Mon May 22 - prolog (Endriss) ch.1-4; Examples
+23. Wed May 24 - prolog examples, Endriss; finish parallel
+
+week  9:
+25. Mon May 29 - HOLIDAY
+26. Wed May 31 - Perl
+
+week 10:
+28. Mon Jun  5 - APL; bash; review
+29. Wed Jun  7 - review
+
+$Id: Lecture-log-2017-q2spring,v 1.21 2017-06-07 21:01:17-07 - - $

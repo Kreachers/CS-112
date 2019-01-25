@@ -1,0 +1,1 @@
+("6.1" ("f923ed3397c75d6ccf8e64c213ed443ee7672d98" . "34773d1e731b52f148e0a8adc4f51cb82d9ada23") (collects #"ffi" #"examples" #"c-printf.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

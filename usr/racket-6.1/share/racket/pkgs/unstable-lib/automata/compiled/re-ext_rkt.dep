@@ -1,0 +1,1 @@
+("6.1" ("598ceec8af539ffaba1d5f9750ff77d002ab61cd" . "a6b8fb84b1a0fcb748aa54ec6944c407886d9f39") (collects #"unstable" #"automata" #"re.rkt") (collects #"syntax" #"parse.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"syntax" #"parse" #"private" #"parse-aux.rkt"))

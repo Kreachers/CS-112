@@ -1,0 +1,6 @@
+; 6.001 register machine
+(define-machine hello
+  (registers)
+  (controller
+  (perform (princ "Hello, world"))))
+

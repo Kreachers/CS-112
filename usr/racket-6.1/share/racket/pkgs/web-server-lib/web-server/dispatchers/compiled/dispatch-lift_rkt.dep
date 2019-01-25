@@ -1,0 +1,1 @@
+("6.1" ("f94d02701b996727afe21eb70c20afba3b77e979" . "9a8c694aa6310aa00136fe025ddd3ce79a5aa242") (collects #"web-server" #"http.rkt") (collects #"racket" #"contract.rkt") (collects #"web-server" #"dispatchers" #"dispatch.rkt") (collects #"web-server" #"http" #"response.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

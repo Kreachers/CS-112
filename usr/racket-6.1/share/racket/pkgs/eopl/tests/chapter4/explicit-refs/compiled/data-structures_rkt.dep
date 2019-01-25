@@ -1,0 +1,1 @@
+("6.1" ("eb1089f68606534c4d2bf9ae1daa37b1e89f22ed" . "7a6ba34b122c99b1da43da614c947120325c1c06") (collects #"eopl" #"tests" #"chapter4" #"explicit-refs" #"store.rkt") (collects #"eopl" #"tests" #"chapter4" #"explicit-refs" #"lang.rkt") (collects #"eopl" #"main.rkt") (collects #"eopl" #"lang" #"reader.rkt"))

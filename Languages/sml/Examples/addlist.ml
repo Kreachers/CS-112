@@ -1,0 +1,34 @@
+(* $Id: addlist.ml,v 321.1 2002-02-21 19:42:00-08 - - $ *)
+
+fun add (list1, list2) =
+    let
+       fun add' (list1, [], 0) = list1
+         | add' ([], list2, 0) = list2
+         | add' ([], [], carry) = [carry]
+         | add' (list1, [], carry) = add' (list1, [carry], 0)
+         | add' ([], list2, carry) = add' ([carry], list2, 0)
+         | add' (low1::rest1, low2::rest2, carry) =
+           let
+              val sum = low1 + low2 + carry;
+           in
+              (sum mod 10) :: add' (rest1, rest2, sum div 10)
+           end;
+    in
+       add' (list1, list2, 0)
+    end;
+
+fun testadd (list1, list2) =
+    ( print "\n\n[In testadd]\n";
+      print "list1= "; printVal list1; print "\n";
+      print "list2= "; printVal list2; print "\n";
+      print "sum  = "; printVal (add (list1, list2)); print "\n" );
+
+testadd ([1,2,3,4], [0]);
+
+testadd ([8,8,8], [9,9,0,8]);
+
+testadd ([9, 9, 0, 0, 9], [1]);
+
+testadd ([1], [9, 9, 9]);
+
+quit();

@@ -1,0 +1,637 @@
+head	1.30;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.30
+date	2015.12.07.20.56.59;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2015.12.03.19.54.58;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2015.12.01.23.55.51;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2015.11.26.02.56.07;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2015.11.24.03.23.52;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2015.11.21.01.02.57;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2015.11.17.03.20.28;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2015.11.14.01.12.30;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2015.11.10.03.13.42;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2015.11.07.01.01.02;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2015.11.05.03.12.28;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2015.11.03.21.27.28;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2015.10.31.01.25.51;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2015.10.28.00.00.42;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2015.10.24.01.10.07;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2015.10.22.19.22.29;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2015.10.20.22.42.59;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2015.10.20.22.42.18;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2015.10.15.19.12.58;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2015.10.13.20.05.29;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2015.10.10.00.10.44;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2015.10.08.02.08.30;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2015.10.06.02.23.09;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2015.10.03.00.09.35;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2015.10.01.02.14.50;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2015.09.29.02.25.35;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2015.09.26.00.26.13;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2015.09.22.01.00.46;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2015.09.22.00.59.31;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.09.22.00.59.08;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.30
+log
+@-
+@
+text
+@
+Fall 2015
+CMPS-112 -- Comparative Programming Languages
+
+week  0:
+ 1. Fri Sep 25 - syllabus, etc.; 01-introduction.pdf
+
+week  1:
+ 2. Mon Sep 28 - Scheme (intro notes)
+ 3. Wed Sep 30 - project 1; Scheme (notes)
+ 4. Fri Oct  2 - Scheme (notes)
+
+week  2:
+ 5. Mon Oct  5 - Scheme (examples); Scheme higher-order fns
+ 6. Wed Oct  7 - Scheme higher-order fns
+ 7. Fri Oct  9 - Scheme higher-order fns
+
+week  3:
+ 8. Mon Oct 12 - intro Ocaml
+ 9. Wed Oct 14 - Ocaml (notes); project 2
+10. Fri Oct 16 - project 2 bigint
+
+week  4:
+11. Mon Oct 19 - Ocaml (notes)
+12. Wed Oct 21 - Ocaml higher-order fns
+13. Fri Oct 23 - Ocaml higher-order fns
+
+week  5:
+14. Mon Oct 26 - Intro Smalltalk
+15. Wed Oct 28 - TEST #1.
+16. Fri Oct 30 - smalltalk/{Examples/,angelfire-notes-smalltalk}
+
+week  6:
+17. Mon Nov  2 - smalltalk/Examples
+18. Wed Nov  4 - asg3; language processors; history
+19. Fri Nov  6 - 3. language design; 5. basic semantics
+
+week  7:
+20. Mon Nov  9 - Object-oriented programming
+    Wed Nov 11 - HOLIDAY
+21. Fri Nov 13 - OOP; Lambda calculus
+
+week  8:
+22. Mon Nov 16 - Intro Perl
+23. Wed Nov 18 - TEST #2.
+24. Fri Nov 20 - Perl.
+
+week  9:
+25. Mon Nov 23 - Program 5; finish Perl.
+26. Wed Nov 25 - Lambda calculus; intro Prolog
+    Fri Nov 27 - HOLIDAY
+
+week 10:
+27. Mon Nov 30 - Prolog
+28. Wed Dec  2 - finish Prolog; lazy evaluation & Haskell
+29. Fri Dec  4 - Haskell; lazy eval; review
+
+$Id: Lecture-log-2015-q4fall,v 1.29 2015-12-03 11:54:58-08 - - $
+@
+
+
+1.29
+log
+@-
+@
+text
+@d56 1
+a56 1
+29. Fri Dec  4
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.28 2015-12-01 15:55:51-08 - - $
+@
+
+
+1.28
+log
+@-
+@
+text
+@d55 1
+a55 1
+28. Wed Dec  2
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.27 2015-11-25 18:56:07-08 - - $
+@
+
+
+1.27
+log
+@-
+@
+text
+@d54 1
+a54 1
+27. Mon Nov 30
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.26 2015-11-23 19:23:52-08 - - $
+@
+
+
+1.26
+log
+@-
+@
+text
+@d50 1
+a50 1
+26. Wed Nov 25
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.25 2015-11-20 17:02:57-08 - - $
+@
+
+
+1.25
+log
+@-
+@
+text
+@d49 1
+a49 1
+25. Mon Nov 23
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.24 2015-11-16 19:20:28-08 - - $
+@
+
+
+1.24
+log
+@-
+@
+text
+@d46 1
+a46 1
+24. Fri Nov 20
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.23 2015-11-13 17:12:30-08 - - $
+@
+
+
+1.23
+log
+@-
+@
+text
+@d44 1
+a44 1
+22. Mon Nov 16
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.22 2015-11-09 19:13:42-08 - - $
+@
+
+
+1.22
+log
+@-
+@
+text
+@d41 1
+a41 1
+21. Fri Nov 13
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.21 2015-11-06 17:01:02-08 - - $
+@
+
+
+1.21
+log
+@-
+@
+text
+@d39 1
+a39 1
+20. Mon Nov  9
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.20 2015-11-04 19:12:28-08 - - $
+@
+
+
+1.20
+log
+@-
+@
+text
+@d36 1
+a36 1
+19. Fri Nov  6
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.19 2015-11-03 13:27:28-08 - - $
+@
+
+
+1.19
+log
+@-
+@
+text
+@d35 1
+a35 1
+18. Wed Nov  4
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.18 2015-10-30 18:25:51-07 - - $
+@
+
+
+1.18
+log
+@-
+@
+text
+@d34 1
+a34 1
+17. Mon Nov  2
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.17 2015-10-27 17:00:42-07 - - $
+@
+
+
+1.17
+log
+@-
+@
+text
+@d31 1
+a31 1
+16. Fri Oct 30
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.16 2015-10-23 18:10:07-07 - - $
+@
+
+
+1.16
+log
+@-
+@
+text
+@d29 1
+a29 1
+14. Mon Oct 26
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.15 2015-10-22 12:22:29-07 - - $
+@
+
+
+1.15
+log
+@-
+@
+text
+@d26 1
+a26 1
+13. Fri Oct 23
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.14 2015-10-20 15:42:59-07 - - $
+@
+
+
+1.14
+log
+@-
+@
+text
+@d25 1
+a25 1
+12. Wed Oct 21
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.13 2015-10-20 15:42:18-07 - - $
+@
+
+
+1.13
+log
+@-
+@
+text
+@d21 1
+a21 1
+10. Fri Oct 16 - project 2
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.12 2015-10-15 12:12:58-07 - - $
+@
+
+
+1.12
+log
+@-
+@
+text
+@d21 1
+a21 1
+10. Fri Oct 16
+d24 1
+a24 1
+11. Mon Oct 19
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.11 2015-10-13 13:05:29-07 - - $
+@
+
+
+1.11
+log
+@-
+@
+text
+@d20 1
+a20 1
+ 9. Wed Oct 14
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.10 2015-10-09 17:10:44-07 - - $
+@
+
+
+1.10
+log
+@-
+@
+text
+@d19 1
+a19 1
+ 8. Mon Oct 12
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.9 2015-10-07 19:08:30-07 - - $
+@
+
+
+1.9
+log
+@-
+@
+text
+@d16 1
+a16 1
+ 7. Fri Oct  9
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.8 2015-10-05 19:23:09-07 - - $
+@
+
+
+1.8
+log
+@-
+@
+text
+@d15 1
+a15 1
+ 6. Wed Oct  7
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.7 2015-10-02 17:09:35-07 - - $
+@
+
+
+1.7
+log
+@-
+@
+text
+@d14 1
+a14 1
+ 5. Mon Oct  5
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.6 2015-09-30 19:14:50-07 - - $
+@
+
+
+1.6
+log
+@-
+@
+text
+@d11 1
+a11 1
+ 4. Fri Oct  2
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.5 2015-09-28 19:25:35-07 - - $
+@
+
+
+1.5
+log
+@-
+@
+text
+@d10 1
+a10 1
+ 3. Wed Sep 30
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.4 2015-09-25 17:26:13-07 - - $
+@
+
+
+1.4
+log
+@-
+@
+text
+@d9 1
+a9 1
+ 2. Mon Sep 28
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.3 2015-09-21 18:00:46-07 - - $
+@
+
+
+1.3
+log
+@-
+@
+text
+@d6 1
+a6 1
+ 1. Fri Sep 25
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.2 2015-09-21 17:59:31-07 - - $
+@
+
+
+1.2
+log
+@-
+@
+text
+@d30 1
+a30 1
+15. Wed Oct 28
+d45 1
+a45 1
+23. Wed Nov 18
+d58 1
+a58 1
+$Id: Lecture-log-2015-q4fall,v 1.1 2015-09-21 17:59:08-07 - - $
+@
+
+
+1.1
+log
+@-
+@
+text
+@a4 1
+
+d58 1
+a58 1
+$Id$
+@

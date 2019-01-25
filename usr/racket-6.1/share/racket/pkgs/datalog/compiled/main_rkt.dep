@@ -1,0 +1,1 @@
+("6.1" ("8ddf763ad0e3d55963de91150b3dee5a7c604f4e" . "fdec5703a3ea2e80ed83488a9dc2a3fd4c489ecc") (collects #"datalog" #"runtime.rkt") (collects #"datalog" #"stx.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"datalog" #"serialize.rkt"))

@@ -1,0 +1,727 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 38 24 574 768
+%%Title: Readme.all.cmps112.ps
+%%For: Wesley Mackey
+%%Creator: GNU Enscript 1.6.6
+%%CreationDate: Mon Nov 13 12:52:26 2017
+%%Orientation: Portrait
+%%Pages: (atend)
+%%DocumentMedia: Letter 612 792 0 () ()
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Enscript-Prolog 1.6 6
+%
+% Procedures.
+%
+
+/_S {	% save current state
+  /_s save def
+} def
+/_R {	% restore from saved state
+  _s restore
+} def
+
+/S {	% showpage protecting gstate
+  gsave
+  showpage
+  grestore
+} bind def
+
+/MF {	% fontname newfontname -> -	make a new encoded font
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  % insert only valid encoding vectors
+  encoding_vector length 256 eq {
+    newfont /Encoding encoding_vector put
+  } if
+
+  newfontname newfont definefont pop
+} def
+
+/MF_PS { % fontname newfontname -> -	make a new font preserving its enc
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  newfontname newfont definefont pop
+} def
+
+/SF { % fontname width height -> -	set a new font
+  /height exch def
+  /width exch def
+
+  findfont
+  [width 0 0 height 0 0] makefont setfont
+} def
+
+/SUF { % fontname width height -> -	set a new user font
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF
+  /F-gs-user-font width height SF
+} def
+
+/SUF_PS { % fontname width height -> -	set a new user font preserving its enc
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF_PS
+  /F-gs-user-font width height SF
+} def
+
+/M {moveto} bind def
+/s {show} bind def
+
+/Box {	% x y w h -> -			define box path
+  /d_h exch def /d_w exch def /d_y exch def /d_x exch def
+  d_x d_y  moveto
+  d_w 0 rlineto
+  0 d_h rlineto
+  d_w neg 0 rlineto
+  closepath
+} def
+
+/bgs {	% x y height blskip gray str -> -	show string with bg color
+  /str exch def
+  /gray exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    gray setgray
+    fill
+  grestore
+  x y M str s
+} def
+
+/bgcs { % x y height blskip red green blue str -> -  show string with bg color
+  /str exch def
+  /blue exch def
+  /green exch def
+  /red exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    red green blue setrgbcolor
+    fill
+  grestore
+  x y M str s
+} def
+
+% Highlight bars.
+/highlight_bars {	% nlines lineheight output_y_margin gray -> -
+  gsave
+    setgray
+    /ymarg exch def
+    /lineheight exch def
+    /nlines exch def
+
+    % This 2 is just a magic number to sync highlight lines to text.
+    0 d_header_y ymarg sub 2 sub translate
+
+    /cw d_output_w cols div def
+    /nrows d_output_h ymarg 2 mul sub lineheight div cvi def
+
+    % for each column
+    0 1 cols 1 sub {
+      cw mul /xp exch def
+
+      % for each rows
+      0 1 nrows 1 sub {
+        /rn exch def
+        rn lineheight mul neg /yp exch def
+        rn nlines idiv 2 mod 0 eq {
+	  % Draw highlight bar.  4 is just a magic indentation.
+	  xp 4 add yp cw 8 sub lineheight neg Box fill
+	} if
+      } for
+    } for
+
+  grestore
+} def
+
+% Line highlight bar.
+/line_highlight {	% x y width height gray -> -
+  gsave
+    /gray exch def
+    Box gray setgray fill
+  grestore
+} def
+
+% Column separator lines.
+/column_lines {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h translate
+    /cw d_output_w cols div def
+    1 1 cols 1 sub {
+      cw mul 0 moveto
+      0 d_output_h rlineto stroke
+    } for
+  grestore
+} def
+
+% Column borders.
+/column_borders {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h moveto
+    0 d_output_h rlineto
+    d_output_w 0 rlineto
+    0 d_output_h neg rlineto
+    closepath stroke
+  grestore
+} def
+
+% Do the actual underlay drawing
+/draw_underlay {
+  ul_style 0 eq {
+    ul_str true charpath stroke
+  } {
+    ul_str show
+  } ifelse
+} def
+
+% Underlay
+/underlay {	% - -> -
+  gsave
+    0 d_page_h translate
+    d_page_h neg d_page_w atan rotate
+
+    ul_gray setgray
+    ul_font setfont
+    /dw d_page_h dup mul d_page_w dup mul add sqrt def
+    ul_str stringwidth pop dw exch sub 2 div ul_h_ptsize -2 div moveto
+    draw_underlay
+  grestore
+} def
+
+/user_underlay {	% - -> -
+  gsave
+    ul_x ul_y translate
+    ul_angle rotate
+    ul_gray setgray
+    ul_font setfont
+    0 0 ul_h_ptsize 2 div sub moveto
+    draw_underlay
+  grestore
+} def
+
+% Page prefeed
+/page_prefeed {		% bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} def
+
+% Wrapped line markers
+/wrapped_line_mark {	% x y charwith charheight type -> -
+  /type exch def
+  /h exch def
+  /w exch def
+  /y exch def
+  /x exch def
+
+  type 2 eq {
+    % Black boxes (like TeX does)
+    gsave
+      0 setlinewidth
+      x w 4 div add y M
+      0 h rlineto w 2 div 0 rlineto 0 h neg rlineto
+      closepath fill
+    grestore
+  } {
+    type 3 eq {
+      % Small arrows
+      gsave
+        .2 setlinewidth
+        x w 2 div add y h 2 div add M
+        w 4 div 0 rlineto
+        x w 4 div add y lineto stroke
+
+        x w 4 div add w 8 div add y h 4 div add M
+        x w 4 div add y lineto
+	w 4 div h 8 div rlineto stroke
+      grestore
+    } {
+      % do nothing
+    } ifelse
+  } ifelse
+} def
+
+% EPSF import.
+
+/BeginEPSF {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [ ] 0 setdash newpath
+  /languagelevel where {
+    pop languagelevel
+    1 ne {
+      false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/EndEPSF {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+%%EndResource
+%%BeginResource: procset Enscript-Encoding-88591 1.6 6
+/encoding_vector [
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclam       	/quotedbl     	/numbersign   	
+/dollar       	/percent      	/ampersand    	/quoteright   	
+/parenleft    	/parenright   	/asterisk     	/plus         	
+/comma        	/hyphen       	/period       	/slash        	
+/zero         	/one          	/two          	/three        	
+/four         	/five         	/six          	/seven        	
+/eight        	/nine         	/colon        	/semicolon    	
+/less         	/equal        	/greater      	/question     	
+/at           	/A            	/B            	/C            	
+/D            	/E            	/F            	/G            	
+/H            	/I            	/J            	/K            	
+/L            	/M            	/N            	/O            	
+/P            	/Q            	/R            	/S            	
+/T            	/U            	/V            	/W            	
+/X            	/Y            	/Z            	/bracketleft  	
+/backslash    	/bracketright 	/asciicircum  	/underscore   	
+/quoteleft    	/a            	/b            	/c            	
+/d            	/e            	/f            	/g            	
+/h            	/i            	/j            	/k            	
+/l            	/m            	/n            	/o            	
+/p            	/q            	/r            	/s            	
+/t            	/u            	/v            	/w            	
+/x            	/y            	/z            	/braceleft    	
+/bar          	/braceright   	/tilde        	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclamdown   	/cent         	/sterling     	
+/currency     	/yen          	/brokenbar    	/section      	
+/dieresis     	/copyright    	/ordfeminine  	/guillemotleft	
+/logicalnot   	/hyphen       	/registered   	/macron       	
+/degree       	/plusminus    	/twosuperior  	/threesuperior	
+/acute        	/mu           	/paragraph    	/bullet       	
+/cedilla      	/onesuperior  	/ordmasculine 	/guillemotright	
+/onequarter   	/onehalf      	/threequarters	/questiondown 	
+/Agrave       	/Aacute       	/Acircumflex  	/Atilde       	
+/Adieresis    	/Aring        	/AE           	/Ccedilla     	
+/Egrave       	/Eacute       	/Ecircumflex  	/Edieresis    	
+/Igrave       	/Iacute       	/Icircumflex  	/Idieresis    	
+/Eth          	/Ntilde       	/Ograve       	/Oacute       	
+/Ocircumflex  	/Otilde       	/Odieresis    	/multiply     	
+/Oslash       	/Ugrave       	/Uacute       	/Ucircumflex  	
+/Udieresis    	/Yacute       	/Thorn        	/germandbls   	
+/agrave       	/aacute       	/acircumflex  	/atilde       	
+/adieresis    	/aring        	/ae           	/ccedilla     	
+/egrave       	/eacute       	/ecircumflex  	/edieresis    	
+/igrave       	/iacute       	/icircumflex  	/idieresis    	
+/eth          	/ntilde       	/ograve       	/oacute       	
+/ocircumflex  	/otilde       	/odieresis    	/divide       	
+/oslash       	/ugrave       	/uacute       	/ucircumflex  	
+/udieresis    	/yacute       	/thorn        	/ydieresis    	
+] def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier-Bold
+/HFpt_w 10 def
+/HFpt_h 10 def
+/Courier-Bold /HF-gs-font MF
+/HF /HF-gs-font findfont [HFpt_w 0 0 HFpt_h 0 0] makefont def
+/Courier-Bold /F-gs-font MF
+/F-gs-font 11 11 SF
+/#copies 1 def
+% Pagedevice definitions:
+gs_languagelevel 1 gt {
+  <<
+    /PageSize [612 792] 
+  >> setpagedevice
+} if
+%%BeginResource: procset Enscript-Header-enscript-mycolor 1.6 6
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-Roman
+
+% Fonts.
+/Times-Bold /HeaderFont-Bold MF
+/HeaderDateF /HeaderFont-Bold findfont 12 scalefont def
+
+/Times-Roman /HeaderFont-Times MF
+/HeaderHDRF /HeaderFont-Times findfont 14 scalefont def
+
+/HeaderPageNumF /Helvetica-Bold findfont 28.8 scalefont def
+/HeaderPageCountF /Helvetica-Bold findfont 18 scalefont def
+
+/do_header {	% print enscript header
+  gsave
+    d_header_x d_header_y translate
+
+    /dhw d_header_w 4 sub def
+
+    /linecolor {0 0 0 setrgbcolor} bind def  % line color
+    /txcolor   {0 0 0 setrgbcolor} bind def  % text color
+    /fncolor   {0 0 0 setrgbcolor} bind def  % filename line color
+
+    .5 setlinewidth
+
+    % line across bottom of the header area
+    linecolor
+    0 0 moveto dhw 0 lineto
+
+    % side boxes
+    /sbw d_header_h 2 mul def	% side box width
+
+    % left side box
+    0 0 sbw d_header_h Box
+    linecolor
+    stroke
+
+    % date/time in left box
+    txcolor
+    HeaderDateF setfont
+    moddatestr dup stringwidth pop sbw exch sub 2 div
+    d_header_h 2 div 2 add moveto show
+    modtimestr dup stringwidth pop sbw exch sub 2 div
+    d_header_h 5 div moveto show
+
+    % right side box
+    dhw sbw sub 0 sbw d_header_h Box
+    linecolor
+    stroke
+
+    % get width of pagecount
+    HeaderPageCountF setfont
+    pagecountstr stringwidth pop
+
+    txcolor
+    HeaderPageNumF setfont
+    pagenumstr stringwidth pop add  % add to width of pagecount
+    sbw exch sub 2 div dhw sbw sub add
+    d_header_h .2 mul moveto
+
+    pagenumstr show
+
+    HeaderPageCountF setfont
+    pagecountstr show
+
+    % filename
+    fncolor
+    HeaderHDRF setfont
+    dhw fname stringwidth pop sub 2 div d_header_h 8 div moveto
+    fname show
+
+    % user supplied header string.
+    user_header_p {
+      /h d_header_h 8 div 5 mul def
+
+      % HACK around a bug in enscript 1.6.0:
+      % for some reason this is getting set to "(null)" and
+      %
+      user_header_center_str (\(null\)) eq {
+        /user_header_center_str () def
+      } if
+
+      % Implement strict enscript compatibility.
+      user_header_center_str () eq user_header_right_str () eq and {
+        dhw user_header_left_str stringwidth pop sub 2 div
+        h moveto user_header_left_str show
+      } {
+        sbw 5 add h moveto user_header_left_str show
+
+        dhw user_header_center_str stringwidth pop sub 2 div
+        h moveto user_header_center_str show
+
+	dhw sbw sub 5 sub user_header_right_str stringwidth pop
+	sub h moveto user_header_right_str show
+      } ifelse
+    } if
+
+  grestore
+} bind def
+%%EndResource
+/d_page_w 536 def
+/d_page_h 744 def
+/d_header_x 0 def
+/d_header_y 708 def
+/d_header_w 536 def
+/d_header_h 36 def
+/d_footer_x 0 def
+/d_footer_y 0 def
+/d_footer_w 536 def
+/d_footer_h 0 def
+/d_output_w 536 def
+/d_output_h 708 def
+/cols 1 def
+%%EndSetup
+%%Page: (1) 1
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (Readme.all.cmps112.txt) def
+/fdir (.) def
+/ftail (Readme.all.cmps112.txt) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (11/13/17) def
+/pagecountstr (/2) def
+/modtimestr (12:52:26) def
+/user_header_p true def
+/user_header_left_str ($cmps112-wm/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 694 M
+(.) s
+5 682 M
+(. -------------------------------------------------------------------) s
+5 670 M
+(. CHEATING WILL NOT BE TOLERATED.  CHEATING IN ANY PART OF THE COURSE) s
+5 658 M
+(. MAY LEAD TO FAILING THE COURSE AND SUSPENSION OR DISMISSAL FROM THE) s
+5 646 M
+(. UNIVERSITY.  ALL STUDENTS SHALL READ THE UCSC ACADEMIC INTEGRITY) s
+5 634 M
+(. WEB PAGES:  https://www.ue.ucsc.edu/academic_misconduct) s
+5 622 M
+(. -------------------------------------------------------------------) s
+5 610 M
+(. Pair programming is permitted in this course.  Read details in) s
+5 598 M
+(. /afs/cats.ucsc.edu/courses/cmps112-wm/Syllabus/pair-programming/) s
+5 586 M
+(. -------------------------------------------------------------------) s
+5 574 M
+(.) s
+5 562 M
+(. Quarter:     Fall 2017) s
+5 550 M
+(. Course:      CMPS-112 - Comparative Programming Languages) s
+5 538 M
+(. Directory:   /afs/cats.ucsc.edu/courses/cmps112-wm/) s
+5 526 M
+(.              http://www2.ucsc.edu/courses/cmps112-wm/:/) s
+5 514 M
+(. Homework:    /afs/cats.ucsc.edu/class/cmps112-wm.f16/) s
+5 502 M
+(.              submit cmps112-wm.f16 ...) s
+5 490 M
+(. Piazza:      https://piazza.com/ucsc/fall2017/cmps112) s
+5 478 M
+(.) s
+5 466 M
+(. Instructor:  Wesley Mackey \(mackey@soe.ucsc.edu\), 459-5322) s
+5 454 M
+(. Office.hrs:  Tue/Thu     2:30pm-- 4:00pm  E2/253) s
+5 442 M
+(. Lectures:    Tue/Thu     7:10pm-- 8:45pm  E&M/B206) s
+5 430 M
+(.) s
+5 418 M
+(. TA:    Muhammad Saber \(mtsaber@ucsc.edu\)) s
+5 406 M
+(. TA:    Sara Sholes \(ssholes@ucsc.edu\)) s
+5 394 M
+(. TA:    Shih-Ming Wang \(swang150@ucsc.edu\)) s
+5 382 M
+(. Labs:  01A  Mon 09:00am--11:00am  JBE/105 Sara) s
+5 370 M
+(. Labs:  01B  Mon 02:00pm--04:00pm  JBE/105 Muhammad) s
+5 358 M
+(. Labs:  01C  Tue 02:00pm--04:00pm  JBE/105 Shih-Ming) s
+5 346 M
+(. Labs:  01E  Wed 05:00pm--07:00pm  JBE/105 Sara) s
+5 334 M
+(. Labs:  01F  Thu 09:00pm--11:00pm  JBE/105 Muhammad) s
+5 322 M
+(. Labs:  01G  Fri 04:00pm--06:00pm  JBE/105 Shih-Ming) s
+5 310 M
+(. http://its.ucsc.edu/computer-labs/class-schedules/spring/be105.html) s
+5 298 M
+(.) s
+5 286 M
+(. LSS tutor:    Shanee Dinay \(sdinay@ucsc.edu\)) s
+5 274 M
+(. MSI website:  http://lss.ucsc.edu/programs/modified-supplemental-instruction/) s
+5 262 M
+(index.html) s
+5 250 M
+(. MSI schedule: https://eop.sa.ucsc.edu/msi/msischedule.cfm ) s
+5 238 M
+(.) s
+5 226 M
+(. You are required to have a Linux account in order to submit your) s
+5 214 M
+(. assignments.  All grading is done on the unix.ucsc.edu servers.) s
+5 202 M
+(.) s
+5 190 M
+(. COURSE INFORMATION:) s
+5 178 M
+(. Syllabus:      http:Syllabus/) s
+5 166 M
+(. Assignments:   http:Assignments/) s
+5 154 M
+(. Old-Exams:     http:Old-Exams/) s
+5 142 M
+(. Lecture-Notes: http:Lecture-notes/) s
+5 130 M
+(. Languages:     http:Languages/) s
+5 118 M
+(.) s
+5 106 M
+(. CLASS SCHEDULE AND DUE DATES:) s
+5 94 M
+(.) s
+5 82 M
+(# Mon Sep  4. Holiday - Labor Day.) s
+5 70 M
+(# Thu Sep 28. Begin instruction.) s
+5 58 M
+(# Wed Oct 18. End add/drop/swap.) s
+5 46 M
+(# Wed Nov  8. End withdraw.) s
+5 34 M
+(# Fri Nov 10. Holiday - Veterans.) s
+5 22 M
+(. Wed Nov 15. Priority enrollment.) s
+5 10 M
+(. Thu Nov 23. Holiday - Thanksgiving.) s
+_R
+S
+%%Page: (2) 2
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 2 def
+/fname (Readme.all.cmps112.txt) def
+/fdir (.) def
+/ftail (Readme.all.cmps112.txt) def
+% User defined strings:
+/pagenumstr (2) def
+/moddatestr (11/13/17) def
+/pagecountstr (/2) def
+/modtimestr (12:52:26) def
+/user_header_p true def
+/user_header_left_str ($cmps112-wm/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+5 694 M
+(. Fri Nov 24. Holiday - Thanksgiving.) s
+5 682 M
+(. Fri Dec  8. End instruction.) s
+5 670 M
+(. Wed Dec 20. Grades due.) s
+5 658 M
+(.) s
+5 646 M
+(# Fri Oct  6. LAB 0.         http:Assignments/lab0-intro-unix/) s
+5 634 M
+(# Tue Oct 17. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/) s
+5 622 M
+(# Thu Nov  2. ASG 2 DUE.     http:Assignments/asg2-ocaml-dc/) s
+5 610 M
+(. Mon Nov 20. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/) s
+5 598 M
+(. Wed Dec  6. ASG 4 DUE.     http:Assignments/asg4-prolog-flights/) s
+5 586 M
+(.) s
+5 574 M
+(# Tue Nov  7. MIDTERM TEST.  http:Old-Exams/) s
+5 562 M
+(. Tue Dec 12. FINAL EXAM.    http:Old-Exams/ 7:30pm--9:30pm) s
+5 550 M
+(.             NOTE:  The final exam will be 2 hours in duration.) s
+5 538 M
+(.             http://registrar.ucsc.edu/soc/final-examinations.html) s
+5 526 M
+(.) s
+5 514 M
+(. For the complete text, including deleted lines, see the files) s
+5 502 M
+(. README-all-cmps012b.*) s
+5 490 M
+(. $Id: Readme.all.cmps112.txt,v 1.124 2017-11-13 12:52:25-08 - - $) s
+_R
+S
+%%Trailer
+%%Pages: 2
+%%DocumentNeededResources: font Times-Roman Courier-Bold Times-Bold 
+%%EOF

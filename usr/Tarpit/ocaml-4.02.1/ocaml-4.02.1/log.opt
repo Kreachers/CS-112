@@ -1,0 +1,556 @@
+make runtimeopt
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd asmrun; make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/asmrun'
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o startup.o startup.c
+ln -s ../byterun/main.c main.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o main.o main.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o fail.o fail.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o roots.o roots.c
+ln -s ../byterun/globroots.c globroots.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o globroots.o globroots.c
+ln -s ../byterun/signals.c signals.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o signals.o signals.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o signals_asm.o signals_asm.c
+ln -s ../byterun/misc.c misc.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o misc.o misc.c
+ln -s ../byterun/freelist.c freelist.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o freelist.o freelist.c
+ln -s ../byterun/major_gc.c major_gc.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o major_gc.o major_gc.c
+ln -s ../byterun/minor_gc.c minor_gc.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o minor_gc.o minor_gc.c
+ln -s ../byterun/memory.c memory.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o memory.o memory.c
+ln -s ../byterun/alloc.c alloc.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o alloc.o alloc.c
+ln -s ../byterun/compare.c compare.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o compare.o compare.c
+ln -s ../byterun/ints.c ints.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o ints.o ints.c
+ln -s ../byterun/floats.c floats.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o floats.o floats.c
+ln -s ../byterun/str.c str.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o str.o str.c
+ln -s ../byterun/array.c array.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o array.o array.c
+ln -s ../byterun/io.c io.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o io.o io.c
+ln -s ../byterun/extern.c extern.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o extern.o extern.c
+ln -s ../byterun/intern.c intern.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o intern.o intern.c
+ln -s ../byterun/hash.c hash.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o hash.o hash.c
+ln -s ../byterun/sys.c sys.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o sys.o sys.c
+ln -s ../byterun/parsing.c parsing.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o parsing.o parsing.c
+ln -s ../byterun/gc_ctrl.c gc_ctrl.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o gc_ctrl.o gc_ctrl.c
+ln -s ../byterun/terminfo.c terminfo.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o terminfo.o terminfo.c
+ln -s ../byterun/md5.c md5.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o md5.o md5.c
+ln -s ../byterun/obj.c obj.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o obj.o obj.c
+ln -s ../byterun/lexing.c lexing.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o lexing.o lexing.c
+ln -s ../byterun/printexc.c printexc.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o printexc.o printexc.c
+ln -s ../byterun/callback.c callback.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o callback.o callback.c
+ln -s ../byterun/weak.c weak.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o weak.o weak.c
+ln -s ../byterun/compact.c compact.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o compact.o compact.c
+ln -s ../byterun/finalise.c finalise.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o finalise.o finalise.c
+ln -s ../byterun/custom.c custom.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o custom.o custom.c
+ln -s ../byterun/unix.c unix.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o unix.o unix.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o backtrace.o backtrace.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o natdynlink.o natdynlink.c
+ln -s ../byterun/debugger.c debugger.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o debugger.o debugger.c
+ln -s ../byterun/meta.c meta.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o meta.o meta.c
+ln -s ../byterun/dynlink.c dynlink.c
+gcc -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -O -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT   -c -o dynlink.o dynlink.c
+gcc -c -DSYS_linux -DMODEL_default -o amd64.o amd64.S || \
+	{ echo "If your assembler produced syntax errors, it is probably";\
+          echo "unhappy with the preprocessor. Check your assembler, or";\
+          echo "try producing amd64.o by hand.";\
+          exit 2; }
+rm -f libasmrun.a
+ar rc libasmrun.a startup.o main.o fail.o roots.o globroots.o signals.o signals_asm.o misc.o freelist.o major_gc.o minor_gc.o memory.o alloc.o compare.o ints.o floats.o str.o array.o io.o extern.o intern.o hash.o sys.o parsing.o gc_ctrl.o terminfo.o md5.o obj.o lexing.o printexc.o callback.o weak.o compact.o finalise.o custom.o unix.o backtrace.o natdynlink.o debugger.o meta.o dynlink.o amd64.o
+ranlib libasmrun.a
+ln -s -f startup.c startup.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT startup.p.c
+rm -f startup.p.c
+ln -s -f main.c main.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT main.p.c
+rm -f main.p.c
+ln -s -f fail.c fail.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT fail.p.c
+rm -f fail.p.c
+ln -s -f roots.c roots.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT roots.p.c
+rm -f roots.p.c
+ln -s -f globroots.c globroots.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT globroots.p.c
+rm -f globroots.p.c
+ln -s -f signals.c signals.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT signals.p.c
+rm -f signals.p.c
+ln -s -f signals_asm.c signals_asm.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT signals_asm.p.c
+rm -f signals_asm.p.c
+ln -s -f misc.c misc.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT misc.p.c
+rm -f misc.p.c
+ln -s -f freelist.c freelist.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT freelist.p.c
+rm -f freelist.p.c
+ln -s -f major_gc.c major_gc.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT major_gc.p.c
+rm -f major_gc.p.c
+ln -s -f minor_gc.c minor_gc.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT minor_gc.p.c
+rm -f minor_gc.p.c
+ln -s -f memory.c memory.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT memory.p.c
+rm -f memory.p.c
+ln -s -f alloc.c alloc.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT alloc.p.c
+rm -f alloc.p.c
+ln -s -f compare.c compare.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT compare.p.c
+rm -f compare.p.c
+ln -s -f ints.c ints.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT ints.p.c
+rm -f ints.p.c
+ln -s -f floats.c floats.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT floats.p.c
+rm -f floats.p.c
+ln -s -f str.c str.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT str.p.c
+rm -f str.p.c
+ln -s -f array.c array.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT array.p.c
+rm -f array.p.c
+ln -s -f io.c io.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT io.p.c
+rm -f io.p.c
+ln -s -f extern.c extern.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT extern.p.c
+rm -f extern.p.c
+ln -s -f intern.c intern.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT intern.p.c
+rm -f intern.p.c
+ln -s -f hash.c hash.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT hash.p.c
+rm -f hash.p.c
+ln -s -f sys.c sys.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT sys.p.c
+rm -f sys.p.c
+ln -s -f parsing.c parsing.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT parsing.p.c
+rm -f parsing.p.c
+ln -s -f gc_ctrl.c gc_ctrl.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT gc_ctrl.p.c
+rm -f gc_ctrl.p.c
+ln -s -f terminfo.c terminfo.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT terminfo.p.c
+rm -f terminfo.p.c
+ln -s -f md5.c md5.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT md5.p.c
+rm -f md5.p.c
+ln -s -f obj.c obj.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT obj.p.c
+rm -f obj.p.c
+ln -s -f lexing.c lexing.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT lexing.p.c
+rm -f lexing.p.c
+ln -s -f printexc.c printexc.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT printexc.p.c
+rm -f printexc.p.c
+ln -s -f callback.c callback.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT callback.p.c
+rm -f callback.p.c
+ln -s -f weak.c weak.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT weak.p.c
+rm -f weak.p.c
+ln -s -f compact.c compact.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT compact.p.c
+rm -f compact.p.c
+ln -s -f finalise.c finalise.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT finalise.p.c
+rm -f finalise.p.c
+ln -s -f custom.c custom.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT custom.p.c
+rm -f custom.p.c
+ln -s -f unix.c unix.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT unix.p.c
+rm -f unix.p.c
+ln -s -f backtrace.c backtrace.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT backtrace.p.c
+rm -f backtrace.p.c
+ln -s -f natdynlink.c natdynlink.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT natdynlink.p.c
+rm -f natdynlink.p.c
+ln -s -f debugger.c debugger.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT debugger.p.c
+rm -f debugger.p.c
+ln -s -f meta.c meta.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT meta.p.c
+rm -f meta.p.c
+ln -s -f dynlink.c dynlink.p.c
+gcc -c -I../byterun -DCAML_NAME_SPACE -DNATIVE_CODE -DTARGET_amd64 -DSYS_linux  -pg -O -DPROFILING -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT dynlink.p.c
+rm -f dynlink.p.c
+gcc -c -DSYS_linux -DMODEL_default -DPROFILING -o amd64.p.o amd64.S
+rm -f libasmrunp.a
+ar rc libasmrunp.a startup.p.o main.p.o fail.p.o roots.p.o globroots.p.o signals.p.o signals_asm.p.o misc.p.o freelist.p.o major_gc.p.o minor_gc.p.o memory.p.o alloc.p.o compare.p.o ints.p.o floats.p.o str.p.o array.p.o io.p.o extern.p.o intern.p.o hash.p.o sys.p.o parsing.p.o gc_ctrl.p.o terminfo.p.o md5.p.o obj.p.o lexing.p.o printexc.p.o callback.p.o weak.p.o compact.p.o finalise.p.o custom.p.o unix.p.o backtrace.p.o natdynlink.p.o debugger.p.o meta.p.o dynlink.p.o amd64.p.o
+ranlib libasmrunp.a
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/asmrun'
+cp asmrun/libasmrun.a stdlib/libasmrun.a
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make ocamlopt
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+ln -s amd64/arch.ml asmcomp/arch.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/arch.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/debuginfo.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/cmm.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/cmm.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printcmm.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printcmm.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/reg.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/reg.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/mach.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/mach.ml
+ln -s amd64/proc.ml asmcomp/proc.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/proc.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/proc.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/clambda.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/compilenv.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/compilenv.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/closure.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/closure.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/strmatch.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/strmatch.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/cmmgen.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/cmmgen.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printmach.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printmach.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/selectgen.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/selectgen.ml
+ln -s amd64/selection.ml asmcomp/selection.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/selection.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/selection.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/comballoc.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/comballoc.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/CSEgen.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/CSEgen.ml
+ln -s amd64/CSE.ml asmcomp/CSE.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/CSE.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/liveness.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/liveness.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/spill.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/spill.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/split.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/split.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/interf.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/interf.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/coloring.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/coloring.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/reloadgen.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/reloadgen.ml
+ln -s amd64/reload.ml asmcomp/reload.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/reload.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/reload.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/deadcode.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/deadcode.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/linearize.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printlinear.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printlinear.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/linearize.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/schedgen.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/schedgen.ml
+ln -s amd64/scheduling.ml asmcomp/scheduling.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/scheduling.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/scheduling.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/emitaux.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/emitaux.ml
+cd tools; \
+	make CAMLC="../byterun/ocamlrun ../boot/ocamlc -I ../stdlib" cvt_emit
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+../boot/ocamlrun ../boot/ocamllex cvt_emit.mll
+16 states, 280 transitions, table size 1216 bytes
+../byterun/ocamlrun ../boot/ocamlc -I ../stdlib -c -strict-sequence -w +27+32..39 -warn-error A -safe-string -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel cvt_emit.ml
+../byterun/ocamlrun ../boot/ocamlc -I ../stdlib -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -o cvt_emit cvt_emit.cmo
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+byterun/ocamlrun tools/cvt_emit < asmcomp/amd64/emit.mlp > asmcomp/emit.ml \
+	|| { rm -f asmcomp/emit.ml; exit 2; }
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/emit.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/emit.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmgen.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmgen.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmlink.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmlink.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmlibrarian.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmlibrarian.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmpackager.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmpackager.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/opterrors.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/opterrors.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/optcompile.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/optcompile.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -a -o compilerlibs/ocamloptcomp.cma asmcomp/arch.cmo asmcomp/debuginfo.cmo asmcomp/cmm.cmo asmcomp/printcmm.cmo asmcomp/reg.cmo asmcomp/mach.cmo asmcomp/proc.cmo asmcomp/clambda.cmo asmcomp/printclambda.cmo asmcomp/compilenv.cmo asmcomp/closure.cmo asmcomp/strmatch.cmo asmcomp/cmmgen.cmo asmcomp/printmach.cmo asmcomp/selectgen.cmo asmcomp/selection.cmo asmcomp/comballoc.cmo asmcomp/CSEgen.cmo asmcomp/CSE.cmo asmcomp/liveness.cmo asmcomp/spill.cmo asmcomp/split.cmo asmcomp/interf.cmo asmcomp/coloring.cmo asmcomp/reloadgen.cmo asmcomp/reload.cmo asmcomp/deadcode.cmo asmcomp/printlinear.cmo asmcomp/linearize.cmo asmcomp/schedgen.cmo asmcomp/scheduling.cmo asmcomp/emitaux.cmo asmcomp/emit.cmo asmcomp/asmgen.cmo asmcomp/asmlink.cmo asmcomp/asmlibrarian.cmo asmcomp/asmpackager.cmo driver/opterrors.cmo driver/optcompile.cmo
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/optmain.mli
+boot/ocamlrun boot/ocamlc -nostdlib -I boot -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/optmain.ml
+boot/ocamlrun boot/ocamlc -nostdlib -I boot  -o ocamlopt \
+	  compilerlibs/ocamlcommon.cma compilerlibs/ocamloptcomp.cma driver/optmain.cmo
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make libraryopt
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd stdlib; make allopt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make stdlib.cmxa std_exit.cmx
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalFormatBasics.cmx` -c camlinternalFormatBasics.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags pervasives.cmx` -c pervasives.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags array.cmx` -c array.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags list.cmx` -c list.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags char.cmx` -c char.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags bytes.cmx` -c bytes.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags string.cmx` -c string.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags sys.cmx` -c sys.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags sort.cmx` -c sort.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags marshal.cmx` -c marshal.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags int32.cmx` -c int32.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags obj.cmx` -c obj.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags int64.cmx` -c int64.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags nativeint.cmx` -c nativeint.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags lexing.cmx` -c lexing.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags parsing.cmx` -c parsing.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags set.cmx` -c set.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags map.cmx` -c map.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags stack.cmx` -c stack.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags queue.cmx` -c queue.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalLazy.cmx` -c camlinternalLazy.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags lazy.cmx` -c lazy.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags stream.cmx` -c stream.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags buffer.cmx` -c buffer.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalFormat.cmx` -c camlinternalFormat.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags printf.cmx` -c printf.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags arg.cmx` -c arg.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags printexc.cmx` -c printexc.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags gc.cmx` -c gc.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags digest.cmx` -c digest.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags random.cmx` -c random.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags hashtbl.cmx` -c hashtbl.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags format.cmx` -c format.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags scanf.cmx` -c scanf.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags callback.cmx` -c callback.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalOO.cmx` -c camlinternalOO.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags oo.cmx` -c oo.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalMod.cmx` -c camlinternalMod.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags genlex.cmx` -c genlex.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags weak.cmx` -c weak.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags filename.cmx` -c filename.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags complex.cmx` -c complex.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags arrayLabels.cmx` -c arrayLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags listLabels.cmx` -c listLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags bytesLabels.cmx` -c bytesLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags stringLabels.cmx` -c stringLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags moreLabels.cmx` -c moreLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags stdLabels.cmx` -c stdLabels.ml
+../boot/ocamlrun ../ocamlopt -a -o stdlib.cmxa camlinternalFormatBasics.cmx pervasives.cmx array.cmx list.cmx char.cmx bytes.cmx string.cmx sys.cmx sort.cmx marshal.cmx obj.cmx int32.cmx int64.cmx nativeint.cmx lexing.cmx parsing.cmx set.cmx map.cmx stack.cmx queue.cmx camlinternalLazy.cmx lazy.cmx stream.cmx buffer.cmx camlinternalFormat.cmx printf.cmx arg.cmx printexc.cmx gc.cmx digest.cmx random.cmx hashtbl.cmx format.cmx scanf.cmx callback.cmx camlinternalOO.cmx oo.cmx camlinternalMod.cmx genlex.cmx weak.cmx filename.cmx complex.cmx arrayLabels.cmx listLabels.cmx bytesLabels.cmx stringLabels.cmx moreLabels.cmx stdLabels.cmx
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags std_exit.cmx` -c std_exit.ml
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make allopt-prof
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalFormatBasics.p.cmx` -p -c -o camlinternalFormatBasics.p.cmx camlinternalFormatBasics.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags pervasives.p.cmx` -p -c -o pervasives.p.cmx pervasives.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags array.p.cmx` -p -c -o array.p.cmx array.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags list.p.cmx` -p -c -o list.p.cmx list.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags char.p.cmx` -p -c -o char.p.cmx char.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags bytes.p.cmx` -p -c -o bytes.p.cmx bytes.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags string.p.cmx` -p -c -o string.p.cmx string.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags sys.p.cmx` -p -c -o sys.p.cmx sys.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags sort.p.cmx` -p -c -o sort.p.cmx sort.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags marshal.p.cmx` -p -c -o marshal.p.cmx marshal.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags int32.p.cmx` -p -c -o int32.p.cmx int32.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags obj.p.cmx` -p -c -o obj.p.cmx obj.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags int64.p.cmx` -p -c -o int64.p.cmx int64.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags nativeint.p.cmx` -p -c -o nativeint.p.cmx nativeint.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags lexing.p.cmx` -p -c -o lexing.p.cmx lexing.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags parsing.p.cmx` -p -c -o parsing.p.cmx parsing.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags set.p.cmx` -p -c -o set.p.cmx set.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags map.p.cmx` -p -c -o map.p.cmx map.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags stack.p.cmx` -p -c -o stack.p.cmx stack.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags queue.p.cmx` -p -c -o queue.p.cmx queue.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalLazy.p.cmx` -p -c -o camlinternalLazy.p.cmx camlinternalLazy.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags lazy.p.cmx` -p -c -o lazy.p.cmx lazy.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags stream.p.cmx` -p -c -o stream.p.cmx stream.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags buffer.p.cmx` -p -c -o buffer.p.cmx buffer.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalFormat.p.cmx` -p -c -o camlinternalFormat.p.cmx camlinternalFormat.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags printf.p.cmx` -p -c -o printf.p.cmx printf.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags arg.p.cmx` -p -c -o arg.p.cmx arg.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags printexc.p.cmx` -p -c -o printexc.p.cmx printexc.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags gc.p.cmx` -p -c -o gc.p.cmx gc.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags digest.p.cmx` -p -c -o digest.p.cmx digest.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags random.p.cmx` -p -c -o random.p.cmx random.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags hashtbl.p.cmx` -p -c -o hashtbl.p.cmx hashtbl.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags format.p.cmx` -p -c -o format.p.cmx format.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags scanf.p.cmx` -p -c -o scanf.p.cmx scanf.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags callback.p.cmx` -p -c -o callback.p.cmx callback.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalOO.p.cmx` -p -c -o camlinternalOO.p.cmx camlinternalOO.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags oo.p.cmx` -p -c -o oo.p.cmx oo.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags camlinternalMod.p.cmx` -p -c -o camlinternalMod.p.cmx camlinternalMod.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags genlex.p.cmx` -p -c -o genlex.p.cmx genlex.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags weak.p.cmx` -p -c -o weak.p.cmx weak.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags filename.p.cmx` -p -c -o filename.p.cmx filename.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags complex.p.cmx` -p -c -o complex.p.cmx complex.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags arrayLabels.p.cmx` -p -c -o arrayLabels.p.cmx arrayLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags listLabels.p.cmx` -p -c -o listLabels.p.cmx listLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags bytesLabels.p.cmx` -p -c -o bytesLabels.p.cmx bytesLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags stringLabels.p.cmx` -p -c -o stringLabels.p.cmx stringLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags moreLabels.p.cmx` -p -c -o moreLabels.p.cmx moreLabels.ml
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags stdLabels.p.cmx` -p -c -o stdLabels.p.cmx stdLabels.ml
+../boot/ocamlrun ../ocamlopt -a -o stdlib.p.cmxa camlinternalFormatBasics.p.cmx pervasives.p.cmx array.p.cmx list.p.cmx char.p.cmx bytes.p.cmx string.p.cmx sys.p.cmx sort.p.cmx marshal.p.cmx obj.p.cmx int32.p.cmx int64.p.cmx nativeint.p.cmx lexing.p.cmx parsing.p.cmx set.p.cmx map.p.cmx stack.p.cmx queue.p.cmx camlinternalLazy.p.cmx lazy.p.cmx stream.p.cmx buffer.p.cmx camlinternalFormat.p.cmx printf.p.cmx arg.p.cmx printexc.p.cmx gc.p.cmx digest.p.cmx random.p.cmx hashtbl.p.cmx format.p.cmx scanf.p.cmx callback.p.cmx camlinternalOO.p.cmx oo.p.cmx camlinternalMod.p.cmx genlex.p.cmx weak.p.cmx filename.p.cmx complex.p.cmx arrayLabels.p.cmx listLabels.p.cmx bytesLabels.p.cmx stringLabels.p.cmx moreLabels.p.cmx stdLabels.p.cmx
+../boot/ocamlrun ../ocamlopt -strict-sequence -w +33..39 -g -warn-error A -bin-annot -nostdlib -safe-string `./Compflags std_exit.p.cmx` -p -c -o std_exit.p.cmx std_exit.ml
+rm -f std_exit.p.cmi
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make otherlibrariesopt ocamltoolsopt ocamlbuild.native
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+for i in unix str num dynlink bigarray systhreads threads graph; do \
+	  (cd otherlibs/$i; make allopt) || exit $?; \
+	done
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string -nolabels unix.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string -nolabels unixLabels.ml
+../../boot/ocamlrun ../../tools/ocamlmklib -o unix -oc unix -ocamlopt '../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib' -linkall \
+	         unix.cmx unixLabels.cmx 
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -shared -o unix.cmxs -I . unix.cmxa
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  str.ml
+../../boot/ocamlrun ../../tools/ocamlmklib -o str -oc camlstr -ocamlopt '../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib' -linkall \
+	         str.cmx 
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -shared -o str.cmxs -I . str.cmxa
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  int_misc.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  nat.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  big_int.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  arith_flags.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  ratio.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  num.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  arith_status.ml
+../../boot/ocamlrun ../../tools/ocamlmklib -o nums -oc nums -ocamlopt '../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib' -linkall \
+	         int_misc.cmx nat.cmx big_int.cmx arith_flags.cmx ratio.cmx num.cmx arith_status.cmx 
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -shared -o nums.cmxs -I . nums.cmxa
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+cp natdynlink.ml  dynlink.mlopt
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string -I ../../stdlib -I ../../utils -I ../../typing -I ../../bytecomp -I ../../asmcomp -impl dynlink.mlopt
+rm -f dynlink.mlopt
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -w +33..39 -warn-error A -bin-annot -safe-string -I ../../stdlib -I ../../utils -I ../../typing -I ../../bytecomp -I ../../asmcomp -ccopt "-Wl,-E" -a -o dynlink.cmxa \
+	           dynlink.cmx
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string -I ../unix bigarray.ml
+../../boot/ocamlrun ../../tools/ocamlmklib -o bigarray -oc bigarray -ocamlopt '../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib' -linkall \
+	         bigarray.cmx 
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -shared -o bigarray.cmxs -I . bigarray.cmxa
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+gcc -O -I../../asmrun -I../../byterun -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT \
+	            -fPIC -DNATIVE_CODE -DTARGET_amd64 \
+	            -DSYS_linux -c st_stubs.c
+mv st_stubs.o st_stubs_n.o
+ar rc libthreadsnat.a st_stubs_n.o
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -I ../../otherlibs/unix -c -w +33..39 -warn-error A -g -bin-annot -safe-string thread.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -I ../../otherlibs/unix -c -w +33..39 -warn-error A -g -bin-annot -safe-string mutex.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -I ../../otherlibs/unix -c -w +33..39 -warn-error A -g -bin-annot -safe-string condition.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -I ../../otherlibs/unix -c -w +33..39 -warn-error A -g -bin-annot -safe-string event.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -I ../../otherlibs/unix -c -w +33..39 -warn-error A -g -bin-annot -safe-string threadUnix.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -I ../../otherlibs/unix -a -o threads.cmxa thread.cmx mutex.cmx condition.cmx event.cmx threadUnix.cmx \
+	  -cclib -lthreadsnat -cclib -lpthread
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  graphics.ml
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -c -w +33..39 -warn-error A -bin-annot -g -safe-string  graphicsX11.ml
+../../boot/ocamlrun ../../tools/ocamlmklib -o graphics -oc graphics -ocamlopt '../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib' -linkall \
+	         graphics.cmx graphicsX11.cmx -cclib "\"-lX11  \""
+../../boot/ocamlrun ../../ocamlopt -nostdlib -I ../../stdlib -shared -o graphics.cmxs -I . graphics.cmxa
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+cd tools; make opt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -strict-sequence -w +27+32..39 -warn-error A -safe-string -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -c profiling.ml
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+cd ocamlbuild && make allopt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c const.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c loc.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c discard_printf.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c my_std.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c my_unix.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c tags.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c display.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c log.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c shell.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c bool.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c glob_ast.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c glob_lexer.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c glob.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c lexers.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c param_tags.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c command.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_config.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_where.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c slurp.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c options.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c pathname.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c configuration.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c flags.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c hygiene.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c digest_cache.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c resource.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c rule.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c solver.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c report.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c tools.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c fda.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c findlib.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocaml_arch.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocaml_utils.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocaml_dependencies.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocaml_compiler.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocaml_tools.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocaml_specific.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c plugin.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c exit_codes.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c hooks.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c main.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pack const.cmx loc.cmx discard_printf.cmx signatures.cmi my_std.cmx my_unix.cmx tags.cmx display.cmx log.cmx shell.cmx bool.cmx glob_ast.cmx glob_lexer.cmx glob.cmx lexers.cmx param_tags.cmx command.cmx ocamlbuild_config.cmx ocamlbuild_where.cmx slurp.cmx options.cmx pathname.cmx configuration.cmx flags.cmx hygiene.cmx digest_cache.cmx resource.cmx rule.cmx solver.cmx report.cmx tools.cmx fda.cmx findlib.cmx ocaml_arch.cmx ocaml_utils.cmx ocaml_dependencies.cmx ocaml_compiler.cmx ocaml_tools.cmx ocaml_specific.cmx plugin.cmx exit_codes.cmx hooks.cmx main.cmx -o ocamlbuild_pack.cmx
+../boot/ocamlrun ../ocamlc -nostdlib -I ../stdlib -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_plugin.mli
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_plugin.ml
+../boot/ocamlrun ../ocamlc -nostdlib -I ../stdlib -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_executor.mli
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_executor.ml
+../boot/ocamlrun ../ocamlc -nostdlib -I ../stdlib -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_unix_plugin.mli
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_unix_plugin.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -for-pack Ocamlbuild_pack -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -I ../otherlibs/unix -o ocamlbuild.native \
+          unix.cmxa ocamlbuild_pack.cmx ocamlbuild_plugin.cmx ocamlbuild_executor.cmx ocamlbuild_unix_plugin.cmx ocamlbuild.cmx
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -a -o ocamlbuildlib.cmxa \
+          ocamlbuild_pack.cmx ocamlbuild_plugin.cmx ocamlbuild_executor.cmx ocamlbuild_unix_plugin.cmx
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'

@@ -1,0 +1,6 @@
+#!/bin/sh -x
+CC -g *.cc -o testing
+testing >testing.output
+bcheck -all testing >testing.output.bcheck-all
+enscript -b `pwd` -G -p Listing.ps *.h *.cc testing.* $0
+ghostview -magstep 1 Listing.ps &

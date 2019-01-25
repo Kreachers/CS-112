@@ -1,0 +1,1 @@
+("6.1" ("4a3478fe2c3eded67f1d5c6f67c6f3d5ba049deb" . "76489f78cca25149192da9f4d14577305e696462") (collects #"srfi" #"29.rkt") (collects #"racket" #"serialize.rkt") (collects #"srfi" #"8" #"receive.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"srfi" #"optional.rkt") (collects #"racket" #"base.rkt"))

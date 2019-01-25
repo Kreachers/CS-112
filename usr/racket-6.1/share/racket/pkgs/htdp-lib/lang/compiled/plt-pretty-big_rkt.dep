@@ -1,0 +1,1 @@
+("6.1" ("a5b06b47d4c8e8a25fff66b2c0a8e4dfa7b692ea" . "a4df68d6bfd50175074f4dd3d42d6693f041f240") (collects #"mzscheme" #"main.rkt") (collects #"lang" #"plt-pretty-big-text.rkt") (collects #"lang" #"private" #"imageeq.rkt") (collects #"mred" #"main.rkt"))

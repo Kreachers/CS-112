@@ -1,0 +1,2117 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 24 24 588 768
+%%Title: Enscript Output
+%%For: Wesley F Mackey,,,,
+%%Creator: GNU enscript 1.6.1
+%%CreationDate: Fri Jan 24 14:53:11 2003
+%%Orientation: Portrait
+%%Pages: (atend)
+%%DocumentMedia: Letter 612 792 0 () ()
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Enscript-Prolog 1.6 1
+%
+% Procedures.
+%
+
+/_S {	% save current state
+  /_s save def
+} def
+/_R {	% restore from saved state
+  _s restore
+} def
+
+/S {	% showpage protecting gstate
+  gsave
+  showpage
+  grestore
+} bind def
+
+/MF {	% fontname newfontname -> -	make a new encoded font
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  % insert only valid encoding vectors
+  encoding_vector length 256 eq {
+    newfont /Encoding encoding_vector put
+  } if
+
+  newfontname newfont definefont pop
+} def
+
+/SF { % fontname width height -> -	set a new font
+  /height exch def
+  /width exch def
+
+  findfont
+  [width 0 0 height 0 0] makefont setfont
+} def
+
+/SUF { % fontname width height -> -	set a new user font
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF
+  /F-gs-user-font width height SF
+} def
+
+/M {moveto} bind def
+/s {show} bind def
+
+/Box {	% x y w h -> -			define box path
+  /d_h exch def /d_w exch def /d_y exch def /d_x exch def
+  d_x d_y  moveto
+  d_w 0 rlineto
+  0 d_h rlineto
+  d_w neg 0 rlineto
+  closepath
+} def
+
+/bgs {	% x y height blskip gray str -> -	show string with bg color
+  /str exch def
+  /gray exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    gray setgray
+    fill
+  grestore
+  x y M str s
+} def
+
+% Highlight bars.
+/highlight_bars {	% nlines lineheight output_y_margin gray -> -
+  gsave
+    setgray
+    /ymarg exch def
+    /lineheight exch def
+    /nlines exch def
+
+    % This 2 is just a magic number to sync highlight lines to text.
+    0 d_header_y ymarg sub 2 sub translate
+
+    /cw d_output_w cols div def
+    /nrows d_output_h ymarg 2 mul sub lineheight div cvi def
+
+    % for each column
+    0 1 cols 1 sub {
+      cw mul /xp exch def
+
+      % for each rows
+      0 1 nrows 1 sub {
+        /rn exch def
+        rn lineheight mul neg /yp exch def
+        rn nlines idiv 2 mod 0 eq {
+	  % Draw highlight bar.  4 is just a magic indentation.
+	  xp 4 add yp cw 8 sub lineheight neg Box fill
+	} if
+      } for
+    } for
+
+  grestore
+} def
+
+% Line highlight bar.
+/line_highlight {	% x y width height gray -> -
+  gsave
+    /gray exch def
+    Box gray setgray fill
+  grestore
+} def
+
+% Column separator lines.
+/column_lines {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h translate
+    /cw d_output_w cols div def
+    1 1 cols 1 sub {
+      cw mul 0 moveto
+      0 d_output_h rlineto stroke
+    } for
+  grestore
+} def
+
+% Column borders.
+/column_borders {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h moveto
+    0 d_output_h rlineto
+    d_output_w 0 rlineto
+    0 d_output_h neg rlineto
+    closepath stroke
+  grestore
+} def
+
+% Do the actual underlay drawing
+/draw_underlay {
+  ul_style 0 eq {
+    ul_str true charpath stroke
+  } {
+    ul_str show
+  } ifelse
+} def
+
+% Underlay
+/underlay {	% - -> -
+  gsave
+    0 d_page_h translate
+    d_page_h neg d_page_w atan rotate
+
+    ul_gray setgray
+    ul_font setfont
+    /dw d_page_h dup mul d_page_w dup mul add sqrt def
+    ul_str stringwidth pop dw exch sub 2 div ul_h_ptsize -2 div moveto
+    draw_underlay
+  grestore
+} def
+
+/user_underlay {	% - -> -
+  gsave
+    ul_x ul_y translate
+    ul_angle rotate
+    ul_gray setgray
+    ul_font setfont
+    0 0 ul_h_ptsize 2 div sub moveto
+    draw_underlay
+  grestore
+} def
+
+% Page prefeed
+/page_prefeed {		% bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} def
+
+% Wrapped line markers
+/wrapped_line_mark {	% x y charwith charheight type -> -
+  /type exch def
+  /h exch def
+  /w exch def
+  /y exch def
+  /x exch def
+
+  type 2 eq {
+    % Black boxes (like TeX does)
+    gsave
+      0 setlinewidth
+      x w 4 div add y M
+      0 h rlineto w 2 div 0 rlineto 0 h neg rlineto
+      closepath fill
+    grestore
+  } {
+    type 3 eq {
+      % Small arrows
+      gsave
+        .2 setlinewidth
+        x w 2 div add y h 2 div add M
+        w 4 div 0 rlineto
+        x w 4 div add y lineto stroke
+
+        x w 4 div add w 8 div add y h 4 div add M
+        x w 4 div add y lineto
+	w 4 div h 8 div rlineto stroke
+      grestore
+    } {
+      % do nothing
+    } ifelse
+  } ifelse
+} def
+
+% EPSF import.
+
+/BeginEPSF {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [ ] 0 setdash newpath
+  /languagelevel where {
+    pop languagelevel
+    1 ne {
+      false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/EndEPSF {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+%%EndResource
+%%BeginResource: procset Enscript-Encoding-88591 1.6 1
+/encoding_vector [
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclam       	/quotedbl     	/numbersign   	
+/dollar       	/percent      	/ampersand    	/quoteright   	
+/parenleft    	/parenright   	/asterisk     	/plus         	
+/comma        	/hyphen       	/period       	/slash        	
+/zero         	/one          	/two          	/three        	
+/four         	/five         	/six          	/seven        	
+/eight        	/nine         	/colon        	/semicolon    	
+/less         	/equal        	/greater      	/question     	
+/at           	/A            	/B            	/C            	
+/D            	/E            	/F            	/G            	
+/H            	/I            	/J            	/K            	
+/L            	/M            	/N            	/O            	
+/P            	/Q            	/R            	/S            	
+/T            	/U            	/V            	/W            	
+/X            	/Y            	/Z            	/bracketleft  	
+/backslash    	/bracketright 	/asciicircum  	/underscore   	
+/quoteleft    	/a            	/b            	/c            	
+/d            	/e            	/f            	/g            	
+/h            	/i            	/j            	/k            	
+/l            	/m            	/n            	/o            	
+/p            	/q            	/r            	/s            	
+/t            	/u            	/v            	/w            	
+/x            	/y            	/z            	/braceleft    	
+/bar          	/braceright   	/tilde        	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclamdown   	/cent         	/sterling     	
+/currency     	/yen          	/brokenbar    	/section      	
+/dieresis     	/copyright    	/ordfeminine  	/guillemotleft	
+/logicalnot   	/hyphen       	/registered   	/macron       	
+/degree       	/plusminus    	/twosuperior  	/threesuperior	
+/acute        	/mu           	/paragraph    	/bullet       	
+/cedilla      	/onesuperior  	/ordmasculine 	/guillemotright	
+/onequarter   	/onehalf      	/threequarters	/questiondown 	
+/Agrave       	/Aacute       	/Acircumflex  	/Atilde       	
+/Adieresis    	/Aring        	/AE           	/Ccedilla     	
+/Egrave       	/Eacute       	/Ecircumflex  	/Edieresis    	
+/Igrave       	/Iacute       	/Icircumflex  	/Idieresis    	
+/Eth          	/Ntilde       	/Ograve       	/Oacute       	
+/Ocircumflex  	/Otilde       	/Odieresis    	/multiply     	
+/Oslash       	/Ugrave       	/Uacute       	/Ucircumflex  	
+/Udieresis    	/Yacute       	/Thorn        	/germandbls   	
+/agrave       	/aacute       	/acircumflex  	/atilde       	
+/adieresis    	/aring        	/ae           	/ccedilla     	
+/egrave       	/eacute       	/ecircumflex  	/edieresis    	
+/igrave       	/iacute       	/icircumflex  	/idieresis    	
+/eth          	/ntilde       	/ograve       	/oacute       	
+/ocircumflex  	/otilde       	/odieresis    	/divide       	
+/oslash       	/ugrave       	/uacute       	/ucircumflex  	
+/udieresis    	/yacute       	/thorn        	/ydieresis    	
+] def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Courier
+/HFpt_w 10 def
+/HFpt_h 10 def
+/Courier-Bold /HF-gs-font MF
+/HF /HF-gs-font findfont [HFpt_w 0 0 HFpt_h 0 0] makefont def
+/Courier /F-gs-font MF
+/F-gs-font 10 10 SF
+/#copies 1 def
+% Pagedevice definitions:
+gs_languagelevel 1 gt {
+  <<
+    /PageSize [612 792] 
+  >> setpagedevice
+} if
+%%BeginResource: procset Enscript-Header-enscript 1.6 1
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-Roman
+
+% Fonts.
+/Times-Bold /HeaderFont-Bold MF
+/HeaderDateF /HeaderFont-Bold findfont 12 scalefont def
+
+/Times-Roman /HeaderFont-Times MF
+/HeaderHDRF /HeaderFont-Times findfont 14 scalefont def
+
+/HeaderPageNumF /Helvetica-Bold findfont 28.8 scalefont def
+
+/do_header {	% print enscript header
+  gsave
+    d_header_x d_header_y translate
+
+    % light bar
+    0 0 d_header_w d_header_h 2 div Box
+    .95 setgray fill
+
+    % dark gray boxes
+    /dbw d_header_h 2 mul def	% dark box width
+    /dbc .7 def			% dark box color
+
+    % left dark box.
+    0 0 dbw d_header_h Box
+    dbc setgray fill
+
+    0 setgray 
+    HeaderDateF setfont
+    moddatestr dup stringwidth pop dbw exch sub 2 div 
+    d_header_h 2 div 2 add moveto show
+    modtimestr dup stringwidth pop dbw exch sub 2 div 
+    d_header_h 5 div moveto show
+
+    % right dark box
+    d_header_w dbw sub 0 dbw d_header_h Box
+    dbc setgray fill
+
+    HeaderPageNumF setfont
+    1 setgray
+    pagenumstr dup
+    stringwidth pop dbw exch sub 2 div d_header_w dbw sub add
+    d_header_h .2 mul moveto show
+
+    % filename
+    0 setgray 
+    HeaderHDRF setfont
+    d_header_w fname stringwidth pop sub 2 div d_header_h 8 div moveto
+    fname show
+
+    % user supplied header string.
+    user_header_p {
+      /h d_header_h 8 div 5 mul def
+
+      % Implement strict enscript compatibility.
+      user_header_center_str () eq user_header_right_str () eq and {
+        d_header_w user_header_left_str stringwidth pop sub 2 div 
+        h moveto user_header_left_str show
+      } {
+        dbw 5 add h moveto user_header_left_str show
+
+        d_header_w user_header_center_str stringwidth pop sub 2 div 
+        h moveto user_header_center_str show
+
+	d_header_w dbw sub 5 sub user_header_right_str stringwidth pop
+	sub h moveto user_header_right_str show
+      } ifelse
+    } if
+
+  grestore
+} def
+%%EndResource
+/d_page_w 564 def
+/d_page_h 744 def
+/d_header_x 0 def
+/d_header_y 708 def
+/d_header_w 564 def
+/d_header_h 36 def
+/d_footer_x 0 def
+/d_footer_y 0 def
+/d_footer_w 564 def
+/d_footer_h 0 def
+/d_output_w 564 def
+/d_output_h 708 def
+/cols 1 def
+%%EndSetup
+%%Page: (1) 1
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 1 def
+/fname (mystring.h) def
+/fdir () def
+/ftail (mystring.h) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/23/03) def
+/modtimestr (20:56:51) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(// $Id: mystring.h,v 330.3 2003-01-23 20:38:16-08 - - $) s
+5 673 M
+(//) s
+5 662 M
+(// class mystring - duplicate some of the functions of string) s
+5 651 M
+(//) s
+5 629 M
+(#ifndef __MYSTRING_H__) s
+5 618 M
+(#define __MYSTRING_H__) s
+5 596 M
+(#include <iostream>) s
+5 574 M
+(class mystring{) s
+5 563 M
+(   public:) s
+5 552 M
+(      // four members that are defaulted if not supplied) s
+5 541 M
+(      mystring\(\);                             // default ctor) s
+5 530 M
+(      mystring\( const mystring& \);            // copy ctor) s
+5 519 M
+(      virtual ~mystring\(\);                    // dtor) s
+5 508 M
+(      mystring& operator=\( const mystring& \); // operator=) s
+5 486 M
+(      // some other useful members.) s
+5 475 M
+(      mystring\( const char* \);                // conversion ctor) s
+5 464 M
+(      explicit mystring\( int \);               // length-specified ctor) s
+5 453 M
+(      mystring& operator+=\( const mystring& \);) s
+5 442 M
+(      int size\(\);) s
+5 420 M
+(      friend ostream& operator<<\( ostream&, mystring \);) s
+5 398 M
+(   private:) s
+5 387 M
+(      static const int default_dim = 128;) s
+5 376 M
+(      char *buf;   // array of characters to represent string) s
+5 365 M
+(      int dim;     // dimension of the array) s
+5 354 M
+(      int len;     // current length of the string) s
+5 343 M
+(      void dump\( const char* label \); // debug dumper routine) s
+5 332 M
+(};) s
+5 310 M
+(#endif) s
+_R
+S
+%%Page: (1) 2
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 1 def
+/fname (mystring.cc) def
+/fdir () def
+/ftail (mystring.cc) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/24/03) def
+/modtimestr (14:44:35) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(// $Id: mystring.cc,v 330.5 2003-01-23 20:53:40-08 - - $) s
+5 673 M
+(//) s
+5 662 M
+(// implementation of class mystring) s
+5 651 M
+(//) s
+5 629 M
+(#include <cstring>) s
+5 618 M
+(#include <typeinfo>) s
+5 596 M
+(using namespace std;) s
+5 574 M
+(#include "mystring.h") s
+5 552 M
+(char* strdup\( char* that \){) s
+5 541 M
+(   char* result = new char[ strlen\(that\) + 1 ];) s
+5 530 M
+(   strcpy\( result, that \);) s
+5 519 M
+(   return result;) s
+5 508 M
+(};) s
+5 486 M
+(mystring::mystring\(\): dim\(default_dim\), len\(0\){) s
+5 475 M
+(   buf = new char[dim];) s
+5 464 M
+(   buf[0] = '\\0';) s
+5 453 M
+(   dump\( "mystring::mystring\(\)" \);) s
+5 442 M
+(};) s
+5 420 M
+(mystring::mystring\( const mystring& that \): dim\(that.dim\),) s
+5 409 M
+(                                            len\(that.len\){) s
+5 398 M
+(   buf = new char[dim];) s
+5 387 M
+(   strcpy\( buf, that.buf \);) s
+5 376 M
+(   dump\( "mystring::mystring\(const mystring&\)" \);) s
+5 365 M
+(};) s
+5 343 M
+(mystring::~mystring\(\){) s
+5 332 M
+(   dump\( "mystring::~mystring\(\)" \);) s
+5 321 M
+(   delete buf;  // get rid of what is pointed at) s
+5 310 M
+(};) s
+5 288 M
+(mystring& mystring::operator=\( const mystring& that \){) s
+5 277 M
+(   if\( this != &that \){) s
+5 266 M
+(      // DANGER if the copy from and copy to are the same thing.) s
+5 255 M
+(      if\( dim < that.dim \){) s
+5 244 M
+(         delete buf;) s
+5 233 M
+(         dim = that.dim;) s
+5 222 M
+(         buf = new char[dim];) s
+5 211 M
+(      };) s
+5 200 M
+(      len = that.len;) s
+5 189 M
+(      strcpy\( buf, that.buf \);) s
+5 178 M
+(   };) s
+5 167 M
+(   dump\( "mystring& mystring::operator=\(const mystring&\)" \);) s
+5 156 M
+(   return *this;) s
+5 145 M
+(};) s
+5 123 M
+(mystring& mystring::operator+=\( const mystring& that \){) s
+5 112 M
+(   char* thatbuf = that.buf;) s
+5 101 M
+(   if\( this == &that \){) s
+5 90 M
+(      // make a temporary copy to avoid strcat'ting to itself.) s
+5 79 M
+(      thatbuf = strdup\( that.buf \);) s
+5 68 M
+(   };) s
+5 57 M
+(   if\( dim < len + that.len + 1 \){) s
+5 46 M
+(      // Buffer too short so make it longer.) s
+5 35 M
+(      dim = len + that.len + 1;) s
+5 24 M
+(      char* oldbuf = buf;) s
+5 13 M
+(      buf = new char[dim];) s
+5 2 M
+(      strcpy\( buf, oldbuf \);) s
+_R
+S
+%%Page: (2) 3
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 2 def
+/fname (mystring.cc) def
+/fdir () def
+/ftail (mystring.cc) def
+% User defined strings:
+/pagenumstr (2) def
+/moddatestr (01/24/03) def
+/modtimestr (14:44:35) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(      delete oldbuf;) s
+5 684 M
+(   };) s
+5 673 M
+(   strcat\( buf, thatbuf \);) s
+5 662 M
+(   len = strlen\( buf \);) s
+5 651 M
+(   if\( this == &that \){) s
+5 640 M
+(      // delete the temporary we made above) s
+5 629 M
+(      delete thatbuf;) s
+5 618 M
+(   };) s
+5 607 M
+(   dump\( "mystring& mystring::operator+=\(const mystring&\)" \);) s
+5 596 M
+(   return *this;) s
+5 585 M
+(};) s
+5 563 M
+(mystring::mystring\( const char *cstring \){) s
+5 552 M
+(   len = strlen\( cstring \);) s
+5 541 M
+(   dim = len + 1;) s
+5 530 M
+(   buf = new char[dim];) s
+5 519 M
+(   strcpy\( buf, cstring \);) s
+5 508 M
+(   dump\( "mystring::mystring\(const char*\)" \);) s
+5 497 M
+(};) s
+5 475 M
+(mystring::mystring\( int initlen \): len\(initlen\){) s
+5 464 M
+(   dim = len + 1;) s
+5 453 M
+(   buf = new char[dim];) s
+5 442 M
+(   buf[0] = '\\0';) s
+5 431 M
+(   dump\( "mystring::mystring\(int\)" \);) s
+5 420 M
+(};) s
+5 398 M
+(int mystring::size\(\){) s
+5 387 M
+(   return len;) s
+5 376 M
+(};) s
+5 354 M
+(void mystring::dump\( const char* message \){) s
+5 343 M
+(   cout << message << ":" << endl) s
+5 332 M
+(        << "\(" << typeid\(this\).name\(\) << "\)@") s
+5 321 M
+(        << static_cast<void*>\(this\) << " -> " << endl) s
+5 310 M
+(        << "        dim=" << dim << endl) s
+5 299 M
+(        << "        len=" << len << endl) s
+5 288 M
+(        << "        buf@" << static_cast<void*>\(buf\)) s
+5 277 M
+(                    << " -> [" << buf << "]" << endl;) s
+5 266 M
+(};) s
+5 244 M
+(ostream& operator<<\( ostream& out, mystring str \){) s
+5 233 M
+(   return out << str.buf;) s
+5 222 M
+(};) s
+_R
+S
+%%Page: (1) 4
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 1 def
+/fname (teststring.cc) def
+/fdir () def
+/ftail (teststring.cc) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/24/03) def
+/modtimestr (14:48:07) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(// $Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $) s
+5 673 M
+(//) s
+5 662 M
+(// Tester for mystring) s
+5 651 M
+(//) s
+5 629 M
+(#include <cstdlib>) s
+5 618 M
+(#include <iostream>) s
+5 596 M
+(using namespace std;) s
+5 574 M
+(#include "mystring.h") s
+5 552 M
+(#define LINE "------------------------------------") s
+5 541 M
+(#define DEBUG\(STMT\) cout << endl \\) s
+5 530 M
+(        << LINE << LINE << endl << "DEBUG: " \\) s
+5 519 M
+(        << __FILE__ << ":" << __LINE__ << ": " << #STMT << endl; \\) s
+5 508 M
+(        STMT \\) s
+5 497 M
+(        cout << LINE << LINE << endl;) s
+5 475 M
+(static const char* rcsid =) s
+5 464 M
+(       "$Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $";) s
+5 453 M
+(int main\( int argc, char **argv \){) s
+5 442 M
+(   cout << "Running " << argv[0] << endl;) s
+5 431 M
+(   cout << rcsid << endl;) s
+5 420 M
+(   DEBUG\( mystring s1; \)) s
+5 409 M
+(   DEBUG\( mystring s2 = "testing from char*"; \)) s
+5 398 M
+(   DEBUG\( mystring s3 = s2; \)) s
+5 387 M
+(   DEBUG\( s1 = s3; \)) s
+5 376 M
+(   DEBUG\( s2 += s3; \)) s
+5 365 M
+(   DEBUG\( s2 += s3; \)) s
+5 354 M
+(   DEBUG\( cout << "s2.size = " << s2.size\(\) << endl; \)) s
+5 343 M
+(   DEBUG\( mystring s4\(10\); \)) s
+5 332 M
+(   DEBUG\( s4 += "foo"; \)) s
+5 321 M
+(   DEBUG\( s4 += "bar"; \)) s
+5 310 M
+(   DEBUG\( s4 += "baz"; \)) s
+5 299 M
+(   DEBUG\( mystring* ptr = new mystring\( "new mystring" \); \)) s
+5 288 M
+(   DEBUG\( delete ptr; ptr = 0; \)) s
+5 277 M
+(   DEBUG\( mystring* leak1 = new mystring\( rcsid \); \)) s
+5 266 M
+(   DEBUG\( mystring* leak2 = new mystring\( *leak1 \); \)) s
+5 255 M
+(   DEBUG\( int* leak3 = new int[1024]; \)) s
+5 244 M
+(   DEBUG\( int* leak4 = new int[1024]; \)) s
+5 233 M
+(   DEBUG\( mystring* leak5 = new mystring\(1<<16\); \)) s
+5 222 M
+(   DEBUG\( mystring* leak6 = new mystring\(\); \)) s
+5 211 M
+(   return EXIT_SUCCESS;) s
+5 200 M
+(};) s
+_R
+S
+%%Page: (1) 5
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 1 def
+/fname (testing.errs) def
+/fdir () def
+/ftail (testing.errs) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:11) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 684 M
+(Actual leaks report    \(actual leaks:        10  total size:   74033 bytes\)) s
+5 662 M
+(<rtc> Memory Leak \(mel\):) s
+5 651 M
+(Found leaked block of size 65537 bytes at address 0xb8010) s
+5 640 M
+(At time of allocation, the call stack was:) s
+5 629 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 618 M
+(        [2] mystring::mystring\(\) at line 87 in "mystring.cc") s
+5 607 M
+(        [3] main\(\) at line 43 in "teststring.cc") s
+5 585 M
+(<rtc> Memory Leak \(mel\):) s
+5 574 M
+(Found leaked block of size 4096 bytes at address 0xb5fe0) s
+5 563 M
+(At time of allocation, the call stack was:) s
+5 552 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 541 M
+(        [2] main\(\) at line 41 in "teststring.cc") s
+5 519 M
+(<rtc> Memory Leak \(mel\):) s
+5 508 M
+(Found leaked block of size 4096 bytes at address 0xb6ff8) s
+5 497 M
+(At time of allocation, the call stack was:) s
+5 486 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 475 M
+(        [2] main\(\) at line 42 in "teststring.cc") s
+5 453 M
+(<rtc> Memory Leak \(mel\):) s
+5 442 M
+(Found leaked block of size 128 bytes at address 0xc8030) s
+5 431 M
+(At time of allocation, the call stack was:) s
+5 420 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 409 M
+(        [2] mystring::mystring\(\) at line 21 in "mystring.cc") s
+5 398 M
+(        [3] main\(\) at line 44 in "teststring.cc") s
+5 376 M
+(<rtc> Memory Leak \(mel\):) s
+5 365 M
+(Found leaked block of size 56 bytes at address 0xb5f90) s
+5 354 M
+(At time of allocation, the call stack was:) s
+5 343 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 332 M
+(        [2] mystring::mystring\(\) at line 28 in "mystring.cc") s
+5 321 M
+(        [3] main\(\) at line 40 in "teststring.cc") s
+5 299 M
+(<rtc> Memory Leak \(mel\):) s
+5 288 M
+(Found leaked block of size 56 bytes at address 0xb5f40) s
+5 277 M
+(At time of allocation, the call stack was:) s
+5 266 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 255 M
+(        [2] mystring::mystring\(\) at line 80 in "mystring.cc") s
+5 244 M
+(        [3] main\(\) at line 39 in "teststring.cc") s
+5 222 M
+(<rtc> Memory Leak \(mel\):) s
+5 211 M
+(Found leaked block of size 16 bytes at address 0xb5608) s
+5 200 M
+(At time of allocation, the call stack was:) s
+5 189 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 178 M
+(        [2] main\(\) at line 40 in "teststring.cc") s
+5 156 M
+(<rtc> Memory Leak \(mel\):) s
+5 145 M
+(Found leaked block of size 16 bytes at address 0xb55e0) s
+5 134 M
+(At time of allocation, the call stack was:) s
+5 123 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 112 M
+(        [2] main\(\) at line 39 in "teststring.cc") s
+5 90 M
+(<rtc> Memory Leak \(mel\):) s
+5 79 M
+(Found leaked block of size 16 bytes at address 0xb5658) s
+5 68 M
+(At time of allocation, the call stack was:) s
+5 57 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 46 M
+(        [2] main\(\) at line 44 in "teststring.cc") s
+5 24 M
+(<rtc> Memory Leak \(mel\):) s
+5 13 M
+(Found leaked block of size 16 bytes at address 0xb5630) s
+5 2 M
+(At time of allocation, the call stack was:) s
+_R
+S
+%%Page: (2) 6
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 2 def
+/fname (testing.errs) def
+/fdir () def
+/ftail (testing.errs) def
+% User defined strings:
+/pagenumstr (2) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:11) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(        [1] operator new\(\) at 0xfd5064c8 ) s
+5 684 M
+(        [2] main\(\) at line 43 in "teststring.cc") s
+5 662 M
+( ) s
+5 640 M
+(Possible leaks report  \(possible leaks:       0  total size:       0 bytes\)) s
+5 618 M
+( ) s
+5 596 M
+(Blocks in use report   \(blocks in use:       24  total size:    2347 bytes\)) s
+5 574 M
+( Total  % of Num of  Avg     Allocation call stack) s
+5 563 M
+( Size    All Blocks  Size) s
+5 552 M
+(======= ==== ====== ======  =======================================) s
+5 541 M
+(   1539  65%      3    513  operator new < std::basic_filebuf<char,std::char_traits<char> >:) s
+5 530 M
+(:basic_filebuf ) s
+5 519 M
+(     80   3%      1     80  operator new < __rwstd::facet_maker<std::numpunct<char> >::maker) s
+5 508 M
+(_func < std::locale::__make_explicit < __rwstd::digit_handler_base_1<char>::digit_handler_ba) s
+5 497 M
+(se_1 #Nvariant 1 < __rwstd::digit_writer<char,std::ostreambuf_iterator<char,std::char_traits) s
+5 486 M
+(<char> > >::digit_writer < std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<) s
+5 475 M
+(char> > >::do_put < std::basic_ostream<char,std::char_traits<char> >::operator<< < main ) s
+5 464 M
+(     80   3%      2     40  operator new < __rwstd::locale_vector<__rwstd::facet_imp*>::loca) s
+5 453 M
+(le_vector #Nvariant 1 ) s
+5 442 M
+(     80   3%      1     80  operator new < __rwstd::facet_maker<std::ctype<char> >::maker_fu) s
+5 431 M
+(nc < std::locale::__make_explicit < __rwstd::digit_handler_base_1<char>::digit_handler_base_) s
+5 420 M
+(1 #Nvariant 1 < __rwstd::digit_writer<char,std::ostreambuf_iterator<char,std::char_traits<ch) s
+5 409 M
+(ar> > >::digit_writer < std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<cha) s
+5 398 M
+(r> > >::do_put < std::basic_ostream<char,std::char_traits<char> >::operator<< < main ) s
+5 387 M
+(     80   3%      1     80  operator new < __rwstd::facet_maker<std::ctype<char> >::maker_fu) s
+5 376 M
+(nc < std::locale::__make_explicit < std::basic_ios<char,std::char_traits<char> >::init < std) s
+5 365 M
+(::basic_ios<char,std::char_traits<char> >::basic_ios #Nvariant 1 < std::basic_istream<char,s) s
+5 354 M
+(td::char_traits<char> >::basic_istream < std::ios_base::Init::Init #Nvariant 1 < __SUNW_init) s
+5 343 M
+(_iostreams ) s
+5 332 M
+(     72   3%      3     24  operator new < std::basic_filebuf<char,std::char_traits<char> >:) s
+5 321 M
+(:basic_filebuf ) s
+5 310 M
+(     72   3%      3     24  operator new < std::basic_filebuf<char,std::char_traits<char> >:) s
+5 299 M
+(:basic_filebuf ) s
+5 288 M
+(     64   2%      1     64  operator new < std::locale::init < std::basic_streambuf<char,std) s
+5 277 M
+(::char_traits<char> >::basic_streambuf < std::basic_filebuf<char,std::char_traits<char> >::b) s
+5 266 M
+(asic_filebuf < std::ios_base::Init::Init #Nvariant 1 < __SUNW_init_iostreams < __Cimpl::cplu) s
+5 255 M
+(s_init < 0xfd507f44) s
+5 244 M
+(     64   2%      1     64  operator new < std::locale::init < std::basic_streambuf<char,std) s
+5 233 M
+(::char_traits<char> >::basic_streambuf < std::basic_filebuf<char,std::char_traits<char> >::b) s
+5 222 M
+(asic_filebuf < std::ios_base::Init::Init #Nvariant 1 < __SUNW_init_iostreams < __Cimpl::cplu) s
+5 211 M
+(s_init < 0xfd507f44) s
+5 200 M
+(     52   2%      2     26  operator new < std::ctype<char>::ctype ) s
+5 189 M
+(     52   2%      2     26  operator new < std::ctype<char>::ctype ) s
+5 178 M
+(     40   1%      1     40  operator new < __rwstd::facet_maker<std::codecvt<char,char,__mbs) s
+5 167 M
+(tate_t> >::maker_func < std::locale::__make_explicit < std::basic_filebuf<char,std::char_tra) s
+5 156 M
+(its<char> >::overflow < std::basic_filebuf<char,std::char_traits<char> >::sync < std::operat) s
+5 145 M
+(or<< < main ) s
+5 134 M
+(     40   1%      1     40  operator new < __rwstd::facet_maker<std::num_put<char,std::ostre) s
+5 123 M
+(ambuf_iterator<char,std::char_traits<char> > > >::maker_func < std::locale::__make_explicit ) s
+5 112 M
+(< std::basic_ostream<char,std::char_traits<char> >::operator<< < main ) s
+5 101 M
+(     24   1%      1     24  operator new < __Cimpl::__type_info_hash::insert < __Cimpl::__ty) s
+5 90 M
+(pe_info_friend::new_type_info < mystring::dump < mystring::mystring < main ) s
+5 79 M
+(      8  <1%      1      8  operator new < __Cimpl::__type_info_hash::insert < __Cimpl::__ty) s
+5 68 M
+(pe_info_friend::new_type_info < mystring::dump < mystring::mystring < main ) s
+5 57 M
+( ) s
+_R
+S
+%%Page: (1) 7
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 1 def
+/fname (testing.output) def
+/fdir () def
+/ftail (testing.output) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:09) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(Running testing) s
+5 684 M
+($Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $) s
+5 662 M
+(------------------------------------------------------------------------) s
+5 651 M
+(DEBUG: teststring.cc:26: mystring s1;) s
+5 640 M
+(mystring::mystring\(\):) s
+5 629 M
+(\(mystring*\)@ffbef65c -> ) s
+5 618 M
+(        dim=128) s
+5 607 M
+(        len=0) s
+5 596 M
+(        buf@69278 -> []) s
+5 585 M
+(------------------------------------------------------------------------) s
+5 563 M
+(------------------------------------------------------------------------) s
+5 552 M
+(DEBUG: teststring.cc:27: mystring s2 = "testing from char*";) s
+5 541 M
+(mystring::mystring\(const char*\):) s
+5 530 M
+(\(mystring*\)@ffbef64c -> ) s
+5 519 M
+(        dim=19) s
+5 508 M
+(        len=18) s
+5 497 M
+(        buf@68158 -> [testing from char*]) s
+5 486 M
+(------------------------------------------------------------------------) s
+5 464 M
+(------------------------------------------------------------------------) s
+5 453 M
+(DEBUG: teststring.cc:28: mystring s3 = s2;) s
+5 442 M
+(mystring::mystring\(const mystring&\):) s
+5 431 M
+(\(mystring*\)@ffbef63c -> ) s
+5 420 M
+(        dim=19) s
+5 409 M
+(        len=18) s
+5 398 M
+(        buf@68178 -> [testing from char*]) s
+5 387 M
+(------------------------------------------------------------------------) s
+5 365 M
+(------------------------------------------------------------------------) s
+5 354 M
+(DEBUG: teststring.cc:29: s1 = s3;) s
+5 343 M
+(mystring& mystring::operator=\(const mystring&\):) s
+5 332 M
+(\(mystring*\)@ffbef65c -> ) s
+5 321 M
+(        dim=128) s
+5 310 M
+(        len=18) s
+5 299 M
+(        buf@69278 -> [testing from char*]) s
+5 288 M
+(------------------------------------------------------------------------) s
+5 266 M
+(------------------------------------------------------------------------) s
+5 255 M
+(DEBUG: teststring.cc:30: s2 += s3;) s
+5 244 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 233 M
+(\(mystring*\)@ffbef64c -> ) s
+5 222 M
+(        dim=37) s
+5 211 M
+(        len=36) s
+5 200 M
+(        buf@69328 -> [testing from char*testing from char*]) s
+5 189 M
+(------------------------------------------------------------------------) s
+5 167 M
+(------------------------------------------------------------------------) s
+5 156 M
+(DEBUG: teststring.cc:31: s2 += s3;) s
+5 145 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 134 M
+(\(mystring*\)@ffbef64c -> ) s
+5 123 M
+(        dim=55) s
+5 112 M
+(        len=54) s
+5 101 M
+(        buf@69358 -> [testing from char*testing from char*testing from char*]) s
+5 90 M
+(------------------------------------------------------------------------) s
+5 68 M
+(------------------------------------------------------------------------) s
+5 57 M
+(DEBUG: teststring.cc:32: cout << "s2.size = " << s2.size\(\) << endl;) s
+5 46 M
+(s2.size = 54) s
+5 35 M
+(------------------------------------------------------------------------) s
+5 13 M
+(------------------------------------------------------------------------) s
+5 2 M
+(DEBUG: teststring.cc:33: mystring s4\(10\);) s
+_R
+S
+%%Page: (2) 8
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 2 def
+/fname (testing.output) def
+/fdir () def
+/ftail (testing.output) def
+% User defined strings:
+/pagenumstr (2) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:09) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(mystring::mystring\(int\):) s
+5 684 M
+(\(mystring*\)@ffbef62c -> ) s
+5 673 M
+(        dim=11) s
+5 662 M
+(        len=10) s
+5 651 M
+(        buf@693a0 -> []) s
+5 640 M
+(------------------------------------------------------------------------) s
+5 618 M
+(------------------------------------------------------------------------) s
+5 607 M
+(DEBUG: teststring.cc:34: s4 += "foo";) s
+5 596 M
+(mystring::mystring\(const char*\):) s
+5 585 M
+(\(mystring*\)@ffbef61c -> ) s
+5 574 M
+(        dim=4) s
+5 563 M
+(        len=3) s
+5 552 M
+(        buf@68d08 -> [foo]) s
+5 541 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 530 M
+(\(mystring*\)@ffbef62c -> ) s
+5 519 M
+(        dim=14) s
+5 508 M
+(        len=3) s
+5 497 M
+(        buf@693b8 -> [foo]) s
+5 486 M
+(------------------------------------------------------------------------) s
+5 464 M
+(------------------------------------------------------------------------) s
+5 453 M
+(DEBUG: teststring.cc:35: s4 += "bar";) s
+5 442 M
+(mystring::mystring\(const char*\):) s
+5 431 M
+(\(mystring*\)@ffbef60c -> ) s
+5 420 M
+(        dim=4) s
+5 409 M
+(        len=3) s
+5 398 M
+(        buf@68d18 -> [bar]) s
+5 387 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 376 M
+(\(mystring*\)@ffbef62c -> ) s
+5 365 M
+(        dim=14) s
+5 354 M
+(        len=6) s
+5 343 M
+(        buf@693b8 -> [foobar]) s
+5 332 M
+(------------------------------------------------------------------------) s
+5 310 M
+(------------------------------------------------------------------------) s
+5 299 M
+(DEBUG: teststring.cc:36: s4 += "baz";) s
+5 288 M
+(mystring::mystring\(const char*\):) s
+5 277 M
+(\(mystring*\)@ffbef5fc -> ) s
+5 266 M
+(        dim=4) s
+5 255 M
+(        len=3) s
+5 244 M
+(        buf@68d28 -> [baz]) s
+5 233 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 222 M
+(\(mystring*\)@ffbef62c -> ) s
+5 211 M
+(        dim=14) s
+5 200 M
+(        len=9) s
+5 189 M
+(        buf@693b8 -> [foobarbaz]) s
+5 178 M
+(------------------------------------------------------------------------) s
+5 156 M
+(------------------------------------------------------------------------) s
+5 145 M
+(DEBUG: teststring.cc:37: mystring* ptr = new mystring\( "new mystring" \);) s
+5 134 M
+(mystring::mystring\(const char*\):) s
+5 123 M
+(\(mystring*\)@693a0 -> ) s
+5 112 M
+(        dim=13) s
+5 101 M
+(        len=12) s
+5 90 M
+(        buf@693d0 -> [new mystring]) s
+5 79 M
+(------------------------------------------------------------------------) s
+5 57 M
+(------------------------------------------------------------------------) s
+5 46 M
+(DEBUG: teststring.cc:38: delete ptr; ptr = 0;) s
+5 35 M
+(mystring::~mystring\(\):) s
+5 24 M
+(\(mystring*\)@693a0 -> ) s
+5 13 M
+(        dim=13) s
+5 2 M
+(        len=12) s
+_R
+S
+%%Page: (3) 9
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 3 def
+/fname (testing.output) def
+/fdir () def
+/ftail (testing.output) def
+% User defined strings:
+/pagenumstr (3) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:09) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(        buf@693d0 -> [new mystring]) s
+5 684 M
+(------------------------------------------------------------------------) s
+5 662 M
+(------------------------------------------------------------------------) s
+5 651 M
+(DEBUG: teststring.cc:39: mystring* leak1 = new mystring\( rcsid \);) s
+5 640 M
+(mystring::mystring\(const char*\):) s
+5 629 M
+(\(mystring*\)@693a0 -> ) s
+5 618 M
+(        dim=56) s
+5 607 M
+(        len=55) s
+5 596 M
+(        buf@699a0 -> [$Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $]) s
+5 585 M
+(------------------------------------------------------------------------) s
+5 563 M
+(------------------------------------------------------------------------) s
+5 552 M
+(DEBUG: teststring.cc:40: mystring* leak2 = new mystring\( *leak1 \);) s
+5 541 M
+(mystring::mystring\(const mystring&\):) s
+5 530 M
+(\(mystring*\)@693d0 -> ) s
+5 519 M
+(        dim=56) s
+5 508 M
+(        len=55) s
+5 497 M
+(        buf@699e0 -> [$Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $]) s
+5 486 M
+(------------------------------------------------------------------------) s
+5 464 M
+(------------------------------------------------------------------------) s
+5 453 M
+(DEBUG: teststring.cc:41: int* leak3 = new int[1024];) s
+5 442 M
+(------------------------------------------------------------------------) s
+5 420 M
+(------------------------------------------------------------------------) s
+5 409 M
+(DEBUG: teststring.cc:42: int* leak4 = new int[1024];) s
+5 398 M
+(------------------------------------------------------------------------) s
+5 376 M
+(------------------------------------------------------------------------) s
+5 365 M
+(DEBUG: teststring.cc:43: mystring* leak5 = new mystring\(1<<16\);) s
+5 354 M
+(mystring::mystring\(int\):) s
+5 343 M
+(\(mystring*\)@693e8 -> ) s
+5 332 M
+(        dim=65537) s
+5 321 M
+(        len=65536) s
+5 310 M
+(        buf@6ba30 -> []) s
+5 299 M
+(------------------------------------------------------------------------) s
+5 277 M
+(------------------------------------------------------------------------) s
+5 266 M
+(DEBUG: teststring.cc:44: mystring* leak6 = new mystring\(\);) s
+5 255 M
+(mystring::mystring\(\):) s
+5 244 M
+(\(mystring*\)@69400 -> ) s
+5 233 M
+(        dim=128) s
+5 222 M
+(        len=0) s
+5 211 M
+(        buf@7ba40 -> []) s
+5 200 M
+(------------------------------------------------------------------------) s
+5 189 M
+(mystring::~mystring\(\):) s
+5 178 M
+(\(mystring*\)@ffbef5fc -> ) s
+5 167 M
+(        dim=4) s
+5 156 M
+(        len=3) s
+5 145 M
+(        buf@68d28 -> [baz]) s
+5 134 M
+(mystring::~mystring\(\):) s
+5 123 M
+(\(mystring*\)@ffbef60c -> ) s
+5 112 M
+(        dim=4) s
+5 101 M
+(        len=3) s
+5 90 M
+(        buf@68d18 -> [bar]) s
+5 79 M
+(mystring::~mystring\(\):) s
+5 68 M
+(\(mystring*\)@ffbef61c -> ) s
+5 57 M
+(        dim=4) s
+5 46 M
+(        len=3) s
+5 35 M
+(        buf@68d08 -> [foo]) s
+5 24 M
+(mystring::~mystring\(\):) s
+5 13 M
+(\(mystring*\)@ffbef62c -> ) s
+5 2 M
+(        dim=14) s
+_R
+S
+%%Page: (4) 10
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 4 def
+/fname (testing.output) def
+/fdir () def
+/ftail (testing.output) def
+% User defined strings:
+/pagenumstr (4) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:09) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(        len=9) s
+5 684 M
+(        buf@693b8 -> [foobarbaz]) s
+5 673 M
+(mystring::~mystring\(\):) s
+5 662 M
+(\(mystring*\)@ffbef63c -> ) s
+5 651 M
+(        dim=19) s
+5 640 M
+(        len=18) s
+5 629 M
+(        buf@68178 -> [testing from char*]) s
+5 618 M
+(mystring::~mystring\(\):) s
+5 607 M
+(\(mystring*\)@ffbef64c -> ) s
+5 596 M
+(        dim=55) s
+5 585 M
+(        len=54) s
+5 574 M
+(        buf@69358 -> [testing from char*testing from char*testing from char*]) s
+5 563 M
+(mystring::~mystring\(\):) s
+5 552 M
+(\(mystring*\)@ffbef65c -> ) s
+5 541 M
+(        dim=128) s
+5 530 M
+(        len=18) s
+5 519 M
+(        buf@69278 -> [testing from char*]) s
+_R
+S
+%%Page: (1) 11
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 1 def
+/fname (testing.output.bcheck-all) def
+/fdir () def
+/ftail (testing.output.bcheck-all) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:11) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(Reading testing) s
+5 684 M
+(Reading ld.so.1) s
+5 673 M
+(Reading librtc.so) s
+5 662 M
+(Reading libCrun.so.1) s
+5 651 M
+(Reading libm.so.1) s
+5 640 M
+(Reading libw.so.1) s
+5 629 M
+(Reading libc.so.1) s
+5 618 M
+(Reading libdl.so.1) s
+5 607 M
+(Reading libc_psr.so.1) s
+5 596 M
+(access checking - ON) s
+5 585 M
+(memuse checking - ON) s
+5 574 M
+(Running: testing ) s
+5 563 M
+(\(process id 5423\)) s
+5 552 M
+(RTC: Enabling Error Checking...) s
+5 541 M
+(RTC: Running program...) s
+5 530 M
+(Running /afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring/testing) s
+5 519 M
+($Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $) s
+5 497 M
+(------------------------------------------------------------------------) s
+5 486 M
+(DEBUG: teststring.cc:26: mystring s1;) s
+5 475 M
+(mystring::mystring\(\):) s
+5 464 M
+(\(mystring*\)@ffbef4cc -> ) s
+5 453 M
+(        dim=128) s
+5 442 M
+(        len=0) s
+5 431 M
+(        buf@b5380 -> []) s
+5 420 M
+(------------------------------------------------------------------------) s
+5 398 M
+(------------------------------------------------------------------------) s
+5 387 M
+(DEBUG: teststring.cc:27: mystring s2 = "testing from char*";) s
+5 376 M
+(mystring::mystring\(const char*\):) s
+5 365 M
+(\(mystring*\)@ffbef4bc -> ) s
+5 354 M
+(        dim=19) s
+5 343 M
+(        len=18) s
+5 332 M
+(        buf@b5448 -> [testing from char*]) s
+5 321 M
+(------------------------------------------------------------------------) s
+5 299 M
+(------------------------------------------------------------------------) s
+5 288 M
+(DEBUG: teststring.cc:28: mystring s3 = s2;) s
+5 277 M
+(mystring::mystring\(const mystring&\):) s
+5 266 M
+(\(mystring*\)@ffbef4ac -> ) s
+5 255 M
+(        dim=19) s
+5 244 M
+(        len=18) s
+5 233 M
+(        buf@b5478 -> [testing from char*]) s
+5 222 M
+(------------------------------------------------------------------------) s
+5 200 M
+(------------------------------------------------------------------------) s
+5 189 M
+(DEBUG: teststring.cc:29: s1 = s3;) s
+5 178 M
+(mystring& mystring::operator=\(const mystring&\):) s
+5 167 M
+(\(mystring*\)@ffbef4cc -> ) s
+5 156 M
+(        dim=128) s
+5 145 M
+(        len=18) s
+5 134 M
+(        buf@b5380 -> [testing from char*]) s
+5 123 M
+(------------------------------------------------------------------------) s
+5 101 M
+(------------------------------------------------------------------------) s
+5 90 M
+(DEBUG: teststring.cc:30: s2 += s3;) s
+5 79 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 68 M
+(\(mystring*\)@ffbef4bc -> ) s
+5 57 M
+(        dim=37) s
+5 46 M
+(        len=36) s
+5 35 M
+(        buf@b54a8 -> [testing from char*testing from char*]) s
+5 24 M
+(------------------------------------------------------------------------) s
+5 2 M
+(------------------------------------------------------------------------) s
+_R
+S
+%%Page: (2) 12
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 2 def
+/fname (testing.output.bcheck-all) def
+/fdir () def
+/ftail (testing.output.bcheck-all) def
+% User defined strings:
+/pagenumstr (2) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:11) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(DEBUG: teststring.cc:31: s2 += s3;) s
+5 684 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 673 M
+(\(mystring*\)@ffbef4bc -> ) s
+5 662 M
+(        dim=55) s
+5 651 M
+(        len=54) s
+5 640 M
+(        buf@b54e8 -> [testing from char*testing from char*testing from char*]) s
+5 629 M
+(------------------------------------------------------------------------) s
+5 607 M
+(------------------------------------------------------------------------) s
+5 596 M
+(DEBUG: teststring.cc:32: cout << "s2.size = " << s2.size\(\) << endl;) s
+5 585 M
+(s2.size = 54) s
+5 574 M
+(------------------------------------------------------------------------) s
+5 552 M
+(------------------------------------------------------------------------) s
+5 541 M
+(DEBUG: teststring.cc:33: mystring s4\(10\);) s
+5 530 M
+(mystring::mystring\(int\):) s
+5 519 M
+(\(mystring*\)@ffbef49c -> ) s
+5 508 M
+(        dim=11) s
+5 497 M
+(        len=10) s
+5 486 M
+(        buf@b5540 -> []) s
+5 475 M
+(------------------------------------------------------------------------) s
+5 453 M
+(------------------------------------------------------------------------) s
+5 442 M
+(DEBUG: teststring.cc:34: s4 += "foo";) s
+5 431 M
+(mystring::mystring\(const char*\):) s
+5 420 M
+(\(mystring*\)@ffbef48c -> ) s
+5 409 M
+(        dim=4) s
+5 398 M
+(        len=3) s
+5 387 M
+(        buf@67de0 -> [foo]) s
+5 376 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 365 M
+(\(mystring*\)@ffbef49c -> ) s
+5 354 M
+(        dim=14) s
+5 343 M
+(        len=3) s
+5 332 M
+(        buf@b5568 -> [foo]) s
+5 321 M
+(------------------------------------------------------------------------) s
+5 299 M
+(------------------------------------------------------------------------) s
+5 288 M
+(DEBUG: teststring.cc:35: s4 += "bar";) s
+5 277 M
+(mystring::mystring\(const char*\):) s
+5 266 M
+(\(mystring*\)@ffbef47c -> ) s
+5 255 M
+(        dim=4) s
+5 244 M
+(        len=3) s
+5 233 M
+(        buf@67e00 -> [bar]) s
+5 222 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 211 M
+(\(mystring*\)@ffbef49c -> ) s
+5 200 M
+(        dim=14) s
+5 189 M
+(        len=6) s
+5 178 M
+(        buf@b5568 -> [foobar]) s
+5 167 M
+(------------------------------------------------------------------------) s
+5 145 M
+(------------------------------------------------------------------------) s
+5 134 M
+(DEBUG: teststring.cc:36: s4 += "baz";) s
+5 123 M
+(mystring::mystring\(const char*\):) s
+5 112 M
+(\(mystring*\)@ffbef46c -> ) s
+5 101 M
+(        dim=4) s
+5 90 M
+(        len=3) s
+5 79 M
+(        buf@67e20 -> [baz]) s
+5 68 M
+(mystring& mystring::operator+=\(const mystring&\):) s
+5 57 M
+(\(mystring*\)@ffbef49c -> ) s
+5 46 M
+(        dim=14) s
+5 35 M
+(        len=9) s
+5 24 M
+(        buf@b5568 -> [foobarbaz]) s
+5 13 M
+(------------------------------------------------------------------------) s
+_R
+S
+%%Page: (3) 13
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 3 def
+/fname (testing.output.bcheck-all) def
+/fdir () def
+/ftail (testing.output.bcheck-all) def
+% User defined strings:
+/pagenumstr (3) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:11) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(------------------------------------------------------------------------) s
+5 684 M
+(DEBUG: teststring.cc:37: mystring* ptr = new mystring\( "new mystring" \);) s
+5 673 M
+(mystring::mystring\(const char*\):) s
+5 662 M
+(\(mystring*\)@b5590 -> ) s
+5 651 M
+(        dim=13) s
+5 640 M
+(        len=12) s
+5 629 M
+(        buf@b55b8 -> [new mystring]) s
+5 618 M
+(------------------------------------------------------------------------) s
+5 596 M
+(------------------------------------------------------------------------) s
+5 585 M
+(DEBUG: teststring.cc:38: delete ptr; ptr = 0;) s
+5 574 M
+(mystring::~mystring\(\):) s
+5 563 M
+(\(mystring*\)@b5590 -> ) s
+5 552 M
+(        dim=13) s
+5 541 M
+(        len=12) s
+5 530 M
+(        buf@b55b8 -> [new mystring]) s
+5 519 M
+(------------------------------------------------------------------------) s
+5 497 M
+(------------------------------------------------------------------------) s
+5 486 M
+(DEBUG: teststring.cc:39: mystring* leak1 = new mystring\( rcsid \);) s
+5 475 M
+(mystring::mystring\(const char*\):) s
+5 464 M
+(\(mystring*\)@b55e0 -> ) s
+5 453 M
+(        dim=56) s
+5 442 M
+(        len=55) s
+5 431 M
+(        buf@b5f40 -> [$Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $]) s
+5 420 M
+(------------------------------------------------------------------------) s
+5 398 M
+(------------------------------------------------------------------------) s
+5 387 M
+(DEBUG: teststring.cc:40: mystring* leak2 = new mystring\( *leak1 \);) s
+5 376 M
+(mystring::mystring\(const mystring&\):) s
+5 365 M
+(\(mystring*\)@b5608 -> ) s
+5 354 M
+(        dim=56) s
+5 343 M
+(        len=55) s
+5 332 M
+(        buf@b5f90 -> [$Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $]) s
+5 321 M
+(------------------------------------------------------------------------) s
+5 299 M
+(------------------------------------------------------------------------) s
+5 288 M
+(DEBUG: teststring.cc:41: int* leak3 = new int[1024];) s
+5 277 M
+(------------------------------------------------------------------------) s
+5 255 M
+(------------------------------------------------------------------------) s
+5 244 M
+(DEBUG: teststring.cc:42: int* leak4 = new int[1024];) s
+5 233 M
+(------------------------------------------------------------------------) s
+5 211 M
+(------------------------------------------------------------------------) s
+5 200 M
+(DEBUG: teststring.cc:43: mystring* leak5 = new mystring\(1<<16\);) s
+5 189 M
+(mystring::mystring\(int\):) s
+5 178 M
+(\(mystring*\)@b5630 -> ) s
+5 167 M
+(        dim=65537) s
+5 156 M
+(        len=65536) s
+5 145 M
+(        buf@b8010 -> []) s
+5 134 M
+(------------------------------------------------------------------------) s
+5 112 M
+(------------------------------------------------------------------------) s
+5 101 M
+(DEBUG: teststring.cc:44: mystring* leak6 = new mystring\(\);) s
+5 90 M
+(mystring::mystring\(\):) s
+5 79 M
+(\(mystring*\)@b5658 -> ) s
+5 68 M
+(        dim=128) s
+5 57 M
+(        len=0) s
+5 46 M
+(        buf@c8030 -> []) s
+5 35 M
+(------------------------------------------------------------------------) s
+5 24 M
+(mystring::~mystring\(\):) s
+5 13 M
+(\(mystring*\)@ffbef46c -> ) s
+5 2 M
+(        dim=4) s
+_R
+S
+%%Page: (4) 14
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 4 def
+/fname (testing.output.bcheck-all) def
+/fdir () def
+/ftail (testing.output.bcheck-all) def
+% User defined strings:
+/pagenumstr (4) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:11) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(        len=3) s
+5 684 M
+(        buf@67e20 -> [baz]) s
+5 673 M
+(mystring::~mystring\(\):) s
+5 662 M
+(\(mystring*\)@ffbef47c -> ) s
+5 651 M
+(        dim=4) s
+5 640 M
+(        len=3) s
+5 629 M
+(        buf@67e00 -> [bar]) s
+5 618 M
+(mystring::~mystring\(\):) s
+5 607 M
+(\(mystring*\)@ffbef48c -> ) s
+5 596 M
+(        dim=4) s
+5 585 M
+(        len=3) s
+5 574 M
+(        buf@67de0 -> [foo]) s
+5 563 M
+(mystring::~mystring\(\):) s
+5 552 M
+(\(mystring*\)@ffbef49c -> ) s
+5 541 M
+(        dim=14) s
+5 530 M
+(        len=9) s
+5 519 M
+(        buf@b5568 -> [foobarbaz]) s
+5 508 M
+(mystring::~mystring\(\):) s
+5 497 M
+(\(mystring*\)@ffbef4ac -> ) s
+5 486 M
+(        dim=19) s
+5 475 M
+(        len=18) s
+5 464 M
+(        buf@b5478 -> [testing from char*]) s
+5 453 M
+(mystring::~mystring\(\):) s
+5 442 M
+(\(mystring*\)@ffbef4bc -> ) s
+5 431 M
+(        dim=55) s
+5 420 M
+(        len=54) s
+5 409 M
+(        buf@b54e8 -> [testing from char*testing from char*testing from char*]) s
+5 398 M
+(mystring::~mystring\(\):) s
+5 387 M
+(\(mystring*\)@ffbef4cc -> ) s
+5 376 M
+(        dim=128) s
+5 365 M
+(        len=18) s
+5 354 M
+(        buf@b5380 -> [testing from char*]) s
+5 343 M
+(Checking for memory leaks...) s
+5 332 M
+(  errors are being redirected to file 'testing.errs') s
+5 310 M
+(Actual leaks report    \(actual leaks:        10  total size:   74033 bytes\)) s
+5 288 M
+( ) s
+5 266 M
+(Possible leaks report  \(possible leaks:       0  total size:       0 bytes\)) s
+5 244 M
+( ) s
+5 233 M
+(Checking for memory use...) s
+5 222 M
+(  errors are being redirected to file 'testing.errs') s
+5 200 M
+(Blocks in use report   \(blocks in use:       24  total size:    2347 bytes\)) s
+5 178 M
+( ) s
+5 167 M
+(RTC output redirected to logfile 'testing.errs') s
+5 145 M
+(execution completed, exit code is 0) s
+_R
+S
+%%Page: (1) 15
+%%BeginPageSetup
+_S
+24 24 translate
+/pagenum 1 def
+/fname (Build) def
+/fdir () def
+/ftail (Build) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (01/24/03) def
+/modtimestr (14:53:03) def
+/user_header_p true def
+/user_header_left_str (/afs/cats.ucsc.edu/courses/cmps112-wm/Handouts/C++/Examples/mystring) def
+/user_header_center_str () def
+/user_header_right_str () def
+%%EndPageSetup
+do_header
+5 695 M
+(#!/bin/sh -x) s
+5 684 M
+(CC -g *.cc -o testing) s
+5 673 M
+(testing >testing.output) s
+5 662 M
+(bcheck -all testing >testing.output.bcheck-all) s
+5 651 M
+(enscript -b `pwd` -G -p Listing.ps *.h *.cc testing.* $0) s
+5 640 M
+(ghostview -magstep 1 Listing.ps &) s
+_R
+S
+%%Trailer
+%%Pages: 15
+%%DocumentNeededResources: font Times-Roman Courier-Bold Courier 
+%%+ font Times-Bold 
+%%EOF

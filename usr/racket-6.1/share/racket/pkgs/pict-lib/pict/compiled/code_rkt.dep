@@ -1,0 +1,1 @@
+("6.1" ("4fc7ec79c9a0a53147d8db81d2e18ba456f44a99" . "e7d6f57e29db6c0364517c912b805b0987109cbd") (collects #"mzlib" #"unit.rkt") (collects #"syntax" #"to-string.rkt") (collects #"texpict" #"code.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"pict" #"main.rkt") (collects #"racket" #"base.rkt") (collects #"mzlib" #"list.rkt"))

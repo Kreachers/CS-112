@@ -1,0 +1,1 @@
+("6.1" ("c7ae2775c36319b80d2fce27cd3be504178198aa" . "6b121ab29d8c9770e221014b294f1aac36732a14") (collects #"scheme" #"base.rkt") (collects #"mzscheme" #"main.rkt") (collects #"racket" #"undefined.rkt") (collects #"syntax" #"kerncase.rkt") (collects #"scheme" #"mpair.rkt") (collects #"r5rs" #"private" #"r5rs-trans.rkt") (collects #"scheme" #"runtime-config.rkt"))

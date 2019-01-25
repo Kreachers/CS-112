@@ -1,0 +1,1 @@
+("6.1" ("d0509b028e51115b1004fa6e9a1e8a609c00e534" . "1d1411d939f615c599930edd511ce7bcafc8ca20") (collects #"planet" #"syntax.rkt") (collects #"scribble" #"manual.rkt") (collects #"syntax" #"parse.rkt") (collects #"planet" #"version.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"syntax" #"parse" #"private" #"parse-aux.rkt"))

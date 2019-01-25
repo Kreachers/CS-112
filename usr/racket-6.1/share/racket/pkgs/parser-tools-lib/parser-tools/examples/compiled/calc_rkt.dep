@@ -1,0 +1,1 @@
+("6.1" ("febdedde396211ee6232d658abb4adf2f13d6e2b" . "9a34c9c272d4f9f241edb0b97058e549215f0d3e") (collects #"parser-tools" #"lex.rkt") (collects #"scheme" #"main.rkt") (collects #"parser-tools" #"lex-sre.rkt") (collects #"scheme" #"runtime-config.rkt") (collects #"parser-tools" #"yacc.rkt"))

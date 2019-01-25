@@ -1,0 +1,470 @@
+head	1.22;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.22
+date	2014.12.12.00.21.44;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2014.12.09.20.08.46;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2014.12.04.23.24.52;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2014.12.02.20.47.37;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2014.12.01.21.38.20;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2014.11.25.22.18.19;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2014.11.20.23.29.23;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2014.11.19.00.02.10;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2014.11.13.23.07.20;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2014.11.11.05.18.49;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2014.11.06.23.56.59;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2014.11.04.23.13.02;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2014.10.30.23.16.26;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2014.10.28.19.55.57;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2014.10.23.21.49.15;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2014.10.23.21.47.19;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2014.10.22.02.28.56;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.10.16.19.22.42;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2014.10.15.18.59.11;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.10.09.23.58.53;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2014.10.08.00.18.03;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.08.15.23.15.42;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.22
+log
+@-
+@
+text
+@
+Fall 2014
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Mon Oct  6 - intro; syllabus; 1-Introduction; 2-History
+ 2. Wed Oct  8 - Perl: "Taming Camel", Perl-notes.dir
+
+week  2:
+ 4. Mon Oct 13 - asg1 details, code/ subdir; 3-Design
+ 5. Wed Oct 15 - 3-Design
+
+week  3:
+ 7. Mon Oct 20 - 5-Basic Semantics
+ 8. Wed Oct 22 - Smalltalk; asg2
+
+week  4:
+10. Mon Oct 27 - review asg2; object-oriented programming
+11. Wed Oct 29 - TEST 1; OOP implementation
+
+week  5:
+13. Mon Nov  3 - intro Scheme
+14. Wed Nov  5 - program 3; Scheme higher-order functions
+
+week  6:
+16. Mon Nov 10 - Scheme higher-order functions; program 3
+17. Wed Nov 12 - lambda calculus; data types
+
+week  7:
+19. Mon Nov 17 - introduction Ocaml
+20. Wed Nov 19 - TEST 2; project 4
+
+week  8:
+22. Mon Nov 24 - project 4 dc; more Ocaml
+23. Wed Nov 26 - Ocaml higher-order functions
+
+week  9:
+25. Mon Dec  1 - Prolog
+26. Wed Dec  3 - Prolog; data types; exprs & stmts; procs & envs
+
+week 10:
+28. Mon Dec  8 - procs & envs; delayed (lazy) evaluation & Haskell
+29. Wed Dec 10 - review old exams
+
+$Id: Lecture-log-2014-q4fall,v 1.21 2014-12-09 12:08:46-08 - - $
+@
+
+
+1.21
+log
+@-
+@
+text
+@d43 1
+a43 1
+29. Wed Dec 10 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.20 2014-12-04 15:24:52-08 - - $
+@
+
+
+1.20
+log
+@-
+@
+text
+@d42 1
+a42 1
+28. Mon Dec  8 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.19 2014-12-02 12:47:37-08 - - $
+@
+
+
+1.19
+log
+@-
+@
+text
+@d39 1
+a39 1
+26. Wed Dec  3 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.18 2014-12-01 13:38:20-08 - - $
+@
+
+
+1.18
+log
+@-
+@
+text
+@d38 1
+a38 1
+25. Mon Dec  1 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.17 2014-11-25 14:18:19-08 - - $
+@
+
+
+1.17
+log
+@-
+@
+text
+@d35 1
+a35 1
+23. Wed Nov 26 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.16 2014-11-20 15:29:23-08 - - $
+@
+
+
+1.16
+log
+@-
+@
+text
+@d34 1
+a34 1
+22. Mon Nov 24 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.15 2014-11-18 16:02:10-08 - - $
+@
+
+
+1.15
+log
+@-
+@
+text
+@d31 1
+a31 1
+20. Wed Nov 19 - TEST 2;
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.14 2014-11-13 15:07:20-08 - - $
+@
+
+
+1.14
+log
+@-
+@
+text
+@d30 1
+a30 1
+19. Mon Nov 17 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.13 2014-11-10 21:18:49-08 - - $
+@
+
+
+1.13
+log
+@-
+@
+text
+@d27 1
+a27 1
+17. Wed Nov 12 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.12 2014-11-06 15:56:59-08 - - $
+@
+
+
+1.12
+log
+@-
+@
+text
+@d26 1
+a26 1
+16. Mon Nov 10 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.11 2014-11-04 15:13:02-08 - - $
+@
+
+
+1.11
+log
+@-
+@
+text
+@d23 1
+a23 1
+14. Wed Nov  5 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.10 2014-10-30 16:16:26-07 - - $
+@
+
+
+1.10
+log
+@-
+@
+text
+@d22 1
+a22 1
+13. Mon Nov  3 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.9 2014-10-28 12:55:57-07 - - $
+@
+
+
+1.9
+log
+@-
+@
+text
+@d19 1
+a19 1
+11. Wed Oct 29 - TEST 1;
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.8 2014-10-23 14:49:15-07 - - $
+@
+
+
+1.8
+log
+@-
+@
+text
+@d18 1
+a18 1
+10. Mon Oct 27 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.7 2014-10-23 14:47:19-07 - - $
+@
+
+
+1.7
+log
+@-
+@
+text
+@d19 1
+a19 1
+11. Wed Oct 29 -
+d31 1
+a31 1
+20. Wed Nov 19 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.6 2014-10-21 19:28:56-07 - - $
+@
+
+
+1.6
+log
+@-
+@
+text
+@d15 1
+a15 1
+ 8. Wed Oct 22 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.5 2014-10-16 12:22:42-07 - - $
+@
+
+
+1.5
+log
+@-
+@
+text
+@d14 1
+a14 1
+ 7. Mon Oct 20 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.4 2014-10-15 11:59:11-07 - - $
+@
+
+
+1.4
+log
+@-
+@
+text
+@d11 1
+a11 1
+ 5. Wed Oct 15 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.3 2014-10-09 16:58:53-07 - - $
+@
+
+
+1.3
+log
+@-
+@
+text
+@d10 1
+a10 1
+ 4. Mon Oct 13 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.2 2014-10-07 17:18:03-07 - - $
+@
+
+
+1.2
+log
+@-
+@
+text
+@d7 1
+a7 1
+ 2. Wed Oct  8 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.1 2014-08-15 16:15:42-07 - - $
+@
+
+
+1.1
+log
+@-
+@
+text
+@d6 1
+a6 1
+ 1. Mon Oct  6 -
+d45 1
+a45 1
+$Id: Lecture-log-2014-q4fall,v 1.1 2014-08-15 16:13:57-07 - - $
+@

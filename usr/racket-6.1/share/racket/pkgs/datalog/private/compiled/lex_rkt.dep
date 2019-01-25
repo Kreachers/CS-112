@@ -1,0 +1,1 @@
+("6.1" ("5cb5b7b8c523298f552b08f02c2304271fd917e5" . "11feef177b6d04286a12054429de3b64c7470389") (collects #"parser-tools" #"lex.rkt") (collects #"parser-tools" #"lex-sre.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

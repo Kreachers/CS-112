@@ -1,0 +1,1 @@
+("6.1" ("d1e2eca230e1534ccc83575ac023db697775243b" . "bc14ae3ae893e37e03224b9c4195e34347e7242e") (collects #"net" #"websocket" #"server.rkt") (collects #"net" #"websocket" #"client.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

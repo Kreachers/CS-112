@@ -1,0 +1,4 @@
+5 REM I won't even pretend this is portable. 
+6 HOME:PRINT
+10 FOR I = 0 TO 11: READ A: POKE 1024+I,A: NEXT
+20 DATA 200, 197, 204, 204, 207, 172, 160, 215, 207, 210, 204, 196

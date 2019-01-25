@@ -1,0 +1,3 @@
+# hello.ratfor
+print *, 'Hello, world'
+end

@@ -1,0 +1,1 @@
+("6.1" ("c79df4f076f8def4e4882fa7d2872897eeba3e2f" . "e83dfa8bc3ba377594a5cfe87faf620da9499a20") (collects #"syntax" #"kerncase.rkt") (collects #"racket" #"unit.rkt") (collects #"syntax" #"stx.rkt") (collects #"syntax" #"source-syntax.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

@@ -1,0 +1,1 @@
+("6.1" ("61e0de6c9a2f61186cf5d1ba6ae12429eaab3665" . "f1d40f12f35bcf28008c0566fffbc7b80cb9b8f7") (collects #"mzscheme" #"main.rkt") (collects #"texpict" #"mrpict.rkt") (collects #"mzlib" #"math.rkt") (collects #"racket" #"draw.rkt") (collects #"mzlib" #"etc.rkt") (collects #"mzlib" #"class.rkt"))

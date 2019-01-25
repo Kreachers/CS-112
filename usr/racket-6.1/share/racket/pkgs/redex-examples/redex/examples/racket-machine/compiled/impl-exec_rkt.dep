@@ -1,0 +1,1 @@
+("6.1" ("72db60f8679830d8ed227bcff738cda978c2c786" . "79a67fc23bbf9213b19a30060ee68f023f682476") (collects #"racket" #"serialize.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"redex" #"examples" #"racket-machine" #"impl-eval.rkt"))

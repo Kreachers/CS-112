@@ -1,0 +1,1 @@
+("6.1" ("1b65f6264c44e80b677d6944a1734ee2815d8148" . "d9c5a821d5fe93687e68eabbbf53f3fa36928b1e") (collects #"mzscheme" #"main.rkt") (collects #"graphics" #"value-turtles-examples.rkt") (collects #"mred" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"graphics" #"value-turtles.rkt") (collects #"mzlib" #"class.rkt"))

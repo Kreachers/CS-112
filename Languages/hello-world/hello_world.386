@@ -1,0 +1,6 @@
+HW  DB   "Hello World"
+CR  DB   10
+MOV DS:SI,HW
+MOV CX, 12
+MOV ES:DI,$SCREEN
+REP MOVSB

@@ -1,0 +1,513 @@
+Form S100-1092a
+9X&CPLUS.TXT
+
+
+                        CONTRASTS: Ada 9X and C++
+
+                             Edmond Schonberg
+                             NYUAda 9X Project
+                            New York University
+                             251 Mercer Street
+                            New York, NY 10012
+                           Schonberg@cs.nyu.edu
+
+                               April 22, 1992
+
+                              1. Introduction
+
+Ada 9X and C++ are modern general-purpose languages of roughly similar power, 
+aimed broadly at the area of Systems programming.  Ada 9X, like Ada, is also 
+intended for embedded and real-time systems, and has a number of built-in 
+features to support concurrent and distributed programming.
+
+Both Ada 9X and C++ have features that modern software engineering practice 
+considers indispensable: modularity, information hiding, structuring tools for 
+large programs, inheritance and support of object-oriented design methods, 
+various mechanisms for parametrizing software components, etc.  Both languages 
+are clearly superior to their competitors (C, Modula-2 Pascal, Eiffel) in 
+terms of expressive power, maturity, and software base.  Ada is also superior 
+to these in terms of safety and reliability.
+
+We will show that Ada 9X has similar advantages over C++, in particular when 
+software costs are examined over the lifetime of the software system.  Rather 
+than being comprehensive, we choose to focus on details where the philosophies 
+of both languages are in sharpest contrast.  We will often use Ada rather than 
+Ada 9X in the discussion, because many of the best features of Ada 9X are 
+simply inherited from its parent.
+
+               2. Anything you can do, I can do as well
+
+The comparison of programming languages is in part a subjective affair; 
+judgements are influenced by personal stylistic choices, by familiarity, by 
+the well known first-language effect, etc.  Given that all programming 
+languages in use are Turing-equivalent, no claim can be made as to the 
+absolute advantage of one over the other.  Rather, the arguments have to be 
+pragmatic ones: reliability, ease of use, and modifiability of the resulting 
+software.  Social considerations are also relevant: the programming culture, 
+the training of programmers, the availability of tools, the mechanisms by 
+which programming idioms circulate through the community, etc.
+
+For example, consider the question of library management, a vital issue in 
+every sizable project.  The integrity of an Ada system is protected first by 
+the library mechanism, whose definition is an integral part of the language.  
+Every large project will build on top of the library management some 
+configuration control machinery which simplifies the coordination of the work 
+of many programmers, but the first guarantee of reliability is that the Ada 
+system itself will not let you build a system with out-of-date components.
+
+The C++ programmer (or the C programmer for that matter) will claim that he 
+obtains the same effect by the use of the Make utility and by the disciplined 
+naming conventions of the header files.  This is true, but the point I want to 
+make is that to replicate the mechanisms that Ada supplies takes more than 
+C++: it requires a number of utilities and tools that are common in the Unix 
+environment, but are in no way standardized and are not part of the language.  
+Thus there are no semantic checks on their use, and no relationship between 
+these tools and the language translator itself.  C and C++ depend critically 
+on their environment.  This has two consequences:
+
+1.  When judging the size of the language (as in the frequent complaint: "Ada 
+is too big") one must consider that competent use of C++ requires much more 
+knowledge than just the language; it requires comparable familiarity with a 
+number of tools in the environment.  The aggregate baggage is larger than for 
+Ada or Ada 9X (given that the size of C++ alone is already as large as Ada 9X, 
+and at least as complex).
+
+2.  Second, even if implementations of the language are standardized (which is 
+far from true for C++) differences in the environment and its tools make 
+portability harder to achieve.  Programs can easily become contaminated with 
+environmental details.  To the C++ programmer who says: "this is no problem, 
+because if you just follow coding conventions the problems disappear", we can 
+only reply that these coding conventions are additional baggage that the 
+programmer must know, that they add to the cost of using the language, and 
+that they are inherently less safe than comparable features that are built 
+into the language.
+
+3.  Finally, the programmer's knowledge is less portable and thus devalued, 
+because a solution adopted in one shop will be foreign to another.
+
+We conclude that the C++ culture requires a larger aggregate knowledge than 
+the Ada culture, that this knowledge is ill-defined at the interface between 
+language and environment, and that it results in lessened portability and thus 
+greater maintenance costs than comparable Ada software.
+
+                 3.  The type model: what is an array?
+
+In spite of the fact that arrays are one of the oldest composite types in 
+programming languages, there are sharp differences between their realization 
+in C++ and Ada.  C++ follows the C approach: arrays are closely related to 
+pointers, and the indexing operation is described directly in terms of pointer 
+arithmetic.  This has several consequences:
+
+1.  The indexing operation is not automatically checked.  The language 
+reference indicates that out-of-bounds indices are illegal, except that it is 
+allowed to point one element past the end of the array (for reasons having to 
+do with common programming idioms for iterating over an array); but there are 
+not automatic bound checks at run-time.  Given that indices out of bounds are 
+the most common type of run-time error, this makes the use of arrays in C++ 
+inherently less safe than in Ada.
+
+2.  There is no array assignment: if an array is a pointer, then an assignment 
+to the name of the array is a pointer assignment which aliases the array, not 
+a data transfer operation.
+
+3.  Multidimensional arrays are defined as arrays of arrays; multidimensional 
+arrays must be declared with constant bounds (after the first) and have no 
+built-in descriptors (such as Ada requires to support array attributes).  
+Linear algebra packages for example must carry explicit size parameters, or 
+else the user is forced to play aliasing tricks between one- and 
+multi-dimensional arrays, as is done in FORTRAN.  Thus the basic data type of 
+scientific programming is described in low-level storage terms.  In contrast, 
+multidimensional arrays in Ada are described in terms of formal operations of 
+an abstract type.  In this area, C++ is clearly a lower-level language.
+
+4.  All array types have the same index type; one cannot define an array over 
+an enumerated type, and there is never any type checking on indices.
+
+Shortcoming 1) in particular is well-known and acknowledged by the C++ 
+community.  Stroustrup [S91] correctly describes arrays as low-level 
+structures and presents a user-defined vector class (on which indexing is 
+checked) as a better abstract type.  Unfortunately, the proper implementation 
+of the class requires exceptions, a feature which has only recently been 
+introduced into C++ and which is not widely (nor consistently) implemented 
+yet.  In the meantime, programming without index checking is akin to driving 
+without seat belts on the optimistic conviction that most drivers are sober.  
+This optimism pervades the C and C++ communities.  Ada programmers are more 
+wary of their surroundings.
+
+We should also remark that compilers make a big effort to optimize the use of 
+built-in arrays, because they are the basic structure of many 
+compute-intensive programs.  Compilers are much less likely to treat 
+user-defined arrays with the same care (there are no anticipated versions of 
+LINPACK that use C++ vector classes).
+
+We conclude that C++ software is less reliable than Ada and Ada 9X code, and 
+that for scientific programming C++ is a lower-level language than Ada.
+
+                 4. Classes, Inheritance, and Objects
+
+Object-oriented programming and design (OOP) has become the buzzword of the 
+decade.  Behind the obvious enthusiasm of the software community there lies 
+the correct perception that OOP simplifies the design and construction of 
+software systems.  The basic reason is ease of reuse.  The notion of object is 
+vague and has been used to mean variously abstract type active agent, message 
+receiver, etc.  (A good case can be made that Ada tasks are the perfect model 
+for objects and that Ada was one of the earliest object-oriented languages.)  
+But in fact the usefulness of OOP does not lie in this fuzzy notion of object.  
+Rather, it lies in the combination of inheritance, specialization by 
+extension, and dynamic dispatching.  The gain is in the amount of code that 
+one does not have to write, simply because one can obtain it by inheritance 
+from the previously defined software component.
+
+Inheritance was already present, in a rigid form, in the type derivation 
+mechanism of Ada 83.
+
+OOP brings the fundamental insight that types should be enriched by extending 
+what they inherit, rather than being mere copies of their ancestors.  Dynamic 
+dispatching, that is to say the type-safe run-time choice of the operation 
+that applies to a specific type extension, is real innovation in software 
+construction.
+
+Ada 9X implements OOP by a straightforward extension of the notion of derived 
+type [AMSR].  Objects are no different from Ada83: they are entities that can 
+have values of a certain type.  The message-passing concept can still be 
+realized by means of tasks, but the more conventional concept of class is the 
+Ada 9X type extension:
+
+type new_and_improved is new tried_and_true with record
+      this: bell;
+      that: whistle;
+end record;
+
+procedure ring(thing: new_and_improved) is ...
+
+The type new_and_improved inherits the primitive operations of its parent type 
+tried_and_true.  Those operations act on the components that are common to 
+both parent and child types.  In addition, the new type contains additional 
+components (bells and whistles) and one can define new operations (or override 
+inherited ones) which make use of the components in the extension.  There is 
+no special syntax to designate objects of such types, nor to invoke operations 
+that have formals of such types.  Furthermore, if the parent operation has 
+several parameters (or return value) of the parent type, then the signature of 
+the inherited operation is obtained by replacing every mention of the parent 
+type with the child type.  As in most other OOPLs, Ada 9X makes some basic 
+distinctions between types that can be extended in this fashion (tagged types) 
+and types that cannot (for example integers).
+
+In contrast, the notion of class in C++ derives from that of structure, and 
+suggests that subprograms that apply to objects of a class are in some sense 
+part of those objects (class members).  This model, inherited from Smalltalk 
+and Simula, gives a privileged role to the first parameter of such a 
+subprogram, which is invoked with a special notation (as a qualified name).  
+In our experience, it is seldom useful to think of the operations as being 
+part of a value (unless they are entries in a task).  The Ada 9X model 
+provides the benefits of OOPS without this somewhat muddled notion of object.
+
+Note also that C++ classes are the only encapsulation mechanism in the 
+language (if one excludes the use of files as modules), and thus they also 
+play the role that packages play in Ada.  This dual role is better served with 
+two separate notions.
+
+                         4.1. Family interactions
+
+The Ada 9X model also provides a more natural description of binary operations 
+(and in general operations that have several formals of the same tagged type).  
+Consider:
+
+function merge(x, y: parent) return parent ;
+...
+type child is new parent with record ...
+-- function merge(x, y: child) return child is inherited.
+
+In the C++ model the member function has an implicit first parameter:
+
+class parent {
+...
+parent merge(parent)
+...
+}
+
+class child: public parent { ...
+
+The class child inherits a function merge, whose second argument must be a 
+parent (not a child) and which returns a parent (not a child).  Thus the 
+inherited operation loses the homogeneity of the original.  Some complications 
+ensue.  (For example, the signature of a dispatching variant of merge must 
+mention the parent type, not the child, otherwise it is a different 
+operation.)  Because of this asymmetry, it is possible to subvert the 
+dispatching mechanism and to call a dispatching operation with invalid 
+arguments -- and unpredictable results.  In contrast, the Ada 9X dispatching 
+model specifies that all dispatching parameters must have the same type (more 
+precisely the same tag).  A predefined exception is raised if this condition 
+is violated.
+
+We conclude that the Ada 9X model for type extension provides a cleaner 
+definition of binary operations.
+
+                      4.2. The limits of friendship
+
+The notion of friend functions and friend classes is one of the more 
+controversial aspects of C++.  Its defenders correctly point out that the 
+built-in privacy of class members that are not explicitly declared public 
+means that it is well-nigh impossible to write efficient code that makes use 
+of two distinct classes A and B: a member function of A will only have access 
+to the private representation of A, and will have to use a procedural 
+interface (with a potentially large execution penalty) to access the private 
+representation of B.  This is often unacceptable (the canonical example is 
+vector-matrix multiplication, when each is defined as a separate class, which 
+forces a large number of redundant index checks in the code).  By declaring 
+selectively certain functions as friends of a given class, the permission is 
+granted to write code using the private representation from outside of the 
+class.
+
+Many consider this mechanism unsafe, and advise against its use.  In Ada, the 
+need for such a mechanism is lessened by the possibility of defining related 
+types in the same package.  Those types can be private, and yet functions 
+defined in (and exported by) the packaged can make use in their bodies of the 
+private representations of these types.  This style respects the interface 
+between interface and implementation, but requires more design discipline 
+(both types must be conceived simultaneously).
+
+In Ada 9X, an additional mechanism exists to create related entities in 
+separate units: the hierarchical library model.  Child packages can 
+selectively request visibility of the private parts of the parent packages.  
+This mechanism is as expressive as the C++ friend declarations.  It is also 
+independent of inheritance.
+
+                         5. Keeping track of time
+
+Ada was the first mainstream language to incorporate constructs for 
+multitasking and for real-time programming.  It is still virtually the only 
+language to do so in a coherent fashion.  Ada 9X will have much more developed 
+real-time and synchronization facilities, in particular constructs for data 
+synchronization (protected records).  There are as yet no winning proposals 
+for tasking facilities in C++, and no hint of notions of real-time and 
+scheduling tools.  In this area C++ is a non-starter, even compared with 
+Ada83.
+
+And yet C and C++ are used for programming real-time systems.  How is this 
+done?  By means of libraries in various stages of standardization, such as the 
+CIFO proposed standard.  Here again, "it can be done" in C++, if we regard 
+these large libraries as part of the greater C++ system.  Needless to say, as 
+long as these are not recognized standards, programs that use them will be 
+non-portable in subtle ways.  It may well be that a standard library of 
+real-time primitives will evolve and become part of C++, just as the stream 
+facility has evolved from an interesting user-defined class to a recognized 
+part of the language.  In the meantime, Ada 9X has the advantage of features 
+that are integrated from the beginning, with a well-understood interaction 
+between complex features (e.g., tasking and exception).  Ada 9X expands on the 
+tasking facilities of Ada with asynchronous transfer of control, protected 
+records, better user access to scheduling primitives, additional forms of 
+delay statements, and parametrized tasks.
+
+We conclude that in the area of real-time programming Ada 9X is still without 
+any serious competition.
+
+                   6. Generics are cheap and reliable
+
+To maximize software reuse, it is important to be able to parametrize software 
+components, so that the same blueprint can be used in type-safe fashion for 
+different applications.  For example, a single sorting algorithm can be used 
+for arrays of different element types, as long as the element type is ordered 
+(i.e., has a comparison predicate).  The generic facility of Ada is an 
+excellent model of type parametrization.  In addition to type parameters with 
+specified operations (private and limited generic types) it is possible to 
+specify type parameters that belong to a given class of types (e.g., any 
+integer type), as well as value parameters and object parameters.
+
+In contrast, C has no parametrization facilities.  The common practice is to 
+use the C preprocessor (a macro expander) to duplicate text with suitable 
+replacement, in order to simulate generic instantiation.  This mechanism is 
+purely lexical: there are no syntax or semantic checks attached to the macro 
+definition nor to each of its expansions.
+
+The designer of C++ has recognized the need for a more disciplined 
+parametrization mechanism, and the latest version of the language describes 
+templates, a facility that is close in spirit to Ada generics.  A template 
+indicates that a unit has one or more class parameters.  In the simple case 
+there are no operations defined on a class parameter, so it is equivalent to 
+an Ada private generic type.  It is possible to include function parameters 
+that depend on a class parameter; this is equivalent to the use of generic 
+formal subprogram parameters in Ada.  There is an asymmetry between class 
+parameters and function parameters which is not present in Ada, and the syntax 
+forces repeated mentions of the template parameters (e.g., for each member 
+function body of a class template).
+
+Ada 9X has an even richer set of parametrization mechanisms than Ada.  In Ada 
+9X it is possible to specify generic derived types (where the actual is any 
+member of the class of the generic type) and generic formal packages (where 
+the actual is any instantiation of the generic formal package).  This later 
+form of parametrization is more powerful than what is available in C++, and is 
+akin to the use of functions and signatures in ML.  Both in terms of 
+expressiveness and clarity Ada 9X has a clear advantage over C++ here.
+
+                         7. Multiple Inheritance
+
+It might be argued that the multiple inheritance model of the current version 
+of C++ is definitely superior to what is proposed for Ada 9X.  This is a most 
+minor point: multiple inheritance (MI) is a programming style, not a universal 
+tool, and object-oriented practice of the last 10 years indicates that the 
+critical benefit of OOP, namely code reuse, is not substantially enhanced by 
+multiple inheritance.  Without denying that some programming situations 
+benefit from MI, we can state that its presence does not make or break an 
+object-oriented language.  Furthermore, the introduction of multiple 
+inheritance complicates the type model, complicates the implementation of 
+dynamic dispatching, and brings semantic difficulties that are solved by the 
+introduction of virtual base classes, a substantial complexity in its own 
+right.
+
+A common use of multiple inheritance is to construct "mixins", but in most of 
+the examples we have seen, there is clearly a major and a minor parent; the 
+minor provides additional functionality to a type that is clearly an extension 
+of the major parent.  Programming techniques exist to obtain the effect of 
+mixins in Ada 9X, by combining type extensions with renaming:
+
+type gizmo is ...
+      procedure fiddle(g: in out giizmo) ;
+      type enhanced is new old_and_reliable with record
+g: gizmo;
+end record;
+...
+procedure fiddle(e: in out enhanced) is
+begin fiddle(e.g) ; end ;
+
+This is equivalent to a C++ declaration where enhanced is defined as a class 
+that inherits both from old_and_reliable and from gizmo.  It does require a 
+few additional lines of Ada 9X code to obtain the same effect, but does not 
+require a complex additional feature.
+
+Finally, a common use of multiple inheritance is to provide visibility.  What 
+would be done in Ada by the use of context clauses that name several packages, 
+can be achieved in C++ by inheriting from several classes.  Here again, 
+classes play the role of Ada packages rather than that of types.
+
+We conclude that by rejecting multiple inheritance Ada 9X loses no significant 
+functionality, and gains in simplicity.
+
+                           8. Appearance Counts
+
+Ada programs read well.  This is acknowledged by all who have ever seen Ada 
+code, and it has a profound effect on program maintenance.  Readability was 
+one of the guiding criteria in the design of the syntax of Ada, and the design 
+is obviously successful.  One might say that Ada reads well because it sounds 
+right.  This not to say that Ada programmers move their lips when parsing Ada 
+code, but rather that reading carefully means hearing in one's mind, and it 
+helps if what one hears is pronounceable, in some very general sense.  Ada 
+text is dense in keywords, which some mistakenly consider noisy and redundant.  
+In fact, those keywords act as natural punctuation marks, and make program 
+reading more natural: a begin-end bracketing is more natural-sounding than 
+{..}.  The syntax of Ada 9X has the same qualities.  A few keywords have been 
+added, and others have been put to novel uses (e.g., with in type extensions), 
+but the sound of the language remains.
+
+In contrast, C and C++ emphasize ease of writing rather than ease of reading.  
+Thus a greater use of operators, of terser notations (the conditional 
+expression, for example) and an absence of keywords (most noticeably in 
+declarations).  This makes C++ programs harder to transmit and to maintain.
+
+Thus, seemingly minor considerations of surface syntax can have a profound 
+effect on the economics of using one language or another.  The readability of 
+Ada is a substantial money-saver.
+
+                8.1. The principle of minimal surprise
+
+One of the most striking aspects of the C and C++ communities is the number of 
+language idioms that are part of the programming culture.  Idioms are 
+typically short, cryptic expressions with great power (this notion of idiom is 
+most intensely developed in the APL community).  The study of idioms has 
+produced such entertaining books as [F82], and it is clear that C and C++ 
+programmers enjoy enormously the game of "guess what this computes?".  The 
+question would not be fun if the answer were not in same way unexpected!  Thus 
+these languages systematically violate the informal rule of design known as 
+the principle of minimal surprise.
+
+In contrast, this form of entertainment is completely missing from the Ada 
+culture.  Ada code does what it says, plainly.  It is interesting to compare 
+[MB92] with [f82].  A large number of the examples used Mendal and Bryan ask: 
+is the code legal?  The Ada programmer may be frustrated when his code is 
+rejected by the compiler, but he is much less likely to be surprised by the 
+behavior of code that compiles without error.
+
+                               9. Conclusions
+
+To compare Ada 9X and C++ is not easy, if for no other reason than C++ is a 
+language in flux for which no stable definition exists, no approved standard 
+reference, and no translator validation suite.  A glance at the list of 
+additions to the language since version 2.0 (see [S91]) is sufficient to 
+realize that active language design is still going on.  Of course, Ada 9X is 
+in even greater flux, but we know that the standardization mechanisms that 
+were successful from Ada83 will be in place here as well.  The ongoing ISO WG9 
+work (most recently at its meeting in Frankfurt, March 30 to April 3) ensures 
+that Ada 9X will be an international standard within a shorter time frame than 
+C++, and that the standard will have the active approval of all member 
+countries interested in programming languages for software systems.
+
+C++ is for now the promise of a good language.  It is also a number of related 
+but not identical implementations, that are being used fairly widely in the 
+software industry.  If the DoD experience of the last quarter century can be 
+distilled to a single fact, it is that lack of portability and reusability are 
+the most direct causes of runaway software costs.  The strong standardization, 
+and the resulting portability of Ada code have proved their worth many times 
+over the past decade.  The use of a less well-defined tool would be a large 
+step backwards.
+
+This being said, it would disingenuous to deny the current success of C++ in 
+the software community.  In our opinion, this success is mostly due to the 
+fact that C++ is much better than C, and for the legions of C programmers this 
+means a language that provides some measure of type checking, which is a large 
+improvement over their previous standards.  In addition, the classes of C++ 
+are a convenient tool for data abstraction and information hiding (very much 
+like Ada packages) and programmers are justifiably pleased to use them.  
+Finally, C and C++ benefit from an environment which is mostly written in the 
+same language, so that interface problems are fewer.
+
+Although the C++ community would never state it so boldly, it appears clear to 
+us that C++ is to some extent a reaction to Ada.  By extending C with some of 
+the best ideas of Ada (strong typing, exceptions, generics) C++ did in some 
+measure catch up to Ada.  Ada 9X offers the chance to leapfrog C++, by 
+extending the language in two critical areas: object-oriented programming 
+(with type extensions) and real-time programming (with protected records and 
+flexible scheduling).  This comes on top of a language with incomparable type 
+safety, (which should be contrasted with the "user beware" philosophy of C and 
+C++) and a culture that is now 10 years mature and that yields cleaner and 
+safer software than that produced with any other systems programming language.  
+Ada 9X seems well worth the wait.
+
+                                 References
+
+[AMSR] Intermetrics, Ada 9X Mapping Specification and Rationale, version 4.1 
+Boston, MA, Intermetrics, March 1992.
+
+[F82] Allan R. Feuer, The C Puzzle Book, Englewood Cliffs, NJ, Prentice-Hall, 
+1982.
+
+[H91] Cay S. Horstmann, Mastering C++, New York, Wiley and Sons, 1991.
+
+[MB92] Geoffrey O. Mendal and Douglas L. Bryan, Exploring Ada, volumes 1 and 
+2, Englewood Cliffs, NJ, Prentice-Hall, 1992.
+
+[S91] Bjarne Stroustrup, The C++ Programming Language, 2d edition.  Reading 
+MA, Addison-Wesley, 1991.
+
+                                     *****
+The views, opinions, and findings contained in this report are those of the 
+author(s) and should not be construed as an official Agency position, policy, 
+or decision, unless so designated by other official documentation.
+
+Copyright 1995.  IIT Research Institute.  All rights assigned to the US 
+Government (Ada Joint Program Office).  Permission to reprint this flyer, in 
+whole or in part, is granted, provided the AdaIC is acknowledged as the 
+source.
+
+                                     *****
+Ada Information Clearinghouse(AdaIC)
+PO Box 1866
+Falls Church, VA  22204
+Telephone:  1-800-AdaIC-11, 1-800/232-4211 or 703/681-2466
+Fax:  703/681-2869
+Email:  adainfo@sw-eng.falls-church.va.us
+
+The AdaIC is sponsored by the Ada Joint Program Office and operated by IIT 
+Research Institute.
+
+
+

@@ -1,0 +1,1 @@
+("6.1" ("2b59ab8210a583fbf37d88d11c4845923a704516" . "a28f572d8dd4fffbd73587ce10991f9eacaadbe3") (collects #"unstable" #"latent-contract.rkt") (collects #"plot" #"private" #"no-gui" #"plot-pict.rkt") (collects #"plot" #"no-gui.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

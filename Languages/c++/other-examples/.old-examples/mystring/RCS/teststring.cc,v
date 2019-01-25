@@ -1,0 +1,170 @@
+head	330.6;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+330.6
+date	2003.01.24.04.56.51;	author -;	state -;
+branches;
+next	330.5;
+
+330.5
+date	2003.01.24.04.54.58;	author -;	state -;
+branches;
+next	330.4;
+
+330.4
+date	2003.01.24.04.52.11;	author -;	state -;
+branches;
+next	330.3;
+
+330.3
+date	2003.01.24.04.50.49;	author -;	state -;
+branches;
+next	330.2;
+
+330.2
+date	2003.01.24.04.38.16;	author -;	state -;
+branches;
+next	330.1;
+
+330.1
+date	2003.01.24.04.06.22;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+330.6
+log
+@-
+@
+text
+@// $Id: teststring.cc,v 330.5 2003-01-23 20:54:58-08 - - $
+
+//
+// Tester for mystring
+//
+
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+#include "mystring.h"
+
+#define LINE "------------------------------------"
+#define DEBUG(STMT) cout << endl \
+        << LINE << LINE << endl << "DEBUG: " \
+        << __FILE__ << ":" << __LINE__ << ": " << #STMT << endl; \
+        STMT \
+        cout << LINE << LINE << endl;
+
+static const char* rcsid =
+       "$Id: teststring.cc,v 330.5 2003-01-23 20:54:58-08 - - $";
+int main( int argc, char **argv ){
+   cout << "Running " << argv[0] << endl;
+   cout << rcsid << endl;
+   DEBUG( mystring s1; )
+   DEBUG( mystring s2 = "testing from char*"; )
+   DEBUG( mystring s3 = s2; )
+   DEBUG( s1 = s3; )
+   DEBUG( s2 += s3; )
+   DEBUG( s2 += s3; )
+   DEBUG( cout << "s2.size = " << s2.size() << endl; )
+   DEBUG( mystring s4(10); )
+   DEBUG( s4 += "foo"; )
+   DEBUG( s4 += "bar"; )
+   DEBUG( s4 += "baz"; )
+   DEBUG( mystring* ptr = new mystring( "new mystring" ); )
+   DEBUG( delete ptr; ptr = 0; )
+   return EXIT_SUCCESS;
+};
+@
+
+
+330.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: teststring.cc,v 330.4 2003-01-23 20:52:11-08 - - $
+d22 1
+a22 1
+       "$Id: teststring.cc,v 330.4 2003-01-23 20:52:11-08 - - $";
+d37 1
+a37 1
+   DEBUG( mystring* ptr = new mystring( "new mystring" )
+@
+
+
+330.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: teststring.cc,v 330.3 2003-01-23 20:50:49-08 - - $
+d22 1
+a22 1
+       "$Id: teststring.cc,v 330.3 2003-01-23 20:50:49-08 - - $";
+d37 2
+@
+
+
+330.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: teststring.cc,v 330.2 2003-01-23 20:38:16-08 - - $
+d21 2
+a22 1
+char* rcsid = "$Id$";
+@
+
+
+330.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: teststring.cc,v 330.1 2003-01-23 20:06:22-08 - - $
+d14 6
+a19 1
+#define DEBUG(X) cout << endl << endl << #X << endl; X
+d21 1
+d23 2
+@
+
+
+330.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id$
+d14 2
+d17 11
+a27 6
+   mystring s1; // default null value;
+   mystring s2 = mystring( "testing from char*" );
+   mystring s3 = s1; // copy ctor from s1;
+   s1 = s3; // operator=
+   s2 += s3; // operator+=
+   int l = s2.size();
+@

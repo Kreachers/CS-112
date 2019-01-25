@@ -1,0 +1,1 @@
+("6.1" ("881a85651b4c737e2a06d4042fb7b437d4c17156" . "bc03479180b670e04e4dbdc69df7702be6973adf") (collects #"syntax" #"modcollapse.rkt") (collects #"syntax" #"modcode.rkt") (collects #"syntax" #"modread.rkt") (collects #"syntax" #"modresolve.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

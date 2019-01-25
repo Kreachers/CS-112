@@ -1,0 +1,1 @@
+("6.1" ("8fcc71db54766e78e52040a8e620f83e416a2461" . "6946190c7f6fc4cfd65985ea683f7dcf4eb589c6") (collects #"syntax" #"private" #"doctable.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

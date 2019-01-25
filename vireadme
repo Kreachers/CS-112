@@ -1,0 +1,6 @@
+#!/bin/sh
+# $Id: vireadme,v 1.1 2015-03-19 14:04:36-07 - - $
+vi Readme.all.cmps112.txt
+cid + Readme.all.cmps112.txt
+mkreadme Readme.all.cmps112.txt
+mkheader

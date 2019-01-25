@@ -1,0 +1,2 @@
+#!/bin/sh
+txt2html README.text

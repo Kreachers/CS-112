@@ -1,0 +1,1 @@
+("6.1" ("7e583248465e918ddf1b0b05e29e13cd9eb229a3" . "89763e11e3a7c46393b4451a3b580ee9842edaed") (collects #"racket" #"class.rkt") (collects #"macro-debugger" #"util" #"stxobj.rkt") (collects #"macro-debugger" #"syntax-browser" #"interfaces.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

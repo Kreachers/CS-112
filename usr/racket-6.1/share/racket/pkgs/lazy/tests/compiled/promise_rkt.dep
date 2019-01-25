@@ -1,0 +1,1 @@
+("6.1" ("28306dc656c490789d9cdc052555c292d546edc4" . "b1c900a3e49b99e4e091a6fe05e7bed8b40c174d") (collects #"racket" #"promise.rkt") (collects #"tests" #"eli-tester.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

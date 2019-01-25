@@ -1,0 +1,1 @@
+("6.1" ("2dd5cc5a560be34a72641a2a1ed6589d0619deaf" . "676c877f568f65af97c5db29dd130f31ec0354f5") (collects #"redex" #"private" #"generate-term.rkt") (collects #"redex" #"examples" #"poly-stlc.rkt") (collects #"redex" #"reduction-semantics.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"bool.rkt") (collects #"racket" #"base.rkt"))

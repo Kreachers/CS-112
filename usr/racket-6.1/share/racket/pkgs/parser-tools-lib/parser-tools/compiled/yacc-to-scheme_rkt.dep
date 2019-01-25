@@ -1,0 +1,1 @@
+("6.1" ("08ebd28ecd02ac885b2bd2f3e74032087ada918f" . "92c0f909ddf0e9cb2705822d397d8ef3365d23ed") (collects #"mzscheme" #"main.rkt") (collects #"syntax" #"readerr.rkt") (collects #"parser-tools" #"lex.rkt") (collects #"parser-tools" #"lex-sre.rkt") (collects #"mzlib" #"list.rkt") (collects #"parser-tools" #"yacc.rkt"))

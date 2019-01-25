@@ -1,0 +1,1 @@
+("6.1" ("7196c1a663b59e2b795135191cca948a94a211b4" . "25fc3fe85342be2e2eacd013980e96f42ce783b4") (collects #"file" #"gzip.rkt") (collects #"file" #"gunzip.rkt") (collects #"racket" #"cmdline.rkt") (collects #"net" #"base64.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

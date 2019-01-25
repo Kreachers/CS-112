@@ -1,0 +1,1 @@
+("6.1" ("00e280ce2b4a7e831b565795aa9be66a49b4cfd8" . "4a10dc6e5fe1aa2ea012160f9a8e045dcc0efa5d") (collects #"setup" #"option.rkt") (collects #"compiler" #"compiler.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"launcher" #"launcher.rkt") (collects #"setup" #"setup-core.rkt"))

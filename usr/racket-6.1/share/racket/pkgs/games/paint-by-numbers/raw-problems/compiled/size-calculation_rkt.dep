@@ -1,0 +1,1 @@
+("6.1" ("8a4f505ac9eebcfc57f88564b1d3e466de892dbf" . "1108b3dc9ecc3824cb9ac7f025d89ea36b28a39b") (collects #"games" #"paint-by-numbers" #"raw-problems" #"raw-hattori.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt"))

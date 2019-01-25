@@ -1,0 +1,1 @@
+("6.1" ("e2cc40528ed8f397053712ea4f6c359fa8e8e611" . "2f4c23d36008522d0f7e3a75b37e46bf27d01aa9") (collects #"mzscheme" #"main.rkt") (collects #"mzlib" #"file.rkt") (collects #"algol60" #"simplify.rkt") (collects #"algol60" #"parse.rkt") (collects #"algol60" #"runtime.rkt") (collects #"algol60" #"prims.rkt") (collects #"algol60" #"compile.rkt"))

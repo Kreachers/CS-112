@@ -1,0 +1,70 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+1.1
+date	2008.01.29.01.56.42;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@// $Id: asciitable.cc,v 320.2 2008-01-28 17:44:00-08 - - $
+//
+// NAME
+//    asciitable - print the ascii charset
+//
+// SYNOPSIS
+//    asciitable
+//
+// DESCRIPTION
+//    Prints the ascii charset in decimal, octal, and hexadecimal,
+//    along with the character if it is printable.  This program
+//    illustrates how to print numbers in different bases and with
+//    leading zeros.
+//
+
+#include <cctype>
+#include <cstdlib>
+#include <iomanip>
+#include <iostream>
+
+using namespace std;
+
+const int rows = 32;
+const int cols =  4;
+
+int main (int argc, char **argv) {
+   for (int row = 0; row < rows; row += 1) {
+      for (int col = 0; col < cols; col += 1) {
+         int byte = row + col * rows;
+         cout << "   "
+              << setw(4) << setfill(' ') << setbase(10) << byte
+              << " " 
+              << setw(3) << setfill('0') << setbase( 8) << byte
+              << " " 
+              << setw(2) << setfill('0') << setbase(16) << byte
+              << " ";
+         if (isprint (byte)) {
+            cout << "'" << static_cast<char>(byte) << "'";
+         }else{
+            cout << "...";
+         };
+      };
+      cout << endl;
+   };
+
+   return EXIT_SUCCESS;
+};
+@

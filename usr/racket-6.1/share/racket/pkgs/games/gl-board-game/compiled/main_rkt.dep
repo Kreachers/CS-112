@@ -1,0 +1,1 @@
+("6.1" ("bde662bc40c21a4aac945e86ab92c605cd653319" . "b7cb7c865e71964c4f7aaecf20bb39134389afdb") (collects #"games" #"gl-board-game" #"gl-board.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

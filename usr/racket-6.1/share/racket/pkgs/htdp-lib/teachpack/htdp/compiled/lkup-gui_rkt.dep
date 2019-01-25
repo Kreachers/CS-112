@@ -1,0 +1,1 @@
+("6.1" ("443ac51b77077b22078c24cee5a2aff072225cb0" . "4343be3b4a2d4bd1a1269ec3b18ae8693685c1b5") (collects #"htdp" #"lkup-gui.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

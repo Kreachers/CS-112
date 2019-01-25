@@ -1,0 +1,1 @@
+("6.1" ("0e0ece00d72ea97219cf5a174fa4267213849dff" . "0a1acab5049cc41b56be72fceb8e62f6bba94740") (collects #"texpict" #"face.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

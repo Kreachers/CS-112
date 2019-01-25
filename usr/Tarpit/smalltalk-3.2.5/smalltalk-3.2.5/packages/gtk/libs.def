@@ -1,0 +1,11 @@
+_gst_vm_proxy->dlOpen("libatk-1.0", false);
+_gst_vm_proxy->dlOpen("libgdk-x11-2.0", false);
+_gst_vm_proxy->dlOpen("libgdk_pixbuf-2.0", false);
+_gst_vm_proxy->dlOpen("libgio-2.0", false);
+_gst_vm_proxy->dlOpen("libglib-2.0", false);
+_gst_vm_proxy->dlOpen("libgobject-2.0", false);
+_gst_vm_proxy->dlOpen("libgthread-2.0", false);
+_gst_vm_proxy->dlOpen("libgtk-x11-2.0", false);
+_gst_vm_proxy->dlOpen("libpango-1.0", false);
+_gst_vm_proxy->dlOpen("libpangocairo-1.0", false);
+_gst_vm_proxy->dlOpen("libpangoft2-1.0", false);

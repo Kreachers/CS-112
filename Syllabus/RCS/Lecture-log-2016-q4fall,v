@@ -1,0 +1,526 @@
+head	1.25;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.25
+date	2016.12.01.00.49.38;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2016.11.29.21.42.39;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2016.11.28.21.50.39;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2016.11.22.22.03.25;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2016.11.17.22.57.01;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2016.11.16.00.12.02;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2016.11.10.21.16.24;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2016.11.08.19.47.00;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2016.11.01.21.18.41;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2016.10.28.00.19.18;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2016.10.25.19.40.20;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2016.10.20.22.07.38;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2016.10.18.19.20.18;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2016.10.13.19.36.35;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2016.10.13.18.35.25;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2016.10.11.21.10.54;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2016.10.06.21.45.46;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2016.10.04.21.27.18;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2016.09.30.22.16.19;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2016.09.30.20.12.22;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2016.09.28.19.55.09;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2016.09.14.20.54.37;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2016.09.09.21.40.59;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2016.09.06.23.21.29;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2016.09.01.20.49.15;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.25
+log
+@-
+@
+text
+@
+Fall 2016
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Mon Sep 26 - syllabus; 01-introduction.pdf; 02-history.pdf
+ 2. Wed Sep 28 - scheme-1-language.pdf (p.1--8); scheme/Examples/
+
+week  2:
+ 4. Mon Oct  3 - proj1 spec; Examples/*hash*; scheme-1-language
+ 5. Wed Oct  5 - scheme-2-higherorder.pdf
+
+week  3:
+ 7. Mon Oct 10 - 100 lines ocaml; ocaml-1-notes(1-9); ocaml/Examples
+ 8. Wed Oct 12 - ocaml/Examples; ocaml-1-notes; project 2
+
+week  4:
+10. Mon Oct 17 - proj 2, mul, div, muldivrem-trace.ml; ocaml-1-notes
+11. Wed Oct 19 - ocaml-2-higherorder.pdf; 03-design.pdf
+
+week  5:
+13. Mon Oct 24 - lambda-calculus; intro Smalltalk; Examples
+14. Wed Oct 26 - angelfire-notes-smalltalk; Examples
+
+week  6:
+16. Mon Oct 31 - asg3-smalltalk-hzip; 05-basic-semantics
+17. Wed Nov  2 - MIDTERM TEST.
+
+week  7:
+19. Mon Nov  7 - data-types.pdf; expressions-statements.pdf
+20. Wed Nov  9 - procedures-environments.pdf; object-oriented OOP
+
+week  8:
+22. Mon Nov 14 - Prolog (Endriss); Prolog (Examples)
+23. Wed Nov 16 - Prolog (notes); asg4-prolog-flights
+
+week  9:
+25. Mon Nov 21 - lazy eval; Haskell; parallel prog; APL
+26. Wed Nov 23 - perl
+
+week 10:
+28. Mon Nov 28 - Perl; exam review
+29. Wed Nov 30 - exam review
+
+$Id: Lecture-log-2016-q4fall,v 1.24 2016-11-29 13:42:39-08 - - $
+@
+
+
+1.24
+log
+@-
+@
+text
+@d43 1
+a43 1
+29. Wed Nov 30 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.23 2016-11-28 13:50:39-08 - - $
+@
+
+
+1.23
+log
+@-
+@
+text
+@d42 1
+a42 1
+28. Mon Nov 28 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.22 2016-11-22 14:03:25-08 - - $
+@
+
+
+1.22
+log
+@-
+@
+text
+@d39 1
+a39 1
+26. Wed Nov 23 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.21 2016-11-17 14:57:01-08 - - $
+@
+
+
+1.21
+log
+@-
+@
+text
+@d38 1
+a38 1
+25. Mon Nov 21 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.20 2016-11-15 16:12:02-08 - - $
+@
+
+
+1.20
+log
+@-
+@
+text
+@d31 1
+a31 1
+20. Wed Nov  9 - procedures-environments.pdf; object-oriented.pdf
+d35 1
+a35 1
+23. Wed Nov 16 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.19 2016-11-10 13:16:24-08 - - $
+@
+
+
+1.19
+log
+@-
+@
+text
+@d34 1
+a34 1
+22. Mon Nov 14 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.18 2016-11-08 11:47:00-08 - - $
+@
+
+
+1.18
+log
+@-
+@
+text
+@d31 1
+a31 1
+20. Wed Nov  9 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.17 2016-11-01 14:18:41-07 - - $
+@
+
+
+1.17
+log
+@-
+@
+text
+@d30 1
+a30 1
+19. Mon Nov  7 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.16 2016-10-27 17:19:18-07 - - $
+@
+
+
+1.16
+log
+@-
+@
+text
+@d26 1
+a26 1
+16. Mon Oct 31 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.15 2016-10-25 12:40:20-07 - - $
+@
+
+
+1.15
+log
+@-
+@
+text
+@d22 2
+a23 2
+13. Mon Oct 24 - lambda-calculus; intro Smalltalk
+14. Wed Oct 26 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.14 2016-10-20 15:07:38-07 - - $
+@
+
+
+1.14
+log
+@-
+@
+text
+@d22 1
+a22 1
+13. Mon Oct 24 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.13 2016-10-18 12:20:18-07 - - $
+@
+
+
+1.13
+log
+@-
+@
+text
+@d19 1
+a19 1
+11. Wed Oct 19 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.12 2016-10-13 12:36:35-07 - - $
+@
+
+
+1.12
+log
+@-
+@
+text
+@d18 1
+a18 1
+10. Mon Oct 17 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.11 2016-10-13 11:35:25-07 - - $
+@
+
+
+1.11
+log
+@-
+@
+text
+@d27 1
+a27 1
+17. Wed Nov  2 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.10 2016-10-11 14:10:54-07 - - $
+@
+
+
+1.10
+log
+@-
+@
+text
+@d15 1
+a15 1
+ 8. Wed Oct 12 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.9 2016-10-06 14:45:46-07 - - $
+@
+
+
+1.9
+log
+@-
+@
+text
+@d14 1
+a14 1
+ 7. Mon Oct 10 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.8 2016-10-04 14:27:18-07 - - $
+@
+
+
+1.8
+log
+@-
+@
+text
+@d10 2
+a11 2
+ 4. Mon Oct  3 - proj1 spec; Examples/*hash*; scheme-1-language (9-14)
+ 5. Wed Oct  5 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.7 2016-09-30 15:16:19-07 - - $
+@
+
+
+1.7
+log
+@-
+@
+text
+@d10 1
+a10 1
+ 4. Mon Oct  3 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.6 2016-09-30 13:12:22-07 - - $
+@
+
+
+1.6
+log
+@-
+@
+text
+@d7 1
+a7 1
+ 2. Wed Sep 28 - scheme-1-language.pdf (p.1..8); scheme/Examples/
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.5 2016-09-28 12:55:09-07 - - $
+@
+
+
+1.5
+log
+@-
+@
+text
+@d7 1
+a7 1
+ 2. Wed Sep 28 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.4 2016-09-14 13:54:37-07 - - $
+@
+
+
+1.4
+log
+@-
+@
+text
+@d6 1
+a6 1
+ 1. Mon Sep 26 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.3 2016-09-09 14:40:59-07 - - $
+@
+
+
+1.3
+log
+@-
+@
+text
+@d31 1
+a31 1
+20. Wed Nov  9 - MIDTERM TEST.
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.2 2016-09-06 16:21:29-07 - - $
+@
+
+
+1.2
+log
+@-
+@
+text
+@d31 1
+a31 1
+20. Wed Nov  9 -
+d45 1
+a45 1
+$Id: Lecture-log-2016-q4fall,v 1.1 2016-09-01 13:49:15-07 - - $
+@
+
+
+1.1
+log
+@-
+@
+text
+@d5 41
+a45 1
+$Id$
+@

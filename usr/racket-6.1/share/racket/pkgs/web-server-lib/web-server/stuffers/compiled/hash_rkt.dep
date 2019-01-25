@@ -1,0 +1,1 @@
+("6.1" ("c06afa64170134bb72533af6d2bb4382bb1caa1c" . "cf901b731c38f0dec845981daeae96492ad49986") (collects #"web-server" #"stuffers" #"store.rkt") (collects #"racket" #"contract.rkt") (collects #"file" #"md5.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"web-server" #"stuffers" #"stuffer.rkt"))

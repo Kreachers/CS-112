@@ -1,0 +1,146 @@
+head	19981215.73332;
+access;
+symbols;
+locks
+	wmackey:19981215.73332; strict;
+comment	@# @;
+
+
+19981215.73332
+date	98.12.15.15.33.35;	author wmackey;	state Exp;
+branches;
+next	19981208.112152;
+
+19981208.112152
+date	98.12.08.19.21.54;	author wmackey;	state Exp;
+branches;
+next	19981207.212858;
+
+19981207.212858
+date	98.12.08.05.29.00;	author wmackey;	state Exp;
+branches;
+next	19981207.211840;
+
+19981207.211840
+date	98.12.08.05.18.43;	author wmackey;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+19981215.73332
+log
+@*** empty log message ***
+@
+text
+@##!$RCSfile: Links.txt,v $$Revision: 19981208.112152 $!|HREFS.README
+* Programming Tutorials|http://www.eng.uc.edu/~jtilley/tutorial.html
+Ada at SE Lab of Swiss Fed Inst Tech|http://lglwww.epfl.ch/Ada/
+Ada, C, C++, and Java vs Steelman (Wheeler)|http://www.adahome.com/History/Steelman/steeltab.htm
+C language, development of (Ritchie)|http://cm.bell-labs.com/cm/cs/doc/92/1-13.ps.gz
+C traps and pitfalls (Koenig)|http://cm.bell-labs.com/cm/cs/cstr/123.ps.gz
+C++ critique, programming language trends of the 1990s (Joyner)|ftp://ftp.brown.edu/pub/c++/C++-Critique-3ed.PS
+Cathedral and the Bazaar|http://www.tuxedo.org/~esr/writings/cathedral-bazaar/
+Cobol, Smalltalk, C++|http://www.tiac.net/users/jsuth/papers/oocobol.html
+Coding Standards|http://www-cad.eecs.berkeley.edu/~wbaker/coding-standards/
+Critiques of programming languages|http://www.ai.mit.edu/people/pdp8/critiques/critiques.html
+Csh programming considered harmful|http://www.cis.ohio-state.edu/hypertext/faq/usenet/unix-faq/shell/csh-whynot/faq.html
+Eiffel .com|http://www.eiffel.com/
+Eiffel: the page|http://www.cm.cf.ac.uk/CLE/
+Fortran 90 and Computational Science|http://csep1.phy.ornl.gov/pl/pl.html
+Garbage coll, C & C++|http://reality.sgi.com/employees/boehm_mti/gc.html
+Garbage coll, THE page|http://stork.ukc.ac.uk/computer_science/Html/Jones/gc.html
+Garbage coll, faster than stack (Appel)|http://www.cs.princeton.edu/~appel/papers/45.ps
+Garbage coll, generational (Appel)|http://www.cs.princeton.edu/~appel/papers/143.ps
+Garbage coll, uniprocessor techniques (Wilson)|ftp://ftp.cs.utexas.edu/pub/garbage/bigsurv.ps
+Garbage coll|http://www.geodesic.com/garbage/garbage_links.html
+HTML-3.2 spec|http://www.w3.org/pub/WWW/TR/REC-html32.html
+INTERCAL|http://www.ccil.org/intercal/
+Icon @@arizona.edu|http://www.cs.arizona.edu/icon/
+Java Cookbook, C++|http://www.taligent.com/Technology/WhitePapers/PortingPaper/index.html
+Java FAQ (comp.lang.java)|http://sunsite.unc.edu/javafaq/javafaq.html
+Java cmps060g notes|http://www.cse.ucsc.edu/~charlie/classes/60g/spring97/notes/big.html
+Java language specification|http://java.sun.com/docs/language_specification.html
+Java tutorial (Cup o' Joe)|http://www.cupojoe.com/referenc/tutorials/
+Java tutorial (Javasoft)|http://www.javasoft.com/nav/read/Tutorial/
+Javasoft .com/|http://www.javasoft.com/
+Language Levels (function points)|http://www.spr.com/library/0langtbl.htm
+Language List, all known|http://cuiwww.unige.ch/langlist
+Limbo Dis Styx Inferno (Lucent)|http://inferno.lucent.com/inferno/
+Limbo programming language|http://inferno.lucent.com/inferno/limbo.html
+Limbo, descent into (Kernighan)|http://inferno.lucent.com/inferno/limbotut.html
+MMIX 2009 RISC (Knuth)|http://www-cs-faculty.Stanford.EDU/~knuth/mmix.html
+OO 16 ways to Stack a cat (Stroustrup)|http://cm.bell-labs.com/cm/cs/cstr/161.ps.gz
+OO programming, what is (Stroustrup)|http://cm.bell-labs.com/cm/cs/cstr/160.ps.gz
+OO programming|http://www.zgdv.de/www/zgdv-uig/papers/se/oop/
+Pascal is not my favorite programming language, why (Kernighan)|http://cm.bell-labs.com/cm/cs/cstr/100.ps.gz
+Perl .com|http://www.perl.com/
+Perl .org|http://www.perl.org/
+Perl resources @@missouri.edu|http://www.phlab.missouri.edu/things/instruction/perl/
+Pic, Graphics language for typesetting (Kernighan)|http:http://cm.bell-labs.com/cm/cs/cstr/116.ps.gz
+Postscript, first guide|http://grouchy.cs.indiana.edu/docproject/programming/postscript/postscript.html
+Research, programming languages|http://www.cs.cmu.edu/afs/cs.cmu.edu/project/fox/mosaic/people/mleone/language-research.html
+Retrocomputing Museum|http://www.ccil.org/retro/retromuseum.html
+SML FAQ|http://www.cis.ohio-state.edu/hypertext/faq/usenet/meta-lang-faq/faq.html
+SML documentation|http://www.deas.harvard.edu/courses/cs153/ML/SML-93-docs/SML.html
+SML gentle intro (Cumming)|http://fas.sfu.ca/cs/LocalDoc/Software/ML/giml/manual.html
+SML gentle intro (Cumming)|http://www.dcs.napier.ac.uk/course-notes/sml/manual.html
+SML information (foxnet)|http://foxnet.cs.cmu.edu/sml.html
+SML intro (Harper)|http://www.cs.cmu.edu/afs/cs.cmu.edu/project/fox/mosaic/intro-notes.ps
+SML lectures (Tofte)|ftp://ftp.diku.dk/pub/diku/users/tofte/FourLectures/
+SQL tutorial|http://w3.one.net/~jhoffman/sqltut.htm
+Sather home page|http://www.icsi.berkeley.edu/~sather/
+Threads, programming (Birrell)|ftp://gatekeeper.dec.com/pub/DEC/SRC/research-reports/SRC-035.ps.Z
+Troff user's manual (Ossanna)|http://cm.bell-labs.com/cm/cs/cstr/54.ps.gz
+Typesetter-Independent Troff (Kernighan)|http://cm.bell-labs.com/cm/cs/cstr/97.ps.gz
+@
+
+
+19981208.112152
+log
+@*** empty log message ***
+@
+text
+@d1 1
+a1 1
+##!$RCSfile: Links.txt,v $$Revision: 19981207.212858 $!|HREFS.README
+d8 1
+d32 1
+a41 1
+Pic, Graphics language for typesetting (Kernighan)|http:http://cm.bell-labs.com/cm/cs/cstr/116.ps.gz
+d45 1
+a60 1
+Language Levels (function points)|http://www.spr.com/library/0langtbl.htm
+@
+
+
+19981207.212858
+log
+@*** empty log message ***
+@
+text
+@d1 1
+a1 1
+##!$RCSfile: Links.txt,v $$Revision: 19981207.211840 $!|HREFS.README
+d5 1
+a5 1
+C language, development of (Ritchie)|http://www.lysator.liu.se/c/chistory
+d40 1
+d57 3
+a59 1
+Troff user's manual|http://cm.bell-labs.com/cm/cs/cstr/54.ps.gz
+@
+
+
+19981207.211840
+log
+@*** empty log message ***
+@
+text
+@d1 2
+a2 1
+!$RCSfile: HREFS.README,v $$Revision: 19981207.211707 $!|HREFS.README
+@

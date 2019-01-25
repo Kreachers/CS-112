@@ -1,0 +1,1 @@
+("6.1" ("f59523219e5cc4a79edd7d35d8ea1dfb1fd50ffb" . "3e853e1efbdbb7156cb10486886c9048fd9333fb") (collects #"htdp" #"hangman.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

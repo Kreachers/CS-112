@@ -1,0 +1,265 @@
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin; then : ; \
+	  else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin; fi
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; then : ; \
+	  else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; fi
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/stublibs; then : ; \
+	  else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/stublibs; fi
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/compiler-libs; then : ; \
+	  else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/compiler-libs; fi
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/man/man1; then : ; \
+	  else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/man/man1; fi
+cp VERSION /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; rm -f dllbigarray.so dllnums.so dllthreads.so \
+	  dllunix.so dllgraphics.so dllstr.so
+cd byterun; make install
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/byterun'
+cp ocamlrun /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlrun
+cp libcamlrun.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/libcamlrun.a
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libcamlrun.a
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/caml; then : ; \
+	  else mkdir /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/caml; fi
+for i in alloc.h callback.h config.h custom.h fail.h hash.h intext.h memory.h misc.h mlvalues.h printexc.h signals.h compatibility.h version.h; do \
+	  sed -f ../tools/cleanup-header $i > /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/caml/$i; \
+	done
+cp ld.conf /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ld.conf
+if test -f libcamlrun_shared.so; then \
+	  cp libcamlrun_shared.so /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/libcamlrun_shared.so; fi
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/byterun'
+cp ocamlc /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlc
+cp ocaml /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocaml
+cd stdlib; make install
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+cp stdlib.cma std_exit.cmo *.cmi *.mli *.ml camlheader camlheader_ur \
+	  /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+cp lex/ocamllex /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamllex
+cp yacc/ocamlyacc /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlyacc
+cp utils/*.cmi parsing/*.cmi typing/*.cmi bytecomp/*.cmi driver/*.cmi \
+	   toplevel/*.cmi /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/compiler-libs
+cp compilerlibs/ocamlcommon.cma compilerlibs/ocamlbytecomp.cma \
+	   compilerlibs/ocamltoplevel.cma driver/main.cmo toplevel/topstart.cmo \
+	   /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/compiler-libs
+cp expunge /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/expunge
+cp toplevel/topdirs.cmi /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml
+cd tools; make install
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+cp ocamldep /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamldep
+if test -f ocamldep.opt; \
+	  then cp ocamldep.opt /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamldep.opt; else :; fi
+cp ocamlprof /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlprof
+cp ocamlcp /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlcp
+cp ocamloptp /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamloptp
+cp profiling.cmi profiling.cmo /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml
+cp ocamlmklib /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlmklib
+cp objinfo /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlobjinfo
+cp objinfo_helper /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/objinfo_helper
+cp ocamlmktop /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+cd man; make install
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/man'
+for i in *.m; do cp $i /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/man/man1/`basename $i .m`.1; done
+echo '.so man1/ocamlc.1' \
+	     > /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/man/man1/ocamlc.opt.1
+echo '.so man1/ocamlopt.1' \
+	     > /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/man/man1/ocamlopt.opt.1
+echo '.so man1/ocamlcp.1' \
+	     > /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/man/man1/ocamloptp.1
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/man'
+for i in unix str num dynlink bigarray systhreads threads graph; do \
+	  (cd otherlibs/$i; make install) || exit $?; \
+	done
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+if test -f dllunix.so; then \
+	  cp dllunix.so /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/stublibs/; fi
+cp libunix.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libunix.a
+cp unix.cma unix.cmi unixLabels.cmi unix.mli unixLabels.mli /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+if test -n "unixsupport.h socketaddr.h"; then cp unixsupport.h socketaddr.h /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/caml/; fi
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+if test -f dllcamlstr.so; then \
+	  cp dllcamlstr.so /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/stublibs/; fi
+cp libcamlstr.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libcamlstr.a
+cp str.cma str.cmi str.mli /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+if test -n ""; then cp  /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/caml/; fi
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+if test -f dllnums.so; then \
+	  cp dllnums.so /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/stublibs/; fi
+cp libnums.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libnums.a
+cp nums.cma big_int.cmi nat.cmi num.cmi ratio.cmi arith_status.cmi big_int.mli nat.mli num.mli ratio.mli arith_status.mli /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+if test -n ""; then cp  /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/caml/; fi
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+cp dynlink.cmi dynlink.cma dynlink.mli /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml
+cp extract_crc /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/extract_crc
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+if test -f dllbigarray.so; then \
+	  cp dllbigarray.so /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/stublibs/; fi
+cp libbigarray.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libbigarray.a
+cp bigarray.cma bigarray.cmi bigarray.mli /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+if test -n "bigarray.h"; then cp bigarray.h /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/caml/; fi
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+if test -f dllthreads.so; then \
+	  cp dllthreads.so /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/stublibs/dllthreads.so; fi
+cp libthreads.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/libthreads.a
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libthreads.a
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/threads; then :; \
+	  else mkdir /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/threads; fi
+cp thread.cmi mutex.cmi condition.cmi event.cmi threadUnix.cmi threads.cma /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/threads
+rm -f /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/threads/stdlib.cma
+cp thread.mli mutex.mli condition.mli event.mli threadUnix.mli \
+	   /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml
+cp threads.h /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/caml/threads.h
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+if test -f dllvmthreads.so; then cp dllvmthreads.so /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/stublibs/.; fi
+mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/vmthreads
+cp libvmthreads.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/vmthreads/libvmthreads.a
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/vmthreads; ranlib libvmthreads.a
+cp thread.cmi mutex.cmi condition.cmi event.cmi threadUnix.cmi \
+	   threads.cma stdlib.cma unix.cma /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/vmthreads
+cp thread.mli mutex.mli condition.mli event.mli threadUnix.mli \
+	   /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/vmthreads
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+if test -f dllgraphics.so; then \
+	  cp dllgraphics.so /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/stublibs/; fi
+cp libgraphics.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libgraphics.a
+cp graphics.cma graphics.cmi graphicsX11.cmi graphics.mli graphicsX11.mli /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+if test -n ""; then cp  /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/caml/; fi
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+if test -n "ocamldoc"; then (cd ocamldoc; make install); else :; fi
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin; then : ; else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin; fi
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc; then : ; else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc; fi
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc/custom; then : ; else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc/custom; fi
+cp -f ocamldoc /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamldoc
+cp -f ocamldoc.hva *.cmi odoc_info.cma /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc
+cp -f odoc_info.mli odoc_info.cmi /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/man/man3; then : ; else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/man/man3; fi
+if test -d stdlib_man; then cp -f stdlib_man/* /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/man/man3; else : ; fi
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+if test -n "ocamldebugger"; then (cd debugger; make install); \
+	   else :; fi
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/debugger'
+cp ocamldebug /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamldebug
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/debugger'
+if test -n "ocamlbuild"; then (cd ocamlbuild; make install); \
+	   else :; fi
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+cp ocamlbuild.byte /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlbuild
+cp ocamlbuild.byte /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlbuild.byte
+mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamlbuild
+cp ocamlbuildlib.cma ocamlbuild.cmo ocamlbuild_pack.cmi ocamlbuild_plugin.cmi ocamlbuild_executor.cmi ocamlbuild_unix_plugin.cmi /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamlbuild/
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+cp config/Makefile /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/Makefile.config
+if test -f ocamlopt; then make installopt; else :; fi
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd asmrun; make install
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/asmrun'
+cp libasmrun.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/libasmrun.a
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libasmrun.a
+cp libasmrunp.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/libasmrunp.a
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libasmrunp.a
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/asmrun'
+cp ocamlopt /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlopt
+cd stdlib; make installopt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+cp stdlib.cmxa stdlib.a std_exit.o *.cmx /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib stdlib.a
+cp stdlib.p.cmxa stdlib.p.a std_exit.p.cmx std_exit.p.o /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib stdlib.p.a
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+cp asmcomp/*.cmi /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/compiler-libs
+cp compilerlibs/ocamloptcomp.cma driver/optmain.cmo /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/compiler-libs
+if test -n "ocamldoc"; then (cd ocamldoc; make installopt); \
+		else :; fi
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+if test -f ocamldoc.opt; then make installopt_really ; fi
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin; then : ; else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin; fi
+if test -d /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc; then : ; else mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc; fi
+cp -f ocamldoc.opt /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamldoc.opt
+cp -f ocamldoc.hva odoc_info.a odoc_info.cmxa /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc
+cp -f odoc_info.mli odoc_info.cmi /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamldoc
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+if test -n "ocamlbuild"; then (cd ocamlbuild; make installopt); \
+	   else :; fi
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+if test -f ocamlbuild.native; then make installopt_really; fi
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+cp ocamlbuild.native /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlbuild
+cp ocamlbuild.native /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlbuild.native
+mkdir -p /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamlbuild
+cp ocamlbuildlib.cmxa ocamlbuildlib.a ocamlbuild.cmx ocamlbuild.o ocamlbuild_pack.cmx ocamlbuild_plugin.cmx ocamlbuild_executor.cmx ocamlbuild_unix_plugin.cmx ocamlbuild_plugin.o ocamlbuild_executor.o ocamlbuild_unix_plugin.o /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/ocamlbuild/
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+for i in unix str num dynlink bigarray systhreads threads graph; \
+	  do (cd otherlibs/$i; make installopt) || exit $?; done
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+cp unix.cmx unixLabels.cmx unix.cmxa unix.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib unix.a
+if test -f unix.cmxs; then cp unix.cmxs /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/; fi
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+cp str.cmx str.cmxa str.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib str.a
+if test -f str.cmxs; then cp str.cmxs /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/; fi
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+cp int_misc.cmx nat.cmx big_int.cmx arith_flags.cmx ratio.cmx num.cmx arith_status.cmx nums.cmxa nums.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib nums.a
+if test -f nums.cmxs; then cp nums.cmxs /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/; fi
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+if true; then \
+	  cp dynlink.cmx dynlink.cmxa dynlink.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml && \
+	  cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml && ranlib dynlink.a; \
+	fi
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+cp bigarray.cmx bigarray.cmxa bigarray.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib bigarray.a
+if test -f bigarray.cmxs; then cp bigarray.cmxs /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/; fi
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+cp libthreadsnat.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/libthreadsnat.a
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib libthreadsnat.a
+cp thread.cmx mutex.cmx condition.cmx event.cmx threadUnix.cmx threads.cmxa threads.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/threads
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/threads; ranlib threads.a
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Nothing to be done for `installopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+cp graphics.cmx graphicsX11.cmx graphics.cmxa graphics.a /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml; ranlib graphics.a
+if test -f graphics.cmxs; then cp graphics.cmxs /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/; fi
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+if test -f ocamlopt.opt ; then make installoptopt; fi
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cp ocamlc.opt /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlc.opt
+cp ocamlopt.opt /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamlopt.opt
+cp lex/ocamllex.opt /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/bin/ocamllex.opt
+cp compilerlibs/ocamlcommon.cmxa compilerlibs/ocamlcommon.a \
+	   compilerlibs/ocamlbytecomp.cmxa compilerlibs/ocamlbytecomp.a \
+	   compilerlibs/ocamloptcomp.cmxa compilerlibs/ocamloptcomp.a \
+	   driver/main.cmx driver/main.o \
+	   driver/optmain.cmx driver/optmain.o \
+	   /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/compiler-libs
+cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml/compiler-libs && ranlib ocamlcommon.a ocamlbytecomp.a \
+	   ocamloptcomp.a
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd tools; make installopt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+cp profiling.cmx profiling.o /afs/cats.ucsc.edu/courses/cmps112-wm/usr/ocaml-4.02.1/lib/ocaml
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'

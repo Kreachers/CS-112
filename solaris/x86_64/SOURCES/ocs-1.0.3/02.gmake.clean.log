@@ -1,0 +1,2 @@
+rm -f ocs.cmxa ocs.cma ocs.a ocscm *.cm* *.o
+rm -f ocscm-bc

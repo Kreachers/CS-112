@@ -1,0 +1,349 @@
+head	1.14;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.14
+date	2017.11.10.05.09.29;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2017.11.03.21.23.21;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2017.11.01.19.36.30;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2017.10.27.23.19.22;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2017.10.25.21.44.05;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2017.10.20.20.38.12;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2017.10.18.22.21.03;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2017.10.13.20.55.45;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2017.10.11.20.06.21;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2017.10.06.19.47.49;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2017.10.04.21.23.33;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2017.09.29.19.51.13;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2017.08.21.22.14.38;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2017.08.21.22.06.10;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.14
+log
+@-
+@
+text
+@
+Fall 2017
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Thu Sep 28 - intro; syllabus; 01-introduction; 02-history
+ 2. Tue Oct  3 - scheme-1-language; Languages/scheme/Examples/
+
+week  2:
+ 4. Thu Oct  5 - proj1 Scheme, Examples; scheme-2-higherorder
+ 5. Tue Oct 10 - scheme-2-higherorder; EWD
+
+week  3:
+ 7. Thu Oct 12 - lambda-calculus; 03-design; 100 lines of caml
+ 8. Tue Oct 17 - ocaml-1-notes; ocaml/Examples
+
+week  4:
+10. Thu Oct 19 - ocaml-1-notes; asg2-ocaml-dc project
+11. Tue Oct 24 - finish asg2 project; ocaml-2-higherorder (1-6)
+
+week  5:
+13. Thu Oct 26 - ocaml-2-higherorder; 05-basic-semantics (1--7)
+14. Tue Oct 31 - 05-basic-semantics.pdf; data-types.pdf
+
+week  6:
+16. Thu Nov  2 - Smalltalk: written notes; Languages/smalltalk/Examples
+17. Tue Nov  7 - MIDTERM TEST.
+
+week  7:
+19. Thu Nov  9 - proj3 spec; Examples: bit IO, Tree, finish.
+20. Tue Nov 14 -
+
+week  8:
+22. Thu Nov 16 -
+23. Tue Nov 21 -
+
+week  9:
+25. Tue Nov 28 -
+26. Thu Nov 30 -
+
+week 10:
+28. Tue Dec  5 -
+29. Thu Dec  7 -
+
+$Id: Lecture-log-2017-q4fall,v 1.13 2017-11-03 14:23:21-07 - - $
+@
+
+
+1.13
+log
+@-
+@
+text
+@d30 1
+a30 1
+19. Thu Nov  9 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.12 2017-11-01 12:36:30-07 - - $
+@
+
+
+1.12
+log
+@-
+@
+text
+@d26 1
+a26 1
+16. Thu Nov  2 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.11 2017-10-27 16:19:22-07 - - $
+@
+
+
+1.11
+log
+@-
+@
+text
+@d23 1
+a23 1
+14. Tue Oct 31 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.10 2017-10-25 14:44:05-07 - - $
+@
+
+
+1.10
+log
+@-
+@
+text
+@d22 1
+a22 1
+13. Thu Oct 26 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.9 2017-10-20 13:38:12-07 - - $
+@
+
+
+1.9
+log
+@-
+@
+text
+@d19 1
+a19 1
+11. Tue Oct 24 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.8 2017-10-18 15:21:03-07 - - $
+@
+
+
+1.8
+log
+@-
+@
+text
+@d18 1
+a18 1
+10. Thu Oct 19 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.7 2017-10-13 13:55:45-07 - - $
+@
+
+
+1.7
+log
+@-
+@
+text
+@d15 1
+a15 1
+ 8. Tue Oct 17 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.6 2017-10-11 13:06:21-07 - - $
+@
+
+
+1.6
+log
+@-
+@
+text
+@d14 1
+a14 1
+ 7. Thu Oct 12 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.5 2017-10-06 12:47:49-07 - - $
+@
+
+
+1.5
+log
+@-
+@
+text
+@d11 1
+a11 1
+ 5. Tue Oct 10 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.4 2017-10-04 14:23:33-07 - - $
+@
+
+
+1.4
+log
+@-
+@
+text
+@d10 1
+a10 1
+ 4. Thu Oct  5 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.3 2017-09-29 12:51:13-07 - - $
+@
+
+
+1.3
+log
+@-
+@
+text
+@d7 1
+a7 1
+ 2. Tue Oct  3 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.2 2017-08-21 15:14:38-07 - - $
+@
+
+
+1.2
+log
+@-
+@
+text
+@d6 1
+a6 1
+ 1. Thu Sep 28 -
+d45 1
+a45 1
+$Id: Lecture-log-2017-q4fall,v 1.2 2017-08-21 15:04:40-07 - - $
+@
+
+
+1.1
+log
+@-
+@
+text
+@d6 2
+a7 2
+ 1. 2017-09-28 -
+ 2. 2017-10-03 -
+d10 2
+a11 2
+ 3. 2017-10-05 -
+ 4. 2017-10-10 -
+d14 2
+a15 2
+ 5. 2017-10-12 -
+ 6. 2017-10-17 -
+d18 2
+a19 2
+ 7. 2017-10-19 -
+ 8. 2017-10-24 -
+d22 2
+a23 2
+ 9. 2017-10-26 -
+10. 2017-10-31 -
+d26 2
+a27 2
+11. 2017-11-02 -
+12. 2017-11-07 - MIDTERM TEST
+d30 2
+a31 2
+13. 2017-11-09 -
+14. 2017-11-14 -
+d34 2
+a35 2
+15. 2017-11-16 -
+16. 2017-11-21 -
+d38 2
+a39 2
+17. 2017-11-28 -
+18. 2017-11-30 -
+d42 2
+a43 2
+19. 2017-12-05 -
+20. 2017-12-07 -
+@

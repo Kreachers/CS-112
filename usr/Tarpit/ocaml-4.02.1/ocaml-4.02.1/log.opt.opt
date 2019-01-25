@@ -1,0 +1,469 @@
+make checkstack
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make runtime
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd byterun; make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/byterun'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/byterun'
+if test -f stdlib/libcamlrun.a; then :; else \
+	  ln -s ../byterun/libcamlrun.a stdlib/libcamlrun.a; fi
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make core
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make coldstart
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd byterun; make all
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/byterun'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/byterun'
+cp byterun/ocamlrun boot/ocamlrun
+cd yacc; make all
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/yacc'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/yacc'
+cp yacc/ocamlyacc boot/ocamlyacc
+cd stdlib; make COMPILER=../boot/ocamlc all
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+cd stdlib; cp stdlib.cma std_exit.cmo *.cmi camlheader ../boot
+if test -f boot/libcamlrun.a; then :; else \
+	  ln -s ../byterun/libcamlrun.a boot/libcamlrun.a; fi
+if test -d stdlib/caml; then :; else \
+	  ln -s ../byterun stdlib/caml; fi
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make coreall
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make ocamlc
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make[3]: `ocamlc' is up to date.
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make ocamllex ocamlyacc ocamltools library
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd yacc; make all
+make[4]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/yacc'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/yacc'
+cd lex; make all
+make[4]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/lex'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/lex'
+make[3]: Nothing to be done for `ocamlyacc'.
+cd tools; make all
+make[4]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+cd stdlib; make all
+make[4]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make ocaml
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make[1]: `ocaml' is up to date.
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make opt-core
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make runtimeopt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd asmrun; make all
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/asmrun'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/asmrun'
+cp asmrun/libasmrun.a stdlib/libasmrun.a
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make ocamlopt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make[2]: `ocamlopt' is up to date.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make libraryopt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd stdlib; make allopt
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make stdlib.cmxa std_exit.cmx
+make[4]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make[4]: `stdlib.cmxa' is up to date.
+make[4]: `std_exit.cmx' is up to date.
+make[4]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make allopt-prof
+make[4]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+rm -f std_exit.p.cmi
+make[4]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/stdlib'
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make ocamlc.opt
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c utils/misc.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c utils/tbl.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c utils/config.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c utils/clflags.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c utils/terminfo.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c utils/ccomp.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c utils/warnings.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c utils/consistbl.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/location.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/longident.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/ast_helper.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/syntaxerr.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/parser.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/lexer.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/parse.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/printast.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/pprintast.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c parsing/ast_mapper.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/ident.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/path.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/primitive.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/types.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/btype.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/oprint.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/subst.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/predef.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/datarepr.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/cmi_format.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/env.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/typedtree.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/printtyped.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/ctype.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/printtyp.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/includeclass.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/mtype.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/envaux.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/includecore.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/typedtreeIter.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/typedtreeMap.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/cmt_format.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/includemod.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/typetexp.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/parmatch.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/stypes.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/typecore.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/typedecl.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/typeclass.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c typing/typemod.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/lambda.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/printlambda.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/typeopt.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/switch.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/matching.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/translobj.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/translcore.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/translclass.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/translmod.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/simplif.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/runtimedef.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/pparse.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/main_args.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/compenv.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/compmisc.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -a -linkall -o compilerlibs/ocamlcommon.cmxa utils/misc.cmx utils/tbl.cmx utils/config.cmx utils/clflags.cmx utils/terminfo.cmx utils/ccomp.cmx utils/warnings.cmx utils/consistbl.cmx parsing/location.cmx parsing/longident.cmx parsing/ast_helper.cmx parsing/syntaxerr.cmx parsing/parser.cmx parsing/lexer.cmx parsing/parse.cmx parsing/printast.cmx parsing/pprintast.cmx parsing/ast_mapper.cmx typing/ident.cmx typing/path.cmx typing/primitive.cmx typing/types.cmx typing/btype.cmx typing/oprint.cmx typing/subst.cmx typing/predef.cmx typing/datarepr.cmx typing/cmi_format.cmx typing/env.cmx typing/typedtree.cmx typing/printtyped.cmx typing/ctype.cmx typing/printtyp.cmx typing/includeclass.cmx typing/mtype.cmx typing/envaux.cmx typing/includecore.cmx typing/typedtreeIter.cmx typing/typedtreeMap.cmx typing/cmt_format.cmx typing/includemod.cmx typing/typetexp.cmx typing/parmatch.cmx typing/stypes.cmx typing/typecore.cmx typing/typedecl.cmx typing/typeclass.cmx typing/typemod.cmx bytecomp/lambda.cmx bytecomp/printlambda.cmx bytecomp/typeopt.cmx bytecomp/switch.cmx bytecomp/matching.cmx bytecomp/translobj.cmx bytecomp/translcore.cmx bytecomp/translclass.cmx bytecomp/translmod.cmx bytecomp/simplif.cmx bytecomp/runtimedef.cmx driver/pparse.cmx driver/main_args.cmx driver/compenv.cmx driver/compmisc.cmx
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/meta.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/instruct.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/bytegen.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/printinstr.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/opcodes.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/emitcode.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/bytesections.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/dll.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/symtable.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/bytelink.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/bytelibrarian.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c bytecomp/bytepackager.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/errors.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/compile.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -a -o compilerlibs/ocamlbytecomp.cmxa bytecomp/meta.cmx bytecomp/instruct.cmx bytecomp/bytegen.cmx bytecomp/printinstr.cmx bytecomp/opcodes.cmx bytecomp/emitcode.cmx bytecomp/bytesections.cmx bytecomp/dll.cmx bytecomp/symtable.cmx bytecomp/bytelink.cmx bytecomp/bytelibrarian.cmx bytecomp/bytepackager.cmx driver/errors.cmx driver/compile.cmx
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/main.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink  -ccopt "-Wl,-E" -o ocamlc.opt \
+	  compilerlibs/ocamlcommon.cmxa compilerlibs/ocamlbytecomp.cmxa \
+	  driver/main.cmx -cclib "-lm  -ldl -ltermcap -lpthread"
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make otherlibraries ocamldebugger ocamldoc \
+	        ocamlbuild.byte
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd yacc; make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/yacc'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/yacc'
+cd lex; make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/lex'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/lex'
+cd tools; make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+for i in unix str num dynlink bigarray systhreads threads graph; do \
+	  (cd otherlibs/$i; make RUNTIME= all) || exit $?; \
+	done
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+cd debugger; make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/debugger'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/debugger'
+cd ocamldoc && make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make exe
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make[3]: Nothing to be done for `exe'.
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make lib
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make[3]: Nothing to be done for `lib'.
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make generators
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make[3]: Nothing to be done for `generators'.
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make manpages
+make[3]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make[3]: Nothing to be done for `manpages'.
+make[3]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+cd ocamlbuild && make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+../boot/ocamlrun ../ocamlc -nostdlib -I ../stdlib -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_plugin.ml
+../boot/ocamlrun ../ocamlc -nostdlib -I ../stdlib -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_executor.ml
+../boot/ocamlrun ../ocamlc -nostdlib -I ../stdlib -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild_unix_plugin.ml
+../boot/ocamlrun ../ocamlc -nostdlib -I ../stdlib -warn-error A -w L -w R -w Z -I ../otherlibs/unix -safe-string -c ocamlbuild.ml
+../boot/ocamlrun ../ocamlc -nostdlib -I ../stdlib -I ../otherlibs/unix -o ocamlbuild.byte \
+          unix.cma ocamlbuild_pack.cmo ocamlbuild_plugin.cmo ocamlbuild_executor.cmo ocamlbuild_unix_plugin.cmo ocamlbuild.cmo
+../boot/ocamlrun ../ocamlc -nostdlib -I ../stdlib -a -o ocamlbuildlib.cma \
+          ocamlbuild_pack.cmo ocamlbuild_plugin.cmo ocamlbuild_executor.cmo ocamlbuild_unix_plugin.cmo
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make ocamlopt.opt
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/arch.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/debuginfo.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/cmm.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printcmm.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/reg.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/mach.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/proc.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/clambda.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printclambda.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/compilenv.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/closure.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/strmatch.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/cmmgen.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printmach.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/selectgen.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/selection.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/comballoc.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/CSEgen.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/CSE.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/liveness.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/spill.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/split.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/interf.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/coloring.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/reloadgen.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/reload.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/deadcode.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/linearize.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/printlinear.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/schedgen.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/scheduling.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/emitaux.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/emit.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmgen.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmlink.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmlibrarian.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c asmcomp/asmpackager.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/opterrors.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/optcompile.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -a -o compilerlibs/ocamloptcomp.cmxa asmcomp/arch.cmx asmcomp/debuginfo.cmx asmcomp/cmm.cmx asmcomp/printcmm.cmx asmcomp/reg.cmx asmcomp/mach.cmx asmcomp/proc.cmx asmcomp/clambda.cmx asmcomp/printclambda.cmx asmcomp/compilenv.cmx asmcomp/closure.cmx asmcomp/strmatch.cmx asmcomp/cmmgen.cmx asmcomp/printmach.cmx asmcomp/selectgen.cmx asmcomp/selection.cmx asmcomp/comballoc.cmx asmcomp/CSEgen.cmx asmcomp/CSE.cmx asmcomp/liveness.cmx asmcomp/spill.cmx asmcomp/split.cmx asmcomp/interf.cmx asmcomp/coloring.cmx asmcomp/reloadgen.cmx asmcomp/reload.cmx asmcomp/deadcode.cmx asmcomp/printlinear.cmx asmcomp/linearize.cmx asmcomp/schedgen.cmx asmcomp/scheduling.cmx asmcomp/emitaux.cmx asmcomp/emit.cmx asmcomp/asmgen.cmx asmcomp/asmlink.cmx asmcomp/asmlibrarian.cmx asmcomp/asmpackager.cmx driver/opterrors.cmx driver/optcompile.cmx
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink -strict-sequence -w +33..39+48 -warn-error A -bin-annot -safe-string -I utils -I parsing -I typing -I bytecomp -I asmcomp -I driver -I toplevel -c driver/optmain.ml
+boot/ocamlrun ./ocamlopt -nostdlib -I stdlib -I otherlibs/dynlink  -o ocamlopt.opt \
+	   compilerlibs/ocamlcommon.cmxa compilerlibs/ocamloptcomp.cmxa \
+	   driver/optmain.cmx
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make otherlibrariesopt
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+for i in unix str num dynlink bigarray systhreads threads graph; do \
+	  (cd otherlibs/$i; make allopt) || exit $?; \
+	done
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+make ocamllex.opt ocamltoolsopt ocamltoolsopt.opt ocamldoc.opt \
+	        ocamlbuild.native
+make[1]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'
+cd lex; make allopt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/lex'
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string cset.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string syntax.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string parser.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string lexer.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string table.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string lexgen.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string compact.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string common.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string output.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string outputbis.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -c -w +33..39 -warn-error A -bin-annot -safe-string main.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -o ocamllex.opt cset.cmx syntax.cmx parser.cmx lexer.cmx table.cmx lexgen.cmx compact.cmx common.cmx output.cmx outputbis.cmx main.cmx
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/lex'
+cd tools; make opt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+make[2]: Nothing to be done for `opt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+cd yacc; make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/yacc'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/yacc'
+cd lex; make all
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/lex'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/lex'
+cd tools; make opt.opt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -strict-sequence -w +27+32..39 -warn-error A -safe-string -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -c depend.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -strict-sequence -w +27+32..39 -warn-error A -safe-string -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -c ocamldep.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -o ocamldep.opt misc.cmx config.cmx clflags.cmx terminfo.cmx warnings.cmx location.cmx longident.cmx syntaxerr.cmx ast_helper.cmx parser.cmx lexer.cmx parse.cmx ccomp.cmx ast_mapper.cmx pparse.cmx compenv.cmx \
+	           depend.cmx ocamldep.cmx
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -strict-sequence -w +27+32..39 -warn-error A -safe-string -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -c untypeast.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -strict-sequence -w +27+32..39 -warn-error A -safe-string -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -c tast_iter.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -strict-sequence -w +27+32..39 -warn-error A -safe-string -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -c cmt2annot.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -strict-sequence -w +27+32..39 -warn-error A -safe-string -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -c read_cmt.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -I ../utils -I ../parsing -I ../typing -I ../bytecomp -I ../asmcomp -I ../driver -I ../toplevel -o read_cmt.opt ../utils/misc.cmx ../utils/warnings.cmx ../utils/tbl.cmx ../utils/consistbl.cmx ../utils/config.cmx ../utils/clflags.cmx ../parsing/location.cmx ../parsing/longident.cmx ../parsing/lexer.cmx ../parsing/pprintast.cmx ../parsing/ast_helper.cmx ../parsing/ast_mapper.cmx ../typing/ident.cmx ../typing/path.cmx ../typing/types.cmx ../typing/typedtree.cmx ../typing/btype.cmx ../typing/subst.cmx ../typing/predef.cmx ../typing/datarepr.cmx ../typing/cmi_format.cmx ../typing/env.cmx ../typing/ctype.cmx ../typing/oprint.cmx ../typing/primitive.cmx ../typing/printtyp.cmx ../typing/mtype.cmx ../typing/envaux.cmx ../typing/typedtreeMap.cmx ../typing/typedtreeIter.cmx ../typing/cmt_format.cmx ../typing/stypes.cmx untypeast.cmx tast_iter.cmx cmt2annot.cmx read_cmt.cmx
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/tools'
+cd ocamldoc && make opt.opt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_config.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_messages.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_types.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_global.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_misc.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_text_parser.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_text_lexer.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_text.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_name.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_parameter.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_value.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_type.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_extension.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_exception.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_class.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_module.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_print.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_str.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_comments_global.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_parser.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_lexer.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_see_lexer.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_env.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_merge.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_sig.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_ast.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_control.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_inherit.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_search.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_scan.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_cross.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_comments.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_dep.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_analyse.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_info.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_dag2html.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_to_text.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_ocamlhtml.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_html.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_man.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_latex_style.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_latex.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_texi.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_dot.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_gen.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc_args.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string -c odoc.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -o ocamldoc.opt -linkall unix.cmxa str.cmxa dynlink.cmxa \
+	            ../compilerlibs/ocamlcommon.cmxa \
+	            -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -nostdlib ../tools/depend.cmx odoc_config.cmx odoc_messages.cmx odoc_global.cmx odoc_types.cmx odoc_misc.cmx odoc_text_parser.cmx odoc_text_lexer.cmx odoc_text.cmx odoc_name.cmx odoc_parameter.cmx odoc_value.cmx odoc_type.cmx odoc_extension.cmx odoc_exception.cmx odoc_class.cmx odoc_module.cmx odoc_print.cmx odoc_str.cmx odoc_comments_global.cmx odoc_parser.cmx odoc_lexer.cmx odoc_see_lexer.cmx odoc_env.cmx odoc_merge.cmx odoc_sig.cmx odoc_ast.cmx odoc_control.cmx odoc_inherit.cmx odoc_search.cmx odoc_scan.cmx odoc_cross.cmx odoc_comments.cmx odoc_dep.cmx odoc_analyse.cmx odoc_info.cmx odoc_dag2html.cmx odoc_to_text.cmx odoc_ocamlhtml.cmx odoc_html.cmx odoc_man.cmx odoc_latex_style.cmx odoc_latex.cmx odoc_texi.cmx odoc_dot.cmx odoc_gen.cmx odoc_args.cmx odoc.cmx
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -a -o odoc_info.cmxa -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -nostdlib ../tools/depend.cmx \
+	            odoc_config.cmx odoc_messages.cmx odoc_global.cmx odoc_types.cmx odoc_misc.cmx odoc_text_parser.cmx odoc_text_lexer.cmx odoc_text.cmx odoc_name.cmx odoc_parameter.cmx odoc_value.cmx odoc_type.cmx odoc_extension.cmx odoc_exception.cmx odoc_class.cmx odoc_module.cmx odoc_print.cmx odoc_str.cmx odoc_comments_global.cmx odoc_parser.cmx odoc_lexer.cmx odoc_see_lexer.cmx odoc_env.cmx odoc_merge.cmx odoc_sig.cmx odoc_ast.cmx odoc_control.cmx odoc_inherit.cmx odoc_search.cmx odoc_scan.cmx odoc_cross.cmx odoc_comments.cmx odoc_dep.cmx odoc_analyse.cmx odoc_info.cmx
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -shared -o generators/odoc_todo.cmxs -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string generators/odoc_todo.ml
+../boot/ocamlrun ../ocamlopt -nostdlib -I ../stdlib -shared -o generators/odoc_literate.cmxs -pp './remove_DEBUG' -I ../parsing -I ../utils -I ../typing -I ../driver -I ../bytecomp -I ../tools -I ../toplevel/ -I ../stdlib -I ../otherlibs/str -I ../otherlibs/dynlink -I ../otherlibs/unix -I ../otherlibs/num -I ../otherlibs/graph -warn-error A -safe-string generators/odoc_literate.ml
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamldoc'
+for i in unix str num dynlink bigarray systhreads threads graph; do \
+	  (cd otherlibs/$i; make allopt) || exit $?; \
+	done
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/unix'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/str'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/num'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/dynlink'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/bigarray'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/systhreads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/threads'
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/otherlibs/graph'
+cd ocamlbuild && make allopt
+make[2]: Entering directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+make[2]: Nothing to be done for `allopt'.
+make[2]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1/ocamlbuild'
+make[1]: Leaving directory `/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/ocaml-4.02.1/ocaml-4.02.1'

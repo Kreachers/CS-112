@@ -1,0 +1,26 @@
+.TH "Ast_helper.Incl" 3 2014-11-06 OCamldoc "OCaml library"
+.SH NAME
+Ast_helper.Incl \- no description
+.SH Module
+Module   Ast_helper.Incl
+.SH Documentation
+.sp
+Module
+.BI "Incl"
+ : 
+.B sig  end
+
+.sp
+
+.sp
+
+.sp
+.sp
+
+.I val mk 
+: 
+.B ?loc:Ast_helper.loc ->
+.B   ?attrs:Ast_helper.attrs -> 'a -> 'a Parsetree.include_infos
+.sp
+
+.sp

@@ -1,0 +1,1 @@
+("6.1" ("db00377ae3c783949018c01051fda14ab423836c" . "462a0858ce5d1d4466dcab82d7cebe3c73ebd1a3") (collects #"frtime" #"main.rkt") (collects #"racket" #"class.rkt") (collects #"frtime" #"gui" #"mixin-macros.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

@@ -1,0 +1,79 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2015.09.22.00.51.20;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@
+Winter 2012
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Mon Jan  9 - syllabus; what is PL?
+ 2. Wed Jan 11 - finish intro, start Perl
+ 3. Fri Jan 13 - Perl-notes.dir
+
+week  2:
+ 4. Mon Jan 16 - Holiday. No class.
+ 5. Wed Jan 18 - finish Perl
+ 6. Fri Jan 20 - PL history, PL design, basic semantics
+
+week  3:
+ 7. Mon Jan 23 - basic semantics
+ 8. Wed Jan 25 - intro scheme
+ 9. Fri Jan 27 - more scheme; program 2
+
+week  4:
+10. Mon Jan 30 - scheme heigher order functions
+11. Wed Feb  1 - finish Scheme.  cont basic semantics
+12. Fri Feb  3 - basic semantics
+
+week  5:
+13. Mon Feb  6 - intro Ocaml
+14. Wed Feb  8 - TEST.
+15. Fri Feb 10 - Ocaml; asg3
+
+week  6:
+16. Mon Feb 13 - asg3, Ocaml, dc.
+17. Wed Feb 15 - ocaml make; fn types; currying; higher-order fnz
+18. Fri Feb 17 - finish Ocaml; intro Haskell
+
+week  7:
+19. Mon Feb 20 - Holiday. No class.
+20. Wed Feb 22 - Ocaml HOF, lazy thunks; Haskell
+21. Fri Feb 24 - intro Smalltalk
+
+week  8:
+22. Mon Feb 27 - Smalltalk classes, inheritance, files.
+23. Wed Feb 29 - TEST.
+24. Fri Mar  2 - Smalltalk; asg4; OOP in general.
+
+week  9:
+25. Mon Mar  5 - finish OO; intro Prolog
+26. Wed Mar  7 - Prolog
+27. Fri Mar  9 - Prolog
+
+week 10:
+28. Mon Mar 12 - Expressions & Statements
+29. Wed Mar 14 - Processes & threads.
+30. Fri Mar 16 -
+
+$Id: Lecture-log-2012-q1winter,v 1.22 2012-03-14 20:15:50-07 - - $
+
+@

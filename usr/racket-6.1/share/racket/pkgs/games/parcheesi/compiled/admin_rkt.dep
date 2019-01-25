@@ -1,0 +1,1 @@
+("6.1" ("5c8010e8f098c12e5c3ac357bfc39194b2e6b61e" . "951d2614256650a3f4ed08cae4c520cc66f4ec8b") (collects #"games" #"parcheesi" #"interfaces.rkt") (collects #"games" #"parcheesi" #"moves.rkt") (collects #"games" #"parcheesi" #"board.rkt") (collects #"racket" #"class.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt"))

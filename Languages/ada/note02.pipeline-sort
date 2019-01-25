@@ -1,0 +1,153 @@
+# $RCSfile: Notes.pipeline_sort,v $$Revision: 950421.1 $
+
+SUBJECT: PIPELINE SORT: O(N) COMPARISON SORTING.
+
+And you thought that the best you could do with comparison sorting was
+O(n log n), as in quicksort, etc.  Pipeline sort is a comparison sort
+that works in time O(n).
+
+Well, not exactly.  Pipeline sort works in time O(n*n/m) where n is the
+number of data items being sorted and m is the number of CPU's on the
+system.
+
+Basically pipeline sort works by creating one task for each data item
+to be sorted.  The main program then reads in data items one at a time
+and hands them to the first task.  For each task i, task i compares
+each new element that it gets with the one it already has and passes
+the larger of the two to task i+1.  Eventually all of the elements are
+in the local variables of one of the tasks.  Then the main program
+demands the elements back one at a time from task 1.  Each task i when
+required gives its element back and then demands an element from task
+i+1.  Thus if there are m CPU's in the system, we can run one task per
+CPU, all in parallel.
+
+So, if m is close to n, O(n*n/m) reduces to O(n).  But if m is a lot
+less than n, it reduces to O(n*n).  So this algorithm is not of much
+use on uniprocessor systems.  If fact, due to a large context switching
+overhead, it is likely to be much slower than insertion sort.  But on a
+computer with millions of CPU's....
+
+Here is the code for the example, written in Ada.
+
+And no, you don't need to know Ada syntax for the final exam.
+
+................................cut.here................................
+--
+-- Pipeline sort.
+--
+-- This sorting algorithm uses a pipeline of tasks in order to do a
+-- comparison sort.  On a uniprocessor system, it is no better than a
+-- bubble sort and is O(n**2), but on a system with a large number
+-- of CPU's it can do a comparison sort in O(n) time.
+--
+generic
+   type Element is private;
+   with function "<"( Left, Right: Element ) return boolean is <>;
+package Pipeline_sort is
+   Remove_error : exception;
+
+   task type Pipeline_sort_task is
+      entry Insert( Item: in Element );
+      entry Remove( Item: out Element );
+      entry has_Element( Flag: out boolean );
+   end Pipeline_sort_task;
+
+   function has_Element( Sorter: Pipeline_sort_task ) return boolean;
+end Pipeline_sort;
+
+package body Pipeline_sort is
+   type access_Pipeline_sort_task is access Pipeline_sort_task;
+   subtype Pipeline_sort_task_type is Pipeline_sort_task;
+
+   task body Pipeline_sort_task is
+      next_task      : access_Pipeline_sort_task := null;
+      my_Element     : Element;
+      I_have_Element : boolean := false;
+      next_Element   : Element;
+   begin
+      loop
+         select
+            accept Insert( Item: in Element ) do
+               next_Element := Item;
+            end Insert;
+            if not I_have_Element then
+               I_have_Element := true;
+               my_Element := next_Element;
+            else
+               if next_task = null then
+                  next_task := new Pipeline_sort_task_type;
+               end if;
+               if next_Element < my_Element then
+                  next_task.Insert( my_Element );
+                  my_Element := next_Element;
+               else
+                  next_task.Insert( next_Element );
+               end if;
+            end if;
+         or
+            accept Remove( Item: out Element ) do
+               if not I_have_Element then
+                  raise Remove_error;
+               else
+                  Item := my_Element;
+               end if;
+            end Remove;
+            if next_task = null then
+               I_have_Element := false;
+            else
+               next_task.has_Element( I_have_Element );
+            end if;
+            if I_have_Element then
+               next_task.Remove( my_Element );
+            end if;
+         or
+            accept has_Element( Flag: out boolean ) do
+               Flag := I_have_Element;
+            end has_Element;
+         or
+            terminate;
+         end select;
+      end loop;
+   end Pipeline_sort_task;
+
+   function has_Element( Sorter: Pipeline_sort_task ) return boolean is
+      Result: boolean;
+   begin
+      Sorter.has_Element( Result );
+      return Result;
+   end has_Element;
+end Pipeline_sort;
+
+with Pipeline_sort;
+package Integer_Pipeline_sort is new Pipeline_sort( integer );
+
+with Text_IO, Integer_Text_IO, System;
+with Task_Text_IO, Integer_Pipeline_sort;
+use  Task_Text_IO, Integer_Pipeline_sort;
+procedure Sorting_Tasks is
+   pragma Time_slice( System.tick );
+   Number : integer;
+   Sorter : Pipeline_sort_task;
+begin
+   Task_put.put_line( "Starting pipeline sort example." );
+
+   begin
+      loop
+         Integer_Text_IO.get( Number );
+         Task_put.put_line( "Unsorted input=>" & Number );
+         Sorter.Insert( Number );
+      end loop;
+   exception
+      when Text_IO.End_error => null;
+      when Text_IO.Data_error=> Task_put.put_line( "Data_error: quitting." );
+   end;
+
+   while has_Element( Sorter ) loop
+      Sorter.Remove( Number );
+      Task_put.put_line( "Sorted output =>" & Number );
+   end loop;
+      
+   Task_put.put_line( "Finished pipeline sort example." );
+end Sorting_Tasks;
+
+

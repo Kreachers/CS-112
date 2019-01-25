@@ -1,0 +1,22 @@
+Date: Thu, 14 Jan 1999 22:25:04 -0800 (PST)
+From: Alex   Miller <amiller@cats.UCSC.EDU>
+To: archives@OCF.Berkeley.EDU
+Subject: "Hello, World" in Snobol4
+X-Filter: mailagent [version 3.0 PL58] for psb@ucsee.eecs.berkeley.edu
+
+Hi!
+
+I didn't see a hello_world program in Snobol4
+in the /pub/Library/Hello_World directory, so
+here is one:
+
+------- cut here -----
+
+OUTPUT = 'Hello, World.'
+END
+
+------- cut here -----
+
+Sincerely,
+
+Alex Miller

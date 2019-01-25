@@ -1,0 +1,1 @@
+("6.1" ("2a766a73e9ec89e26f734a4c166d167dcfb6f874" . "420f6f8cbf3f84c920371acb719fa5ae50289c8a") (collects #"lang" #"private" #"teachprims.rkt") (collects #"lang" #"private" #"teach.rkt") (collects #"scheme" #"main.rkt") (collects #"scheme" #"runtime-config.rkt"))

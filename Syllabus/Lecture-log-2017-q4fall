@@ -1,0 +1,45 @@
+
+Fall 2017
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Thu Sep 28 - intro; syllabus; 01-introduction; 02-history
+ 2. Tue Oct  3 - scheme-1-language; Languages/scheme/Examples/
+
+week  2:
+ 4. Thu Oct  5 - proj1 Scheme, Examples; scheme-2-higherorder
+ 5. Tue Oct 10 - scheme-2-higherorder; EWD
+
+week  3:
+ 7. Thu Oct 12 - lambda-calculus; 03-design; 100 lines of caml
+ 8. Tue Oct 17 - ocaml-1-notes; ocaml/Examples
+
+week  4:
+10. Thu Oct 19 - ocaml-1-notes; asg2-ocaml-dc project
+11. Tue Oct 24 - finish asg2 project; ocaml-2-higherorder (1-6)
+
+week  5:
+13. Thu Oct 26 - ocaml-2-higherorder; 05-basic-semantics (1--7)
+14. Tue Oct 31 - 05-basic-semantics.pdf; data-types.pdf
+
+week  6:
+16. Thu Nov  2 - Smalltalk: written notes; Languages/smalltalk/Examples
+17. Tue Nov  7 - MIDTERM TEST.
+
+week  7:
+19. Thu Nov  9 - proj3 spec; Examples: bit IO, Tree, finish.
+20. Tue Nov 14 -
+
+week  8:
+22. Thu Nov 16 -
+23. Tue Nov 21 -
+
+week  9:
+25. Tue Nov 28 -
+26. Thu Nov 30 -
+
+week 10:
+28. Tue Dec  5 -
+29. Thu Dec  7 -
+
+$Id: Lecture-log-2017-q4fall,v 1.14 2017-11-09 21:09:29-08 - - $

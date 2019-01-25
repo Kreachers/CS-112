@@ -1,0 +1,1 @@
+("6.1" ("d9f09fbfb1c39268646a92885f0555a227f7bb75" . "9d2a5f0b222a02e4dcd3f7102e634f9fd64be4d7") (collects #"racket" #"udp.rkt") (collects #"scheme" #"private" #"provider" #"lang.rkt") (collects #"scheme" #"private" #"provider" #"lang" #"reader.rkt"))

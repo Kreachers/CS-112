@@ -1,0 +1,1 @@
+("6.1" ("f127ca6d80f1c1539cfa61a6a5eff2ff39b51d36" . "e444ac77a19667e4968b0530d9bb29c7ec39024e") (collects #"picturing-programs" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

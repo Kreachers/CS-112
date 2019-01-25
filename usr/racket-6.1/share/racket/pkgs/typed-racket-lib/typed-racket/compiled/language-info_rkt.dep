@@ -1,0 +1,1 @@
+("6.1" ("e8a33fa64d14d76300a3eddf6690cb91e7a42afe" . "58088aa33cfa3721e684dc7bbf065b89553f24cf") (collects #"typed-racket" #"typed-reader.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

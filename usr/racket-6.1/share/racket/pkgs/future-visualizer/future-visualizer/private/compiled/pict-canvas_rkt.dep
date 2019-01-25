@@ -1,0 +1,1 @@
+("6.1" ("35804c6e555872d778a83d05230ff9db11ae3d4e" . "bb6c41f56c23c5dc2f76a68628838a3126ed877d") (collects #"racket" #"gui.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"future-visualizer" #"private" #"display.rkt") (collects #"pict" #"main.rkt") (collects #"framework" #"main.rkt") (collects #"racket" #"gui" #"lang" #"reader.rkt"))

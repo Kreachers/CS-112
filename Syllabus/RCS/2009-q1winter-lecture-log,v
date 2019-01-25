@@ -1,0 +1,68 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2009.09.25.01.27.55;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@
+Winter 2009
+CMPS-112 -- Comparative Programming Languages
+
+week  1:
+ 1. Wed Jan  7 - intro; syllabus; Louden,ch.1
+ 3. Mon Jan 12 - perl, lecture 1
+
+week  2:
+ 4. Wed Jan 14 - perl, lecture 2; perl asgt.
+ 6. Mon Jan 19 - HOLIDAY.
+
+week  3:
+ 7. Wed Jan 21 - ch.2 history; ch.3 lang design, begin ch.5
+ 9. Mon Jan 26 - C++, part 1
+
+week  4:
+10. Wed Jan 28 - C++, part 2
+12. Mon Feb  2 - gcol; alloc/lifetime; mem layout; copy share/clone
+
+week  5:
+13. Wed Feb  4 - TEST #1.  data: arrays/fns
+15. Mon Feb  9 - Intro Scheme
+
+week  6:
+16. Wed Feb 11 - Scheme; program 3.
+18. Mon Feb 16 - HOLIDAY.
+
+week  7:
+19. Wed Feb 18 - finish Scheme
+21. Mon Feb 23 - Ocaml
+
+week  8:
+22. Wed Feb 25 - TEST #2.  program 4
+24. Mon Mar  2 - finish prog4, Louden ch.7,8
+
+week  9:
+25. Wed Mar  4 - finish Louden, ch.8; intro Prolog
+27. Mon Mar  9 - finish Prolog; Louden,ch.10 OOP.
+
+week 10:
+28. Wed Mar 11 - Haskell; lambda calculus; Concurrency.
+30. Mon Mar 16 - review
+
+$Id: Lecture-log-2009-q1winter,v 1.18 2009-03-17 16:38:00-07 - - $
+@

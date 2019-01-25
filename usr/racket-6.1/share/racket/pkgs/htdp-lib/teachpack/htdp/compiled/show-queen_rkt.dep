@@ -1,0 +1,1 @@
+("6.1" ("a2d671d83a4bf190139f8e24cf6aeaff714b8ebc" . "1068809765a9324ee84e43adace9377043989d07") (collects #"htdp" #"show-queen.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

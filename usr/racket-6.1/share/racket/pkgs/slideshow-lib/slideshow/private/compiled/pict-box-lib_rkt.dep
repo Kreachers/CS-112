@@ -1,0 +1,1 @@
+("6.1" ("9ebe990b2abed51a501a796618e2b28194cbcdc3" . "61e7adb9b587eed70d1df194301553a2d5433e78") (collects #"mzscheme" #"main.rkt") (collects #"texpict" #"mrpict.rkt") (collects #"slideshow" #"private" #"image-snipr.rkt") (collects #"mred" #"main.rkt") (collects #"mzlib" #"class.rkt"))

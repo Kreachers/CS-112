@@ -1,0 +1,28 @@
+.TH "Ast_helper.Mb" 3 2014-11-06 OCamldoc "OCaml library"
+.SH NAME
+Ast_helper.Mb \- Module bindings
+.SH Module
+Module   Ast_helper.Mb
+.SH Documentation
+.sp
+Module
+.BI "Mb"
+ : 
+.B sig  end
+
+.sp
+Module bindings
+
+.sp
+
+.sp
+.sp
+
+.I val mk 
+: 
+.B ?loc:Ast_helper.loc ->
+.B   ?attrs:Ast_helper.attrs ->
+.B   Ast_helper.str -> Parsetree.module_expr -> Parsetree.module_binding
+.sp
+
+.sp

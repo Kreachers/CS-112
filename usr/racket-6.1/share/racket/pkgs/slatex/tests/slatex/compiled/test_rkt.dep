@@ -1,0 +1,1 @@
+("6.1" ("7673427a0515ea15e276fe38900599e2d6a3b3f8" . "d121d841d126877c1e197272da592610875a7ec4") (collects #"tests" #"eli-tester.rkt") (collects #"racket" #"main.rkt") (collects #"scheme" #"runtime-path.rkt") (collects #"slatex" #"slatex-wrapper.rkt") (collects #"racket" #"runtime-config.rkt"))

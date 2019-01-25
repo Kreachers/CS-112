@@ -1,0 +1,1 @@
+("6.1" ("201541e8e80558a69e1f665f84c819c1f0df5545" . "d385a712ce99f8bc192eba5502512c73ae0dfbb4") (collects #"htdp" #"error.rkt") (collects #"lang" #"prim.rkt") (collects #"scheme" #"runtime-config.rkt") (collects #"scheme" #"gui.rkt") (collects #"mzlib" #"class.rkt") (collects #"scheme" #"gui" #"lang" #"reader.rkt"))

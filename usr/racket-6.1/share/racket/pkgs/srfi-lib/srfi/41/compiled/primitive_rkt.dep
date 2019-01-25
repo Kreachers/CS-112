@@ -1,0 +1,1 @@
+("6.1" ("157abe5c075335e0269611ef1a73d1c53bcd4816" . "f8ae3fbcbc5c95f5a8c8999eb2e34721b2566b39") (collects #"racket" #"private" #"stream-cons.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

@@ -1,0 +1,53 @@
+#!/usr/bin/perl -w
+#
+# Program:
+#    Convert a list of Links.txt file format into HTML.
+#    Each line of Links.txt consists of 
+#    text description|web link
+#    The vertical bar separates the two.
+#
+
+sub cbcmp{
+   ( $aa = $a ) =~ s/.*/\L$&/g;
+   ( $bb = $b ) =~ s/.*/\L$&/g;
+   return $aa cmp $bb;
+};
+
+use POSIX;
+require 'stat.pl';
+
+sub href{
+   my( $href ) = @_;
+   my( $refname ) = $href;
+   $refname =~ s{[^/]/|[:.-]}{$&<WBR>}g;
+   return "[<A HREF=$href><TT>$refname</TT></A>]";
+};
+
+$hrefs_readme = "Links.txt";
+( $index = $hrefs_readme ) =~ s/(\.txt)?$/.html/;
+
+open( INDEX, ">$index" ) || die "$index: $!";
+
+if( open( HREFS, "$hrefs_readme" )){
+   while( <HREFS> ){
+      chomp;
+      if( m/([^\|]*)\|(.*)/ ){
+         $references{ $1 } = $2;
+      }else{
+         print STDERR "Bad input: $_";
+      };
+   };
+   close( HREFS );
+}else{
+   print "$hrefs_readme: $!";
+};
+
+print INDEX "<UL>\n";
+for $key( sort { cbcmp } keys %references ){
+   $href = $references{ $key };
+   print INDEX "<LI>$key\n";
+   print INDEX &href( $href ), "\n";
+};
+print INDEX "</UL>\n";
+close( INDEX );
+

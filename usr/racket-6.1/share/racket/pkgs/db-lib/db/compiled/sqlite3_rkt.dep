@@ -1,0 +1,1 @@
+("6.1" ("b368c45081990b8f8e1d9d33f4a4e474bbbedaab" . "69c73a73ac7d196ec3b517a6df97c774c86e9ada") (collects #"racket" #"contract" #"base.rkt") (collects #"db" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"db" #"private" #"sqlite3" #"place.rkt") (collects #"racket" #"base.rkt"))

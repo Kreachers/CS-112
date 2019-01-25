@@ -1,0 +1,51 @@
+head	360.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+360.1
+date	2006.01.04.23.34.25;	author -;	state -;
+branches;
+next	329.1;
+
+329.1
+date	2002.12.17.19.54.46;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+360.1
+log
+@-
+@
+text
+@# $Id: GNUmakefile,v 329.1 2002-12-17 11:54:46-08 - - $
+
+MK_HREFS =      perl -pe 'print "<PRE>\n" if $$.==1; \
+                s/\&/\&amp;/g; s/\</\&lt;/g; s/\>/\&gt;/g; \
+                s{(http|ftp)://\S+}{<A HREF=$$&\n       >$$&</A>}g;'
+
+README.html: README.text
+	cid README.text
+	${MK_HREFS} <README.text >README.html
+@
+
+
+329.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+# $Id: GNUmakefile,v 329.1 2002-12-17 11:33:06-08 - - $
+d5 1
+a5 1
+                s{http:\S+}{<A HREF=$$&\n       >$$&</A>}g;'
+@

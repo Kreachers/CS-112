@@ -1,0 +1,31 @@
+#                             -*- compilation -*-
+126. testsuite.at:164: testing Sockets ...
+{ (cd /afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5 && timeout 600s gst  -f /afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/scripts/Test.st --verbose  -p Sockets
+    ret=0
+    case  in
+      2) exit 77 ;;
+      0|1) exit  ;;
+    esac); echo exit 0 > retcode; } | tr -d '\r' | tee stdout; . ./retcode
+./testsuite.at:164: { (cd $abs_top_builddir && $TIMEOUT gst $image_path -f $abs_top_srcdir/scripts/Test.st --verbose  -p Sockets
+    ret=$?
+    case $ret in
+      2) exit 77 ;;
+      0|1) exit $ret ;;
+    esac); echo exit $? > retcode; } | tr -d '\r' | tee stdout; . ./retcode
+--- /dev/null	2016-08-01 21:34:42.824999861 -0700
++++ /afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/tests/testsuite.dir/at-groups/126/stderr	2016-08-18 15:26:45.000000001 -0700
+@@ -0,0 +1,8 @@
++/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/scripts/Test.st:114: Attempt to pass an instance of SmallInteger as a void *
++/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/scripts/Test.st:114: Attempt to pass an instance of SmallInteger as a void *
++/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/scripts/Test.st:114: Attempt to pass an instance of SmallInteger as a void *
++/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/scripts/Test.st:114: Attempt to pass an instance of SmallInteger as a void *
++/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/scripts/Test.st:114: Attempt to pass an instance of SmallInteger as a void *
++/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/scripts/Test.st:114: Attempt to pass an instance of SmallInteger as a void *
++/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/scripts/Test.st:114: Attempt to pass an instance of SmallInteger as a void *
++/afs/cats.ucsc.edu/courses/cmps112-wm/usr/Tarpit/smalltalk-3.2.5/smalltalk-3.2.5/scripts/Test.st:114: Attempt to pass an instance of SmallInteger as a void *
+stdout:
+Loading package Sockets
+Sockets.SocketTest>>##testDoNotCrashOnSendto 
+Sockets.SocketTest>>##testDoNotCrashWithWrongTypes ....
+2 run, 2 passes
+126. testsuite.at:164: 126. Sockets (testsuite.at:164): expected failure (testsuite.at:164)

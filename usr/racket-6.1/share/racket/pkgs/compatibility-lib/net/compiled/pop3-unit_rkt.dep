@@ -1,0 +1,1 @@
+("6.1" ("361c7435e225c374e80693d63a4e71b0067d6500" . "422cde082fc211369cb0cc3e9397df8a5593397c") (collects #"net" #"pop3.rkt") (collects #"racket" #"unit.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"net" #"pop3-sig.rkt"))

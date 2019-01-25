@@ -1,0 +1,5028 @@
+%!PS
+%%Version: 3.3.1
+%%DocumentFonts: (atend)
+%%Pages: (atend)
+%%EndComments
+%
+% Version 3.3.1 prologue for troff files.
+%
+
+/#copies 1 store
+/aspectratio 1 def
+/formsperpage 1 def
+/landscape false def
+/linewidth .3 def
+/magnification 1 def
+/margin 0 def
+/orientation 0 def
+/resolution 720 def
+/rotation 1 def
+/xoffset 0 def
+/yoffset 0 def
+
+/roundpage true def
+/useclippath true def
+/pagebbox [0 0 612 792] def
+
+/R  /Times-Roman def
+/I  /Times-Italic def
+/B  /Times-Bold def
+/BI /Times-BoldItalic def
+/H  /Helvetica def
+/HI /Helvetica-Oblique def
+/HB /Helvetica-Bold def
+/HX /Helvetica-BoldOblique def
+/CW /Courier def
+/CO /Courier def
+/CI /Courier-Oblique def
+/CB /Courier-Bold def
+/CX /Courier-BoldOblique def
+/PA /Palatino-Roman def
+/PI /Palatino-Italic def
+/PB /Palatino-Bold def
+/PX /Palatino-BoldItalic def
+/Hr /Helvetica-Narrow def
+/Hi /Helvetica-Narrow-Oblique def
+/Hb /Helvetica-Narrow-Bold def
+/Hx /Helvetica-Narrow-BoldOblique def
+/KR /Bookman-Light def
+/KI /Bookman-LightItalic def
+/KB /Bookman-Demi def
+/KX /Bookman-DemiItalic def
+/AR /AvantGarde-Book def
+/AI /AvantGarde-BookOblique def
+/AB /AvantGarde-Demi def
+/AX /AvantGarde-DemiOblique def
+/NR /NewCenturySchlbk-Roman def
+/NI /NewCenturySchlbk-Italic def
+/NB /NewCenturySchlbk-Bold def
+/NX /NewCenturySchlbk-BoldItalic def
+/ZD /ZapfDingbats def
+/ZI /ZapfChancery-MediumItalic def
+/S  /S def
+/S1 /S1 def
+/GR /Symbol def
+
+/inch {72 mul} bind def
+/min {2 copy gt {exch} if pop} bind def
+
+/setup {
+	counttomark 2 idiv {def} repeat pop
+
+	landscape {/orientation 90 orientation add def} if
+	/scaling 72 resolution div def
+	linewidth setlinewidth
+	1 setlinecap
+
+	pagedimensions
+	xcenter ycenter translate
+	orientation rotation mul rotate
+	width 2 div neg height 2 div translate
+	xoffset inch yoffset inch neg translate
+	margin 2 div dup neg translate
+	magnification dup aspectratio mul scale
+	scaling scaling scale
+
+	addmetrics
+	0 0 moveto
+} def
+
+/pagedimensions {
+	useclippath userdict /gotpagebbox known not and {
+		/pagebbox [clippath pathbbox newpath] def
+		roundpage currentdict /roundpagebbox known and {roundpagebbox} if
+	} if
+	pagebbox aload pop
+	4 -1 roll exch 4 1 roll 4 copy
+	landscape {4 2 roll} if
+	sub /width exch def
+	sub /height exch def
+	add 2 div /xcenter exch def
+	add 2 div /ycenter exch def
+	userdict /gotpagebbox true put
+} def
+
+/addmetrics {
+	/Symbol /S null Sdefs cf
+	/Times-Roman /S1 StandardEncoding dup length array copy S1defs cf
+} def
+
+/pagesetup {
+	/page exch def
+	currentdict /pagedict known currentdict page known and {
+		page load pagedict exch get cvx exec
+	} if
+} def
+
+/decodingdefs [
+	{counttomark 2 idiv {y moveto show} repeat}
+	{neg /y exch def counttomark 2 idiv {y moveto show} repeat}
+	{neg moveto {2 index stringwidth pop sub exch div 0 32 4 -1 roll widthshow} repeat}
+	{neg moveto {spacewidth sub 0.0 32 4 -1 roll widthshow} repeat}
+	{counttomark 2 idiv {y moveto show} repeat}
+	{neg setfunnytext}
+] def
+
+/setdecoding {/t decodingdefs 3 -1 roll get bind def} bind def
+
+/w {neg moveto show} bind def
+/m {neg dup /y exch def moveto} bind def
+/done {/lastpage where {pop lastpage} if} def
+
+/f {
+	dup /font exch def findfont exch
+	dup /ptsize exch def scaling div dup /size exch def scalefont setfont
+	linewidth ptsize mul scaling 10 mul div setlinewidth
+	/spacewidth ( ) stringwidth pop def
+} bind def
+
+/changefont {
+	/fontheight exch def
+	/fontslant exch def
+	currentfont [
+		1 0
+		fontheight ptsize div fontslant sin mul fontslant cos div
+		fontheight ptsize div
+		0 0
+	] makefont setfont
+} bind def
+
+/sf {f} bind def
+
+/cf {
+	dup length 2 idiv
+	/entries exch def
+	/chtab exch def
+	/newencoding exch def
+	/newfont exch def
+
+	findfont dup length 1 add dict
+	/newdict exch def
+	{1 index /FID ne {newdict 3 1 roll put}{pop pop} ifelse} forall
+
+	newencoding type /arraytype eq {newdict /Encoding newencoding put} if
+
+	newdict /Metrics entries dict put
+	newdict /Metrics get
+	begin
+		chtab aload pop
+		1 1 entries {pop def} for
+		newfont newdict definefont pop
+	end
+} bind def
+
+%
+% A few arrays used to adjust reference points and character widths in some
+% of the printer resident fonts. If square roots are too high try changing
+% the lines describing /radical and /radicalex to,
+%
+%	/radical	[0 -75 550 0]
+%	/radicalex	[-50 -75 500 0]
+%
+% Move braceleftbt a bit - default PostScript character is off a bit.
+%
+
+/Sdefs [
+	/bracketlefttp		[201 500]
+	/bracketleftbt		[201 500]
+	/bracketrighttp		[-81 380]
+	/bracketrightbt		[-83 380]
+	/braceleftbt		[203 490]
+	/bracketrightex		[220 -125 500 0]
+	/radical		[0 0 550 0]
+	/radicalex		[-50 0 500 0]
+	/parenleftex		[-20 -170 0 0]
+	/integral		[100 -50 500 0]
+	/infinity		[10 -75 730 0]
+] def
+
+/S1defs [
+	/underscore		[0 80 500 0]
+	/endash			[7 90 650 0]
+] def
+%
+% Tries to round clipping path dimensions, as stored in array pagebbox, so they
+% match one of the known sizes in the papersizes array. Lower left coordinates
+% are always set to 0.
+%
+
+/roundpagebbox {
+    7 dict begin
+	/papersizes [8.5 inch 11 inch 14 inch 17 inch] def
+
+	/mappapersize {
+		/val exch def
+		/slop .5 inch def
+		/diff slop def
+		/j 0 def
+		0 1 papersizes length 1 sub {
+			/i exch def
+			papersizes i get val sub abs
+			dup diff le {/diff exch def /j i def} {pop} ifelse
+		} for
+		diff slop lt {papersizes j get} {val} ifelse
+	} def
+
+	pagebbox 0 0 put
+	pagebbox 1 0 put
+	pagebbox dup 2 get mappapersize 2 exch put
+	pagebbox dup 3 get mappapersize 3 exch put
+    end
+} bind def
+
+%%EndProlog
+%%BeginSetup
+mark
+/resolution 720 def
+setup
+2 setdecoding
+%%EndSetup
+%%Page: 1 1
+/saveobj save def
+mark
+1 pagesetup
+12 B f
+(C Traps and Pitfalls*)3 1099 1 2330 1140 t
+10 I f
+(Andrew Koenig)1 625 1 2567 1380 t
+10 R f
+(AT&T Bell Laboratories)2 993 1 2383 1560 t
+(Murray Hill, New Jersey 07974)4 1267 1 2246 1680 t
+(ABSTRACT)2618 1920 w
+( sharp, and extremely useful in)5 1331(The C language is like a carving knife: simple,)8 2019 2 1330 2316 t
+( tool, C can injure people who don't know how to handle it.)12 2399( any sharp)2 414( Like)1 235(skilled hands.)1 552 4 1080 2436 t
+(This paper shows some of the ways C can injure the unwary, and how to avoid injury.)16 3434 1 1080 2556 t
+10 B f
+(0. Introduction)1 670 1 720 2796 t
+10 R f
+( lan-)1 187( The)1 212(The C language and its typical implementations are designed to be used easily by experts.)14 3671 3 970 2952 t
+( user who has)3 552( A)1 124( few restrictions to keep the user from blundering.)8 2015( are)1 149( There)1 285(guage is terse and expressive.)4 1195 6 720 3072 t
+(blundered is often rewarded by an effect that is not obviously related to the cause.)14 3268 1 720 3192 t
+( they are unexpected, it)4 980( Because)1 394(In this paper, we will look at some of these unexpected rewards.)11 2696 3 970 3348 t
+( we have made a rough effort to do so)9 1573( Nevertheless,)1 597( impossible to classify them completely.)5 1646(may well be)2 504 4 720 3468 t
+( passing)1 329( assume the reader has at least a)7 1292( We)1 191(by looking at what has to happen in order to run a C program.)13 2508 4 720 3588 t
+(acquaintance with the C language.)4 1372 1 720 3708 t
+( 2 fol-)2 252( Section)1 354(Section 1 looks at problems that occur while the program is being broken into tokens.)14 3464 3 970 3864 t
+( Section)1 354( tokens into declarations, expressions, and statements.)6 2180(lows the program as the compiler groups its)7 1786 3 720 3984 t
+( that a C program is often made out of several parts that are compiled separately and bound)17 3810(3 recognizes)1 510 2 720 4104 t
+( while the program is actually)5 1190( 4 deals with misconceptions of meaning: things that happen)9 2427(together. Section)1 703 3 720 4224 t
+( In)1 142( our programs and the library routines they use.)8 1966( 5 examines the relationship between)5 1518(running. Section)1 694 4 720 4344 t
+( that the program we write is not really the program we run; the preprocessor has gotten at)17 3618(section 6 we note)3 702 2 720 4464 t
+( might run on one implementa-)5 1261( section 7 discusses portability problems: reasons a program)8 2427( Finally,)1 362(it first.)1 270 4 720 4584 t
+(tion and not another.)3 827 1 720 4704 t
+10 B f
+( Pitfalls)1 325(1. Lexical)1 436 2 720 4944 t
+10 R f
+(The first part of a compiler is usually called a)9 1834 1 970 5100 t
+10 I f
+(lexical analyzer)1 637 1 2831 5100 t
+10 R f
+( the sequence of charac-)4 974( looks at)2 343(. This)1 255 3 3468 5100 t
+( up into)2 312(ters that make up the program and breaks them)8 1906 2 720 5220 t
+10 I f
+(tokens)2966 5220 w
+10 R f
+( token is a sequence of one or more char-)9 1669(. A)1 150 2 3221 5220 t
+( C, for instance, the)4 842( In)1 147(acters that have a \(relatively\) uniform meaning in the language being compiled.)11 3331 3 720 5340 t
+(token)720 5460 w
+10 CW f
+(->)969 5460 w
+10 R f
+( meaning that is quite distinct from that of either of the characters that make it up, and that is)19 3720(has a)1 204 2 1116 5460 t
+(independent of the context in which the)6 1581 1 720 5580 t
+10 CW f
+(->)2326 5580 w
+10 R f
+(appears.)2471 5580 w
+(For another example, consider the statement:)5 1797 1 970 5736 t
+10 CW f
+(if \(x > big\) big = x;)6 1260 1 1080 5916 t
+10 R f
+( character in this statement is a separate token, except for the keyword)12 2981(Each non-blank)1 643 2 720 6096 t
+10 CW f
+(if)4384 6096 w
+10 R f
+(and the two)2 496 1 4544 6096 t
+(instances of the identifier)3 1012 1 720 6216 t
+10 CW f
+(big)1757 6216 w
+10 R f
+(.)1937 6216 w
+( must)1 227( It)1 117( the preprocessor reads the program.)5 1481( First)1 240(In fact, C programs are broken into tokens twice.)8 2005 5 970 6372 t
+( must then)2 425( It)1 115( represent macros.)2 736(tokenize the program so that it can find the identifiers, some of which may)13 3044 4 720 6492 t
+( the result of the macro)5 1013( Finally,)1 377( evaluating that macro.)3 969(replace each macro invocation by the result of)7 1961 4 720 6612 t
+( compiler)1 390( The)1 215( the compiler proper.)3 867(replacement is reassembled into a character stream which is given to)10 2848 4 720 6732 t
+(then breaks the stream into tokens a second time.)8 1961 1 720 6852 t
+8 S1 f
+(__________________)720 6952 w
+8 R f
+( book)1 209( paper, greatly expanded, is the basis for the)8 1623(* This)1 250 3 720 7052 t
+8 I f
+(C Traps and Pitfalls)3 738 1 2851 7052 t
+8 R f
+(\(Addison-Wesley, 1989, ISBN)2 1042 1 3638 7052 t
+(0\261201\26117928\2618\); interested readers may wish to refer there as well.)9 2163 1 720 7152 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 1 1
+%%Page: 0 2
+/saveobj save def
+mark
+2 pagesetup
+10 R f
+( of tokens and)3 584(In this section, we will explore some common misunderstandings about the meanings)11 3486 2 970 840 t
+( will talk about the preprocessor)5 1299( We)1 191( and the characters that make them up.)7 1556(the relationship between tokens)3 1274 4 720 960 t
+(later.)720 1080 w
+10 B f
+(1.1.)720 1320 w
+10 CW f
+(=)920 1320 w
+10 B f
+(is not)1 231 1 1005 1320 t
+10 CW f
+(==)1261 1320 w
+10 R f
+(Programming languages derived from Algol, such as Pascal and Ada, use)10 3014 1 970 1476 t
+10 CW f
+(:=)4017 1476 w
+10 R f
+(for assignment and)2 776 1 4170 1476 t
+10 CW f
+(=)4980 1476 w
+10 R f
+( on the other hand, uses)5 1023( C,)1 158(for comparison.)1 648 3 720 1596 t
+10 CW f
+(=)2590 1596 w
+10 R f
+(for assignment and)2 792 1 2691 1596 t
+10 CW f
+(==)3524 1596 w
+10 R f
+( because)1 355( is)1 108( This)1 244(for comparison.)1 648 4 3685 1596 t
+(assignment is more frequent than comparison, so the more common meaning is given to the shorter symbol.)16 4313 1 720 1716 t
+( so that multiple assignments \(such as)6 1547(Moreover, C treats assignment as an operator,)6 1865 2 970 1872 t
+10 CW f
+(a=b=c)4413 1872 w
+10 R f
+(\) can be)2 327 1 4713 1872 t
+(written easily and assignments can be embedded in larger expressions.)9 2817 1 720 1992 t
+( write an assignment where one)5 1306(This convenience causes a potential problem: one can inadvertently)8 2764 2 970 2148 t
+( this statement, which looks like it is checking whether)9 2193( Thus,)1 275(intended a comparison.)2 929 3 720 2268 t
+10 CW f
+(x)4142 2268 w
+10 R f
+(is equal to)2 411 1 4227 2268 t
+10 CW f
+(y)4663 2268 w
+10 R f
+(:)4723 2268 w
+10 CW f
+(if \(x = y\))3 600 1 1080 2448 t
+(foo\(\);)1330 2568 w
+10 R f
+(actually sets)1 495 1 720 2748 t
+10 CW f
+(x)1245 2748 w
+10 R f
+(to the value of)3 589 1 1335 2748 t
+10 CW f
+(y)1954 2748 w
+10 R f
+( consider the following)3 939( Or)1 160(and then checks whether that value is nonzero.)7 1897 3 2044 2748 t
+(loop that is intended to skip blanks, tabs, and newlines in a file:)12 2538 1 720 2868 t
+10 CW f
+(while \(c == ' ' || c = '\\t' || c == '\\n'\))12 2460 1 1080 3048 t
+(c = getc \(f\);)3 780 1 1330 3168 t
+10 R f
+(The programmer mistakenly used)3 1354 1 720 3348 t
+10 CW f
+(=)2102 3348 w
+10 R f
+(instead of)1 394 1 2190 3348 t
+10 CW f
+(==)2612 3348 w
+10 R f
+(in the comparison with)3 928 1 2760 3348 t
+10 CW f
+('\\t')3716 3348 w
+10 R f
+(. This ``comparison'' actu-)3 1084 1 3956 3348 t
+(ally assigns)1 468 1 720 3468 t
+10 CW f
+('\\t')1217 3468 w
+10 R f
+(to)1486 3468 w
+10 CW f
+(c)1593 3468 w
+10 R f
+(and compares the \(new\) value of)5 1319 1 1681 3468 t
+10 CW f
+(c)3028 3468 w
+10 R f
+( Since)1 275(to zero.)1 302 2 3116 3468 t
+10 CW f
+('\\t')3721 3468 w
+10 R f
+(is not zero, the ``compari-)4 1051 1 3989 3468 t
+( it does after that depends on whether the)8 1657( What)1 268( the entire file.)3 588(son'' will always be true, so the loop will eat)9 1807 4 720 3588 t
+( it does, the)3 479( If)1 122( a program to keep reading after it has reached end of file.)12 2384(particular implementation allows)2 1335 4 720 3708 t
+(loop will run forever.)3 854 1 720 3828 t
+( form)1 225(Some C compilers try to help the user by giving a warning message for conditions of the)16 3621 2 970 3984 t
+10 I f
+(e1 =)1 193 1 4847 3984 t
+(e2)720 4104 w
+10 R f
+( to a variable and)4 719( avoid warning messages from such compilers, when you want to assign a value)13 3312(. To)1 195 3 814 4104 t
+( other words, instead)3 853( In)1 140( making the comparison explicit.)4 1341(then check whether the variable is zero, consider)7 1986 4 720 4224 t
+(of:)720 4344 w
+10 CW f
+(if \(x = y\))3 600 1 1080 4524 t
+(foo\(\);)1330 4644 w
+10 R f
+(write:)720 4824 w
+10 CW f
+(if \(\(x = y\) != 0\))5 1020 1 1080 5004 t
+(foo\(\);)1330 5124 w
+10 R f
+(This will also help make your intentions plain.)7 1861 1 720 5304 t
+10 B f
+(1.2.)720 5544 w
+10 CW f
+(&)920 5544 w
+10 B f
+(and)1005 5544 w
+10 CW f
+(|)1192 5544 w
+10 B f
+(are not)1 302 1 1277 5544 t
+10 CW f
+(&&)1604 5544 w
+10 B f
+(or)1749 5544 w
+10 CW f
+(||)1868 5544 w
+10 R f
+(It is easy to miss an inadvertent substitution of)8 1901 1 970 5700 t
+10 CW f
+(=)2901 5700 w
+10 R f
+(for)2991 5700 w
+10 CW f
+(==)3137 5700 w
+10 R f
+( languages use)2 594(because so many other)3 921 2 3287 5700 t
+10 CW f
+(=)4833 5700 w
+10 R f
+(for)4924 5700 w
+( easy to interchange)3 801( is also)2 284(comparison. It)1 605 3 720 5820 t
+10 CW f
+(&)2437 5820 w
+10 R f
+(and)2524 5820 w
+10 CW f
+(&&)2695 5820 w
+10 R f
+(, or)1 135 1 2815 5820 t
+10 CW f
+(|)2977 5820 w
+10 R f
+(and)3064 5820 w
+10 CW f
+(||)3235 5820 w
+10 R f
+(, especially because the)3 942 1 3355 5820 t
+10 CW f
+(&)4324 5820 w
+10 R f
+(and)4411 5820 w
+10 CW f
+(|)4582 5820 w
+10 R f
+(operators)4669 5820 w
+( will look at these operators more)6 1391( We)1 197( counterparts in some other languages.)5 1581(in C are different from their)5 1151 4 720 5940 t
+(closely in section 4.)3 794 1 720 6060 t
+10 B f
+( Tokens)1 337(1.3. Multi-character)1 881 2 720 6300 t
+10 R f
+(Some C tokens, such as)4 947 1 970 6456 t
+10 CW f
+(/)1942 6456 w
+10 R f
+(,)2002 6456 w
+10 CW f
+(*)2052 6456 w
+10 R f
+(, and)1 194 1 2112 6456 t
+10 CW f
+(=)2331 6456 w
+10 R f
+( C tokens, such as)4 723( Other)1 278( long.)1 229(, are only one character)4 932 4 2391 6456 t
+10 CW f
+(/*)4579 6456 w
+10 R f
+(and)4725 6456 w
+10 CW f
+(==)4895 6456 w
+10 R f
+(,)5015 6456 w
+( the C compiler encounters a)5 1160( When)1 291(and identifiers, are several characters long.)5 1728 3 720 6576 t
+10 CW f
+(/)3927 6576 w
+10 R f
+(followed by an)2 605 1 4015 6576 t
+10 CW f
+(*)4648 6576 w
+10 R f
+(, it must)2 332 1 4708 6576 t
+( C)1 94( The)1 207( one single token.)3 711(be able to decide whether to treat these two characters as two separate tokens or as)15 3308 4 720 6696 t
+( given charac-)2 564(reference manual tells how to decide: ``If the input stream has been parsed into tokens up to a)17 3756 2 720 6816 t
+( token is taken to include the longest string of characters which could possibly constitute a)15 3820(ter, the next)2 500 2 720 6936 t
+( if a)2 175(token.'' Thus,)1 598 2 720 7056 t
+10 CW f
+(/)1528 7056 w
+10 R f
+( character of a token, and the)6 1208(is the first)2 420 2 1623 7056 t
+10 CW f
+(/)3285 7056 w
+10 R f
+(is immediately followed by a)4 1202 1 3379 7056 t
+10 CW f
+(*)4615 7056 w
+10 R f
+(, the two)2 365 1 4675 7056 t
+(characters begin a comment,)3 1141 1 720 7176 t
+10 I f
+(regardless)1886 7176 w
+10 R f
+(of any other context.)3 826 1 2333 7176 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 0 2
+%%Page: 1 3
+/saveobj save def
+mark
+3 pagesetup
+10 R f
+(The following statement looks like it sets)6 1650 1 970 840 t
+10 CW f
+(y)2645 840 w
+10 R f
+(to the value of)3 574 1 2730 840 t
+10 CW f
+(x)3329 840 w
+10 R f
+(divided by the value pointed to by)6 1366 1 3414 840 t
+10 CW f
+(p)4805 840 w
+10 R f
+(:)4865 840 w
+10 CW f
+( p points at the divisor */;)6 1680( /*)1 360(y = x/*p)2 480 3 1080 1020 t
+10 R f
+(In fact,)1 283 1 720 1200 t
+10 CW f
+(/*)1029 1200 w
+10 R f
+( comment, so the compiler will simply gobble up the program text until the)13 3031(begins a)1 331 2 1175 1200 t
+10 CW f
+(*/)4564 1200 w
+10 R f
+(appears.)4711 1200 w
+(In other words, the statement just sets)6 1537 1 720 1320 t
+10 CW f
+(y)2287 1320 w
+10 R f
+(to the value of)3 589 1 2377 1320 t
+10 CW f
+(x)2996 1320 w
+10 R f
+(and doesn't even look at)4 992 1 3086 1320 t
+10 CW f
+(p)4107 1320 w
+10 R f
+(. Rewriting this state-)3 873 1 4167 1320 t
+(ment as)1 308 1 720 1440 t
+10 CW f
+( p points at the divisor */;)6 1680( /*)1 360(y = x / *p)4 600 3 1080 1620 t
+10 R f
+(or even)1 296 1 720 1800 t
+10 CW f
+( p points at the divisor */;)6 1680( /*)1 360(y = x/\(*p\))2 600 3 1080 1980 t
+10 R f
+(would cause it to do the division the comment suggests.)9 2233 1 720 2160 t
+( C use)2 254( example, older versions of)4 1088( For)1 190(This sort of near-ambiguity can cause trouble in other contexts.)9 2538 4 970 2316 t
+10 CW f
+(=+)720 2436 w
+10 R f
+(to mean what present versions mean by)6 1575 1 865 2436 t
+10 CW f
+(+=)2465 2436 w
+10 R f
+(. Such a compiler will treat)5 1082 1 2585 2436 t
+10 CW f
+(a=-1;)1080 2616 w
+10 R f
+(as meaning the same thing as)5 1168 1 720 2796 t
+10 CW f
+(a =- 1;)2 420 1 1080 2976 t
+10 R f
+(or)720 3156 w
+10 CW f
+(a = a - 1;)4 600 1 1080 3336 t
+10 R f
+(This will surprise a programmer who intended)6 1853 1 720 3516 t
+10 CW f
+(a = -1;)2 420 1 1080 3696 t
+10 R f
+(On the other hand, compilers for these older versions of C would interpret)12 2959 1 970 3912 t
+10 CW f
+(a=/*b;)1080 4092 w
+10 R f
+(as)720 4272 w
+10 CW f
+(a =/ * b ;)4 600 1 1080 4452 t
+10 R f
+(even though the)2 638 1 720 4632 t
+10 CW f
+(/*)1383 4632 w
+10 R f
+(looks like a comment.)3 883 1 1528 4632 t
+10 B f
+(1.4. Exceptions)1 667 1 720 4908 t
+10 R f
+(Compound assignment operators such as)4 1632 1 970 5064 t
+10 CW f
+(+=)2627 5064 w
+10 R f
+( Thus,)1 275(are really multiple tokens.)3 1043 2 2772 5064 t
+10 CW f
+(a + /* strange */ = 1)6 1260 1 1080 5244 t
+10 R f
+(means the same as)3 740 1 720 5424 t
+10 CW f
+(a += 1)2 360 1 1080 5604 t
+10 R f
+( In)1 134( look like single tokens are really multiple tokens.)8 2004(These operators are the only cases in which things that)9 2182 3 720 5784 t
+(particular,)720 5904 w
+10 CW f
+(p - > a)3 420 1 1080 6084 t
+10 R f
+( is)1 92( It)1 111(is illegal.)1 367 3 720 6264 t
+10 I f
+(not)1315 6264 w
+10 R f
+(a synonym for)2 577 1 1468 6264 t
+10 CW f
+(p -> a)2 360 1 1080 6444 t
+10 R f
+(As another example, the)3 970 1 720 6624 t
+10 CW f
+(>>)1715 6624 w
+10 R f
+(operator is a single token, so)5 1143 1 1860 6624 t
+10 CW f
+(>>=)3028 6624 w
+10 R f
+(is made up of two tokens, not three.)7 1429 1 3233 6624 t
+(On the other hand, those older compilers that still accept)9 2267 1 970 6780 t
+10 CW f
+(=+)3263 6780 w
+10 R f
+(as a synonym for)3 688 1 3409 6780 t
+10 CW f
+(+=)4123 6780 w
+10 R f
+(treat)4269 6780 w
+10 CW f
+(=+)4473 6780 w
+10 R f
+(as a single)2 420 1 4620 6780 t
+(token.)720 6900 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 1 3
+%%Page: 2 4
+/saveobj save def
+mark
+4 pagesetup
+10 R f
+(- 2 -)2 166 1 2797 480 t
+10 B f
+( and Characters)2 688(1.5. Strings)1 506 2 720 840 t
+10 R f
+( in which con-)3 586(Single and double quotes mean very different things in C, and there are some contexts)14 3484 2 970 996 t
+(fusing them will result in surprises rather than error messages.)9 2485 1 720 1116 t
+( integer is the one)4 718( The)1 206(A character enclosed in single quotes is just another way of writing an integer.)13 3146 3 970 1272 t
+( in an)2 262( Thus,)1 295( to the given character in the implementation's collating sequence.)9 2831(that corresponds)1 678 4 720 1392 t
+8 R f
+(ASCII)4831 1392 w
+10 R f
+(implementation,)720 1512 w
+10 CW f
+('a')1403 1512 w
+10 R f
+( string enclosed in double quotes, on)6 1493( A)1 127(means exactly the same thing as 0141 or 97.)8 1807 3 1613 1512 t
+( a pointer to a nameless array that has been initialized with the)12 2490(the other hand, is a short-hand way of writing)8 1830 2 720 1632 t
+(characters between the quotes and an extra character whose binary value is zero.)12 3208 1 720 1752 t
+(The following two program fragments are equivalent:)6 2146 1 970 1908 t
+10 CW f
+(printf \("Hello world\\n"\);)2 1500 1 1080 2088 t
+(char hello[] = {'H', 'e', 'l', 'l', 'o', ' ',)9 2700 1 1080 2328 t
+('w', 'o', 'r', 'l', 'd', '\\n', 0};)6 2040 1 1330 2448 t
+(printf \(hello\);)1 900 1 1080 2568 t
+10 R f
+( will often cause a warning message, so using)8 1918(Using a pointer instead of an integer \(or vice versa\))9 2152 2 970 2784 t
+( major exception is in function)5 1234( The)1 207(double quotes instead of single quotes \(or vice versa\) is usually caught.)11 2879 3 720 2904 t
+( saying)1 286( Thus,)1 275(calls, where most compilers do not check argument types.)8 2313 3 720 3024 t
+10 CW f
+(printf\('\\n'\);)1080 3204 w
+10 R f
+(instead of)1 391 1 720 3384 t
+10 CW f
+(printf \("\\n"\);)1 840 1 1080 3564 t
+10 R f
+(will usually result in a surprise at run time.)8 1713 1 720 3744 t
+( enough to hold several characters, some C compilers permit mul-)10 2672(Because an integer is usually large)5 1398 2 970 3900 t
+( means that writing)3 805( This)1 240(tiple characters in a character constant.)5 1610 3 720 4020 t
+10 CW f
+('yes')3412 4020 w
+10 R f
+(instead of)1 403 1 3749 4020 t
+10 CW f
+("yes")4188 4020 w
+10 R f
+(may well go)2 516 1 4524 4020 t
+( latter means ``the address of the first of four consecutive memory locations containing)13 3539(undetected. The)1 666 2 720 4140 t
+10 CW f
+(y)4955 4140 w
+10 R f
+(,)5015 4140 w
+10 CW f
+(e)720 4260 w
+10 R f
+(,)780 4260 w
+10 CW f
+(s)835 4260 w
+10 R f
+( of the values of)4 659( former means ``an integer that is composed)7 1795( The)1 210(, and a null character, respectively.'')5 1481 4 895 4260 t
+(the characters)1 561 1 720 4380 t
+10 CW f
+(y)1317 4380 w
+10 R f
+(,)1377 4380 w
+10 CW f
+(e)1438 4380 w
+10 R f
+(, and)1 205 1 1498 4380 t
+10 CW f
+(s)1740 4380 w
+10 R f
+( similarity between these two)4 1219( Any)1 234(in some implementation-defined manner.'')3 1750 3 1837 4380 t
+(quantities is purely coincidental.)3 1299 1 720 4500 t
+10 B f
+( Pitfalls)1 325(2. Syntactic)1 519 2 720 4740 t
+10 R f
+( must also)2 410( One)1 218( it is not enough to understand the tokens that make it up.)12 2315(To understand a C program,)4 1127 4 970 4896 t
+( While)1 306( expressions, statements, and programs.)4 1632(understand how the tokens combine to form declarations,)7 2382 3 720 5016 t
+(these combinations are usually well-defined, the definitions are sometimes counter-intuitive or confusing.)11 4225 1 720 5136 t
+(In this section, we look at some syntactic constructions that are less than obvious.)13 3261 1 970 5292 t
+10 B f
+( Declarations)1 563(2.1. Understanding)1 840 2 720 5532 t
+10 R f
+( writing a C program that was going to run stand-alone in a small)13 2671(I once talked to someone who was)6 1399 2 970 5688 t
+( was switched on, the hardware would call the subroutine whose)10 2790( this machine)2 579(microprocessor. When)1 951 3 720 5808 t
+(address was stored in location 0.)5 1298 1 720 5928 t
+( on, we had to devise a C statement that would call this subroutine)13 2687(In order to simulate turning power)5 1383 2 970 6084 t
+( some thought, we came up with the following:)8 1885(explicitly. After)1 663 2 720 6204 t
+10 CW f
+(\(*\(void\(*\)\(\)\)0\)\(\);)1080 6384 w
+10 R f
+( though, because)2 676( needn't,)1 352( They)1 258(Expressions like these strike terror into the hearts of C programmers.)10 2784 4 970 6600 t
+( with the help of a single, simple rule:)8 1513(they can usually be constructed quite easily)6 1742 2 720 6720 t
+10 I f
+(declare it the way you use)5 1040 1 4000 6720 t
+(it.)720 6840 w
+10 R f
+( a list of stylized expressions that are expected)8 1884(Every C variable declaration has two parts: a type and)9 2186 2 970 6996 t
+( simplest such expression is a variable:)6 1554( The)1 205(to evaluate to that type.)4 935 3 720 7116 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 2 4
+%%Page: 3 5
+/saveobj save def
+mark
+5 pagesetup
+10 R f
+(- 3 -)2 166 1 2797 480 t
+10 CW f
+(float f, g;)2 660 1 1080 900 t
+10 R f
+(indicates that the expressions)3 1177 1 720 1080 t
+10 CW f
+(f)1925 1080 w
+10 R f
+(and)2013 1080 w
+10 CW f
+(g)2186 1080 w
+10 R f
+(, when evaluated, will be of type)6 1327 1 2246 1080 t
+10 CW f
+(float)3602 1080 w
+10 R f
+(. Because the thing declared)4 1138 1 3902 1080 t
+(is an expression, parentheses may be used freely:)7 1962 1 720 1200 t
+10 CW f
+(float \(\(f\)\);)1 720 1 1080 1380 t
+10 R f
+(means that)1 430 1 720 1560 t
+10 CW f
+(\(\(f\)\))1175 1560 w
+10 R f
+(evaluates to a)2 543 1 1500 1560 t
+10 CW f
+(float)2068 1560 w
+10 R f
+(and therefore, by inference, that)4 1273 1 2393 1560 t
+10 CW f
+(f)3691 1560 w
+10 R f
+(is also a)2 322 1 3776 1560 t
+10 CW f
+(float)4123 1560 w
+10 R f
+(.)4423 1560 w
+( example,)1 388( For)1 189(Similar logic applies to function and pointer types.)7 2027 3 970 1716 t
+10 CW f
+(float ff\(\);)1 660 1 1080 1896 t
+10 R f
+(means that the expression)3 1065 1 720 2076 t
+10 CW f
+(ff\(\))1822 2076 w
+10 R f
+(is a)1 148 1 2099 2076 t
+10 CW f
+(float)2284 2076 w
+10 R f
+(, and therefore that)3 792 1 2584 2076 t
+10 CW f
+(ff)3414 2076 w
+10 R f
+(is a function that returns a)5 1105 1 3572 2076 t
+10 CW f
+(float)4715 2076 w
+10 R f
+(.)5015 2076 w
+(Analogously,)720 2196 w
+10 CW f
+(float *pf;)1 600 1 1080 2376 t
+10 R f
+(means that)1 430 1 720 2556 t
+10 CW f
+(*pf)1175 2556 w
+10 R f
+(is a)1 136 1 1380 2556 t
+10 CW f
+(float)1541 2556 w
+10 R f
+(and therefore that)2 703 1 1866 2556 t
+10 CW f
+(pf)2594 2556 w
+10 R f
+(is a pointer to a)4 616 1 2739 2556 t
+10 CW f
+(float)3380 2556 w
+10 R f
+(.)3680 2556 w
+( Thus)1 250(These forms combine in declarations the same way they do in expressions.)11 2984 2 970 2712 t
+10 CW f
+(float *g\(\), \(*h\)\(\);)2 1140 1 1080 2892 t
+10 R f
+(says that)1 355 1 720 3072 t
+10 CW f
+(*g\(\))1108 3072 w
+10 R f
+(and)1381 3072 w
+10 CW f
+(\(*h\)\(\))1558 3072 w
+10 R f
+(are)1951 3072 w
+10 CW f
+(float)2106 3072 w
+10 R f
+(expressions. Since)1 772 1 2440 3072 t
+10 CW f
+(\(\))3246 3072 w
+10 R f
+(binds more tightly than)3 958 1 3400 3072 t
+10 CW f
+(*)4392 3072 w
+10 R f
+(,)4452 3072 w
+10 CW f
+(*g\(\))4511 3072 w
+10 R f
+(means)4785 3072 w
+(the same thing as)3 706 1 720 3192 t
+10 CW f
+(*\(g\(\)\))1456 3192 w
+10 R f
+(:)1816 3192 w
+10 CW f
+(g)1874 3192 w
+10 R f
+(is a function that returns a pointer to a)8 1560 1 1964 3192 t
+10 CW f
+(float)3553 3192 w
+10 R f
+(, and)1 198 1 3853 3192 t
+10 CW f
+(h)4080 3192 w
+10 R f
+(is a pointer to a func-)5 871 1 4169 3192 t
+(tion that returns a)3 702 1 720 3312 t
+10 CW f
+(float)1447 3312 w
+10 R f
+(.)1747 3312 w
+( know how to declare a variable of a given type, it is easy to write a cast for that type: just)21 3714(Once we)1 356 2 970 3468 t
+( and enclose the whole thing in parenthe-)7 1665(remove the variable name and the semicolon from the declaration)9 2655 2 720 3588 t
+( since)1 230(ses. Thus,)1 422 2 720 3708 t
+10 CW f
+(float *g\(\);)1 660 1 1080 3888 t
+10 R f
+(declares)720 4068 w
+10 CW f
+(g)1071 4068 w
+10 R f
+(to be a function returning a pointer to a)8 1564 1 1156 4068 t
+10 CW f
+(float)2745 4068 w
+10 R f
+(,)3045 4068 w
+10 CW f
+(\(float *\(\)\))1 660 1 3095 4068 t
+10 R f
+(is a cast to that type.)5 816 1 3780 4068 t
+(Armed with this knowledge, we are now prepared to tackle)9 2442 1 970 4224 t
+10 CW f
+(\(*\(void\(*\)\(\)\)0\)\(\))3446 4224 w
+10 R f
+(. We can ana-)3 574 1 4466 4224 t
+( suppose that we have a variable)6 1321( First,)1 264( statement in two parts.)4 950(lyze this)1 342 4 720 4344 t
+10 CW f
+(fp)3627 4344 w
+10 R f
+(that contains a function pointer)4 1263 1 3777 4344 t
+(and we want to call the function to which)8 1653 1 720 4464 t
+10 CW f
+(fp)2398 4464 w
+10 R f
+( is done this way:)4 700(points. That)1 503 2 2543 4464 t
+10 CW f
+(\(*fp\)\(\);)1080 4644 w
+10 R f
+(If)720 4824 w
+10 CW f
+(fp)813 4824 w
+10 R f
+(is a pointer to a function,)5 1009 1 960 4824 t
+10 CW f
+(*fp)1996 4824 w
+10 R f
+( so)1 117(is the function itself,)3 828 2 2203 4824 t
+10 CW f
+(\(*fp\)\(\))3176 4824 w
+10 R f
+( paren-)1 282( The)1 208(is the way to invoke it.)5 926 3 3624 4824 t
+(theses in)1 361 1 720 4944 t
+10 CW f
+(\(*fp\))1120 4944 w
+10 R f
+( would otherwise be interpreted as)5 1437(are essential because the expression)4 1485 2 1459 4944 t
+10 CW f
+(*\(fp\(\)\))4419 4944 w
+10 R f
+(. We)1 201 1 4839 4944 t
+(have now reduced the problem to that of finding an appropriate expression to replace)13 3395 1 720 5064 t
+10 CW f
+(fp)4140 5064 w
+10 R f
+(.)4260 5064 w
+( mind about types, we could)5 1197( C could read our)4 745( If)1 129(This problem is the second part of our analysis.)8 1999 4 970 5220 t
+(write:)720 5340 w
+10 CW f
+(\(*0\)\(\);)1080 5520 w
+10 R f
+( the)1 164(This doesn't work because)3 1115 2 720 5700 t
+10 CW f
+(*)2041 5700 w
+10 R f
+( the)1 164( Furthermore,)1 591(operator insists on having a pointer as its operand.)8 2142 3 2143 5700 t
+(operand must be a pointer to a function so that the result of)12 2394 1 720 5820 t
+10 CW f
+(*)3142 5820 w
+10 R f
+( into a)2 254( we need to cast 0)5 727( Thus,)1 278(can be called.)2 551 4 3230 5820 t
+(type loosely described as ``pointer to function returning void.'')8 2521 1 720 5940 t
+(If)970 6096 w
+10 CW f
+(fp)1072 6096 w
+10 R f
+( to a function returning void, then)6 1418(is a pointer)2 466 2 1228 6096 t
+10 CW f
+(\(*fp\)\(\))3149 6096 w
+10 R f
+(is a void value, and its declaration)6 1434 1 3606 6096 t
+(would look like this:)3 826 1 720 6216 t
+10 CW f
+(void \(*fp\)\(\);)1 780 1 1080 6396 t
+10 R f
+(Thus, we could write:)3 871 1 720 6576 t
+10 CW f
+(void \(*fp\)\(\);)1 780 1 1080 6756 t
+(\(*fp\)\(\);)1080 6876 w
+10 R f
+( the variable, we know how to)6 1218( once we know how to declare)6 1219( But)1 196(at the cost of declaring a dummy variable.)7 1687 4 720 7056 t
+( we cast 0 to a ``pointer)6 954( Thus,)1 277( the name from the variable declaration.)6 1605(cast a constant to that type: just drop)7 1484 4 720 7176 t
+(to function returning void'' by saying:)5 1535 1 720 7296 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 3 5
+%%Page: 4 6
+/saveobj save def
+mark
+6 pagesetup
+10 R f
+(- 4 -)2 166 1 2797 480 t
+10 CW f
+(\(void\(*\)\(\)\)0)1080 900 w
+10 R f
+(and we can now replace)4 957 1 720 1080 t
+10 CW f
+(fp)1702 1080 w
+10 R f
+(by)1847 1080 w
+10 CW f
+(\(void\(*\)\(\)\)0)1972 1080 w
+10 R f
+(:)2692 1080 w
+10 CW f
+(\(*\(void\(*\)\(\)\)0\)\(\);)1080 1260 w
+10 R f
+(The semicolon on the end turns the expression into a statement.)10 2539 1 720 1440 t
+( time we tackled this problem, there was no such thing as a)12 2451(At the)1 254 2 970 1596 t
+10 CW f
+(typedef)3708 1596 w
+10 R f
+( it,)1 114(declaration. Using)1 765 2 4161 1596 t
+(we could have solved the problem more clearly:)7 1921 1 720 1716 t
+10 CW f
+(typedef void \(*funcptr\)\(\);)2 1560 1 1080 1896 t
+(\(* \(funcptr\) 0\)\(\);)2 1080 1 1080 2016 t
+10 B f
+( Don't Always Have the Precedence You Want)7 1983(2.2. Operators)1 638 2 720 2316 t
+10 R f
+(Suppose that the manifest constant)4 1428 1 970 2472 t
+10 CW f
+(FLAG)2433 2472 w
+10 R f
+( integer with exactly one bit turned on in its binary)10 2136(is an)1 196 2 2708 2472 t
+( the integer variable)3 813(representation \(in other words, a power of two\), and you want to test whether)13 3176 2 720 2592 t
+10 CW f
+(flags)4740 2592 w
+10 R f
+( usual way to write this is:)6 1050( The)1 205(has that bit turned on.)4 869 3 720 2712 t
+10 CW f
+(if \(flags & FLAG\) ...)4 1260 1 1080 2892 t
+10 R f
+(The meaning of this is plain to most C programmers: an)10 2308 1 720 3072 t
+10 CW f
+(if)3060 3072 w
+10 R f
+( whether the expression in the)5 1235(statement tests)1 593 2 3212 3072 t
+( might be nice to make this test more explicit for documentation pur-)12 2837( It)1 118(parentheses evaluates to 0 or not.)5 1365 3 720 3192 t
+(poses:)720 3312 w
+10 CW f
+(if \(flags & FLAG != 0\) ...)6 1560 1 1080 3492 t
+10 R f
+( is also wrong, because)4 947( It)1 117(The statement is now easier to understand.)6 1736 3 720 3672 t
+10 CW f
+(!=)3551 3672 w
+10 R f
+(binds more tightly than)3 949 1 3702 3672 t
+10 CW f
+(&)4682 3672 w
+10 R f
+(, so the)2 298 1 4742 3672 t
+(interpretation is now:)2 855 1 720 3792 t
+10 CW f
+(if \(flags & \(FLAG != 0\)\) ...)6 1680 1 1080 3972 t
+10 R f
+(This will work \(by coincidence\) if)5 1367 1 720 4152 t
+10 CW f
+(FLAG)2112 4152 w
+10 R f
+(is 1 or 0 \(!\), but not for any other power of two.*)12 1952 1 2377 4152 t
+(Suppose you have two integer variables,)5 1624 1 970 4308 t
+10 CW f
+(h)2621 4308 w
+10 R f
+(and)2709 4308 w
+10 CW f
+(l,)2881 4308 w
+10 R f
+(whose values are between 0 and 15 inclusive, and)8 2011 1 3029 4308 t
+(you want to set)3 617 1 720 4428 t
+10 CW f
+(r)1365 4428 w
+10 R f
+(to an 8-bit value whose low-order bits are those of)9 2037 1 1453 4428 t
+10 CW f
+(l)3518 4428 w
+10 R f
+( bits are those)3 558(and whose high-order)2 876 2 3606 4428 t
+(of)720 4548 w
+10 CW f
+(h.)828 4548 w
+10 R f
+(The natural way to do this is to write:)8 1499 1 973 4548 t
+10 CW f
+(r = h<<4 + l;)4 780 1 1080 4728 t
+10 R f
+( binds more tightly than shifting, so this example is equivalent to)11 2595( Addition)1 406(Unfortunately, this is wrong.)3 1152 3 720 4908 t
+10 CW f
+(r = h << \(4 + l\);)6 1020 1 1080 5088 t
+10 R f
+(Here are two ways to get it right:)7 1317 1 720 5268 t
+10 CW f
+(r = \(h << 4\) + l;)6 1020 1 1080 5448 t
+(r = h << 4 | l;)6 900 1 1080 5568 t
+10 R f
+(One way to avoid these problems is to parenthesize everything, but expressions with too many paren-)15 4070 1 970 5784 t
+(theses are hard to understand, so it is probably useful to try to remember the precedence levels in C.)18 3987 1 720 5904 t
+( can be made easier,)4 865( It)1 126(Unfortunately, there are fifteen of them, so this is not always easy to do.)13 3079 3 970 6060 t
+(though, by classifying them into groups.)5 1614 1 720 6180 t
+( that bind the most tightly are the ones that aren't really operators: subscripting, func-)14 3513(The operators)1 557 2 970 6336 t
+( all associate to the left.)5 943( These)1 288(tion calls, and structure selection.)4 1337 3 720 6456 t
+( highest precedence of any of the true operators.)8 2055( have the)2 392( These)1 304(Next come the unary operators.)4 1319 4 970 6612 t
+(Because function calls bind more tightly than unary operators, you must write)11 3201 1 720 6732 t
+10 CW f
+(\(*p\)\(\))3953 6732 w
+10 R f
+(to call a function)3 695 1 4345 6732 t
+(pointed to by)2 548 1 720 6852 t
+10 CW f
+(p)1303 6852 w
+10 R f
+(;)1363 6852 w
+10 CW f
+(*p\(\))1427 6852 w
+10 R f
+(implies that)1 481 1 1703 6852 t
+10 CW f
+(p)2220 6852 w
+10 R f
+( are unary operators and)4 1007( Casts)1 278(is a function that returns a pointer.)6 1439 3 2316 6852 t
+( operators are right-associative, so)4 1398( Unary)1 307(have the same precedence as any other unary operator.)8 2242 3 720 6972 t
+10 CW f
+(*p++)4700 6972 w
+10 R f
+(is)4973 6972 w
+8 S1 f
+(__________________)720 7072 w
+8 R f
+(* Recall that the result of)5 801 1 720 7172 t
+8 CW f
+(!=)1541 7172 w
+8 R f
+(is always either 1 or 0.)5 720 1 1657 7172 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 4 6
+%%Page: 5 7
+/saveobj save def
+mark
+7 pagesetup
+10 R f
+(- 5 -)2 166 1 2797 480 t
+(interpreted as)1 540 1 720 840 t
+10 CW f
+(*\(p++\))1285 840 w
+10 R f
+(and not as)2 405 1 1670 840 t
+10 CW f
+(\(*p\)++)2100 840 w
+10 R f
+(.)2460 840 w
+( the highest precedence, then the)5 1327( arithmetic operators have)3 1051( The)1 209(Next come the true binary operators.)5 1483 4 970 996 t
+( finally the con-)3 641(shift operators, the relational operators, the logical operators, the assignment operators, and)11 3679 2 720 1116 t
+( two most important things to keep in mind are:)9 1903( The)1 205(ditional operator.)1 688 3 720 1236 t
+( logical operator has lower precedence than every relational operator.)9 2763(1. Every)1 488 2 720 1392 t
+( less tightly than the arithmetic)5 1261( shift operators bind more tightly than the relational operators but)10 2654(2. The)1 405 3 720 1548 t
+(operators.)970 1668 w
+( and remainder)2 612( division,)1 379( Multiplication,)1 654(Within the various operator classes, there are few surprises.)8 2425 4 970 1824 t
+(have the same precedence, addition and subtraction have the same precedence, and the two shift operators)15 4320 1 720 1944 t
+(have the same precedence.)3 1062 1 720 2064 t
+( that the six relational operators do not all have the same precedence:)12 2767(One small surprise is)3 841 2 970 2220 t
+10 CW f
+(==)4604 2220 w
+10 R f
+(and)4750 2220 w
+10 CW f
+(!=)4920 2220 w
+10 R f
+( allows us, for instance, to see if)7 1298( This)1 230(bind less tightly than the other relational operators.)7 2051 3 720 2340 t
+10 CW f
+(a)4325 2340 w
+10 R f
+(and)4411 2340 w
+10 CW f
+(b)4581 2340 w
+10 R f
+(are in the)2 373 1 4667 2340 t
+(same relative order as)3 872 1 720 2460 t
+10 CW f
+(c)1617 2460 w
+10 R f
+(and)1702 2460 w
+10 CW f
+(d)1871 2460 w
+10 R f
+(by the expression)2 699 1 1956 2460 t
+10 CW f
+(a < b == c < d)6 840 1 1080 2640 t
+10 R f
+( bitwise operators all bind more)5 1293( The)1 210( precedence.)1 502(Within the logical operators, no two have the same)8 2065 4 970 2856 t
+( sequential operators, each)3 1064(tightly than the)2 612 2 720 2976 t
+10 I f
+(and)2423 2976 w
+10 R f
+(operator binds more tightly than the corresponding)6 2043 1 2600 2976 t
+10 I f
+(or)4670 2976 w
+10 R f
+(opera-)4786 2976 w
+(tor, and the bitwise)3 766 1 720 3096 t
+10 I f
+(exclusive or)1 479 1 1511 3096 t
+10 R f
+(operator \()1 390 1 2015 3096 t
+10 CW f
+(\303)2405 3096 w
+10 R f
+(\) falls between bitwise)3 901 1 2465 3096 t
+10 I f
+(and)3391 3096 w
+10 R f
+(and bitwise)1 458 1 3566 3096 t
+10 I f
+(or)4049 3096 w
+10 R f
+(.)4138 3096 w
+( per-)1 188( This)1 231( precedence than any we have mentioned so far.)8 1937(The ternary conditional operator has lower)5 1714 4 970 3252 t
+(mits the selection expression to contain logical combinations of relational operators, as in)12 3577 1 720 3372 t
+10 CW f
+(z = a < b && b < c ? d : e)12 1560 1 1080 3552 t
+10 R f
+( than the con-)3 552(This example also shows that it makes sense for assignment to have a lower precedence)14 3518 2 970 3768 t
+( have the same precedence and they all)7 1560( all the compound assignment operators)5 1600( Moreover,)1 470(ditional operator.)1 690 4 720 3888 t
+(group right to left, so that)5 1022 1 720 4008 t
+10 CW f
+(a = b = c)4 540 1 1080 4188 t
+10 R f
+(means the same as)3 740 1 720 4368 t
+10 CW f
+(b = c; a = b;)5 780 1 1080 4548 t
+10 R f
+( is easy to remember because the comma is often used as a)12 2363( This)1 230( is the comma operator.)4 948(Lowest of all)2 529 4 970 4764 t
+(substitute for the semicolon when an expression is required instead of a statement.)12 3287 1 720 4884 t
+( for example, the fol-)4 849( Consider,)1 437(Assignment is another operator often involved in precedence mixups.)8 2784 3 970 5040 t
+(lowing loop intended to copy one file to another:)8 1954 1 720 5160 t
+10 CW f
+(while \(c=getc\(in\) != EOF\))3 1500 1 1080 5340 t
+(putc\(c,out\);)1330 5460 w
+10 R f
+(The way the expression in the)5 1195 1 720 5640 t
+10 CW f
+(while)1940 5640 w
+10 R f
+(statement is written makes it look like)6 1522 1 2265 5640 t
+10 CW f
+(c)3812 5640 w
+10 R f
+(should be assigned the value)4 1143 1 3897 5640 t
+(of)720 5760 w
+10 CW f
+(getc\(in\))829 5760 w
+10 R f
+(and then compared with)3 965 1 1335 5760 t
+10 CW f
+(EOF)2325 5760 w
+10 R f
+( assignment has lower prece-)4 1158( Unhappily,)1 497(to terminate the loop.)3 855 3 2530 5760 t
+(dence than any comparison operator, so the value of)8 2185 1 720 5880 t
+10 CW f
+(c)2943 5880 w
+10 R f
+(will be the result of comparing)5 1294 1 3041 5880 t
+10 CW f
+(getc\(in\))4374 5880 w
+10 R f
+(, the)1 186 1 4854 5880 t
+(value of which is then discarded, and)6 1531 1 720 6000 t
+10 CW f
+(EOF)2284 6000 w
+10 R f
+( of the file will consist of a stream of bytes)10 1779(. Thus, the ``copy'')3 797 2 2464 6000 t
+(whose value is 1.)3 688 1 720 6120 t
+(It is not too hard to see that the example above should be written:)13 2611 1 970 6276 t
+10 CW f
+(while \(\(c=getc\(in\)\) != EOF\))3 1620 1 1080 6456 t
+(putc\(c,out\);)1330 6576 w
+10 R f
+( example, several ver-)3 883( For)1 190( to spot in more complicated expressions.)6 1663(However, errors of this sort can be hard)7 1584 4 720 6756 t
+(sions of the)2 461 1 720 6876 t
+10 I f
+(lint)1206 6876 w
+10 R f
+(program distributed with the)3 1141 1 1365 6876 t
+9 R f
+(UNIX)2529 6876 w
+10 S f
+(\322)2754 6876 w
+10 R f
+(system have the following erroneous line:)5 1673 1 2858 6876 t
+10 CW f
+(if\( \(t=BTYPE\(pt1->aty\)==STRTY\) || t==UNIONTY \){)4 2820 1 1330 7056 t
+10 R f
+( to)1 115(This was intended to assign a value)6 1481 2 720 7236 t
+10 CW f
+(t)2353 7236 w
+10 R f
+(and then see if)3 615 1 2450 7236 t
+10 CW f
+(t)3102 7236 w
+10 R f
+(is equal to)2 435 1 3199 7236 t
+10 CW f
+(STRTY)3671 7236 w
+10 R f
+(or)4008 7236 w
+10 CW f
+(UNIONTY)4128 7236 w
+10 R f
+(. The actual)2 492 1 4548 7236 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 5 7
+%%Page: 6 8
+/saveobj save def
+mark
+8 pagesetup
+10 R f
+(- 6 -)2 166 1 2797 480 t
+(effect is quite different.*)3 986 1 720 840 t
+( the predecessor of)3 771( B,)1 149( for historical reasons.)3 908(The precedence of the C logical operators comes about)8 2242 4 970 996 t
+(C, had logical operators that corresponded rougly to C's)8 2268 1 720 1116 t
+10 CW f
+(&)3016 1116 w
+10 R f
+(and)3104 1116 w
+10 CW f
+(|)3276 1116 w
+10 R f
+( they were defined to)4 850(operators. Although)1 826 2 3364 1116 t
+(act on bits, the compiler would treat them as)8 1837 1 720 1236 t
+10 CW f
+(&&)2590 1236 w
+10 R f
+(and)2743 1236 w
+10 CW f
+(||)2920 1236 w
+10 R f
+( the)1 156( When)1 296(if they were in a conditional context.)6 1515 3 3073 1236 t
+(two usages were split apart in C, it was deemed too dangerous to change the precedence much.**)16 3886 1 720 1356 t
+10 B f
+( Those Semicolons!)2 817(2.3. Watch)1 483 2 720 1596 t
+10 R f
+( difference: either it is a null statement, which)8 1849(An extra semicolon in a C program usually makes little)9 2221 2 970 1752 t
+( One)1 226( easy to remove.)3 684(has no effect, or it elicits a diagnostic message from the compiler, which makes it)14 3410 3 720 1872 t
+(important exception is after an)4 1268 1 720 1992 t
+10 CW f
+(if)2025 1992 w
+10 R f
+(or)2182 1992 w
+10 CW f
+(while)2302 1992 w
+10 R f
+( exactly one statement.)3 954(clause, which must be followed by)5 1447 2 2639 1992 t
+(Consider this example:)2 922 1 720 2112 t
+10 CW f
+(if \(x[i] > big\);)3 960 1 1080 2292 t
+(big = x[i];)2 660 1 1330 2412 t
+10 R f
+( this program fragment means something)5 1700(The semicolon on the first line will not upset the compiler, but)11 2620 2 720 2592 t
+(quite different from:)2 815 1 720 2712 t
+10 CW f
+(if \(x[i] > big\))3 900 1 1080 2892 t
+(big = x[i];)2 660 1 1330 3012 t
+10 R f
+(The first one is equivalent to:)5 1174 1 720 3192 t
+10 CW f
+( })1 120( {)1 180(if \(x[i] > big\))3 900 3 1080 3372 t
+(big = x[i];)2 660 1 1080 3492 t
+10 R f
+(which is, of course, equivalent to:)5 1351 1 720 3672 t
+10 CW f
+(big = x[i];)2 660 1 1080 3852 t
+10 R f
+(\(unless)720 4032 w
+10 CW f
+(x)1028 4032 w
+10 R f
+(,)1088 4032 w
+10 CW f
+(i)1138 4032 w
+10 R f
+(, or)1 133 1 1198 4032 t
+10 CW f
+(big)1356 4032 w
+10 R f
+(is a macro with side effects\).)5 1147 1 1561 4032 t
+( difference is at the end of a declaration just before a)11 2162(Another place that a semicolon can make a big)8 1908 2 970 4188 t
+( the following fragment:)3 974( Consider)1 411(function definition.)1 772 3 720 4308 t
+10 CW f
+(struct foo {)2 720 1 1080 4488 t
+(int x;)1 360 1 1330 4608 t
+(})1080 4728 w
+(f\(\))1080 4968 w
+({)1080 5088 w
+(. . .)2 300 1 1330 5208 t
+(})1080 5328 w
+10 R f
+(There is a semicolon missing between the first)7 1863 1 720 5508 t
+10 CW f
+(})2609 5508 w
+10 R f
+(and the)1 292 1 2695 5508 t
+10 CW f
+(f)3013 5508 w
+10 R f
+( is)1 94( effect of this)3 532( The)1 206(that immediately follows it.)3 1109 4 3099 5508 t
+(to declare that the function)4 1102 1 720 5628 t
+10 CW f
+(f)1854 5628 w
+10 R f
+(returns a)1 353 1 1946 5628 t
+10 CW f
+(struct foo)1 607 1 2331 5628 t
+10 R f
+( the)1 154( If)1 123(, which is defined as part of this declaration.)8 1825 3 2938 5628 t
+(semicolon were present,)2 967 1 720 5748 t
+10 CW f
+(f)1712 5748 w
+10 R f
+(would be defined by default as returning an integer.\262)8 2115 1 1797 5748 t
+10 B f
+( Switch Statement)2 771(2.4. The)1 367 2 720 5988 t
+10 R f
+( in that the cases in its)6 895(C is unusual)2 497 2 970 6144 t
+10 CW f
+(switch)2389 6144 w
+10 R f
+( for exam-)2 419( Consider,)1 438(statement can flow into each other.)5 1407 3 2776 6144 t
+(ple, the following program fragments in C and Pascal:)8 2167 1 720 6264 t
+8 S1 f
+(__________________)720 6780 w
+8 R f
+(* Thanks to Guy Harris for pointing this out to me.)10 1627 1 720 6880 t
+(** Dennis Ritchie and Steve Johnson both pointed this out to me.)11 2087 1 720 6980 t
+(\262 Thanks to an anonymous benefactor for this one.)8 1616 1 720 7080 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 6 8
+%%Page: 7 9
+/saveobj save def
+mark
+9 pagesetup
+10 R f
+(- 7 -)2 166 1 2797 480 t
+10 CW f
+(switch \(color\) {)2 960 1 1080 900 t
+(case 1: printf \("red"\);)3 1380 1 1080 1020 t
+(break;)1560 1140 w
+(case 2: printf \("yellow"\);)3 1560 1 1080 1260 t
+(break;)1560 1380 w
+(case 3: printf \("blue"\);)3 1440 1 1080 1500 t
+(break;)1560 1620 w
+(})1080 1740 w
+(case color of)2 780 1 1080 1980 t
+( \('red'\);)1 540(1: write)1 550 2 1080 2100 t
+( \('yellow'\);)1 720(2: write)1 550 2 1080 2220 t
+( \('blue'\))1 540(3: write)1 550 2 1080 2340 t
+(end)1080 2460 w
+10 R f
+(Both these program fragments do the same thing: print)8 2243 1 970 2676 t
+10 CW f
+(red)3246 2676 w
+10 R f
+(,)3426 2676 w
+10 CW f
+(yellow)3484 2676 w
+10 R f
+(, or)1 141 1 3844 2676 t
+10 CW f
+(blue)4018 2676 w
+10 R f
+(\(without starting a)2 749 1 4291 2676 t
+(new line\), depending on whether the variable)6 1810 1 720 2796 t
+10 CW f
+(color)2556 2796 w
+10 R f
+( exactly anal-)2 537( program fragments are)3 936( The)1 206(is 1, 2, or 3.)4 479 4 2882 2796 t
+( does not have any part that corresponds to the C)10 2057(ogous, with one exception: the Pascal program)6 1927 2 720 2916 t
+10 CW f
+(break)4740 2916 w
+10 R f
+( unimpeded)1 477( reason for that is that case labels in C behave as true labels: control can flow)16 3221(statement. The)1 622 3 720 3036 t
+(right through a case label.)4 1034 1 720 3156 t
+(Looking at it another way, suppose the C fragment looked more like the Pascal fragment:)14 3570 1 970 3312 t
+10 CW f
+(switch \(color\) {)2 960 1 1080 3492 t
+( \("red"\);)1 540( printf)1 440(case 1:)1 420 3 1080 3612 t
+( \("yellow"\);)1 720( printf)1 440(case 2:)1 420 3 1080 3732 t
+( \("blue"\);)1 600( printf)1 440(case 3:)1 420 3 1080 3852 t
+(})1080 3972 w
+10 R f
+(and suppose further that)3 980 1 720 4152 t
+10 CW f
+(color)1732 4152 w
+10 R f
+( the program would print)4 1027( Then,)1 287(were equal to 2.)3 658 3 2064 4152 t
+10 CW f
+(yellowblue)4068 4152 w
+10 R f
+(, because)1 372 1 4668 4152 t
+(control would pass naturally from the second)6 1803 1 720 4272 t
+10 CW f
+(printf)2548 4272 w
+10 R f
+(call to the statement after it.)5 1115 1 2933 4272 t
+(This is both a strength and a weakness of C)9 1806 1 970 4428 t
+10 CW f
+(switch)2809 4428 w
+10 R f
+( is a weakness because leaving)5 1272(statements. It)1 566 2 3202 4428 t
+(out a)1 201 1 720 4548 t
+10 CW f
+(break)950 4548 w
+10 R f
+( strength)1 350( is a)2 169( It)1 115(statement is easy to do, and often gives rise to obscure program misbehavior.)12 3127 4 1279 4548 t
+( a)1 76(because by leaving out)3 930 2 720 4668 t
+10 CW f
+(break)1758 4668 w
+10 R f
+(statement deliberately, one can readily express a control structure that is)10 2950 1 2090 4668 t
+( in large)2 347( Specifically,)1 562(inconvenient to implement otherwise.)3 1540 3 720 4788 t
+10 CW f
+(switch)3204 4788 w
+10 R f
+( that the)2 340(statements, one often finds)3 1101 2 3599 4788 t
+( of the cases reduces to some other case after a relatively small amount of special han-)16 3569(processing for one)2 751 2 720 4908 t
+(dling.)720 5028 w
+( a)1 76( Such)1 256(For example, consider a program that is an interpreter for some kind of imaginary machine.)14 3738 3 970 5184 t
+(program might contain a)3 1030 1 720 5304 t
+10 CW f
+(switch)1790 5304 w
+10 R f
+( a)1 83( such)1 223( On)1 187(statement to handle each of the various operation codes.)8 2357 4 2190 5304 t
+( to an add operation after the sign of the second)10 1916(machine, it is often true that a subtract operation is identical)10 2404 2 720 5424 t
+( it is nice to be able to write something like this:)11 1925( Thus,)1 275(operand has been inverted.)3 1069 3 720 5544 t
+10 CW f
+(case SUBTRACT:)1 840 1 1330 5724 t
+(opnd2 = -opnd2;)2 900 1 1580 5844 t
+(/* no break */)3 840 1 1580 5964 t
+(case ADD:)1 540 1 1330 6084 t
+(. . .)2 300 1 1580 6204 t
+10 R f
+( white space while looking for a token.)7 1574(As another example, consider the part of a compiler that skips)10 2496 2 970 6420 t
+( treat spaces, tabs, and newlines identically except that a newline should cause a)13 3300(Here, one would want to)4 1020 2 720 6540 t
+(line counter to be incremented:)4 1242 1 720 6660 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 7 9
+%%Page: 8 10
+/saveobj save def
+mark
+10 pagesetup
+10 R f
+(- 8 -)2 166 1 2797 480 t
+10 CW f
+(case '\\n':)1 600 1 1330 900 t
+(linecount++;)1580 1020 w
+(/* no break */)3 840 1 1580 1140 t
+(case '\\t':)1 600 1 1330 1260 t
+(case ' ':)2 540 1 1330 1380 t
+(. . .)2 300 1 1580 1500 t
+10 B f
+( Functions)1 448(2.5. Calling)1 512 2 720 1800 t
+10 R f
+( languages, C requires a function call to have an argument list, even)12 2754(Unlike some other programming)3 1316 2 970 1956 t
+( if)1 86( Thus,)1 275(if there are no arguments.)4 1022 3 720 2076 t
+10 CW f
+(f)2128 2076 w
+10 R f
+(is a function,)2 519 1 2213 2076 t
+10 CW f
+(f\(\);)1080 2256 w
+10 R f
+(is a statement that calls the function, but)7 1610 1 720 2436 t
+10 CW f
+(f;)1080 2616 w
+10 R f
+( precisely, it evaluates the address of the function, but does not call it.*)13 2835( More)1 266(does nothing at all.)3 761 3 720 2796 t
+10 B f
+( Dangling)1 415(2.6. The)1 367 2 720 3036 t
+10 CW f
+(else)1527 3036 w
+10 B f
+(Problem)1792 3036 w
+10 R f
+(We would be remiss in leaving any discussion of syntactic pitfalls without mentioning this one.)14 4070 1 970 3192 t
+(Although it is not unique to C, it has bitten C programmers with many years of experience.)16 3636 1 720 3312 t
+(Consider the following program fragment:)4 1698 1 970 3468 t
+10 CW f
+(if \(x == 0\))3 660 1 1080 3648 t
+(if \(y == 0\) error\(\);)4 1200 1 1330 3768 t
+(else {)1 360 1 1080 3888 t
+(z = x + y;)4 600 1 1330 4008 t
+(f \(&z\);)1 420 1 1330 4128 t
+(})1080 4248 w
+10 R f
+( main cases:)2 500(The programmer's intention for this fragment is that there should be two)11 2954 2 970 4464 t
+10 I f
+(x)4455 4464 w
+10 S f
+(=)4523 4464 w
+10 R f
+(0 and)1 225 1 4594 4464 t
+10 I f
+(x)4850 4464 w
+10 S f
+(\271)4902 4464 w
+10 R f
+(0.)4965 4464 w
+(In the first case, the fragment should do nothing at all unless)11 2469 1 720 4584 t
+10 I f
+(y)3219 4584 w
+10 S f
+(=)3287 4584 w
+10 R f
+(0, in which case it should call)6 1215 1 3358 4584 t
+10 CW f
+(error)4603 4584 w
+10 R f
+(. In)1 137 1 4903 4584 t
+(the second case, the program should set)6 1583 1 720 4704 t
+10 I f
+(z)2328 4704 w
+10 S f
+(=)2391 4704 w
+10 I f
+(x)2462 4704 w
+10 S f
+(+)2530 4704 w
+10 I f
+(y)2601 4704 w
+10 R f
+(and then call)2 510 1 2670 4704 t
+10 I f
+(f)3205 4704 w
+10 R f
+(with the address of)3 757 1 3258 4704 t
+10 I f
+(z)4040 4704 w
+10 R f
+(as its argument.)2 630 1 4104 4704 t
+( reason is the rule that)5 914( The)1 212( quite different.)2 632(However, the program fragment actually does something)6 2312 4 970 4860 t
+(an)720 4980 w
+10 CW f
+(else)842 4980 w
+10 R f
+(is always associated with the closest unmatched)6 1932 1 1110 4980 t
+10 CW f
+(if)3070 4980 w
+10 R f
+( to indent this fragment the way it)7 1366(. If we were)3 484 2 3190 4980 t
+(is actually executed, it would look like this:)7 1744 1 720 5100 t
+10 CW f
+(if \(x == 0\) {)4 780 1 1080 5280 t
+(if \(y == 0\))3 660 1 1330 5400 t
+(error\(\);)1580 5520 w
+(else {)1 360 1 1330 5640 t
+(z = x + y;)4 600 1 1580 5760 t
+(f \(&z\);)1 420 1 1580 5880 t
+(})1330 6000 w
+(})1080 6120 w
+10 R f
+( words, nothing at all will happen if)7 1455(In other)1 316 2 720 6300 t
+10 I f
+(x)2520 6300 w
+10 S f
+(\271)2572 6300 w
+10 R f
+( get the effect implied by the indentation of the origi-)10 2165(0. To)1 240 2 2635 6300 t
+(nal example, write:)2 768 1 720 6420 t
+8 S1 f
+(__________________)720 6980 w
+8 R f
+(* Thanks to Richard Stevens for pointing this out.)8 1592 1 720 7080 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 8 10
+%%Page: 9 11
+/saveobj save def
+mark
+11 pagesetup
+10 R f
+(- 9 -)2 166 1 2797 480 t
+10 CW f
+(if \(x == 0\) {)4 780 1 1080 900 t
+(if \(y == 0\))3 660 1 1330 1020 t
+(error\(\);)1580 1140 w
+(} else {)2 480 1 1080 1260 t
+(z = x + y;)4 600 1 1330 1380 t
+(f \(&z\);)1 420 1 1330 1500 t
+(})1080 1620 w
+10 B f
+(3. Linkage)1 476 1 720 1920 t
+10 R f
+( separately and then bound together by a)7 1651(A C program may consist of several parts that are compiled)10 2419 2 970 2076 t
+(program usually called a)3 987 1 720 2196 t
+10 I f
+(linker)1733 2196 w
+10 R f
+(,)1966 2196 w
+10 I f
+(linkage editor)1 559 1 2017 2196 t
+10 R f
+(, or)1 134 1 2576 2196 t
+10 I f
+(loader)2736 2196 w
+10 R f
+( compiler normally sees only one file)6 1487( the)1 148(. Because)1 408 3 2997 2196 t
+( detect errors whose recognition would require knowledge of several source program)11 3531(at a time, it cannot)4 789 2 720 2316 t
+(files at once.)2 507 1 720 2436 t
+( C implementations, but not all, have a pro-)8 1754( Some)1 280( type.)1 224(In this section, we look at some errors of that)9 1812 4 970 2592 t
+(gram called)1 482 1 720 2712 t
+10 I f
+(lint)1241 2712 w
+10 R f
+( is impossible to overemphasize the importance of)7 2097( It)1 124(that catches many of these errors.)5 1405 3 1414 2712 t
+(using such a program if it is available.)7 1526 1 720 2832 t
+10 B f
+( Must Check External Types Yourself)5 1613(3.1. You)1 378 2 720 3072 t
+10 R f
+( file contains the declaration:)4 1159( One)1 216(Suppose you have a C program divided into two files.)9 2154 3 970 3228 t
+10 CW f
+(int n;)1 360 1 1080 3408 t
+10 R f
+(and the other contains the declaration:)5 1522 1 720 3588 t
+10 CW f
+(long n;)1 420 1 1080 3768 t
+10 R f
+(This is not a valid C program, because the same external name is declared with two different types in the)19 4320 1 720 3948 t
+( because the compiler does not know)6 1505( many implementations will not detect this error,)7 1991( However,)1 446(two files.)1 378 4 720 4068 t
+( the job of checking type)5 1015( Thus,)1 280( the other.)2 412(about the contents of either of the two files while it is compiling)12 2613 4 720 4188 t
+(consistency can only be done by the linker \(or some utility program like)12 2916 1 720 4308 t
+10 I f
+(lint)3664 4308 w
+10 R f
+( has a)2 231(\); if the operating system)4 1011 2 3798 4308 t
+(linker that doesn't know about data types, there is little the C compiler can do to force it.)17 3543 1 720 4428 t
+( are many possibilities:)3 925( There)1 282(What actually happens when this program is run?)7 1977 3 970 4584 t
+( then expect to see a diag-)6 1072( would)1 280( One)1 221( implementation is clever enough to detect the type clash.)9 2342(1. The)1 405 5 720 4740 t
+(nostic message explaining that the type of)6 1676 1 970 4860 t
+10 CW f
+(n)2671 4860 w
+10 R f
+(was given differently in two different files.)6 1716 1 2756 4860 t
+( are using an implementation in which)6 1544(2. You)1 422 2 720 5016 t
+10 CW f
+(int)2713 5016 w
+10 R f
+(and)2920 5016 w
+10 CW f
+(long)3091 5016 w
+10 R f
+( typically)1 378( is)1 94( This)1 230(are really the same type.)4 980 4 3358 5016 t
+( this case, your program will)5 1193( In)1 143( naturally.)1 415(true of machines in which 32-bit arithmetic comes most)8 2319 4 970 5136 t
+(probably work as if you had said)6 1309 1 970 5256 t
+10 CW f
+(long)2304 5256 w
+10 R f
+(\(or)2569 5256 w
+10 CW f
+(int)2710 5256 w
+10 R f
+( would be a good example)5 1051( This)1 228(\) in both declarations.)3 871 3 2890 5256 t
+(of a program that works only by coincidence.)7 1813 1 970 5376 t
+( two instances of)3 680(3. The)1 405 2 720 5532 t
+10 CW f
+(n)1832 5532 w
+10 R f
+(require different amounts of storage, but they happen to share storage in such)12 3121 1 1919 5532 t
+( for example, if the)4 778( might happen,)2 607( This)1 233(a way that the values assigned to one are valid for the other.)12 2452 4 970 5652 t
+(linker arranged for the)3 897 1 970 5772 t
+10 CW f
+(int)1893 5772 w
+10 R f
+( the low-order part of the)5 1010(to share storage with)3 832 2 2099 5772 t
+10 CW f
+(long)3968 5772 w
+10 R f
+(. Whether or not this)4 832 1 4208 5772 t
+( is an even better example of a program)8 1627( This)1 234( system-dependent.)1 777(happens is obviously machine- and)4 1432 4 970 5892 t
+(that works only by coincidence.)4 1273 1 970 6012 t
+( two instances of)3 704(4. The)1 405 2 720 6168 t
+10 CW f
+(n)1864 6168 w
+10 R f
+( such a way that assigning a value to one has the effect of)13 2435(share storage in)2 646 2 1959 6168 t
+( this case, the program will probably fail.)7 1645( In)1 133(apparently assigning a different value to the other.)7 2007 3 970 6288 t
+( file of a program will contain)6 1222( One)1 220(Another example of this sort of thing happens surprisingly often.)9 2628 3 970 6444 t
+(a declaration like:)2 715 1 720 6564 t
+10 CW f
+(char filename[] = "/etc/passwd";)3 1920 1 1080 6744 t
+10 R f
+(and another will contain this declaration:)5 1634 1 720 6924 t
+10 CW f
+(char *filename;)1 900 1 1080 7104 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 9 11
+%%Page: 10 12
+/saveobj save def
+mark
+12 pagesetup
+10 R f
+(- 10 -)2 216 1 2772 480 t
+(Although arrays and pointers behave very similarly in some contexts,)9 2837 1 970 840 t
+10 I f
+(they are not the same.)4 907 1 3839 840 t
+10 R f
+(In the)1 237 1 4803 840 t
+(first declaration,)1 658 1 720 960 t
+10 CW f
+(filename)1407 960 w
+10 R f
+( generate)1 365( using the name will)4 827( Although)1 432(is the name of an array of characters.)7 1500 4 1916 960 t
+( generated as needed and not actually kept around.)8 2046(a pointer to the first element of that array, that pointer is)11 2274 2 720 1080 t
+(In the second declaration,)3 1115 1 720 1200 t
+10 CW f
+(filename)1890 1200 w
+10 R f
+( points wherever the)3 899( pointer)1 338( That)1 263(is the name of a pointer.)5 1115 4 2425 1200 t
+( it a value, it will have a zero \(null\) value by)11 1857( the programmer doesn't give)4 1209( If)1 123(programmer makes it point.)3 1131 4 720 1320 t
+(default.)720 1440 w
+(The two declarations of)3 945 1 970 1596 t
+10 CW f
+(filename)1940 1596 w
+10 R f
+(use storage in different ways; they cannot coexist.)7 1996 1 2445 1596 t
+( a tool like)3 428(One way to avoid type clashes of this sort is to use)11 2023 2 970 1752 t
+10 I f
+(lint)3447 1752 w
+10 R f
+( order to be able)4 652( In)1 134(if it is available.)3 647 3 3607 1752 t
+( to)1 110(to check for type clashes between separately compiled parts of a program, some program must be able)16 4210 2 720 1872 t
+( typical compiler does not do this, but)7 1511( The)1 205(see all the parts at once.)5 953 3 720 1992 t
+10 I f
+(lint)3414 1992 w
+10 R f
+(does.)3573 1992 w
+(Another way to avoid these problems is to put external declarations into)11 2932 1 970 2148 t
+10 CW f
+(include)3932 2148 w
+10 R f
+( way,)1 222(files. That)1 436 2 4382 2148 t
+(the type of an external object only appears once.*)8 1981 1 720 2268 t
+10 B f
+( Pitfalls)1 325(4. Semantic)1 519 2 720 2508 t
+10 R f
+( perfectly spelled and written with impeccable grammar and still be meaningless.)11 3327(A sentence can be)3 743 2 970 2664 t
+( we will look at ways of writing programs that look like they mean one thing but actually)17 3714(In this section,)2 606 2 720 2784 t
+(mean something quite different.)3 1276 1 720 2904 t
+(We will also discuss contexts in which things that look reasonable on the surface actually give unde-)16 4070 1 970 3060 t
+( not guaranteed to work on any C implementa-)8 1888( will limit ourselves here to things that are)8 1720( We)1 192(fined results.)1 520 4 720 3180 t
+( 7, which)2 385( will leave those that might work on some implementations but not others until section)14 3559(tion. We)1 376 3 720 3300 t
+(looks at portability problems.)3 1178 1 720 3420 t
+10 B f
+( Evaluation Sequence)2 918(4.1. Expression)1 673 2 720 3660 t
+10 R f
+( Con-)1 260( don't.)1 271( Others)1 326( their operands in a known, specified order.)7 1802(Some C operators always evaluate)4 1411 5 970 3816 t
+(sider, for instance, the following expression:)5 1778 1 720 3936 t
+10 CW f
+(a < b && c < d)6 840 1 1080 4116 t
+10 R f
+(The language definition states that)4 1376 1 720 4296 t
+10 CW f
+(a<b)2121 4296 w
+10 R f
+( If)1 117(will be evaluated first.)3 896 2 2326 4296 t
+10 CW f
+(a)3365 4296 w
+10 R f
+(is indeed less than)3 733 1 3451 4296 t
+10 CW f
+(b)4210 4296 w
+10 R f
+(,)4270 4296 w
+10 CW f
+(c<d)4321 4296 w
+10 R f
+(must then be)2 513 1 4527 4296 t
+( the other hand, if)4 711( On)1 173(evaluated to determine the value of the whole expression.)8 2306 3 720 4416 t
+10 CW f
+(a)3936 4416 w
+10 R f
+( than or equal to)4 649(is greater)1 369 2 4022 4416 t
+10 CW f
+(b)720 4536 w
+10 R f
+(, then)1 222 1 780 4536 t
+10 CW f
+(c<d)1027 4536 w
+10 R f
+(is not evaluated at all.)4 874 1 1232 4536 t
+(To evaluate)1 491 1 970 4692 t
+10 CW f
+(a<b)1509 4692 w
+10 R f
+(, on the other hand, the compiler may evaluate either)9 2311 1 1689 4692 t
+10 CW f
+(a)4048 4692 w
+10 R f
+(or)4157 4692 w
+10 CW f
+(b)4289 4692 w
+10 R f
+( some)1 260(first. On)1 382 2 4398 4692 t
+(machines, it may even evaluate them in parallel.)7 1927 1 720 4812 t
+(Only the four C operators)4 1034 1 970 4968 t
+10 CW f
+(&&)2031 4968 w
+10 R f
+(,)2151 4968 w
+10 CW f
+(||)2203 4968 w
+10 R f
+(,)2323 4968 w
+10 CW f
+(?:)2376 4968 w
+10 R f
+(, and)1 197 1 2496 4968 t
+10 CW f
+(,)2721 4968 w
+10 R f
+(specify an order of evaluation.)4 1228 1 2809 4968 t
+10 CW f
+(&&)4090 4968 w
+10 R f
+(and)4238 4968 w
+10 CW f
+(||)4410 4968 w
+10 R f
+(evaluate the)1 482 1 4558 4968 t
+( The)1 213( first, and the right operand only if necessary.)8 1877(left operand)1 488 3 720 5088 t
+10 CW f
+(?:)3331 5088 w
+10 R f
+(operator takes three operands:)3 1223 1 3484 5088 t
+10 CW f
+(a?b:c)4740 5088 w
+10 R f
+(evaluates)720 5208 w
+10 CW f
+(a)1117 5208 w
+10 R f
+(first, and then evaluates either)4 1204 1 1203 5208 t
+10 CW f
+(b)2433 5208 w
+10 R f
+(or)2519 5208 w
+10 CW f
+(c)2628 5208 w
+10 R f
+(, depending on the value of)5 1092 1 2688 5208 t
+10 CW f
+(a)3807 5208 w
+10 R f
+(. The)1 207 1 3867 5208 t
+10 CW f
+(,)4101 5208 w
+10 R f
+(operator evaluates its)2 852 1 4188 5208 t
+(left operand and discards its value, then evaluates its right operand.\262)10 2734 1 720 5328 t
+( particular, the assignment opera-)4 1341( In)1 135( undefined order.)2 688(All other C operators evaluate their operands in)7 1906 4 970 5484 t
+(tors do not make any guarantees about evaluation order.)8 2237 1 720 5604 t
+(For this reason, the following way of copying the first)9 2159 1 970 5760 t
+10 CW f
+(n)3154 5760 w
+10 R f
+(elements of array)2 692 1 3239 5760 t
+10 CW f
+(x)3956 5760 w
+10 R f
+(to array)1 307 1 4041 5760 t
+10 CW f
+(y)4373 5760 w
+10 R f
+(doesn't work:)1 552 1 4458 5760 t
+10 CW f
+(i = 0;)2 360 1 1080 5940 t
+(while \(i < n\))3 780 1 1080 6060 t
+(y[i] = x[i++];)2 840 1 1330 6180 t
+10 R f
+( that the address of)4 758(The trouble is that there is no guarantee)7 1583 2 720 6360 t
+10 CW f
+(y[i])3087 6360 w
+10 R f
+(will be evaluated before)3 964 1 3353 6360 t
+10 CW f
+(i)4343 6360 w
+10 R f
+(is incremented.)1 611 1 4429 6360 t
+8 S1 f
+(__________________)720 6460 w
+8 R f
+( an external object, although there may be many dec-)9 1713(* Some C compilers insist that there must be exactly one definition of)12 2247 2 720 6560 t
+( put a declaration in an)5 741( using such a compiler, it may be easiest to)9 1401(larations. When)1 527 3 720 6660 t
+8 CW f
+(include)3412 6660 w
+8 R f
+(file and a definition in some)5 909 1 3771 6660 t
+( than having it appear more)5 912( means that the type of each external object appears twice, but that is better)14 2482( This)1 189(other place.)1 377 4 720 6760 t
+(than two times.)2 489 1 720 6860 t
+( example,)1 310( For)1 152(\262 Commas that separate function arguments are not comma operators.)9 2243 3 720 6960 t
+8 CW f
+(x)3446 6960 w
+8 R f
+(and)3515 6960 w
+8 CW f
+(y)3651 6960 w
+8 R f
+(are fetched in undefined order)4 960 1 3720 6960 t
+(in)720 7060 w
+8 CW f
+(f\(x,y\))802 7060 w
+8 R f
+(, but not in)3 346 1 1090 7060 t
+8 CW f
+(g\(\(x,y\)\))1456 7060 w
+8 R f
+(. In the latter example,)4 714 1 1840 7060 t
+8 CW f
+(g)2574 7060 w
+8 R f
+( of that argument is determined by)6 1101( value)1 192( The)1 164(has one argument.)2 581 4 2642 7060 t
+(evaluating)720 7160 w
+8 CW f
+(x)1071 7160 w
+8 R f
+(, discarding its value, and then evaluating)6 1321 1 1119 7160 t
+8 CW f
+(y)2460 7160 w
+8 R f
+(.)2508 7160 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 10 12
+%%Page: 11 13
+/saveobj save def
+mark
+13 pagesetup
+10 R f
+(- 11 -)2 216 1 2772 480 t
+( similar version fails for the same reason:)7 1650( This)1 228(On some implementations, it will; on others, it won't.)8 2148 3 720 840 t
+10 CW f
+(i = 0;)2 360 1 1080 1020 t
+(while \(i < n\))3 780 1 1080 1140 t
+(y[i++] = x[i];)2 840 1 1330 1260 t
+10 R f
+(On the other hand, this one will work fine:)8 1701 1 720 1440 t
+10 CW f
+(i = 0;)2 360 1 1080 1620 t
+(while \(i < n\) {)4 900 1 1080 1740 t
+(y[i] = x[i];)2 720 1 1330 1860 t
+(i++;)1330 1980 w
+(})1080 2100 w
+10 R f
+(This can, of course, be abbreviated:)5 1421 1 720 2280 t
+10 CW f
+(for \(i = 0; i < n; i++\))7 1380 1 1080 2460 t
+(y[i] = x[i];)2 720 1 1330 2580 t
+10 B f
+(4.2. The)1 367 1 720 2880 t
+10 CW f
+(&&)1112 2880 w
+10 B f
+(,)1232 2880 w
+10 CW f
+(||)1282 2880 w
+10 B f
+(, and)1 212 1 1402 2880 t
+10 CW f
+(!)1639 2880 w
+10 B f
+(Operators)1724 2880 w
+10 R f
+(C has two classes of logical operators that are occasionally interchangeable: the bitwise operators)13 3954 1 970 3036 t
+10 CW f
+(&)4955 3036 w
+10 R f
+(,)5015 3036 w
+10 CW f
+(|)720 3156 w
+10 R f
+(, and)1 196 1 780 3156 t
+10 CW f
+(\304)1003 3156 w
+10 R f
+( operators)1 397(, and the logical)3 644 2 1063 3156 t
+10 CW f
+(&&)2130 3156 w
+10 R f
+(,)2250 3156 w
+10 CW f
+(||)2301 3156 w
+10 R f
+(, and)1 195 1 2421 3156 t
+10 CW f
+(!)2642 3156 w
+10 R f
+(. A programmer who substitutes one of these operators for)9 2338 1 2702 3156 t
+( may be in for a surprise: the program may appear to work)12 2400(the corresponding operator from the other class)6 1920 2 720 3276 t
+(correctly after such an interchange but may actually be working only by coincidence.)12 3400 1 720 3396 t
+(The)970 3552 w
+10 CW f
+(&)1154 3552 w
+10 R f
+(,)1214 3552 w
+10 CW f
+(|)1268 3552 w
+10 R f
+(, and)1 198 1 1328 3552 t
+10 CW f
+(\304)1555 3552 w
+10 R f
+( their operands as a sequence of bits and work on each bit separately.)13 2819(operators treat)1 577 2 1644 3552 t
+(For example,)1 543 1 720 3672 t
+10 CW f
+(10&12)1304 3672 w
+10 R f
+(is 8 \()2 232 1 1645 3672 t
+10 CW f
+(1000)1877 3672 w
+10 R f
+(\), because)1 414 1 2117 3672 t
+10 CW f
+(&)2572 3672 w
+10 R f
+( of 10 \()3 336(looks at the binary representations)4 1434 2 2673 3672 t
+10 CW f
+(1010)4443 3672 w
+10 R f
+(\) and 12)2 357 1 4683 3672 t
+(\()720 3792 w
+10 CW f
+(1100)753 3792 w
+10 R f
+( position in both)3 684(\) and produces a result that has a bit turned on for each bit that is on in the same)19 3363 2 993 3792 t
+(operands. Similarly,)1 834 1 720 3912 t
+10 CW f
+(10|12)1580 3912 w
+10 R f
+(is 14 \()2 252 1 1906 3912 t
+10 CW f
+(1110\))2158 3912 w
+10 R f
+(and)2483 3912 w
+10 CW f
+(\30410)2652 3912 w
+10 R f
+(is \26111 \()2 300 1 2857 3912 t
+10 CW f
+(11...110101)3157 3912 w
+10 R f
+(\), at least on a 2's complement)6 1223 1 3817 3912 t
+(machine.)720 4032 w
+(The)970 4188 w
+10 CW f
+(&&)1154 4188 w
+10 R f
+(,)1274 4188 w
+10 CW f
+(||)1329 4188 w
+10 R f
+(, and)1 199 1 1449 4188 t
+10 CW f
+(!)1678 4188 w
+10 R f
+(operators, on the other hand, treat their arguments as if they are either ``true'' or)14 3272 1 1768 4188 t
+( oper-)1 237( These)1 290( 0 represents ``false'' and any other value represents ``true.'')9 2442(``false,'' with the convention that)4 1351 4 720 4308 t
+(ators return 1 for ``true'' and 0 for ``false,'' and the)10 2106 1 720 4428 t
+10 CW f
+(&&)2856 4428 w
+10 R f
+(and)3006 4428 w
+10 CW f
+(||)3180 4428 w
+10 R f
+(operators do not even evaluate their right-)6 1710 1 3330 4428 t
+(hand operands if their results can be determined from their left-hand operands.)11 3137 1 720 4548 t
+(Thus)970 4704 w
+10 CW f
+(!10)1206 4704 w
+10 R f
+(is zero, because 10 is nonzero,)5 1271 1 1422 4704 t
+10 CW f
+(10&&12)2729 4704 w
+10 R f
+( and)1 181(is 1, because both 10 and 12 are nonzero,)8 1734 2 3125 4704 t
+10 CW f
+(10||12)720 4824 w
+10 R f
+( is not even evaluated in the latter expression, nor)9 2016( 12)1 130( Moreover,)1 473(is also 1, because 10 is nonzero.)6 1311 4 1110 4824 t
+(is)720 4944 w
+10 CW f
+(f\(\))812 4944 w
+10 R f
+(in)1017 4944 w
+10 CW f
+(10||f\(\))1120 4944 w
+10 R f
+(.)1540 4944 w
+(Consider the following program fragment to look for a particular element in a table:)13 3353 1 970 5100 t
+10 CW f
+(i = 0;)2 360 1 1080 5280 t
+(while \(i < tabsize && tab[i] != x\))7 2040 1 1080 5400 t
+(i++;)1330 5520 w
+10 R f
+( is that if)3 392(The idea behind this loop)4 1064 2 720 5700 t
+10 CW f
+(i)2214 5700 w
+10 R f
+(is equal to)2 437 1 2312 5700 t
+10 CW f
+(tabsize)2787 5700 w
+10 R f
+(when the loop terminates, then the element)6 1795 1 3245 5700 t
+( Otherwise,)1 485(sought was not found.)3 883 2 720 5820 t
+10 CW f
+(i)2113 5820 w
+10 R f
+(contains the element's index.)3 1165 1 2198 5820 t
+(Suppose that the)2 661 1 970 5976 t
+10 CW f
+(&&)1656 5976 w
+10 R f
+(were inadvertently replaced by)3 1232 1 1801 5976 t
+10 CW f
+(&)3058 5976 w
+10 R f
+( probably)1 381( the loop would)3 625( Then)1 255(in this example.)2 636 4 3143 5976 t
+(still appear to work, but would do so only because of two lucky breaks.)13 2849 1 720 6096 t
+( sort that yield 0 if the condition is false and)10 1770(The first is that both comparisons in this example are of a)11 2300 2 970 6252 t
+( long as)2 327( As)1 169(1 if the condition is true.)5 1023 3 720 6372 t
+10 CW f
+(x)2272 6372 w
+10 R f
+(and)2365 6372 w
+10 CW f
+(y)2542 6372 w
+10 R f
+( or 0,)2 222(are both 1)2 415 2 2635 6372 t
+10 CW f
+(x&y)3304 6372 w
+10 R f
+(and)3516 6372 w
+10 CW f
+(x&&y)3692 6372 w
+10 R f
+(will always have the same)4 1076 1 3964 6372 t
+( replaced by one that uses some non-zero value other)9 2141( if one of the comparisons were to be)8 1496(value. However,)1 683 3 720 6492 t
+(than 1 to represent ``true,'' then the loop would stop working.)10 2474 1 720 6612 t
+( element off the end of an array is usually harmless,)10 2135(The second lucky break is that looking just one)8 1935 2 970 6768 t
+( modified program looks past the end of the)8 1828( The)1 215(provided that the program doesn't change that element.)7 2277 3 720 6888 t
+(array because)1 556 1 720 7008 t
+10 CW f
+(&)1313 7008 w
+10 R f
+(, unlike)1 312 1 1373 7008 t
+10 CW f
+(&&)1722 7008 w
+10 R f
+( in the last iteration of the)6 1105( Thus)1 263( operands.)1 423(, must always evaluate both of its)6 1407 4 1842 7008 t
+(loop, the value of)3 702 1 720 7128 t
+10 CW f
+(tab[i])1448 7128 w
+10 R f
+( fetched even though)3 834(will be)1 276 2 1834 7128 t
+10 CW f
+(i)2969 7128 w
+10 R f
+(is equal to)2 411 1 3054 7128 t
+10 CW f
+(tabsize)3490 7128 w
+10 R f
+(. If)1 116 1 3910 7128 t
+10 CW f
+(tabsize)4051 7128 w
+10 R f
+(is the number)2 544 1 4496 7128 t
+(of elements in)2 566 1 720 7248 t
+10 CW f
+(tab)1311 7248 w
+10 R f
+(, this will fetch a non-existent element of)7 1637 1 1491 7248 t
+10 CW f
+(tab)3153 7248 w
+10 R f
+(.)3333 7248 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 11 13
+%%Page: 12 14
+/saveobj save def
+mark
+14 pagesetup
+10 R f
+(- 12 -)2 216 1 2772 480 t
+10 B f
+( Start from Zero)3 706(4.3. Subscripts)1 651 2 720 840 t
+10 R f
+(In most languages, an array with)5 1333 1 970 996 t
+10 CW f
+(n)2334 996 w
+10 R f
+( has those elements numbered with subscripts)6 1868(elements normally)1 747 2 2425 996 t
+(ranging from)1 524 1 720 1116 t
+10 CW f
+(1)1269 1116 w
+10 R f
+(to)1354 1116 w
+10 CW f
+(n)1457 1116 w
+10 R f
+( so in C.)3 334(inclusive. Not)1 586 2 1542 1116 t
+(A C array with)3 608 1 970 1272 t
+10 CW f
+(n)1607 1272 w
+10 R f
+(elements does not have an element with a subscript of)9 2191 1 1696 1272 t
+10 CW f
+(n)3916 1272 w
+10 R f
+( are num-)2 392(, as the elements)3 672 2 3976 1272 t
+(bered from)1 444 1 720 1392 t
+10 CW f
+(0)1193 1392 w
+10 R f
+(through)1282 1392 w
+10 CW f
+(n-1)1622 1392 w
+10 R f
+( this, programmers coming from other languages must be especially)9 2740(. Because of)2 498 2 1802 1392 t
+(careful when using arrays:)3 1055 1 720 1512 t
+10 CW f
+(int i, a[10];)2 780 1 1080 1692 t
+(for \(i=1; i<=10; i++\))3 1260 1 1080 1812 t
+(a[i] = 0;)2 540 1 1330 1932 t
+10 R f
+(This example, intended to set the elements of)7 1851 1 720 2112 t
+10 CW f
+(a)2602 2112 w
+10 R f
+( the com-)2 391( Because)1 389( unexpected side effect.)3 962(to zero, had an)3 605 4 2693 2112 t
+(parison in the)2 558 1 720 2232 t
+10 CW f
+(for)1310 2232 w
+10 R f
+(statement was)1 570 1 1522 2232 t
+10 CW f
+(i<=10)2124 2232 w
+10 R f
+(instead of)1 398 1 2456 2232 t
+10 CW f
+(i<10)2886 2232 w
+10 R f
+(, the non-existent element number 10 of)6 1637 1 3126 2232 t
+10 CW f
+(a)4794 2232 w
+10 R f
+(was)4885 2232 w
+(set to zero, thus clobbering the word that followed)8 2027 1 720 2352 t
+10 CW f
+(a)2775 2352 w
+10 R f
+( compiler on which this program was)6 1505( The)1 208(in memory.)1 464 3 2863 2352 t
+( memory locations, so the word after)6 1473(run allocates memory for users' variables in decreasing)7 2222 2 720 2472 t
+10 CW f
+(a)4441 2472 w
+10 R f
+(turned out to)2 513 1 4527 2472 t
+(be)720 2592 w
+10 CW f
+(i)839 2592 w
+10 R f
+(. Setting)1 334 1 899 2592 t
+10 CW f
+(i)1258 2592 w
+10 R f
+(to zero made the loop into an infinite loop.)8 1707 1 1343 2592 t
+10 B f
+( Doesn't Always Cast Actual Parameters)5 1732(4.4. C)1 272 2 720 2832 t
+10 R f
+(The following simple program fragment fails for two reasons:)8 2474 1 970 2988 t
+10 CW f
+(double s;)1 540 1 1080 3168 t
+(s = sqrt \(2\);)3 780 1 1080 3288 t
+(printf \("%g\\n", s\);)2 1140 1 1080 3408 t
+10 R f
+(The first reason is that)4 917 1 970 3624 t
+10 CW f
+(sqrt)1918 3624 w
+10 R f
+(expects a)1 374 1 2189 3624 t
+10 CW f
+(double)2594 3624 w
+10 R f
+( The)1 211(value as its argument and it isn't getting one.)8 1844 2 2985 3624 t
+(second is that it returns a)5 996 1 720 3744 t
+10 CW f
+(double)1741 3744 w
+10 R f
+( way to correct it is:)5 796( One)1 216(result but isn't declared as such.)5 1281 3 2126 3744 t
+10 CW f
+(double s, sqrt\(\);)2 1020 1 1080 3924 t
+(s = sqrt \(2.0\);)3 900 1 1080 4044 t
+(printf \("%g\\n", s\);)2 1140 1 1080 4164 t
+10 R f
+( that control conversion of function arguments: \(1\) integer values shorter than)11 3147(C has two simple rules)4 923 2 970 4380 t
+(an)720 4500 w
+10 CW f
+(int)845 4500 w
+10 R f
+(are converted to)2 654 1 1056 4500 t
+10 CW f
+(int)1741 4500 w
+10 R f
+(; \(2\) floating-point values shorter than a)6 1628 1 1921 4500 t
+10 CW f
+(double)3580 4500 w
+10 R f
+(are converted to)2 654 1 3971 4500 t
+10 CW f
+(double)4655 4500 w
+10 R f
+(.)5015 4500 w
+(All other values are left unconverted.)5 1495 1 720 4620 t
+10 I f
+( the programmer's responsibility to ensure that the arguments to)9 2618(It is)1 155 2 2267 4620 t
+(a function are of the right type.)6 1247 1 720 4740 t
+10 R f
+(Therefore, a programmer who uses a function like)7 2077 1 970 4896 t
+10 CW f
+(sqrt)3083 4896 w
+10 R f
+(, whose parameter is a)4 933 1 3323 4896 t
+10 CW f
+(double)4292 4896 w
+10 R f
+(, must be)2 388 1 4652 4896 t
+(careful to pass arguments that are of)6 1464 1 720 5016 t
+10 CW f
+(float)2212 5016 w
+10 R f
+(or)2540 5016 w
+10 CW f
+(double)2651 5016 w
+10 R f
+( constant)1 360( The)1 207(type only.)1 402 3 3038 5016 t
+10 CW f
+(2)4034 5016 w
+10 R f
+(is an)1 188 1 4121 5016 t
+10 CW f
+(int)4336 5016 w
+10 R f
+(and is there-)2 497 1 4543 5016 t
+(fore of the wrong type.)4 917 1 720 5136 t
+( value of a function is used in an expression, that value is automatically cast to an appropri-)17 3684(When the)1 386 2 970 5292 t
+( know the actual type returned by the function in order to be able to)14 2765( the compiler must)3 765( However,)1 446(ate type.)1 344 4 720 5412 t
+( without further declaration are assumed to return an)8 2135( used)1 212( Functions)1 449(do this.)1 299 4 720 5532 t
+10 CW f
+(int)3845 5532 w
+10 R f
+(, so declarations for such)4 1015 1 4025 5532 t
+( However,)1 443(functions are unnecessary.)2 1061 2 720 5652 t
+10 CW f
+(sqrt)2252 5652 w
+10 R f
+(returns a)1 349 1 2520 5652 t
+10 CW f
+(double)2897 5652 w
+10 R f
+( be declared as such before it can)7 1334(, so it must)3 449 2 3257 5652 t
+(be used successfully.)2 840 1 720 5772 t
+( generally provide a file that can be brought in with an)11 2336(In practice, C implementations)3 1274 2 970 5928 t
+10 CW f
+(include)4620 5928 w
+10 R f
+(statement that contains declarations for library functions like)7 2469 1 720 6048 t
+10 CW f
+(sqrt)3220 6048 w
+10 R f
+( still neces-)2 465(, but writing declarations is)4 1115 2 3460 6048 t
+( who write their own functions \261 in other words, for anyone who writes non-trivial C)15 3450(sary for programmers)2 870 2 720 6168 t
+(programs.)720 6288 w
+(Here is a more spectacular example:)5 1448 1 970 6444 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 12 14
+%%Page: 13 15
+/saveobj save def
+mark
+15 pagesetup
+10 R f
+(- 13 -)2 216 1 2772 480 t
+10 CW f
+(main\(\))1080 900 w
+({)1080 1020 w
+(int i;)1 360 1 1330 1140 t
+(char c;)1 420 1 1330 1260 t
+(for \(i=0; i<5; i++\) {)4 1260 1 1330 1380 t
+(scanf \("%d", &c\);)2 1020 1 1580 1500 t
+(printf \("%d ", i\);)3 1080 1 1580 1620 t
+(})1330 1740 w
+(printf \("\\n"\);)1 840 1 1330 1860 t
+(})1080 1980 w
+10 R f
+( standard input and writes)4 1060(Ostensibly, this program reads five numbers from its)7 2151 2 970 2196 t
+10 CW f
+(0 1 2 3 4)4 568 1 4213 2196 t
+10 R f
+(on its)1 227 1 4813 2196 t
+( one compiler, for example, its output is)7 1631( On)1 177( doesn't always do that.)4 966( fact, it)2 292( In)1 139(standard output.)1 650 6 720 2316 t
+10 CW f
+(0 0 0 0)3 435 1 4605 2316 t
+(0 1 2 3 4)4 540 1 720 2436 t
+10 R f
+(.)1260 2436 w
+( key is the declaration of)5 999(Why? The)1 446 2 970 2592 t
+10 CW f
+(c)2443 2592 w
+10 R f
+(as a)1 155 1 2531 2592 t
+10 CW f
+(char)2714 2592 w
+10 R f
+(rather than as an)3 668 1 2983 2592 t
+10 CW f
+(int)3680 2592 w
+10 R f
+(. When you ask)3 633 1 3860 2592 t
+10 I f
+(scanf)4522 2592 w
+10 R f
+(to read)1 278 1 4762 2592 t
+( a pointer to a character.)5 978( it gets in this case is)6 852( What)1 270(an integer, it expects a pointer to an integer.)8 1784 4 720 2712 t
+10 I f
+(Scanf)4657 2712 w
+10 R f
+(has)4907 2712 w
+( that it didn't get what it expected: it treats its input as an integer pointer and stores an integer)19 3770(no way to tell)3 550 2 720 2832 t
+( an integer takes up more memory than a character, this steps on some of the memory near)17 3609(there. Since)1 496 2 720 2952 t
+10 CW f
+(c)4850 2952 w
+10 R f
+(.)4910 2952 w
+(Exactly what is near)3 815 1 970 3108 t
+10 CW f
+(c)1811 3108 w
+10 R f
+( in this case it turned out to be the low-order part of)12 2082(is the compiler's business;)3 1061 2 1897 3108 t
+10 CW f
+(i)720 3228 w
+10 R f
+( read for)2 341(. Therefore, each time a value was)6 1385 2 780 3228 t
+10 CW f
+(c)2533 3228 w
+10 R f
+(, it reset)2 323 1 2593 3228 t
+10 CW f
+(i)2943 3228 w
+10 R f
+( the program finally reached end of)6 1419( When)1 290(to zero.)1 301 3 3030 3228 t
+(file,)720 3348 w
+10 I f
+(scanf)903 3348 w
+10 R f
+(stopped trying to put new values into)6 1483 1 1139 3348 t
+10 CW f
+(c)2647 3348 w
+10 R f
+(, so)1 139 1 2707 3348 t
+10 CW f
+(i)2871 3348 w
+10 R f
+(could be incremented normally to end the loop.)7 1892 1 2956 3348 t
+10 B f
+( are not Arrays)3 651(4.5. Pointers)1 555 2 720 3588 t
+10 R f
+( stored as an array of characters, fol-)7 1490(C programs often adopt the convention that a character string is)10 2580 2 970 3744 t
+( we have two such strings)5 1069( Suppose)1 397( a null character.)3 688(lowed by)1 378 4 720 3864 t
+10 CW f
+(s)3285 3864 w
+10 R f
+(and)3378 3864 w
+10 CW f
+(t)3555 3864 w
+10 R f
+(, and we want to concatenate them)6 1425 1 3615 3864 t
+(into a single string)3 745 1 720 3984 t
+10 CW f
+(r)1491 3984 w
+10 R f
+( we have the usual library functions)6 1437(. To do this,)3 484 2 1551 3984 t
+10 CW f
+(strcpy)3499 3984 w
+10 R f
+(and)3886 3984 w
+10 CW f
+(strcat)4057 3984 w
+10 R f
+(. The following)2 623 1 4417 3984 t
+(obvious method doesn't work:)3 1219 1 720 4104 t
+10 CW f
+(char *r;)1 480 1 1080 4284 t
+(strcpy \(r, s\);)2 840 1 1080 4404 t
+(strcat \(r, t\);)2 840 1 1080 4524 t
+10 R f
+( doesn't work is that)4 832(The reason it)2 527 2 720 4704 t
+10 CW f
+(r)2108 4704 w
+10 R f
+( Although)1 432(is not initialized to point anywhere.)5 1436 2 2197 4704 t
+10 CW f
+(r)4094 4704 w
+10 R f
+(is potentially capable)2 857 1 4183 4704 t
+(of identifying an area of memory,)5 1347 1 720 4824 t
+10 I f
+(that area doesn't exist until you allocate it.)7 1722 1 2092 4824 t
+10 R f
+(Let's try again, allocating some memory for)6 1761 1 970 4980 t
+10 CW f
+(r)2756 4980 w
+10 R f
+(:)2816 4980 w
+10 CW f
+(char r[100];)1 720 1 1080 5160 t
+(strcpy \(r, s\);)2 840 1 1080 5280 t
+(strcat \(r, t\);)2 840 1 1080 5400 t
+10 R f
+(This now works as long as the strings pointed to by)10 2075 1 720 5580 t
+10 CW f
+(s)2822 5580 w
+10 R f
+(and)2909 5580 w
+10 CW f
+(t)3080 5580 w
+10 R f
+( C requires us to)4 667( Unfortunately,)1 638( big.)1 181(aren't too)1 387 4 3167 5580 t
+( is no way to be certain that)7 1108(state the size of an array as a constant, so there)10 1884 2 720 5700 t
+10 CW f
+(r)3738 5700 w
+10 R f
+( However,)1 441(will be big enough.)3 775 2 3824 5700 t
+(most C implementations have a library function called)7 2215 1 720 5820 t
+10 CW f
+(malloc)2966 5820 w
+10 R f
+(that takes a number and allocates enough)6 1683 1 3357 5820 t
+( is also usually a function called)6 1360( There)1 295( characters.)1 466(memory for that many)3 938 4 720 5940 t
+10 CW f
+(strlen)3817 5940 w
+10 R f
+(that tells how many)3 825 1 4215 5940 t
+( might seem, therefore, that we could write:)7 1744( It)1 111(characters are in a string.)4 999 3 720 6060 t
+10 CW f
+(char *r, *malloc\(\);)2 1140 1 1080 6240 t
+(r = malloc \(strlen\(s\) + strlen\(t\)\);)5 2100 1 1080 6360 t
+(strcpy \(r, s\);)2 840 1 1080 6480 t
+(strcat \(r, t\);)2 840 1 1080 6600 t
+10 R f
+( First,)1 259(This example, however, fails for two reasons.)6 1821 2 970 6816 t
+10 CW f
+(malloc)3076 6816 w
+10 R f
+(might run out of memory, an event that)7 1578 1 3462 6816 t
+(it generally signals by quietly returning a null pointer.)8 2157 1 720 6936 t
+( much more important, is that the call to)8 1610(Second, and)1 488 2 970 7092 t
+10 CW f
+(malloc)3094 7092 w
+10 R f
+(doesn't allocate quite enough memory.)4 1560 1 3480 7092 t
+( The)1 219(Recall the convention that a string is terminated by a null character.)11 2855 2 720 7212 t
+10 CW f
+(strlen)3833 7212 w
+10 R f
+(function returns the)2 808 1 4232 7212 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 13 15
+%%Page: 14 16
+/saveobj save def
+mark
+16 pagesetup
+10 R f
+(- 14 -)2 216 1 2772 480 t
+(number of characters in the argument string,)6 1939 1 720 840 t
+10 I f
+(excluding)2712 840 w
+10 R f
+( if)1 115( Therefore,)1 496(the null character at the end.)5 1275 3 3154 840 t
+10 CW f
+(strlen\(s\))720 960 w
+10 R f
+(is)1286 960 w
+10 I f
+(n)1379 960 w
+10 R f
+(,)1429 960 w
+10 CW f
+(s)1480 960 w
+10 R f
+(really requires)1 574 1 1566 960 t
+10 I f
+(n+1)2166 960 w
+10 R f
+( must therefore allocate one extra char-)6 1561( We)1 188(characters to contain it.)3 931 3 2360 960 t
+(acter for)1 334 1 720 1080 t
+10 CW f
+(r)1079 1080 w
+10 R f
+(. After doing this and checking that)6 1412 1 1139 1080 t
+10 CW f
+(malloc)2576 1080 w
+10 R f
+(worked, we get:)2 640 1 2961 1080 t
+10 CW f
+(char *r, *malloc\(\);)2 1140 1 1080 1260 t
+(r = malloc \(strlen\(s\) + strlen\(t\) + 1\);)7 2340 1 1080 1380 t
+(if \(!r\) {)2 540 1 1080 1500 t
+(complain\(\);)1330 1620 w
+(exit \(1\);)1 540 1 1330 1740 t
+(})1080 1860 w
+(strcpy \(r, s\);)2 840 1 1080 1980 t
+(strcat \(r, t\);)2 840 1 1080 2100 t
+10 B f
+( Synecdoche)1 525(4.6. Eschew)1 522 2 720 2400 t
+10 R f
+(A synecdoche \(sin-)2 772 1 970 2556 t
+8 R f
+(ECK)1742 2556 w
+10 R f
+( in which,)2 401(-duh-key\) is a literary device, somewhat like a simile or a metaphor,)11 2736 2 1903 2556 t
+( used for a less comprehensive)5 1232(according to the Oxford English Dictionary, ``a more comprehensive term is)10 3088 2 720 2676 t
+(or vice versa; as whole for part or part for whole, genus for species or species for genus, etc.'')18 3747 1 720 2796 t
+( confusing a pointer with the data to which it points.)10 2155(This exactly describes the common C pitfall of)7 1915 2 970 2952 t
+( instance:)1 380( For)1 189(This is most common for character strings.)6 1712 3 720 3072 t
+10 CW f
+(char *p, *q;)2 720 1 1080 3252 t
+(p = "xyz";)2 600 1 1080 3372 t
+10 R f
+( the value of)3 517(It is important to understand that while it is sometimes useful to think of)13 2970 2 720 3552 t
+10 CW f
+(p)4239 3552 w
+10 R f
+(as the string)2 497 1 4331 3552 t
+10 CW f
+(xyz)4860 3552 w
+10 R f
+( the value of)3 496( Instead,)1 363(after the assignment, this is not really true.)7 1701 3 720 3672 t
+10 CW f
+(p)3305 3672 w
+10 R f
+(is a)1 136 1 3390 3672 t
+10 I f
+(pointer)3551 3672 w
+10 R f
+(to the 0th element of an array)6 1175 1 3865 3672 t
+(of four characters, whose values are)5 1433 1 720 3792 t
+10 CW f
+('x')2178 3792 w
+10 R f
+(,)2358 3792 w
+10 CW f
+('y')2408 3792 w
+10 R f
+(,)2588 3792 w
+10 CW f
+('z')2638 3792 w
+10 R f
+(, and)1 194 1 2818 3792 t
+10 CW f
+('\\0')3037 3792 w
+10 R f
+(. Thus, if we now execute)5 1028 1 3277 3792 t
+10 CW f
+(q = p;)2 360 1 1080 3972 t
+(p)720 4152 w
+10 R f
+(and)818 4152 w
+10 CW f
+(q)1000 4152 w
+10 R f
+( characters in that memory did not get)7 1615( The)1 219(are now two pointers to the same part of memory.)9 2108 3 1098 4152 t
+( situation now looks like this:)5 1182( The)1 205(copied by the assignment.)3 1038 3 720 4272 t
+cleartomark
+saveobj restore
+%%BeginGlobal
+%
+% Version 3.3.1 drawing procedures for dpost. Automatically pulled in when
+% needed.
+%
+
+/inpath false def
+/savematrix matrix def
+
+/Dl {
+	inpath
+		{pop pop neg lineto}
+		{newpath neg moveto neg lineto stroke}
+	ifelse
+} bind def
+
+/De {
+	/y1 exch 2 div def
+	/x1 exch 2 div def
+	/savematrix savematrix currentmatrix def
+	neg exch x1 add exch translate
+	x1 y1 scale
+	0 0 1 0 360
+	inpath
+		{1 0 moveto arc savematrix setmatrix}
+		{newpath arc savematrix setmatrix stroke}
+	ifelse
+} bind def
+
+/Da {
+	/dy2 exch def
+	/dx2 exch def
+	/dy1 exch def
+	/dx1 exch def
+	dy1 add neg exch dx1 add exch
+	dx1 dx1 mul dy1 dy1 mul add sqrt
+	dy1 dx1 neg atan
+	dy2 neg dx2 atan
+	inpath
+		{arc}
+		{newpath arc stroke}
+	ifelse
+} bind def
+
+/DA {
+	/dy2 exch def
+	/dx2 exch def
+	/dy1 exch def
+	/dx1 exch def
+	dy1 add neg exch dx1 add exch
+	dx1 dx1 mul dy1 dy1 mul add sqrt
+	dy1 dx1 neg atan
+	dy2 neg dx2 atan
+	inpath
+		{arcn}
+		{newpath arcn stroke}
+	ifelse
+} bind def
+
+/Ds {
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	/y0 exch def
+	/x0 exch def
+	x0 5 x1 mul add 6 div
+	y0 5 y1 mul add -6 div
+	x2 5 x1 mul add 6 div
+	y2 5 y1 mul add -6 div
+	x1 x2 add 2 div
+	y1 y2 add -2 div
+	inpath
+		{curveto}
+		{newpath x0 x1 add 2 div y0 y1 add -2 div moveto curveto stroke}
+	ifelse
+} bind def
+%%EndGlobal
+/saveobj save def
+mark
+10 R f
+3398 4664 3398 4664 3398 4894 Ds
+3398 4664 3398 4894 2189 5009 Ds
+3398 4894 2189 5009 2189 5124 Ds
+2189 5009 2189 5124 2189 5124 Ds
+2361 4664 2361 4664 2368 4894 Ds
+2361 4664 2368 4894 2188 5009 Ds
+2368 4894 2188 5009 2188 5124 Ds
+2188 5009 2188 5124 2188 5124 Ds
+2188 5125 2170 5053 Dl
+2188 5125 2206 5053 Dl
+2131 5125 2131 5240 Dl
+2822 5125 2131 5125 Dl
+2822 5240 2822 5125 Dl
+2131 5240 2822 5240 Dl
+2303 5067 1 1 De
+2303 5240 2303 5125 Dl
+2476 5240 2476 5125 Dl
+2649 5240 2649 5125 Dl
+( \\0)1 190( z)1 170(x y)1 223 3 2163 5202 t
+(q p)1 -987 1 3373 4511 t
+3167 4549 3167 4779 Dl
+3627 4549 3167 4549 Dl
+3628 4779 3628 4549 Dl
+3168 4779 3628 4779 Dl
+2131 4549 2131 4779 Dl
+2591 4549 2131 4549 Dl
+2591 4779 2591 4549 Dl
+2131 4779 2591 4779 Dl
+(The thing to remember is that)5 1185 1 970 5532 t
+10 I f
+(copying a pointer does not copy the thing it points to.)10 2136 1 2180 5532 t
+10 R f
+(Thus, if after this we were to execute)7 1479 1 970 5688 t
+10 CW f
+(q[1] = 'Y';)2 660 1 1080 5868 t
+(q)720 6048 w
+10 R f
+(would point to memory containing the string)6 1801 1 807 6048 t
+10 CW f
+(xYz)2635 6048 w
+10 R f
+(. So would)2 437 1 2815 6048 t
+10 CW f
+(p)3280 6048 w
+10 R f
+(, because)1 368 1 3340 6048 t
+10 CW f
+(p)3736 6048 w
+10 R f
+(and)3824 6048 w
+10 CW f
+(q)3996 6048 w
+10 R f
+(point to the same mem-)4 956 1 4084 6048 t
+(ory.)720 6168 w
+10 B f
+( Null Pointer is Not the Null String)7 1481(4.7. The)1 367 2 720 6408 t
+10 R f
+(The result of converting an integer to a pointer is implementation-dependent, with one important)13 4070 1 970 6564 t
+( the constant)2 505( exception is)2 507(exception. That)1 647 3 720 6684 t
+10 CW f
+(0)2404 6684 w
+10 R f
+(, which is guaranteed to be converted to a pointer that is unequal)12 2576 1 2464 6684 t
+( documentation, this value is often given symbolically:)7 2194( For)1 189(to any valid pointer.)3 805 3 720 6804 t
+10 CW f
+(#define NULL 0)2 840 1 1080 6984 t
+10 R f
+( important thing to remember about)5 1444( The)1 209(but the effect is the same.)5 1040 3 720 7164 t
+10 CW f
+(0)3442 7164 w
+10 R f
+( a pointer is that)4 664(when used as)2 540 2 3531 7164 t
+10 I f
+(it must)1 275 1 4765 7164 t
+(never be dereferenced.)2 924 1 720 7284 t
+10 R f
+( when you have assigned)4 1022(In other words,)2 621 2 1701 7284 t
+10 CW f
+(0)3375 7284 w
+10 R f
+(to a pointer variable, you must not ask)7 1574 1 3466 7284 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 14 16
+%%Page: 15 17
+/saveobj save def
+mark
+17 pagesetup
+10 R f
+(- 15 -)2 216 1 2772 480 t
+( is valid to write:)4 678( It)1 111(what is in the memory it points to.)7 1373 3 720 840 t
+10 CW f
+(if \(p == \(char *\) 0\) ...)6 1440 1 1080 1020 t
+10 R f
+(but it is not valid to write:)6 1040 1 720 1200 t
+10 CW f
+(if \(strcmp \(p, \(char *\) 0\) == 0\) ...)8 2160 1 1080 1380 t
+10 R f
+(because)720 1560 w
+10 CW f
+(strcmp)1060 1560 w
+10 R f
+(always looks at the memory addressed by its arguments.)8 2250 1 1445 1560 t
+(If)970 1716 w
+10 CW f
+(p)1061 1716 w
+10 R f
+(is a null pointer, it is not even valid to say:)10 1703 1 1146 1716 t
+10 CW f
+(printf \(p\);)1 660 1 1080 1896 t
+10 R f
+(or)720 2076 w
+10 CW f
+(printf \("%s", p\);)2 1020 1 1080 2256 t
+10 B f
+( Overflow)1 424(4.8. Integer)1 510 2 720 2556 t
+10 R f
+( when an integer operation overflows)5 1523(The C language definition is very specific about what happens)9 2547 2 970 2712 t
+(or underflows.)1 582 1 720 2832 t
+( 2)1 83(If either operand is unsigned, the result is unsigned, and is defined to be modulo)14 3300 2 970 2988 t
+7 I f
+(n)4358 2948 w
+10 R f
+(, where)1 301 1 4401 2988 t
+10 I f
+(n)4735 2988 w
+10 R f
+(is the)1 222 1 4818 2988 t
+( both operands are signed, the result is)7 1531( If)1 116(word size.)1 410 3 720 3108 t
+10 I f
+(undefined)2802 3108 w
+10 R f
+(.)3196 3108 w
+(Suppose, for example, that)3 1104 1 970 3264 t
+10 CW f
+(a)2111 3264 w
+10 R f
+(and)2208 3264 w
+10 CW f
+(b)2389 3264 w
+10 R f
+( be non-negative, and you)4 1086(are two integer variables, known to)5 1468 2 2486 3264 t
+(want to test whether)3 807 1 720 3384 t
+10 CW f
+(a+b)1552 3384 w
+10 R f
+( obvious way to do it looks something like this:)9 1899( One)1 216(might overflow.)1 644 3 1757 3384 t
+10 CW f
+(if \(a + b < 0\))5 840 1 1080 3564 t
+(complain\(\);)1330 3684 w
+10 R f
+(In general, this does not work.)5 1212 1 720 3864 t
+(The point is that once)4 866 1 970 4020 t
+10 CW f
+(a+b)1861 4020 w
+10 R f
+( example,)1 389( For)1 190( all bets are off as to what the result will be.)11 1758(has overflowed,)1 637 4 2066 4020 t
+( an internal register to one of four states: positive, negative,)10 2454(on some machines, an addition operation sets)6 1866 2 720 4140 t
+( to implement the example)4 1126( such a machine, the compiler would have every right)9 2266( On)1 186(zero, or overflow.)2 742 4 720 4260 t
+(given above by adding)3 913 1 720 4380 t
+10 CW f
+(a)1660 4380 w
+10 R f
+(and)1747 4380 w
+10 CW f
+(b)1918 4380 w
+10 R f
+( this internal register was in negative state afterwards.)8 2156(and checking whether)2 879 2 2005 4380 t
+(If the operation overflowed, the register would be in overflow state, and the test would fail.)15 3643 1 720 4500 t
+( particular test relies on the fact that unsigned arithmetic is well-defined)11 2881(One correct way of doing this)5 1189 2 970 4656 t
+(for all values, as are the conversions between signed and unsigned values:)11 2955 1 720 4776 t
+10 CW f
+(if \(\(int\) \(\(unsigned\) a + \(unsigned\) b\) < 0\))8 2640 1 1080 4956 t
+(complain\(\);)1330 5076 w
+10 B f
+( Operators)1 463(4.9. Shift)1 406 2 720 5376 t
+10 R f
+(Two questions seem to cause trouble for people who use shift operators:)11 2887 1 970 5532 t
+( a right shift, are vacated bits filled with zeroes or copies of the sign bit?)15 2884(1. In)1 333 2 720 5688 t
+( values are permitted for the shift count?)7 1616(2. What)1 466 2 720 5844 t
+( the item)2 386( If)1 134( first question is simple but sometimes implementation-dependent.)7 2787(The answer to the)3 763 4 970 6000 t
+( to fill)2 247( the item is signed, the implementation is permitted)8 2069( If)1 118(being shifted is unsigned, zeroes are shifted in.)7 1886 4 720 6120 t
+( you care about vacated bits in a)7 1346( If)1 125( the sign bit.)3 522(vacated bit positions either with zeroes or with copies of)9 2327 4 720 6240 t
+(right shift, declare the variable in question as)7 1811 1 720 6360 t
+10 CW f
+(unsigned)2558 6360 w
+10 R f
+( vacated bits)2 501(. You are then entitled to assume that)7 1501 2 3038 6360 t
+(will be set to zero.)4 735 1 720 6480 t
+(The answer to the second question is also simple: if the item being shifted is)14 3048 1 970 6636 t
+10 I f
+(n)4043 6636 w
+10 R f
+( the shift)2 352(bits long, then)2 570 2 4118 6636 t
+( equal to zero and)4 733(count must be greater than or)5 1202 2 720 6756 t
+10 I f
+(strictly)2686 6756 w
+10 R f
+(less than)1 353 1 2995 6756 t
+10 I f
+(n)3379 6756 w
+10 R f
+( it is not possible to shift all the)8 1305(. Thus,)1 306 2 3429 6756 t
+(bits out of a value in a single operation.)8 1579 1 720 6876 t
+(For example, if an)3 762 1 970 7032 t
+10 CW f
+(int)1767 7032 w
+10 R f
+( bits, and)2 386(is 32)1 202 2 1982 7032 t
+10 CW f
+(n)2606 7032 w
+10 R f
+(is an)1 197 1 2702 7032 t
+10 CW f
+(int)2935 7032 w
+10 R f
+(, it is legal to write)5 805 1 3115 7032 t
+10 CW f
+(n<<31)3956 7032 w
+10 R f
+(and)4292 7032 w
+10 CW f
+(n<<0)4472 7032 w
+10 R f
+(but not)1 292 1 4748 7032 t
+10 CW f
+(n<<32)720 7152 w
+10 R f
+(or)1045 7152 w
+10 CW f
+(n<<-1)1153 7152 w
+10 R f
+(.)1453 7152 w
+( equivalent to division by a power of two,)8 1732(Note that a right shift of a signed integer is generally not)11 2338 2 970 7308 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 15 17
+%%Page: 16 18
+/saveobj save def
+mark
+18 pagesetup
+10 R f
+(- 16 -)2 216 1 2772 480 t
+( prove this, consider that the value of)7 1530( To)1 168(even if the implementation copies the sign into vacated bits.)9 2470 3 720 840 t
+10 CW f
+(\(-)4920 840 w
+(1\)>>1)720 960 w
+10 R f
+(cannot possibly be zero.)3 965 1 1045 960 t
+10 B f
+( Functions)1 448(5. Library)1 464 2 720 1200 t
+10 R f
+( use library functions, because there is no way of doing input or output)13 2876(Every useful C program must)4 1194 2 970 1356 t
+( this section, we look at some cases where some widely-available library func-)12 3231( In)1 141( language.)1 418(built into the)2 530 4 720 1476 t
+(tions behave in ways that the programmer might not expect.)9 2397 1 720 1596 t
+10 B f
+( Returns an Integer)3 835(5.1. Getc)1 399 2 720 1836 t
+10 R f
+(Consider the following program:)3 1313 1 970 1992 t
+10 CW f
+(#include <stdio.h>)1 1080 1 1080 2172 t
+(main\(\))1080 2412 w
+({)1080 2532 w
+(char c;)1 420 1 1330 2652 t
+(while \(\(c = getchar\(\)\) != EOF\))5 1800 1 1330 2892 t
+(putchar \(c\);)1 720 1 1580 3012 t
+(})1080 3132 w
+10 R f
+( fact, it doesn't)3 632( In)1 144( copy its standard input to its standard output.)8 1913(This program looks like it should)5 1381 4 970 3348 t
+(quite do this.)2 520 1 720 3468 t
+(The reason is that)3 710 1 970 3624 t
+10 CW f
+(c)1706 3624 w
+10 R f
+( that it is impossi-)4 726( means)1 281( This)1 229(is declared as a character rather than as an integer.)9 2012 4 1792 3624 t
+(ble for)1 263 1 720 3744 t
+10 CW f
+(c)1008 3744 w
+10 R f
+(to hold every possible character as well as)7 1682 1 1093 3744 t
+10 CW f
+(EOF)2800 3744 w
+10 R f
+(.)2980 3744 w
+( some legitimate input character will cause)6 1762( Either)1 303( are two possibilities.)3 877(Thus there)1 432 4 970 3900 t
+10 CW f
+(c)4378 3900 w
+10 R f
+(to take on the)3 568 1 4472 3900 t
+(same value as)2 562 1 720 4020 t
+10 CW f
+(EOF)1310 4020 w
+10 R f
+(, or it will be impossible for)6 1132 1 1490 4020 t
+10 CW f
+(c)2650 4020 w
+10 R f
+(to have the value)3 688 1 2738 4020 t
+10 CW f
+(EOF)3454 4020 w
+10 R f
+( the former case, the pro-)5 1017( In)1 136(at all.)1 225 3 3662 4020 t
+( the latter case, the program will go into an infinite)10 2058( In)1 136( middle of certain files.)4 941(gram will stop copying in the)5 1185 4 720 4140 t
+(loop.)720 4260 w
+( C Reference Manual)3 898( The)1 221( the program may work by coincidence.)6 1684(Actually, there is a third case:)5 1267 4 970 4416 t
+(defines the result of the expression)5 1389 1 720 4536 t
+10 CW f
+(\(\(c = getchar\(\)\) != EOF\))4 1440 1 1080 4716 t
+10 R f
+( 6.1 states:)2 425( Section)1 350(quite rigorously.)1 661 3 720 4896 t
+(When a longer integer is converted to a shorter or to a)11 2230 1 970 5052 t
+10 CW f
+(char)3232 5052 w
+10 R f
+( on the left; excess bits)5 953(, it is truncated)3 615 2 3472 5052 t
+(are simply discarded.)2 851 1 970 5172 t
+(Section 7.14 states:)2 775 1 720 5292 t
+( require an lvalue as)4 811( All)1 180(There are a number of assignment operators, all of which group right-to-left.)11 3079 3 970 5448 t
+( value is)2 347( The)1 212( the type of an assignment expression is that of its left operand.)12 2606(their left operand, and)3 905 4 970 5568 t
+(the value stored in the left operand after the assignment has taken place.)12 2874 1 970 5688 t
+( to require that the result of)6 1105(The combined effect of these two sections is)7 1791 2 720 5808 t
+10 I f
+(getchar)3644 5808 w
+10 R f
+(be truncated to a character)4 1063 1 3977 5808 t
+( truncated value then be compared with)6 1574(value by discarding the high-order bits, and that this)8 2092 2 720 5928 t
+10 CW f
+(EOF)4411 5928 w
+10 R f
+(. As part of)3 449 1 4591 5928 t
+(this comparison, the value of)4 1173 1 720 6048 t
+10 CW f
+(c)1922 6048 w
+10 R f
+( zero bits)2 376(must be extended to an integer, either by padding on the left with)12 2653 2 2011 6048 t
+(or by sign extension, as appropriate.)5 1445 1 720 6168 t
+( properly assign the)3 842( They)1 274(However, some compilers do not implement this expression correctly.)8 2954 3 970 6324 t
+(low-order bits of the value of)5 1167 1 720 6444 t
+10 I f
+(getchar)1912 6444 w
+10 R f
+(to)2242 6444 w
+10 CW f
+(c)2345 6444 w
+10 R f
+(. However, instead of then comparing)5 1505 1 2405 6444 t
+10 CW f
+(c)3935 6444 w
+10 R f
+(to)4020 6444 w
+10 CW f
+(EOF)4123 6444 w
+10 R f
+(, they compare the)3 737 1 4303 6444 t
+(entire value of)2 592 1 720 6564 t
+10 I f
+(getchar)1345 6564 w
+10 R f
+( make the sample program shown above appear to)8 2073( compiler that does this will)5 1154(! A)1 163 3 1650 6564 t
+(work ``correctly.'')1 741 1 720 6684 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 16 18
+%%Page: 17 19
+/saveobj save def
+mark
+19 pagesetup
+10 R f
+(- 17 -)2 216 1 2772 480 t
+10 B f
+( Output and Memory Allocation)4 1378(5.2. Buffered)1 577 2 720 840 t
+10 R f
+( to see that output imme-)5 1022(When a program produces output, how important is it that a human be able)13 3048 2 970 996 t
+( depends on the program.)4 1012(diately? It)1 427 2 720 1116 t
+( asking the person sitting at that terminal to)8 1805(For example, if the output is going to a terminal and is)11 2265 2 970 1272 t
+( On)1 176( to be able to know what to type.)8 1339(answer a question, it is crucial that the person see the output in order)13 2805 3 720 1392 t
+( is going to a file, from where it will eventually be sent to a line printer, it is)18 3175(the other hand, if the output)5 1145 2 720 1512 t
+(only important that all the output get there eventually.)8 2157 1 720 1632 t
+( to arrange for output to appear immediately than it is to save it up for a)16 3001(It is often more expensive)4 1069 2 970 1788 t
+( this reason, C implementations typically afford the pro-)8 2317( For)1 198( in a large chunk.)4 726(while and write it later on)5 1079 4 720 1908 t
+(grammer some control over how much output is to be produced before it is actually written.)15 3667 1 720 2028 t
+(That control is often vested in a library function called)9 2177 1 970 2184 t
+10 I f
+(setbuf)3172 2184 w
+10 R f
+(. If)1 141 1 3411 2184 t
+10 CW f
+(buf)3577 2184 w
+10 R f
+(is a character array of appropri-)5 1258 1 3782 2184 t
+(ate size, then)2 518 1 720 2304 t
+10 CW f
+(setbuf \(stdout, buf\);)2 1260 1 1080 2484 t
+10 R f
+(tells the I/O library that all output written to)8 1795 1 720 2664 t
+10 I f
+(stdout)2545 2664 w
+10 R f
+(should henceforth use)2 886 1 2820 2664 t
+10 I f
+(buf)3736 2664 w
+10 R f
+( that)1 181(as an output buffer, and)4 965 2 3894 2664 t
+(output directed to)2 737 1 720 2784 t
+10 I f
+(stdout)1498 2784 w
+10 R f
+(should not actually be written until)5 1477 1 1784 2784 t
+10 I f
+(buf)3302 2784 w
+10 R f
+(becomes full or until the programmer)5 1570 1 3470 2784 t
+( by calling)2 442(directs it to be written)4 913 2 720 2904 t
+10 I f
+(fflush)2110 2904 w
+10 R f
+( appropriate size for such a buffer is defined as)9 1959(. The)1 240 2 2333 2904 t
+10 CW f
+(BUFSIZ)4567 2904 w
+10 R f
+(in)4962 2904 w
+10 S f
+(<)720 3024 w
+10 I f
+(stdio.h)775 3024 w
+10 S f
+(>)1045 3024 w
+10 R f
+(.)1100 3024 w
+(Thus, the following program illustrates the obvious way to use)9 2612 1 970 3180 t
+10 I f
+(setbuf)3619 3180 w
+10 R f
+(in a program that copies its)5 1145 1 3895 3180 t
+(standard input to its standard output:)5 1464 1 720 3300 t
+10 CW f
+(#include <stdio.h>)1 1080 1 1080 3480 t
+(main\(\))1080 3720 w
+({)1080 3840 w
+(int c;)1 360 1 1330 3960 t
+(char buf[BUFSIZ];)1 1020 1 1330 4200 t
+(setbuf \(stdout, buf\);)2 1260 1 1330 4320 t
+(while \(\(c = getchar\(\)\) != EOF\))5 1800 1 1330 4560 t
+(putchar \(c\);)1 720 1 1580 4680 t
+(})1080 4800 w
+10 R f
+(Unfortunately, this program is wrong, for a subtle reason.)8 2299 1 970 5016 t
+( after the main)3 585( Answer:)1 390(To see where the trouble lies, ask when the buffer is flushed for the last time.)15 3095 3 970 5172 t
+( the cleaning up that the library does before handing control back to the)13 2996(program has finished, as part of)5 1324 2 720 5292 t
+( by that time, the buffer has already been freed!)9 1894( But)1 195(operating system.)1 705 3 720 5412 t
+(There are two ways to prevent this sort of trouble.)9 1996 1 970 5568 t
+(First, make the buffer static, either by declaring it explicitly as static:)11 2755 1 970 5724 t
+10 CW f
+(static char buf[BUFSIZ];)2 1440 1 1330 5904 t
+10 R f
+(or by moving the declaration outside the main program entirely.)9 2558 1 720 6084 t
+(Another possibility is to allocate the buffer dynamically and never free it:)11 2937 1 970 6240 t
+10 CW f
+(char *malloc\(\);)1 900 1 1330 6420 t
+(setbuf \(stdout, malloc \(BUFSIZ\)\);)3 1980 1 1330 6540 t
+10 R f
+( unnecessary to check if)4 998(Note that in this latter case, it is)7 1329 2 720 6720 t
+10 I f
+(malloc)3082 6720 w
+10 R f
+(was successful, because if it fails it will)7 1651 1 3389 6720 t
+( argument to)2 519( null pointer is an acceptable second)6 1495( A)1 130(return a null pointer.)3 845 4 720 6840 t
+10 I f
+(setbuf)3741 6840 w
+10 R f
+(; it requests that)3 657 1 3980 6840 t
+10 I f
+(stdout)4669 6840 w
+10 R f
+(be)4946 6840 w
+( will work slowly, but it will work.)7 1398(unbuffered. This)1 690 2 720 6960 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 17 19
+%%Page: 18 20
+/saveobj save def
+mark
+20 pagesetup
+10 R f
+(- 18 -)2 216 1 2772 480 t
+10 B f
+( Preprocessor)1 584(6. The)1 292 2 720 840 t
+10 R f
+( they are first transformed by the C preprocessor.)8 1967(The programs we run are not the programs we write:)9 2103 2 970 996 t
+( reasons \(and several)3 836(The preprocessor gives us a way of abbreviating things that is important for two major)14 3484 2 720 1116 t
+(minor ones\).)1 505 1 720 1236 t
+( size of a)3 387(First, we may want to be able to change all instances of a particular quantity, such as the)17 3683 2 970 1392 t
+(table, by changing one number and recompiling the program.*)8 2496 1 720 1512 t
+( do not have the execution over-)6 1298(Second, we may want to define things that appear to be functions but)12 2772 2 970 1668 t
+( example,)1 393( For)1 194(head normally associated with a function call.)6 1863 3 720 1788 t
+10 I f
+(getchar)3200 1788 w
+10 R f
+(and)3535 1788 w
+10 I f
+(putchar)3709 1788 w
+10 R f
+(are usually implemented)2 990 1 4050 1788 t
+(as macros to avoid having to call a function for each character of input or output.)15 3232 1 720 1908 t
+10 B f
+( are not Functions)3 775(6.1. Macros)1 521 2 720 2148 t
+10 R f
+(Because macros can be made to appear almost as if they were functions, programmers are sometimes)15 4070 1 970 2304 t
+( one sees things like this:)5 1003( Thus,)1 275(tempted to regard them as truly equivalent.)6 1717 3 720 2424 t
+10 CW f
+(#define max\(a,b\) \(\(a\)>\(b\)?\(a\):\(b\)\))2 2040 1 1080 2604 t
+10 R f
+( defend against the possibility that)5 1434( They)1 268(Notice all the parentheses in the macro body.)7 1893 3 720 2784 t
+10 CW f
+(a)4353 2784 w
+10 R f
+(or)4452 2784 w
+10 CW f
+(b)4574 2784 w
+10 R f
+(might be)1 367 1 4673 2784 t
+(expressions that contain operators of lower precedence than)7 2385 1 720 2904 t
+10 CW f
+(>)3130 2904 w
+10 R f
+(.)3190 2904 w
+(The main problem, though, with defining things like)7 2153 1 970 3060 t
+10 CW f
+(max)3156 3060 w
+10 R f
+( operand that is used)4 857(as macros is that an)4 814 2 3369 3060 t
+( in this example, if)4 755( Thus,)1 277(twice may be evaluated twice.)4 1213 3 720 3180 t
+10 CW f
+(a)2992 3180 w
+10 R f
+(is greater than)2 569 1 3079 3180 t
+10 CW f
+(b)3675 3180 w
+10 R f
+(,)3735 3180 w
+10 CW f
+(a)3786 3180 w
+10 R f
+(will be evaluated twice: once)4 1168 1 3872 3180 t
+(during the comparison, and again to calculate the value yielded by)10 2648 1 720 3300 t
+10 CW f
+(max)3393 3300 w
+10 R f
+(.)3573 3300 w
+(Not only can this be inefficient, it can also be wrong:)10 2122 1 970 3456 t
+10 CW f
+(biggest = x[0];)2 900 1 1080 3636 t
+(i = 1;)2 360 1 1080 3756 t
+(while \(i < n\))3 780 1 1080 3876 t
+(biggest = max \(biggest, x[i++]\);)4 1920 1 1330 3996 t
+10 R f
+(This would work fine if)4 961 1 720 4176 t
+10 CW f
+(max)1710 4176 w
+10 R f
+(were a true function, but fails with)6 1402 1 1919 4176 t
+10 CW f
+(max)3350 4176 w
+10 R f
+( for example, that)3 716( Suppose,)1 418(a macro.)1 347 3 3559 4176 t
+10 CW f
+(x[0])720 4296 w
+10 R f
+(is 2,)1 177 1 996 4296 t
+10 CW f
+(x[1])1208 4296 w
+10 R f
+(is 3, and)2 356 1 1483 4296 t
+10 CW f
+(x[2])1874 4296 w
+10 R f
+( The)1 215( at what happens during the first iteration of the loop.)10 2228( Look)1 271(is 1.)1 177 4 2149 4296 t
+(assignment statement expands into:)3 1419 1 720 4416 t
+10 CW f
+(biggest = \(\(biggest\)>\(x[i++]\)?\(biggest\):\(x[i++]\)\);)2 3000 1 1080 4596 t
+10 R f
+(First,)720 4776 w
+10 CW f
+(biggest)954 4776 w
+10 R f
+(is compared to)2 590 1 1399 4776 t
+10 CW f
+(x[i++])2015 4776 w
+10 R f
+(. Since)1 273 1 2375 4776 t
+10 CW f
+(i)2674 4776 w
+10 R f
+(is 1 and)2 313 1 2760 4776 t
+10 CW f
+(x[1])3099 4776 w
+10 R f
+( a side effect,)3 534( As)1 162(is 3, the relation is false.)5 979 3 3365 4776 t
+10 CW f
+(i)720 4896 w
+10 R f
+(is incremented to 2.)3 788 1 805 4896 t
+( the value of)3 502(Because the relation is false,)4 1143 2 970 5052 t
+10 CW f
+(x[i++])2642 5052 w
+10 R f
+(is now assigned to)3 742 1 3029 5052 t
+10 CW f
+(biggest)3798 5052 w
+10 R f
+(. However,)1 442 1 4218 5052 t
+10 CW f
+(i)4687 5052 w
+10 R f
+(is now)1 266 1 4774 5052 t
+(2, so the value assigned to)5 1049 1 720 5172 t
+10 CW f
+(biggest)1794 5172 w
+10 R f
+(is the value of)3 563 1 2239 5172 t
+10 CW f
+(x[2])2827 5172 w
+10 R f
+(, which is 1.)3 486 1 3067 5172 t
+(One way around these worries is to ensure that the arguments to the)12 2730 1 970 5328 t
+10 CW f
+(max)3727 5328 w
+10 R f
+( side)1 189(macro do not have any)4 917 2 3934 5328 t
+(effects:)720 5448 w
+10 CW f
+(biggest = x[0];)2 900 1 1080 5628 t
+(for \(i = 1; i < n; i++\))7 1380 1 1080 5748 t
+(biggest = max \(biggest, x[i]\);)4 1800 1 1330 5868 t
+10 R f
+( is the definition of)4 793( This)1 236( macros.)1 346(Here is another example of the hazards of mixing side effects and)11 2695 4 970 6084 t
+(the)720 6204 w
+10 CW f
+(putc)867 6204 w
+10 R f
+(macro from)1 468 1 1132 6204 t
+10 CW f
+(<stdio.h>)1625 6204 w
+10 R f
+(in the Eighth Edition of the Unix system:)7 1648 1 2190 6204 t
+10 CW f
+(#define putc\(x,p\) \(--\(p\)->_cnt>=0?\(*\(p\)->_ptr++=\(x\)\):_flsbuf\(x,p\)\))2 3960 1 1080 6384 t
+10 R f
+( to)1 114(The first argument)2 763 2 720 6564 t
+10 CW f
+(putc)1633 6564 w
+10 R f
+(is a character to be written to a file; the second argument is a pointer to an)16 3131 1 1909 6564 t
+( the first argument, which could easily be some-)8 1986( that)1 184( Notice)1 325(internal data structure that describes the file.)6 1825 4 720 6684 t
+(thing like)1 395 1 720 6804 t
+10 CW f
+(*z++)1154 6804 w
+10 R f
+( evaluated only once, even though it appears in two separate places in the)13 3122(, is carefully)2 524 2 1394 6804 t
+( body,)1 256(macro body, while the second argument is evaluated twice \(in the macro)11 2971 2 720 6924 t
+10 CW f
+(x)3978 6924 w
+10 R f
+(appears twice, but since)3 971 1 4069 6924 t
+8 S1 f
+(__________________)720 7024 w
+8 R f
+(* The preprocessor also makes it easy to group such)9 1659 1 720 7124 t
+8 I f
+(manifest constants)1 591 1 2399 7124 t
+8 R f
+(together to make them easier to find.)6 1167 1 3010 7124 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 18 20
+%%Page: 19 21
+/saveobj save def
+mark
+21 pagesetup
+10 R f
+(- 19 -)2 216 1 2772 480 t
+(the two occurrences are on opposite sides of a)8 1850 1 720 840 t
+10 CW f
+(:)2597 840 w
+10 R f
+(operator, exactly one of them will be evaluated in any sin-)10 2356 1 2684 840 t
+( of)1 122(gle instance)1 489 2 720 960 t
+10 CW f
+(putc)1370 960 w
+10 R f
+(\). Since it is unusual for the file argument to)9 1891 1 1610 960 t
+10 I f
+(putc)3540 960 w
+10 R f
+(to have side effects, this rarely)5 1289 1 3751 960 t
+( a)1 88( it is documented in the user's manual: ``Because it is implemented as)12 3013( Nevertheless,)1 608(causes trouble.)1 611 4 720 1080 t
+(macro,)720 1200 w
+10 I f
+(putc)1022 1200 w
+10 R f
+(treats a)1 288 1 1222 1200 t
+10 I f
+(stream)1538 1200 w
+10 R f
+( particular,)1 435( In)1 136(argument with side effects improperly.)4 1562 3 1838 1200 t
+10 CW f
+(putc\(c,*f++\))3999 1200 w
+10 R f
+(doesn't)4746 1200 w
+( that)1 175( Notice)1 316(work sensibly.'')1 649 3 720 1320 t
+10 CW f
+(putc\(*c++,f\))1885 1320 w
+10 R f
+(works fine in this implementation.)4 1375 1 2630 1320 t
+( instance, not everyone handles)4 1266( For)1 192(Some C implementations are less careful.)5 1674 3 970 1476 t
+10 CW f
+(putc\(*c++,f\))4131 1476 w
+10 R f
+(cor-)4880 1476 w
+( another example, consider the)4 1246(rectly. As)1 419 2 720 1596 t
+10 I f
+(toupper)2416 1596 w
+10 R f
+( translates a)2 481( It)1 116(function that appears in many C libraries.)6 1686 3 2757 1596 t
+( we)1 154( If)1 129( letter while leaving other characters unchanged.)6 2014(lower-case letter to the corresponding upper-case)5 2023 4 720 1716 t
+( contiguous \(with a possible gap)5 1366(assume that all the lower-case letters and all the upper-case letters are)11 2954 2 720 1836 t
+(between the cases\), we get the following function:)7 2007 1 720 1956 t
+10 CW f
+(toupper\(c\))1080 2136 w
+({)1080 2256 w
+(if \(c >= 'a' && c <= 'z'\))7 1500 1 1330 2376 t
+(c += 'A' - 'a';)4 900 1 1580 2496 t
+(return c;)1 540 1 1330 2616 t
+(})1080 2736 w
+10 R f
+( is much longer than the actual calculations, so the)9 2041(In most C implementations, the subroutine call overhead)7 2279 2 720 2916 t
+(implementor is tempted to make it a macro:)7 1746 1 720 3036 t
+10 CW f
+(#define toupper\(c\) \(\(c\)>='a' && \(c\)<='z'? \(c\)+\('A'-'a'\): \(c\)\))6 3660 1 1080 3216 t
+10 R f
+( it will cause a surprise for anyone who)8 1657( However,)1 451( in many cases.)3 643(This is indeed faster than the function)6 1569 4 720 3396 t
+(tries to use)2 433 1 720 3516 t
+10 CW f
+(toupper\(*p++\))1178 3516 w
+10 R f
+(.)1958 3516 w
+( generate very large expressions)4 1311(Another thing to watch out for when using macros is that they may)12 2759 2 970 3672 t
+( example, look again at the definition of)7 1598(indeed. For)1 480 2 720 3792 t
+10 CW f
+(max)2823 3792 w
+10 R f
+(:)3003 3792 w
+10 CW f
+(#define max\(a,b\) \(\(a\)>\(b\)?\(a\):\(b\)\))2 2040 1 1080 3972 t
+10 R f
+(Suppose we want to use this definition to find the largest of)11 2379 1 720 4152 t
+10 CW f
+(a)3124 4152 w
+10 R f
+(,)3184 4152 w
+10 CW f
+(b)3234 4152 w
+10 R f
+(,)3294 4152 w
+10 CW f
+(c)3344 4152 w
+10 R f
+(, and)1 194 1 3404 4152 t
+10 CW f
+(d)3623 4152 w
+10 R f
+(. If we write the obvious:)5 1004 1 3683 4152 t
+10 CW f
+(max\(a,max\(b,max\(c,d\)\)\))1080 4332 w
+10 R f
+(this expands to:)2 628 1 720 4512 t
+10 CW f
+(\(\(a\)>\(\(\(b\)>\(\(\(c\)>\(d\)?\(c\):\(d\)\)\)?\(b\):\(\(\(c\)>\(d\)?\(c\):\(d\)\)\)\)\)?)1080 4692 w
+(\(a\):\(\(\(b\)>\(\(\(c\)>\(d\)?\(c\):\(d\)\)\)?\(b\):\(\(\(c\)>\(d\)?\(c\):\(d\)\)\)\)\)\))1140 4812 w
+10 R f
+( can make it a little less large by balancing the operands:)11 2260( We)1 188(which is surprisingly large.)3 1088 3 720 4992 t
+10 CW f
+(max\(max\(a,b\),max\(c,d\)\))1080 5172 w
+10 R f
+(which gives:)1 508 1 720 5352 t
+10 CW f
+(\(\(\(\(a\)>\(b\)?\(a\):\(b\)\)\)>\(\(\(c\)>\(d\)?\(c\):\(d\)\)\)?)1080 5532 w
+(\(\(\(a\)>\(b\)?\(a\):\(b\)\)\):\(\(\(c\)>\(d\)?\(c\):\(d\)\)\)\))1140 5652 w
+10 R f
+(Somehow, though, it seems easier to write:)6 1721 1 720 5832 t
+10 CW f
+(biggest = a;)2 720 1 1080 6012 t
+(if \(biggest < b\) biggest = b;)6 1740 1 1080 6132 t
+(if \(biggest < c\) biggest = c;)6 1740 1 1080 6252 t
+(if \(biggest < d\) biggest = d;)6 1740 1 1080 6372 t
+10 B f
+( are not Type Definitions)4 1061(6.2. Macros)1 521 2 720 6672 t
+10 R f
+(One common use of macros is to permit several things in diverse places to be the same type:)17 3692 1 970 6828 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 19 21
+%%Page: 20 22
+/saveobj save def
+mark
+22 pagesetup
+10 R f
+(- 20 -)2 216 1 2772 480 t
+10 CW f
+(#define FOOTYPE struct foo)3 1560 1 1080 900 t
+(FOOTYPE a;)1 600 1 1080 1020 t
+(FOOTYPE b, c;)2 780 1 1080 1140 t
+10 R f
+(This lets the programmer change the types of)7 1826 1 720 1320 t
+10 CW f
+(a)2574 1320 w
+10 R f
+(,)2634 1320 w
+10 CW f
+(b)2687 1320 w
+10 R f
+(, and)1 197 1 2747 1320 t
+10 CW f
+(c)2972 1320 w
+10 R f
+( line of the program, even if)6 1141(just by changing one)3 839 2 3060 1320 t
+10 CW f
+(a)720 1440 w
+10 R f
+(,)780 1440 w
+10 CW f
+(b)830 1440 w
+10 R f
+(, and)1 194 1 890 1440 t
+10 CW f
+(c)1109 1440 w
+10 R f
+(are declared in widely different places.)5 1550 1 1194 1440 t
+( Most)1 259( supports it.)2 476(Using a macro definition for this has the advantage of portability \261 any C compiler)14 3335 3 970 1596 t
+(C compilers also support another way of doing this:)8 2071 1 720 1716 t
+10 CW f
+(typedef struct foo FOOTYPE;)3 1620 1 1080 1896 t
+10 R f
+(This defines)1 491 1 720 2076 t
+10 CW f
+(FOOTYPE)1236 2076 w
+10 R f
+(as a new type that is equivalent to)7 1351 1 1681 2076 t
+10 CW f
+(struct foo)1 600 1 3057 2076 t
+10 R f
+(.)3657 2076 w
+( type may appear to be equivalent, but the)8 1736(These two ways of naming a)5 1180 2 970 2232 t
+10 CW f
+(typedef)3919 2232 w
+10 R f
+(is more flexible.)2 668 1 4372 2232 t
+(Consider, for example, the following:)4 1504 1 720 2352 t
+10 CW f
+(#define T1 struct foo *)4 1380 1 1080 2532 t
+(typedef struct foo *T2;)3 1380 1 1080 2652 t
+10 R f
+(These definitions make)2 938 1 720 2832 t
+10 CW f
+(T1)1686 2832 w
+10 R f
+(and)1834 2832 w
+10 CW f
+(T2)2006 2832 w
+10 R f
+( pointer to a)3 492(conceptually equivalent to a)3 1132 2 2154 2832 t
+10 CW f
+(struct foo)1 604 1 3807 2832 t
+10 R f
+(. But look what)3 629 1 4411 2832 t
+(happens when we try to use them with more than one variable:)11 2504 1 720 2952 t
+10 CW f
+(T1 a, b;)2 480 1 1080 3132 t
+(T2 c, d;)2 480 1 1080 3252 t
+10 R f
+(The first declaration gets expanded to)5 1505 1 720 3432 t
+10 CW f
+(struct foo * a, b;)4 1080 1 1080 3612 t
+10 R f
+(This defines)1 492 1 720 3792 t
+10 CW f
+(a)1238 3792 w
+10 R f
+( defines)1 315(to be a pointer to a structure, but)7 1305 2 1324 3792 t
+10 CW f
+(b)2971 3792 w
+10 R f
+( second dec-)2 502( The)1 207(to be a structure \(not a pointer\).)6 1273 3 3058 3792 t
+(laration, in contrast, defines both)4 1315 1 720 3912 t
+10 CW f
+(c)2060 3912 w
+10 R f
+(and)2145 3912 w
+10 CW f
+(d)2314 3912 w
+10 R f
+(as pointers to structures, because)4 1311 1 2399 3912 t
+10 CW f
+(T2)3735 3912 w
+10 R f
+(behaves as a true type.)4 900 1 3880 3912 t
+10 B f
+( Pitfalls)1 325(7. Portability)1 586 2 720 4152 t
+10 R f
+( one of the reasons to)5 901( Indeed,)1 356( people to run on many machines.)6 1411(C has been implemented by many)5 1402 4 970 4308 t
+(write programs in C in the first place is that it is easy to move them from one programming environment to)20 4320 1 720 4428 t
+(another.)720 4548 w
+( dif-)1 171( Moreover,)1 470(However, because there are so many implementors, they do not all talk to each other.)14 3429 3 970 4704 t
+( expect C implementations to differ slightly)6 1744(ferent systems have different requirements, so it is reasonable to)9 2576 2 720 4824 t
+(between one machine and another.)4 1382 1 720 4944 t
+( were associated with the)4 1043(Because so many of the early C implementations)7 2019 2 970 5100 t
+9 R f
+(UNIX)4065 5100 w
+10 R f
+(operating system,)1 715 1 4325 5100 t
+( people started implementing C)4 1299( When)1 299( functions was shaped by that system.)6 1573(the nature of many of these)5 1149 4 720 5220 t
+( tried to make the library behave in ways that would be familiar to programmers)14 3284(under other systems, they)3 1036 2 720 5340 t
+(used to the)2 433 1 720 5460 t
+9 R f
+(UNIX)1176 5460 w
+10 R f
+(system.)1426 5460 w
+( the world started)3 726( is more, as more people in different parts of)9 1855( What)1 275(They did not always succeed.)4 1214 4 970 5616 t
+(working on different versions of the)5 1554 1 720 5736 t
+9 R f
+(UNIX)2320 5736 w
+10 R f
+( of some of the library functions)6 1419(system, the exact nature)3 1028 2 2593 5736 t
+( in someone else's envi-)4 981( a C programmer who wishes to write programs useful)9 2204( Today,)1 333(inevitably diverged.)1 802 4 720 5856 t
+(ronment must know about many of these subtle differences.)8 2388 1 720 5976 t
+10 B f
+( in a Name?)3 508(7.1. What's)1 511 2 720 6216 t
+10 R f
+( ignore charac-)2 607( Others)1 321( the characters of an identifier as being significant.)8 2060(Some C compilers treat all)4 1082 4 970 6372 t
+( compilers usually produce object programs that must then)8 2382( C)1 122(ters past some limit when storing identifiers.)6 1816 3 720 6492 t
+( in turn, often impose)4 902( Loaders,)1 407( be able to access library subroutines.)6 1560(be processed by loaders in order to)6 1451 4 720 6612 t
+(their own restrictions on the kinds of names they can handle.)10 2427 1 720 6732 t
+( When)1 298( in external names must be in upper case only.)9 1937(One common loader restriction is that letters)6 1835 3 970 6888 t
+( to force all external names to upper case.)8 1675(faced with such a restriction, it is reasonable for a C implementor)11 2645 2 720 7008 t
+(Restrictions of this sort are blessed by section 2.1 the C reference manual:)12 2959 1 720 7128 t
+( underscore)1 466( The)1 209(An identifier is a sequence of letters and digits; the first character must be a letter.)15 3316 3 970 7284 t
+10 S f
+(_)4990 7284 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 20 22
+%%Page: 21 23
+/saveobj save def
+mark
+23 pagesetup
+10 R f
+(- 21 -)2 216 1 2772 480 t
+( charac-)1 320( more than the first eight)5 1005( No)1 176( and lower case letters are different.)6 1449( Upper)1 303(counts as as a letter.)4 817 6 970 840 t
+( identifiers, which are used by various)6 1630( External)1 405(ters are significant, although more may be used.)7 2035 3 970 960 t
+(assemblers and loaders, are more restricted:)5 1745 1 970 1080 t
+( external)1 348(Here, the reference manual goes on to give examples of various implementations that restrict)13 3722 2 970 1236 t
+(identifiers to a single case, or to fewer than eight characters, or both.)12 2735 1 720 1356 t
+( is important to be careful when choosing identifiers in programs intended to be)13 3221(Because of all this, it)4 849 2 970 1512 t
+( two subroutines named, say)4 1159(portable. Having)1 702 2 720 1632 t
+10 CW f
+(print_fields)2612 1632 w
+10 R f
+(and)3363 1632 w
+10 CW f
+(print_float)3537 1632 w
+10 R f
+(would not be a very)4 813 1 4227 1632 t
+(good idea.)1 416 1 720 1752 t
+(As a striking example, consider the following function:)7 2209 1 970 1908 t
+10 CW f
+(char *)1 360 1 1080 2088 t
+(Malloc \(n\))1 600 1 1080 2208 t
+(unsigned n;)1 660 1 1330 2328 t
+({)1080 2448 w
+(char *p, *malloc\(\);)2 1140 1 1330 2568 t
+(p = malloc \(n\);)3 900 1 1330 2688 t
+(if \(p == NULL\))3 840 1 1330 2808 t
+(panic \("out of memory"\);)3 1440 1 1580 2928 t
+(return p;)1 540 1 1330 3048 t
+(})1080 3168 w
+10 R f
+( The)1 214(This function is a simple way of ensuring that running out of memory will not go undetected.)16 3856 2 970 3384 t
+( program to allocate memory by calling)6 1611(idea is for the)3 564 2 720 3504 t
+10 CW f
+(Malloc)2925 3504 w
+10 R f
+(instead of)1 396 1 3315 3504 t
+10 CW f
+(malloc)3741 3504 w
+10 R f
+(. If)1 121 1 4101 3504 t
+10 CW f
+(malloc)4252 3504 w
+10 R f
+(ever fails,)1 398 1 4642 3504 t
+(the result will be to call)5 996 1 720 3624 t
+10 CW f
+(panic)1752 3624 w
+10 R f
+( the program with an appropriate error)6 1601(which will presumably terminate)3 1351 2 2088 3624 t
+(message.)720 3744 w
+( that ignores case distinc-)4 1055(Consider, however, what happens when this function is used on a system)11 3015 2 970 3900 t
+( effect, the names)3 763( In)1 153( identifiers.)1 475(tions in external)2 686 4 720 4020 t
+10 CW f
+(malloc)2842 4020 w
+10 R f
+(and)3247 4020 w
+10 CW f
+(Malloc)3436 4020 w
+10 R f
+( other)1 250( In)1 153(become equivalent.)1 796 3 3841 4020 t
+(words, the library function)3 1077 1 720 4140 t
+10 CW f
+(malloc)1826 4140 w
+10 R f
+(is effectively replaced by the)4 1172 1 2216 4140 t
+10 CW f
+(Malloc)3418 4140 w
+10 R f
+(function above, which when it)4 1232 1 3808 4140 t
+(calls)720 4260 w
+10 CW f
+(malloc)943 4260 w
+10 R f
+( of course, is that the first attempt to allocate memory)10 2279( result,)1 287( The)1 220(is really calling itself.)3 911 4 1343 4260 t
+( loop and consequent mayhem, even though the function will work on an implementa-)13 3485(results in a recursion)3 835 2 720 4380 t
+(tion that preserves case distinctions.)4 1440 1 720 4500 t
+10 B f
+( Big is an Integer?)4 778(7.2. How)1 400 2 720 4740 t
+10 R f
+( with charac-)2 538(C provides the programmer with three sizes of integers: ordinary, short, and long, and)13 3532 2 970 4896 t
+( language definition does not guarantee much about)7 2101( The)1 210( integers.)1 371(ters, which behave as if they were small)7 1638 4 720 5016 t
+(the relative sizes of the various kinds of integer:)8 1919 1 720 5136 t
+( four sizes of integers are non-decreasing.)6 1664(1. The)1 405 2 720 5292 t
+( ordinary integer is large enough to contain any array subscript.)10 2531(2. An)1 372 2 720 5448 t
+( size of a character is natural for the particular hardware.)10 2255(3. The)1 405 2 720 5604 t
+( few have 7- or 9-bit characters, so characters)8 1852(Most modern machines have 8-bit characters, though a)7 2218 2 970 5760 t
+(are usually 7, 8, or 9 bits.)6 1013 1 720 5880 t
+( at least 32 bits long, so that a long integer can be used to represent the size)17 3052(Long integers are usually)3 1018 2 970 6036 t
+(of a file.)2 335 1 720 6156 t
+( of)1 109(Ordinary integers are usually at least 16 bits long, because shorter integers would impose too much)15 3961 2 970 6312 t
+(a restriction on the maximum size of an array.)8 1838 1 720 6432 t
+(Short integers are almost always exactly 16 bits long.)8 2134 1 970 6588 t
+( cannot count on having)4 1000( most important thing is that one)6 1355( The)1 214(What does this all mean in practice?)6 1501 4 970 6744 t
+( can probably expect 16 bits for a short or an ordinary)11 2247( one)1 179( Informally,)1 512(any particular precision available.)3 1382 4 720 6864 t
+( ordi-)1 224( can certainly use)3 707( One)1 220(integer, and 32 bits for a long integer, but not even those sizes are guaranteed.)14 3169 4 720 6984 t
+( hold val-)2 391(nary integers to express table sizes and subscripts, but what about a variable that must be able to)17 3929 2 720 7104 t
+(ues up to ten million?)4 867 1 720 7224 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 21 23
+%%Page: 22 24
+/saveobj save def
+mark
+24 pagesetup
+10 R f
+(- 22 -)2 216 1 2772 480 t
+(The most portable way to do that is probably to define a ``new'' type:)13 2787 1 970 840 t
+10 CW f
+(typedef long tenmil;)2 1200 1 1080 1020 t
+10 R f
+(Now one can use this type to declare a variable of that width and know that, at worst, one will have to)21 4320 1 720 1200 t
+(change a single type definition to get all those variables to be the right type.)14 3027 1 720 1320 t
+10 B f
+( Characters Signed or Unsigned?)4 1411(7.3. Are)1 360 2 720 1560 t
+10 R f
+( 8-bit characters, so most modern C compilers implement characters)9 2759(Most modern computers support)3 1311 2 970 1716 t
+( not all compilers interpret those 8-bit quantities the same way.)10 2517( However,)1 440(as 8-bit integers.)2 663 3 720 1836 t
+( when converting a)3 786(The issue becomes important only)4 1399 2 970 1992 t
+10 CW f
+(char)3188 1992 w
+10 R f
+( the)1 155( Going)1 308(quantity to a larger integer.)4 1116 3 3461 1992 t
+( a compiler converting a)4 970( But)1 195( results are well-defined: excess bits are simply discarded.)8 2320(other way, the)2 570 4 720 2112 t
+10 CW f
+(char)4800 2112 w
+10 R f
+(to an)1 209 1 720 2232 t
+10 CW f
+(int)966 2232 w
+10 R f
+(has a choice: should it treat the)6 1309 1 1183 2232 t
+10 CW f
+(char)2529 2232 w
+10 R f
+( it)1 94( the former,)2 492( If)1 128(as a signed or an unsigned quantity?)6 1520 4 2806 2232 t
+(should expand the)2 737 1 720 2352 t
+10 CW f
+(char)1487 2352 w
+10 R f
+(to an)1 202 1 1757 2352 t
+10 CW f
+(int)1989 2352 w
+10 R f
+( the latter, it should fill the extra bit posi-)9 1680(by replicating the sign bit; if)5 1161 2 2199 2352 t
+(tions with zeroes.)2 702 1 720 2472 t
+( with characters with their)4 1094(The results of this decision are important to virtually anyone who deals)11 2976 2 970 2628 t
+( be considered to range from)5 1169( determines whether 8-bit characters are going to)7 1995( It)1 117(high-order bits turned on.)3 1039 4 720 2748 t
+( design things)2 566( in turn, affects the way the programmer will)8 1820( This,)1 257(\261128 through 127 or from 0 through 255.)7 1677 4 720 2868 t
+(like hash tables and translate tables.)5 1431 1 720 2988 t
+( with the high-order bit on is treated as a negative number, you)12 2570(If you care whether a character value)6 1500 2 970 3144 t
+(should probably declare it as)4 1200 1 720 3264 t
+10 CW f
+(unsigned char)1 793 1 1958 3264 t
+10 R f
+( guaranteed to be zero-extended when)5 1574(. Such values are)3 715 2 2751 3264 t
+(converted to integer, whereas ordinary)4 1549 1 720 3384 t
+10 CW f
+(char)2297 3384 w
+10 R f
+(variables may be signed in one implementation and unsigned)8 2474 1 2566 3384 t
+(in another.)1 427 1 720 3504 t
+(Incidentally, it is a common misconception that if)7 2128 1 970 3660 t
+10 CW f
+(c)3143 3660 w
+10 R f
+( obtain the)2 464(is a character variable, one can)5 1328 2 3248 3660 t
+(unsigned integer equivalent of)3 1233 1 720 3780 t
+10 CW f
+(c)1984 3780 w
+10 R f
+(by writing)1 420 1 2075 3780 t
+10 CW f
+(\(unsigned\) c)1 720 1 2526 3780 t
+10 R f
+(. This fails because a)4 858 1 3246 3780 t
+10 CW f
+(char)4135 3780 w
+10 R f
+(quantity is con-)2 634 1 4406 3780 t
+(verted to)1 354 1 720 3900 t
+10 CW f
+(int)1101 3900 w
+10 R f
+(before any operator is applied to it,)6 1412 1 1308 3900 t
+10 I f
+(even a cast)2 449 1 2748 3900 t
+10 R f
+(. Thus)1 278 1 3197 3900 t
+10 CW f
+(c)3503 3900 w
+10 R f
+(is converted first to a signed integer)6 1449 1 3591 3900 t
+(and then to an unsigned integer, with possibly unexpected results.)9 2628 1 720 4020 t
+(The right way to do it is)6 961 1 970 4176 t
+10 CW f
+(\(unsigned char\) c)2 1020 1 1956 4176 t
+10 R f
+(.)2976 4176 w
+10 B f
+( Right Shifts Signed or Unsigned?)5 1444(7.4. Are)1 360 2 720 4416 t
+10 R f
+( declare the quantities being)4 1136(This bears repeating: a program that cares how shifts are done had better)12 2934 2 970 4572 t
+(shifted as unsigned.)2 791 1 720 4692 t
+10 B f
+( Does Division Truncate?)3 1075(7.5. How)1 400 2 720 4932 t
+10 R f
+(Suppose we divide)2 755 1 970 5088 t
+10 CW f
+(a)1750 5088 w
+10 R f
+(by)1835 5088 w
+10 CW f
+(b)1960 5088 w
+10 R f
+(to give a quotient)3 697 1 2045 5088 t
+10 CW f
+(q)2767 5088 w
+10 R f
+(and remainder)1 573 1 2852 5088 t
+10 CW f
+(r)3450 5088 w
+10 R f
+(:)3510 5088 w
+10 CW f
+(q = a / b;)4 600 1 1080 5268 t
+(r = a % b;)4 600 1 1080 5388 t
+10 R f
+(For the moment, suppose also that)5 1372 1 720 5568 t
+10 CW f
+(b>0)2117 5568 w
+10 R f
+(.)2297 5568 w
+(What relationships might we want to hold between)7 2034 1 970 5724 t
+10 CW f
+(a)3029 5724 w
+10 R f
+(,)3089 5724 w
+10 CW f
+(b)3139 5724 w
+10 R f
+(,)3199 5724 w
+10 CW f
+(p)3249 5724 w
+10 R f
+(, and)1 194 1 3309 5724 t
+10 CW f
+(q)3528 5724 w
+10 R f
+(?)3588 5724 w
+( important, we want)3 799(1. Most)1 456 2 720 5880 t
+10 CW f
+(q*b + r == a)4 720 1 2000 5880 t
+10 R f
+(, because this is the relation that defines the remainder.)9 2193 1 2720 5880 t
+( we change the sign of)5 895(2. If)1 316 2 720 6036 t
+10 CW f
+(a)1956 6036 w
+10 R f
+(, we want that to change the sign of)8 1417 1 2016 6036 t
+10 CW f
+(q)3458 6036 w
+10 R f
+(, but not the absolute value.)5 1102 1 3518 6036 t
+( want to ensure that)4 798(3. We)1 388 2 720 6192 t
+10 CW f
+(r>=0)1935 6192 w
+10 R f
+(and)2204 6192 w
+10 CW f
+(r<b)2377 6192 w
+10 R f
+( the remainder is being used as an index to a)10 1819(. For instance, if)3 664 2 2557 6192 t
+(hash table, it is important to be able to know that it will always be a valid index.)17 3201 1 970 6312 t
+( Unfortu-)1 408( for integer division and remainder operations.)6 1909(These three properties are clearly desirable)5 1753 3 970 6468 t
+(nately,)720 6588 w
+10 I f
+(they cannot all be true at once)6 1215 1 1014 6588 t
+10 R f
+(.)2229 6588 w
+(Consider 3)1 438 1 970 6744 t
+10 I f
+(/)1416 6744 w
+10 R f
+( should be)2 417( What)1 269( satisfies property 1.)3 816( This)1 230(2, giving a quotient of 1 and a remainder of 1.)10 1856 5 1452 6744 t
+(the value of)2 485 1 720 6864 t
+10 S f
+(-)1237 6864 w
+10 R f
+(3)1308 6864 w
+10 I f
+(/)1366 6864 w
+10 R f
+( 2 suggests that it should be)6 1148(2? Property)1 495 2 1402 6864 t
+10 S f
+(-)3077 6864 w
+10 R f
+( the remainder must)3 814(1, but if that is so,)5 755 2 3148 6864 t
+10 I f
+(also)4748 6864 w
+10 R f
+(be)4946 6864 w
+10 S f
+(-)720 6984 w
+10 R f
+( 3 by making the remainder 1, in)7 1416( we can satisfy property)4 1013( Alternatively,)1 617(1, which violates property 3.)4 1203 4 791 6984 t
+(which case property 1 demands that the quotient be)8 2052 1 720 7104 t
+10 S f
+(-)2797 7104 w
+10 R f
+( violates property 2.)3 799(2. This)1 303 2 2868 7104 t
+( give up at least one of)6 958(Thus C, and any language that implements truncating integer division, must)10 3112 2 970 7260 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 22 24
+%%Page: 23 25
+/saveobj save def
+mark
+25 pagesetup
+10 R f
+(- 23 -)2 216 1 2772 480 t
+(these three principles.)2 873 1 720 840 t
+( same sign)2 430(Most programming languages give up number 3, saying instead that the remainder has the)13 3640 2 970 996 t
+( C implementations do this in)5 1202( Most)1 260( possible to preserve properties 1 and 2.)7 1614( makes it)2 371( This)1 233(as the dividend.)2 640 6 720 1116 t
+(practice, also.)1 551 1 720 1236 t
+( with the property that)4 908(However, the C language definition only guarantees property 1, along)9 2828 2 970 1392 t
+10 S f
+(\357)4736 1409 w
+10 I f
+(r)4784 1392 w
+10 S f
+(\357)4823 1409 w
+(<)4871 1392 w
+(\357)4926 1409 w
+10 I f
+(b)4974 1392 w
+10 S f
+(\357)5024 1409 w
+10 R f
+(and that)1 322 1 720 1512 t
+10 I f
+(r)1070 1512 w
+10 S f
+(\263)1117 1512 w
+10 R f
+(0 whenever)1 465 1 1180 1512 t
+10 I f
+(a)1673 1512 w
+10 S f
+(\263)1731 1512 w
+10 R f
+(0 and)1 222 1 1794 1512 t
+10 I f
+(b)2044 1512 w
+10 S f
+(>)2118 1512 w
+10 R f
+( property is less restrictive than either property 2 or property 3,)11 2545(0. This)1 306 2 2189 1512 t
+( rather strange implementations that would be unlikely to occur in practice \(such)12 3265(and actually permits some)3 1055 2 720 1632 t
+(as an implementation that always truncates the quotient)7 2217 1 720 1752 t
+10 I f
+(away)2962 1752 w
+10 R f
+(from zero\).)1 448 1 3198 1752 t
+( unwanted flexibility, the C definition is enough that we can usually make inte-)13 3190(Despite its sometimes)2 880 2 970 1908 t
+( for example, that we have a)6 1133( Suppose,)1 415( what we want.)3 607(ger division do what we want, provided that we know)9 2165 4 720 2028 t
+(number)720 2148 w
+10 CW f
+(n)1059 2148 w
+10 R f
+( identifier, and we want to use division to)8 1737(that represents some function of the characters in an)8 2150 2 1153 2148 t
+(obtain a hash table entry)4 1016 1 720 2268 t
+10 CW f
+(h)1771 2268 w
+10 R f
+(such that 0)2 453 1 1866 2268 t
+10 S f
+(\243)2327 2268 w
+10 I f
+(h)2390 2268 w
+10 S f
+(<)2464 2268 w
+10 I f
+(HASHSIZE)2535 2268 w
+10 R f
+( we know that)3 593(. If)1 151 2 2990 2268 t
+10 CW f
+(n)3769 2268 w
+10 R f
+(is never negative, we simply)4 1176 1 3864 2268 t
+(write)720 2388 w
+10 CW f
+(h = n % HASHSIZE;)4 1020 1 1080 2568 t
+10 R f
+(However, if)1 478 1 720 2748 t
+10 CW f
+(n)1225 2748 w
+10 R f
+(might be negative, this is not good enough, because)8 2089 1 1312 2748 t
+10 CW f
+(h)3429 2748 w
+10 R f
+( we)1 144( However,)1 443(might also be negative.)3 936 3 3517 2748 t
+(know that)1 397 1 720 2868 t
+10 I f
+(h)1142 2868 w
+10 S f
+(> -)1 126 1 1216 2868 t
+10 I f
+(HASHSIZE)1358 2868 w
+10 R f
+(, so we can write:)4 701 1 1813 2868 t
+10 CW f
+(h = n % HASHSIZE;)4 1020 1 1080 3048 t
+(if \(h < 0\))3 600 1 1080 3168 t
+(h += HASHSIZE;)2 840 1 1330 3288 t
+10 R f
+(Better yet, declare n as)4 911 1 970 3504 t
+10 CW f
+(unsigned)1906 3504 w
+10 R f
+(.)2386 3504 w
+10 B f
+( Big is a Random Number?)5 1159(7.6. How)1 400 2 720 3744 t
+10 R f
+( the only C implementation ran on the)7 1547( When)1 292(This size ambiguity has affected library design as well.)8 2231 3 970 3900 t
+9 R f
+(PDP-11)720 4020 w
+10 R f
+( a function called)3 699(\263 computer, there was)3 887 2 1005 4020 t
+10 I f
+(rand)2619 4020 w
+10 R f
+(that returned a \(pseudo-\) random non-negative integer.)6 2204 1 2836 4020 t
+9 R f
+(PDP-11)720 4140 w
+10 R f
+(integers were 16 bits long, including the sign, so)8 2082 1 1048 4140 t
+10 I f
+(rand)3172 4140 w
+10 R f
+(would return an integer between 0 and)6 1637 1 3403 4140 t
+(2)720 4260 w
+7 R f
+(15)775 4220 w
+10 S f
+(-)869 4260 w
+10 R f
+(1.)940 4260 w
+( the)1 159(When C was implemented on)4 1226 2 970 4416 t
+9 R f
+(VAX-11)2392 4416 w
+10 R f
+( was the range of the)5 888( What)1 278(, integers were 32 bits long.)5 1167 3 2707 4416 t
+10 I f
+(rand)720 4536 w
+10 R f
+(function on the)2 605 1 934 4536 t
+9 R f
+(VAX-11)1564 4536 w
+10 R f
+(?)1879 4536 w
+( of California took the view that)6 1336(For their system, the people at the University)7 1860 2 970 4692 t
+10 I f
+(rand)4200 4692 w
+10 R f
+(should return a)2 617 1 4423 4692 t
+( version of)2 427(value that ranges over all possible non-negative integers, so their)9 2599 2 720 4812 t
+10 I f
+(rand)3771 4812 w
+10 R f
+(returns an integer between)3 1055 1 3985 4812 t
+(0 and 2)2 294 1 720 4932 t
+7 R f
+(31)1019 4892 w
+10 S f
+(-)1113 4932 w
+10 R f
+(1.)1184 4932 w
+( AT&T, on the other hand, decided that a)8 1719(The people at)2 559 2 970 5088 t
+9 R f
+(PDP-11)3282 5088 w
+10 R f
+(program that expected the result of)5 1439 1 3601 5088 t
+10 I f
+(rand)720 5208 w
+10 R f
+(to be less than 2)4 696 1 948 5208 t
+7 R f
+(15)1649 5168 w
+10 R f
+(would be easier to transport to a)6 1359 1 1765 5208 t
+9 R f
+(VAX-11)3162 5208 w
+10 R f
+(if the)1 221 1 3515 5208 t
+10 I f
+(rand)3774 5208 w
+10 R f
+(function returned a value)3 1039 1 4001 5208 t
+(between 0 and 2)3 651 1 720 5328 t
+7 R f
+(15)1376 5288 w
+10 R f
+(there, too.)1 402 1 1479 5328 t
+( that uses)2 380(As a result, it is now difficult to write a program)10 1964 2 970 5484 t
+10 I f
+(rand)3343 5484 w
+10 R f
+(without tailoring it to the implemen-)5 1479 1 3561 5484 t
+(tation.)720 5604 w
+10 B f
+( Conversion)1 514(7.7. Case)1 405 2 720 5844 t
+10 R f
+(The)970 6000 w
+10 I f
+(toupper)1150 6000 w
+10 R f
+(and)1486 6000 w
+10 I f
+(tolower)1655 6000 w
+10 R f
+( were originally written as macros:)5 1389( They)1 255(functions have a similar history.)4 1285 3 1986 6000 t
+10 CW f
+(#define toupper\(c\) \(\(c\)+'A'-'a'\))2 1920 1 1080 6180 t
+(#define tolower\(c\) \(\(c\)+'a'-'A'\))2 1920 1 1080 6300 t
+10 R f
+( letter as input)3 590(When given a lower-case)3 1028 2 720 6480 t
+10 I f
+(toupper)2370 6480 w
+10 R f
+(yields the corresponding upper-case letter.)4 1721 1 2713 6480 t
+10 I f
+(Tolower)4491 6480 w
+10 R f
+(does)4857 6480 w
+( to the extent that they)5 986( these macros depend on the implementation's character set)8 2538( Both)1 265(the opposite.)1 531 4 720 6600 t
+( lower-case letter be the)4 1020(demand that the difference between an upper-case letter and the corresponding)10 3300 2 720 6720 t
+( assumption is valid for both the)6 1361( This)1 240(same constant for all letters.)4 1171 3 720 6840 t
+8 R f
+(ASCII)3524 6840 w
+10 R f
+(and)3770 6840 w
+8 R f
+(EBCDIC)3951 6840 w
+10 R f
+(character sets, and)2 757 1 4283 6840 t
+( definitions can be encapsulated in)5 1398(probably isn't too dangerous, because the non-portability of these macro)9 2922 2 720 6960 t
+8 S1 f
+(__________________)720 7060 w
+8 R f
+(\263 PDP-11 and VAX-11 are Trademarks of Digital Equipment Corporation.)9 2386 1 720 7160 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 23 25
+%%Page: 24 26
+/saveobj save def
+mark
+26 pagesetup
+10 R f
+(- 24 -)2 216 1 2772 480 t
+(the single file that contains them.)5 1327 1 720 840 t
+( have one disadvantage, though: when given something that is not a letter of the)14 3370(These macros do)2 700 2 970 996 t
+( the following innocent program fragment to convert a file to)10 2505( Thus,)1 283(appropriate case, they return garbage.)4 1532 3 720 1116 t
+(lower case doesn't work with these macros:)6 1746 1 720 1236 t
+10 CW f
+(int c;)1 360 1 1080 1416 t
+(while \(\(c = getchar\(\)\) != EOF\))5 1800 1 1080 1536 t
+(putchar \(tolower \(c\)\);)2 1320 1 1330 1656 t
+10 R f
+(Instead, one must write:)3 960 1 720 1836 t
+10 CW f
+(int c;)1 360 1 1080 2016 t
+(while \(\(c = getchar\(\)\) != EOF\))5 1800 1 1080 2136 t
+(putchar \(isupper \(c\)? tolower \(c\): c\);)5 2280 1 1330 2256 t
+10 R f
+( soul in the)3 478(At one point, some enterprising)4 1307 2 970 2472 t
+9 R f
+(UNIX)2790 2472 w
+10 R f
+(development organization at AT&T noticed that)5 1988 1 3052 2472 t
+(most uses of)2 516 1 720 2592 t
+10 I f
+(toupper)1269 2592 w
+10 R f
+(and)1613 2592 w
+10 I f
+(tolower)1790 2592 w
+10 R f
+( tests to ensure that their arguments were appropriate.)8 2193(were preceded by)2 718 2 2129 2592 t
+(He considered rewriting the macros this way:)6 1813 1 720 2712 t
+10 CW f
+(#define toupper\(c\) \(\(c\) >= 'a' && \(c\) <= 'z'? \(c\) + 'A' - 'a': \(c\)\))14 4020 1 1080 2892 t
+(#define tolower\(c\) \(\(c\) >= 'A' && \(c\) <= 'Z'? \(c\) + 'a' - 'A': \(c\)\))14 4020 1 1080 3012 t
+10 R f
+(but realized that this would cause)5 1374 1 720 3192 t
+10 CW f
+(c)2128 3192 w
+10 R f
+(to be evaluated anywhere between one and three times for each call,)11 2818 1 2222 3192 t
+(which would play havoc with expressions like)6 1896 1 720 3312 t
+10 CW f
+(toupper\(*p++\))2649 3312 w
+10 R f
+(. Instead, he decided to rewrite)5 1267 1 3429 3312 t
+10 I f
+(toupper)4729 3312 w
+10 R f
+(and)720 3432 w
+10 I f
+(tolower)889 3432 w
+10 R f
+(as functions.)1 505 1 1220 3432 t
+10 I f
+(Toupper)1775 3432 w
+10 R f
+(now looked something like this:)4 1284 1 2139 3432 t
+10 CW f
+(int toupper \(c\))2 900 1 1080 3612 t
+(int c;)1 360 1 1330 3732 t
+({)1080 3852 w
+(if \(c >= 'a' && c <= 'z'\))7 1500 1 1330 3972 t
+(return c + 'A' - 'a';)5 1260 1 1580 4092 t
+(return c;)1 540 1 1330 4212 t
+(})1080 4332 w
+10 R f
+(and)720 4512 w
+10 I f
+(tolower)889 4512 w
+10 R f
+(looked similar.)1 600 1 1220 4512 t
+( call overhead into)3 770(This change had the advantage of robustness, at the cost of introducing function)12 3300 2 970 4668 t
+( some people might not be willing to pay the cost of this)12 2274( hero realized that)3 726( Our)1 208(each use of these functions.)4 1112 4 720 4788 t
+(overhead, so he re-introduced the macros with new names:)8 2347 1 720 4908 t
+10 CW f
+(#define _toupper\(c\) \(\(c\)+'A'-'a'\))2 1980 1 1080 5088 t
+(#define _tolower\(c\) \(\(c\)+'a'-'A'\))2 1980 1 1080 5208 t
+10 R f
+(This gave users a choice of convenience or speed.)8 1991 1 720 5388 t
+( just one problem in all this: the people at Berkeley never followed suit, nor did some other)17 3658(There was)1 412 2 970 5544 t
+( that uses)2 376( means that a program written on an AT&T system)9 2066( This)1 231(C implementors.)1 670 4 720 5664 t
+10 I f
+(toupper)4090 5664 w
+10 R f
+(or)4428 5664 w
+10 I f
+(tolower)4538 5664 w
+10 R f
+(, and)1 196 1 4844 5664 t
+( a letter of the appropriate case, may stop work-)9 1951(assumes that it will be able to pass an argument that is not)12 2369 2 720 5784 t
+(ing on some other C implementation.)5 1489 1 720 5904 t
+(This sort of failure is very hard to trace for someone who does not know this bit of history.)18 3626 1 970 6060 t
+10 B f
+( First, then Reallocate)3 937(7.8. Free)1 393 2 720 6300 t
+10 R f
+(Most C implementations provide users with three memory allocation functions called)10 3414 1 970 6456 t
+10 I f
+(malloc)4409 6456 w
+10 R f
+(,)4681 6456 w
+10 I f
+(realloc)4732 6456 w
+10 R f
+(,)5015 6456 w
+(and)720 6576 w
+10 I f
+(free)898 6576 w
+10 R f
+(. Calling)1 379 1 1053 6576 t
+10 CW f
+(malloc\(n\))1466 6576 w
+10 R f
+(returns a pointer to)3 784 1 2040 6576 t
+10 I f
+(n)2858 6576 w
+10 R f
+(characters of newly-allocated memory that the pro-)6 2098 1 2942 6576 t
+( Giving)1 343(grammer can use.)2 736 2 720 6696 t
+10 I f
+(free)1839 6696 w
+10 R f
+(a pointer to memory previously returned by)6 1832 1 2034 6696 t
+10 I f
+(malloc)3907 6696 w
+10 R f
+(makes that memory)2 820 1 4220 6696 t
+( Calling)1 350( re-use.)1 298(available for)1 507 3 720 6816 t
+10 I f
+(realloc)1905 6816 w
+10 R f
+(with a pointer to an allocated area and a new size stretches or shrinks)13 2822 1 2218 6816 t
+(the memory to the new size, possibly copying it in the process.)11 2512 1 720 6936 t
+( is an excerpt from the)5 965( Here)1 257( subtle.)1 303( truth is actually somewhat more)5 1372( The)1 218(Or so one might think.)4 955 6 970 7092 t
+(description of)1 552 1 720 7212 t
+10 I f
+(realloc)1297 7212 w
+10 R f
+(that appears in the System V Interface Definition:)7 1988 1 1605 7212 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 24 26
+%%Page: 25 27
+/saveobj save def
+mark
+27 pagesetup
+10 R f
+(- 25 -)2 216 1 2772 480 t
+10 I f
+(Realloc)970 840 w
+10 R f
+( to by)2 234(changes the size of the block pointed)6 1487 2 1302 840 t
+10 I f
+(ptr)3051 840 w
+10 R f
+(to)3196 840 w
+10 I f
+(size)3302 840 w
+10 R f
+(bytes and returns a pointer to the \(pos-)7 1560 1 3480 840 t
+( contents will be unchanged up to the lesser of the new and old sizes.)14 2754( The)1 205(sibly moved\) block.)2 797 3 970 960 t
+( the)1 154(The Seventh Edition of the reference manual for)7 1973 2 720 1116 t
+9 R f
+(UNIX)2877 1116 w
+10 R f
+(system contains a copy of the same paragraph.)7 1906 1 3134 1116 t
+(In addition, it contains a second paragraph describing)7 2135 1 720 1236 t
+10 I f
+(realloc)2880 1236 w
+10 R f
+(:)3163 1236 w
+10 I f
+(Realloc)970 1392 w
+10 R f
+(also works if)2 526 1 1304 1392 t
+10 I f
+(ptr)1860 1392 w
+10 R f
+(points to a block freed since the last call of)9 1756 1 2007 1392 t
+10 I f
+(malloc)3793 1392 w
+10 R f
+(,)4065 1392 w
+10 I f
+(realloc)4120 1392 w
+10 R f
+(, or)1 138 1 4403 1392 t
+10 I f
+(calloc)4571 1392 w
+10 R f
+(; thus)1 225 1 4815 1392 t
+(sequences of)1 523 1 970 1512 t
+10 I f
+(free)1529 1512 w
+10 R f
+(,)1684 1512 w
+10 I f
+(malloc)1745 1512 w
+10 R f
+(and)2053 1512 w
+10 I f
+(realloc)2233 1512 w
+10 R f
+( of)1 118(can exploit the search strategy)4 1252 2 2552 1512 t
+10 I f
+(malloc)3957 1512 w
+10 R f
+(to do storage com-)3 776 1 4264 1512 t
+(paction.)970 1632 w
+(Thus, the following is legal under the Seventh Edition:)8 2191 1 720 1788 t
+10 CW f
+(free \(p\);)1 540 1 1080 1968 t
+(p = realloc \(p, newsize\);)4 1500 1 1080 2088 t
+10 R f
+( storage)1 314(This idiosyncrasy remains in systems derived from the Seventh Edition: it is possible to free a)15 3756 2 970 2304 t
+( memory on these systems is guaranteed not to change)9 2235( implication, freeing)2 829( By)1 175(area and then reallocate it.)4 1081 4 720 2424 t
+( elements)1 386( on these systems, one can free all the)8 1545( Thus,)1 280(its contents until the next time memory is allocated.)8 2109 4 720 2544 t
+(of a list by the following curious means:)7 1613 1 720 2664 t
+10 CW f
+(for \(p = head; p != NULL; p = p->next\))9 2280 1 1080 2844 t
+(free \(\(char *\) p\);)3 1080 1 1330 2964 t
+10 R f
+(without worrying that the call to)5 1291 1 720 3144 t
+10 I f
+(free)2036 3144 w
+10 R f
+(might invalidate)1 653 1 2216 3144 t
+10 CW f
+(p->next)2894 3144 w
+10 R f
+(.)3314 3144 w
+(Needless to say, this technique is not recommended, if only because not all C implementations pre-)15 4070 1 970 3300 t
+( the Seventh Edition manual leaves one thing)7 1835( However,)1 444( been freed.)2 475(serve memory long enough after it has)6 1566 4 720 3420 t
+(unstated: the original implementation of)4 1605 1 720 3540 t
+10 I f
+(realloc)2350 3540 w
+10 R f
+(actually required that the area given to it for reallocation be)10 2382 1 2658 3540 t
+( free memory first and then real-)6 1314( this reason, there are many C programs floating around that)10 2444( For)1 193(free first.)1 369 4 720 3660 t
+(locate it, and this is something to watch out for when moving a C program to another implementation.)17 4078 1 720 3780 t
+10 B f
+( Example of Portability Problems)4 1427(7.9. An)1 328 2 720 4020 t
+10 R f
+( following pro-)2 613( The)1 209( many people.)2 571(Let's take a look at a problem that has been solved many times by)13 2677 4 970 4176 t
+( converts the integer to decimal)5 1291( It)1 118( a \(pointer to a\) function.)5 1033(gram takes two arguments: a long integer and)7 1878 4 720 4296 t
+(and calls the given function with each character of the decimal representation.)11 3114 1 720 4416 t
+10 CW f
+(void)1080 4596 w
+(printnum \(n, p\))2 900 1 1080 4716 t
+(long n;)1 420 1 1330 4836 t
+(void \(*p\)\(\);)1 720 1 1330 4956 t
+({)1080 5076 w
+(if \(n < 0\) {)4 720 1 1330 5196 t
+(\(*p\) \('-'\);)1 660 1 1580 5316 t
+(n = -n;)2 420 1 1580 5436 t
+(})1330 5556 w
+(if \(n >= 10\))3 720 1 1330 5676 t
+(printnum \(n/10, p\);)2 1140 1 1580 5796 t
+(\(*p\) \(n % 10 + '0'\);)5 1200 1 1330 5916 t
+(})1080 6036 w
+10 R f
+( we check if)3 523( First)1 247(This program is fairly straightforward.)4 1591 3 970 6252 t
+10 CW f
+(n)3369 6252 w
+10 R f
+( and)1 183(is negative; if so, we print a sign)7 1390 2 3467 6252 t
+(make)720 6372 w
+10 CW f
+(n)964 6372 w
+10 R f
+( we test if)3 400(positive. Next,)1 614 2 1052 6372 t
+10 I f
+(n)2094 6372 w
+10 S f
+(\263)2152 6372 w
+10 R f
+( so, its decimal representation has two or more digits, so we call)12 2582(10. If)1 243 2 2215 6372 t
+10 I f
+(printnum)720 6492 w
+10 R f
+( we print the last digit.)5 900( Finally,)1 359(recursively to print all but the last digit.)7 1583 3 1112 6492 t
+( uses to)2 302( first is the method it)5 831( The)1 205(This program, for all its simplicity, has several portability problems.)9 2732 4 970 6648 t
+( of)1 114(convert the low-order decimal digit)4 1442 2 720 6768 t
+10 CW f
+(n)2307 6768 w
+10 R f
+( Using)1 295(to character form.)2 723 2 2398 6768 t
+10 CW f
+(n%10)3447 6768 w
+10 R f
+(to get the value of the low-order)6 1322 1 3718 6768 t
+(digit is fine, but adding)4 971 1 720 6888 t
+10 CW f
+('0')1726 6888 w
+10 R f
+( addition)1 364( This)1 239( corresponding character representation is not.)5 1900(to it to get the)4 596 4 1941 6888 t
+( that)1 176(assumes that the machine collating sequence has all the digits in sequence with no gaps, so)15 3659 2 720 7008 t
+10 CW f
+('0'+5)4581 7008 w
+10 R f
+(has)4907 7008 w
+(the same value as)3 737 1 720 7128 t
+10 CW f
+('5')1494 7128 w
+10 R f
+( assumption, while true of the)5 1253( This)1 241( on.)1 163(, and so)2 332 4 1674 7128 t
+8 R f
+(ASCII)3701 7128 w
+10 R f
+(and)3948 7128 w
+8 R f
+(EBCDIC)4130 7128 w
+10 R f
+(character sets,)1 577 1 4463 7128 t
+( way to avoid that problem is to use a table:)10 1743( The)1 205(might not be true for some machines.)6 1490 3 720 7248 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 25 27
+%%Page: 26 28
+/saveobj save def
+mark
+28 pagesetup
+10 R f
+(- 26 -)2 216 1 2772 480 t
+10 CW f
+(void)1080 900 w
+(printnum \(n, p\))2 900 1 1080 1020 t
+(long n;)1 420 1 1330 1140 t
+(void \(*p\)\(\);)1 720 1 1330 1260 t
+({)1080 1380 w
+(if \(n < 0\) {)4 720 1 1330 1500 t
+(\(*p\) \('-'\);)1 660 1 1580 1620 t
+(n = -n;)2 420 1 1580 1740 t
+(})1330 1860 w
+(if \(n >= 10\))3 720 1 1330 1980 t
+(printnum \(n/10, p\);)2 1140 1 1580 2100 t
+(\(*p\) \("0123456789"[n % 10]\);)3 1680 1 1330 2220 t
+(})1080 2340 w
+10 R f
+( involves what happens if)4 1049(The next problem)2 722 2 970 2556 t
+10 I f
+(n)2773 2556 w
+10 S f
+(<)2847 2556 w
+10 R f
+( program prints a negative sign and sets)7 1633(0. The)1 287 2 2918 2556 t
+10 CW f
+(n)4870 2556 w
+10 R f
+(to)4962 2556 w
+10 CW f
+(-n)720 2676 w
+10 R f
+( because 2's complement machines generally allow more negative val-)9 2824(. This assignment might overflow,)4 1376 2 840 2676 t
+( \(long\) integer is)3 666( particular, if a)3 587( In)1 133(ues than positive values to be represented.)6 1683 4 720 2796 t
+10 I f
+(k)3815 2796 w
+10 R f
+(bits plus one extra bit for the)6 1155 1 3885 2796 t
+(sign,)720 2916 w
+10 S f
+(-)937 2916 w
+10 R f
+(2)1008 2916 w
+7 I f
+(k)1063 2876 w
+10 R f
+(can be represented but 2)4 969 1 1127 2916 t
+7 I f
+(k)2101 2876 w
+10 R f
+(cannot.)2165 2916 w
+( most obvious one is to assign)6 1231( The)1 210( around this problem.)3 870(There are several ways)3 927 4 970 3072 t
+10 CW f
+(n)4238 3072 w
+10 R f
+(to an)1 202 1 4328 3072 t
+10 CW f
+(unsigned)4560 3072 w
+(long)720 3192 w
+10 R f
+( some C compilers do not implement)6 1490( However,)1 442( be done with it.)4 655(value and)1 388 4 988 3192 t
+10 CW f
+(unsigned long)1 782 1 3990 3192 t
+10 R f
+(, so let)2 268 1 4772 3192 t
+(us see how we can get along without it.)8 1573 1 720 3312 t
+( machines, changing the sign of a)6 1424(In both 1's complement and 2's complement)6 1871 2 970 3468 t
+10 I f
+(positive)4305 3468 w
+10 R f
+(integer is)1 384 1 4656 3468 t
+( only trouble comes when changing the sign of a)9 2011( The)1 213( to overflow.)2 529(guaranteed not)1 599 4 720 3588 t
+10 I f
+(negative)4105 3588 w
+10 R f
+(value. There-)1 564 1 4476 3588 t
+(fore, we can avoid trouble by making sure we do not attempt to make)13 2773 1 720 3708 t
+10 CW f
+(n)3518 3708 w
+10 R f
+(positive.)3603 3708 w
+(Of course, once we have printed the sign of a negative value, we would like to be able to treat nega-)20 4070 1 970 3864 t
+( way to do that is to force)7 1053( The)1 210( the same way.)3 608(tive and positive numbers)3 1048 4 720 3984 t
+10 CW f
+(n)3669 3984 w
+10 R f
+(to be negative after printing the)5 1281 1 3759 3984 t
+( we do this, we will have to ensure that the part of)12 2018( If)1 118( negative values.)2 672(sign, and to do all our arithmetic with)7 1512 4 720 4104 t
+( to split the program into)5 997(the program that prints the sign is executed only once; the easiest way to do that is)16 3323 2 720 4224 t
+(two functions:)1 575 1 720 4344 t
+10 CW f
+(void)1080 4524 w
+(printnum \(n, p\))2 900 1 1080 4644 t
+(long n;)1 420 1 1330 4764 t
+(void \(*p\)\(\);)1 720 1 1330 4884 t
+({)1080 5004 w
+(void printneg\(\);)1 960 1 1330 5124 t
+(if \(n < 0\) {)4 720 1 1330 5244 t
+(\(*p\) \('-'\);)1 660 1 1580 5364 t
+(printneg \(n, p\);)2 960 1 1580 5484 t
+(} else)1 360 1 1330 5604 t
+(printneg \(-n, p\);)2 1020 1 1580 5724 t
+(})1080 5844 w
+(void)1080 6084 w
+(printneg \(n, p\))2 900 1 1080 6204 t
+(long n;)1 420 1 1330 6324 t
+(void \(*p\)\(\);)1 720 1 1330 6444 t
+({)1080 6564 w
+(if \(n <= -10\))3 780 1 1330 6684 t
+(printneg \(n/10, p\);)2 1140 1 1580 6804 t
+(\(*p\) \("0123456789"[-\(n % 10\)]\);)3 1860 1 1330 6924 t
+(})1080 7044 w
+10 I f
+(Printnum)970 7260 w
+10 R f
+( In)1 140( a negative sign.)3 670(now just checks if the number being printed is negative; if so it prints)13 2851 3 1379 7260 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 26 28
+%%Page: 27 29
+/saveobj save def
+mark
+29 pagesetup
+10 R f
+(- 27 -)2 216 1 2772 480 t
+(either case, it calls)3 779 1 720 840 t
+10 I f
+(printneg)1538 840 w
+10 R f
+(with the negative absolute value of)5 1465 1 1916 840 t
+10 I f
+(n)3420 840 w
+10 R f
+( have also modified the body of)6 1343(. We)1 227 2 3470 840 t
+10 I f
+(printneg)720 960 w
+10 R f
+(to cater to the fact that)5 895 1 1084 960 t
+10 I f
+(n)2004 960 w
+10 R f
+(will always be a negative number or zero.)7 1668 1 2079 960 t
+( have used)2 423( We)1 189(Or have we?)2 505 3 970 1116 t
+10 CW f
+(n/10)2113 1116 w
+10 R f
+(and)2379 1116 w
+10 CW f
+(n%10)2549 1116 w
+10 R f
+(to represent the leading digits and the trailing digit of)9 2147 1 2816 1116 t
+10 I f
+(n)4990 1116 w
+10 R f
+( that integer division behaves in a somewhat implementation-dependent)8 2869( Recall)1 305(\(with suitable sign changes\).)3 1146 3 720 1236 t
+( that reason, it might actually be that)7 1502( For)1 195( operands is negative.)3 883(way when one of the)4 851 4 720 1356 t
+10 CW f
+(n%10)4182 1356 w
+10 R f
+( In)1 139(is positive!)1 448 2 4453 1356 t
+(that case,)1 371 1 720 1476 t
+10 CW f
+(-\(n%10\))1116 1476 w
+10 R f
+(would be negative, and we would run off the end of our digit array.)13 2686 1 1561 1476 t
+( temporary variables to hold the quotient and remainder.)8 2353(We cater to this problem by creating two)7 1717 2 970 1632 t
+( the division, we check that the remainder is in range and adjust both variables if not.)16 3411(After we do)2 480 2 720 1752 t
+10 I f
+(Printnum)4662 1752 w
+10 R f
+(has not changed, so we show only)6 1362 1 720 1872 t
+10 I f
+(printneg)2107 1872 w
+10 R f
+(:)2446 1872 w
+10 CW f
+(void)1080 2052 w
+(printneg \(n, p\))2 900 1 1080 2172 t
+(long n;)1 420 1 1330 2292 t
+(void \(*p\)\(\);)1 720 1 1330 2412 t
+({)1080 2532 w
+(long q;)1 420 1 1330 2652 t
+(int r;)1 360 1 1330 2772 t
+(q = n / 10;)4 660 1 1330 3012 t
+(r = n % 10;)4 660 1 1330 3132 t
+(if \(r > 0\) {)4 720 1 1330 3252 t
+(r -= 10;)2 480 1 1580 3372 t
+(q++;)1580 3492 w
+(})1330 3612 w
+(if \(n <= -10\))3 780 1 1330 3732 t
+(printneg \(q, p\);)2 960 1 1580 3852 t
+(\(*p\) \("0123456789"[-r]\);)1 1440 1 1330 3972 t
+(})1080 4092 w
+10 B f
+( Space Available)2 706(8. This)1 315 2 720 4392 t
+10 R f
+( If)1 121(There are many ways for C programmers to go astray that have not been mentioned in this paper.)17 3949 2 970 4548 t
+( may well be included, with an acknowledging footnote, in a)10 2549( It)1 124(you find one, please contact the author.)6 1647 3 720 4668 t
+(future revision.)1 610 1 720 4788 t
+10 B f
+(References)720 5028 w
+10 I f
+(The C Programming Language)3 1256 1 970 5184 t
+10 R f
+(\(Kernighan and Ritchie, Prentice-Hall 1978\) is the definitive work on)9 2788 1 2252 5184 t
+( already familiar with other high-level lan-)6 1702( contains both an excellent tutorial, aimed at people who are)10 2414(C. It)1 204 3 720 5304 t
+( the language has)3 750( While)1 314( entire language succinctly.)3 1152(guages, and a reference manual that describes the)7 2104 4 720 5424 t
+( book also contains the)4 928( This)1 231(expanded slightly since 1978, this book is still the last word on most subjects.)13 3161 3 720 5544 t
+(``C Reference Manual'' we have mentioned several times in this paper.)10 2851 1 720 5664 t
+10 I f
+( Book)1 231(The C Puzzle)2 528 2 970 5820 t
+10 R f
+( The)1 206(\(Feuer, Prentice-Hall, 1982\) is an unusual way to hone one's syntactic skills.)11 3079 2 1755 5820 t
+( a collection of puzzles \(and answers\) whose solutions test the reader's knowledge of C's fine)15 4009(book is)1 311 2 720 5940 t
+(points.)720 6060 w
+10 I f
+(C: A Reference Manual)3 963 1 970 6216 t
+10 R f
+(\(Harbison and Steele, Prentice Hall 1984\) is mostly intended as a reference)11 3076 1 1964 6216 t
+( users may also find it useful, particularly because of its meticulous cross)12 3017( Other)1 285( implementors.)1 608(source for)1 410 4 720 6336 t
+(references.)720 6456 w
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 27 29
+%%Trailer
+done
+%%Pages: 29
+%%DocumentFonts: Courier Times-Bold Times-Italic Times-Roman Times-Roman Symbol
+

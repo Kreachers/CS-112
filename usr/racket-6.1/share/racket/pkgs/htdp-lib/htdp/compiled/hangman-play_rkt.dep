@@ -1,0 +1,1 @@
+("6.1" ("b5f8607eda178cd8df9b6195c01d9ea8793bfd30" . "f15a2875f23eb619f90ef4823ccf5a9ff7886bf8") (collects #"lang" #"posn.rkt") (collects #"scheme" #"main.rkt") (collects #"lang" #"prim.rkt") (collects #"htdp" #"hangman.rkt") (collects #"scheme" #"runtime-config.rkt") (collects #"htdp" #"big-draw.rkt"))

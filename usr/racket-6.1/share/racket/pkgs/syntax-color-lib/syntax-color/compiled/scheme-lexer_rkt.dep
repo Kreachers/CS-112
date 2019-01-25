@@ -1,0 +1,1 @@
+("6.1" ("27d50356523afec48b1889bf4bcb7f966e3637fc" . "b650086ff8243f2fccd59e737edfc6f709b6410f") (collects #"syntax-color" #"racket-lexer.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

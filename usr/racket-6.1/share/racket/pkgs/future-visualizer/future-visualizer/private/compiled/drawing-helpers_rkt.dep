@@ -1,0 +1,1 @@
+("6.1" ("421f5bfb5c50e3d57247edd9d7ddc6e041e7d404" . "530ac9f9c2bc1d4d1136edeb01a195475bb64e5b") (collects #"future-visualizer" #"private" #"constants.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"future-visualizer" #"private" #"display.rkt") (collects #"pict" #"main.rkt") (collects #"racket" #"base.rkt"))

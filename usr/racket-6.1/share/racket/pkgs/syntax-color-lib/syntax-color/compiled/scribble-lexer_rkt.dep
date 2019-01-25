@@ -1,0 +1,1 @@
+("6.1" ("4661fcb8881eb3b367f591ba6a3b8d9f948f5a4d" . "a6fe835c37bbb3f8f302331a20a90768ff0e1be5") (collects #"scheme" #"base.rkt") (collects #"racket" #"contract.rkt") (collects #"syntax-color" #"scheme-lexer.rkt") (collects #"racket" #"port.rkt") (collects #"syntax-color" #"lexer-contract.rkt") (collects #"scheme" #"runtime-config.rkt"))

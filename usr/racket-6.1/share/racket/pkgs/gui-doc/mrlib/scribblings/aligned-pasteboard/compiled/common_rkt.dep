@@ -1,0 +1,1 @@
+("6.1" ("348b5251af752aff10506b58f7bb0628d0fa3f8d" . "38a3352097d2b6b4f9e5e192d581ee352cb4e2fd") (collects #"scheme" #"base.rkt") (collects #"mrlib" #"aligned-pasteboard.rkt") (collects #"scheme" #"runtime-config.rkt") (collects #"mrlib" #"scribblings" #"common.rkt"))

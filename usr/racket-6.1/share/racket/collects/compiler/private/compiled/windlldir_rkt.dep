@@ -1,0 +1,1 @@
+("6.1" ("5b02d97f3c7824e406bb306fecc2c5c052ee497a" . "9efde4fff2496f8c4169ece1250856d27bef99d4") (collects #"compiler" #"private" #"winutf16.rkt") (collects #"racket" #"port.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

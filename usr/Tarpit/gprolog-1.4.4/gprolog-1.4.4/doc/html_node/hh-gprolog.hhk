@@ -1,0 +1,3287 @@
+ <HTML>
+  <HEAD>
+  <!-- Sitemap 1.0 -->
+  </HEAD>
+  <BODY>
+  <ul>
+  <li><object type="text/sitemap">
+      <param name="Name" value="!/0">
+      <param name="Local" value="gprolog023.html#hevea_default214">
+       <param name="Local" value="gprolog023.html#hevea_default221">
+      </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="'.'/2">
+      <param name="Local" value="gprolog047.html#hevea_default799">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="(',')/2">
+      <param name="Local" value="gprolog023.html#hevea_default215">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(*->)/2">
+      <param name="Local" value="gprolog023.html#hevea_default218">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(-->)/2">
+      <param name="Local" value="gprolog041.html#hevea_default643">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(->)/2">
+      <param name="Local" value="gprolog023.html#hevea_default217">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(;)/2">
+      <param name="Local" value="gprolog023.html#hevea_default216">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(=)/2">
+      <param name="Local" value="gprolog026.html#hevea_default238">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(=..)/2">
+      <param name="Local" value="gprolog028.html#hevea_default250">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(=:=)/2">
+      <param name="Local" value="gprolog030.html#hevea_default280">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(==)/2">
+      <param name="Local" value="gprolog027.html#hevea_default241">
+       <param name="Local" value="gprolog044.html#hevea_default699">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(=\=)/2">
+      <param name="Local" value="gprolog030.html#hevea_default281">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(=<)/2">
+      <param name="Local" value="gprolog030.html#hevea_default283">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(@=<)/2">
+      <param name="Local" value="gprolog027.html#hevea_default244">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(@>)/2">
+      <param name="Local" value="gprolog027.html#hevea_default245">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(@>=)/2">
+      <param name="Local" value="gprolog027.html#hevea_default246">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(@<)/2">
+      <param name="Local" value="gprolog027.html#hevea_default243">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#/\)/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default974">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#=)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default952">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#==>)/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default972">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#=#)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default958">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#=<)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default955">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#=<#)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default961">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(##)/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default971">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#\)/1 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default968">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#\/)/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default976">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#\/\)/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default975">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#\=)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default953">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#\==>)/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default973">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#\=#)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default959">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#\\/)/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default977">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#\<=>)/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default970">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#>)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default956">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#>=)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default957">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#>=#)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default963">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#>#)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default962">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#<)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default954">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#<=>)/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default969">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(#<#)/2 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default960">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(\+)/1">
+      <param name="Local" value="gprolog042.html#hevea_default660">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(\=)/2">
+      <param name="Local" value="gprolog026.html#hevea_default240">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(\==)/2">
+      <param name="Local" value="gprolog027.html#hevea_default242">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(>)/2">
+      <param name="Local" value="gprolog030.html#hevea_default284">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(>=)/2">
+      <param name="Local" value="gprolog030.html#hevea_default285">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(<)/2">
+      <param name="Local" value="gprolog030.html#hevea_default282">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="(is)/2">
+      <param name="Local" value="gprolog030.html#hevea_default279">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="--">
+      <param name="Local" value="gprolog007.html#hevea_default11">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--assembly">
+      <param name="Local" value="gprolog009.html#hevea_default60">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--aux-father">
+      <param name="Local" value="gprolog009.html#hevea_default137">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--aux-father2">
+      <param name="Local" value="gprolog009.html#hevea_default138">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--c-compiler">
+      <param name="Local" value="gprolog009.html#hevea_default91">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--cmd-line">
+      <param name="Local" value="gprolog009.html#hevea_default139">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--comment">
+      <param name="Local" value="gprolog009.html#hevea_default89">
+       <param name="Local" value="gprolog009.html#hevea_default90">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--compile-msg">
+      <param name="Local" value="gprolog009.html#hevea_default87">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--consult-file">
+      <param name="Local" value="gprolog007.html#hevea_default6">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--cstr-size">
+      <param name="Local" value="gprolog009.html#hevea_default98">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--decode">
+      <param name="Local" value="gprolog009.html#hevea_default131">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--demangling">
+      <param name="Local" value="gprolog009.html#hevea_default132">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--encode">
+      <param name="Local" value="gprolog009.html#hevea_default133">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--entry-goal">
+      <param name="Local" value="gprolog007.html#hevea_default7">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--fast-math">
+      <param name="Local" value="gprolog009.html#hevea_default85">
+       <param name="Local" value="gprolog030.html#hevea_default278">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--fd-to-c">
+      <param name="Local" value="gprolog009.html#hevea_default62">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--fixed-sizes">
+      <param name="Local" value="gprolog008.html#hevea_default42">
+      <param name="Local" value="gprolog009.html#hevea_default100">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--foreign-only">
+      <param name="Local" value="gprolog009.html#hevea_default78">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--global-size">
+      <param name="Local" value="gprolog009.html#hevea_default96">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--gui-console">
+      <param name="Local" value="gprolog009.html#hevea_default101">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--help">
+      <param name="Local" value="gprolog007.html#hevea_default9">
+       <param name="Local" value="gprolog009.html#hevea_default71">
+       <param name="Local" value="gprolog009.html#hevea_default144">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--init-goal">
+      <param name="Local" value="gprolog007.html#hevea_default5">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--keep-void-inst">
+      <param name="Local" value="gprolog009.html#hevea_default86">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--linker">
+      <param name="Local" value="gprolog009.html#hevea_default94">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--local-size">
+      <param name="Local" value="gprolog008.html#hevea_default41">
+      <param name="Local" value="gprolog009.html#hevea_default95">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--mangling">
+      <param name="Local" value="gprolog009.html#hevea_default134">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--max-atom">
+      <param name="Local" value="gprolog009.html#hevea_default99">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--min-bips">
+      <param name="Local" value="gprolog009.html#hevea_default109">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--min-fd-bips">
+      <param name="Local" value="gprolog009.html#hevea_default108">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--min-pl-bips">
+      <param name="Local" value="gprolog009.html#hevea_default107">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--min-reg-opt">
+      <param name="Local" value="gprolog009.html#hevea_default83">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--min-size">
+      <param name="Local" value="gprolog009.html#hevea_default110">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--mini-assembly">
+      <param name="Local" value="gprolog009.html#hevea_default58">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-call-c">
+      <param name="Local" value="gprolog009.html#hevea_default79">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-debugger">
+      <param name="Local" value="gprolog009.html#hevea_default105">
+      <param name="Local" value="gprolog009.html#hevea_default106">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-del-temp">
+      <param name="Local" value="gprolog009.html#hevea_default66">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-demangling">
+      <param name="Local" value="gprolog009.html#hevea_default67">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-fd-lib">
+      <param name="Local" value="gprolog009.html#hevea_default111">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-inline">
+      <param name="Local" value="gprolog009.html#hevea_default80">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-opt-last-subterm">
+      <param name="Local" value="gprolog009.html#hevea_default84">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-redef-error">
+      <param name="Local" value="gprolog009.html#hevea_default77">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-reg-opt">
+      <param name="Local" value="gprolog009.html#hevea_default82">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-reorder">
+      <param name="Local" value="gprolog009.html#hevea_default81">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-singl-warn">
+      <param name="Local" value="gprolog009.html#hevea_default76">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-susp-warn">
+      <param name="Local" value="gprolog009.html#hevea_default75">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--no-top-level">
+      <param name="Local" value="gprolog009.html#hevea_default103">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--object">
+      <param name="Local" value="gprolog009.html#hevea_default64">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--output">
+      <param name="Local" value="gprolog009.html#hevea_default52">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--pl-state">
+      <param name="Local" value="gprolog009.html#hevea_default73">
+       <param name="Local" value="gprolog046.html#hevea_default789">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--printf">
+      <param name="Local" value="gprolog009.html#hevea_default136">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--query-goal">
+      <param name="Local" value="gprolog007.html#hevea_default8">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--relax">
+      <param name="Local" value="gprolog009.html#hevea_default135">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--statistics">
+      <param name="Local" value="gprolog009.html#hevea_default88">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--strip">
+      <param name="Local" value="gprolog009.html#hevea_default113">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--temp-dir">
+      <param name="Local" value="gprolog009.html#hevea_default65">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--trail-size">
+      <param name="Local" value="gprolog009.html#hevea_default97">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--verbose">
+      <param name="Local" value="gprolog009.html#hevea_default69">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--version">
+      <param name="Local" value="gprolog007.html#hevea_default10">
+       <param name="Local" value="gprolog009.html#hevea_default72">
+       <param name="Local" value="gprolog009.html#hevea_default145">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--wam-comment">
+      <param name="Local" value="gprolog009.html#hevea_default74">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--wam-for-byte-code">
+      <param name="Local" value="gprolog009.html#hevea_default56">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="--wam-for-native">
+      <param name="Local" value="gprolog009.html#hevea_default54">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-A">
+      <param name="Local" value="gprolog009.html#hevea_default93">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-C">
+      <param name="Local" value="gprolog009.html#hevea_default92">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-c">
+      <param name="Local" value="gprolog009.html#hevea_default63">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-D">
+      <param name="Local" value="gprolog009.html#hevea_default143">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-E">
+      <param name="Local" value="gprolog009.html#hevea_default140">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-F">
+      <param name="Local" value="gprolog009.html#hevea_default61">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-h">
+      <param name="Local" value="gprolog009.html#hevea_default70">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-L">
+      <param name="Local" value="gprolog009.html#hevea_default114">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-M">
+      <param name="Local" value="gprolog009.html#hevea_default57">
+       <param name="Local" value="gprolog009.html#hevea_default141">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-o">
+      <param name="Local" value="gprolog009.html#hevea_default51">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-P">
+      <param name="Local" value="gprolog009.html#hevea_default142">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-S">
+      <param name="Local" value="gprolog009.html#hevea_default59">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-s">
+      <param name="Local" value="gprolog009.html#hevea_default112">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-v">
+      <param name="Local" value="gprolog009.html#hevea_default68">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-W">
+      <param name="Local" value="gprolog009.html#hevea_default53">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="-w">
+      <param name="Local" value="gprolog009.html#hevea_default55">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="abolish/1">
+      <param name="Local" value="gprolog031.html#hevea_default295">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="abort/0">
+      <param name="Local" value="gprolog007.html#hevea_default31">
+      <param name="Local" value="gprolog015.html#hevea_default172">
+      <param name="Local" value="gprolog042.html#hevea_default648">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="absolute_file_name (property)">
+      <param name="Local" value="gprolog051.html#hevea_default854">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="absolute_file_name/2">
+      <param name="Local" value="gprolog022.html#hevea_default195">
+      <param name="Local" value="gprolog034.html#hevea_default339">
+      <param name="Local" value="gprolog047.html#hevea_default802">
+      <param name="Local" value="gprolog047.html#hevea_default806">
+      <param name="Local" value="gprolog050.html#hevea_default821">
+       <param name="Local" value="gprolog050.html#hevea_default825">
+      <param name="Local" value="gprolog050.html#hevea_default829">
+      <param name="Local" value="gprolog051.html#hevea_default837">
+      <param name="Local" value="gprolog051.html#hevea_default840">
+      <param name="Local" value="gprolog051.html#hevea_default842">
+      <param name="Local" value="gprolog051.html#hevea_default845">
+      <param name="Local" value="gprolog051.html#hevea_default852">
+      <param name="Local" value="gprolog051.html#hevea_default867">
+      <param name="Local" value="gprolog051.html#hevea_default869">
+      <param name="Local" value="gprolog051.html#hevea_default871">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="acyclic_term/1">
+      <param name="Local" value="gprolog028.html#hevea_default255">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="add_linedit_completion/1">
+      <param name="Local" value="gprolog053.html#hevea_default917">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="add_stream_alias/2">
+      <param name="Local" value="gprolog034.html#hevea_default320">
+      <param name="Local" value="gprolog034.html#hevea_default396">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="add_stream_mirror/2">
+      <param name="Local" value="gprolog034.html#hevea_default331">
+      <param name="Local" value="gprolog034.html#hevea_default399">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="address_bits (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default762">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="alias (option)">
+      <param name="Local" value="gprolog034.html#hevea_default351">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="alias (property)">
+      <param name="Local" value="gprolog034.html#hevea_default370">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="append (mode)">
+      <param name="Local" value="gprolog034.html#hevea_default342">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="append/1">
+      <param name="Local" value="gprolog040.html#hevea_default626">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="append/3">
+      <param name="Local" value="gprolog044.html#hevea_default693">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="arch (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default761">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="architecture/1">
+      <param name="Local" value="gprolog051.html#hevea_default875">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="arg/3">
+      <param name="Local" value="gprolog028.html#hevea_default249">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="a">
+  rgument selector     <param name="Local" value="gprolog045.html#hevea_default718">
+   <li><object type="text/sitemap">
+      <param name="Name" value="argument_counter/1">
+      <param name="Local" value="gprolog051.html#hevea_default830">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="argument_list/1">
+      <param name="Local" value="gprolog007.html#hevea_default15">
+      <param name="Local" value="gprolog051.html#hevea_default832">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="argument_value/2">
+      <param name="Local" value="gprolog007.html#hevea_default14">
+      <param name="Local" value="gprolog051.html#hevea_default831">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="argv (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default769">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="asserta/1">
+      <param name="Local" value="gprolog031.html#hevea_default289">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="assertz/1">
+      <param name="Local" value="gprolog031.html#hevea_default290">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="at_end_of_stream/0">
+      <param name="Local" value="gprolog034.html#hevea_default379">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="at_end_of_stream/1">
+      <param name="Local" value="gprolog034.html#hevea_default378">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="atom/1">
+      <param name="Local" value="gprolog025.html#hevea_default226">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="atom_chars/2">
+      <param name="Local" value="gprolog043.html#hevea_default674">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="atom_codes/2">
+      <param name="Local" value="gprolog043.html#hevea_default675">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="atom_concat/3">
+      <param name="Local" value="gprolog043.html#hevea_default670">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="atom_length/2">
+      <param name="Local" value="gprolog043.html#hevea_default669">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="atom_property/2">
+      <param name="Local" value="gprolog043.html#hevea_default683">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="atomic/1">
+      <param name="Local" value="gprolog025.html#hevea_default230">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="back_quotes (flag)">
+      <param name="Local" value="gprolog007.html#hevea_default18">
+      <param name="Local" value="gprolog038.html#hevea_default469">
+      <param name="Local" value="gprolog046.html#hevea_default778">
+       <param name="Local" value="gprolog046.html#hevea_default793">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="back_quotes (token)">
+      <param name="Local" value="gprolog038.html#hevea_default496">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="backtracks (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1011">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="bagof/3">
+      <param name="Local" value="gprolog033.html#hevea_default315">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="between/3">
+      <param name="Local" value="gprolog042.html#hevea_default667">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="binary (option)">
+      <param name="Local" value="gprolog034.html#hevea_default345">
+       <param name="Local" value="gprolog034.html#hevea_default406">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="bind_variables/2">
+      <param name="Local" value="gprolog029.html#hevea_default265">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="bip_name (option)">
+      <param name="Local" value="gprolog068.html#hevea_default1022">
+       <param name="Local" value="gprolog070.html#hevea_default1031">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="bisect (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1010">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="block (option)">
+      <param name="Local" value="gprolog034.html#hevea_default356">
+       <param name="Local" value="gprolog034.html#hevea_default416">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="block_device (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default862">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="bof (whence)">
+      <param name="Local" value="gprolog034.html#hevea_default387">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="boolean (option)">
+      <param name="Local" value="gprolog068.html#hevea_default1019">
+       <param name="Local" value="gprolog068.html#hevea_default1025">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="bounded (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default749">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="bounds (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1008">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="break/0">
+      <param name="Local" value="gprolog007.html#hevea_default33">
+      <param name="Local" value="gprolog015.html#hevea_default173">
+      <param name="Local" value="gprolog042.html#hevea_default651">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="buffering (option)">
+      <param name="Local" value="gprolog034.html#hevea_default353">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="buffering (property)">
+      <param name="Local" value="gprolog034.html#hevea_default375">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="built_in (property)">
+      <param name="Local" value="gprolog022.html#hevea_default192">
+      <param name="Local" value="gprolog032.html#hevea_default307">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="built_in/0 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default188">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="built_in/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default189">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="built_in_fd (property)">
+      <param name="Local" value="gprolog022.html#hevea_default193">
+      <param name="Local" value="gprolog032.html#hevea_default308">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="built_in_fd/0 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default190">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="built_in_fd/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default191">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="c_cc (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default765">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="c_cc_version_data (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default766">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="c_cflags (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default767">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="c_ldflags (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default768">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="call/1">
+      <param name="Local" value="gprolog023.html#hevea_default220">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="call/2-11">
+      <param name="Local" value="gprolog042.html#hevea_default661">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="call_det/2">
+      <param name="Local" value="gprolog042.html#hevea_default663">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="call_with_args/1-11">
+      <param name="Local" value="gprolog042.html#hevea_default662">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="callable/1">
+      <param name="Local" value="gprolog025.html#hevea_default232">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="catch/3">
+      <param name="Local" value="gprolog012.html#hevea_default147">
+      <param name="Local" value="gprolog020.html#hevea_default179">
+      <param name="Local" value="gprolog023.html#hevea_default222">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="change_directory/1">
+      <param name="Local" value="gprolog051.html#hevea_default836">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="char_code/2">
+      <param name="Local" value="gprolog043.html#hevea_default672">
+       <param name="Local" value="gprolog068.html#hevea_default1029">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="char_conversion (flag)">
+      <param name="Local" value="gprolog038.html#hevea_default466">
+      <param name="Local" value="gprolog038.html#hevea_default556">
+      <param name="Local" value="gprolog046.html#hevea_default770">
+       <param name="Local" value="gprolog046.html#hevea_default791">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="char_conversion/2 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default203">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="char_conversion/2">
+      <param name="Local" value="gprolog022.html#hevea_default204">
+      <param name="Local" value="gprolog038.html#hevea_default550">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="character_count/2">
+      <param name="Local" value="gprolog034.html#hevea_default390">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="character_device (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default861">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="choice_size (option)">
+      <param name="Local" value="gprolog068.html#hevea_default1023">
+       <param name="Local" value="gprolog068.html#hevea_default1028">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="clause/2">
+      <param name="Local" value="gprolog031.html#hevea_default294">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="close/1">
+      <param name="Local" value="gprolog034.html#hevea_default358">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="close/2">
+      <param name="Local" value="gprolog034.html#hevea_default357">
+       <param name="Local" value="gprolog051.html#hevea_default884">
+      <param name="Local" value="gprolog052.html#hevea_default901">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="close_input_atom_stream/1">
+      <param name="Local" value="gprolog035.html#hevea_default421">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="close_input_chars_stream/1">
+      <param name="Local" value="gprolog035.html#hevea_default422">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="close_input_codes_stream/1">
+      <param name="Local" value="gprolog035.html#hevea_default423">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="close_output_atom_stream/2">
+      <param name="Local" value="gprolog035.html#hevea_default427">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="close_output_chars_stream/2">
+      <param name="Local" value="gprolog035.html#hevea_default428">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="close_output_codes_stream/2">
+      <param name="Local" value="gprolog035.html#hevea_default429">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="compare/3">
+      <param name="Local" value="gprolog027.html#hevea_default247">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="compiled_at (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default764">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="completion">
+      <param name="Local" value="gprolog007.html#hevea_default38">
+       <param name="Local" value="gprolog053.html#hevea_default918">
+      <param name="Local" value="gprolog053.html#hevea_default921">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="compound/1">
+      <param name="Local" value="gprolog025.html#hevea_default231">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="consult/1">
+      <param name="Local" value="gprolog007.html#hevea_default24">
+      <param name="Local" value="gprolog007.html#hevea_default25">
+      <param name="Local" value="gprolog009.html#hevea_default43">
+      <param name="Local" value="gprolog009.html#hevea_default49">
+      <param name="Local" value="gprolog047.html#hevea_default798">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="control constructs">
+      <param name="Local" value="gprolog023.html#hevea_default211">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="control_construct (property)">
+      <param name="Local" value="gprolog032.html#hevea_default309">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="copy_term/2">
+      <param name="Local" value="gprolog028.html#hevea_default251">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="cpu_time/1">
+      <param name="Local" value="gprolog048.html#hevea_default814">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="create_pipe/2">
+      <param name="Local" value="gprolog051.html#hevea_default888">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current (whence)">
+      <param name="Local" value="gprolog034.html#hevea_default388">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_alias/2">
+      <param name="Local" value="gprolog034.html#hevea_default397">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_atom/1">
+      <param name="Local" value="gprolog043.html#hevea_default682">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_bip_name/2">
+      <param name="Local" value="gprolog020.html#hevea_default182">
+      <param name="Local" value="gprolog046.html#hevea_default786">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_char_conversion/2">
+      <param name="Local" value="gprolog038.html#hevea_default558">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_input/1">
+      <param name="Local" value="gprolog034.html#hevea_default333">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_mirror/2">
+      <param name="Local" value="gprolog034.html#hevea_default402">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_op/3">
+      <param name="Local" value="gprolog038.html#hevea_default549">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_output/1">
+      <param name="Local" value="gprolog034.html#hevea_default334">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_predicate/1">
+      <param name="Local" value="gprolog031.html#hevea_default293">
+      <param name="Local" value="gprolog032.html#hevea_default296">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_prolog_flag/2">
+      <param name="Local" value="gprolog046.html#hevea_default783">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="current_stream/1">
+      <param name="Local" value="gprolog034.html#hevea_default364">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="Definite clause grammars, see DCG">
+  see DCG     </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="date_time/1">
+      <param name="Local" value="gprolog051.html#hevea_default872">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="debug (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default775">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="debug/0 (debug)">
+      <param name="Local" value="gprolog007.html#hevea_default28">
+      <param name="Local" value="gprolog007.html#hevea_default35">
+      <param name="Local" value="gprolog013.html#hevea_default149">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="debugging/0 (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default150">
+       <param name="Local" value="gprolog015.html#hevea_default167">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="decompose_file_name/4">
+      <param name="Local" value="gprolog050.html#hevea_default826">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="delete/3">
+      <param name="Local" value="gprolog044.html#hevea_default697">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="delete_directory/1">
+      <param name="Local" value="gprolog051.html#hevea_default835">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="delete_file/1">
+      <param name="Local" value="gprolog051.html#hevea_default843">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="demangling">
+      <param name="Local" value="gprolog009.html#hevea_default118">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="dialect (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default746">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="directory (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default858">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="directory_files/2">
+      <param name="Local" value="gprolog051.html#hevea_default839">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="discontiguous/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default186">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="display/1">
+      <param name="Local" value="gprolog038.html#hevea_default522">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="display/2">
+      <param name="Local" value="gprolog038.html#hevea_default521">
+       <param name="Local" value="gprolog039.html#hevea_default588">
+      <param name="Local" value="gprolog039.html#hevea_default602">
+      <param name="Local" value="gprolog039.html#hevea_default616">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="display_to_atom/2">
+      <param name="Local" value="gprolog039.html#hevea_default581">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="display_to_chars/2">
+      <param name="Local" value="gprolog039.html#hevea_default595">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="display_to_codes/2">
+      <param name="Local" value="gprolog039.html#hevea_default609">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="double_quotes (flag)">
+      <param name="Local" value="gprolog038.html#hevea_default468">
+      <param name="Local" value="gprolog046.html#hevea_default776">
+       <param name="Local" value="gprolog046.html#hevea_default792">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="dynamic (property)">
+      <param name="Local" value="gprolog032.html#hevea_default301">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="dynamic/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default183">
+       <param name="Local" value="gprolog031.html#hevea_default287">
+      </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="elif/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default199">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="else/0 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default197">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="end_of_stream (property)">
+      <param name="Local" value="gprolog034.html#hevea_default376">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="end_of_term (option)">
+      <param name="Local" value="gprolog038.html#hevea_default483">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="endif/0 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default198">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="ensure_linked/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default187">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="ensure_loaded/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default200">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="environ/2">
+      <param name="Local" value="gprolog051.html#hevea_default833">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="eof (whence)">
+      <param name="Local" value="gprolog034.html#hevea_default389">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="eof_action (option)">
+      <param name="Local" value="gprolog034.html#hevea_default347">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="eof_action (property)">
+      <param name="Local" value="gprolog034.html#hevea_default374">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="eof_code (option)">
+      <param name="Local" value="gprolog034.html#hevea_default349">
+       <param name="Local" value="gprolog034.html#hevea_default410">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="error (option)">
+      <param name="Local" value="gprolog034.html#hevea_default348">
+       <param name="Local" value="gprolog034.html#hevea_default409">
+      <param name="Local" value="gprolog038.html#hevea_default478">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="escape sequence">
+      <param name="Local" value="gprolog007.html#hevea_default17">
+      <param name="Local" value="gprolog043.html#hevea_default692">
+      <param name="Local" value="gprolog046.html#hevea_default777">
+       <param name="Local" value="gprolog046.html#hevea_default782">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="exclude (option)">
+      <param name="Local" value="gprolog029.html#hevea_default272">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="exec/4">
+      <param name="Local" value="gprolog051.html#hevea_default886">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="exec/5">
+      <param name="Local" value="gprolog051.html#hevea_default885">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="execute (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default850">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="expand_term/2">
+      <param name="Local" value="gprolog041.html#hevea_default644">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="extended (token)">
+      <param name="Local" value="gprolog038.html#hevea_default497">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="extra-constrained, see extra_cstr">
+  see extra_cstr     </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="extra_cstr (FD)">
+      <param name="Local" value="gprolog055.html#hevea_default930">
+       <param name="Local" value="gprolog059.html#hevea_default951">
+      </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="fail (option)">
+      <param name="Local" value="gprolog038.html#hevea_default480">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fail/0">
+      <param name="Local" value="gprolog023.html#hevea_default213">
+       <param name="Local" value="gprolog042.html#hevea_default665">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="false/0">
+      <param name="Local" value="gprolog042.html#hevea_default658">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fct_name (option)">
+      <param name="Local" value="gprolog068.html#hevea_default1017">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_all_different/1 (FD)">
+      <param name="Local" value="gprolog062.html#hevea_default983">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_at_least_one/1 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default980">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_at_most_one/1 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default981">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_atleast/3 (FD)">
+      <param name="Local" value="gprolog062.html#hevea_default987">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_atmost/3 (FD)">
+      <param name="Local" value="gprolog062.html#hevea_default986">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_cardinality/2 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default978">
+       <param name="Local" value="gprolog062.html#hevea_default989">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_cardinality/3 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default979">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_dom/2 (FD)">
+      <param name="Local" value="gprolog059.html#hevea_default947">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_domain/2 (FD)">
+      <param name="Local" value="gprolog057.html#hevea_default939">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_domain/3 (FD)">
+      <param name="Local" value="gprolog057.html#hevea_default937">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_domain_bool/1 (FD)">
+      <param name="Local" value="gprolog057.html#hevea_default938">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_element/3 (FD)">
+      <param name="Local" value="gprolog062.html#hevea_default984">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_element_var/3 (FD)">
+      <param name="Local" value="gprolog062.html#hevea_default985">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_exactly/3 (FD)">
+      <param name="Local" value="gprolog062.html#hevea_default988">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_has_extra_cstr/1 (FD)">
+      <param name="Local" value="gprolog059.html#hevea_default948">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_has_vector/1 (FD)">
+      <param name="Local" value="gprolog059.html#hevea_default949">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_labeling/1 (FD)">
+      <param name="Local" value="gprolog063.html#hevea_default993">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_labeling/2 (FD)">
+      <param name="Local" value="gprolog063.html#hevea_default992">
+       <param name="Local" value="gprolog064.html#hevea_default1014">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_labelingff/1 (FD)">
+      <param name="Local" value="gprolog063.html#hevea_default994">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_max/2 (FD)">
+      <param name="Local" value="gprolog059.html#hevea_default945">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_max_integer (FD)">
+      <param name="Local" value="gprolog055.html#hevea_default923">
+       <param name="Local" value="gprolog056.html#hevea_default932">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_max_integer/1 (FD)">
+      <param name="Local" value="gprolog056.html#hevea_default931">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_maximize/2 (FD)">
+      <param name="Local" value="gprolog064.html#hevea_default1013">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_min/2 (FD)">
+      <param name="Local" value="gprolog059.html#hevea_default944">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_minimize/2 (FD)">
+      <param name="Local" value="gprolog064.html#hevea_default1012">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_not_prime/1 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default965">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_only_one/1 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default982">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_prime/1 (FD)">
+      <param name="Local" value="gprolog060.html#hevea_default964">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_reified_in/4 (FD)">
+      <param name="Local" value="gprolog061.html#hevea_default967">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_relation/2 (FD)">
+      <param name="Local" value="gprolog062.html#hevea_default990">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_relationc/2 (FD)">
+      <param name="Local" value="gprolog062.html#hevea_default991">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_set_vector_max/1 (FD)">
+      <param name="Local" value="gprolog055.html#hevea_default927">
+      <param name="Local" value="gprolog056.html#hevea_default935">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_size/2 (FD)">
+      <param name="Local" value="gprolog059.html#hevea_default946">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_use_vector/1 (FD)">
+      <param name="Local" value="gprolog059.html#hevea_default950">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_var/1 (FD)">
+      <param name="Local" value="gprolog058.html#hevea_default940">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fd_vector_max/1 (FD)">
+      <param name="Local" value="gprolog055.html#hevea_default928">
+      <param name="Local" value="gprolog056.html#hevea_default933">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fifo (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default859">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="file_exists/1">
+      <param name="Local" value="gprolog051.html#hevea_default847">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="file_name (property)">
+      <param name="Local" value="gprolog034.html#hevea_default366">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="file_permission/2">
+      <param name="Local" value="gprolog051.html#hevea_default846">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="file_property/2">
+      <param name="Local" value="gprolog051.html#hevea_default853">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="find_linedit_completion/2">
+      <param name="Local" value="gprolog053.html#hevea_default920">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="findall/3">
+      <param name="Local" value="gprolog033.html#hevea_default314">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="first_fail (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default997">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="flag, see Prolog flag">
+  see Prolog flag     </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="float/1">
+      <param name="Local" value="gprolog025.html#hevea_default228">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="flush_output/0">
+      <param name="Local" value="gprolog034.html#hevea_default363">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="flush_output/1">
+      <param name="Local" value="gprolog034.html#hevea_default329">
+      <param name="Local" value="gprolog034.html#hevea_default362">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="for/3">
+      <param name="Local" value="gprolog042.html#hevea_default668">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="forall/2">
+      <param name="Local" value="gprolog042.html#hevea_default664">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="force (option)">
+      <param name="Local" value="gprolog034.html#hevea_default361">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="foreign/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default210">
+       <param name="Local" value="gprolog068.html#hevea_default1015">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="foreign/2 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default209">
+       <param name="Local" value="gprolog068.html#hevea_default1016">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="fork_prolog/1">
+      <param name="Local" value="gprolog051.html#hevea_default887">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="format/2">
+      <param name="Local" value="gprolog038.html#hevea_default535">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="format/3">
+      <param name="Local" value="gprolog038.html#hevea_default534">
+       <param name="Local" value="gprolog039.html#hevea_default590">
+      <param name="Local" value="gprolog039.html#hevea_default604">
+      <param name="Local" value="gprolog039.html#hevea_default618">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="format_to_atom/3">
+      <param name="Local" value="gprolog039.html#hevea_default583">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="format_to_chars/3">
+      <param name="Local" value="gprolog039.html#hevea_default597">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="format_to_codes/3">
+      <param name="Local" value="gprolog039.html#hevea_default611">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="from (option)">
+      <param name="Local" value="gprolog029.html#hevea_default270">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="full (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default155">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="functor/3">
+      <param name="Local" value="gprolog028.html#hevea_default248">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="GUI console">
+      <param name="Local" value="gprolog007.html#hevea_default39">
+      <param name="Local" value="gprolog007.html#hevea_default40">
+      <param name="Local" value="gprolog009.html#hevea_default102">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_array (global var.)">
+      <param name="Local" value="gprolog045.html#hevea_default719">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_array_auto (global var.)">
+      <param name="Local" value="gprolog045.html#hevea_default721">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_array_extend (global var.)">
+      <param name="Local" value="gprolog045.html#hevea_default720">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_array_size/2">
+      <param name="Local" value="gprolog045.html#hevea_default726">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_assign/2">
+      <param name="Local" value="gprolog045.html#hevea_default722">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_assignb/2">
+      <param name="Local" value="gprolog045.html#hevea_default723">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_dec/1">
+      <param name="Local" value="gprolog045.html#hevea_default734">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_dec/2">
+      <param name="Local" value="gprolog045.html#hevea_default732">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_dec/3">
+      <param name="Local" value="gprolog045.html#hevea_default731">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_deco/2">
+      <param name="Local" value="gprolog045.html#hevea_default733">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_inc/1">
+      <param name="Local" value="gprolog045.html#hevea_default730">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_inc/2">
+      <param name="Local" value="gprolog045.html#hevea_default728">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_inc/3">
+      <param name="Local" value="gprolog045.html#hevea_default727">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_inco/2">
+      <param name="Local" value="gprolog045.html#hevea_default729">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_link/2">
+      <param name="Local" value="gprolog045.html#hevea_default724">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_read/2">
+      <param name="Local" value="gprolog045.html#hevea_default725">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_reset_bit/2">
+      <param name="Local" value="gprolog045.html#hevea_default736">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_set_bit/2">
+      <param name="Local" value="gprolog045.html#hevea_default735">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_test_reset_bit/2">
+      <param name="Local" value="gprolog045.html#hevea_default738">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="g_test_set_bit/2">
+      <param name="Local" value="gprolog045.html#hevea_default737">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="generic_var/1 (FD)">
+      <param name="Local" value="gprolog058.html#hevea_default942">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get/1">
+      <param name="Local" value="gprolog040.html#hevea_default638">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get0/1">
+      <param name="Local" value="gprolog040.html#hevea_default637">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_byte/1">
+      <param name="Local" value="gprolog037.html#hevea_default457">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_byte/2">
+      <param name="Local" value="gprolog034.html#hevea_default326">
+      <param name="Local" value="gprolog037.html#hevea_default456">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_char/1">
+      <param name="Local" value="gprolog036.html#hevea_default431">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_char/2">
+      <param name="Local" value="gprolog036.html#hevea_default430">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_code/1">
+      <param name="Local" value="gprolog036.html#hevea_default432">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_code/2">
+      <param name="Local" value="gprolog036.html#hevea_default433">
+       <param name="Local" value="gprolog036.html#hevea_default439">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_key/1">
+      <param name="Local" value="gprolog036.html#hevea_default435">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_key/2">
+      <param name="Local" value="gprolog036.html#hevea_default434">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_key_no_echo/1">
+      <param name="Local" value="gprolog036.html#hevea_default437">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_key_no_echo/2">
+      <param name="Local" value="gprolog036.html#hevea_default436">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_linedit_prompt/1">
+      <param name="Local" value="gprolog053.html#hevea_default911">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_print_stream/1">
+      <param name="Local" value="gprolog038.html#hevea_default545">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="get_seed/1">
+      <param name="Local" value="gprolog049.html#hevea_default818">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="gplc">
+      <param name="Local" value="gprolog009.html#hevea_default50">
+       <param name="Local" value="gprolog009.html#hevea_default119">
+      <param name="Local" value="gprolog009.html#hevea_default124">
+      <param name="Local" value="gprolog009.html#hevea_default128">
+      <param name="Local" value="gprolog009.html#hevea_default129">
+      <param name="Local" value="gprolog046.html#hevea_default790">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="ground/1">
+      <param name="Local" value="gprolog025.html#hevea_default233">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="half (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default156">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="halt/0">
+      <param name="Local" value="gprolog007.html#hevea_default13">
+      <param name="Local" value="gprolog007.html#hevea_default32">
+      <param name="Local" value="gprolog042.html#hevea_default653">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="halt/1">
+      <param name="Local" value="gprolog042.html#hevea_default652">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="hash (property)">
+      <param name="Local" value="gprolog043.html#hevea_default685">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="hash code">
+      <param name="Local" value="gprolog028.html#hevea_default258">
+      <param name="Local" value="gprolog043.html#hevea_default686">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="hexgplc">
+      <param name="Local" value="gprolog009.html#hevea_default130">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="home (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default756">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="host (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default760">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="host_cpu (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default759">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="host_name/1">
+      <param name="Local" value="gprolog051.html#hevea_default873">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="host_os (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default757">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="host_vendor (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default758">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="hostname_address/2">
+      <param name="Local" value="gprolog052.html#hevea_default909">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="if/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default196">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="ignore_ops (option)">
+      <param name="Local" value="gprolog038.html#hevea_default526">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="include/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default194">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="infix_op (property)">
+      <param name="Local" value="gprolog043.html#hevea_default688">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="initialization/1 (directive)">
+      <param name="Local" value="gprolog009.html#hevea_default120">
+      <param name="Local" value="gprolog009.html#hevea_default121">
+      <param name="Local" value="gprolog022.html#hevea_default208">
+       <param name="Local" value="gprolog072.html#hevea_default1040">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="input (property)">
+      <param name="Local" value="gprolog034.html#hevea_default368">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="integer/1">
+      <param name="Local" value="gprolog025.html#hevea_default227">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="integer_rounding_function (flag)">
+      <param name="Local" value="gprolog030.html#hevea_default276">
+      <param name="Local" value="gprolog046.html#hevea_default752">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="interpreter, see top-level">
+  see top-level     </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="is_absolute_file_name/1">
+      <param name="Local" value="gprolog050.html#hevea_default823">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="is_list/1">
+      <param name="Local" value="gprolog025.html#hevea_default234">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="is_relative_file_name/1">
+      <param name="Local" value="gprolog050.html#hevea_default824">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="jump (option)">
+      <param name="Local" value="gprolog068.html#hevea_default1021">
+       <param name="Local" value="gprolog068.html#hevea_default1027">
+      </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="keysort/1">
+      <param name="Local" value="gprolog044.html#hevea_default717">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="keysort/2">
+      <param name="Local" value="gprolog044.html#hevea_default714">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="largest (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1000">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="last/2">
+      <param name="Local" value="gprolog044.html#hevea_default705">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="last_modification (property)">
+      <param name="Local" value="gprolog051.html#hevea_default866">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="last_read_start_line_column/2">
+      <param name="Local" value="gprolog038.html#hevea_default500">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="leash/1 (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default154">
+       <param name="Local" value="gprolog015.html#hevea_default165">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="length (property)">
+      <param name="Local" value="gprolog043.html#hevea_default684">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="length/2">
+      <param name="Local" value="gprolog044.html#hevea_default706">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="line (option)">
+      <param name="Local" value="gprolog034.html#hevea_default355">
+       <param name="Local" value="gprolog034.html#hevea_default415">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="line_count/2">
+      <param name="Local" value="gprolog034.html#hevea_default391">
+       <param name="Local" value="gprolog034.html#hevea_default394">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="line_position/2">
+      <param name="Local" value="gprolog034.html#hevea_default392">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="linedit">
+      <param name="Local" value="gprolog007.html#hevea_default36">
+       <param name="Local" value="gprolog036.html#hevea_default438">
+      <param name="Local" value="gprolog053.html#hevea_default910">
+      <param name="Local" value="gprolog053.html#hevea_default912">
+      <param name="Local" value="gprolog053.html#hevea_default915">
+      <param name="Local" value="gprolog053.html#hevea_default919">
+      <param name="Local" value="gprolog053.html#hevea_default922">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="list/1">
+      <param name="Local" value="gprolog025.html#hevea_default235">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="list_or_partial_list/1">
+      <param name="Local" value="gprolog025.html#hevea_default237">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="listing/0">
+      <param name="Local" value="gprolog047.html#hevea_default808">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="listing/1">
+      <param name="Local" value="gprolog015.html#hevea_default171">
+      <param name="Local" value="gprolog038.html#hevea_default544">
+      <param name="Local" value="gprolog047.html#hevea_default807">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="load/1">
+      <param name="Local" value="gprolog007.html#hevea_default26">
+      <param name="Local" value="gprolog009.html#hevea_default48">
+      <param name="Local" value="gprolog009.html#hevea_default115">
+      <param name="Local" value="gprolog047.html#hevea_default805">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="loose (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default157">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="lower_upper/2">
+      <param name="Local" value="gprolog043.html#hevea_default673">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="MA">
+      <param name="Local" value="gprolog009.html#hevea_default46">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="make_directory/1">
+      <param name="Local" value="gprolog051.html#hevea_default834">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="maplist/2-8">
+      <param name="Local" value="gprolog044.html#hevea_default711">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="max (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1006">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="max_arity (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default753">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="max_atom (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default754">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="max_depth (option)">
+      <param name="Local" value="gprolog038.html#hevea_default532">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="max_integer (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default750">
+       <param name="Local" value="gprolog055.html#hevea_default924">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="max_list/2">
+      <param name="Local" value="gprolog044.html#hevea_default708">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="max_regret (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1001">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="max_unget (flag)">
+      <param name="Local" value="gprolog036.html#hevea_default448">
+      <param name="Local" value="gprolog037.html#hevea_default462">
+      <param name="Local" value="gprolog046.html#hevea_default755">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="member/2">
+      <param name="Local" value="gprolog044.html#hevea_default694">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="memberchk/2">
+      <param name="Local" value="gprolog044.html#hevea_default695">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="meta_predicate (property)">
+      <param name="Local" value="gprolog032.html#hevea_default313">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="middle (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1007">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="min (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1005">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="min_integer (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default751">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="min_list/2">
+      <param name="Local" value="gprolog044.html#hevea_default709">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="mini-assembly">
+      <param name="Local" value="gprolog004.html#hevea_default2">
+      <param name="Local" value="gprolog009.html#hevea_default45">
+       <param name="Local" value="gprolog009.html#hevea_default126">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="mirror (option)">
+      <param name="Local" value="gprolog034.html#hevea_default352">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="mirror (property)">
+      <param name="Local" value="gprolog034.html#hevea_default371">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="mode (property)">
+      <param name="Local" value="gprolog034.html#hevea_default367">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="monofile (property)">
+      <param name="Local" value="gprolog032.html#hevea_default304">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="most_constrained (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default998">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="msort/1">
+      <param name="Local" value="gprolog044.html#hevea_default716">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="msort/2">
+      <param name="Local" value="gprolog044.html#hevea_default713">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="multifile (property)">
+      <param name="Local" value="gprolog032.html#hevea_default305">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="multifile/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default185">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="multifile_warning (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default773">
+       <param name="Local" value="gprolog046.html#hevea_default796">
+      </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="name demangling">
+      <param name="Local" value="gprolog009.html#hevea_default127">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="name mangling">
+      <param name="Local" value="gprolog009.html#hevea_default117">
+      <param name="Local" value="gprolog009.html#hevea_default125">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="name/2">
+      <param name="Local" value="gprolog043.html#hevea_default679">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="name_query_vars/2">
+      <param name="Local" value="gprolog029.html#hevea_default262">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="name_singleton_vars/1">
+      <param name="Local" value="gprolog029.html#hevea_default261">
+       <param name="Local" value="gprolog038.html#hevea_default542">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="namevars (option)">
+      <param name="Local" value="gprolog007.html#hevea_default23">
+      <param name="Local" value="gprolog029.html#hevea_default269">
+       <param name="Local" value="gprolog038.html#hevea_default528">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="native_code (property)">
+      <param name="Local" value="gprolog032.html#hevea_default310">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="needs_quotes (property)">
+      <param name="Local" value="gprolog043.html#hevea_default690">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="needs_scan (property)">
+      <param name="Local" value="gprolog043.html#hevea_default691">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="new_atom/1">
+      <param name="Local" value="gprolog043.html#hevea_default681">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="new_atom/2">
+      <param name="Local" value="gprolog043.html#hevea_default680">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="next (option)">
+      <param name="Local" value="gprolog029.html#hevea_default271">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="nl/0">
+      <param name="Local" value="gprolog036.html#hevea_default455">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="nl/1">
+      <param name="Local" value="gprolog036.html#hevea_default454">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="nodebug/0 (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default152">
+       <param name="Local" value="gprolog015.html#hevea_default166">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="non_fd_var/1 (FD)">
+      <param name="Local" value="gprolog058.html#hevea_default941">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="non_generic_var/1 (FD)">
+      <param name="Local" value="gprolog058.html#hevea_default943">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="none (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default158">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="none (option)">
+      <param name="Local" value="gprolog034.html#hevea_default354">
+       <param name="Local" value="gprolog034.html#hevea_default414">
+      <param name="Local" value="gprolog068.html#hevea_default1020">
+       <param name="Local" value="gprolog068.html#hevea_default1026">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="nonvar/1">
+      <param name="Local" value="gprolog025.html#hevea_default225">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="nospy/1 (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default161">
+       <param name="Local" value="gprolog015.html#hevea_default169">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="nospyall/0 (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default162">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="notrace/0 (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default151">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="nth/3">
+      <param name="Local" value="gprolog044.html#hevea_default707">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="number/1">
+      <param name="Local" value="gprolog025.html#hevea_default229">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="number_atom/2">
+      <param name="Local" value="gprolog043.html#hevea_default676">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="number_chars/2">
+      <param name="Local" value="gprolog043.html#hevea_default677">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="number_codes/2">
+      <param name="Local" value="gprolog043.html#hevea_default678">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="numbervars (option)">
+      <param name="Local" value="gprolog007.html#hevea_default22">
+      <param name="Local" value="gprolog029.html#hevea_default268">
+       <param name="Local" value="gprolog038.html#hevea_default527">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="numbervars/1">
+      <param name="Local" value="gprolog029.html#hevea_default267">
+       <param name="Local" value="gprolog038.html#hevea_default543">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="numbervars/3">
+      <param name="Local" value="gprolog029.html#hevea_default266">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="once/1">
+      <param name="Local" value="gprolog042.html#hevea_default659">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="op/3 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default201">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="op/3">
+      <param name="Local" value="gprolog022.html#hevea_default202">
+      <param name="Local" value="gprolog038.html#hevea_default548">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="open/3">
+      <param name="Local" value="gprolog034.html#hevea_default338">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="open/4">
+      <param name="Local" value="gprolog034.html#hevea_default317">
+      <param name="Local" value="gprolog034.html#hevea_default337">
+       <param name="Local" value="gprolog034.html#hevea_default407">
+      <param name="Local" value="gprolog034.html#hevea_default412">
+      <param name="Local" value="gprolog034.html#hevea_default417">
+      <param name="Local" value="gprolog051.html#hevea_default894">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="open_input_atom_stream/2">
+      <param name="Local" value="gprolog035.html#hevea_default418">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="open_input_chars_stream/2">
+      <param name="Local" value="gprolog035.html#hevea_default419">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="open_input_codes_stream/2">
+      <param name="Local" value="gprolog035.html#hevea_default420">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="open_output_atom_stream/1">
+      <param name="Local" value="gprolog035.html#hevea_default424">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="open_output_chars_stream/1">
+      <param name="Local" value="gprolog035.html#hevea_default425">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="open_output_codes_stream/1">
+      <param name="Local" value="gprolog035.html#hevea_default426">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="os_error (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default781">
+       <param name="Local" value="gprolog070.html#hevea_default1036">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="os_version/1">
+      <param name="Local" value="gprolog051.html#hevea_default874">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="output (property)">
+      <param name="Local" value="gprolog034.html#hevea_default369">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="P">
+  rolog flag     <param name="Local" value="gprolog007.html#hevea_default19">
+      <param name="Local" value="gprolog070.html#hevea_default1037">
+  <li><object type="text/sitemap">
+      <param name="Name" value="Prolog flag">
+      <param name="Local" value="gprolog019.html#hevea_default176">
+      <param name="Local" value="gprolog019.html#hevea_default178">
+      <param name="Local" value="gprolog022.html#hevea_default206">
+      <param name="Local" value="gprolog030.html#hevea_default277">
+      <param name="Local" value="gprolog032.html#hevea_default298">
+      <param name="Local" value="gprolog036.html#hevea_default449">
+      <param name="Local" value="gprolog037.html#hevea_default463">
+      <param name="Local" value="gprolog038.html#hevea_default467">
+      <param name="Local" value="gprolog038.html#hevea_default482">
+      <param name="Local" value="gprolog038.html#hevea_default498">
+      <param name="Local" value="gprolog038.html#hevea_default557">
+      <param name="Local" value="gprolog046.html#hevea_default740">
+       <param name="Local" value="gprolog046.html#hevea_default784">
+      <param name="Local" value="gprolog046.html#hevea_default797">
+      <param name="Local" value="gprolog055.html#hevea_default925">
+      <param name="Local" value="gprolog070.html#hevea_default1034">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="PrologScript">
+      <param name="Local" value="gprolog007.html#hevea_default30">
+       <param name="Local" value="gprolog047.html#hevea_default804">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="partial_list/1">
+      <param name="Local" value="gprolog025.html#hevea_default236">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="peek_byte/1">
+      <param name="Local" value="gprolog037.html#hevea_default459">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="peek_byte/2">
+      <param name="Local" value="gprolog037.html#hevea_default458">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="peek_char/1">
+      <param name="Local" value="gprolog036.html#hevea_default441">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="peek_char/2">
+      <param name="Local" value="gprolog036.html#hevea_default440">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="peek_code/1">
+      <param name="Local" value="gprolog036.html#hevea_default442">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="peek_code/2">
+      <param name="Local" value="gprolog036.html#hevea_default443">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="permission (property)">
+      <param name="Local" value="gprolog051.html#hevea_default865">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="permutation/2">
+      <param name="Local" value="gprolog044.html#hevea_default701">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="phrase/2">
+      <param name="Local" value="gprolog041.html#hevea_default647">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="phrase/3">
+      <param name="Local" value="gprolog041.html#hevea_default646">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="popen/3">
+      <param name="Local" value="gprolog034.html#hevea_default318">
+      <param name="Local" value="gprolog051.html#hevea_default883">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="portray/1">
+      <param name="Local" value="gprolog038.html#hevea_default547">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="portray_clause/1">
+      <param name="Local" value="gprolog038.html#hevea_default541">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="portray_clause/2">
+      <param name="Local" value="gprolog038.html#hevea_default540">
+       <param name="Local" value="gprolog047.html#hevea_default809">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="portrayed (option)">
+      <param name="Local" value="gprolog038.html#hevea_default531">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="position (property)">
+      <param name="Local" value="gprolog034.html#hevea_default377">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="postfix_op (property)">
+      <param name="Local" value="gprolog043.html#hevea_default689">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="predicate_property/2">
+      <param name="Local" value="gprolog032.html#hevea_default299">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prefix/2">
+      <param name="Local" value="gprolog044.html#hevea_default702">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prefix_op (property)">
+      <param name="Local" value="gprolog043.html#hevea_default687">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="print/1">
+      <param name="Local" value="gprolog038.html#hevea_default524">
+       <param name="Local" value="gprolog038.html#hevea_default537">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="print/2">
+      <param name="Local" value="gprolog038.html#hevea_default523">
+       <param name="Local" value="gprolog038.html#hevea_default546">
+      <param name="Local" value="gprolog039.html#hevea_default589">
+      <param name="Local" value="gprolog039.html#hevea_default603">
+      <param name="Local" value="gprolog039.html#hevea_default617">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="print_to_atom/2">
+      <param name="Local" value="gprolog039.html#hevea_default582">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="print_to_chars/2">
+      <param name="Local" value="gprolog039.html#hevea_default596">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="print_to_codes/2">
+      <param name="Local" value="gprolog039.html#hevea_default610">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="priority (option)">
+      <param name="Local" value="gprolog038.html#hevea_default533">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="private (property)">
+      <param name="Local" value="gprolog032.html#hevea_default302">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prolog_copyright (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default745">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prolog_date (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default744">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prolog_file (property)">
+      <param name="Local" value="gprolog032.html#hevea_default311">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prolog_file_name/2">
+      <param name="Local" value="gprolog047.html#hevea_default801">
+      <param name="Local" value="gprolog050.html#hevea_default827">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prolog_line (property)">
+      <param name="Local" value="gprolog032.html#hevea_default312">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prolog_name (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default742">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prolog_pid/1">
+      <param name="Local" value="gprolog051.html#hevea_default890">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="prolog_version (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default743">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="public (property)">
+      <param name="Local" value="gprolog032.html#hevea_default303">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="public/1 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default184">
+       <param name="Local" value="gprolog031.html#hevea_default288">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="punct (token)">
+      <param name="Local" value="gprolog038.html#hevea_default495">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="put/1">
+      <param name="Local" value="gprolog040.html#hevea_default640">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="put_byte/1">
+      <param name="Local" value="gprolog037.html#hevea_default465">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="put_byte/2">
+      <param name="Local" value="gprolog037.html#hevea_default464">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="put_char/1">
+      <param name="Local" value="gprolog036.html#hevea_default451">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="put_char/2">
+      <param name="Local" value="gprolog036.html#hevea_default450">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="put_code/1">
+      <param name="Local" value="gprolog036.html#hevea_default452">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="put_code/2">
+      <param name="Local" value="gprolog036.html#hevea_default453">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="quoted (option)">
+      <param name="Local" value="gprolog007.html#hevea_default21">
+      <param name="Local" value="gprolog038.html#hevea_default525">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="random (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1002">
+       <param name="Local" value="gprolog063.html#hevea_default1009">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="random/1">
+      <param name="Local" value="gprolog049.html#hevea_default819">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="random/3">
+      <param name="Local" value="gprolog049.html#hevea_default820">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="randomize/0">
+      <param name="Local" value="gprolog049.html#hevea_default817">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read (mode)">
+      <param name="Local" value="gprolog034.html#hevea_default340">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default848">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read/1">
+      <param name="Local" value="gprolog038.html#hevea_default473">
+       <param name="Local" value="gprolog038.html#hevea_default504">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read/2">
+      <param name="Local" value="gprolog038.html#hevea_default472">
+       <param name="Local" value="gprolog038.html#hevea_default503">
+      <param name="Local" value="gprolog039.html#hevea_default563">
+      <param name="Local" value="gprolog039.html#hevea_default569">
+      <param name="Local" value="gprolog039.html#hevea_default575">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_atom/1">
+      <param name="Local" value="gprolog038.html#hevea_default486">
+       <param name="Local" value="gprolog038.html#hevea_default506">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_atom/2">
+      <param name="Local" value="gprolog038.html#hevea_default485">
+       <param name="Local" value="gprolog038.html#hevea_default505">
+      <param name="Local" value="gprolog038.html#hevea_default552">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_from_atom/2">
+      <param name="Local" value="gprolog039.html#hevea_default560">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_from_chars/2">
+      <param name="Local" value="gprolog039.html#hevea_default566">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_from_codes/2">
+      <param name="Local" value="gprolog039.html#hevea_default572">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_integer/1">
+      <param name="Local" value="gprolog038.html#hevea_default488">
+       <param name="Local" value="gprolog038.html#hevea_default508">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_integer/2">
+      <param name="Local" value="gprolog038.html#hevea_default487">
+       <param name="Local" value="gprolog038.html#hevea_default507">
+      <param name="Local" value="gprolog038.html#hevea_default553">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_number/1">
+      <param name="Local" value="gprolog038.html#hevea_default490">
+       <param name="Local" value="gprolog038.html#hevea_default510">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_number/2">
+      <param name="Local" value="gprolog038.html#hevea_default489">
+       <param name="Local" value="gprolog038.html#hevea_default509">
+      <param name="Local" value="gprolog038.html#hevea_default554">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_pl_state_file/1">
+      <param name="Local" value="gprolog046.html#hevea_default788">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_term/2">
+      <param name="Local" value="gprolog038.html#hevea_default471">
+       <param name="Local" value="gprolog038.html#hevea_default502">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_term/3">
+      <param name="Local" value="gprolog038.html#hevea_default470">
+       <param name="Local" value="gprolog038.html#hevea_default501">
+      <param name="Local" value="gprolog038.html#hevea_default551">
+      <param name="Local" value="gprolog039.html#hevea_default562">
+      <param name="Local" value="gprolog039.html#hevea_default568">
+      <param name="Local" value="gprolog039.html#hevea_default574">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_term_from_atom/3">
+      <param name="Local" value="gprolog007.html#hevea_default16">
+      <param name="Local" value="gprolog038.html#hevea_default484">
+      <param name="Local" value="gprolog039.html#hevea_default559">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_term_from_chars/3">
+      <param name="Local" value="gprolog039.html#hevea_default565">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_term_from_codes/3">
+      <param name="Local" value="gprolog039.html#hevea_default571">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_token/1">
+      <param name="Local" value="gprolog038.html#hevea_default492">
+       <param name="Local" value="gprolog038.html#hevea_default512">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_token/2">
+      <param name="Local" value="gprolog038.html#hevea_default491">
+       <param name="Local" value="gprolog038.html#hevea_default511">
+      <param name="Local" value="gprolog038.html#hevea_default555">
+      <param name="Local" value="gprolog039.html#hevea_default564">
+      <param name="Local" value="gprolog039.html#hevea_default570">
+      <param name="Local" value="gprolog039.html#hevea_default576">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_token_from_atom/2">
+      <param name="Local" value="gprolog039.html#hevea_default561">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_token_from_chars/2">
+      <param name="Local" value="gprolog039.html#hevea_default567">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="read_token_from_codes/2">
+      <param name="Local" value="gprolog039.html#hevea_default573">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="real_file_name (property)">
+      <param name="Local" value="gprolog051.html#hevea_default855">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="real_time/1">
+      <param name="Local" value="gprolog048.html#hevea_default815">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="regular (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default857">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="remove_stream_mirror/2">
+      <param name="Local" value="gprolog034.html#hevea_default332">
+      <param name="Local" value="gprolog034.html#hevea_default400">
+      <param name="Local" value="gprolog034.html#hevea_default401">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="rename_file/2">
+      <param name="Local" value="gprolog051.html#hevea_default841">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="reorder (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1003">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="repeat/0">
+      <param name="Local" value="gprolog042.html#hevea_default666">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="reposition (option)">
+      <param name="Local" value="gprolog034.html#hevea_default346">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="reposition (property)">
+      <param name="Local" value="gprolog034.html#hevea_default373">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="reset (option)">
+      <param name="Local" value="gprolog034.html#hevea_default350">
+       <param name="Local" value="gprolog034.html#hevea_default411">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="retract/1">
+      <param name="Local" value="gprolog031.html#hevea_default291">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="retractall/1">
+      <param name="Local" value="gprolog031.html#hevea_default292">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="return (option)">
+      <param name="Local" value="gprolog068.html#hevea_default1018">
+       <param name="Local" value="gprolog068.html#hevea_default1024">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="reverse/2">
+      <param name="Local" value="gprolog044.html#hevea_default696">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="search (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default851">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="see/1">
+      <param name="Local" value="gprolog040.html#hevea_default624">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="seeing/1">
+      <param name="Local" value="gprolog040.html#hevea_default627">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="seek/4">
+      <param name="Local" value="gprolog034.html#hevea_default386">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="seen/0">
+      <param name="Local" value="gprolog040.html#hevea_default633">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="select/3">
+      <param name="Local" value="gprolog044.html#hevea_default698">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="select/5">
+      <param name="Local" value="gprolog034.html#hevea_default330">
+      <param name="Local" value="gprolog051.html#hevea_default893">
+       <param name="Local" value="gprolog052.html#hevea_default904">
+      <param name="Local" value="gprolog052.html#hevea_default908">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="send_signal/2">
+      <param name="Local" value="gprolog051.html#hevea_default891">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_bip_name/2">
+      <param name="Local" value="gprolog020.html#hevea_default181">
+      <param name="Local" value="gprolog046.html#hevea_default785">
+       <param name="Local" value="gprolog070.html#hevea_default1032">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_input/1">
+      <param name="Local" value="gprolog034.html#hevea_default324">
+      <param name="Local" value="gprolog034.html#hevea_default335">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_linedit_prompt/1">
+      <param name="Local" value="gprolog053.html#hevea_default914">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_output/1">
+      <param name="Local" value="gprolog034.html#hevea_default325">
+      <param name="Local" value="gprolog034.html#hevea_default336">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_prolog_flag/2 (directive)">
+      <param name="Local" value="gprolog022.html#hevea_default205">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_prolog_flag/2">
+      <param name="Local" value="gprolog022.html#hevea_default207">
+      <param name="Local" value="gprolog046.html#hevea_default739">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_seed/1">
+      <param name="Local" value="gprolog049.html#hevea_default816">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_stream_buffering/2">
+      <param name="Local" value="gprolog034.html#hevea_default328">
+      <param name="Local" value="gprolog034.html#hevea_default413">
+       <param name="Local" value="gprolog051.html#hevea_default895">
+      <param name="Local" value="gprolog052.html#hevea_default896">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_stream_eof_action/2">
+      <param name="Local" value="gprolog034.html#hevea_default408">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_stream_line_column/3">
+      <param name="Local" value="gprolog034.html#hevea_default395">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_stream_position/2">
+      <param name="Local" value="gprolog034.html#hevea_default327">
+      <param name="Local" value="gprolog034.html#hevea_default383">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="set_stream_type/2">
+      <param name="Local" value="gprolog034.html#hevea_default404">
+       <param name="Local" value="gprolog052.html#hevea_default897">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="setarg/3">
+      <param name="Local" value="gprolog028.html#hevea_default260">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="setarg/4">
+      <param name="Local" value="gprolog028.html#hevea_default259">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="setof/3">
+      <param name="Local" value="gprolog033.html#hevea_default316">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="shebang support">
+      <param name="Local" value="gprolog007.html#hevea_default29">
+       <param name="Local" value="gprolog047.html#hevea_default803">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="shell/0">
+      <param name="Local" value="gprolog051.html#hevea_default878">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="shell/1">
+      <param name="Local" value="gprolog051.html#hevea_default877">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="shell/2">
+      <param name="Local" value="gprolog051.html#hevea_default876">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="singleton_warning (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default771">
+       <param name="Local" value="gprolog046.html#hevea_default794">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="singletons (option)">
+      <param name="Local" value="gprolog029.html#hevea_default264">
+      <param name="Local" value="gprolog029.html#hevea_default274">
+      <param name="Local" value="gprolog038.html#hevea_default476">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="size (property)">
+      <param name="Local" value="gprolog051.html#hevea_default864">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="skip/1">
+      <param name="Local" value="gprolog040.html#hevea_default639">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="sleep/1">
+      <param name="Local" value="gprolog051.html#hevea_default892">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="smallest (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default999">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="socket (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default860">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="socket/2">
+      <param name="Local" value="gprolog052.html#hevea_default898">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="socket_accept/3">
+      <param name="Local" value="gprolog052.html#hevea_default907">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="socket_accept/4">
+      <param name="Local" value="gprolog052.html#hevea_default906">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="socket_bind/2">
+      <param name="Local" value="gprolog052.html#hevea_default902">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="socket_close/1">
+      <param name="Local" value="gprolog052.html#hevea_default899">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="socket_connect/4">
+      <param name="Local" value="gprolog034.html#hevea_default319">
+      <param name="Local" value="gprolog052.html#hevea_default900">
+      <param name="Local" value="gprolog052.html#hevea_default903">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="socket_listen/2">
+      <param name="Local" value="gprolog052.html#hevea_default905">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="soft-cut">
+      <param name="Local" value="gprolog023.html#hevea_default219">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="sort/1">
+      <param name="Local" value="gprolog044.html#hevea_default715">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="sort/2">
+      <param name="Local" value="gprolog044.html#hevea_default712">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="space_args (option)">
+      <param name="Local" value="gprolog038.html#hevea_default530">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="spawn/2">
+      <param name="Local" value="gprolog051.html#hevea_default882">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="spawn/3">
+      <param name="Local" value="gprolog051.html#hevea_default881">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="spy/1 (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default160">
+       <param name="Local" value="gprolog015.html#hevea_default168">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="spypoint_condition/3 (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default163">
+       <param name="Local" value="gprolog015.html#hevea_default170">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="standard (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default996">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="static (property)">
+      <param name="Local" value="gprolog032.html#hevea_default300">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="statistics/0">
+      <param name="Local" value="gprolog048.html#hevea_default810">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="statistics/2">
+      <param name="Local" value="gprolog048.html#hevea_default811">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="stop/0">
+      <param name="Local" value="gprolog042.html#hevea_default649">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="stream_line_column/3">
+      <param name="Local" value="gprolog034.html#hevea_default393">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="stream_position/2">
+      <param name="Local" value="gprolog034.html#hevea_default381">
+       <param name="Local" value="gprolog034.html#hevea_default385">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="stream_property/2">
+      <param name="Local" value="gprolog034.html#hevea_default365">
+       <param name="Local" value="gprolog034.html#hevea_default380">
+      <param name="Local" value="gprolog034.html#hevea_default382">
+      <param name="Local" value="gprolog034.html#hevea_default384">
+      <param name="Local" value="gprolog034.html#hevea_default398">
+      <param name="Local" value="gprolog034.html#hevea_default403">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="strict_iso (flag)">
+      <param name="Local" value="gprolog019.html#hevea_default177">
+      <param name="Local" value="gprolog032.html#hevea_default297">
+      <param name="Local" value="gprolog046.html#hevea_default774">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="string (token)">
+      <param name="Local" value="gprolog038.html#hevea_default494">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="sub_atom/5">
+      <param name="Local" value="gprolog043.html#hevea_default671">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="sublist/2">
+      <param name="Local" value="gprolog044.html#hevea_default704">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="subsumes_term/2">
+      <param name="Local" value="gprolog028.html#hevea_default254">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="subtract/3">
+      <param name="Local" value="gprolog044.html#hevea_default700">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="succ/2">
+      <param name="Local" value="gprolog030.html#hevea_default286">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="suffix/2">
+      <param name="Local" value="gprolog044.html#hevea_default703">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="sum_list/2">
+      <param name="Local" value="gprolog044.html#hevea_default710">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="suspicious_warning (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default772">
+       <param name="Local" value="gprolog046.html#hevea_default795">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="syntax_error (flag)">
+      <param name="Local" value="gprolog038.html#hevea_default481">
+      <param name="Local" value="gprolog046.html#hevea_default780">
+       <param name="Local" value="gprolog070.html#hevea_default1033">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="syntax_error (option)">
+      <param name="Local" value="gprolog038.html#hevea_default477">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="syntax_error_info/4">
+      <param name="Local" value="gprolog038.html#hevea_default499">
+       <param name="Local" value="gprolog070.html#hevea_default1035">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="system/1">
+      <param name="Local" value="gprolog051.html#hevea_default880">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="system/2">
+      <param name="Local" value="gprolog051.html#hevea_default879">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="system_time/1">
+      <param name="Local" value="gprolog048.html#hevea_default813">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="tab/1">
+      <param name="Local" value="gprolog040.html#hevea_default641">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="tell/1">
+      <param name="Local" value="gprolog040.html#hevea_default625">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="telling/1">
+      <param name="Local" value="gprolog040.html#hevea_default628">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="temporary_file/3">
+      <param name="Local" value="gprolog051.html#hevea_default870">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="temporary_name/2">
+      <param name="Local" value="gprolog051.html#hevea_default868">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="term_expansion/2">
+      <param name="Local" value="gprolog041.html#hevea_default645">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="term_hash/2">
+      <param name="Local" value="gprolog028.html#hevea_default257">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="term_hash/4">
+      <param name="Local" value="gprolog028.html#hevea_default256">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="term_ref/2">
+      <param name="Local" value="gprolog029.html#hevea_default275">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="term_variables/2">
+      <param name="Local" value="gprolog028.html#hevea_default252">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="term_variables/3">
+      <param name="Local" value="gprolog028.html#hevea_default253">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="text (option)">
+      <param name="Local" value="gprolog034.html#hevea_default344">
+       <param name="Local" value="gprolog034.html#hevea_default405">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="throw/1">
+      <param name="Local" value="gprolog012.html#hevea_default146">
+      <param name="Local" value="gprolog020.html#hevea_default180">
+      <param name="Local" value="gprolog023.html#hevea_default223">
+       <param name="Local" value="gprolog071.html#hevea_default1038">
+      <param name="Local" value="gprolog071.html#hevea_default1039">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="tight (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default159">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="told/0">
+      <param name="Local" value="gprolog040.html#hevea_default634">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="top-level">
+      <param name="Local" value="gprolog007.html#hevea_default4">
+       <param name="Local" value="gprolog007.html#hevea_default37">
+      <param name="Local" value="gprolog009.html#hevea_default104">
+      <param name="Local" value="gprolog009.html#hevea_default122">
+      <param name="Local" value="gprolog009.html#hevea_default123">
+      <param name="Local" value="gprolog042.html#hevea_default654">
+      <param name="Local" value="gprolog042.html#hevea_default655">
+      <param name="Local" value="gprolog042.html#hevea_default656">
+      <param name="Local" value="gprolog042.html#hevea_default657">
+      <param name="Local" value="gprolog053.html#hevea_default913">
+      <param name="Local" value="gprolog053.html#hevea_default916">
+      <param name="Local" value="gprolog072.html#hevea_default1041">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="top_level/0">
+      <param name="Local" value="gprolog007.html#hevea_default12">
+      <param name="Local" value="gprolog042.html#hevea_default650">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="trace/0 (debug)">
+      <param name="Local" value="gprolog007.html#hevea_default27">
+      <param name="Local" value="gprolog007.html#hevea_default34">
+      <param name="Local" value="gprolog013.html#hevea_default148">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="true/0">
+      <param name="Local" value="gprolog023.html#hevea_default212">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="type (option)">
+      <param name="Local" value="gprolog034.html#hevea_default343">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="type (property)">
+      <param name="Local" value="gprolog034.html#hevea_default372">
+       <param name="Local" value="gprolog051.html#hevea_default856">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="unget_byte/1">
+      <param name="Local" value="gprolog037.html#hevea_default461">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unget_byte/2">
+      <param name="Local" value="gprolog037.html#hevea_default460">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unget_char/1">
+      <param name="Local" value="gprolog036.html#hevea_default445">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unget_char/2">
+      <param name="Local" value="gprolog036.html#hevea_default444">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unget_code/1">
+      <param name="Local" value="gprolog036.html#hevea_default447">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unget_code/2">
+      <param name="Local" value="gprolog036.html#hevea_default446">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unify_with_occurs_check/2">
+      <param name="Local" value="gprolog026.html#hevea_default239">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unix (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default763">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unknown (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default779">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unknown (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default863">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="unlink/1">
+      <param name="Local" value="gprolog051.html#hevea_default844">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="user (property)">
+      <param name="Local" value="gprolog032.html#hevea_default306">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="user">
+      <param name="Local" value="gprolog040.html#hevea_default621">
+       <param name="Local" value="gprolog040.html#hevea_default630">
+      <param name="Local" value="gprolog040.html#hevea_default632">
+      <param name="Local" value="gprolog047.html#hevea_default800">
+      <param name="Local" value="gprolog050.html#hevea_default822">
+      <param name="Local" value="gprolog050.html#hevea_default828">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="user_error">
+      <param name="Local" value="gprolog034.html#hevea_default323">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="user_input">
+      <param name="Local" value="gprolog034.html#hevea_default321">
+       <param name="Local" value="gprolog034.html#hevea_default359">
+      <param name="Local" value="gprolog040.html#hevea_default619">
+      <param name="Local" value="gprolog040.html#hevea_default622">
+      <param name="Local" value="gprolog040.html#hevea_default629">
+      <param name="Local" value="gprolog040.html#hevea_default635">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="user_output">
+      <param name="Local" value="gprolog034.html#hevea_default322">
+       <param name="Local" value="gprolog034.html#hevea_default360">
+      <param name="Local" value="gprolog040.html#hevea_default620">
+      <param name="Local" value="gprolog040.html#hevea_default623">
+      <param name="Local" value="gprolog040.html#hevea_default631">
+      <param name="Local" value="gprolog040.html#hevea_default636">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="user_time/1">
+      <param name="Local" value="gprolog048.html#hevea_default812">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="value_method (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default1004">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="var (token)">
+      <param name="Local" value="gprolog038.html#hevea_default493">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="var/1">
+      <param name="Local" value="gprolog025.html#hevea_default224">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="variable_method (FD option)">
+      <param name="Local" value="gprolog063.html#hevea_default995">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="variable_names (option)">
+      <param name="Local" value="gprolog029.html#hevea_default263">
+      <param name="Local" value="gprolog029.html#hevea_default273">
+      <param name="Local" value="gprolog038.html#hevea_default475">
+       <param name="Local" value="gprolog038.html#hevea_default529">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="variables (option)">
+      <param name="Local" value="gprolog038.html#hevea_default474">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="vector_max (FD)">
+      <param name="Local" value="gprolog055.html#hevea_default926">
+       <param name="Local" value="gprolog056.html#hevea_default934">
+      <param name="Local" value="gprolog056.html#hevea_default936">
+      <param name="Local" value="gprolog060.html#hevea_default966">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="version (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default747">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="version_data (flag)">
+      <param name="Local" value="gprolog046.html#hevea_default748">
+       </object>
+  
+  <li><object type="text/sitemap">
+      <param name="Name" value="WAM">
+      <param name="Local" value="gprolog004.html#hevea_default1">
+       <param name="Local" value="gprolog009.html#hevea_default44">
+      <param name="Local" value="gprolog009.html#hevea_default47">
+      <param name="Local" value="gprolog016.html#hevea_default174">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="Warren Abstract Machine, see WAM">
+  see WAM     </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="wait/2">
+      <param name="Local" value="gprolog051.html#hevea_default889">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="wam_debug/0 (debug)">
+      <param name="Local" value="gprolog013.html#hevea_default153">
+       <param name="Local" value="gprolog016.html#hevea_default175">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="warning (option)">
+      <param name="Local" value="gprolog038.html#hevea_default479">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="working_directory/1">
+      <param name="Local" value="gprolog051.html#hevea_default838">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write (mode)">
+      <param name="Local" value="gprolog034.html#hevea_default341">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write (permission)">
+      <param name="Local" value="gprolog051.html#hevea_default849">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write/1">
+      <param name="Local" value="gprolog038.html#hevea_default516">
+       <param name="Local" value="gprolog038.html#hevea_default539">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write/2">
+      <param name="Local" value="gprolog038.html#hevea_default515">
+       <param name="Local" value="gprolog039.html#hevea_default585">
+      <param name="Local" value="gprolog039.html#hevea_default599">
+      <param name="Local" value="gprolog039.html#hevea_default613">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_canonical/1">
+      <param name="Local" value="gprolog038.html#hevea_default520">
+       <param name="Local" value="gprolog038.html#hevea_default536">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_canonical/2">
+      <param name="Local" value="gprolog038.html#hevea_default519">
+       <param name="Local" value="gprolog039.html#hevea_default587">
+      <param name="Local" value="gprolog039.html#hevea_default601">
+      <param name="Local" value="gprolog039.html#hevea_default615">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_canonical_to_atom/2">
+      <param name="Local" value="gprolog039.html#hevea_default580">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_canonical_to_chars/2">
+      <param name="Local" value="gprolog039.html#hevea_default594">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_canonical_to_codes/2">
+      <param name="Local" value="gprolog039.html#hevea_default608">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_pl_state_file/1">
+      <param name="Local" value="gprolog009.html#hevea_default116">
+      <param name="Local" value="gprolog046.html#hevea_default787">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_term/2">
+      <param name="Local" value="gprolog038.html#hevea_default514">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_term/3">
+      <param name="Local" value="gprolog007.html#hevea_default20">
+      <param name="Local" value="gprolog014.html#hevea_default164">
+      <param name="Local" value="gprolog038.html#hevea_default513">
+       <param name="Local" value="gprolog039.html#hevea_default584">
+      <param name="Local" value="gprolog039.html#hevea_default598">
+      <param name="Local" value="gprolog039.html#hevea_default612">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_term_to_atom/3">
+      <param name="Local" value="gprolog039.html#hevea_default577">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_term_to_chars/3">
+      <param name="Local" value="gprolog039.html#hevea_default591">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_term_to_codes/3">
+      <param name="Local" value="gprolog039.html#hevea_default605">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_to_atom/2">
+      <param name="Local" value="gprolog039.html#hevea_default578">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_to_chars/2">
+      <param name="Local" value="gprolog039.html#hevea_default592">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="write_to_codes/2">
+      <param name="Local" value="gprolog039.html#hevea_default606">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="writeq/1">
+      <param name="Local" value="gprolog038.html#hevea_default518">
+       <param name="Local" value="gprolog038.html#hevea_default538">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="writeq/2">
+      <param name="Local" value="gprolog038.html#hevea_default517">
+       <param name="Local" value="gprolog039.html#hevea_default586">
+      <param name="Local" value="gprolog039.html#hevea_default600">
+      <param name="Local" value="gprolog039.html#hevea_default614">
+      <param name="Local" value="gprolog069.html#hevea_default1030">
+      </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="writeq_to_atom/2">
+      <param name="Local" value="gprolog039.html#hevea_default579">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="writeq_to_chars/2">
+      <param name="Local" value="gprolog039.html#hevea_default593">
+       </object>
+  <li><object type="text/sitemap">
+      <param name="Name" value="writeq_to_codes/2">
+      <param name="Local" value="gprolog039.html#hevea_default607">
+       </object>
+  </ul>
+   </BODY>
+  </HTML>

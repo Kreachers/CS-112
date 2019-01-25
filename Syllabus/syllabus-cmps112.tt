@@ -1,0 +1,117 @@
+CMPS-112 · Syllabus · Fall 2017 · Comparative Prog. Languages   1 of 1
+$Id: syllabus-cmps112.mm,v 1.96 2017-09-26 12:58:53-07 - - $
+PWD: /afs/cats.ucsc.edu/courses/cmps112-wm/Syllabus
+URL: http://www2.ucsc.edu/courses/cmps112-wm/:/Syllabus/
+
+1.  General Information
+
+The generic part of the syllabus contains detailed information about
+prohibiting cheating, due dates and times, submitting assignments, and
+verification of the submit.  Read it carefully, as you will be held
+responsible for it.
+
+Directory:        The directory /afs/cats.ucsc.edu/courses/cmps112-wm/
+                  and its subdirectories contain all assignments,
+                  handouts, examples, old exams, etc.
+
+Piazza:           https://piazza.com/ is for questions and discussions
+                  that are appropriate in the classroom or lab
+                  section.
+
+Assignments:      All assignments must be submitted electronically and
+                  must work on the IC Linux servers (unix.ic) in order
+                  to receive a grade.  Submit programs using the
+                  submit command:
+                     submit cmps112-wm.f17 ...
+
+Due Dates:        Due dates are announced in the README files in the
+                  course directory and in the newsgroup.  You must
+                  frequently check the README.  Late submissions or
+                  makeups will not be accepted except in case of
+                  emergency (illness or injury) requiring a
+                  physician's attention.
+
+Cheating:         Cheating will not be tolerated.  See the secion on
+                  cheating in the generic part of the syllabus.
+
+Grades:           In order to pass the course, both the programming
+                  component and the testing component will be taken
+                  into consideration.  Failing either component may be
+                  cause to fail the course.  Your final grade and
+                  narrative evaluation will be based on the following
+                  allocation of points:
+
+                  Programming assignments:       4 × 12% = 48%
+                  Midterm test:                            20%
+                  Final exam during exam week:             32%
+
+                  The final exam will be two hours long, during the
+                  first two hours of the time slot scheduled by the
+                  registrar.
+
+2.  Course Description from Catalog
+
+CMPS-112.  Comparative Programming Languages.  Covers several program-
+ming languages and compares styles, philosophy, and design principles.
+Principles underlying declarative, functional, and object-oriented
+programming styles are studied.  Students write programs emphasizing
+each of these techniques.  Prerequisite:  CMPS-101 or CMPS-109.
+
+3.  Textbook
+
+/afs/cats.ucsc.edu/courses/cmps112-wm/Languages/
+/afs/cats.ucsc.edu/courses/cmps112-wm/Lecture-notes/
+https://www.google.com/
+
+No textbook is explicitly listed for this course.  Tutorials for the
+various languages we will be discussing can be found for free on the
+web.
+
+4.  Syllabus
+
+The course will follow two parallel tracks, each occupying about half
+of the lecture time.  One track will consist of programming language
+principles and paradigms, and the other will detail some specific
+programming languages.
+
+Principles.  The following topics will be covered, with examples taken
+from various programming languages.
+   · Language design principles.
+   · Syntax and semantics.
+   · Data types.
+   · Expressions, statements, and procedures.
+   · Abstract data types and modules.
+   · Object-oriented programming.
+   · Functional programming.
+   · Logic programming.
+   · Parallel programming.
+
+Practice.  There will be four programming assignments, each in a
+different language, each showing a different programming paradigm:
+   · A dynamically typed functional language.
+   · A statically typed functional language.
+   · A dynamically typed object oriented language.
+   · A logic language.
+
+5.  Generic Syllabus
+
+Also read the generic syllabus in the directory generic-syllabus/.
+
+6.  Pair Programming
+
+You may do pair programming if you choose.  You are responsible for
+choosing a partner with whom you can work.  Read the guidelines in the
+directory pair-programming/.
+
+7.  Submit checklist
+
+Carefully read the submit checklist in submit-checklist/ and make sure
+you understand how to use submit.  All programs will be graded on the
+files you submit before the due date.  Programs which work in your
+directory but not in the submit directory are not relevant to anything
+and will not be considered.
+
+Forgetting to submit even a single file or submitting the wrong
+version of a file will have a very significant negative impact on your
+grade.
+

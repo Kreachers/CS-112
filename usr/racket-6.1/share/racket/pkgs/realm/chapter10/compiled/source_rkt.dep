@@ -1,0 +1,1 @@
+("6.1" ("be5009af6c2471994f45507102f9c3fa48d0aaa9" . "0ba5a01241f0360b06ea67ac11f43fcc392a362b") (collects #"rackunit" #"text-ui.rkt") (collects #"2htdp" #"image.rkt") (collects #"racket" #"main.rkt") (collects #"2htdp" #"universe.rkt") (collects #"rackunit" #"main.rkt") (collects #"racket" #"runtime-config.rkt"))

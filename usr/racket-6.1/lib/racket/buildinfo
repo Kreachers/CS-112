@@ -1,0 +1,9 @@
+CC=gcc
+CFLAGS=-g -O2  -Wall     -pthread  
+OPTIONS=
+MZOPTIONS=
+LDFLAGS= -pthread
+LIBS=-ldl -lm  -ldl -lm -rdynamic -lffi   
+MROPTIONS=
+MRLIBS=
+MRLDFLAGS=-pthread -L../racket

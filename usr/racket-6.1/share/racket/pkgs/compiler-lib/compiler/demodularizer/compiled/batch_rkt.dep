@@ -1,0 +1,1 @@
+("6.1" ("1d5a9fddda017a4d6cfa4e86955f442b2d1233a0" . "32643b6a3983e7722c0bb13025773bbad90f5d0e") (collects #"raco" #"command-name.rkt") (collects #"racket" #"set.rkt") (collects #"racket" #"cmdline.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"compiler" #"demodularizer" #"main.rkt"))

@@ -1,0 +1,1 @@
+("6.1" ("306d166abbb6ed32c939861a2010056c3a7838f8" . "c7ee1521ecf83a7826efffde42d64dedf85bce44") (collects #"racket" #"serialize.rkt") (collects #"racket" #"contract.rkt") (collects #"web-server" #"lang" #"serial-lambda.rkt") (collects #"racket" #"list.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

@@ -1,0 +1,75 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2007.12.10.22.17.29;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@
+$Id: 2005-q2spring-lecture-log,v 358.1 2005-11-08 11:53:31-08 - - $
+
+CMPS-112 - Comparative Programming Languages - 2005 Spring
+
+Classes are 105 min each, not 70 min, with no classes Friday.
+
+Week  1:
+ 1. Mon Mar 28 - general intro (ch1), history (ch2)
+ 2. Wed Mar 30 - intro Perl: regex, hash, array, files
+
+Week  2:
+ 4. Mon Apr  4 - Perl refs, subs;
+ 5. Wed Apr  6 - PL design princip (ch3); syntax (ch4)
+
+Week  3:
+ 7. Mon Apr 11 - semantics (ch5): attributes, binding, scope,
+                 overloading; data types (ch6): primitives,
+                 sum & product types
+ 8. Wed Apr 13 - C++: STL, iostream, 
+
+Week  4:
+10. Mon Apr 18 - C++: inheritance, expr hier, templates
+11. Wed Apr 20 - (ch6) arrays, functions;  (ch7) exprs,
+                 normal & applicative order eval
+
+Week  5:
+13. Mon Apr 25 -
+14. Wed Apr 27 - 5:00--6:10 TEST #1.
+                 6:15--6:45 LECTURE: Intro Ocaml
+
+Week  6:
+16. Mon May  2 - Ocaml
+17. Wed May  4 - Ocaml: higher-order functions
+
+Week  7:
+19. Mon May  9 - questions.  Progr. environments.  OOP.
+20. Wed May 11 - mult inher OOP; Scheme language
+
+Week  8:
+22. Mon May 16 - Scheme fns in hash table; lazy lists
+23. Wed May 18 - 5:00--6:10 TEST #2.
+                 6:15--6:45 LECTURE: Haskell
+
+Week  9:
+25. Mon May 23 - Prolog
+26. Wed May 25 - Prolog
+
+Week 10:
+28. Mon May 30 - HOLIDAY - no class
+29. Wed Jun  1 -
+
+@

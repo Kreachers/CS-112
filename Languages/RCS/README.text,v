@@ -1,0 +1,30 @@
+head	329.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+329.1
+date	2002.12.20.00.57.59;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+329.1
+log
+@-
+@
+text
+@
+Programming language links:
+
+http://www.bagley.org/~doug/shootout/
+. The Great Computer Language Shootout
+
+$Id$
+@

@@ -1,0 +1,22 @@
+# VAX Assembly #
+
+LL0:
+	.data
+	.text
+L	.align	1
+	.globl	_main
+_main:
+	.word	L12
+	jbr	L14
+L15:
+	.data	1
+L17:
+	.ascii	"Hello, world.\12\0"
+	.text
+	pushl	$L17
+	calls	$1,_puts
+	ret
+	.set	L12,0x0
+L14:
+	jbr	L15
+	.data

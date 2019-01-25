@@ -1,0 +1,57 @@
+# RT Assembly (sort of): #
+
+LL0:
+ .data
+ .text
+ .align  2
+ .data
+ .align  2
+ .ltorg
+ .text
+ .ascii "<main>"
+ .align  2
+ .globl _.main # defentry
+_.main:
+ .data
+ .globl _main # defdata
+_main:
+ .long  _.main
+ .text
+ #-----------------| main |-------------------#
+ stm  %LR101,-100+LOWREG101*4(sp)# prologue
+ ai  sp,sp,-L101-LREGSPACE101-36# prologue
+ .using  _main,r14# prologue
+ cas  r14,r0,r0# prologue (setup dp)
+ .long  LI101# usually cal r13,L101-64(sp)
+LX101:
+ .data  1
+L105:
+ .ascii "Hello, world.\12\0"
+ .text
+ get  r2,$L105# 300
+ balix  r15,_.puts# 48
+ get  r0,$.long(_puts)# 48
+ .set LOWREGVAR101, 12 # optimized
+ .set LOWREG101, r12
+ lm  %LR101,LOWREG101*4-64+L102(r13)# epilogue
+ brx  r15# epilogue
+ ai  sp,sp,L101+LREGSPACE101+36# epilogue
+ .align  2
+ .short  0xDF07 # trace table -- marker, D_COMMON
+ .short  0xDFc8 # trace table -- marker, (first gpr,wxyz)
+ .short  0x0d1d # trace table -- nparms, fp, offset
+ .set LREGSPACE101, 16
+ .set LR101, LOWREG101
+ .set LP101, 0 # eobl2
+ .set L101, 0 # eobl2
+ .set L102, 64+LREGSPACE101  # eobl2 parms
+ .set LI101,0xc8d10000+0xffff&(L101-64) # cal r13,L101-64(sp)
+ .data
+ .align  2
+ .ltorg
+ .align  2
+ .globl .oVpcc
+ .globl .oVncs
+ .set .oVpcc, 0
+ .set .oVncs, 0
+

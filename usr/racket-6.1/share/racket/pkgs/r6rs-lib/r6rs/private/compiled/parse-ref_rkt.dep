@@ -1,0 +1,1 @@
+("6.1" ("7243f060eedb1f4d7dddcf4be9f41da10cf86404" . "5174994e722502864370f2a4e1a9e54313fd1ae2") (collects #"scheme" #"base.rkt") (collects #"r6rs" #"private" #"encode-name.rkt") (collects #"r6rs" #"private" #"find-version.rkt") (collects #"scheme" #"runtime-config.rkt"))

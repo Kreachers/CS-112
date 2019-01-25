@@ -1,0 +1,1 @@
+("6.1" ("70e2aa3a7029b0c421abff79c85eab2ab58b9b3a" . "4a2bbb3ca3b1e0db8ae6be938a944de593ea6401") (collects #"racket" #"unit.rkt") (collects #"graphics" #"graphics-sig.rkt") (collects #"racket" #"class.rkt") (collects #"mred" #"main.rkt") (collects #"mred" #"mred-sig.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"mzlib" #"etc.rkt") (collects #"racket" #"base.rkt"))

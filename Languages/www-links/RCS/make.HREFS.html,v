@@ -1,0 +1,79 @@
+head	19981207.211707;
+access;
+symbols;
+locks
+	wmackey:19981207.211707; strict;
+comment	@# @;
+
+
+19981207.211707
+date	98.12.08.05.17.09;	author wmackey;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+19981207.211707
+log
+@*** empty log message ***
+@
+text
+@#!/usr/bin/perl -w
+#
+# Program:
+#    Convert a list of HREFS.README file format into HTML.
+#    Each line of HREFS.README consists of 
+#    text description|web link
+#    The vertical bar separates the two.
+#
+
+sub cbcmp{
+   ( $aa = $a ) =~ s/.*/\L$&/g;
+   ( $bb = $b ) =~ s/.*/\L$&/g;
+   return $aa cmp $bb;
+};
+
+use POSIX;
+require 'stat.pl';
+
+sub href{
+   my( $href ) = @@_;
+   my( $refname ) = $href;
+   $refname =~ s{[^/]/|[:.-]}{$&<WBR>}g;
+   return "[<A HREF=$href><TT>$refname</TT></A>]";
+};
+
+$hrefs_readme = "HREFS.README";
+$index = $hrefs_readme . ".html";
+
+open( INDEX, ">$index" ) || die "$index: $!";
+
+if( open( HREFS, "$hrefs_readme" )){
+   while( <HREFS> ){
+      chomp;
+      if( m/([^\|]*)\|(.*)/ ){
+         $references{ $1 } = $2;
+      }else{
+         print STDERR "Bad input: $_";
+      };
+   };
+   close( HREFS );
+}else{
+   print "$readme: $!";
+};
+
+print INDEX "<H4>$hrefs_readme</H4>\n";
+print INDEX "<UL>\n";
+for $key( sort { cbcmp } keys %references ){
+   $href = $references{ $key };
+   print INDEX "<LI>$key\n";
+   print INDEX &href( $href ), "\n";
+};
+print INDEX "</UL>\n";
+close( INDEX );
+
+$NO_TYPO = $NO_TYPO = $ST_MODE;
+@

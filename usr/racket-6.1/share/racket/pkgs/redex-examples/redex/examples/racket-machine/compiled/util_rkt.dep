@@ -1,0 +1,1 @@
+("6.1" ("88aabbd73ded9305fef79b01ac6f922faeca9813" . "40828e87cebff0fee4fd920071548c2ccd63fde4") (collects #"redex" #"examples" #"racket-machine" #"grammar.rkt") (collects #"racket" #"main.rkt") (collects #"redex" #"reduction-semantics.rkt") (collects #"racket" #"runtime-config.rkt"))

@@ -1,0 +1,83 @@
+#!/bin/bash
+# $Id: mkpspdf,v 1.29 2017-07-05 15:02:35-07 - - $
+#
+# NAME
+#    mkpspdf - create ps and pdf files from source code
+#
+# SYNOPSIS
+#    mkpspdf [-Vcghst] [dirname/]psfilename sources
+#
+# DESCRIPTION
+#    From the [dirname/]psfilename specification, create a Postscript
+#    file of the sources and bring it up in ghostview.  Also create
+#    a pdf.
+#
+# OPTIONS
+#    -V  Verbose print all comment lines in file.
+#    -b  Suppress --borders.
+#    -c  Suppress the use of --line-numbers (-C).
+#    -f  Suppress --fancy-header
+#    -g  Suppress calling gv to display the Postscript file.
+#    -h  Suppress --header
+#    -r  Rotate 90 degrees to landscape mode.
+#    -s  Font size in points.
+#    -t  Set header to argument $OPTARG
+#
+
+function usage {
+   echo Usage: $(basename $0) [-Vbcfghst] \
+        [dirname/]psfilename filename... 1>&2
+   exit 1
+}
+
+BORDERS=--borders
+LINE_NUMBERS=--line-numbers
+FANCY_HEADER=--fancy-header
+HEADER=--header="$(pwd | sed 's|^/afs/cats.ucsc.edu/courses/|$$|')/"
+FONT_SIZE=11
+while getopts Vbcfghrs:t: opt; do
+   echo w $# $OPTIND $@
+   case $opt in
+      V) grep '^#' $0; exit;;
+      b) BORDERS=;;
+      c) LINE_NUMBERS=;;
+      f) FANCY_HEADER=;;
+      g) SUPPRESS_GV=1;;
+      h) HEADER=;;
+      r) LANDSCAPE=--landscape;;
+      s) FONT_SIZE=$OPTARG;;
+      t) HEADER="--header=$OPTARG";;
+      *) usage;;
+   esac
+done
+shift $(($OPTIND-1))
+
+dirname=$(dirname $1)
+psfilename=$(basename $1)
+shift
+
+font=Courier-Bold$FONT_SIZE
+
+command="enscript \
+   --media=Letter \
+   $LANDSCAPE \
+   $BORDERS \
+   $LINE_NUMBERS \
+   --font=$font \
+   $FANCY_HEADER \
+   --output $dirname/$psfilename \
+   $HEADER \
+   $@"
+
+echo $command
+$command
+
+enscript-title $dirname/$psfilename $psfilename
+
+if [ "$SUPPRESS_GV" = "" ]; then
+   gv $dirname/$psfilename &
+fi
+
+cd $dirname
+mkpdf $psfilename
+

@@ -1,0 +1,1 @@
+("6.1" ("197937996ce7648008fa22527462d516362affa0" . "d81952da9b8d521f388e8f75d53b77d6633ed31c") (collects #"htdp" #"error.rkt") (collects #"mrlib" #"image-core.rkt") (collects #"racket" #"class.rkt") (collects #"2htdp" #"image.rkt") (collects #"htdp" #"image.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

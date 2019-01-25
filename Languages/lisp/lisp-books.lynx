@@ -1,0 +1,230 @@
+
+   #[1]RSS 2.0 [2]RSS .92 [3]Atom 0.3
+   
+[4]Another Word for Nerd
+
+   the adventures of an artificial texan
+     _________________________________________________________________
+   
+Lisp Books and Information
+
+   My collection of Lisp books and information. Some links are to
+   freely-distributable PDFs, others to web pages.
+   
+Books
+
+   [5]Common Lisp: A Gentle Introduction to Symbolic Computation
+   © 1990 Symbolic Technology Ltd.
+   
+   [6]Common Lisp: The Language
+   © 1984 Guy Steele / Digital Press
+   
+   [7]On Lisp: Advanced Techniques for Common Lisp
+   © 1993 [8]Paul Graham
+   
+   [9]Lisp 1.5 Programmer's Manual
+   1962 John McCarthy, Paul Abrahams, Daniel Edwards, Timothy Hart,
+   Michael Levin / MIT Press
+   Courtesy of Paul McJones and his [10]History of LISP project pages at
+   the [11]Computer History Museum
+   
+   [12]Performance and Evaluation of Lisp Systems
+   © 1985 Richard P. Gabriel / MIT Press
+   
+   Available online, but not as PDFs or with licenses that don't allow
+   mirroring:
+   
+   [13]Practical Common Lisp by Peter Seibel (my current favorite Lisp
+   book)
+   [14]Successful Lisp by David Lamkins
+   [15]Casting SPELs in Lisp by Conrad Barski, M.D.
+   [16]Common Lisp - An Interactive Approach by Stuart Shapiro
+   [17]Loving Lisp - the Savy Programmer's Secret Weapon by Mark Watson
+   [18]The Common Lisp HyperSpec
+   [19]The Common Lisp Cookbook
+   [20]An Introduction and Tutorial for Common Lisp
+   
+   I'm not including many [21]Scheme titles here, but of course I have to
+   mention the classic
+   [22]Structure and Interpretation of Computer Programs from MIT Press
+   ([23]HTML, [24]PDF).
+   Video lectures to accompany the text are available from [25]MIT and
+   [26]Ars Digita University.
+   
+   [27]The Little Schemer is an update of "The Little LISPer".
+   [28]How To Design Programs is a great book from MIT Press, available
+   online as HTML.
+   
+   [29]Emacs is the Lisp editor of choice.
+   [30]The GNU Emacs Manual
+   [31]Introduction to Emacs Lisp Programming
+   [32]Emacs Lisp Reference Manual
+   Marco Baringer made a [33]video showing the use of [34]SLIME, the
+   Superior Lisp Interaction Mode for Emacs.
+   I'm gradually switching to [35]ERC, the Emacs IRC Client
+   
+Symbolics Lisp Machines
+
+   I've long been fascinated by [36]Lisp Machines, especially those made
+   by [37]Symbolics.
+   
+   I'm currently in the market for a Symbolics system (preferrably a
+   MacIvory board due to size and power considerations, but I'll take
+   what I can get).
+   Please [38]contact me if you can help.
+   
+   [39]Ralf Moller's Symbolics Lisp Machine Museum
+   [40]Rainer Joswig's Page with lots of Symbolics videos, screenshots,
+   and marketing materials
+   [41]Bruce's Symbolics Page has pictures of his two Symbolics systems
+   Peter Paine has [42]Lisp Machine Supplies and Information in the UK
+   [43]The Symbolics Museum
+   [44]Jaap Weel's LispM Page
+   [45]Glenn Ehrlich has an XL1200
+   [46]A Few Things I Know about Lisp Machines by François-René Rideau
+   [47]A Brief History of Lisp Machines by Dave Dyer
+   The Retro-Computing Society of Rhode Island [48]has four 3600-series
+   machines
+   
+Other Links
+
+   [49]Bill Clementson has an excellent [50]list of Lisp books online.
+   I keep a list of [51]Lisp bookmarks at [52]del.icio.us.
+   The [53]comp.lang.lisp Usenet newsgroup is available via Google
+   Groups.
+   [54]CLiki is the Common Lisp Wiki
+   [55]The ALU Wiki has lots of Lisp information
+   
+Contact
+
+   Please [56]email me with additions, corrections (copyright
+   information), etc.
+     * Author
+       [57]Bill Bradford
+     * Pages
+          + [58]Books I'm Currently Reading
+          + [59]Lisp Books and Information
+          + [60]My Essential Mac Software
+          + [61]Other Sites I Read
+          + [62]Post Archives
+     * Links
+          + [63]News Feed
+          + [64]My Amazon Wish List
+          + [65]Fifties House
+          + [66]My del.icio.us Bookmarks
+          + [67]My Flickr photographs
+          + [68]My Wireless Maps
+     * Categories
+          + [69]books (6)
+          + [70]computers (17)
+          + [71]general (392)
+          + [72]hobbies (11)
+          + [73]houston (77)
+          + [74]humor (41)
+          + [75]lisp (9)
+          + [76]mac (47)
+          + [77]opensolaris (16)
+          + [78]opinion (54)
+          + [79]politics (8)
+          + [80]projects (32)
+          + [81]unix / linux (21)
+          + [82]work (17)
+     * ____________________
+       Search
+       
+                                                      [83][lisplogo.gif] 
+       
+   Powered by [84]WordPress with [85]White as Milk Theme designed by
+   [86]Azeem Azeez.
+   [87]Entries and [88]comments feeds.
+
+References
+
+   1. http://weblog.mrbill.net/feed/
+   2. http://weblog.mrbill.net/feed/rss/
+   3. http://weblog.mrbill.net/feed/atom/
+   4. http://weblog.mrbill.net/
+   5. http://www.mrbill.net/lispbooks/Common_Lisp_A_Gentle_Introduction_To_Symbolic_Computation.pdf
+   6. http://www.mrbill.net/lispbooks/common_lisp_the_language.pdf
+   7. http://www.mrbill.net/lispbooks/on_lisp.pdf
+   8. http://www.paulgraham.com/
+   9. http://www.mrbill.net/lispbooks/LISP_1.5_Programmers_Manual.pdf
+  10. http://community.computerhistory.org/scc/projects/LISP/
+  11. http://www.computerhistory.org/
+  12. http://www.mrbill.net/lispbooks/Performance_And_Evaluation_of_Lisp_Systems.pdf
+  13. http://www.gigamonkeys.com/book
+  14. http://psg.com/~dlamkins/sl/cover.html
+  15. http://www.lisperati.com/casting.html
+  16. http://www.cse.buffalo.edu/pub/WWW/faculty/shapiro/Commonlisp/
+  17. http://www.markwatson.com/opencontent/lisp_lic.htm
+  18. http://www.lisp.org/HyperSpec/FrontMatter/index.html
+  19. http://cl-cookbook.sourceforge.net/
+  20. http://www.apl.jhu.edu/~hall/lisp.html
+  21. http://swiss.csail.mit.edu/projects/scheme/
+  22. http://mitpress.mit.edu/sicp/
+  23. http://mitpress.mit.edu/sicp/
+  24. http://www.cs.uvm.edu/~dvanhorn/tmp/sicp.pdf
+  25. http://www.swiss.ai.mit.edu/classes/6.001/abelson-sussman-lectures/
+  26. http://www.aduni.org/courses/sicp/index.php?view=cw
+  27. http://www.ccs.neu.edu/home/matthias/BTLS/
+  28. http://www.htdp.org/
+  29. http://en.wikipedia.org/wiki/EMACS
+  30. http://www.gnu.org/software/emacs/manual/emacs.html
+  31. http://www.gnu.org/software/emacs/emacs-lisp-intro/emacs-lisp-intro.html
+  32. http://www.gnu.org/software/emacs/elisp-manual/elisp.html
+  33. http://common-lisp.net/movies/slime.mov
+  34. http://common-lisp.net/project/slime/
+  35. http://www.emacswiki.org/cgi-bin/wiki?EmacsIRCClient
+  36. http://en.wikipedia.org/wiki/Lisp_machines
+  37. http://en.wikipedia.org/wiki/Symbolics
+  38. mailto:mrbill@mrbill.net
+  39. http://www.sts.tu-harburg.de/~r.f.moeller/symbolics-info/symbolics.html
+  40. http://lispm.dyndns.org/
+  41. http://home.hakuhale.net/rbc/symbolics/
+  42. http://www.asl.dsl.pipex.com/symbolics/
+  43. http://smbx.org/html/
+  44. http://www.ugcs.caltech.edu/~weel/lispm.html
+  45. http://cooking-with-lisp.blogspot.com/2004/06/finally-got-my-lisp-machine.html
+  46. http://fare.tunes.org/LispM.html
+  47. http://www.andromeda.com/people/ddyer/lisp/
+  48. http://starfish.rcsri.org/rcs/Symbolics/contents.html
+  49. http://bc.tech.coop/
+  50. http://bc.tech.coop/lisp-books.htm
+  51. http://del.icio.us/mrbill/lisp
+  52. http://del.icio.us/
+  53. http://groups.google.com/group/comp.lang.lisp
+  54. http://www.cliki.net/index
+  55. http://wiki.alu.org/
+  56. mailto:mrbill@mrbill.net
+  57. mailto:mrbill@mrbill.net
+  58. http://weblog.mrbill.net/currently-reading/
+  59. http://weblog.mrbill.net/lisp-books/
+  60. http://weblog.mrbill.net/essential-mac-software/
+  61. http://weblog.mrbill.net/other-sites/
+  62. http://weblog.mrbill.net/archives/
+  63. http://feeds.feedburner.com/AnotherWordForNerd
+  64. http://wishlist.mrbill.net/
+  65. http://www.fiftieshouse.com/
+  66. http://del.icio.us/mrbill
+  67. http://www.flickr.com/photos/mrbill/
+  68. http://www.mrbill.net/googlemaps
+  69. http://weblog.mrbill.net/archives/category/books/
+  70. http://weblog.mrbill.net/archives/category/computers/
+  71. http://weblog.mrbill.net/archives/category/general/
+  72. http://weblog.mrbill.net/archives/category/hobbies/
+  73. http://weblog.mrbill.net/archives/category/houston/
+  74. http://weblog.mrbill.net/archives/category/humor/
+  75. http://weblog.mrbill.net/archives/category/lisp/
+  76. http://weblog.mrbill.net/archives/category/mac/
+  77. http://weblog.mrbill.net/archives/category/opensolaris/
+  78. http://weblog.mrbill.net/archives/category/opinion/
+  79. http://weblog.mrbill.net/archives/category/politics/
+  80. http://weblog.mrbill.net/archives/category/projects/
+  81. http://weblog.mrbill.net/archives/category/unix-linux/
+  82. http://weblog.mrbill.net/archives/category/work/
+  83. http://www.cliki.net/index
+  84. http://wordpress.org/
+  85. http://www.azeemazeez.com/stuff/themes/
+  86. http://www.azeemazeez.com/
+  87. http://weblog.mrbill.net/feed/
+  88. http://weblog.mrbill.net/comments/feed/

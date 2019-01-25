@@ -1,0 +1,27 @@
+push: testit
+push: RCS
+push: SunWS_cache
+push: main.cc
+push: main.o
+push: mk
+push: stack.cc
+push: stack.h
+push: stack.o
+push: testit
+push: testit.bcheck.output
+push: testit.errs
+push: testit.output
+pop: testit.output
+pop: testit.errs
+pop: testit.bcheck.output
+pop: testit
+pop: stack.o
+pop: stack.h
+pop: stack.cc
+pop: mk
+pop: main.o
+pop: main.cc
+pop: SunWS_cache
+pop: RCS
+pop: testit
+pop: caught emptyexn

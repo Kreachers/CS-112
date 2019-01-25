@@ -1,0 +1,1 @@
+("6.1" ("d902855deacd36e1d7f7b3c3f846f0b824caaf64" . "4ae88e424c87de45e5999d729f20b0999e10db60") (collects #"mzscheme" #"main.rkt") (collects #"mrlib" #"click-forwarding-editor.rkt") (collects #"mrlib" #"private" #"aligned-pasteboard" #"locked-pasteboard.rkt") (collects #"mrlib" #"private" #"aligned-pasteboard" #"geometry-managed-pasteboard.rkt"))

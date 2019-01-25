@@ -1,0 +1,2386 @@
+head	1.97;
+access;
+symbols;
+locks;
+comment	@.\" @;
+
+
+1.97
+date	2017.09.26.20.27.29;	author -;	state -;
+branches;
+next	1.96;
+
+1.96
+date	2017.09.26.19.58.53;	author -;	state -;
+branches;
+next	1.95;
+
+1.95
+date	2017.09.22.20.59.08;	author -;	state -;
+branches;
+next	1.94;
+
+1.94
+date	2017.09.22.20.56.57;	author -;	state -;
+branches;
+next	1.93;
+
+1.93
+date	2017.09.21.19.27.32;	author -;	state -;
+branches;
+next	1.92;
+
+1.92
+date	2017.09.21.19.26.31;	author -;	state -;
+branches;
+next	1.91;
+
+1.91
+date	2017.04.05.20.26.37;	author -;	state -;
+branches;
+next	1.90;
+
+1.90
+date	2017.03.29.00.26.01;	author -;	state -;
+branches;
+next	1.89;
+
+1.89
+date	2017.03.27.22.46.51;	author -;	state -;
+branches;
+next	1.88;
+
+1.88
+date	2016.09.09.21.43.16;	author -;	state -;
+branches;
+next	1.87;
+
+1.87
+date	2016.09.06.22.11.04;	author -;	state -;
+branches;
+next	1.86;
+
+1.86
+date	2016.07.11.20.40.08;	author -;	state -;
+branches;
+next	1.85;
+
+1.85
+date	2016.07.11.20.39.16;	author -;	state -;
+branches;
+next	1.84;
+
+1.84
+date	2016.07.11.20.38.24;	author -;	state -;
+branches;
+next	1.83;
+
+1.83
+date	2015.09.22.21.09.22;	author -;	state -;
+branches;
+next	1.82;
+
+1.82
+date	2015.09.22.21.06.49;	author -;	state -;
+branches;
+next	1.81;
+
+1.81
+date	2015.09.22.21.05.22;	author -;	state -;
+branches;
+next	1.80;
+
+1.80
+date	2015.09.22.21.04.30;	author -;	state -;
+branches;
+next	1.79;
+
+1.79
+date	2015.09.22.01.15.40;	author -;	state -;
+branches;
+next	1.78;
+
+1.78
+date	2015.09.22.00.26.51;	author -;	state -;
+branches;
+next	1.77;
+
+1.77
+date	2015.09.22.00.26.34;	author -;	state -;
+branches;
+next	1.76;
+
+1.76
+date	2015.09.22.00.25.59;	author -;	state -;
+branches;
+next	1.75;
+
+1.75
+date	2015.09.22.00.25.25;	author -;	state -;
+branches;
+next	1.74;
+
+1.74
+date	2015.09.22.00.22.53;	author -;	state -;
+branches;
+next	1.73;
+
+1.73
+date	2015.08.11.23.18.39;	author -;	state -;
+branches;
+next	1.72;
+
+1.72
+date	2015.08.11.23.18.21;	author -;	state -;
+branches;
+next	1.71;
+
+1.71
+date	2015.08.11.23.17.37;	author -;	state -;
+branches;
+next	1.70;
+
+1.70
+date	2015.08.11.23.16.47;	author -;	state -;
+branches;
+next	1.69;
+
+1.69
+date	2015.08.11.23.14.47;	author -;	state -;
+branches;
+next	1.68;
+
+1.68
+date	2015.08.11.23.14.15;	author -;	state -;
+branches;
+next	1.67;
+
+1.67
+date	2015.08.11.23.11.55;	author -;	state -;
+branches;
+next	1.66;
+
+1.66
+date	2014.09.22.22.03.02;	author -;	state -;
+branches;
+next	1.65;
+
+1.65
+date	2014.08.08.23.56.32;	author -;	state -;
+branches;
+next	1.64;
+
+1.64
+date	2014.08.08.23.53.31;	author -;	state -;
+branches;
+next	1.63;
+
+1.63
+date	2014.08.08.23.52.57;	author -;	state -;
+branches;
+next	1.62;
+
+1.62
+date	2014.08.08.23.32.28;	author -;	state -;
+branches;
+next	1.61;
+
+1.61
+date	2014.08.08.23.30.35;	author -;	state -;
+branches;
+next	1.60;
+
+1.60
+date	2014.08.08.23.30.05;	author -;	state -;
+branches;
+next	1.59;
+
+1.59
+date	2011.12.13.01.43.21;	author -;	state -;
+branches;
+next	1.58;
+
+1.58
+date	2011.12.13.01.42.43;	author -;	state -;
+branches;
+next	1.57;
+
+1.57
+date	2011.12.13.01.40.51;	author -;	state -;
+branches;
+next	1.56;
+
+1.56
+date	2011.12.13.01.39.56;	author -;	state -;
+branches;
+next	1.55;
+
+1.55
+date	2011.12.01.04.04.40;	author -;	state -;
+branches;
+next	1.54;
+
+1.54
+date	2011.11.30.03.48.30;	author -;	state -;
+branches;
+next	1.53;
+
+1.53
+date	2011.11.30.03.47.52;	author -;	state -;
+branches;
+next	1.52;
+
+1.52
+date	2011.11.30.03.45.44;	author -;	state -;
+branches;
+next	1.51;
+
+1.51
+date	2011.11.30.03.44.04;	author -;	state -;
+branches;
+next	1.50;
+
+1.50
+date	2011.11.30.03.43.47;	author -;	state -;
+branches;
+next	1.49;
+
+1.49
+date	2011.03.23.22.22.51;	author -;	state -;
+branches;
+next	1.48;
+
+1.48
+date	2011.03.23.20.41.03;	author -;	state -;
+branches;
+next	1.47;
+
+1.47
+date	2011.03.23.20.35.33;	author -;	state -;
+branches;
+next	1.46;
+
+1.46
+date	2011.03.23.20.31.49;	author -;	state -;
+branches;
+next	1.45;
+
+1.45
+date	2011.03.23.20.29.11;	author -;	state -;
+branches;
+next	1.44;
+
+1.44
+date	2009.01.03.03.55.46;	author -;	state -;
+branches;
+next	1.43;
+
+1.43
+date	2009.01.03.03.53.00;	author -;	state -;
+branches;
+next	1.42;
+
+1.42
+date	2009.01.03.03.47.49;	author -;	state -;
+branches;
+next	1.41;
+
+1.41
+date	2008.12.13.03.44.20;	author -;	state -;
+branches;
+next	1.40;
+
+1.40
+date	2008.12.13.03.40.44;	author -;	state -;
+branches;
+next	1.39;
+
+1.39
+date	2008.12.13.03.09.09;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2008.12.03.00.25.49;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2008.12.02.22.52.31;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2008.11.26.01.57.50;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2008.11.26.01.54.23;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2008.11.26.01.53.43;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2008.11.26.01.47.08;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2008.11.26.01.46.14;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2008.11.26.01.46.00;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2008.11.26.01.43.53;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2008.11.26.01.43.23;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2008.11.26.01.43.11;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2008.11.26.01.42.33;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2008.11.26.01.41.32;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2008.11.26.01.41.09;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2008.11.26.01.39.51;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2008.11.26.01.39.28;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2008.11.26.01.39.17;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2008.11.26.01.38.42;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2008.11.26.01.38.12;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2008.11.26.01.34.20;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2008.11.26.01.32.34;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2007.12.21.02.57.00;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2007.12.21.02.55.48;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2007.12.21.02.54.18;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2007.12.21.02.53.13;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2007.12.21.02.51.57;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2007.12.21.02.51.04;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2007.12.21.02.50.52;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2007.12.21.02.48.19;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2007.12.21.02.47.11;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2007.12.21.02.45.55;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2007.12.21.02.42.06;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2007.12.21.02.41.36;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2007.12.21.02.39.10;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2007.12.21.02.38.27;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2007.12.21.02.37.18;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2007.12.10.22.16.11;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2007.12.10.22.15.28;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.97
+log
+@-
+@
+text
+@.so Tmac.mm-etc
+.if t .Newcentury-fonts
+.ds QUARTER Fall
+.ds YEAR 2017
+.ds SUBMIT f17
+.INITR* \n[.F]
+.SIZE 12 14
+.RCS "$Id: syllabus-cmps112.mm,v 1.96 2017-09-26 12:58:53-07 - - $"
+.PWD
+.URL
+.TITLE CMPS-112 Syllabus \*[QUARTER]\~\*[YEAR] \
+"Comparative Prog.\& Languages"
+.H 1 "General Information"
+The generic part of the syllabus contains detailed information
+about prohibiting cheating, due dates and times, 
+submitting assignments, and verification of the submit.
+Read it carefully, as you will be held responsible for it.
+.VL 18n
+.B=LI "Directory\(::"
+The directory
+.V= /afs/cats.ucsc.edu/courses/cmps112-wm/
+and its subdirectories contain all assignments, handouts,
+examples, old exams, etc.
+.B=LI "Piazza\(::"
+.V= https://piazza.com/
+is for questions and discussions that are
+appropriate in the classroom or lab section.
+.B=LI "Assignments\(::"
+All assignments must be submitted electronically and must work
+on the IC Linux servers
+.=V ( unix.ic )
+in order to receive a grade.
+Submit programs using the submit command\(::
+.VTCODE* 1  "submit cmps112-wm.\*[SUBMIT] ..." 
+.B=LI "Due Dates\(::"
+Due dates are announced in the
+.V= README
+files in the course directory and in the newsgroup.
+You must frequently check the
+.V= README .
+.E= "Late submissions or makeups will not be accepted except in case of"
+.E= "emergency (illness or injury) requiring a physician's attention."
+.B=LI "Cheating\(::"
+.E= "Cheating will not be tolerated."
+.E= "See the secion on cheating in the generic part of the syllabus."
+.B=LI "Grades\(::"
+In order to pass the course, 
+both the programming component and the testing component will
+be taken into consideration.
+Failing either component may be cause to fail the course.
+Your final grade and narrative evaluation will be based on the
+following allocation of points\(::
+.DS
+.TS
+tab(|); l r1 r1 r1 r.
+Programming assignments\(:)|4 ×|12% =|48%
+Midterm test\(:)|||20%
+Final exam during exam week\(:)|||32%
+.TE
+.DE
+The final exam will be 
+.E= two
+hours long,
+during the first two hours of the time slot scheduled by
+the registrar.
+.H 1 "Course Description from Catalog"
+.BR CMPS-112.
+.BR "Comparative Programming Languages."
+Covers several pro\%gram\%ming languages and compares styles,
+philosophy,
+and design principles.
+Principles underlying declarative, functional,
+and object-oriented programming styles are studied.
+Students write programs emphasizing each of these techniques.
+Prerequisite\(::
+CMPS-101 or CMPS-109.
+.H 1 "Textbook"
+.VTCODE* 0 /afs/cats.ucsc.edu/courses/cmps112-wm/Languages/
+.VTCODE* 0 /afs/cats.ucsc.edu/courses/cmps112-wm/Lecture-notes/
+.VTCODE* 0 https://www.google.com/
+.P
+No textbook is explicitly listed for this course.
+Tutorials for the various languages we will be discussing
+can be found for free on the web.
+.H 1 "Syllabus"
+The course will follow two parallel tracks,
+each occupying about half of the lecture time.
+One track will consist of programming language principles and paradigms,
+and the other will detail some specific programming languages.
+.P
+.E= Principles.
+The following topics will be covered,
+with examples taken from various programming languages.
+.ALX \[bu] 0 "" 0 0
+.LI
+Language design principles.
+.LI
+Syntax and semantics.
+.LI
+Data types.
+.LI
+Expressions, statements, and procedures.
+.LI
+Abstract data types and modules.
+.LI
+Object-oriented programming.
+.LI
+Functional programming.
+.LI
+Logic programming.
+.LI
+Parallel programming.
+.LE
+.P
+.E= Practice.
+There will be four programming assignments,
+each in a different language,
+each showing a different programming paradigm\(::
+.ALX \[bu] 0 "" 0 0
+.LI
+A dynamically typed functional language.
+.LI
+A statically typed functional language.
+.LI
+A dynamically typed object oriented language.
+.LI
+A logic language.
+.LE
+.H 1 "Generic Syllabus"
+Also read the generic syllabus in the directory
+.V= generic-syllabus/ .
+.H 1 "Pair Programming"
+You may do pair programming if you choose.
+You are responsible for choosing a partner with whom you can work.
+Read the guidelines in the directory
+.V= pair-programming/ .
+.H 1 "Submit checklist"
+Carefully read the submit checklist in
+.V= submit-checklist/
+and make sure you understand how to use 
+.V= submit .
+All programs will be graded on the files you submit before the
+due date.
+Programs which work in your directory but not in the submit
+directory are not relevant to anything and will not be considered.
+.P
+.ft BI
+Forgetting to submit even a single file
+or submitting the wrong version of a file
+will have a very
+significant negative impact on your grade.
+.ft P
+.FINISH
+@
+
+
+1.96
+log
+@-
+@
+text
+@d8 1
+a8 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.95 2017-09-22 13:59:08-07 - - $"
+d41 2
+a42 3
+Late assignments are 
+.E= not
+permitted, except in emergency situations.
+@
+
+
+1.95
+log
+@-
+@
+text
+@d8 1
+a8 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.94 2017-09-22 13:56:57-07 - - $"
+d62 5
+@
+
+
+1.94
+log
+@-
+@
+text
+@d8 1
+a8 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.93 2017-09-21 12:27:32-07 - - $"
+a46 6
+.B=LI "Textbook\(::"
+.V= https://www.google.com/
+\[em]
+No textbook is explicitly listed for this course.
+Tutorials for the various languages we will be discussing
+can be found for free on the web.
+d74 7
+a80 1
+.V= https://www.google.com/
+@
+
+
+1.93
+log
+@-
+@
+text
+@d3 1
+a3 1
+.ds QUARTER Spring
+d5 1
+d8 1
+a8 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.92 2017-09-21 12:26:31-07 - - $"
+d34 1
+a34 1
+.VTCODE* 1  "submit cmps112-wm.f17 ..." 
+@
+
+
+1.92
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.91 2017-04-05 13:26:37-07 - - $"
+d78 2
+@
+
+
+1.91
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.90 2017-03-28 17:26:01-07 - - $"
+d33 1
+a33 1
+.VTCODE* 1  "submit cmps112-wm.s17 ..." 
+@
+
+
+1.90
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.89 2017-03-27 15:46:51-07 - - $"
+a113 2
+A scripting language.
+.LI
+d119 2
+@
+
+
+1.89
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.88 2016-09-09 14:43:16-07 - - $"
+d33 1
+a33 1
+.VTCODE* 1  "submit cmps112-wm.f16 ..." 
+@
+
+
+1.88
+log
+@-
+@
+text
+@d3 2
+a4 2
+.ds QUARTER Fall
+.ds YEAR 2016
+d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.87 2016-09-06 15:11:04-07 - - $"
+@
+
+
+1.87
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.86 2016-07-11 13:40:08-07 - - $"
+d63 2
+a64 2
+Midterm tests in class\(:)|2 ×|13% =|26%
+Final exam during exam week\(:)|||26%
+@
+
+
+1.86
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.85 2016-07-11 13:39:16-07 - - $"
+d33 1
+a33 1
+.VTCODE* 1  "submit cmps112-wm.f15 ..." 
+@
+
+
+1.85
+log
+@-
+@
+text
+@d4 1
+a4 1
+.ds YEAR 2015
+d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.84 2016-07-11 13:38:24-07 - - $"
+@
+
+
+1.84
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.83 2015-09-22 14:09:22-07 - - $"
+d47 2
+a51 1
+Be sure you know how to use Google.
+@
+
+
+1.83
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.82 2015-09-22 14:06:49-07 - - $"
+d47 4
+a50 13
+Kenneth Louden, Kenneth Lambert\(::
+.E= "Programming Languages\(::"
+.E= "Principles and Practice" ,
+3nd ed.
+Cengage Learning,
+2012.
+ISBN-0-534-95341-7.
+The 2nd edition of this book is also still useable and probably
+much cheaper.
+Anyway, my notes are made from the 2nd, not the 3rd, edition.
+Priority level is ``optional''.
+You will likely be able to get as much relevant information from
+good use of Google.
+@
+
+
+1.82
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.81 2015-09-22 14:05:22-07 - - $"
+a31 5
+.E= "A IC Linux account is required for the course."
+See the
+.V= README
+for the name of the submit directory.
+.B=LI "Submit\(::"
+d33 1
+a33 3
+.VTCODE* 1  "submit cmps112-wm.f15 ..." ,
+to the directory
+.VTCODE* 1 /afs/cats.ucsc.edu/class/cmps112-wm.f15
+d95 1
+a95 1
+.ALX a ()
+a112 2
+Formal semantics.
+.LI
+d122 1
+a122 1
+a scripting language\(;;
+d124 1
+a124 1
+a dynamically typed functional language\(;;
+d126 1
+a126 1
+a statically typed functional language\(;;
+d128 1
+a128 1
+a dynamically typed object oriented language.
+@
+
+
+1.81
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.80 2015-09-22 14:04:30-07 - - $"
+d129 1
+a129 1
+.BL
+@
+
+
+1.80
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.79 2015-09-21 18:15:40-07 - - $"
+d129 2
+d132 1
+d134 1
+d136 1
+d138 1
+@
+
+
+1.79
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.78 2015-09-21 17:26:51-07 - - $"
+d128 5
+a132 15
+each showing a different programming paradigm.
+.ALX a ()
+.LI
+Perl\(::
+Scripting language.
+.LI
+Scheme\(::
+Dynamically typed functional language.
+.LI
+Ocaml\(::
+Statically typed functional language.
+.LI
+Smalltalk\(::
+Dynamically typed object oriented language.
+.LE
+@
+
+
+1.78
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.77 2015-09-21 17:26:34-07 - - $"
+d102 1
+a102 1
+.ALX i ()
+d129 1
+a129 1
+.ALX i ()
+@
+
+
+1.77
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.76 2015-09-21 17:25:59-07 - - $"
+d132 1
+a132 1
+Scripting language, rapid development and prototyping.
+@
+
+
+1.76
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.75 2015-09-21 17:25:25-07 - - $"
+d141 1
+a141 1
+Object-oriented language, objects and messages.
+@
+
+
+1.75
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.74 2015-09-21 17:22:53-07 - - $"
+d138 1
+a138 3
+Statically typed functional language,
+polymorphism,
+higher-order functions.
+@
+
+
+1.74
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.73 2015-08-11 16:18:39-07 - - $"
+d131 1
+d134 1
+d137 1
+d142 1
+@
+
+
+1.73
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.72 2015-08-11 16:18:21-07 - - $"
+d23 4
+a26 7
+.B=LI "Email list\(::"
+The class mailing list is
+.V= cmps112-wm@@soe.ucsc.edu
+and is required reading.
+Anything sent to the class mailing list will be assumed known.
+General questions should be sent to this list rather
+than being sent via email.
+@
+
+
+1.72
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.71 2015-08-11 16:17:37-07 - - $"
+d161 1
+@
+
+
+1.71
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.70 2015-08-11 16:16:47-07 - - $"
+d161 1
+d166 1
+@
+
+
+1.70
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.69 2015-08-11 16:14:47-07 - - $"
+d161 3
+a163 1
+Forgetting to submit even a single file will have a very
+@
+
+
+1.69
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.68 2015-08-11 16:14:15-07 - - $"
+d157 6
+@
+
+
+1.68
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.67 2015-08-11 16:11:55-07 - - $"
+d105 1
+a105 1
+.ALX 1 ()
+d132 1
+a132 1
+.ALX 1 ()
+@
+
+
+1.67
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.66 2014-09-22 15:03:02-07 - - $"
+d41 1
+a41 1
+.V= "submit cmps112-wm.w12" ,
+d43 1
+a43 1
+.V= /afs/cats.ucsc.edu/class/cmps112-wm.w12 .
+d68 2
+d129 1
+a129 1
+There will be five programming assignments,
+a142 2
+.LI
+Logic language.
+@
+
+
+1.66
+log
+@-
+@
+text
+@d4 1
+a4 1
+.ds YEAR 2014
+d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.65 2014-08-08 16:56:32-07 - - $"
+d78 2
+a79 2
+Programming assignments\(:)|5 ×|10% =|50%
+Midterm tests in class\(:)|2 ×|12% =|24%
+@
+
+
+1.65
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.64 2014-08-08 16:53:31-07 - - $"
+d67 1
+@
+
+
+1.64
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.63 2014-08-08 16:52:57-07 - - $"
+d11 1
+a11 1
+"Comparative Programming Languages"
+@
+
+
+1.63
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.62 2014-08-08 16:32:28-07 - - $"
+d136 2
+a137 1
+polymorphism and higher-order functions.
+@
+
+
+1.62
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.61 2014-08-08 16:30:35-07 - - $"
+a130 1
+Perl\(::
+a132 1
+Scheme\(::
+a134 1
+Ocaml\(::
+a137 1
+Smalltalk\(::
+a139 1
+Prolog\(::
+@
+
+
+1.61
+log
+@-
+@
+text
+@d7 1
+a7 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.60 2014-08-08 16:30:05-07 - - $"
+d85 2
+a86 1
+Covers several programming languages and compares styles, philosophy,
+@
+
+
+1.60
+log
+@-
+@
+text
+@d6 4
+a9 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.59 2011-12-12 17:43:21-08 - - $"
+@
+
+
+1.59
+log
+@-
+@
+text
+@d3 2
+a4 2
+.ds QUARTER Winter
+.ds YEAR 2012
+d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.58 2011-12-12 17:42:43-08 - - $"
+@
+
+
+1.58
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.57 2011-12-12 17:40:51-08 - - $"
+d37 1
+a37 3
+Submit programs to the directory
+.V= /afs/cats.ucsc.edu/class/cmps112-wm.w12
+using the submit command\(::
+d39 2
+@
+
+
+1.57
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.56 2011-12-12 17:39:56-08 - - $"
+d36 5
+@
+
+
+1.56
+log
+@-
+@
+text
+@d3 1
+a3 1
+.ds QUARTER Spring
+d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.55 2011-11-30 20:04:40-08 - - $"
+@
+
+
+1.55
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.54 2011-11-29 19:48:30-08 - - $"
+d58 1
+@
+
+
+1.54
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.53 2011-11-29 19:47:52-08 - - $"
+d56 2
+@
+
+
+1.53
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.52 2011-11-29 19:45:44-08 - - $"
+d127 1
+a127 1
+with generics and higher-order functions.
+@
+
+
+1.52
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.51 2011-11-29 19:44:04-08 - - $"
+d119 1
+d122 2
+a123 1
+Object-oriented language, objects and messages.
+d125 1
+d129 2
+a130 1
+Dynamically typed functional language.
+d132 2
+a133 3
+TBA\(::
+either a logic language or a language supporting concurrent
+programming.
+@
+
+
+1.51
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.50 2011-11-29 19:43:47-08 - - $"
+d20 3
+a22 3
+.B=LI "Newsgroup\(::"
+The class newsgroup is
+.V= ucsc.class.cmps112
+d24 2
+a25 2
+Anything posted to the class newsgroup will be assumed known.
+General questions should be posted to the class newsgroup rather
+d29 1
+a29 1
+on the IC Solaris servers
+d32 1
+a32 1
+.E= "A IC Solaris account is required for the course."
+@
+
+
+1.50
+log
+@-
+@
+text
+@d4 1
+a4 1
+.ds YEAR 2011
+d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.49 2011-03-23 15:22:51-07 - - $"
+@
+
+
+1.49
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.48 2011-03-23 13:41:03-07 - - $"
+d49 1
+a49 1
+Kenneth Louden\(::
+d52 3
+a54 3
+2nd ed.
+Brooks/\%Cole,
+2003.
+@
+
+
+1.48
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.47 2011-03-23 13:35:33-07 - - $"
+a85 1
+The following topics will be covered\(::
+d87 3
+a89 1
+.E= Principles\(::
+d113 4
+a116 1
+.E= Practice\(::
+@
+
+
+1.47
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.46 2011-03-23 13:31:49-07 - - $"
+d67 2
+a68 2
+Midterm tests in class\(:):|2 ×|12% =|24%
+Final exam during exam week\(:):|||26%
+d87 3
+a89 8
+.DS CB
+.TS
+tab(|); lw(200p) lw(240p).
+T{
+.fi
+.na
+.E= Principles
+.ALX 1 . 4 0
+d111 3
+a113 5
+T}|T{
+.fi
+.na
+.E= Practice
+.ALX 1 . 4 0
+d115 1
+a115 1
+Perl, for rapid development
+d117 1
+a117 1
+C++, object-oriented and generic
+d119 2
+a120 1
+O'Caml, a statically typed functional language
+d122 1
+a122 1
+Scheme, a dynamically typed functional language
+d124 3
+a126 1
+Prolog, a logic language
+a127 3
+T}
+.TE
+.DE
+@
+
+
+1.46
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.45 2011-03-23 13:29:11-07 - - $"
+d66 3
+a68 2
+Programs\(:)|4 ×|11% +|6% =|50%
+Tests & exam\(:):|2 ×|13% +|24% =|50%
+d96 1
+a96 1
+Language design principles
+d98 1
+a98 1
+Syntax and semantics
+d100 1
+a100 1
+Data types
+d102 1
+a102 1
+Expressions, statements, and procedures
+d104 1
+a104 1
+Abstract data types and modules
+d106 1
+a106 1
+Object-oriented programming
+d108 1
+a108 1
+Functional programming
+d110 1
+a110 1
+Logic programming
+d112 1
+a112 1
+Formal semantics
+d114 1
+a114 1
+Parallel programming
+d137 1
+a137 1
+.V= generic-syllabus/
+@
+
+
+1.45
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.44 2009-01-02 19:55:46-08 - - $"
+d134 13
+a146 40
+.H 1 "Pair programming in CMPS-112"
+Pair programming in CMPS-112
+will be permitted as per the rules listed later in this syllabus.
+Since each program will be unrelated to any other program,
+submitting an assignment for a regrade will not be permitted.
+.P
+If you are doing pair programming,
+every text file you submit must contain both your name and username
+and your partner's username.
+Only one partner's submission will be graded,
+so, if both partners submit code, both
+partners' 
+.V= README
+must indicate which version is to be graded.
+Both partners should submit a
+.V= README ,
+which should be identical.
+Only one partner should submit code.
+.P
+In addition,
+both partners should create a symbolic link to the other partner's
+directory.
+That is, if the partners are
+.V= foo
+and
+.V= bar ,
+each of them should create a symbolic link.
+This can be done by the following
+(after substitution appropriate directory names)\(::
+.VCODE* 1 "cd cmps112-wm.w09/asg1/foo
+.VCODE* 1 "ln -s ../bar PARTNER
+.VCODE* 1 "ls -la PARTNER".
+From which the output will then show\(::
+.TVCODE* 1 "lrwxrwxrwx   1      6 Jan  2 19:52 PARTNER -> ../bar"
+The partner
+.V= foo
+should also point at 
+.V= bar .
+.so .gmmso/generic-syllabus.mm
+.so .gmmso/teamwork-cmps104.mm
+@
+
+
+1.44
+log
+@-
+@
+text
+@d1 1
+a1 1
+.so .gmmso/Tmac.mm-etc
+d3 2
+d6 2
+a7 2
+.RCS "$Id: syllabus-cmps112.mm,v 1.43 2009-01-02 19:53:00-08 - - $"
+.TITLE CMPS-112 Winter\~2009 Syllabus \
+@
+
+
+1.43
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.42 2009-01-02 19:47:49-08 - - $"
+d154 7
+a160 1
+This can be done by
+d166 4
+@
+
+
+1.42
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.41 2008-12-12 19:44:20-08 - - $"
+d40 3
+a134 3
+Submitting late assignments is 
+.E= not
+permitted, except in emergency situations.
+d137 23
+@
+
+
+1.41
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.40 2008-12-12 19:40:44-08 - - $"
+d131 1
+a131 1
+will be permitted as per the rules established in CMPS-104A.
+@
+
+
+1.40
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.39 2008-12-12 19:09:09-08 - - $"
+d135 2
+@
+
+
+1.39
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.38 2008-12-02 16:25:49-08 - - $"
+a128 1
+.so .gmmso/generic-syllabus.mm
+d135 1
+@
+
+
+1.38
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.37 2008-12-02 14:52:31-08 - - $"
+d44 1
+a44 1
+Louden, Kenneth\(::
+@
+
+
+1.37
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.36 2008-11-25 17:57:50-08 - - $"
+d130 3
+a132 3
+.H 1 "Teamwork in CMPS-112"
+Teamwork in CMPS-112 will be allowed as per the rules established in
+CMPS-104A.
+@
+
+
+1.36
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.35 2008-11-25 17:54:23-08 - - $"
+d15 1
+a15 1
+.V= /afs/cats.ucsc.edu/courses/cmps112\-wm/
+@
+
+
+1.35
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.34 2008-11-25 17:53:43-08 - - $"
+d68 2
+a69 2
+Covers several programming languages and compares styles,
+philosophy, and design principles.
+d73 2
+a74 2
+Prerequisites\(::
+CMPS-104A.
+@
+
+
+1.34
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.33 2008-11-25 17:47:08-08 - - $"
+a128 1
+.P
+d130 1
+a130 1
+.P
+@
+
+
+1.33
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.32 2008-11-25 17:46:14-08 - - $"
+d129 1
+a129 1
+.SK
+d131 1
+a131 1
+.SK
+@
+
+
+1.32
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.31 2008-11-25 17:46:00-08 - - $"
+d83 1
+a83 1
+tab(|); lw(180p) lw(214p).
+@
+
+
+1.31
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.30 2008-11-25 17:43:53-08 - - $"
+d83 1
+a83 1
+tab(|); lw(180p) lw(214
+@
+
+
+1.30
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.29 2008-11-25 17:43:23-08 - - $"
+d83 1
+a83 1
+tab(|); l l.
+@
+
+
+1.29
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.28 2008-11-25 17:43:11-08 - - $"
+d83 1
+a83 1
+tab(|); lw(3i) lw(3.25i).
+d116 1
+a116 2
+Perl,
+for rapid development
+d118 1
+a118 2
+C++,
+object-oriented and generic
+d120 1
+a120 2
+O'Caml,
+a statically typed functional language
+d122 1
+a122 2
+Scheme,
+a dynamically typed functional language
+d124 1
+a124 2
+Prolog,
+a logic language
+@
+
+
+1.28
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.27 2008-11-25 17:42:33-08 - - $"
+d83 1
+a83 1
+tab(|); lw(3i) lw(3.25i)
+@
+
+
+1.27
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.26 2008-11-25 17:41:32-08 - - $"
+d83 1
+a83 1
+tab(|); lew(3.25i) le.
+@
+
+
+1.26
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.25 2008-11-25 17:41:09-08 - - $"
+d83 1
+a83 1
+tab(|); lew(3i) le.
+@
+
+
+1.25
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.24 2008-11-25 17:39:51-08 - - $"
+d83 1
+a83 1
+tab(|); le le.
+@
+
+
+1.24
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.23 2008-11-25 17:39:28-08 - - $"
+d83 1
+a83 2
+expand allbox tab(|); cew(3i)fBI cefBI, l l.
+Principles|Practice
+d87 1
+d113 1
+@
+
+
+1.23
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.22 2008-11-25 17:39:17-08 - - $"
+d83 1
+a83 1
+allbox tab(|); cew(3i)fBI cefBI, l l.
+@
+
+
+1.22
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.21 2008-11-25 17:38:42-08 - - $"
+d83 1
+a83 1
+allbox tab(|); cw(3i)fBI cefBI, l l.
+@
+
+
+1.21
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.20 2008-11-25 17:38:12-08 - - $"
+d83 1
+a83 1
+tab(|); cfBI cfBI, l l.
+@
+
+
+1.20
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.19 2008-11-25 17:34:20-08 - - $"
+d81 1
+a81 1
+.DS
+d83 1
+a83 1
+tab(|); cw(222p)fBI cw(222p)fBI, l l.
+@
+
+
+1.19
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.18 2008-11-25 17:32:34-08 - - $"
+d76 5
+a80 7
+The course will proceed along two parallel tracks,
+each of which will occupy about half of the lecture time.
+One track will consist of programming language features and paradigms,
+and the other will be a detailed discussion of some specific
+programming languages.
+The following topics will be covered in the principles and practice
+parts of the course\(::
+d83 1
+a83 1
+allbox tab(|); cw(222p)fBI cw(222p)fBI, l l.
+@
+
+
+1.18
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.17 2007-12-20 18:57:00-08 - - $"
+a6 1
+.P
+a7 1
+.P
+a64 1
+.P
+a65 1
+.P
+a74 1
+.P
+a75 1
+.P
+@
+
+
+1.17
+log
+@-
+@
+text
+@d4 2
+a5 2
+.RCS "$Id: syllabus-cmps112.mm,v 1.16 2007-12-20 18:55:48-08 - - $"
+.TITLE CMPS-112 Winter\~2008 Syllabus \
+@
+
+
+1.16
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.15 2007-12-20 18:54:18-08 - - $"
+d110 1
+a110 1
+Functional programming in a typed and untyped language
+d124 1
+a124 1
+for rapid development.
+d127 1
+a127 1
+in order to pad your resume.
+d130 1
+a130 1
+a statically typed functional language.
+d133 1
+a133 1
+a dynamically typed functional language.
+d136 1
+a136 1
+a logic language.
+@
+
+
+1.15
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.14 2007-12-20 18:53:13-08 - - $"
+d91 1
+a91 1
+allbox tab(|); lw(3i) lw(3i).
+@
+
+
+1.14
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.13 2007-12-20 18:51:57-08 - - $"
+d96 1
+a96 1
+.ALX 1 () "" 0
+d121 1
+a121 1
+.ALX 1 () "" 0
+a136 1
+This is the 6% language.
+@
+
+
+1.13
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.12 2007-12-20 18:51:04-08 - - $"
+d91 1
+a91 1
+tab(|); lw(3i) lw(3i).
+d95 1
+d120 1
+@
+
+
+1.12
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.11 2007-12-20 18:50:52-08 - - $"
+d91 1
+a91 1
+tab(|); l l.
+a118 1
+course\(::
+@
+
+
+1.11
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.10 2007-12-20 18:48:19-08 - - $"
+d138 1
+@
+
+
+1.10
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.9 2007-12-20 18:47:11-08 - - $"
+d87 8
+a94 3
+The following topics will be covered in the principles part of the
+course\(::
+.P
+d117 2
+a118 2
+.P
+The following languages will be covered in the practice part of the
+d138 2
+@
+
+
+1.9
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.8 2007-12-20 18:45:55-08 - - $"
+d136 5
+@
+
+
+1.8
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.7 2007-12-20 18:42:06-08 - - $"
+d133 1
+a133 9
+.\".P
+.\".nr colsep \w'm'*2
+.\".nr colwid (\n[@@ll]u-\n[colsep]u)/2
+.\".MULB \n[colwid]u \n[colsep]u \n[colwid]u
+.\".if n .SA 0
+.\".if n .nr Hy 0
+.\".if n .hy \n[Hy]
+.\".P
+.\".MULE
+d135 2
+@
+
+
+1.7
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.6 2007-12-20 18:41:36-08 - - $"
+d44 1
+a44 1
+See the secion on cheating in the generic part of the syllabus.
+d87 2
+a88 1
+The following topics will be covered\(::
+d90 1
+a90 1
+.AL 1 "" 1
+d112 21
+@
+
+
+1.6
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.5 2007-12-20 18:39:10-08 - - $"
+d64 1
+a64 1
+Tests & exam(:):|2 ×|13% +|24% =|50%
+@
+
+
+1.5
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.4 2007-12-20 18:38:27-08 - - $"
+d62 3
+a64 3
+tab(|); l r r r r r r r.
+Programs\(:)|4|×|11%|+|6%|=|50%
+Tests & exam(:):|2|×|13%|+|24%|=|50%
+@
+
+
+1.4
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.3 2007-12-20 18:37:18-08 - - $"
+d62 1
+a62 1
+tab(|); l r0 r0 r0 r0 r0 r0 r.
+@
+
+
+1.3
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 1.2 2007-12-10 14:16:11-08 - - $"
+d15 1
+a15 1
+.B=LI "Course Directory\|:"
+d20 1
+a20 1
+.B=LI "Newsgroup\|:"
+d27 1
+a27 1
+.B=LI "Assignments\|:"
+d36 1
+a36 1
+.B=LI "Due Dates\|:"
+d42 1
+a42 1
+.B=LI "Cheating\|:"
+d45 3
+a47 3
+.B=LI "Textbook\|:"
+Louden, Kenneth\|:
+.E= "Programming Languages\|:"
+d53 1
+a53 1
+.B=LI "Grades\|:"
+d59 1
+a59 1
+following allocation of points\|:
+d77 1
+a77 1
+Prerequisites\|:
+d87 1
+a87 1
+The following topics will be covered\|:
+@
+
+
+1.2
+log
+@-
+@
+text
+@d4 3
+a6 2
+.RCS "$Id: syllabus-cmps112.mm,v 1.1 2007-12-10 14:15:28-08 - - $"
+.TITLE cmps112 2008\~Winter Syllabus "Comparative Programming Languages"
+d17 1
+a17 1
+.BR /afs/cats.ucsc.edu/courses/cmps112\-wm/
+d22 1
+a22 1
+.BR ucsc.class.cmps112
+d30 1
+a30 1
+.RB ( unix.ic )
+d34 1
+a34 1
+.BR README
+d38 1
+a38 1
+.BR README
+d41 1
+a41 1
+.BR README .
+d62 3
+a64 3
+tab(`); l r0 r0 r0 r0 r0 r0 r.
+Programs\|:`4`\|×\|`11%`\|+\|`6%`\|\|=\|\|`50%
+Tests & exam\|:`2`\|×\|`13%`\|+\|`24%`\|\|=\|\|`50%
+@
+
+
+1.1
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: syllabus-cmps112.mm,v 359.2 2005-12-15 14:36:23-08 - - $"
+a5 3
+.EQ
+delim $$
+.EN
+@

@@ -1,0 +1,1 @@
+("6.1" ("37cf0d66f9ff5ff2e438a20d3d10e1fe917a835a" . "a6b396299fccf959313b7e2604c20214043f09c2") (collects #"net" #"dns-sig.rkt") (collects #"racket" #"unit.rkt") (collects #"net" #"dns.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

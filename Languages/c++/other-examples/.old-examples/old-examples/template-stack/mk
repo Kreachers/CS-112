@@ -1,0 +1,8 @@
+#!/bin/sh -x
+# $Id: mk,v 360.3 2006-02-02 14:42:06-08 - - $
+rm -r SunWS_cache
+cid + *.h *.cc $0
+ls -la
+CC -g *.cc -o testit
+testit * 2>&1 | tee testit.output
+bcheck -leaks testit * 2>&1 | tee testit.bcheck.output

@@ -1,0 +1,1 @@
+("6.1" ("fe4cf2504cceb77dad3d02baca12070816dc54c3" . "235625586f8e894dda743b1872d2425f5d39a42a") (collects #"htdp" #"arrow-gui.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

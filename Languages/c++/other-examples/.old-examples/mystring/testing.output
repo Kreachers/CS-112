@@ -1,0 +1,209 @@
+Running testing
+$Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:26: mystring s1;
+mystring::mystring():
+(mystring*)@ffbef65c -> 
+        dim=128
+        len=0
+        buf@69278 -> []
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:27: mystring s2 = "testing from char*";
+mystring::mystring(const char*):
+(mystring*)@ffbef64c -> 
+        dim=19
+        len=18
+        buf@68158 -> [testing from char*]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:28: mystring s3 = s2;
+mystring::mystring(const mystring&):
+(mystring*)@ffbef63c -> 
+        dim=19
+        len=18
+        buf@68178 -> [testing from char*]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:29: s1 = s3;
+mystring& mystring::operator=(const mystring&):
+(mystring*)@ffbef65c -> 
+        dim=128
+        len=18
+        buf@69278 -> [testing from char*]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:30: s2 += s3;
+mystring& mystring::operator+=(const mystring&):
+(mystring*)@ffbef64c -> 
+        dim=37
+        len=36
+        buf@69328 -> [testing from char*testing from char*]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:31: s2 += s3;
+mystring& mystring::operator+=(const mystring&):
+(mystring*)@ffbef64c -> 
+        dim=55
+        len=54
+        buf@69358 -> [testing from char*testing from char*testing from char*]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:32: cout << "s2.size = " << s2.size() << endl;
+s2.size = 54
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:33: mystring s4(10);
+mystring::mystring(int):
+(mystring*)@ffbef62c -> 
+        dim=11
+        len=10
+        buf@693a0 -> []
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:34: s4 += "foo";
+mystring::mystring(const char*):
+(mystring*)@ffbef61c -> 
+        dim=4
+        len=3
+        buf@68d08 -> [foo]
+mystring& mystring::operator+=(const mystring&):
+(mystring*)@ffbef62c -> 
+        dim=14
+        len=3
+        buf@693b8 -> [foo]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:35: s4 += "bar";
+mystring::mystring(const char*):
+(mystring*)@ffbef60c -> 
+        dim=4
+        len=3
+        buf@68d18 -> [bar]
+mystring& mystring::operator+=(const mystring&):
+(mystring*)@ffbef62c -> 
+        dim=14
+        len=6
+        buf@693b8 -> [foobar]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:36: s4 += "baz";
+mystring::mystring(const char*):
+(mystring*)@ffbef5fc -> 
+        dim=4
+        len=3
+        buf@68d28 -> [baz]
+mystring& mystring::operator+=(const mystring&):
+(mystring*)@ffbef62c -> 
+        dim=14
+        len=9
+        buf@693b8 -> [foobarbaz]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:37: mystring* ptr = new mystring( "new mystring" );
+mystring::mystring(const char*):
+(mystring*)@693a0 -> 
+        dim=13
+        len=12
+        buf@693d0 -> [new mystring]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:38: delete ptr; ptr = 0;
+mystring::~mystring():
+(mystring*)@693a0 -> 
+        dim=13
+        len=12
+        buf@693d0 -> [new mystring]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:39: mystring* leak1 = new mystring( rcsid );
+mystring::mystring(const char*):
+(mystring*)@693a0 -> 
+        dim=56
+        len=55
+        buf@699a0 -> [$Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:40: mystring* leak2 = new mystring( *leak1 );
+mystring::mystring(const mystring&):
+(mystring*)@693d0 -> 
+        dim=56
+        len=55
+        buf@699e0 -> [$Id: teststring.cc,v 330.6 2003-01-23 20:56:51-08 - - $]
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:41: int* leak3 = new int[1024];
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:42: int* leak4 = new int[1024];
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:43: mystring* leak5 = new mystring(1<<16);
+mystring::mystring(int):
+(mystring*)@693e8 -> 
+        dim=65537
+        len=65536
+        buf@6ba30 -> []
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+DEBUG: teststring.cc:44: mystring* leak6 = new mystring();
+mystring::mystring():
+(mystring*)@69400 -> 
+        dim=128
+        len=0
+        buf@7ba40 -> []
+------------------------------------------------------------------------
+mystring::~mystring():
+(mystring*)@ffbef5fc -> 
+        dim=4
+        len=3
+        buf@68d28 -> [baz]
+mystring::~mystring():
+(mystring*)@ffbef60c -> 
+        dim=4
+        len=3
+        buf@68d18 -> [bar]
+mystring::~mystring():
+(mystring*)@ffbef61c -> 
+        dim=4
+        len=3
+        buf@68d08 -> [foo]
+mystring::~mystring():
+(mystring*)@ffbef62c -> 
+        dim=14
+        len=9
+        buf@693b8 -> [foobarbaz]
+mystring::~mystring():
+(mystring*)@ffbef63c -> 
+        dim=19
+        len=18
+        buf@68178 -> [testing from char*]
+mystring::~mystring():
+(mystring*)@ffbef64c -> 
+        dim=55
+        len=54
+        buf@69358 -> [testing from char*testing from char*testing from char*]
+mystring::~mystring():
+(mystring*)@ffbef65c -> 
+        dim=128
+        len=18
+        buf@69278 -> [testing from char*]

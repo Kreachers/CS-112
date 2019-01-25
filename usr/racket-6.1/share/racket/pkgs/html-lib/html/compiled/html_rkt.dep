@@ -1,0 +1,1 @@
+("6.1" ("41b2e8c1c90af6ac8289de0df5a77be5d7d80283" . "7f63b90d1e2099e5e720535b8c88cb7f13d3f9b1") (collects #"racket" #"contract.rkt") (collects #"xml" #"main.rkt") (collects #"html" #"sgml-reader.rkt") (collects #"html" #"html-spec.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"html" #"html-structs.rkt") (collects #"racket" #"base.rkt"))

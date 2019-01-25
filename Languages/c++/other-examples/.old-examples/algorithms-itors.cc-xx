@@ -1,0 +1,30 @@
+// $Id: algorithms-itors.cc,v 320.1 2002-01-28 14:10:10-08 - - $
+//
+// This program illustrates the use of iterators to help the
+// STL's algorithms have access to data structures.  By means
+// of a vector and iterators on vector and streams, it does:
+//
+//  1. uses copy to read integers from cin into a vector.
+//  2. uses the STL sort.
+//  3. uses copy to print the integers in order.
+//
+
+#include <algorithm>
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main( int argc, char **argv ){
+   vector<int> vec;
+   istream_iterator< int > start( cin );
+   istream_iterator< int > end;
+   back_insert_iterator< vector<int> > dest( vec );
+   copy( start, end, dest );
+   sort( vec.begin(), vec.end() );
+   copy( vec.begin(), vec.end(),
+         ostream_iterator<int>( cout, "\n" ));
+   return EXIT_SUCCESS;
+};

@@ -1,0 +1,2661 @@
+head	1.124;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.124
+date	2017.11.13.20.52.25;	author -;	state -;
+branches;
+next	1.123;
+
+1.123
+date	2017.11.08.23.56.49;	author -;	state -;
+branches;
+next	1.122;
+
+1.122
+date	2017.11.08.21.55.03;	author -;	state -;
+branches;
+next	1.121;
+
+1.121
+date	2017.11.07.21.47.00;	author -;	state -;
+branches;
+next	1.120;
+
+1.120
+date	2017.11.03.21.00.55;	author -;	state -;
+branches;
+next	1.119;
+
+1.119
+date	2017.10.19.20.46.17;	author -;	state -;
+branches;
+next	1.118;
+
+1.118
+date	2017.10.18.20.35.10;	author -;	state -;
+branches;
+next	1.117;
+
+1.117
+date	2017.10.12.20.43.42;	author -;	state -;
+branches;
+next	1.116;
+
+1.116
+date	2017.10.09.20.37.43;	author -;	state -;
+branches;
+next	1.115;
+
+1.115
+date	2017.09.29.19.27.54;	author -;	state -;
+branches;
+next	1.114;
+
+1.114
+date	2017.09.27.19.12.08;	author -;	state -;
+branches;
+next	1.113;
+
+1.113
+date	2017.09.26.20.15.08;	author -;	state -;
+branches;
+next	1.112;
+
+1.112
+date	2017.09.26.20.00.07;	author -;	state -;
+branches;
+next	1.111;
+
+1.111
+date	2017.09.25.21.37.08;	author -;	state -;
+branches;
+next	1.110;
+
+1.110
+date	2017.09.22.22.07.19;	author -;	state -;
+branches;
+next	1.109;
+
+1.109
+date	2017.09.18.20.48.28;	author -;	state -;
+branches;
+next	1.108;
+
+1.108
+date	2017.09.18.20.47.23;	author -;	state -;
+branches;
+next	1.107;
+
+1.107
+date	2017.09.14.21.12.33;	author -;	state -;
+branches;
+next	1.106;
+
+1.106
+date	2017.09.14.21.02.03;	author -;	state -;
+branches;
+next	1.105;
+
+1.105
+date	2017.09.14.20.44.44;	author -;	state -;
+branches;
+next	1.104;
+
+1.104
+date	2017.09.14.20.35.11;	author -;	state -;
+branches;
+next	1.103;
+
+1.103
+date	2017.08.29.22.08.08;	author -;	state -;
+branches;
+next	1.102;
+
+1.102
+date	2017.08.29.22.07.19;	author -;	state -;
+branches;
+next	1.101;
+
+1.101
+date	2017.08.29.21.19.12;	author -;	state -;
+branches;
+next	1.100;
+
+1.100
+date	2017.08.21.23.50.59;	author -;	state -;
+branches;
+next	1.99;
+
+1.99
+date	2017.08.21.23.49.38;	author -;	state -;
+branches;
+next	1.98;
+
+1.98
+date	2017.08.21.23.47.01;	author -;	state -;
+branches;
+next	1.97;
+
+1.97
+date	2017.08.21.21.46.40;	author -;	state -;
+branches;
+next	1.96;
+
+1.96
+date	2017.08.21.21.45.47;	author -;	state -;
+branches;
+next	1.95;
+
+1.95
+date	2017.08.21.21.45.34;	author -;	state -;
+branches;
+next	1.94;
+
+1.94
+date	2017.08.21.21.45.01;	author -;	state -;
+branches;
+next	1.93;
+
+1.93
+date	2017.08.21.21.43.03;	author -;	state -;
+branches;
+next	1.92;
+
+1.92
+date	2017.08.21.21.42.36;	author -;	state -;
+branches;
+next	1.91;
+
+1.91
+date	2017.08.21.21.40.55;	author -;	state -;
+branches;
+next	1.90;
+
+1.90
+date	2017.08.21.21.40.35;	author -;	state -;
+branches;
+next	1.89;
+
+1.89
+date	2017.08.21.21.40.19;	author -;	state -;
+branches;
+next	1.88;
+
+1.88
+date	2017.08.21.21.39.50;	author -;	state -;
+branches;
+next	1.87;
+
+1.87
+date	2017.08.21.21.37.10;	author -;	state -;
+branches;
+next	1.86;
+
+1.86
+date	2017.08.21.21.20.22;	author -;	state -;
+branches;
+next	1.85;
+
+1.85
+date	2017.08.21.21.20.11;	author -;	state -;
+branches;
+next	1.84;
+
+1.84
+date	2017.06.16.01.11.52;	author -;	state -;
+branches;
+next	1.83;
+
+1.83
+date	2017.06.08.21.14.29;	author -;	state -;
+branches;
+next	1.82;
+
+1.82
+date	2017.05.30.19.37.08;	author -;	state -;
+branches;
+next	1.81;
+
+1.81
+date	2017.05.24.23.33.52;	author -;	state -;
+branches;
+next	1.80;
+
+1.80
+date	2017.05.24.21.26.07;	author -;	state -;
+branches;
+next	1.79;
+
+1.79
+date	2017.05.24.21.25.34;	author -;	state -;
+branches;
+next	1.78;
+
+1.78
+date	2017.05.23.20.14.48;	author -;	state -;
+branches;
+next	1.77;
+
+1.77
+date	2017.05.11.20.20.22;	author -;	state -;
+branches;
+next	1.76;
+
+1.76
+date	2017.05.10.21.55.50;	author -;	state -;
+branches;
+next	1.75;
+
+1.75
+date	2017.05.05.21.12.26;	author -;	state -;
+branches;
+next	1.74;
+
+1.74
+date	2017.04.19.19.31.19;	author -;	state -;
+branches;
+next	1.73;
+
+1.73
+date	2017.04.10.22.06.38;	author -;	state -;
+branches;
+next	1.72;
+
+1.72
+date	2017.04.07.23.05.35;	author -;	state -;
+branches;
+next	1.71;
+
+1.71
+date	2017.04.07.23.05.28;	author -;	state -;
+branches;
+next	1.70;
+
+1.70
+date	2017.04.05.20.00.11;	author -;	state -;
+branches;
+next	1.69;
+
+1.69
+date	2017.04.04.22.52.35;	author -;	state -;
+branches;
+next	1.68;
+
+1.68
+date	2017.04.04.21.16.33;	author -;	state -;
+branches;
+next	1.67;
+
+1.67
+date	2017.04.03.22.00.00;	author -;	state -;
+branches;
+next	1.66;
+
+1.66
+date	2017.04.03.20.23.00;	author -;	state -;
+branches;
+next	1.65;
+
+1.65
+date	2017.04.03.19.52.42;	author -;	state -;
+branches;
+next	1.64;
+
+1.64
+date	2017.03.29.00.12.07;	author -;	state -;
+branches;
+next	1.63;
+
+1.63
+date	2016.12.07.21.02.45;	author -;	state -;
+branches;
+next	1.62;
+
+1.62
+date	2016.12.01.20.36.49;	author -;	state -;
+branches;
+next	1.61;
+
+1.61
+date	2016.11.28.23.32.18;	author -;	state -;
+branches;
+next	1.60;
+
+1.60
+date	2016.11.15.21.32.00;	author -;	state -;
+branches;
+next	1.59;
+
+1.59
+date	2016.11.14.22.09.36;	author -;	state -;
+branches;
+next	1.58;
+
+1.58
+date	2016.11.10.00.40.57;	author -;	state -;
+branches;
+next	1.57;
+
+1.57
+date	2016.11.03.23.52.51;	author -;	state -;
+branches;
+next	1.56;
+
+1.56
+date	2016.10.28.20.27.41;	author -;	state -;
+branches;
+next	1.55;
+
+1.55
+date	2016.10.28.20.27.11;	author -;	state -;
+branches;
+next	1.54;
+
+1.54
+date	2016.10.12.21.00.26;	author -;	state -;
+branches;
+next	1.53;
+
+1.53
+date	2016.10.10.19.14.53;	author -;	state -;
+branches;
+next	1.52;
+
+1.52
+date	2016.09.30.23.20.29;	author -;	state -;
+branches;
+next	1.51;
+
+1.51
+date	2016.09.30.21.47.51;	author -;	state -;
+branches;
+next	1.50;
+
+1.50
+date	2016.09.30.20.14.27;	author -;	state -;
+branches;
+next	1.49;
+
+1.49
+date	2016.09.28.20.19.03;	author -;	state -;
+branches;
+next	1.48;
+
+1.48
+date	2016.09.28.19.54.18;	author -;	state -;
+branches;
+next	1.47;
+
+1.47
+date	2016.09.20.20.23.05;	author -;	state -;
+branches;
+next	1.46;
+
+1.46
+date	2016.09.20.00.35.19;	author -;	state -;
+branches;
+next	1.45;
+
+1.45
+date	2016.09.20.00.35.09;	author -;	state -;
+branches;
+next	1.44;
+
+1.44
+date	2016.09.20.00.34.05;	author -;	state -;
+branches;
+next	1.43;
+
+1.43
+date	2016.09.20.00.33.32;	author -;	state -;
+branches;
+next	1.42;
+
+1.42
+date	2016.09.16.23.23.22;	author -;	state -;
+branches;
+next	1.41;
+
+1.41
+date	2016.09.14.22.02.53;	author -;	state -;
+branches;
+next	1.40;
+
+1.40
+date	2016.09.10.01.04.47;	author -;	state -;
+branches;
+next	1.39;
+
+1.39
+date	2016.09.09.21.39.35;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2016.09.09.21.18.26;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2016.09.08.23.03.17;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2016.09.08.23.01.38;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2016.09.08.23.00.18;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2016.09.08.21.58.43;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2016.09.08.21.51.14;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2016.09.08.20.09.26;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2016.09.08.18.58.17;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2016.09.06.20.25.01;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2016.09.06.20.24.50;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2016.09.01.20.53.46;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2016.08.30.01.41.32;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2016.08.29.23.57.56;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2016.06.21.23.48.23;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2016.06.21.23.44.03;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2016.06.21.23.43.36;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2016.06.21.23.43.00;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2016.06.21.23.42.37;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2016.06.21.23.39.43;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2015.12.10.21.52.59;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2015.12.03.19.55.54;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2015.12.03.19.55.41;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2015.11.30.21.40.19;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2015.11.19.03.11.29;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2015.11.16.19.35.10;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2015.11.13.00.11.15;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2015.10.30.19.35.04;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2015.10.29.20.56.09;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2015.10.13.20.06.30;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2015.10.03.01.31.02;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2015.09.26.00.35.47;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2015.09.24.21.47.13;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2015.09.23.23.37.42;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2015.09.23.23.33.54;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2015.09.23.00.41.38;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2015.09.22.01.14.26;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2015.09.22.01.13.23;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.09.22.01.09.59;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.124
+log
+@-
+@
+text
+@.
+. -------------------------------------------------------------------
+. CHEATING WILL NOT BE TOLERATED.  CHEATING IN ANY PART OF THE COURSE
+. MAY LEAD TO FAILING THE COURSE AND SUSPENSION OR DISMISSAL FROM THE
+. UNIVERSITY.  ALL STUDENTS SHALL READ THE UCSC ACADEMIC INTEGRITY
+. WEB PAGES:  https://www.ue.ucsc.edu/academic_misconduct
+. -------------------------------------------------------------------
+. Pair programming is permitted in this course.  Read details in
+. /afs/cats.ucsc.edu/courses/cmps112-wm/Syllabus/pair-programming/
+. -------------------------------------------------------------------
+.
+. Quarter:     Fall 2017
+. Course:      CMPS-112 - Comparative Programming Languages
+. Directory:   /afs/cats.ucsc.edu/courses/cmps112-wm/
+.              http://www2.ucsc.edu/courses/cmps112-wm/:/
+. Homework:    /afs/cats.ucsc.edu/class/cmps112-wm.f16/
+.              submit cmps112-wm.f16 ...
+. Piazza:      https://piazza.com/ucsc/fall2017/cmps112
+.
+. Instructor:  Wesley Mackey (mackey@@soe.ucsc.edu), 459-5322
+. Office.hrs:  Tue/Thu     2:30pm-- 4:00pm  E2/253
+. Lectures:    Tue/Thu     7:10pm-- 8:45pm  E&M/B206
+.
+. TA:    Muhammad Saber (mtsaber@@ucsc.edu)
+. TA:    Sara Sholes (ssholes@@ucsc.edu)
+. TA:    Shih-Ming Wang (swang150@@ucsc.edu)
+. Labs:  01A  Mon 09:00am--11:00am  JBE/105 Sara
+. Labs:  01B  Mon 02:00pm--04:00pm  JBE/105 Muhammad
+. Labs:  01C  Tue 02:00pm--04:00pm  JBE/105 Shih-Ming
+. Labs:  01E  Wed 05:00pm--07:00pm  JBE/105 Sara
+. Labs:  01F  Thu 09:00pm--11:00pm  JBE/105 Muhammad
+. Labs:  01G  Fri 04:00pm--06:00pm  JBE/105 Shih-Ming
+. http://its.ucsc.edu/computer-labs/class-schedules/spring/be105.html
+.
+. LSS tutor:    Shanee Dinay (sdinay@@ucsc.edu)
+. MSI website:  http://lss.ucsc.edu/programs/modified-supplemental-instruction/index.html
+. MSI schedule: https://eop.sa.ucsc.edu/msi/msischedule.cfm 
+.
+. You are required to have a Linux account in order to submit your
+. assignments.  All grading is done on the unix.ucsc.edu servers.
+.
+. COURSE INFORMATION:
+. Syllabus:      http:Syllabus/
+. Assignments:   http:Assignments/
+. Old-Exams:     http:Old-Exams/
+. Lecture-Notes: http:Lecture-notes/
+. Languages:     http:Languages/
+.
+. CLASS SCHEDULE AND DUE DATES:
+.
+# Mon Sep  4. Holiday - Labor Day.
+# Thu Sep 28. Begin instruction.
+# Wed Oct 18. End add/drop/swap.
+# Wed Nov  8. End withdraw.
+# Fri Nov 10. Holiday - Veterans.
+. Wed Nov 15. Priority enrollment.
+. Thu Nov 23. Holiday - Thanksgiving.
+. Fri Nov 24. Holiday - Thanksgiving.
+. Fri Dec  8. End instruction.
+. Wed Dec 20. Grades due.
+.
+# Fri Oct  6. LAB 0.         http:Assignments/lab0-intro-unix/
+# Tue Oct 17. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+# Thu Nov  2. ASG 2 DUE.     http:Assignments/asg2-ocaml-dc/
+. Mon Nov 20. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+. Wed Dec  6. ASG 4 DUE.     http:Assignments/asg4-prolog-flights/
+.
+# Tue Nov  7. MIDTERM TEST.  http:Old-Exams/
+. Tue Dec 12. FINAL EXAM.    http:Old-Exams/ 7:30pm--9:30pm
+.             NOTE:  The final exam will be 2 hours in duration.
+.             http://registrar.ucsc.edu/soc/final-examinations.html
+.
+. For the complete text, including deleted lines, see the files
+. README-all-cmps012b.*
+. $Id: Readme.all.cmps112.txt,v 1.123 2017-11-08 15:56:49-08 - - $
+@
+
+
+1.123
+log
+@-
+@
+text
+@d55 1
+a55 1
+. Fri Nov 10. Holiday - Veterans.
+d75 1
+a75 1
+. $Id: Readme.all.cmps112.txt,v 1.122 2017-11-08 13:55:03-08 - - $
+@
+
+
+1.122
+log
+@-
+@
+text
+@d54 1
+a54 1
+. Wed Nov  8. End withdraw.
+d75 1
+a75 1
+. $Id: Readme.all.cmps112.txt,v 1.121 2017-11-07 13:47:00-08 - - $
+@
+
+
+1.121
+log
+@-
+@
+text
+@d68 1
+a68 1
+. Tue Nov  7. MIDTERM TEST.  http:Old-Exams/
+d75 1
+a75 1
+. $Id: Readme.all.cmps112.txt,v 1.120 2017-11-03 14:00:55-07 - - $
+@
+
+
+1.120
+log
+@-
+@
+text
+@d56 1
+d66 1
+a66 1
+. Wed Dec  6. ASG 4 DUE.     http:Assignments/asg4-*
+d75 1
+a75 1
+. $Id: Readme.all.cmps112.txt,v 1.119 2017-10-19 13:46:17-07 - - $
+@
+
+
+1.119
+log
+@-
+@
+text
+@d63 2
+a64 2
+. Thu Nov  2. ASG 2 DUE.     http:Assignments/asg2-ocaml-dc/
+. Mon Nov 20. ASG 3 DUE.     http:Assignments/asg3-*
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.118 2017-10-18 13:35:10-07 - - $
+@
+
+
+1.118
+log
+@-
+@
+text
+@d53 1
+a53 1
+. Wed Oct 18. End add/drop/swap.
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.117 2017-10-12 13:43:42-07 - - $
+@
+
+
+1.117
+log
+@-
+@
+text
+@d62 1
+a62 1
+. Tue Oct 17. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.116 2017-10-09 13:37:43-07 - - $
+@
+
+
+1.116
+log
+@-
+@
+text
+@d63 1
+a63 1
+. Thu Nov  2. ASG 2 DUE.     http:Assignments/asg2-*
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.115 2017-09-29 12:27:54-07 - - $
+@
+
+
+1.115
+log
+@-
+@
+text
+@d61 1
+a61 1
+. Fri Oct  6. LAB 0.         http:Assignments/lab0-intro-unix/
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.114 2017-09-27 12:12:08-07 - - $
+@
+
+
+1.114
+log
+@-
+@
+text
+@d52 1
+a52 1
+. Thu Sep 28. Begin instruction.
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.113 2017-09-26 13:15:08-07 - - $
+@
+
+
+1.113
+log
+@-
+@
+text
+@d21 1
+a21 1
+. Office.hrs:  Mon/Wed     2:30pm-- 4:00pm  E2/253
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.112 2017-09-26 13:00:07-07 - - $
+@
+
+
+1.112
+log
+@-
+@
+text
+@d69 1
+a70 1
+.             Note:  The final exam will be 2 hours in duration.
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.111 2017-09-25 14:37:08-07 - - $
+@
+
+
+1.111
+log
+@-
+@
+text
+@d68 1
+a68 1
+. Tue Dec 12. FINAL EXAM.    http:Old-Exams/ 7:30pm--10:30pm
+d70 1
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.110 2017-09-22 15:07:19-07 - - $
+@
+
+
+1.110
+log
+@-
+@
+text
+@d27 6
+a32 7
+. Labs:  01A  Mon 09:00am--11:00am  JBE/105
+. Labs:  01B  Mon 02:00pm--04:00pm  JBE/105
+. Labs:  01C  Tue 02:00pm--04:00pm  JBE/105
+. Labs:  01D  Tue 06:00pm--08:00pm  JBE/105 ***to be cancelled***
+. Labs:  01E  Wed 05:00pm--07:00pm  JBE/105
+. Labs:  01F  Thu 04:00pm--06:00pm  JBE/105
+. Labs:  01G  Fri 04:00pm--06:00pm  JBE/105
+d73 1
+a73 1
+. $Id: Readme.all.cmps112.txt,v 1.109 2017-09-18 13:48:28-07 - - $
+@
+
+
+1.109
+log
+@-
+@
+text
+@a33 1
+. Labs:  ???  Thu? 9:00pm--11:00pm  JBE/105 ???to be added???
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.108 2017-09-18 13:47:23-07 - - $
+@
+
+
+1.108
+log
+@-
+@
+text
+@d37 3
+a39 2
+. LSS tutor:   Shanee Dinay (sdinay@@ucsc.edu)
+. LSS signup:  https://eop.sa.ucsc.edu/OTSS/tutorsignup/
+d75 1
+a75 1
+. $Id: Readme.all.cmps112.txt,v 1.107 2017-09-14 14:12:33-07 - - $
+@
+
+
+1.107
+log
+@-
+@
+text
+@d37 1
+a37 1
+. LSS tutor:
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.106 2017-09-14 14:02:03-07 - - $
+@
+
+
+1.106
+log
+@-
+@
+text
+@d22 1
+a22 1
+. Lectures:    Mon/Wed     7:10pm-- 8:45pm  JBA/101
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.105 2017-09-14 13:44:44-07 - - $
+@
+
+
+1.105
+log
+@-
+@
+text
+@d24 3
+a26 3
+. TA:
+. TA:
+. TA:
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.104 2017-09-14 13:35:11-07 - - $
+@
+
+
+1.104
+log
+@-
+@
+text
+@d30 1
+a30 1
+. Labs:  01D  Tue 06:00pm--08:00pm  JBE/105
+d34 1
+d74 1
+a74 1
+. $Id: Readme.all.cmps112.txt,v 1.103 2017-08-29 15:08:08-07 - - $
+@
+
+
+1.103
+log
+@-
+@
+text
+@d12 1
+a12 1
+. Quarter:     Fall 2016
+d18 1
+a18 1
+. Piazza:      https://piazza.com/ucsc/fall2016/cmps112
+d51 1
+a51 1
+. Mon Sep  4. Holiday - Labor Day.
+d73 1
+a73 1
+. $Id: Readme.all.cmps112.txt,v 1.102 2017-08-29 15:07:19-07 - - $
+@
+
+
+1.102
+log
+@-
+@
+text
+@d46 1
+a46 1
+. Lecture-Notes: http:Lecture-Notes/
+d73 1
+a73 1
+. $Id: Readme.all.cmps112.txt,v 1.101 2017-08-29 14:19:12-07 - - $
+@
+
+
+1.101
+log
+@-
+@
+text
+@d43 5
+a47 3
+. Syllabus:    http:Syllabus/
+. Assignments: http:Assignments/
+. Old-Exams:   http:Old-Exams/
+d73 1
+a73 1
+. $Id: Readme.all.cmps112.txt,v 1.100 2017-08-21 16:50:59-07 - - $
+@
+
+
+1.100
+log
+@-
+@
+text
+@d49 1
+d71 1
+a71 1
+. $Id: Readme.all.cmps112.txt,v 1.99 2017-08-21 16:49:38-07 - - $
+@
+
+
+1.99
+log
+@-
+@
+text
+@d52 3
+a54 3
+. Fri Nov 10. Holiday.
+. Thu Nov 23. Holiday.
+. Fri Nov 24. Holiday.
+d70 1
+a70 1
+. $Id: Readme.all.cmps112.txt,v 1.98 2017-08-21 16:47:01-07 - - $
+@
+
+
+1.98
+log
+@-
+@
+text
+@d50 2
+d59 1
+a59 1
+. Tue Oct 17. ASG 1 DUE.     http:Assignments/asg1-*
+d70 1
+a70 1
+. $Id: Readme.all.cmps112.txt,v 1.97 2017-08-21 14:46:40-07 - - $
+@
+
+
+1.97
+log
+@-
+@
+text
+@d54 1
+d68 1
+a68 1
+. $Id: Readme.all.cmps112.txt,v 1.96 2017-08-21 14:45:47-07 - - $
+@
+
+
+1.96
+log
+@-
+@
+text
+@d56 1
+a56 1
+. Tue Oct 17. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+d58 1
+a58 1
+. Mon Nov 20. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.95 2017-08-21 14:45:34-07 - - $
+@
+
+
+1.95
+log
+@-
+@
+text
+@d56 1
+a56 1
+. Tue Oct 17. ASG 1 DUE.     http:Assignments/asg1-*
+d58 1
+a58 1
+. Mon Nov 20. ASG 3 DUE.     http:Assignments/asg3-*
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.94 2017-08-21 14:45:01-07 - - $
+@
+
+
+1.94
+log
+@-
+@
+text
+@d56 1
+a56 1
+. Tue Oct 17. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+d58 1
+a58 1
+. Mon Nov 20. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.93 2017-08-21 14:43:03-07 - - $
+@
+
+
+1.93
+log
+@-
+@
+text
+@d56 1
+a56 1
+. Tue Oct 17. ASG 1 DUE.     http:Assignments/asg1-*
+d58 1
+a58 1
+. Mon Nov 20. ASG 3 DUE.     http:Assignments/asg3-*
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.92 2017-08-21 14:42:36-07 - - $
+@
+
+
+1.92
+log
+@-
+@
+text
+@d55 1
+a55 1
+. Fri Oct  6. LAB 0.         http:Assignments/lab0-*
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.91 2017-08-21 14:40:55-07 - - $
+@
+
+
+1.91
+log
+@-
+@
+text
+@d55 5
+a59 5
+. Fri Oct  6. LAB 0.         http:Assignments/lab0-intro-unix/
+. Tue Oct 17. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+. Thu Nov  2. ASG 2 DUE.     http:Assignments/asg2-ocaml-dc/
+. Mon Nov 20. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+. Wed Dec  6. ASG 4 DUE.     http:Assignments/asg4-prolog-flights/
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.90 2017-08-21 14:40:35-07 - - $
+@
+
+
+1.90
+log
+@-
+@
+text
+@d56 1
+a56 1
+# Tue Apr 18. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.89 2017-08-21 14:40:19-07 - - $
+@
+
+
+1.89
+log
+@-
+@
+text
+@d57 1
+a57 1
+# Thu May  4. ASG 2 DUE.     http:Assignments/asg2-ocaml-dc/
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.88 2017-08-21 14:39:50-07 - - $
+@
+
+
+1.88
+log
+@-
+@
+text
+@d58 1
+a58 1
+# Mon May 22. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.87 2017-08-21 14:37:10-07 - - $
+@
+
+
+1.87
+log
+@-
+@
+text
+@d49 7
+a55 4
+# Mon Apr  3. Begin instruction.
+# Mon May 29. Holiday.
+#
+# Fri Apr  7. LAB 0.         http:Assignments/lab0-intro-unix/
+d59 3
+a61 3
+# Wed Jun  7. ASG 4 DUE.     http:Assignments/asg4-prolog-flights/
+#
+# Wed May 10. MIDTERM TEST.  http:Old-Exams/
+d67 1
+a67 1
+. $Id: Readme.all.cmps112.txt,v 1.86 2017-08-21 14:20:22-07 - - $
+@
+
+
+1.86
+log
+@-
+@
+text
+@d59 2
+a60 2
+# Wed Jun 14. FINAL EXAM.    http:Old-Exams/ 7:30pm--10:30pm
+#             http://registrar.ucsc.edu/soc/final-examinations.html
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.85 2017-08-21 14:20:11-07 - - $
+@
+
+
+1.85
+log
+@-
+@
+text
+@d36 1
+a36 1
+. LSS tutor:   Luke Shepherd (lshepher@@ucsc.edu)
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.84 2017-06-15 18:11:52-07 - - $
+@
+
+
+1.84
+log
+@-
+@
+text
+@d24 11
+a34 11
+. TA:          Sara Sholes (ssholes@@ucsc.edu)
+. TA:          Anuradha Talur (atalur@@ucsc.edu)
+. TA:          Vedang Joshi (vrjoshi@@ucsc.edu)
+. Labs:  01A  Mon 11:00am--01:00pm  JBE/105  Sara
+. Labs:  01A  Mon 11:00am--12:15pm  JBE/105  Anuradha
+. Labs:  01B  Tue 01:15pm--03:00pm  JBE/105  Anuradha
+. Labs:  01B  Tue 01:15pm--03:00pm  JBE/105  Vedang
+. Labs:  01C  Wed 03:00pm--05:00pm  JBE/105  Sara
+. Labs:  01C  Wed 04:15pm--05:00pm  JBE/105  Anuradha
+. Labs:  01D  Thu 09:00am--11:00am  JBE/105  Vedang
+. http://its.ucsc.edu/computer-labs/class-schedules/fall/be105.html
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.83 2017-06-08 14:14:29-07 - - $
+@
+
+
+1.83
+log
+@-
+@
+text
+@d57 1
+a57 1
+.
+d59 2
+a60 2
+. Wed Jun 14. FINAL EXAM.    http:Old-Exams/ 7:30pm--10:30pm
+.             http://registrar.ucsc.edu/soc/final-examinations.html
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.82 2017-05-30 12:37:08-07 - - $
+@
+
+
+1.82
+log
+@-
+@
+text
+@d56 1
+a56 1
+. Wed Jun  7. ASG 4 DUE.     http:Assignments/asg4-prolog-flights/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.81 2017-05-24 16:33:52-07 - - $
+@
+
+
+1.81
+log
+@-
+@
+text
+@d50 2
+a51 2
+. Mon May 29. Holiday.
+.
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.80 2017-05-24 14:26:07-07 - - $
+@
+
+
+1.80
+log
+@-
+@
+text
+@d29 2
+a30 1
+. Labs:  01B  Tue 01:15pm--03:00pm  JBE/105  Anuradha & Vedang
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.79 2017-05-24 14:25:34-07 - - $
+@
+
+
+1.79
+log
+@-
+@
+text
+@d27 6
+a32 6
+. Labs:        01A  Mon 11:00am--01:00pm  JBE/105  Sara
+. Labs:        01A  Mon 11:00am--12:15pm  JBE/105  Anuradha
+.              01B  Tue 01:15pm--03:00pm  JBE/105  Anuradha & Vedang
+.              01C  Wed 03:00pm--05:00pm  JBE/105  Sara
+.              01C  Wed 04:15pm--05:00pm  JBE/105  Anuradha
+.              01D  Thu 09:00am--11:00am  JBE/105  Vedang
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.78 2017-05-23 13:14:48-07 - - $
+@
+
+
+1.78
+log
+@-
+@
+text
+@d28 1
+d30 2
+a31 1
+.              01C  Wed 03:00pm--05:00pm  JBE/105  Anuradha & Sara
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.77 2017-05-11 13:20:22-07 - - $
+@
+
+
+1.77
+log
+@-
+@
+text
+@d52 2
+a53 2
+. Mon May 22. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+. Wed Jun  7. ASG 4 DUE.     http:Assignments/asg4-*
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.76 2017-05-10 14:55:50-07 - - $
+@
+
+
+1.76
+log
+@-
+@
+text
+@d55 1
+a55 1
+. Wed May 10. MIDTERM TEST.  http:Old-Exams/
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.75 2017-05-05 14:12:26-07 - - $
+@
+
+
+1.75
+log
+@-
+@
+text
+@d52 1
+a52 1
+. Mon May 22. ASG 3 DUE.     http:Assignments/asg3-*
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.74 2017-04-19 12:31:19-07 - - $
+@
+
+
+1.74
+log
+@-
+@
+text
+@d51 1
+a51 1
+. Thu May  4. ASG 2 DUE.     http:Assignments/asg2-ocaml-dc/
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.73 2017-04-10 15:06:38-07 - - $
+@
+
+
+1.73
+log
+@-
+@
+text
+@d50 1
+a50 1
+. Tue Apr 18. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.72 2017-04-07 16:05:35-07 - - $
+@
+
+
+1.72
+log
+@-
+@
+text
+@d49 1
+a49 1
+. Fri Apr  7. LAB 0.         http:Assignments/lab0-intro-unix/
+d51 1
+a51 1
+. Thu May  4. ASG 2 DUE.     http:Assignments/asg2-*
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.71 2017-04-07 16:05:28-07 - - $
+@
+
+
+1.71
+log
+@-
+@
+text
+@d50 1
+a50 1
+. Tue Apr 18. ASG 1 DUE.     http:Assignments/asg1-*
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.70 2017-04-05 13:00:11-07 - - $
+@
+
+
+1.70
+log
+@-
+@
+text
+@d50 4
+a53 4
+. Tue Apr 18. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+. Thu May  4. ASG 2 DUE.     http:Assignments/asg2-ocaml-dc/
+. Mon May 22. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+. Wed Jun  7. ASG 4 DUE.     http:Assignments/asg4-prolog-flights/
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.69 2017-04-04 15:52:35-07 - - $
+@
+
+
+1.69
+log
+@-
+@
+text
+@d33 1
+a33 1
+. LSS tutor:
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.68 2017-04-04 14:16:33-07 - - $
+@
+
+
+1.68
+log
+@-
+@
+text
+@d27 4
+a30 4
+. Labs:        01A  Mon 11:00am--01:00pm  JBE/105
+.              01B  Tue 01:00pm--03:00pm  JBE/105
+.              01C  Wed 03:00pm--05:00pm  JBE/105
+.              01D  Thu 09:00am--11:00am  JBE/105
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.67 2017-04-03 15:00:00-07 - - $
+@
+
+
+1.67
+log
+@-
+@
+text
+@d46 1
+a46 1
+. Mon Apr  3. Begin instruction.
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.66 2017-04-03 13:23:00-07 - - $
+@
+
+
+1.66
+log
+@-
+@
+text
+@d27 4
+a30 4
+. Labs:        01A  11:00am--01:00pm  JBE/105
+.              01B  01:00pm--03:00pm  JBE/105
+.              01C  03:00pm--05:00pm  JBE/105
+.              01D  09:00am--11:00am  JBE/105
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.65 2017-04-03 12:52:42-07 - - $
+@
+
+
+1.65
+log
+@-
+@
+text
+@d25 2
+a26 2
+. TA:          TBA
+. TA:          TBA
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.64 2017-03-28 17:12:07-07 - - $
+@
+
+
+1.64
+log
+@-
+@
+text
+@d24 3
+a26 2
+. TA:          
+. TA:          
+d61 1
+a61 1
+. $Id: Readme.all.cmps112.txt,v 1.1 2017-03-28 17:03:04-07 - - $
+@
+
+
+1.63
+log
+@-
+@
+text
+@d22 1
+a22 1
+. Lectures:    Mon/Wed     7:10pm-- 8:45pm  JBE/152
+d24 6
+a29 6
+. TA:          Trevor Pesout, (tpesout@@ucsc.edu), http:TA/
+. TA:          Sohum Banerjea, (sobanerj@@ucsc.edu), http:TA/
+. Labs:        Mon   4:00pm-- 6:00pm  JBE/105  Trevor
+.              Tue   4:00pm-- 6:00pm  JBE/105  Sohum
+.              Wed   9:00am--11:00am  JBE/105  Sohum
+.              Thu   9:00am--11:00am  JBE/105  Trevor
+d32 1
+a32 1
+. LSS tutor:   Luke Shepherd (lshepher@@ucsc.edu)
+a33 1
+.              beginning Friday, September 30th at 5:00pm
+a43 1
+# Fri Sep 30. LSS signup.    http://lss.ucsc.edu/
+d45 12
+a56 14
+# Mon Sep 26. Begin instruction.
+# Fri Nov 11. Holiday.
+# Thu Nov 24. Holiday.
+# Fri Nov 25. Holiday.
+#
+# Fri Sep 30. LAB 0.         http:Assignments/lab0-intro-unix/
+# Tue Oct 11. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+# Thu Oct 27. ASG 2 DUE.     http:Assignments/asg2-ocaml-dc/
+# Mon Nov 14. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+# Wed Nov 30. ASG 4 DUE.     http:Assignments/asg4-prolog-flights/
+#
+# Wed Nov  2. MIDTERM TEST.  http:Old-Exams/
+# Mon Dec  5. FINAL EXAM.    http:Old-Exams/ 7:30pm--10:30pm
+#             http://registrar.ucsc.edu/soc/final-examinations.html
+d60 1
+a60 1
+. $Id: Readme.all.cmps112.txt,v 1.62 2016-12-01 12:36:49-08 - - $
+@
+
+
+1.62
+log
+@-
+@
+text
+@d59 2
+a60 2
+. Mon Dec  5. FINAL EXAM.    http:Old-Exams/ 7:30pm--10:30pm
+.             http://registrar.ucsc.edu/soc/final-examinations.html
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.61 2016-11-28 15:32:18-08 - - $
+@
+
+
+1.61
+log
+@-
+@
+text
+@d56 2
+a57 2
+. Wed Nov 30. ASG 4 DUE.     http:Assignments/asg4-prolog-flights/
+.
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.60 2016-11-15 13:32:00-08 - - $
+@
+
+
+1.60
+log
+@-
+@
+text
+@d49 3
+a51 3
+. Thu Nov 24. Holiday.
+. Fri Nov 25. Holiday.
+.
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.59 2016-11-14 14:09:36-08 - - $
+@
+
+
+1.59
+log
+@-
+@
+text
+@d55 1
+a55 1
+. Mon Nov 14. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.58 2016-11-09 16:40:57-08 - - $
+@
+
+
+1.58
+log
+@-
+@
+text
+@d48 1
+a48 1
+. Fri Nov 11. Holiday.
+d56 1
+a56 1
+. Wed Nov 30. ASG 4 DUE.     http:Assignments/asg4*
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.57 2016-11-03 16:52:51-07 - - $
+@
+
+
+1.57
+log
+@-
+@
+text
+@d55 1
+a55 1
+. Sun Nov 13. ASG 3 DUE.     http:Assignments/asg3-smalltalk-hzip/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.56 2016-10-28 13:27:41-07 - - $
+@
+
+
+1.56
+log
+@-
+@
+text
+@d58 1
+a58 1
+. Wed Nov  2. MIDTERM TEST.  http:Old-Exams/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.55 2016-10-28 13:27:11-07 - - $
+@
+
+
+1.55
+log
+@-
+@
+text
+@d54 1
+a54 1
+. Thu Oct 27. ASG 2 DUE.     http:Assignments/asg2-ocaml-dc/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.54 2016-10-12 14:00:26-07 - - $
+@
+
+
+1.54
+log
+@-
+@
+text
+@d55 1
+a55 1
+. Sun Nov 13. ASG 3 DUE.     http:Assignments/asg3*
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.53 2016-10-10 12:14:53-07 - - $
+@
+
+
+1.53
+log
+@-
+@
+text
+@d53 1
+a53 1
+. Tue Oct 11. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.52 2016-09-30 16:20:29-07 - - $
+@
+
+
+1.52
+log
+@-
+@
+text
+@d53 2
+a54 2
+. Mon Oct 10. ASG 1 DUE.     http:Assignments/asg1-scheme-sbi/
+. Thu Oct 27. ASG 2 DUE.     http:Assignments/asg2*
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.51 2016-09-30 14:47:51-07 - - $
+@
+
+
+1.51
+log
+@-
+@
+text
+@d55 1
+a55 1
+. Mon Nov 14. ASG 3 DUE.     http:Assignments/asg3*
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.50 2016-09-30 13:14:27-07 - - $
+@
+
+
+1.50
+log
+@-
+@
+text
+@d45 1
+a45 1
+. Fri Sep 30. LSS signup.    http://lss.ucsc.edu/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.49 2016-09-28 13:19:03-07 - - $
+@
+
+
+1.49
+log
+@-
+@
+text
+@d52 1
+a52 1
+. Fri Sep 30. LAB 0.         http:Assignments/lab0-intro-unix/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.48 2016-09-28 12:54:18-07 - - $
+@
+
+
+1.48
+log
+@-
+@
+text
+@d47 1
+a47 1
+. Mon Sep 26. Begin instruction.
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.47 2016-09-20 13:23:05-07 - - $
+@
+
+
+1.47
+log
+@-
+@
+text
+@d28 2
+a29 2
+.              Wed   9:00am--11:00am  JBE/105  Trevor
+.              Thu   9:00am--11:00am  JBE/105  Sohum
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.46 2016-09-19 17:35:19-07 - - $
+@
+
+
+1.46
+log
+@-
+@
+text
+@d6 1
+a6 1
+. WEB PAGES:  http://www.ucsc.edu/academics/academic_integrity/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.45 2016-09-19 17:35:09-07 - - $
+@
+
+
+1.45
+log
+@-
+@
+text
+@d45 1
+a45 1
+. Fri Sep 30. LSS signup.   http://lss.ucsc.edu/
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.44 2016-09-19 17:34:05-07 - - $
+@
+
+
+1.44
+log
+@-
+@
+text
+@d45 1
+a45 1
+. Fri Sep 30. LSS signup @@ 5:00pm.
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.43 2016-09-19 17:33:32-07 - - $
+@
+
+
+1.43
+log
+@-
+@
+text
+@d45 1
+a45 1
+. Fri Sep 30. LSS signup @@ 5:00pm
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.42 2016-09-16 16:23:22-07 - - $
+@
+
+
+1.42
+log
+@-
+@
+text
+@d45 1
+d64 1
+a64 1
+. $Id: Readme.all.cmps112.txt,v 1.41 2016-09-14 15:02:53-07 - - $
+@
+
+
+1.41
+log
+@-
+@
+text
+@d32 4
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.40 2016-09-09 18:04:47-07 - - $
+@
+
+
+1.40
+log
+@-
+@
+text
+@d26 4
+a29 4
+. Labs:        Mon   4:00pm-- 6:00pm  JBE/105
+.              Tue   4:00pm-- 6:00pm  JBE/105
+.              Wed   9:00am--11:00am  JBE/105
+.              Thu   9:00am--11:00am  JBE/105
+d59 1
+a59 1
+. $Id: Readme.all.cmps112.txt,v 1.39 2016-09-09 14:39:35-07 - - $
+@
+
+
+1.39
+log
+@-
+@
+text
+@d53 1
+a53 1
+. Wed Nov  9. MIDTERM TEST.  http:Old-Exams/
+d59 1
+a59 1
+. $Id: Readme.all.cmps112.txt,v 1.38 2016-09-09 14:18:26-07 - - $
+@
+
+
+1.38
+log
+@-
+@
+text
+@d53 1
+a53 2
+. Wed Oct 26. TEST #1.       http:Old-Exams/
+. Wed Nov 16. TEST #2.       http:Old-Exams/
+a56 3
+. Wed Oct 12. Drop ends.     http://registrar.ucsc.edu/soc/
+. Wed Nov  2. Withdraw ends. http://registrar.ucsc.edu/soc/
+.
+d59 1
+a59 1
+. $Id: Readme.all.cmps112.txt,v 1.37 2016-09-08 16:03:17-07 - - $
+@
+
+
+1.37
+log
+@-
+@
+text
+@d47 5
+a51 5
+. Fri Sep 30. LAB 0.      http:Assignments/lab0-intro-unix/
+. Mon Oct 10. ASG 1 DUE.  http:Assignments/asg1-scheme-sbi/
+. Thu Oct 27. ASG 2 DUE.  http:Assignments/asg2*
+. Mon Nov 14. ASG 3 DUE.  http:Assignments/asg3*
+. Wed Nov 30. ASG 4 DUE.  http:Assignments/asg4*
+d53 3
+a55 3
+. Wed Oct 26. TEST #1.    http:Old-Exams/
+. Wed Nov 16. TEST #2.    http:Old-Exams/
+. Mon Dec  5. FINAL EXAM. http:Old-Exams/ 7:30pm--10:30pm
+d58 1
+a58 1
+. Wed Oct 12. Drop ends.  http://registrar.ucsc.edu/soc/
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.36 2016-09-08 16:01:38-07 - - $
+@
+
+
+1.36
+log
+@-
+@
+text
+@d58 2
+a59 2
+. Wed Oct 12. Drop ends.  http://registrar.ucsc.edu/soc/key-dates-enrollment.html
+. Wed Nov  2. Withdraw ends. http://registrar.ucsc.edu/soc/key-dates-enrollment.html
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.35 2016-09-08 16:00:18-07 - - $
+@
+
+
+1.35
+log
+@-
+@
+text
+@d58 1
+a58 1
+. Wed Oct 12. Drop ends. http://registrar.ucsc.edu/soc/key-dates-enrollment.html
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.34 2016-09-08 14:58:43-07 - - $
+@
+
+
+1.34
+log
+@-
+@
+text
+@d26 4
+a29 4
+. Labs:        Mon   4:00pm-- 6:00pm
+.              Tue   4:00pm-- 6:00pm
+.              Wed   9:00am--11:00am
+.              Thu   9:00am--11:00am
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.33 2016-09-08 14:51:14-07 - - $
+@
+
+
+1.33
+log
+@-
+@
+text
+@d25 1
+a25 1
+. TA:          Sohum Banerjea, (), http:TA/
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.32 2016-09-08 13:09:26-07 - - $
+@
+
+
+1.32
+log
+@-
+@
+text
+@d25 1
+a25 1
+. TA:
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.31 2016-09-08 11:58:17-07 - - $
+@
+
+
+1.31
+log
+@-
+@
+text
+@d42 4
+a45 4
+. Mon Sep 26.  Begin instruction.
+. Fri Nov 11.  Holiday.
+. Thu Nov 24.  Holiday.
+. Fri Nov 25.  Holiday.
+d47 5
+a51 5
+. Fri Sep 30.  LAB 0.       http:Assignments/lab0*
+. Mon Oct 10.  ASG 1 DUE.   http:Assignments/asg1-scheme-sbi/
+. Thu Oct 27.  ASG 2 DUE.   http:Assignments/asg2*
+. Mon Nov 14.  ASG 3 DUE.   http:Assignments/asg3*
+. Wed Nov 30.  ASG 4 DUE.   http:Assignments/asg4*
+d53 7
+a59 4
+. Wed Oct 26.  TEST #1.     http:Old-Exams/
+. Wed Nov 16.  TEST #2.     http:Old-Exams/
+. Mon Dec  5.  FINAL EXAM.  http:Old-Exams/ 7:30pm--10:30pm
+.              http://registrar.ucsc.edu/soc/final-examinations.html
+d63 1
+a63 1
+. $Id: Readme.all.cmps112.txt,v 1.30 2016-09-06 13:25:01-07 - - $
+@
+
+
+1.30
+log
+@-
+@
+text
+@d26 4
+a29 3
+. Labs:        Xxxxxxx
+.              Xxxxxxx
+.              Xxxxxxx
+d48 1
+a48 1
+. Mon Oct 10.  ASG 1 DUE.   http:Assignments/asg1*
+d60 1
+a60 1
+. $Id: Readme.all.cmps112.txt,v 1.29 2016-09-06 13:24:50-07 - - $
+@
+
+
+1.29
+log
+@-
+@
+text
+@d25 1
+a25 1
+. TA;
+d59 1
+a59 1
+. $Id: Readme.all.cmps112.txt,v 1.28 2016-09-01 13:53:46-07 - - $
+@
+
+
+1.28
+log
+@-
+@
+text
+@d24 2
+a25 1
+. TA:          xxxx, xxxx@@ucsc.edu, http:TA/
+d59 1
+a59 1
+. $Id: Readme.all.cmps112.txt,v 1.27 2016-08-29 18:41:32-07 - - $
+@
+
+
+1.27
+log
+@-
+@
+text
+@d9 1
+a9 1
+. /afs/cats.ucsc.edu/courses/cmps104a-wm/Syllabus/pair-programming/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.26 2016-08-29 16:57:56-07 - - $
+@
+
+
+1.26
+log
+@-
+@
+text
+@d21 2
+a22 2
+. Office-Hrs:  Mon/Wed/Fri   2:00pm-- 3:00pm  E2/253
+. Lectures:    Mon/Wed/Fri   3:30pm-- 4:40pm  Kresge/327
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.25 2016-06-21 16:48:23-07 - - $
+@
+
+
+1.25
+log
+@-
+@
+text
+@d18 1
+a18 1
+. Piazza:      https://piazza.com/
+d20 1
+a20 1
+. Instructor:  Wesley Mackey <mackey@@soe.ucsc.edu>, 459-5322
+d24 1
+a24 1
+. TA:          xxxx, xxxx@@soe.ucsc.edu, http:TA/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.24 2016-06-21 16:44:03-07 - - $
+@
+
+
+1.24
+log
+@-
+@
+text
+@d46 2
+a47 2
+. Mon Oct 17.  ASG 1 DUE.   http:Assignments/asg1*
+. Thu Nov  3.  ASG 2 DUE.   http:Assignments/asg2*
+d49 1
+a49 1
+. Wed Dec  7.  ASG 4 DUE.   http:Assignments/asg4*
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.23 2016-06-21 16:43:36-07 - - $
+@
+
+
+1.23
+log
+@-
+@
+text
+@d41 1
+a41 1
+. Wed Nov 11.  Holiday.
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.22 2016-06-21 16:43:00-07 - - $
+@
+
+
+1.22
+log
+@-
+@
+text
+@d48 2
+a49 2
+. Sun Nov 15.  ASG 3 DUE.   http:Assignments/asg3*
+. Wed Dec  2.  ASG 4 DUE.   http:Assignments/asg4*
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.21 2016-06-21 16:42:37-07 - - $
+@
+
+
+1.21
+log
+@-
+@
+text
+@d51 2
+a52 2
+. Wed Oct 28.  TEST #1.     http:Old-Exams/
+. Wed Nov 18.  TEST #2.     http:Old-Exams/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.20 2016-06-21 16:39:43-07 - - $
+@
+
+
+1.20
+log
+@-
+@
+text
+@d40 1
+a40 1
+. Fri Sep 26.  Begin instruction.
+d45 3
+a47 3
+. Fri Oct  2.  LAB 0.       http:Assignments/lab0*
+. Mon Oct 12.  ASG 1 DUE.   http:Assignments/asg1*
+. Thu Oct 29.  ASG 2 DUE.   http:Assignments/asg2*
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.19 2015-12-10 13:52:59-08 - - $
+@
+
+
+1.19
+log
+@-
+@
+text
+@d12 1
+a12 1
+. Quarter:     Fall 2014
+d16 2
+a17 2
+. Homework:    /afs/cats.ucsc.edu/class/cmps112-wm.f15/
+.              submit cmps112-wm.f15 ...
+d24 4
+a27 4
+. TA:          John Grey, jgrey@@soe.ucsc.edu, http:TA/
+. Labs:        Mon  10:00am--12:00pm  JBE/105
+.              Tue   2:00pm-- 4:00pm  JBE/105
+.              Thu  10:00am--12:00pm  JBE/105
+d39 16
+a54 16
+#
+# Fri Sep 25.  FIRST LECTURE.
+# Wed Nov 11.  HOLIDAY.
+# Thu Nov 26.  HOLIDAY.
+# Fri Nov 27.  HOLIDAY.
+#
+# Fri Oct  2.  LAB 0.       http:Assignments/lab0-intro-unix/
+# Mon Oct 12.  ASG 1 DUE.   http:Assignments/asg1-scheme-sbi/
+# Thu Oct 29.  ASG 2 DUE.   http:Assignments/asg2-ocaml-dc/
+# Sun Nov 15.  ASG 3 DUE.   http:Assignments/asg3-smalltalk-hzip/
+# Wed Dec  2.  ASG 4 DUE.   http:Assignments/asg4-perl-pmake/
+.
+# Wed Oct 28.  TEST #1.     http:Old-Exams/
+# Wed Nov 18.  TEST #2.     http:Old-Exams/
+# Wed Dec  9.  FINAL EXAM.  http:Old-Exams/ 4:00pm--7:00pm
+#              http://registrar.ucsc.edu/soc/final-examinations.html
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.18 2015-12-03 11:55:54-08 - - $
+@
+
+
+1.18
+log
+@-
+@
+text
+@d53 2
+a54 2
+. Wed Dec  9.  FINAL EXAM.  http:Old-Exams/ 4:00pm--7:00pm
+.              http://registrar.ucsc.edu/soc/final-examinations.html
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.17 2015-12-03 11:55:41-08 - - $
+@
+
+
+1.17
+log
+@-
+@
+text
+@d39 1
+a39 1
+.
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.16 2015-11-30 13:40:19-08 - - $
+@
+
+
+1.16
+log
+@-
+@
+text
+@d44 1
+a44 1
+.
+d49 1
+a49 1
+. Wed Dec  2.  ASG 4 DUE.   http:Assignments/asg4-perl-pmake/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.15 2015-11-18 19:11:29-08 - - $
+@
+
+
+1.15
+log
+@-
+@
+text
+@d42 2
+a43 2
+. Thu Nov 26.  HOLIDAY.
+. Fri Nov 27.  HOLIDAY.
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.14 2015-11-16 11:35:10-08 - - $
+@
+
+
+1.14
+log
+@-
+@
+text
+@d52 1
+a52 1
+. Wed Nov 18.  TEST #2.     http:Old-Exams/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.13 2015-11-12 16:11:15-08 - - $
+@
+
+
+1.13
+log
+@-
+@
+text
+@d48 1
+a48 1
+. Sun Nov 15.  ASG 3 DUE.   http:Assignments/asg3-smalltalk-hzip/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.12 2015-10-30 12:35:04-07 - - $
+@
+
+
+1.12
+log
+@-
+@
+text
+@d41 1
+a41 1
+. Wed Nov 11.  HOLIDAY.
+d49 1
+a49 1
+. Wed Dec  2.  ASG 4 DUE.   http:Assignments/asg4-*
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.11 2015-10-29 13:56:09-07 - - $
+@
+
+
+1.11
+log
+@-
+@
+text
+@d47 1
+a47 1
+. Thu Oct 29.  ASG 2 DUE.   http:Assignments/asg2-ocaml-dc/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.10 2015-10-13 13:06:30-07 - - $
+@
+
+
+1.10
+log
+@-
+@
+text
+@d48 1
+a48 1
+. Sun Nov 15.  ASG 3 DUE.   http:Assignments/asg3-*
+d51 1
+a51 1
+. Wed Oct 28.  TEST #1.     http:Old-Exams/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.9 2015-10-02 18:31:02-07 - - $
+@
+
+
+1.9
+log
+@-
+@
+text
+@d46 2
+a47 2
+. Mon Oct 12.  ASG 1 DUE.   http:Assignments/asg1-scheme-sbi/
+. Thu Oct 29.  ASG 2 DUE.   http:Assignments/asg2-*
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.8 2015-09-25 17:35:47-07 - - $
+@
+
+
+1.8
+log
+@-
+@
+text
+@d45 1
+a45 1
+. Fri Oct  2.  LAB 0.       http:Assignments/lab0-intro-unix/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.7 2015-09-24 14:47:13-07 - - $
+@
+
+
+1.7
+log
+@-
+@
+text
+@d40 1
+a40 1
+. Fri Sep 25.  FIRST LECTURE.
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.6 2015-09-23 16:37:42-07 - - $
+@
+
+
+1.6
+log
+@-
+@
+text
+@d40 1
+a40 1
+. Fri Sep 25.  BEGIN INSTRUCTION.
+d46 1
+a46 1
+. Mon Oct 12.  ASG 1 DUE.   http:Assignments/asg1-*
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.5 2015-09-23 16:33:54-07 - - $
+@
+
+
+1.5
+log
+@-
+@
+text
+@d45 1
+a45 1
+. Fri Oct  2.  LAB 0.       http:Assignments/lab0-*
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.4 2015-09-22 17:41:38-07 - - $
+@
+
+
+1.4
+log
+@-
+@
+text
+@d45 1
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.3 2015-09-21 18:14:26-07 - - $
+@
+
+
+1.3
+log
+@-
+@
+text
+@d16 3
+a18 4
+. Homework:    /afs/cats.ucsc.edu/class/cmps112-wm.f14/
+.              submit cmps112-wm.f14 ...
+. Email list:  cmps112-wm at soe ucsc edu
+.          https://groups.google.com/a/soe.ucsc.edu/d/forum/cmps112-wm
+d57 1
+a57 1
+. $Id: Readme.all.cmps112.txt,v 1.2 2015-09-21 18:13:23-07 - - $
+@
+
+
+1.2
+log
+@-
+@
+text
+@d48 1
+a48 1
+. Mon Nov 16.  ASG 3 DUE.   http:Assignments/asg3-*
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.1 2015-09-21 18:09:59-07 - - $
+@
+
+
+1.1
+log
+@-
+@
+text
+@d46 4
+a49 4
+. Mon Oct 20.  ASG 1 DUE.   http:Assignments/asg1-perl-pmake/
+. Mon Nov  3.  ASG 2 DUE.   http:Assignments/asg2-smalltalk-hzip/
+. Mon Nov 17.  ASG 3 DUE.   http:Assignments/asg3-scheme-sbi/
+. Tue Dec  2.  ASG 4 DUE.   http:Assignments/asg4-ocaml-dc/
+d58 1
+a58 1
+. $Id: Readme.all.cmps112.txt,v 1.70 2014-12-15 22:27:16-08 - - $
+@

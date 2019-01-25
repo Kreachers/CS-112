@@ -1,0 +1,1 @@
+("6.1" ("1777e8cc6edf2e892368a12f1ab83f23128acc34" . "aacb5f8fc2c41412658d797da6036e678e724cbc") (collects #"racket" #"private" #"promise.rkt") (collects #"racket" #"private" #"stx.rkt") (collects #"syntax" #"parse" #"private" #"minimatch.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

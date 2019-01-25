@@ -1,0 +1,1 @@
+("6.1" ("81cf2a3ab236f0e5e9720e7a1c625622be1ce7e5" . "2df923d8c9dcde6a5932d0d7ad155677d58ee8cd") (collects #"racket" #"snip.rkt") (collects #"mrlib" #"image-core.rkt") (collects #"racket" #"class.rkt") (collects #"mrlib" #"cache-image-snip.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

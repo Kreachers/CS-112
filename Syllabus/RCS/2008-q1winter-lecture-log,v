@@ -1,0 +1,77 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2008.11.26.01.32.15;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@$Id: Lecture-log-2008-q1winter,v 1.22 2008-03-12 12:48:42-07 - - $
+
+Winter 2008
+CMPS-112 - Comparative Programming Languages
+
+week  1:
+ 1. Wed Jan  9 - syllabus; languages; ch.1,p.1-12
+ 2. Fri Jan 11 - finish ch.1; intro Perl
+ 3. Mon Jan 14 - Perl files, hashes, refs; use.
+
+week  2:
+ 4. Wed Jan 16 - Perl - asg1 details; m// s// regexes; refs
+ 5. Fri Jan 18 - lecture on ch.2, 3.  read asgt ch.4
+ 6. Mon Jan 21 - HOLIDAY.
+
+week  3:
+ 7. Wed Jan 23 - ch.5: sec.5.1--5.5
+ 8. Fri Jan 25 - finish ch.5.  ch6. 6.1-6.2
+ 9. Mon Jan 28 - ch.6
+
+week  4:
+10. Wed Jan 30 - C++: iostream, classes, default members
+11. Fri Feb  1 - C++: ctors, dtors; STL.
+12. Mon Feb  4 - C++: inheritance.  asg2
+
+week  5:
+13. Wed Feb  6 - TEST #1.
+14. Fri Feb  8 - ch.7 7.1--?
+15. Mon Feb 11 - finish ch.7; ch.8 (8.1--8.3)
+
+week  6:
+16. Wed Feb 13 - Scheme: list basics, cons, car, cdr, etc.
+17. Fri Feb 15 - Scheme: define, tail call, higher-order fns
+18. Mon Feb 18 - HOLIDAY.
+
+week  7:
+19. Wed Feb 20 - Scheme: prog 3.  interpretation, fns in hashes
+20. Fri Feb 22 - finish Scheme
+21. Mon Feb 25 - finish chap.8
+
+week  8:
+22. Wed Feb 27 - TEST #2.
+23. Fri Feb 29 - Intro Ocaml
+24. Mon Mar  3 - Ocaml related to asg4
+
+week  9:
+25. Wed Mar  5 - Ocaml; higher-order functions
+26. Fri Mar  7 - higher-order functions
+27. Mon Mar 10 - Intro Prolog
+
+week 10:
+28. Wed Mar 12 - Prolog
+29. Fri Mar 14 -
+30. Mon Mar 17 -
+@

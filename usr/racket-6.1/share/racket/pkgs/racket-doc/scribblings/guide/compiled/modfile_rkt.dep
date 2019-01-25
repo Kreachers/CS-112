@@ -1,0 +1,1 @@
+("6.1" ("a8b0cbb1547fc4775927a90af0df031af240c545" . "9343b106e56de615f475fa77c8cdae102332e369") (collects #"compiler" #"cm-accomplice.rkt") (collects #"scribble" #"manual.rkt") (collects #"scribble" #"comment-reader.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt") (collects #"syntax" #"strip-context.rkt"))

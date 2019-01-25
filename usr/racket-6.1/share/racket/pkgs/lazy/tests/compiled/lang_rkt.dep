@@ -1,0 +1,1 @@
+("6.1" ("154340200417b20e085a8023a039c934b1a91cfa" . "3d73c7a147587a28d6c27108c2a0fd7fa36833bf") (collects #"lazy" #"main.rkt") (collects #"tests" #"eli-tester.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"lazy" #"lang" #"reader.rkt"))

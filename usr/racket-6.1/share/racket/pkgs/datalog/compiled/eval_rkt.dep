@@ -1,0 +1,1 @@
+("6.1" ("7b2611210d03ac30d7fb4acacaa80d2c2dba678a" . "c44a84856441fa2944ef6c2e9338b096461d1516") (collects #"datalog" #"runtime.rkt") (collects #"racket" #"contract.rkt") (collects #"datalog" #"pretty.rkt") (collects #"racket" #"list.rkt") (collects #"datalog" #"ast.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

@@ -1,0 +1,160 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+1.2
+date	2008.01.29.23.07.01;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2008.01.29.21.15.21;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@// $Id: default-members.cc,v 1.1 2008-01-29 13:15:21-08 - - $
+
+//
+// This example illustrates the default ctor, copy ctor, dtor,
+// and operator= explicitly defined for class foo and implicitly
+// defined for class bar.  Note that bar operations cause foo
+// operations to occur.
+//
+
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class foo{
+   public:
+      foo();
+      foo (const foo&);
+      foo (int);
+      virtual ~foo();
+      foo& operator= (const foo&);
+   private:
+      void dump (string);
+      int value;
+};
+
+void foo::dump (string label) {
+   cout << "foo::dump(" << static_cast<void*> (this) << "): "
+        << label << ": value=" << value << endl;
+};
+
+foo::foo(): value(0) {
+   dump ("foo()");
+};
+
+foo::foo (const foo& that): value(that.value) {
+   dump ("foo(const foo&)");
+};
+
+foo::foo (int init): value(init) {
+   dump ("foo(int)");
+};
+
+foo::~foo() {
+   dump ("~foo()");
+};
+
+foo& foo::operator= (const foo& that) {
+   this->value = that.value;
+   dump ("foo& operator=(const foo&)");
+   return *this;
+};
+
+struct bar{
+   public:
+      foo foobar;
+};
+
+#define MAINDEBUG(X) cout << "MAINDEBUG: " ## #X << endl; X
+int main (int argc, char **argv) {
+   MAINDEBUG (bar one;)
+   MAINDEBUG (one.foobar = 4;)
+   MAINDEBUG (bar two (one);)
+   MAINDEBUG (bar three;)
+   MAINDEBUG (three = one;)
+   MAINDEBUG (return EXIT_SUCCESS;)
+};
+
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: default-members.cc,v 330.2 2003-01-28 10:54:23-08 - - $
+d5 2
+a6 2
+// and operator= explicitly defined for class Foo and implicitly
+// defined for class Bar.  Note that Bar operations cause Foo
+d16 1
+a16 1
+class Foo{
+d18 5
+a22 5
+      Foo();
+      Foo (const Foo&);
+      Foo (int);
+      virtual ~Foo();
+      Foo& operator= (const Foo&);
+d28 2
+a29 2
+void Foo::dump (string label) {
+   cout << "Foo::dump(" << static_cast<void*> (this) << "): "
+d33 2
+a34 2
+Foo::Foo(): value(0) {
+   dump ("Foo()");
+d37 2
+a38 2
+Foo::Foo (const Foo& that): value(that.value) {
+   dump ("Foo(const Foo&)");
+d41 2
+a42 2
+Foo::Foo (int init): value(init) {
+   dump ("Foo(int)");
+d45 2
+a46 2
+Foo::~Foo() {
+   dump ("~Foo()");
+d49 1
+a49 1
+Foo& Foo::operator= (const Foo& that) {
+d51 1
+a51 1
+   dump ("Foo& operator=(const Foo&)");
+d55 1
+a55 1
+struct Bar{
+d57 1
+a57 1
+      Foo foo;
+d62 4
+a65 4
+   MAINDEBUG (Bar one;)
+   MAINDEBUG (one.foo = 4;)
+   MAINDEBUG (Bar two (one);)
+   MAINDEBUG (Bar three;)
+@

@@ -1,0 +1,28 @@
+head	353.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+353.1
+date	2005.04.29.01.11.04;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+353.1
+log
+@-
+@
+text
+@AuthName "access limited to unix.ic.ucsc.edu only"
+order deny,allow
+deny from all
+allow from .ucsc.edu
+require user nobody
+@

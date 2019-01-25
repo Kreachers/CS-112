@@ -1,0 +1,470 @@
+head	1.18;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+1.18
+date	2008.01.30.02.09.17;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2008.01.30.02.07.11;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2008.01.30.02.05.25;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2008.01.30.02.03.40;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2008.01.30.02.01.51;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2008.01.30.02.01.30;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2008.01.30.02.00.39;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2008.01.30.01.59.47;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2008.01.30.01.57.38;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2008.01.30.01.57.26;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2008.01.30.01.56.53;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2008.01.30.01.56.30;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2008.01.30.01.55.56;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2008.01.30.01.54.54;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2008.01.30.01.54.32;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2008.01.30.01.53.42;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2008.01.30.01.52.55;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2008.01.30.01.52.33;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.18
+log
+@-
+@
+text
+@// $Id: stack.cc,v 1.17 2008-01-29 18:07:11-08 - - $
+
+//
+// NAME
+//    array implementation of a stack
+//
+// DESCRIPTION
+//    Should really be in multiple files.
+//
+
+#include <cassert>
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+/////////////////////////////////////////////////////////////////
+// stack.h
+/////////////////////////////////////////////////////////////////
+
+template <typename item_t>
+class stack {
+   private:
+      enum {EMPTY = -1};
+      class fullerror {};
+      class emptyerror {};
+      int top;
+      int size;
+      item_t *data;
+      void copydata (item_t *thatdata);
+   public:
+      explicit stack (int newsize = 16);
+      stack (const stack &);
+      ~stack ();
+      stack &operator= (const stack<item_t> &);
+      void push (item_t);
+      item_t pop ();
+      bool isempty () const;
+      bool isfull () const;
+};
+
+/////////////////////////////////////////////////////////////////
+// stack.cc
+/////////////////////////////////////////////////////////////////
+
+template <typename item_t>
+stack<item_t>::stack (int newsize = 16):
+   top (EMPTY), size (newsize)
+{
+   data = new item_t [size];
+}
+
+template <typename item_t>
+stack<item_t>::stack (const stack<item_t> &that):
+   top (that.top), size (that.size)
+{
+   copydata (that);
+}
+
+template <typename item_t>
+stack<item_t>::~stack () {
+   delete[] data;
+}
+
+template <typename item_t>
+stack<item_t> &stack<item_t>::operator= (const stack<item_t> &that) {
+   if (&this == &that) return;
+   top = that.top;
+   size = that.size;
+   delete[] data;
+   copydata (that);
+   return *this;
+}
+
+template <typename item_t>
+void stack<item_t>::copydata (item_t *thatdata) {
+   data = new item_t [size];
+   for (int itor = 0; itor < top; ++itor) {
+      data[itor] = that.data[itor];
+   }
+}
+
+template <typename item_t>
+void stack<item_t>::push (item_t item) {
+   if (isfull ()) throw stack<item_t>::fullerror ();
+   data [++top] = item;
+}
+
+template <typename item_t>
+item_t stack<item_t>::pop () {
+   if (isempty ()) throw stack<item_t>::emptyerror ();
+   return data [top--];
+}
+
+template <typename item_t>
+bool stack<item_t>::isempty () const {
+   return top == EMPTY;
+}
+
+template <typename item_t>
+bool stack<item_t>::isfull () const {
+   return top == size - 1;
+}
+
+/////////////////////////////////////////////////////////////////
+// main.cc
+/////////////////////////////////////////////////////////////////
+
+int main (int argc, char **argv) {
+   stack <string> argstack (argc);
+   for (int argi = 1; argi < argc; ++argi) {
+      string arg = argv[argi];
+      cout << "argv[" << argi << "]=" << arg << endl;
+      argstack.push (arg);
+   }
+   cout << "End first loop." << endl;
+   while (! argstack.isempty ()) {
+      cout << "Popping: " << argstack.pop() << endl;
+   }
+   cout << "End second loop." << endl;
+}
+
+@
+
+
+1.17
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stack.cc,v 1.16 2008-01-29 18:05:25-08 - - $
+a18 1
+//
+a19 1
+//
+a43 1
+//
+a44 1
+//
+a106 1
+//
+a107 1
+//
+@
+
+
+1.16
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stack.cc,v 1.15 2008-01-29 18:03:40-08 - - $
+d120 1
+a120 1
+      cout << arg << endl;
+d124 2
+a125 2
+   while (argstack.isempty ()) {
+      cout << argstack.pop() << endl;
+@
+
+
+1.15
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stack.cc,v 1.13 2008-01-29 18:01:30-08 - - $
+d119 3
+a121 1
+      argstack.push (argv[argi]);
+d123 1
+d127 1
+d129 1
+@
+
+
+1.14
+log
+@-
+@
+text
+@d14 1
+d117 1
+a117 1
+   stack <char*> argstack (argc);
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stack.cc,v 1.3 2008-01-29 17:53:42-08 - - $
+d65 1
+a65 1
+~stack<item_t>::stack () {
+@
+
+
+1.12
+log
+@-
+@
+text
+@d65 5
+@
+
+
+1.11
+log
+@-
+@
+text
+@d65 1
+a65 1
+stack<item_t>::stack &operator= (const stack<item_t> &that) {
+@
+
+
+1.10
+log
+@-
+@
+text
+@d71 1
+@
+
+
+1.9
+log
+@-
+@
+text
+@d114 1
+a114 1
+   while (argstack.empty ()) {
+@
+
+
+1.8
+log
+@-
+@
+text
+@d74 1
+a74 1
+stack<item_t>::copydata (item_t *thatdata) {
+@
+
+
+1.7
+log
+@-
+@
+text
+@d37 1
+a37 1
+      stack &operator= (const stack &);
+@
+
+
+1.6
+log
+@-
+@
+text
+@d58 1
+a58 1
+stack<item_t>::stack (const stack &that):
+d65 1
+a65 1
+stack<item_t>::stack &operator= (const stack &that) {
+@
+
+
+1.5
+log
+@-
+@
+text
+@d37 1
+a37 1
+      stack &operator+ (const stack &);
+d40 2
+a41 2
+      bool isempty ();
+      bool isfull ();
+d65 1
+a65 1
+stack<item_t>::stack &operator= (const stack<item_t> &that) {
+d94 1
+a94 1
+bool stack<item_t>::isempty () {
+d99 1
+a99 1
+bool stack<item_t>::isfull () {
+@
+
+
+1.4
+log
+@-
+@
+text
+@d65 1
+a65 1
+stack<item_t>::stack &operator= (const stack &that) {
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stack.cc,v 1.1 2008-01-29 17:52:33-08 - - $
+d50 1
+d57 1
+d64 1
+d73 1
+d81 1
+d87 1
+d93 1
+d98 1
+@
+
+
+1.2
+log
+@-
+@
+text
+@d23 2
+a24 1
+class stack <typename item_t> {
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id$
+d23 1
+a23 1
+class stack <item_t> {
+@

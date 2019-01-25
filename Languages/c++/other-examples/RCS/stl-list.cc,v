@@ -1,0 +1,76 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+1.2
+date	2008.01.29.23.03.00;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2008.01.29.22.33.35;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@// $Id: stl-list.cc,v 1.1 2008-01-29 14:33:35-08 - - $
+//
+// Test STL list
+//
+
+#include <iostream>
+#include <string>
+#include <list>
+
+using namespace std;
+
+int main (int argc, char **argv) {
+   string item;
+   list<string> list;
+   while (cin >> item) {
+      cout << "Push: " << item << endl;
+      list.push_front (item);
+   };
+   while (! list.empty()) {
+      item = list.front();
+      list.pop_front();
+      cout << "Pop: " << item << endl;
+   };
+};
+
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stl-list.cc,v 320.1 2002-01-14 20:21:16-08 - - $
+d12 1
+a12 1
+int main( int argc, char **argv ){
+d15 1
+a15 1
+   while( cin >> item ){
+d17 1
+a17 1
+      list.push_front( item );
+d19 1
+a19 1
+   while( ! list.empty() ){
+@

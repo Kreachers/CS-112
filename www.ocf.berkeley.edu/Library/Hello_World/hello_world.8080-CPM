@@ -1,0 +1,10 @@
+	org	100h
+start:
+	movi	c,9
+	lxi	d,foo
+	call	5
+	call	0
+foo:	ds	"Hello, world"
+	db	13,10
+	ds	"$"
+	end	start

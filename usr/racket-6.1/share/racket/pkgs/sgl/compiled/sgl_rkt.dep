@@ -1,0 +1,1 @@
+("6.1" ("afbe0df90c54c688adaa51c8bdc4d94f53b4ef58" . "18d15a8ba34452909a07209d10d17892facf5440") (collects #"mzscheme" #"main.rkt") (collects #"sgl" #"gl-vectors.rkt") (collects #"sgl" #"gl.rkt") (collects #"mzlib" #"etc.rkt") (collects #"mzscheme" #"lang" #"reader.rkt"))

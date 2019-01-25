@@ -1,0 +1,1 @@
+("6.1" ("2dc2db58749beb80df9d5f78a09a80b59edbc339" . "b3fb6f6091f05024aecb6f428132c17aaefefbd5") (collects #"scribble" #"latex-prefix.rkt") (collects #"scribble" #"doclang.rkt") (collects #"scribble" #"base.rkt") (collects #"scribble" #"private" #"defaults.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

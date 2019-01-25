@@ -1,0 +1,1 @@
+("6.1" ("9be2109bc3c5a06dd6f5bcc831e7bfdee11d76b9" . "c30438a882c41c0342e991995492a0cae63fd6cb") (collects #"eopl" #"tests" #"chapter3" #"lexaddr-lang" #"lang.rkt") (collects #"eopl" #"main.rkt") (collects #"eopl" #"lang" #"reader.rkt"))

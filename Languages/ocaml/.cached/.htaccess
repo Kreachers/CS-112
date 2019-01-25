@@ -1,0 +1,5 @@
+AuthName "access limited to unix.ic.ucsc.edu only"
+order deny,allow
+deny from all
+allow from .ucsc.edu
+require user nobody

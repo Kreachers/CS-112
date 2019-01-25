@@ -1,0 +1,87 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2007.12.10.22.17.29;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@$Id: 2004-q1winter-lecture-log,v 358.1 2005-11-08 11:53:31-08 - - $
+
+CMPS-112 - Comparative Programming Languages - 2004 Winter
+
+W 1 L 1 -01-05 Mon - intro PL; readability; abstractions; paradigms
+
+W 1 L 2 -01-07 Wed - paradigms: imp, OO, fn; intro Perl
+
+W 1 L 3 -01-09 Fri - more Perl
+
+W 2 L 4 -01-12 Mon - finish Perl
+
+W 2 L 5 -01-14 Wed - PL history; PL design principles; basic semantics
+
+W 2 L 6 -01-16 Fri - attrib, binding, decls, scope, overloading
+
+W 3 L 7 -01-19 Mon - HOLIDAY - classes cancelled
+
+W 3 L 8 -01-21 Wed - C++: STL, iostream, vector, string, value/ref
+
+W 3 L 9 -01-23 Fri - C++: files, 
+
+W 4 L10 -01-26 Mon - C++: default members, intfc/rep classes
+
+W 4 L11 -01-28 Wed - allocation, lifetime; stack/heap; vars, consts
+
+W 4 L12 -01-30 Fri - copying, dangling refs; garbage
+
+W 5 L13 -02-02 Mon - intro Ocaml; tail recursion; lists
+
+W 5 L14 -02-04 Wed - TEST #1.
+
+W 5 L15 -02-06 Fri - types, ocamlyacc, pat matching
+
+W 6 L16 -02-09 Mon - ocaml: type ctors, ocamllex
+
+W 6 L17 -02-11 Wed - functional mergesort; higher-order fns
+
+W 6 L18 -02-13 Fri - foldl, foldr, map, grep functions
+
+W 7 L19 -02-16 Mon - HOLIDAY - classes cancelled
+
+W 7 L20 -02-18 Wed - intro Scheme
+
+W 7 L21 -02-20 Fri - Scheme; asg4; expressions (ch.7)
+
+W 8 L22 -02-23 Mon - expressions (ch.7);
+
+W 8 L23 -02-25 Wed - TEST #2.
+
+W 8 L24 -02-27 Fri - param passing; mem mgmt; modules
+
+W 9 L25 -03-01 Mon - OOP; intro Prolog
+
+W 9 L26 -03-03 Wed - Prolog
+
+W 9 L27 -03-05 Fri - Prolog
+
+W10 L28 -03-08 Mon - lazy evaluation; Haskell
+
+W10 L29 -03-10 Wed - concurrency; Java Thread & Runnable
+
+W10 L30 -03-12 Fri - FINAL REVIEW.
+
+@

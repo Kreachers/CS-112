@@ -1,0 +1,29 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2015.03.19.21.04.36;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@#!/bin/sh
+# $Id: vireadme,v 1.2 2014-08-15 17:05:46-07 - - $
+vi Readme.all.cmps112.txt
+cid + Readme.all.cmps112.txt
+mkreadme Readme.all.cmps112.txt
+mkheader
+@

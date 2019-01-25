@@ -1,0 +1,1 @@
+("6.1" ("f45a03eba9d7b4b8cb24fe2175e0ae0b43527092" . "69607ba253ecdb70c80dd4f96d32670e1daa01c0") (collects #"scheme" #"base.rkt") (collects #"scheme" #"cmdline.rkt") (collects #"preprocessor" #"mztext.rkt") (collects #"preprocessor" #"pp-run.rkt") (collects #"scheme" #"runtime-config.rkt"))

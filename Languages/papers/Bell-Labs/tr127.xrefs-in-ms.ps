@@ -1,0 +1,2719 @@
+%!PS
+%%Version: 3.3
+%%DocumentFonts: (atend)
+%%Pages: (atend)
+%%EndComments
+%
+% Version 3.3 prologue for troff files.
+%
+
+/#copies 1 store
+/aspectratio 1 def
+/formsperpage 1 def
+/landscape false def
+/linewidth .3 def
+/magnification 1 def
+/margin 0 def
+/orientation 0 def
+/resolution 720 def
+/rotation 1 def
+/xoffset 0 def
+/yoffset 0 def
+
+/roundpage true def
+/useclippath true def
+/pagebbox [0 0 612 792] def
+
+/R  /Times-Roman def
+/I  /Times-Italic def
+/B  /Times-Bold def
+/BI /Times-BoldItalic def
+/H  /Helvetica def
+/HI /Helvetica-Oblique def
+/HB /Helvetica-Bold def
+/HX /Helvetica-BoldOblique def
+/CW /Courier def
+/CO /Courier def
+/CI /Courier-Oblique def
+/CB /Courier-Bold def
+/CX /Courier-BoldOblique def
+/PA /Palatino-Roman def
+/PI /Palatino-Italic def
+/PB /Palatino-Bold def
+/PX /Palatino-BoldItalic def
+/Hr /Helvetica-Narrow def
+/Hi /Helvetica-Narrow-Oblique def
+/Hb /Helvetica-Narrow-Bold def
+/Hx /Helvetica-Narrow-BoldOblique def
+/KR /Bookman-Light def
+/KI /Bookman-LightItalic def
+/KB /Bookman-Demi def
+/KX /Bookman-DemiItalic def
+/AR /AvantGarde-Book def
+/AI /AvantGarde-BookOblique def
+/AB /AvantGarde-Demi def
+/AX /AvantGarde-DemiOblique def
+/NR /NewCenturySchlbk-Roman def
+/NI /NewCenturySchlbk-Italic def
+/NB /NewCenturySchlbk-Bold def
+/NX /NewCenturySchlbk-BoldItalic def
+/ZD /ZapfDingbats def
+/ZI /ZapfChancery-MediumItalic def
+/S  /S def
+/S1 /S1 def
+/GR /Symbol def
+
+/inch {72 mul} bind def
+/min {2 copy gt {exch} if pop} bind def
+
+/setup {
+	counttomark 2 idiv {def} repeat pop
+
+	landscape {/orientation 90 orientation add def} if
+	/scaling 72 resolution div def
+	linewidth setlinewidth
+	1 setlinecap
+
+	pagedimensions
+	xcenter ycenter translate
+	orientation rotation mul rotate
+	width 2 div neg height 2 div translate
+	xoffset inch yoffset inch neg translate
+	margin 2 div dup neg translate
+	magnification dup aspectratio mul scale
+	scaling scaling scale
+
+	/Symbol /S Sdefs cf
+	/Times-Roman /S1 S1defs cf
+	0 0 moveto
+} def
+
+/pagedimensions {
+	useclippath userdict /gotpagebbox known not and {
+		/pagebbox [clippath pathbbox newpath] def
+		roundpage currentdict /roundpagebbox known and {roundpagebbox} if
+	} if
+	pagebbox aload pop
+	4 -1 roll exch 4 1 roll 4 copy
+	landscape {4 2 roll} if
+	sub /width exch def
+	sub /height exch def
+	add 2 div /xcenter exch def
+	add 2 div /ycenter exch def
+	userdict /gotpagebbox true put
+} def
+
+/pagesetup {
+	/page exch def
+	currentdict /pagedict known currentdict page known and {
+		page load pagedict exch get cvx exec
+	} if
+} def
+
+/decodingdefs [
+	{counttomark 2 idiv {y moveto show} repeat}
+	{neg /y exch def counttomark 2 idiv {y moveto show} repeat}
+	{neg moveto {2 index stringwidth pop sub exch div 0 32 4 -1 roll widthshow} repeat}
+	{neg moveto {spacewidth sub 0.0 32 4 -1 roll widthshow} repeat}
+	{counttomark 2 idiv {y moveto show} repeat}
+	{neg setfunnytext}
+] def
+
+/setdecoding {/t decodingdefs 3 -1 roll get bind def} bind def
+
+/w {neg moveto show} bind def
+/m {neg dup /y exch def moveto} bind def
+/done {/lastpage where {pop lastpage} if} def
+
+/f {
+	dup /font exch def findfont exch
+	dup /ptsize exch def scaling div dup /size exch def scalefont setfont
+	linewidth ptsize mul scaling 10 mul div setlinewidth
+	/spacewidth ( ) stringwidth pop def
+} bind def
+
+/changefont {
+	/fontheight exch def
+	/fontslant exch def
+	currentfont [
+		1 0
+		fontheight ptsize div fontslant sin mul fontslant cos div
+		fontheight ptsize div
+		0 0
+	] makefont setfont
+} bind def
+
+/sf {f} bind def
+
+/cf {
+	dup length 2 idiv
+	/entries exch def
+	/chtab exch def
+	/newfont exch def
+
+	findfont dup length 1 add dict
+	/newdict exch def
+	{1 index /FID ne {newdict 3 1 roll put} {pop pop} ifelse} forall
+
+	newdict /Metrics entries dict put
+	newdict /Metrics get
+	begin
+		chtab aload pop
+		1 1 entries {pop def} for
+		newfont newdict definefont pop
+	end
+} bind def
+
+%
+% A few arrays used to adjust reference points and character widths in some
+% of the printer resident fonts. If square roots are too high try changing
+% the lines describing /radical and /radicalex to,
+%
+%	/radical	[0 -75 550 0]
+%	/radicalex	[-50 -75 500 0]
+%
+% Move braceleftbt a bit - default PostScript character is off a bit.
+%
+
+/Sdefs [
+	/bracketlefttp		[201 500]
+	/bracketleftbt		[201 500]
+	/bracketrighttp		[-81 380]
+	/bracketrightbt		[-83 380]
+	/braceleftbt		[203 490]
+	/bracketrightex		[220 -125 500 0]
+	/radical		[0 0 550 0]
+	/radicalex		[-50 0 500 0]
+	/parenleftex		[-20 -170 0 0]
+	/integral		[100 -50 500 0]
+	/infinity		[10 -75 730 0]
+] def
+
+/S1defs [
+	/underscore		[0 80 500 0]
+	/endash			[7 90 650 0]
+] def
+%
+% Tries to round clipping path dimensions, as stored in array pagebbox, so they
+% match one of the known sizes in the papersizes array. Lower left coordinates
+% are always set to 0.
+%
+
+/roundpagebbox {
+    7 dict begin
+	/papersizes [8.5 inch 11 inch 14 inch 17 inch] def
+
+	/mappapersize {
+		/val exch def
+		/slop .5 inch def
+		/diff slop def
+		/j 0 def
+		0 1 papersizes length 1 sub {
+			/i exch def
+			papersizes i get val sub abs
+			dup diff le {/diff exch def /j i def} {pop} ifelse
+		} for
+		diff slop lt {papersizes j get} {val} ifelse
+	} def
+
+	pagebbox 0 0 put
+	pagebbox 1 0 put
+	pagebbox dup 2 get mappapersize 2 exch put
+	pagebbox dup 3 get mappapersize 3 exch put
+    end
+} bind def
+
+%%EndProlog
+%%BeginSetup
+mark
+/resolution 720 def
+setup
+2 setdecoding
+%%EndSetup
+%%Page: 1 1
+/saveobj save def
+mark
+1 pagesetup
+12 B f
+(Maintaining Cross References in Manuscripts)4 2356 1 1702 840 t
+10 R f
+(A)2573 1080 w
+7 R f
+(LFRED)2645 1080 w
+10 R f
+(V. A)1 194 1 2892 1080 t
+7 R f
+(HO)3086 1080 w
+10 R f
+(R)2665 1200 w
+7 R f
+(AVI)2732 1200 w
+10 R f
+(S)2880 1200 w
+7 R f
+(ETHI)2936 1200 w
+10 I f
+(AT&T Bell Laboratories)2 985 1 2387 1440 t
+(Murray Hill, New Jersey 07974)4 1268 1 2246 1560 t
+(ABSTRACT)2643 1920 w
+10 R f
+( maintaining the consistency of refer-)5 1554(Authors face the tedious bookkeeping problem of)6 2046 2 1080 2280 t
+( figures, citations, and other numbered entities in successive drafts of a)11 3238(ences to)1 362 2 1080 2400 t
+( a figure is added to or deleted from the manuscript, the numbers of all)14 3002(manuscript. If)1 598 2 1080 2520 t
+( this)1 180( In)1 143( these figures.)2 577(subsequent figures must be adjusted, along with the references to)9 2700 4 1080 2640 t
+( how the UNIX)3 621(note, we show)2 574 2 1080 2760 t
+7 R f
+(TM)2280 2720 w
+10 R f
+(commands)2419 2760 w
+10 CW f
+(grep)2878 2760 w
+10 R f
+(,)3118 2760 w
+10 CW f
+(awk)3169 2760 w
+10 R f
+(, and)1 195 1 3349 2760 t
+10 CW f
+(sed)3570 2760 w
+10 R f
+(can be used to create a)5 904 1 3776 2760 t
+( reference assembler that automatically maintains the consistency of)8 2810(simple and flexible)2 790 2 1080 2880 t
+(cross references in manuscripts.)3 1274 1 1080 3000 t
+10 B f
+( REFERENCE ASSEMBLER)2 1285(1. A)1 197 2 720 3360 t
+10 R f
+( which each reference is symbolic, such as ``Fig.)8 2041(First, prepare a source text for the manuscript in)8 2009 2 720 3540 t
+10 S f
+(_)4807 3540 w
+10 R f
+(Out-)4857 3540 w
+(put)720 3660 w
+10 S f
+(_)848 3660 w
+10 R f
+( ``Page)1 289('' or)1 179 2 898 3660 t
+10 S f
+(_)1395 3660 w
+10 R f
+(Section2)1445 3660 w
+10 S f
+(_)1795 3660 w
+10 R f
+( 3'' or ``Page 3''.)4 716( ``Fig.)1 279('', rather than an explicit numeric designation, such as)8 2200 3 1845 3660 t
+( name of a numbered entity will be called a)9 1808(Following Scribe [8], the)3 1029 2 720 3780 t
+10 I f
+(tag)3591 3780 w
+10 R f
+(, and a symbolic page number a)6 1321 1 3719 3780 t
+10 I f
+(page label)1 435 1 720 3900 t
+10 R f
+( the layout of a manuscript: The number associ-)8 1908( represent numbers that are independent of)6 1707(. Tags)1 270 3 1155 3900 t
+( source text, and can be deduced)6 1305(ated with a tag depends on how many other tag definitions precede it in the)14 3015 2 720 4020 t
+( depend on the final layout of the text.)8 1523( numbers, on the other hand,)5 1145( Page)1 245(by looking at the source text alone.)6 1407 4 720 4140 t
+(Section 4 describes a mechanism for handling page labels using the)10 2696 1 720 4260 t
+10 CW f
+(troff)3441 4260 w
+10 R f
+(text-formatter.)3766 4260 w
+(In the source text, define each tag by a line of the form)12 2186 1 820 4380 t
+10 CW f
+(.@tag)920 4560 w
+10 I f
+(countervariable tagname)1 1042 1 1280 4560 t
+10 R f
+( tag de\256nition,)2 597(In a)1 159 2 720 4740 t
+10 CW f
+(@tag)1509 4740 w
+10 R f
+(is a distinctive keyword,)3 1001 1 1782 4740 t
+10 I f
+(countervariable)2816 4740 w
+10 R f
+(is an identi\256er for an integer variable,)6 1553 1 3487 4740 t
+(and)720 4860 w
+10 I f
+(tagname)894 4860 w
+10 R f
+( The)1 210(is a string used as a tag.)6 976 2 1268 4860 t
+10 CW f
+(.)2484 4860 w
+10 R f
+( is)1 96(in the \256rst position of the de\256nition indicates that the line)10 2345 2 2599 4860 t
+( de\256nitions and references can appear anywhere in the)8 2261( Tag)1 217( text of the manuscript.)4 972(not part of the actual)4 870 4 720 4980 t
+(source text, but the de\256nitions will be numbered in the order in which they appear.)14 3301 1 720 5100 t
+( under-)1 290( a new tag de\256nition is encountered, the)7 1620( Whenever)1 463(The initial value of a counter variable is zero.)8 1847 4 820 5220 t
+( incremented value of this counter variable is associated with)9 2482(lying counter variable is incremented and the)6 1838 2 720 5340 t
+( classes of symbolic references as we wish by using a)10 2204( can create as many different)5 1178( We)1 194(the new tag name.)3 744 4 720 5460 t
+( this way, citations, \256gures, examples, sections, footnotes, and)8 2567( In)1 143( each class.)2 471(distinct counter variable for)3 1139 4 720 5580 t
+(the like can have their own sequence numbers.)7 1862 1 720 5700 t
+10 B f
+(Example 1.)1 479 1 720 5880 t
+10 R f
+(Figure 1 shows the contents of a \256le)7 1453 1 1250 5880 t
+10 CW f
+(source)2729 5880 w
+10 R f
+( Lines)1 274( text of a short manuscript.)5 1081(containing the)1 570 3 3115 5880 t
+(3, 6, 8, and 11 contain the tags)7 1242 1 720 6000 t
+10 CW f
+(_Alice_)1990 6000 w
+10 R f
+(and)2438 6000 w
+10 CW f
+(_Huckleberry_)2610 6000 w
+10 R f
+( 10 contain the correspond-)4 1100( 7 and)2 250(. Lines)1 300 3 3390 6000 t
+(ing tag de\256nitions)2 723 1 720 6120 t
+10 CW f
+(.@tag CITE)1 600 1 920 6300 t
+10 S1 f
+(_)1580 6300 w
+10 CW f
+(Alice)1630 6300 w
+10 S1 f
+(_)1930 6300 w
+10 CW f
+(.@tag CITE)1 600 1 920 6420 t
+10 S1 f
+(_)1580 6420 w
+10 CW f
+(Huckleberry)1630 6420 w
+10 S1 f
+(_)2290 6420 w
+10 R f
+(using the counter variable)3 1034 1 720 6600 t
+10 CW f
+(CITE)1779 6600 w
+10 R f
+(to keep track of citation numbers.)5 1342 1 2044 6600 t
+10 S1 f
+()4990 6600 w
+cleartomark
+saveobj restore
+%%BeginGlobal
+/build_sq {
+    pop
+    size 2 div /side exch def
+    currentpoint
+    newpath
+    moveto
+    0 side rlineto
+    side 0 rlineto
+    0 side neg rlineto
+    closepath
+    font B eq {fill} {stroke} ifelse
+} def
+%%EndGlobal
+/saveobj save def
+mark
+10 S1 f
+4990 6600 m
+50 build_sq
+5040 6600 m
+10 R f
+( output in which the symbolic references are replaced by numeric ones, execute)12 3244(To create the assembled)3 976 2 820 6780 t
+( commands constitute a complete reference assembler for tags.)8 2502( These)1 288(the UNIX commands in Fig. 2.)5 1241 3 720 6900 t
+(The)820 7020 w
+10 CW f
+(grep-awk)1004 7020 w
+10 R f
+( 2 creates in the \256le)5 804(pipe in the \256rst three lines of Fig.)7 1361 2 1513 7020 t
+10 CW f
+(sedscript)3708 7020 w
+10 R f
+(a sequence of)2 552 1 4278 7020 t
+10 CW f
+(sed)4860 7020 w
+10 R f
+(instructions that will associate the numbers)5 1824 1 720 7140 t
+10 CW f
+(1)2589 7140 w
+10 R f
+(and)2694 7140 w
+10 CW f
+(2)2883 7140 w
+10 R f
+(with the tags)2 551 1 2988 7140 t
+10 CW f
+(_Alice_)3583 7140 w
+10 R f
+(and)4047 7140 w
+10 CW f
+(_Huckleberry_)4235 7140 w
+10 R f
+(,)5015 7140 w
+( with this script, the)4 812(respectively. Invoked)1 889 2 720 7260 t
+10 CW f
+(sed)2451 7260 w
+10 R f
+( replaces all occurrences)3 994(command in the last line of Fig. 2)7 1385 2 2661 7260 t
+(August 20, 1991)2 664 1 2548 7680 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 1 1
+%%Page: 2 2
+/saveobj save def
+mark
+2 pagesetup
+10 R f
+(2)720 480 w
+8 R f
+(ALFRED V. AHO AND RAVI SETHI)5 1262 1 920 480 t
+9 B f
+(Source Text)1 463 1 920 950 t
+9 CW f
+(.PP)920 1115 w
+(``... `and what is the use of a book,' thought Alice,)10 2862 1 920 1225 t
+(`without pictures or conversations?' '' [)5 2214 1 920 1335 t
+9 S1 f
+(_)3134 1335 w
+9 CW f
+(Alice)3179 1335 w
+9 S1 f
+(_)3449 1335 w
+9 CW f
+(])3494 1335 w
+(.PP)920 1445 w
+(``... if I'd a knowed what a trouble it was to make a book I)14 3240 1 920 1555 t
+(wouldn't a tackled it and ain't agoing to no more.'' [)10 2916 1 920 1665 t
+9 S1 f
+(_)3836 1665 w
+9 CW f
+(Huckleberry)3881 1665 w
+9 S1 f
+(_)4475 1665 w
+9 CW f
+(])4520 1665 w
+(.@tag CITE)1 540 1 920 1775 t
+9 S1 f
+(_)1514 1775 w
+9 CW f
+(Alice)1559 1775 w
+9 S1 f
+(_)1829 1775 w
+9 CW f
+(.IP [)1 270 1 920 1885 t
+9 S1 f
+(_)1190 1885 w
+9 CW f
+(Alice)1235 1885 w
+9 S1 f
+(_)1505 1885 w
+9 CW f
+(])1550 1885 w
+(Carroll, L., Alice's Adventures in Wonderland, Macmillan, 1865.)7 3402 1 920 1995 t
+(.@tag CITE)1 540 1 920 2105 t
+9 S1 f
+(_)1514 2105 w
+9 CW f
+(Huckleberry)1559 2105 w
+9 S1 f
+(_)2153 2105 w
+9 CW f
+(.IP [)1 270 1 920 2215 t
+9 S1 f
+(_)1190 2215 w
+9 CW f
+(Huckleberry)1235 2215 w
+9 S1 f
+(_)1829 2215 w
+9 CW f
+(])1874 2215 w
+(Twain, M., Adventures of Huckleberry Finn, Webster & Co., 1885.)9 3402 1 920 2325 t
+9 B f
+(Fig. 1.)1 239 1 2383 2560 t
+9 R f
+(Sample source text.)2 709 1 2668 2560 t
+10 CW f
+(grep -h "\303\\.@tag" source | awk ')6 1920 1 920 2920 t
+({ printf "s/%s/%d/g\\n", $3, ++value[$2] })5 2460 1 1520 3040 t
+( printf "/\303\\\\.@tag/d\\n" })3 1500(END {)1 360 2 1220 3160 t
+(' > sedscript)2 780 1 920 3280 t
+(sed -f sedscript source)3 1380 1 920 3400 t
+9 B f
+(Fig. 2.)1 239 1 2175 3640 t
+9 R f
+(A reference assembler for tags.)4 1125 1 2460 3640 t
+10 R f
+(of)720 3940 w
+10 CW f
+(_Alice_)831 3940 w
+10 R f
+(and)1279 3940 w
+10 CW f
+(_Huckleberry_)1451 3940 w
+10 R f
+(in the source text by the corresponding numbers and removes the tag)11 2781 1 2259 3940 t
+(de\256nitions from the assembled output.)4 1536 1 720 4060 t
+10 B f
+(Example 2.)1 480 1 720 4240 t
+10 R f
+( applying the commands in Fig.)5 1282(Figure 3 shows the assembled output that would be created by)10 2506 2 1252 4240 t
+( assembled output might then be processed with a text-formatter like)10 2851( This)1 239( 1.)1 111(2 to the source text in Fig.)6 1119 4 720 4360 t
+10 CW f
+(troff)720 4480 w
+10 R f
+(or)1045 4480 w
+10 CW f
+(nroff)1153 4480 w
+10 R f
+(.)1453 4480 w
+10 S1 f
+()4990 4480 w
+4990 4480 m
+50 build_sq
+5040 4480 m
+9 B f
+(Assembled Output)1 718 1 920 4820 t
+9 CW f
+(.PP)920 4985 w
+(``... `and what is the use of a book,' thought Alice,)10 2862 1 920 5095 t
+(`without pictures or conversations?' '' [1])5 2322 1 920 5205 t
+(.PP)920 5315 w
+(``... if I'd a knowed what a trouble it was to make a book I)14 3240 1 920 5425 t
+(wouldn't a tackled it and ain't agoing to no more.'' [2])10 3024 1 920 5535 t
+(.IP [1])1 378 1 920 5645 t
+(Carroll, L., Alice's Adventures in Wonderland, Macmillan, 1865.)7 3402 1 920 5755 t
+(.IP [2])1 378 1 920 5865 t
+(Twain, M., Adventures of Huckleberry Finn, Webster & Co., 1885.)9 3402 1 920 5975 t
+9 B f
+(Fig. 3.)1 239 1 1826 6210 t
+9 R f
+(The assembled output for the source text of Fig. 1.)9 1823 1 2111 6210 t
+10 B f
+( THE REFERENCE ASSEMBLER WORKS)4 1931(2. HOW)1 381 2 720 6630 t
+10 R f
+(For readers unfamiliar with the UNIX commands)6 1986 1 720 6810 t
+10 CW f
+(grep)2733 6810 w
+10 R f
+(,)2973 6810 w
+10 CW f
+(awk)3026 6810 w
+10 R f
+(, and)1 197 1 3206 6810 t
+10 CW f
+(sed)3431 6810 w
+10 R f
+(, this section describes how the ref-)6 1429 1 3611 6810 t
+( the \256rst pass,)3 565( In)1 138( over the source text.)4 854( assembler makes two passes)4 1183( The)1 211(erence assembler in Fig. 2 works.)5 1369 6 720 6930 t
+(the source text is passed through a pipe consisting of a)10 2185 1 720 7050 t
+10 CW f
+(grep)2931 7050 w
+10 R f
+( by an)2 248(command [10] followed)2 967 2 3197 7050 t
+10 CW f
+(awk)4439 7050 w
+10 R f
+(command)4646 7050 w
+([1] to create a script of)5 930 1 720 7170 t
+10 CW f
+(sed)1680 7170 w
+10 R f
+( the second pass, the)4 834( In)1 137( source \256le.)2 471(instructions from the tag de\256nitions in the)6 1708 4 1890 7170 t
+(source program is processed by the)5 1465 1 720 7290 t
+10 CW f
+(sed)2222 7290 w
+10 R f
+(command [5], using the)3 985 1 2439 7290 t
+10 CW f
+(sed)3461 7290 w
+10 R f
+(script created in the \256rst pass, to)6 1362 1 3678 7290 t
+(August 20, 1991)2 664 1 2548 7680 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 2 2
+%%Page: 3 3
+/saveobj save def
+mark
+3 pagesetup
+10 I f
+(Maintaining cross references in manuscripts)4 1788 1 3052 480 t
+10 R f
+(3)4990 480 w
+(replace all symbolic references by the corresponding numbers.)7 2499 1 720 840 t
+( the source text in Fig.)5 904(Figure 4 depicts what happens when the reference assembler of Fig. 2 is applied to)14 3316 2 820 960 t
+( \256rst command)2 600(1. The)1 280 2 720 1080 t
+10 CW f
+(grep -h "\303\\.@tag" source)3 1440 1 920 1260 t
+10 R f
+( source text containing tag de\256nitions, since the symbol)8 2448(extracts all lines from the)4 1123 2 720 1440 t
+10 CW f
+(\303)4344 1440 w
+10 R f
+(in the pattern)2 583 1 4457 1440 t
+10 CW f
+(\303\\.@tag)720 1560 w
+10 R f
+(matches the beginning of a line,)5 1281 1 1166 1560 t
+10 CW f
+(\\.)2473 1560 w
+10 R f
+(matches a period, and)3 870 1 2644 1560 t
+10 CW f
+(@tag)3539 1560 w
+10 R f
+( enclose the)2 471( We)1 188(matches itself.)1 577 3 3804 1560 t
+( When)1 305( pattern.)1 344(pattern in quotes to prevent the UNIX shell from interpreting any characters within the)13 3671 3 720 1680 t
+10 CW f
+(grep)720 1800 w
+10 R f
+( source \256le currently being)4 1078(is applied to more than one source \256le, it normally places the name of the)14 2974 2 988 1800 t
+(processed at the beginning of each output line; the)8 2008 1 720 1920 t
+10 CW f
+(-h)2753 1920 w
+10 R f
+(\257ag inhibits printing the \256le name.)5 1384 1 2898 1920 t
+9 R f
+(S)2702 2220 w
+7 R f
+(OURCE)2752 2220 w
+9 R f
+(T)3012 2220 w
+7 R f
+(EXT)3067 2220 w
+cleartomark
+saveobj restore
+%%BeginGlobal
+%
+% Version 3.3 drawing procedures for dpost. Automatically pulled in, but only
+% when needed.
+%
+
+/inpath false def
+/savematrix matrix def
+
+/Dl {
+	inpath
+		{pop pop neg lineto}
+		{newpath neg moveto neg lineto stroke}
+	ifelse
+} bind def
+
+/De {
+	/y1 exch 2 div def
+	/x1 exch 2 div def
+	/savematrix savematrix currentmatrix def
+	neg exch x1 add exch translate
+	x1 y1 scale
+	0 0 1 0 360
+	inpath
+		{1 0 moveto arc savematrix setmatrix}
+		{newpath arc savematrix setmatrix stroke}
+	ifelse
+} bind def
+
+/Da {
+	/dy2 exch def
+	/dx2 exch def
+	/dy1 exch def
+	/dx1 exch def
+	dy1 add neg exch dx1 add exch
+	dx1 dx1 mul dy1 dy1 mul add sqrt
+	dy1 dx1 neg atan
+	dy2 neg dx2 atan
+	inpath
+		{arc}
+		{newpath arc stroke}
+	ifelse
+} bind def
+
+/DA {
+	/dy2 exch def
+	/dx2 exch def
+	/dy1 exch def
+	/dx1 exch def
+	dy1 add neg exch dx1 add exch
+	dx1 dx1 mul dy1 dy1 mul add sqrt
+	dy1 dx1 neg atan
+	dy2 neg dx2 atan
+	inpath
+		{arcn}
+		{newpath arcn stroke}
+	ifelse
+} bind def
+
+/Ds {
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	/y0 exch def
+	/x0 exch def
+	x0 5 x1 mul add 6 div
+	y0 5 y1 mul add -6 div
+	x2 5 x1 mul add 6 div
+	y2 5 y1 mul add -6 div
+	x1 x2 add 2 div
+	y1 y2 add -2 div
+	inpath
+		{curveto}
+		{newpath x0 x1 add 2 div y0 y1 add -2 div moveto curveto stroke}
+	ifelse
+} bind def
+%%EndGlobal
+/saveobj save def
+mark
+9 CW f
+2952 2502 2952 2382 Dl
+2951 2501 2937 2444 Dl
+2952 2501 2966 2444 Dl
+(grep -h "\303\\.@tag")2 918 1 2502 2670 t
+1692 2562 1692 2742 Dl
+4212 2562 1692 2562 Dl
+4212 2742 4212 2562 Dl
+1692 2742 4212 2742 Dl
+2952 2922 2952 2802 Dl
+2951 2921 2937 2864 Dl
+2952 2921 2966 2864 Dl
+(.@tag CITE _Alice_)2 972 1 2304 3090 t
+(.@tag CITE _Huckleberry_)2 1296 1 2304 3210 t
+2952 3462 2952 3342 Dl
+2951 3461 2937 3404 Dl
+2952 3461 2966 3404 Dl
+(awk ')1 270 1 1764 3630 t
+({ printf "s/%s/%d/g\\n", $3, ++value[$2] })5 2214 1 1980 3750 t
+(END { printf "/\303\\\\.@tag/d\\n" })4 1620 1 2034 3869 t
+(')1764 3990 w
+1692 3522 1692 4062 Dl
+4212 3522 1692 3522 Dl
+4212 4062 4212 3522 Dl
+1692 4062 4212 4062 Dl
+2952 4241 2952 4121 Dl
+2951 4241 2937 4184 Dl
+2952 4241 2966 4184 Dl
+(s/_Alice_/1/g)2718 4470 w
+(s/_Huckleberry_/2/g)2718 4589 w
+(/\303\\.@tag/d)2718 4710 w
+2682 4782 2646 4782 Dl
+2751 4782 2715 4782 Dl
+2821 4782 2785 4782 Dl
+2891 4782 2855 4782 Dl
+2961 4782 2925 4782 Dl
+3030 4782 2994 4782 Dl
+3100 4782 3064 4782 Dl
+3170 4782 3134 4782 Dl
+3240 4782 3204 4782 Dl
+3309 4782 3273 4782 Dl
+3379 4782 3343 4782 Dl
+3449 4782 3413 4782 Dl
+3519 4782 3483 4782 Dl
+3588 4782 3552 4782 Dl
+3658 4782 3622 4782 Dl
+3728 4782 3692 4782 Dl
+3798 4782 3762 4782 Dl
+3798 4746 3798 4782 Dl
+3798 4668 3798 4704 Dl
+3798 4592 3798 4628 Dl
+3798 4515 3798 4551 Dl
+3798 4438 3798 4474 Dl
+3798 4362 3798 4398 Dl
+3762 4362 3798 4362 Dl
+3692 4362 3728 4362 Dl
+3622 4362 3658 4362 Dl
+3552 4362 3588 4362 Dl
+3483 4362 3519 4362 Dl
+3413 4362 3449 4362 Dl
+3343 4362 3379 4362 Dl
+3273 4362 3309 4362 Dl
+3204 4362 3240 4362 Dl
+3134 4362 3170 4362 Dl
+3064 4362 3100 4362 Dl
+2994 4362 3030 4362 Dl
+2925 4362 2961 4362 Dl
+2855 4362 2891 4362 Dl
+2785 4362 2821 4362 Dl
+2715 4362 2751 4362 Dl
+2646 4362 2682 4362 Dl
+2646 4398 2646 4362 Dl
+2646 4474 2646 4438 Dl
+2646 4551 2646 4515 Dl
+2646 4628 2646 4592 Dl
+2646 4704 2646 4668 Dl
+2646 4782 2646 4746 Dl
+(sed -f)1 324 1 2259 4589 t
+1692 4301 1692 4841 Dl
+4212 4301 1692 4301 Dl
+4212 4841 4212 4301 Dl
+1692 4841 4212 4841 Dl
+9 R f
+(S)937 4529 w
+7 R f
+(OURCE)987 4529 w
+9 R f
+(T)985 4649 w
+7 R f
+(EXT)1040 4649 w
+9 CW f
+1692 4571 1512 4571 Dl
+1691 4572 1634 4586 Dl
+1691 4571 1634 4557 Dl
+4392 4571 4212 4571 Dl
+4391 4572 4334 4586 Dl
+4391 4571 4334 4557 Dl
+9 R f
+(A)4609 4529 w
+7 R f
+(SSEMBLED)4674 4529 w
+9 R f
+(O)4679 4649 w
+7 R f
+(UTPUT)4744 4649 w
+9 B f
+(Fig. 4.)1 239 1 1787 5099 t
+9 R f
+(Reference assembler applied to source text of Fig. 1.)8 1900 1 2072 5099 t
+10 R f
+( extracted by the)3 671(The tag de\256nitions)2 754 2 820 5399 t
+10 CW f
+(grep)2273 5399 w
+10 R f
+(command become the input to the)5 1372 1 2541 5399 t
+10 CW f
+(awk)3941 5399 w
+10 R f
+(command, whose out-)2 891 1 4149 5399 t
+(put is directed into the \256le)5 1062 1 720 5519 t
+10 CW f
+(sedscript)1810 5519 w
+10 R f
+( the second pass over the source text,)7 1501(. In)1 161 2 2350 5519 t
+10 CW f
+(sed)4040 5519 w
+10 R f
+( contents of)2 470(uses the)1 322 2 4248 5519 t
+10 CW f
+(sedscript)720 5639 w
+10 R f
+(as instructions for replacing tags by numbers.)6 1817 1 1285 5639 t
+(In the)1 230 1 820 5759 t
+10 CW f
+(awk)1075 5759 w
+10 R f
+(program, the \256rst statement)3 1099 1 1280 5759 t
+10 CW f
+({ printf "s/%s/%d/g\\n", $3, ++value[$2] })5 2460 1 1520 5939 t
+10 R f
+( statement transforms a tag de\256nition)5 1485( This)1 228(is executed on each extracted tag de\256nition.)6 1749 3 720 6119 t
+10 CW f
+(.@tag)920 6299 w
+10 I f
+(countervariable tagname)1 1042 1 1280 6299 t
+10 R f
+(into a string of the form)5 952 1 720 6479 t
+10 CW f
+(s/)920 6659 w
+10 I f
+(tagname)1040 6659 w
+10 CW f
+(/)1384 6659 w
+10 I f
+(value)1444 6659 w
+10 CW f
+(/g)1660 6659 w
+10 R f
+(In the second pass,)3 766 1 720 6839 t
+10 CW f
+(sed)1515 6839 w
+10 R f
+( each)1 212(uses this string as an instruction to replace)7 1718 2 1724 6839 t
+10 I f
+(tagname)3684 6839 w
+10 R f
+(in the source text by the)5 982 1 4058 6839 t
+(corresponding)720 6959 w
+10 I f
+(value)1324 6959 w
+10 R f
+(. Since)1 305 1 1540 6959 t
+10 CW f
+(awk)1878 6959 w
+10 R f
+( blanks and/or)2 580(views each input line as a sequence of \256elds separated by)10 2369 2 2091 6959 t
+(tabs, the string forming)3 957 1 720 7079 t
+10 I f
+(tagname)1711 7079 w
+10 R f
+(is the third \256eld of a tag de\256nition, which is denoted by)11 2315 1 2089 7079 t
+10 CW f
+($3)4438 7079 w
+10 R f
+(in the)1 234 1 4592 7079 t
+10 CW f
+(awk)4860 7079 w
+10 R f
+( second \256eld, denoted by)4 1020(program. The)1 574 2 720 7199 t
+10 CW f
+($2)2345 7199 w
+10 R f
+( in)1 108( Arrays)1 326( variable.)1 376(, is the counter)3 606 4 2465 7199 t
+10 CW f
+(awk)3911 7199 w
+10 R f
+(are indexed by strings,)3 919 1 4121 7199 t
+(so the term)2 486 1 720 7319 t
+10 CW f
+(++value[$2])1253 7319 w
+10 R f
+(in the above)2 532 1 1960 7319 t
+10 CW f
+(awk)2539 7319 w
+10 R f
+(statement increments the current value of the counter)7 2274 1 2766 7319 t
+(August 20, 1991)2 664 1 2548 7680 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 3 3
+%%Page: 4 4
+/saveobj save def
+mark
+4 pagesetup
+10 R f
+(4)720 480 w
+8 R f
+(ALFRED V. AHO AND RAVI SETHI)5 1262 1 920 480 t
+10 R f
+( In)1 133(variable and returns the incremented value.)5 1723 2 720 840 t
+10 CW f
+(awk)2601 840 w
+10 R f
+(, the initial value of every variable is zero.)8 1685 1 2781 840 t
+(The)820 960 w
+10 CW f
+(printf)1013 960 w
+10 R f
+(statement associated with the pattern)4 1522 1 1411 960 t
+10 CW f
+(END)2971 960 w
+10 R f
+(in the)1 238 1 3189 960 t
+10 CW f
+(awk)3465 960 w
+10 R f
+( executed after all the)4 914(program is)1 443 2 3683 960 t
+( statement prints the string)4 1061( This)1 228(extracted tag de\256nitions have been processed.)5 1829 3 720 1080 t
+10 CW f
+(/\303\\.@tag/d)920 1260 w
+10 R f
+(which is used in the second pass by)7 1418 1 720 1440 t
+10 CW f
+(sed)2163 1440 w
+10 R f
+(as an instruction to delete all tag de\256nitions from the source text.)11 2592 1 2368 1440 t
+(The assembled form of the manuscript is created by processing the source text with the command)15 3896 1 820 1560 t
+10 CW f
+(sed -f sedscript source)3 1380 1 920 1740 t
+10 R f
+(In Fig. 4, the contents of)5 980 1 720 1920 t
+10 CW f
+(sedscript)1725 1920 w
+10 R f
+(are enclosed within a dashed box.)5 1347 1 2290 1920 t
+10 B f
+(Remark.)720 2100 w
+10 R f
+(Since the)1 369 1 1144 2100 t
+10 CW f
+(sed)1538 2100 w
+10 R f
+(editing instruction)1 731 1 1743 2100 t
+10 CW f
+(s/)920 2280 w
+10 I f
+(tagname)1040 2280 w
+10 CW f
+(/)1384 2280 w
+10 I f
+(value)1444 2280 w
+10 CW f
+(/g)1660 2280 w
+10 R f
+(replaces all occurrences of)3 1080 1 720 2460 t
+10 I f
+(tagname)1832 2460 w
+10 R f
+( is helpful to establish notational conventions that prevent)8 2374(, it)1 113 2 2176 2460 t
+10 I f
+(tagname)4696 2460 w
+10 R f
+( string)1 255( The)1 207( in other contexts in the source text.)7 1440(from inadvertently appearing)2 1170 4 720 2580 t
+10 I f
+(tagname)3819 2580 w
+10 R f
+(is treated as a pattern)4 850 1 4190 2580 t
+(by)720 2700 w
+10 CW f
+(sed)848 2700 w
+10 R f
+( to avoid)2 358(, so it is best)4 510 2 1028 2700 t
+10 CW f
+(sed)1925 2700 w
+10 R f
+(metacharacters like)1 776 1 2134 2700 t
+10 CW f
+(*)2939 2700 w
+10 R f
+(within)3028 2700 w
+10 I f
+(tagname)3313 2700 w
+10 R f
+( are also possible if)4 787([5]. Surprises)1 567 2 3686 2700 t
+(one tag is a pre\256x of another.)6 1167 1 720 2820 t
+( but any)2 334(We have used a leading and trailing underscore to distinguish a symbolic name from other text,)15 3886 2 820 2940 t
+( that if we had used)5 819( Note)1 252(similar convention would work just as well.)6 1800 3 720 3060 t
+10 CW f
+(Alice)3624 3060 w
+10 R f
+(rather than)1 437 1 3957 3060 t
+10 CW f
+(_Alice_)4427 3060 w
+10 R f
+(as a)1 160 1 4880 3060 t
+(tag in the source text in Fig. 1, then the lines)10 1777 1 720 3180 t
+10 CW f
+(.IP [Alice])1 660 1 920 3360 t
+(Carroll, L., Alice's Adventures in Wonderland, Macmillan, 1865.)7 3780 1 920 3480 t
+10 R f
+(would have been transformed into)4 1364 1 720 3660 t
+10 CW f
+(.IP [1])1 420 1 920 3840 t
+10 S1 f
+()4990 3960 w
+4990 3960 m
+50 build_sq
+5040 3960 m
+10 CW f
+(Carroll, L., 1's Adventures in Wonderland, Macmillan, 1865.)7 3540 1 920 3960 t
+10 R f
+(Once the editing script has been created from the tag de\256nitions in the complete source text, individual)16 4220 1 820 4140 t
+(sections of the manuscript can be assembled and formatted independently, if desired.)11 3391 1 720 4260 t
+10 B f
+(Example 3.)1 488 1 720 4440 t
+10 R f
+( two \256les)2 389(Suppose that the source text in Fig. 1 is in)9 1768 2 1268 4440 t
+10 CW f
+(quotes)3461 4440 w
+10 R f
+(and)3857 4440 w
+10 CW f
+(refs)4037 4440 w
+10 R f
+( the editing)2 472(. Then)1 291 2 4277 4440 t
+(script can be constructed by)4 1114 1 720 4560 t
+10 CW f
+(grep -h "\303\\.@tag" quotes refs | awk ')7 2220 1 920 4740 t
+({ printf "s/%s/%d/g\\n", $3, ++value[$2] })5 2460 1 1520 4860 t
+( printf "/\303\\\\.@tag/d\\n" })3 1500(END {)1 360 2 1220 4980 t
+(' > sedscript)2 780 1 920 5100 t
+10 R f
+(We now have the option of editing just the quotes, using)10 2257 1 720 5280 t
+10 CW f
+(sed -f sedscript quotes)3 1380 1 920 5460 t
+10 R f
+(or the complete source text, using)5 1348 1 720 5640 t
+10 S1 f
+()4990 5820 w
+4990 5820 m
+50 build_sq
+5040 5820 m
+10 CW f
+(sed -f sedscript quotes refs)4 1680 1 920 5820 t
+10 B f
+( GENERATED TAGS)2 957(3. MECHANICALLY)1 969 2 720 6240 t
+10 R f
+(Paraphrasing the Scribe Manual [8] slightly, ``the hardest part of using [tags and labels] is in thinking up)17 4320 1 720 6420 t
+( has)1 165( problem of selecting suitable names for tags is compounded if the manuscript)12 3220( The)1 213(the code names.'')2 722 4 720 6540 t
+( 3 of [2] has over two dozen \256gures containing \256nite automata; they could)13 3051( Chapter)1 373( one author.)2 488(more than)1 408 4 720 6660 t
+(not all be named)3 663 1 720 6780 t
+10 CW f
+(_Automata_)1408 6780 w
+10 R f
+(.)2008 6780 w
+( text to re\257ect the numbers)5 1088(This problem can be solved by mechanically modifying the tags in the source)12 3132 2 820 6900 t
+( source text of)3 577( typical mechanically generated tag de\256nition in the)7 2100( A)1 126(they represent in the assembled form.)5 1517 4 720 7020 t
+([2] looked like)2 588 1 720 7140 t
+(August 20, 1991)2 664 1 2548 7680 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 4 4
+%%Page: 5 5
+/saveobj save def
+mark
+5 pagesetup
+10 I f
+(Maintaining cross references in manuscripts)4 1788 1 3052 480 t
+10 R f
+(5)4990 480 w
+10 CW f
+(.@tag FIG)1 540 1 920 840 t
+10 S1 f
+(_)1520 840 w
+10 CW f
+(FIG31)1570 840 w
+10 S1 f
+(_)1870 840 w
+10 R f
+(where the tag)2 571 1 720 1020 t
+10 CW f
+(_FIG31_)1333 1020 w
+10 R f
+(was created from the counter variable)5 1588 1 1795 1020 t
+10 CW f
+(FIG)3425 1020 w
+10 R f
+( value)1 259(and its current)2 605 2 3647 1020 t
+10 CW f
+(31.)4554 1020 w
+10 R f
+(These)4802 1020 w
+( see\) resemble the assembled)4 1210(mechanically generated ``mnemonic'' tags make the source text \(what you)9 3110 2 720 1140 t
+( a new tag de\256nition)4 816( If)1 116(output \(what you get\).)3 888 3 720 1260 t
+10 CW f
+(.@tag FIG)1 540 1 920 1440 t
+10 S1 f
+(_)1520 1440 w
+10 CW f
+(New)1570 1440 w
+10 S1 f
+(_)1750 1440 w
+10 R f
+( existing tag de\256nition is removed, fresh tags re\257ecting the new num-)11 2786(is inserted into the source text, or if an)8 1534 2 720 1620 t
+(bering can mechanically be generated to make the source text resemble the assembled output once again.)15 4190 1 720 1740 t
+( tags in the original source text are)7 1385( The)1 206( tags.)1 212(The approach in Fig. 2 can be used to create such mnemonic)11 2417 4 820 1860 t
+(transformed by two successive)3 1240 1 720 1980 t
+10 CW f
+(sed)1989 1980 w
+10 R f
+( by a)2 200(scripts, each generated)2 913 2 2198 1980 t
+10 CW f
+(grep-awk)3339 1980 w
+10 R f
+( the)1 150( If)1 119(pipe like that in Fig. 2.)5 924 3 3847 1980 t
+10 CW f
+(awk)720 2100 w
+10 R f
+(command in Fig. 2 is replaced by)6 1335 1 925 2100 t
+10 CW f
+(awk '{ printf "s/%s/)3 1200 1 920 2280 t
+10 S1 f
+(_)2120 2280 w
+10 CW f
+(@%s%d)2170 2280 w
+10 S1 f
+(_)2470 2280 w
+10 CW f
+(/g\\n", $3, $2, ++value[$2] }')4 1740 1 2520 2280 t
+10 R f
+(then the editing script)3 869 1 720 2460 t
+10 CW f
+(s/)920 2640 w
+10 S1 f
+(_)1040 2640 w
+10 CW f
+(Alice)1090 2640 w
+10 S1 f
+(_)1390 2640 w
+10 CW f
+(/)1440 2640 w
+10 S1 f
+(_)1500 2640 w
+10 CW f
+(@CITE1)1550 2640 w
+10 S1 f
+(_)1910 2640 w
+10 CW f
+(/g)1960 2640 w
+(s/)920 2760 w
+10 S1 f
+(_)1040 2760 w
+10 CW f
+(Huckleberry)1090 2760 w
+10 S1 f
+(_)1750 2760 w
+10 CW f
+(/)1800 2760 w
+10 S1 f
+(_)1860 2760 w
+10 CW f
+(@CITE2)1910 2760 w
+10 S1 f
+(_)2270 2760 w
+10 CW f
+(/g)2320 2760 w
+10 R f
+( this script,)2 476( Using)1 306(is created.)1 421 3 720 2940 t
+10 CW f
+(sed)1965 2940 w
+10 R f
+( the source text with temporary tags)6 1539(creates an intermediate form of)4 1314 2 2187 2940 t
+10 CW f
+(_@CITE1_)720 3060 w
+10 R f
+(and)1225 3060 w
+10 CW f
+(_@CITE2_)1394 3060 w
+10 R f
+( passing this intermediate form through another invocation of)8 2453(. Then,)1 305 2 1874 3060 t
+10 CW f
+(sed)4657 3060 w
+10 R f
+(with)4862 3060 w
+(the editing script)2 672 1 720 3180 t
+10 CW f
+(s/)920 3360 w
+10 S1 f
+(_)1040 3360 w
+10 CW f
+(@CITE1)1090 3360 w
+10 S1 f
+(_)1450 3360 w
+10 CW f
+(/)1500 3360 w
+10 S1 f
+(_)1560 3360 w
+10 CW f
+(CITE1)1610 3360 w
+10 S1 f
+(_)1910 3360 w
+10 CW f
+(/g)1960 3360 w
+(s/)920 3480 w
+10 S1 f
+(_)1040 3480 w
+10 CW f
+(@CITE2)1090 3480 w
+10 S1 f
+(_)1450 3480 w
+10 CW f
+(/)1500 3480 w
+10 S1 f
+(_)1560 3480 w
+10 CW f
+(CITE2)1610 3480 w
+10 S1 f
+(_)1910 3480 w
+10 CW f
+(/g)1960 3480 w
+10 R f
+( This)1 235(replaces the temporary tags by the mnemonic ones to produce the desired version of the source text.)16 4085 2 720 3660 t
+(two-step approach avoids accidental con\257icts if any of the newly created tags happen to look like tags in the)18 4320 1 720 3780 t
+( other string can be used instead of)7 1389( \(Some)1 311(original source text.)2 796 3 720 3900 t
+10 CW f
+(@)3241 3900 w
+10 R f
+(to make the temporary tags unique.\))5 1442 1 3326 3900 t
+10 B f
+(Example 4.)1 484 1 720 4080 t
+10 R f
+( \(as would happen in)4 860(Suppose that the order of the two books was reversed in the source text)13 2920 2 1260 4080 t
+( if the books were ordered alphabetically by given name for the authors rather than by pseu-)16 3669(Fig. 1 on page 2)4 651 2 720 4200 t
+(donym\). The)1 541 1 720 4320 t
+10 CW f
+(sed)1286 4320 w
+10 R f
+(instructions)1491 4320 w
+10 CW f
+(s/)920 4500 w
+10 S1 f
+(_)1040 4500 w
+10 CW f
+(CITE2)1090 4500 w
+10 S1 f
+(_)1390 4500 w
+10 CW f
+(/)1440 4500 w
+10 S1 f
+(_)1500 4500 w
+10 CW f
+(@CITE1)1550 4500 w
+10 S1 f
+(_)1910 4500 w
+10 CW f
+(/g)1960 4500 w
+(s/)920 4620 w
+10 S1 f
+(_)1040 4620 w
+10 CW f
+(CITE1)1090 4620 w
+10 S1 f
+(_)1390 4620 w
+10 CW f
+(/)1440 4620 w
+10 S1 f
+(_)1500 4620 w
+10 CW f
+(@CITE2)1550 4620 w
+10 S1 f
+(_)1910 4620 w
+10 CW f
+(/g)1960 4620 w
+10 R f
+(followed by)1 480 1 720 4800 t
+10 CW f
+(s/)920 4980 w
+10 S1 f
+(_)1040 4980 w
+10 CW f
+(@CITE1)1090 4980 w
+10 S1 f
+(_)1450 4980 w
+10 CW f
+(/)1500 4980 w
+10 S1 f
+(_)1560 4980 w
+10 CW f
+(CITE1)1610 4980 w
+10 S1 f
+(_)1910 4980 w
+10 CW f
+(/g)1960 4980 w
+(s/)920 5100 w
+10 S1 f
+(_)1040 5100 w
+10 CW f
+(@CITE2)1090 5100 w
+10 S1 f
+(_)1450 5100 w
+10 CW f
+(/)1500 5100 w
+10 S1 f
+(_)1560 5100 w
+10 CW f
+(CITE2)1610 5100 w
+10 S1 f
+(_)1910 5100 w
+10 CW f
+(/g)1960 5100 w
+10 R f
+(will interchange the tags)3 979 1 720 5280 t
+10 CW f
+(_CITE2_)1724 5280 w
+10 R f
+(and)2169 5280 w
+10 CW f
+(_CITE1_)2338 5280 w
+10 R f
+( attempt to modify the tags in one step using)9 1775(. An)1 197 2 2758 5280 t
+10 CW f
+(s/)920 5460 w
+10 S1 f
+(_)1040 5460 w
+10 CW f
+(CITE2)1090 5460 w
+10 S1 f
+(_)1390 5460 w
+10 CW f
+(/)1440 5460 w
+10 S1 f
+(_)1500 5460 w
+10 CW f
+(CITE1)1550 5460 w
+10 S1 f
+(_)1850 5460 w
+10 CW f
+(/g)1900 5460 w
+(s/)920 5580 w
+10 S1 f
+(_)1040 5580 w
+10 CW f
+(CITE1)1090 5580 w
+10 S1 f
+(_)1390 5580 w
+10 CW f
+(/)1440 5580 w
+10 S1 f
+(_)1500 5580 w
+10 CW f
+(CITE2)1550 5580 w
+10 S1 f
+(_)1850 5580 w
+10 CW f
+(/g)1900 5580 w
+10 R f
+(will incorrectly replace both)3 1128 1 720 5760 t
+10 CW f
+(_CITE2_)1873 5760 w
+10 R f
+(and)2318 5760 w
+10 CW f
+(_CITE1_)2487 5760 w
+10 R f
+(by)2932 5760 w
+10 CW f
+(_CITE2_)3057 5760 w
+10 R f
+(.)3477 5760 w
+10 S1 f
+()4990 5760 w
+4990 5760 m
+50 build_sq
+5040 5760 m
+10 R f
+(Tags with common pre\256xes allow the pattern matching by)8 2331 1 820 5940 t
+10 CW f
+(sed)3176 5940 w
+10 R f
+( the script)2 394( With)1 250(to be factored.)2 573 3 3381 5940 t
+10 CW f
+(s/)920 6120 w
+10 S1 f
+(_)1040 6120 w
+10 CW f
+(CITE1)1090 6120 w
+10 S1 f
+(_)1390 6120 w
+10 CW f
+(/1/g)1440 6120 w
+(s/)920 6240 w
+10 S1 f
+(_)1040 6240 w
+10 CW f
+(CITE2)1090 6240 w
+10 S1 f
+(_)1390 6240 w
+10 CW f
+(/2/g)1440 6240 w
+(s/)920 6360 w
+10 S1 f
+(_)1040 6360 w
+10 CW f
+(CITE3)1090 6360 w
+10 S1 f
+(_)1390 6360 w
+10 CW f
+(/3/g)1440 6360 w
+(sed)720 6540 w
+10 R f
+( for an occurrence of each of the patterns)8 1720(checks each line)2 673 2 935 6540 t
+10 CW f
+(_CITE1_)3364 6540 w
+10 R f
+(,)3784 6540 w
+10 CW f
+(_CITE2_)3845 6540 w
+10 R f
+(, and)1 205 1 4265 6540 t
+10 CW f
+(_CITE3_)4506 6540 w
+10 R f
+(in)4962 6540 w
+( the script is rewritten as)5 979(turn. If)1 302 2 720 6660 t
+10 CW f
+(/)920 6840 w
+10 S1 f
+(_)980 6840 w
+10 CW f
+(CITE/{)1030 6840 w
+(s/)1220 6960 w
+10 S1 f
+(_)1340 6960 w
+10 CW f
+(CITE1)1390 6960 w
+10 S1 f
+(_)1690 6960 w
+10 CW f
+(/1/g)1740 6960 w
+(s/)1220 7080 w
+10 S1 f
+(_)1340 7080 w
+10 CW f
+(CITE2)1390 7080 w
+10 S1 f
+(_)1690 7080 w
+10 CW f
+(/2/g)1740 7080 w
+(s/)1220 7200 w
+10 S1 f
+(_)1340 7200 w
+10 CW f
+(CITE3)1390 7200 w
+10 S1 f
+(_)1690 7200 w
+10 CW f
+(/3/g)1740 7200 w
+10 R f
+(August 20, 1991)2 664 1 2548 7680 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 5 5
+%%Page: 6 6
+/saveobj save def
+mark
+6 pagesetup
+10 R f
+(6)720 480 w
+8 R f
+(ALFRED V. AHO AND RAVI SETHI)5 1262 1 920 480 t
+10 CW f
+(})920 840 w
+10 R f
+(then the three patterns are checked only against lines containing the substring)11 3136 1 720 1020 t
+10 CW f
+(_CITE)3885 1020 w
+10 R f
+( assem-)1 307( time to)2 314(. The)1 234 3 4185 1020 t
+( 4 of [2] was cut from more than an hour to less than two minutes in this)17 3042(ble the source \256les for Chapter)5 1278 2 720 1140 t
+(way.)720 1260 w
+( to a power failure, during mechanical modi\256cation of the)9 2478(Interrupts, due to second thoughts or due)6 1742 2 820 1380 t
+( copy)1 224( Second,)1 374( the modi\256ed source text.)4 1033( create new \256les with)4 872( First,)1 265(source text can be handled as follows.)6 1552 6 720 1500 t
+( original)1 340( The)1 209( text \256les by the modi\256ed versions.)6 1427( replace the original source)4 1092( Third,)1 300(the original source text.)3 952 6 720 1620 t
+(source text is then preserved no matter when an interrupt occurs.)10 2580 1 720 1740 t
+10 B f
+( TO PAGE NUMBERS)3 998(4. REFERENCES)1 798 2 720 2100 t
+10 R f
+( can also be used to maintain references to page numbers, although)11 2793(The assembler approach of Section 2)5 1527 2 720 2280 t
+( this)1 174( In)1 137( assumptions about the text-formatting program that does page layouts.)9 2878(now we need to make some)5 1131 4 720 2400 t
+( assume page layout will be done using the)8 1723(section we)1 424 2 720 2520 t
+10 CW f
+(troff)2893 2520 w
+10 R f
+( the source text, page labels)5 1108(text-formatter. In)1 713 2 3219 2520 t
+(are de\256ned by lines of the form)6 1253 1 720 2640 t
+10 CW f
+(.@label)920 2820 w
+10 I f
+(pagelabel)1400 2820 w
+10 R f
+(where)720 3000 w
+10 I f
+(pagelabel)992 3000 w
+10 R f
+( is no need for an explicit variable to)8 1504( There)1 287( a symbolic page reference.)4 1113(is a string used as)4 721 4 1415 3000 t
+(keep track of page counts.)4 1044 1 720 3120 t
+( The)1 206( illustrated in Fig. 5.)4 816(A page-number assembler is)3 1139 3 820 3240 t
+10 CW f
+(grep)3007 3240 w
+10 R f
+(command extracts the label de\256nitions from)5 1767 1 3273 3240 t
+( in the \256gure, that we are given a table mapping symbolic page labels to edu-)15 3163( as)1 115( Suppose,)1 421(the source text.)2 621 4 720 3360 t
+( editing script created by the command)6 1583( The)1 210(cated guesses of the corresponding page numbers.)6 2022 3 720 3480 t
+10 CW f
+(awk)4565 3480 w
+7 R f
+(1)4756 3500 w
+10 R f
+(maps)4829 3480 w
+(page labels to the guessed numbers; the script in the \256gure would map)12 2844 1 720 3600 t
+10 CW f
+(_PageA_)3592 3600 w
+10 R f
+(to)4040 3600 w
+10 CW f
+(2)4145 3600 w
+10 R f
+(and)4232 3600 w
+10 CW f
+(_PageB_)4403 3600 w
+10 R f
+(to)4850 3600 w
+10 CW f
+(4)4955 3600 w
+10 R f
+(.)5015 3600 w
+(No guess is available for)4 987 1 720 3720 t
+10 CW f
+(_PageC_)1732 3720 w
+10 R f
+(so this label is left as is in the source text.)10 1663 1 2177 3720 t
+(When)820 3840 w
+10 CW f
+(troff)1089 3840 w
+10 R f
+( byproduct of)2 552( A)1 129( the labels.)2 444(formats the source text, we learn the actual page numbers for)10 2495 4 1420 3840 t
+(formatting is an index table emitted by)6 1573 1 720 3960 t
+10 CW f
+(troff)2322 3960 w
+10 R f
+( Each)1 252( the formatted text.)3 769(into an ``error'' \256le separate from)5 1368 3 2651 3960 t
+( associated with it, and its previous)6 1522(index-table entry consists of a page label, the actual page number)10 2798 2 720 4080 t
+( the index table in Fig. 5, the previous page number was correct for)13 2694( From)1 268( number.)1 356(guessed page)1 531 4 720 4200 t
+10 CW f
+(_PageA_)4595 4200 w
+10 R f
+(,)5015 4200 w
+(incorrect for)1 497 1 720 4320 t
+10 CW f
+(_PageB_)1244 4320 w
+10 R f
+(, and no information was available for)6 1534 1 1664 4320 t
+10 CW f
+(_PageC_)3226 4320 w
+10 R f
+( command)1 422(. The)1 233 2 3646 4320 t
+10 CW f
+(awk)4329 4320 w
+7 R f
+(2)4520 4340 w
+10 R f
+(checks that)1 449 1 4591 4320 t
+( warns the user of the inconsis-)6 1248(the second and third \256elds of each index-table entry agree, and if they don't,)13 3072 2 720 4440 t
+( created on one formatting pass becomes the table of guesses for the next)13 2965( index table)2 472( The)1 208(tent information.)1 675 4 720 4560 t
+( with old ones in the index table, we reformat the source text)12 2505( the new page numbers do not agree)7 1494(pass. If)1 321 3 720 4680 t
+( soon as the new page numbers agree with the old, we know we have a)15 2956( As)1 170(using the new page numbers.)4 1194 3 720 4800 t
+( possible user interface is marked by dotted lines.)8 1972( A)1 122(correct page numbering.)2 972 3 720 4920 t
+(The editing script created by the command)6 1708 1 820 5040 t
+10 CW f
+(awk)2553 5040 w
+7 R f
+(1)2744 5060 w
+10 R f
+(replaces each line)2 708 1 2812 5040 t
+10 CW f
+(.@label)920 5220 w
+10 I f
+(pagelabel)1400 5220 w
+10 R f
+(in the source text by a line)6 1054 1 720 5400 t
+10 CW f
+(.@label)920 5580 w
+10 I f
+(guess pagelabel)1 676 1 1400 5580 t
+10 R f
+(Occurrences of)1 612 1 720 5760 t
+10 I f
+(pagelabel)1364 5760 w
+10 R f
+(everywhere else in the source text are replaced by)8 2043 1 1790 5760 t
+10 I f
+(guess)3865 5760 w
+10 R f
+( editing script for)3 715(. The)1 238 2 4087 5760 t
+(the example in Fig. 5 is)5 939 1 720 5880 t
+10 CW f
+(/\303\\.@label/{)920 6060 w
+10 I f
+(do the following on lines starting with)6 1525 1 2300 6060 t
+10 CW f
+(.@label)3885 6060 w
+(s/ .*/&&/)1 540 1 1160 6180 t
+10 I f
+(replace)2480 6180 w
+10 CW f
+(.@label)2804 6180 w
+10 I f
+(pagelabel by)1 513 1 3265 6180 t
+10 CW f
+(.@label)3803 6180 w
+10 I f
+(pagelabel pagelabel)1 829 1 4264 6180 t
+10 CW f
+(s/)1160 6300 w
+10 S1 f
+(_)1280 6300 w
+10 CW f
+(PageA)1330 6300 w
+10 S1 f
+(_)1630 6300 w
+10 CW f
+(/2/)1680 6300 w
+10 I f
+(replace first copy of)3 802 1 2460 6300 t
+10 S1 f
+(_)3322 6300 w
+10 CW f
+(PageA)3372 6300 w
+10 S1 f
+(_)3672 6300 w
+10 I f
+(by)3782 6300 w
+10 CW f
+(2)3936 6300 w
+(s/)1160 6420 w
+10 S1 f
+(_)1280 6420 w
+10 CW f
+(PageB)1330 6420 w
+10 S1 f
+(_)1630 6420 w
+10 CW f
+(/4/)1680 6420 w
+10 I f
+(replace first copy of)3 802 1 2460 6420 t
+10 S1 f
+(_)3322 6420 w
+10 CW f
+(PageB)3372 6420 w
+10 S1 f
+(_)3672 6420 w
+10 I f
+(by)3782 6420 w
+10 CW f
+(4)3936 6420 w
+(})920 6540 w
+(/\303\\.@label/!{)920 6660 w
+10 I f
+(do the following on lines that do not start with)9 1856 1 2300 6660 t
+10 CW f
+(.@label)4216 6660 w
+(s/)1160 6780 w
+10 S1 f
+(_)1280 6780 w
+10 CW f
+(PageA)1330 6780 w
+10 S1 f
+(_)1630 6780 w
+10 CW f
+(/2/g)1680 6780 w
+10 I f
+(replace all copies of)3 813 1 2460 6780 t
+10 S1 f
+(_)3333 6780 w
+10 CW f
+(PageA)3383 6780 w
+10 S1 f
+(_)3683 6780 w
+10 I f
+(by)3793 6780 w
+10 CW f
+(2)3947 6780 w
+(s/)1160 6900 w
+10 S1 f
+(_)1280 6900 w
+10 CW f
+(PageB)1330 6900 w
+10 S1 f
+(_)1630 6900 w
+10 CW f
+(/4/g)1680 6900 w
+10 I f
+(replace all copies of)3 813 1 2460 6900 t
+10 S1 f
+(_)3333 6900 w
+10 CW f
+(PageB)3383 6900 w
+10 S1 f
+(_)3683 6900 w
+10 I f
+(by)3793 6900 w
+10 CW f
+(4)3947 6900 w
+(})920 7020 w
+10 R f
+(The index table can be created by using)7 1582 1 820 7200 t
+10 CW f
+(troff)2427 7200 w
+10 R f
+(instructions of the form)3 941 1 2752 7200 t
+(August 20, 1991)2 664 1 2548 7680 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 6 6
+%%Page: 7 7
+/saveobj save def
+mark
+7 pagesetup
+10 I f
+(Maintaining cross references in manuscripts)4 1788 1 3052 480 t
+10 R f
+(7)4990 480 w
+9 R f
+(S)1892 959 w
+7 R f
+(OURCE)1942 959 w
+9 R f
+(T)2202 959 w
+7 R f
+(EXT)2257 959 w
+9 CW f
+2142 1391 2142 1031 Dl
+2141 1391 2127 1334 Dl
+2142 1391 2156 1334 Dl
+1602 1422 1602 1542 Dl
+2682 1422 1602 1422 Dl
+2682 1542 2682 1422 Dl
+1602 1542 2682 1542 Dl
+(grep -h "\303\\.@label")2 1026 1 1629 1499 t
+2142 1691 2142 1571 Dl
+2141 1691 2127 1634 Dl
+2142 1691 2156 1634 Dl
+(.@label _PageA_)1 810 1 1737 1830 t
+(.@label _PageB_)1 810 1 1737 1949 t
+(.@label _PageC_)1 810 1 1737 2070 t
+2142 2292 2142 2172 Dl
+2141 2291 2127 2234 Dl
+2142 2291 2156 2234 Dl
+2034 2322 2034 2442 Dl
+2250 2322 2034 2322 Dl
+2250 2442 2250 2322 Dl
+2034 2442 2250 2442 Dl
+(awk)2038 2399 w
+6 R f
+(1)2210 2417 w
+9 CW f
+1566 2711 1566 2831 Dl
+1926 2712 1566 2712 Dl
+1926 2832 1926 2712 Dl
+1566 2831 1926 2831 Dl
+(sed -f)1 324 1 1584 2790 t
+1962 2831 1926 2831 Dl
+2028 2831 1992 2831 Dl
+2093 2831 2057 2831 Dl
+2160 2831 2124 2831 Dl
+2226 2831 2190 2831 Dl
+2291 2831 2255 2831 Dl
+2358 2831 2322 2831 Dl
+2358 2795 2358 2831 Dl
+2358 2712 2358 2748 Dl
+2322 2712 2358 2712 Dl
+2255 2712 2291 2712 Dl
+2190 2712 2226 2712 Dl
+2124 2712 2160 2712 Dl
+2057 2712 2093 2712 Dl
+1992 2712 2028 2712 Dl
+1926 2712 1962 2712 Dl
+1926 2748 1926 2712 Dl
+1926 2831 1926 2795 Dl
+9 I f
+(sedscript)1980 2790 w
+2508 2772 2388 2772 Dl
+2507 2772 2450 2786 Dl
+2507 2771 2450 2757 Dl
+2538 2711 2538 2831 Dl
+3078 2712 2538 2712 Dl
+3078 2832 3078 2712 Dl
+2538 2831 3078 2831 Dl
+9 CW f
+(troff -ms)1 486 1 2565 2790 t
+3228 2772 3108 2772 Dl
+3227 2772 3170 2786 Dl
+3227 2771 3170 2757 Dl
+(_PageA_ 2 2)2 594 1 3330 2669 t
+(_PageB_ 3 4)2 594 1 3330 2790 t
+(_PageC_ 5 _PageC_)2 918 1 3330 2910 t
+3294 2982 3258 2982 Dl
+3363 2982 3327 2982 Dl
+3432 2982 3396 2982 Dl
+3502 2982 3466 2982 Dl
+3571 2982 3535 2982 Dl
+3641 2982 3605 2982 Dl
+3710 2982 3674 2982 Dl
+3780 2982 3744 2982 Dl
+3849 2982 3813 2982 Dl
+3918 2982 3882 2982 Dl
+3988 2982 3952 2982 Dl
+4057 2982 4021 2982 Dl
+4127 2982 4091 2982 Dl
+4196 2982 4160 2982 Dl
+4266 2982 4230 2982 Dl
+4266 2946 4266 2982 Dl
+4266 2869 4266 2905 Dl
+4266 2792 4266 2828 Dl
+4266 2715 4266 2751 Dl
+4266 2638 4266 2674 Dl
+4266 2561 4266 2597 Dl
+4230 2561 4266 2561 Dl
+4160 2561 4196 2561 Dl
+4091 2561 4127 2561 Dl
+4021 2561 4057 2561 Dl
+3952 2561 3988 2561 Dl
+3882 2561 3918 2561 Dl
+3813 2561 3849 2561 Dl
+3744 2561 3780 2561 Dl
+3674 2561 3710 2561 Dl
+3605 2561 3641 2561 Dl
+3535 2561 3571 2561 Dl
+3466 2561 3502 2561 Dl
+3396 2561 3432 2561 Dl
+3327 2561 3363 2561 Dl
+3258 2561 3294 2561 Dl
+3258 2597 3258 2561 Dl
+3258 2674 3258 2638 Dl
+3258 2751 3258 2715 Dl
+3258 2828 3258 2792 Dl
+3258 2905 3258 2869 Dl
+3258 2982 3258 2946 Dl
+9 R f
+(I)3651 2520 w
+7 R f
+(NDEX)3681 2520 w
+9 CW f
+4416 2772 4296 2772 Dl
+4415 2772 4358 2786 Dl
+4415 2771 4358 2757 Dl
+4446 2711 4446 2831 Dl
+4662 2712 4446 2712 Dl
+4662 2832 4662 2712 Dl
+4446 2831 4662 2831 Dl
+(awk)4450 2790 w
+6 R f
+(2)4622 2808 w
+9 CW f
+2142 2681 2142 2471 Dl
+2141 2681 2127 2624 Dl
+2142 2681 2156 2624 Dl
+9 R f
+(G)2847 1800 w
+7 R f
+(UESSES)2912 1800 w
+9 CW f
+(_PageA_ 2)1 486 1 2763 1949 t
+(_PageB_ 4)1 486 1 2763 2070 t
+2754 2142 2718 2142 Dl
+2821 2142 2785 2142 Dl
+2889 2142 2853 2142 Dl
+2956 2142 2920 2142 Dl
+3024 2142 2988 2142 Dl
+3091 2142 3055 2142 Dl
+3159 2142 3123 2142 Dl
+3226 2142 3190 2142 Dl
+3294 2142 3258 2142 Dl
+3294 2106 3294 2142 Dl
+3294 2039 3294 2075 Dl
+3294 1974 3294 2010 Dl
+3294 1908 3294 1944 Dl
+3294 1841 3294 1877 Dl
+3258 1841 3294 1841 Dl
+3190 1841 3226 1841 Dl
+3123 1841 3159 1841 Dl
+3055 1841 3091 1841 Dl
+2988 1841 3024 1841 Dl
+2920 1841 2956 1841 Dl
+2853 1841 2889 1841 Dl
+2785 1841 2821 1841 Dl
+2718 1841 2754 1841 Dl
+2718 1877 2718 1841 Dl
+2718 1944 2718 1908 Dl
+2718 2010 2718 1974 Dl
+2718 2075 2718 2039 Dl
+2718 2142 2718 2106 Dl
+3006 2142 3006 2142 2966 2262 Ds
+3006 2142 2966 2262 2370 2203 Ds
+2966 2262 2370 2203 2250 2323 Ds
+2370 2203 2250 2323 2250 2323 Ds
+2250 2321 2280 2270 Dl
+2250 2321 2301 2291 Dl
+6 R f
+( .)1 0( . . . . . . . . . .)10 360( .)1 35( . . . . .)5 180( .)1 35( . . . . .)5 180( .)1 35( . . . . . . . . . . .)11 396( .)1 35( . . . . .)5 180( .)1 35( . . . . .)5 180( .)1 35( . . . . . . . . . .)10 360( .)1 35( . . . . .)5 180( .)1 35( . . . . . . . . . . .)11 396( .)1 35( . . . . .)5 180( .)1 35( . . . . .)5 180( .)1 35(. . . . . . . . . . .)10 375 24 1256 3103 t
+(.)4773 3068 w
+(.)4773 3032 w
+(.)4773 2996 w
+(.)4773 2961 w
+(.)4773 2925 w
+(.)4773 2889 w
+(.)4773 2853 w
+(.)4773 2817 w
+(.)4773 2781 w
+(.)4773 2746 w
+(.)4773 2710 w
+(.)4773 2674 w
+(.)4773 2639 w
+(.)4773 2603 w
+(.)4773 2567 w
+(.)4773 2531 w
+(.)4773 2496 w
+(.)4773 2460 w
+(.)4773 2424 w
+(.)4773 2388 w
+(.)4773 2352 w
+(.)4773 2316 w
+(.)4773 2281 w
+(.)4773 2245 w
+(.)4773 2209 w
+(.)4773 2174 w
+(.)4773 2138 w
+(.)4773 2102 w
+(.)4773 2066 w
+(.)4773 2030 w
+(.)4773 1994 w
+(.)4773 1959 w
+(.)4773 1923 w
+(.)4773 1887 w
+(.)4773 1852 w
+(.)4773 1816 w
+(.)4773 1780 w
+(.)4773 1745 w
+(.)4773 1709 w
+(.)4773 1673 w
+(.)4773 1637 w
+(.)4773 1601 w
+(.)4773 1565 w
+(.)4773 1529 w
+(.)4773 1494 w
+(.)4773 1458 w
+(.)4773 1422 w
+(.)4773 1387 w
+(.)4773 1351 w
+(.)4773 1315 w
+(.)4773 1280 w
+( .)1 0( . . . . . . . . . .)10 -360( .)1 -35( . . . . .)5 -180( .)1 -35( . . . . .)5 -180( .)1 -35( . . . . . . . . . . .)11 -396( .)1 -35( . . . . .)5 -180( .)1 -35( . . . . . . . . . .)10 -360( .)1 -35( . . . . .)5 -180( .)1 -35( . . . . .)5 -180( .)1 -35( . . . . . . . . . . .)11 -396( .)1 -35( . . . . .)5 -180( .)1 -35( . . . . .)5 -180( .)1 -35( . . . . . . . . . .)10 -360(. .)1 15 25 4773 1244 t
+(.)1256 1280 w
+(.)1256 1315 w
+(.)1256 1351 w
+(.)1256 1387 w
+(.)1256 1422 w
+(.)1256 1458 w
+(.)1256 1494 w
+(.)1256 1529 w
+(.)1256 1565 w
+(.)1256 1601 w
+(.)1256 1637 w
+(.)1256 1673 w
+(.)1256 1709 w
+(.)1256 1745 w
+(.)1256 1780 w
+(.)1256 1816 w
+(.)1256 1852 w
+(.)1256 1887 w
+(.)1256 1923 w
+(.)1256 1959 w
+(.)1256 1994 w
+(.)1256 2030 w
+(.)1256 2066 w
+(.)1256 2102 w
+(.)1256 2138 w
+(.)1256 2174 w
+(.)1256 2209 w
+(.)1256 2245 w
+(.)1256 2281 w
+(.)1256 2316 w
+(.)1256 2352 w
+(.)1256 2388 w
+(.)1256 2424 w
+(.)1256 2460 w
+(.)1256 2496 w
+(.)1256 2531 w
+(.)1256 2567 w
+(.)1256 2603 w
+(.)1256 2639 w
+(.)1256 2674 w
+(.)1256 2710 w
+(.)1256 2746 w
+(.)1256 2781 w
+(.)1256 2817 w
+(.)1256 2853 w
+(.)1256 2889 w
+(.)1256 2925 w
+(.)1256 2961 w
+(.)1256 2996 w
+(.)1256 3032 w
+(.)1256 3068 w
+(.)1256 3103 w
+9 R f
+(F)2589 3599 w
+7 R f
+(ORMATTED)2639 3599 w
+9 R f
+(O)2663 3719 w
+7 R f
+(UTPUT)2728 3719 w
+9 CW f
+2808 3252 2808 2862 Dl
+2807 3251 2793 3194 Dl
+2808 3251 2822 3194 Dl
+9 R f
+(M)4363 3360 w
+7 R f
+(ESSAGES)4443 3360 w
+9 CW f
+(new pages)1 486 1 4338 3479 t
+(_PageB_ 3)1 486 1 4338 3600 t
+(_PageC_ 5)1 486 1 4338 3720 t
+4302 3762 4266 3762 Dl
+4369 3762 4333 3762 Dl
+4437 3762 4401 3762 Dl
+4504 3762 4468 3762 Dl
+4572 3762 4536 3762 Dl
+4639 3762 4603 3762 Dl
+4707 3762 4671 3762 Dl
+4774 3762 4738 3762 Dl
+4842 3762 4806 3762 Dl
+4842 3726 4842 3762 Dl
+4842 3645 4842 3681 Dl
+4842 3564 4842 3600 Dl
+4842 3483 4842 3519 Dl
+4842 3402 4842 3438 Dl
+4806 3402 4842 3402 Dl
+4738 3402 4774 3402 Dl
+4671 3402 4707 3402 Dl
+4603 3402 4639 3402 Dl
+4536 3402 4572 3402 Dl
+4468 3402 4504 3402 Dl
+4401 3402 4437 3402 Dl
+4333 3402 4369 3402 Dl
+4266 3402 4302 3402 Dl
+4266 3438 4266 3402 Dl
+4266 3519 4266 3483 Dl
+4266 3600 4266 3564 Dl
+4266 3681 4266 3645 Dl
+4266 3762 4266 3726 Dl
+4554 3252 4554 2862 Dl
+4553 3251 4539 3194 Dl
+4554 3251 4568 3194 Dl
+9 R f
+(S)919 2730 w
+7 R f
+(OURCE)969 2730 w
+9 R f
+(T)967 2850 w
+7 R f
+(EXT)1022 2850 w
+9 CW f
+1566 2772 1206 2772 Dl
+1565 2772 1508 2786 Dl
+1565 2771 1508 2757 Dl
+9 B f
+(Fig. 5.)1 239 1 2294 4259 t
+9 R f
+(Page-number assembler.)1 886 1 2579 4259 t
+10 CW f
+(.tm)920 4559 w
+10 I f
+(string)1160 4559 w
+10 R f
+(This instruction emits)2 873 1 720 4739 t
+10 I f
+(string)1618 4739 w
+10 R f
+( The)1 205(to the standard error \256le.)4 984 2 1877 4739 t
+10 CW f
+(troff)3091 4739 w
+10 R f
+(number register)1 629 1 3416 4739 t
+10 CW f
+(%)4070 4739 w
+10 R f
+( page)1 214(holds the current)2 671 2 4155 4739 t
+( value replaces the string)4 992(number. Its)1 480 2 720 4859 t
+10 CW f
+(\\n%)2217 4859 w
+10 R f
+(in the output, so the)4 792 1 2422 4859 t
+10 CW f
+(troff)3239 4859 w
+10 R f
+(instruction)3564 4859 w
+(\(1\))4924 5039 w
+10 CW f
+(.tm)920 5039 w
+10 S1 f
+(_)1160 5039 w
+10 CW f
+(PageB)1210 5039 w
+10 S1 f
+(_)1510 5039 w
+10 CW f
+(\\n% 4)1 300 1 1620 5039 t
+10 R f
+(emits)720 5219 w
+10 CW f
+(_PageB_)962 5219 w
+10 R f
+(and its new and old page numbers.)6 1384 1 1407 5219 t
+(This simple approach works only if the)6 1571 1 820 5339 t
+10 CW f
+(.tm)2417 5339 w
+10 R f
+( the)1 149( If)1 118(command is printed immediately on the current page.)7 2150 3 2623 5339 t
+( onto the next page, then)5 1032(command appears in a ``keep'' or a footnote that spills)9 2286 2 720 5459 t
+10 CW f
+(\\n%)4073 5459 w
+10 R f
+(will incorrectly be)2 752 1 4288 5459 t
+( page number when the)4 959(replaced by the)2 621 2 720 5579 t
+10 CW f
+(.tm)2332 5579 w
+10 R f
+(command is \256rst seen, rather than the page number when the)10 2496 1 2544 5579 t
+(block of text containing the command is printed.)7 1943 1 720 5699 t
+( a block of text is about to be printed in)10 1631(There is a way to determine whether)6 1487 2 820 5819 t
+10 CW f
+(troff)3969 5819 w
+10 R f
+(: test if register)3 620 1 4269 5819 t
+10 CW f
+(.z)4920 5819 w
+10 R f
+( command)1 419( The)1 205(contains the empty string.)3 1033 3 720 5939 t
+(\(2\))4924 6119 w
+10 CW f
+(.if '\\n\(.z'' .tm)2 960 1 920 6119 t
+10 S1 f
+(_)1940 6119 w
+10 CW f
+(PageB)1990 6119 w
+10 S1 f
+(_)2290 6119 w
+10 CW f
+(\\n% 4)1 300 1 2400 6119 t
+10 R f
+(executes the)1 496 1 720 6299 t
+10 CW f
+(.tm)1247 6299 w
+10 R f
+(command if register)2 818 1 1458 6299 t
+10 CW f
+(.z)2308 6299 w
+10 R f
+( text)1 182( For)1 196(contains the empty string; otherwise no action occurs.)7 2202 3 2460 6299 t
+( by)1 137(that might be squirreled away and reread some number of times)10 2675 2 720 6419 t
+10 CW f
+(troff)3569 6419 w
+10 R f
+(, the test can be done recur-)6 1171 1 3869 6419 t
+( following macro)2 688( The)1 205(sively, each time the text is reread.)6 1386 3 720 6539 t
+10 CW f
+(.@l)3024 6539 w
+10 R f
+(can be used; \()3 551 1 3229 6539 t
+10 CW f
+(troff)3780 6539 w
+10 R f
+(interprets)4105 6539 w
+10 CW f
+(.@label 4)1 540 1 920 6719 t
+10 S1 f
+(_)1520 6719 w
+10 CW f
+(PageB)1570 6719 w
+10 S1 f
+(_)1870 6719 w
+10 R f
+(as the application of macro)4 1081 1 720 6899 t
+10 CW f
+(.@l)1826 6899 w
+10 R f
+(to three arguments:)2 771 1 2031 6899 t
+10 CW f
+(abel)2827 6899 w
+10 R f
+(,)3067 6899 w
+10 CW f
+(4)3117 6899 w
+10 R f
+(, and)1 194 1 3177 6899 t
+10 CW f
+(_PageB_)3396 6899 w
+10 R f
+(\).)3816 6899 w
+(August 20, 1991)2 664 1 2548 7680 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 7 7
+%%Page: 8 8
+/saveobj save def
+mark
+8 pagesetup
+10 R f
+(8)720 480 w
+8 R f
+(ALFRED V. AHO AND RAVI SETHI)5 1262 1 920 480 t
+10 CW f
+(.de @l)1 360 1 920 900 t
+(.ie '\\\\n\(.z'' .tm \\\\$3 \\\\n% \\\\$2)5 1920 1 920 1020 t
+(.el \\\\!.@label \\\\$2 \\\\$3)3 1440 1 920 1140 t
+(..)920 1260 w
+10 R f
+(Here,)720 1440 w
+10 CW f
+(.ie)965 1440 w
+10 R f
+(corresponds to)1 587 1 1172 1440 t
+10 CW f
+(.if)1786 1440 w
+10 R f
+(in \(2\) and)2 392 1 1993 1440 t
+10 CW f
+(.el)2412 1440 w
+10 R f
+( call to)2 278(is the ``else'' part containing the recursive)6 1702 2 2619 1440 t
+10 CW f
+(.@l)4627 1440 w
+10 R f
+(. The)1 233 1 4807 1440 t
+10 CW f
+(\\\\!)720 1560 w
+10 R f
+(before)958 1560 w
+10 CW f
+(.@l)1245 1560 w
+10 R f
+( The)1 213(delays the recursive call until the text is reread.)8 1946 2 1458 1560 t
+10 CW f
+(ms)3649 1560 w
+10 R f
+(macro package [3] may reread)4 1239 1 3801 1560 t
+(text upto three times.)3 844 1 720 1680 t
+( symbolic references to both tags and page)7 1720(Appendix A contains the code for an assembler that maintains)9 2500 2 820 1800 t
+(labels.)720 1920 w
+10 B f
+( REMARKS)1 536(5. CONCLUDING)1 819 2 720 2280 t
+10 R f
+( be \257exibly)2 478(The main point of this note is to show that the problem of maintaining cross references can)16 3842 2 720 2460 t
+(solved with a few lines of)5 1034 1 720 2580 t
+10 CW f
+(grep)1780 2580 w
+10 R f
+(,)2020 2580 w
+10 CW f
+(awk)2070 2580 w
+10 R f
+(, and)1 194 1 2250 2580 t
+10 CW f
+(sed)2469 2580 w
+10 R f
+( addition, when dealing with tags, the problem can)8 2020(code. In)1 346 2 2674 2580 t
+( reference assembler described in Section 1 does not even)9 2356( The)1 211( text formatting.)2 659(be solved independently of)3 1094 4 720 2700 t
+( cross)1 230( assembler of this nature was used to maintain)8 1850( An)1 173(need to know that the source text will be formatted.)9 2067 4 720 2820 t
+( the more than one thousand numbered algorithms, equations, examples, exercises, \256gures, and)12 3809(references to)1 511 2 720 2940 t
+(footnotes in the successive drafts of the source text for [2].)10 2342 1 720 3060 t
+( before in text-formatters.)3 1049(Facilities for resolving cross references to tags and page labels have appeared)11 3171 2 820 3180 t
+( is styled after the counter and referencing mecha-)8 2023(Reid [7] mentions that Scribe's cross-referencing facility)6 2297 2 720 3300 t
+( [4] relates that around 1972, ``One clever Roffer did the job by Rof\256ng a)14 3053( McIlroy)1 385( [9].)1 174(nism used in Pub)3 708 4 720 3420 t
+( references, then doing it again with printing)7 1901(whole document with printing turned off, gathering cross)7 2419 2 720 3540 t
+(turned on)1 396 1 720 3660 t
+10 I f
+(. . .)2 139 1 1157 3660 t
+10 R f
+( well, except that depending on the size of the numbers inserted, subtle)12 3033(This is all very)3 645 2 1362 3660 t
+(changes in pagination of the document could happen the second time through.'')11 3184 1 720 3780 t
+(Miller [6] has implemented a cross-reference assembler in C.)8 2441 1 820 3900 t
+10 B f
+(References)720 4140 w
+10 R f
+([1] A)1 272 1 720 4320 t
+7 R f
+(HO)992 4320 w
+10 R f
+(, A. V., B. W. K)5 667 1 1092 4320 t
+7 R f
+(ERNIGHAN)1759 4320 w
+10 R f
+(,)2122 4320 w
+7 R f
+(AND)2168 4320 w
+10 R f
+(P. J. W)2 295 1 2346 4320 t
+7 R f
+(EINBERGER)2641 4320 w
+10 R f
+( pattern scanning and process-)4 1224( \261 a)2 150([1979]. ``Awk)1 604 3 3062 4320 t
+(ing language,'')1 604 1 920 4440 t
+10 I f
+(Software\320Practice and Experience)2 1431 1 1549 4440 t
+10 B f
+(9:4)3005 4440 w
+10 R f
+(, 267-280.)1 408 1 3138 4440 t
+([2] A)1 272 1 720 4620 t
+7 R f
+(HO)992 4620 w
+10 R f
+(, A. V., R. S)4 580 1 1092 4620 t
+7 R f
+(ETHI)1672 4620 w
+10 R f
+(,)1831 4620 w
+7 R f
+(AND)1897 4620 w
+10 R f
+(J. D. U)2 329 1 2095 4620 t
+7 R f
+(LLMAN)2424 4620 w
+10 R f
+([1986].)2720 4620 w
+10 I f
+(Compilers: Principles, Techniques, and Tools)4 1931 1 3084 4620 t
+10 R f
+(,)5015 4620 w
+(Addison-Wesley, Reading, Mass.)2 1340 1 920 4740 t
+([3] L)1 261 1 720 4920 t
+7 R f
+(ESK)981 4920 w
+10 R f
+( documents on the UNIX system: using the)7 1801( ``Typing)1 415(, M. E. [1976].)3 621 3 1113 4920 t
+10 CW f
+(-ms)3986 4920 w
+10 R f
+(macros with)1 502 1 4202 4920 t
+10 CW f
+(nroff)4740 4920 w
+10 R f
+(and)920 5040 w
+10 CW f
+(troff)1100 5040 w
+10 R f
+( 49, AT&T Bell Laboratories, Murray Hill, N.J.)7 1979(,'' Computing Science Technical Report)4 1661 2 1400 5040 t
+(See)920 5160 w
+10 I f
+(UNIX Programmer's Manual)2 1182 1 1089 5160 t
+10 R f
+(Volume 2.)1 422 1 2296 5160 t
+([4] M)1 289 1 720 5340 t
+7 R f
+(C)1009 5340 w
+10 R f
+(I)1056 5340 w
+7 R f
+(LROY)1089 5340 w
+10 R f
+( Bell Laboratories,)2 772( text formatter,'' MHCC-005, Revision 1, AT&T)6 2040( ``Roff)1 311(, M. D. [1973].)3 638 4 1279 5340 t
+(Murray Hill, New Jersey.)3 1017 1 920 5460 t
+([5] M)1 289 1 720 5640 t
+7 R f
+(C)1009 5640 w
+10 R f
+(M)1056 5640 w
+7 R f
+(AHON)1145 5640 w
+10 R f
+( \261 a noninteractive text editor,'' Computing Science Technical Report)9 2844( ``Sed)1 272( [1979].)1 322(, L. E.)2 257 4 1345 5640 t
+( See)1 194(77, AT&T Bell Laboratories, Murray Hill, N.J.)6 1884 2 920 5760 t
+10 I f
+(UNIX Programmer's Manual)2 1182 1 3023 5760 t
+10 R f
+(Volume 2.)1 422 1 4230 5760 t
+([6] M)1 289 1 720 5940 t
+7 R f
+(ILLER)1009 5940 w
+10 R f
+( labels in text documents,'' manuscript, Heriot-Watt Univ.,)7 2396( \261 symbolic)2 475( ``Lbl)1 259(, C. D. F. [1985].)4 702 4 1208 5940 t
+(Edinburgh, Scotland.)1 847 1 920 6060 t
+([7] R)1 267 1 720 6240 t
+7 R f
+(EID)987 6240 w
+10 R f
+( its compiler,'' Report CMU-CS-)4 1350( a document speci\256cation language and)5 1592( ``Scribe:)1 403(, B. K. [1980].)3 592 4 1103 6240 t
+(81-100, Carnegie-Mellon Univ., Pittsburgh, Pa.)4 1902 1 920 6360 t
+([8] R)1 267 1 720 6540 t
+7 R f
+(EID)987 6540 w
+10 R f
+(, B. K.)2 304 1 1103 6540 t
+7 R f
+(AND)1452 6540 w
+10 R f
+(J. H. W)2 345 1 1647 6540 t
+7 R f
+(ALKER)1992 6540 w
+10 R f
+([1980].)2270 6540 w
+10 I f
+( Manual,)1 382(Scribe User's)1 566 2 2631 6540 t
+10 R f
+(Third Edition, Unilogic Ltd., 605)4 1415 1 3625 6540 t
+(Devonshire St., Pittsburgh, Pa. 15213.)4 1531 1 920 6660 t
+([9] T)1 261 1 720 6840 t
+7 R f
+(ESLER)981 6840 w
+10 R f
+( document compiler,'' Report ON-70, Arti\256cial Intelligence Project,)7 2869( the)1 166( ``Pub:)1 319(, L. [1972].)2 490 4 1196 6840 t
+(Stanford Univ.)1 594 1 920 6960 t
+([10] T)1 261 1 720 7140 t
+7 R f
+(HOMPSON)981 7140 w
+10 R f
+( expression search algorithm,'')3 1236( ``Regular)1 432(, K. [1968].)2 463 3 1321 7140 t
+10 I f
+(Comm. ACM)1 522 1 3477 7140 t
+10 B f
+(11:6)4024 7140 w
+10 R f
+(, 419-422.)1 408 1 4207 7140 t
+(August 20, 1991)2 664 1 2548 7680 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 8 8
+%%Page: 9 9
+/saveobj save def
+mark
+9 pagesetup
+10 I f
+(Maintaining cross references in manuscripts)4 1788 1 3052 480 t
+10 R f
+(9)4990 480 w
+10 B f
+(APPENDIX A)1 613 1 720 840 t
+10 R f
+(NAME)720 1080 w
+10 CW f
+(xref)920 1260 w
+10 R f
+(\320 create sed script to resolve cross references)7 1846 1 1185 1260 t
+(SYNOPSIS)720 1440 w
+10 CW f
+(xref)920 1620 w
+10 I f
+(f iles)1 175 1 1220 1620 t
+10 R f
+(DESCRIPTION)720 1800 w
+10 CW f
+(xref)920 1980 w
+10 R f
+(reads)1185 1980 w
+10 I f
+(f iles)1 175 1 1420 1980 t
+10 R f
+(containing lines of the form)4 1110 1 1620 1980 t
+10 CW f
+(.@tag)1120 2160 w
+10 I f
+(counter tag)1 493 1 1480 2160 t
+10 CW f
+(.@label)1120 2280 w
+10 I f
+(pagelabel)1600 2280 w
+10 R f
+(and an optional \256le)3 790 1 920 2460 t
+10 CW f
+(xref.index)1742 2460 w
+10 R f
+( creates a)2 384( It)1 118(mapping page labels to expected page numbers.)6 1952 3 2374 2460 t
+10 CW f
+(sed)4860 2460 w
+10 R f
+( de\256nitions are replaced by)4 1141( Label)1 292(script to replace tags and page labels by numbers.)8 2102 3 920 2580 t
+10 CW f
+(troff)4495 2580 w
+10 R f
+(com-)4835 2580 w
+(mands to emit lines of the form)6 1255 1 920 2700 t
+10 CW f
+(.@index)1120 2880 w
+10 I f
+(pagelabel pagenumber oldpagenumber)2 1640 1 1600 2880 t
+10 R f
+(destined for \256le)2 627 1 920 3060 t
+10 CW f
+(xref.index)1572 3060 w
+10 R f
+(Typical usage is)2 649 1 920 3240 t
+10 CW f
+(xref)1120 3420 w
+10 I f
+(f iles)1 175 1 1420 3420 t
+10 CW f
+(>.script)1655 3420 w
+(sed -f .script)2 840 1 1120 3540 t
+10 I f
+(f iles)1 175 1 2020 3540 t
+10 CW f
+(|pic|tbl|eqn| troff -ms >)3 1500 1 2255 3540 t
+10 I f
+( ile)1 108(out f)1 172 2 3755 3540 t
+10 CW f
+(2>xref.index)4095 3540 w
+10 R f
+(The command)1 574 1 920 3720 t
+10 CW f
+(awk ')1 300 1 1120 3900 t
+($3!=$4 { change = change sprintf\("%s %s\\n",$2,$3\);)6 3000 1 1240 4020 t
+(})1660 4140 w
+( if \(change != ""\))4 1080(END {)1 480 2 1240 4260 t
+(system\( sprintf\("cat 1>&2 <<\\!\\nnew pages\\n%s!\\n", change\) \);)6 3660 1 1960 4380 t
+(})1660 4500 w
+(' xref.index)1 720 1 1120 4620 t
+10 R f
+(warns of changed entries in the index.)6 1516 1 920 4800 t
+(FILES)720 4980 w
+10 CW f
+(xref.index)920 5280 w
+10 R f
+(index mapping page labels to page numbers)6 1753 1 1670 5280 t
+10 CW f
+(xref.tmp)920 5400 w
+10 R f
+(temporary \256le)1 563 1 1670 5400 t
+(SEE ALSO)1 464 1 720 5580 t
+10 CW f
+(sed)920 5760 w
+10 R f
+(\(1\))1100 5760 w
+(DIAGNOSTICS)720 5940 w
+(Detects reuse of a name as a tag or label.)9 1628 1 920 6120 t
+(CODE)720 6300 w
+( the commands between lines beginning)5 1616( Delete)1 313( labels.)1 286(Tags alone are much easier to handle than page)8 1905 4 920 6480 t
+(with)920 6600 w
+10 CW f
+(##)1123 6600 w
+10 R f
+(to restrict the code to tags.)5 1054 1 1268 6600 t
+9 CW f
+( tag and label definitions.)4 1458(# Extract)1 648 2 1120 6770 t
+(grep -h "\303\\.@" $* >xref.tmp)4 1458 1 1120 6880 t
+( commands for replacing tags, and check for redeclarations.)8 3186(# Create)1 594 2 1120 7045 t
+(awk ')1 270 1 1120 7155 t
+($1==".@label" { check\($2, $1\);)3 1620 1 1174 7265 t
+10 R f
+(August 20, 1991)2 664 1 2548 7670 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 9 9
+%%Page: 10 10
+/saveobj save def
+mark
+10 pagesetup
+10 R f
+(10)720 480 w
+8 R f
+(ALFRED V. AHO AND RAVI SETHI)5 1262 1 970 480 t
+9 CW f
+(})1930 830 w
+( check\($3, $1\);)2 810($1==".@tag" {)1 810 2 1174 940 t
+(printf "s/%s/%d/g\\n", $3, ++value[$2];)3 2052 1 2038 1050 t
+(})1930 1160 w
+( printf "/\303\\\\.@tag/d\\n")2 1242(END {)1 810 2 1174 1270 t
+(})1930 1380 w
+(func check\(name,cmd\) {)2 1188 1 1174 1490 t
+(if \(seen[name]\))1 810 1 1336 1600 t
+(system\( "echo "name" redeclared in "cmd" 1>&2" \);)7 2646 1 1552 1710 t
+(else seen[name] = 1;)3 1080 1 1336 1820 t
+(})1174 1930 w
+(' xref.tmp)1 540 1 1120 2040 t
+( commands for replacing page labels.)5 1944(## Create)1 594 2 1120 2205 t
+( up to just before "rm xref.tmp" if tags only are needed.)11 3078(# Delete)1 594 2 1120 2315 t
+(cat <<\\!)1 432 1 1120 2425 t
+(1i\\)1120 2535 w
+(.de @l\\)1 378 1 1120 2645 t
+(.ie '\\\\\\\\n\(.z'' .tm .@index \\\\\\\\$3 \\\\\\\\n% \\\\\\\\$2\\)6 2646 1 1120 2755 t
+(.el \\\\\\\\!.@label \\\\\\\\$2 \\\\\\\\$3\\)3 1674 1 1120 2865 t
+(..)1120 2975 w
+(/\303\\.@label/{)1120 3085 w
+(s/ .*/&&/)1 486 1 1370 3195 t
+(!)1120 3305 w
+(if test -f xref.index)3 1134 1 1120 3415 t
+(then {)1 324 1 1120 3525 t
+(awk ')1 270 1 1228 3635 t
+($1==".@label" { seen[$2] = 1;)4 1566 1 1336 3745 t
+(})2092 3855 w
+($1==".@index" { if \(!seen[$2]\) continue;)4 2160 1 1336 3965 t
+(s1 = sprintf\("%s\\ts/%s/%d/\\n", s1, $2, $3\);)5 2322 1 2200 4075 t
+(sg = sprintf\("%s\\ts/%s/%d/g\\n", sg, $2, $3\);)5 2376 1 2200 4185 t
+(})2092 4295 w
+( printf "%s}\\n", s1;)3 1080(END {)1 810 2 1336 4405 t
+(printf "/\303\\\\.@label/!{\\n%s\\n", sg;)2 1836 1 2200 4515 t
+(})2092 4625 w
+(' xref.tmp xref.index)2 1134 1 1228 4735 t
+(})1120 4845 w
+(fi)1120 4955 w
+(echo "}")1 432 1 1120 5065 t
+( up to here if tags only are needed.)8 1944(## Delete)1 594 2 1120 5175 t
+(rm xref.tmp)1 594 1 1120 5340 t
+10 R f
+(BUGS)720 5515 w
+(Special characters in tags and page labels are interpreted by)9 2433 1 920 5635 t
+10 CW f
+(sed)3384 5635 w
+10 R f
+(; tags and labels can safely be made)7 1476 1 3564 5635 t
+(up of letters, digits, and underscores.)5 1470 1 920 5755 t
+(August 20, 1991)2 664 1 2548 7680 t
+cleartomark
+showpage
+saveobj restore
+%%EndPage: 10 10
+%%Trailer
+done
+%%Pages: 10
+%%DocumentFonts: Courier Times-Bold Times-Italic Times-Roman Times-Roman Symbol

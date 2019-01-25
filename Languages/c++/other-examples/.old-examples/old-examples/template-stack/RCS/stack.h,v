@@ -1,0 +1,72 @@
+head	360.2;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+360.2
+date	2006.02.02.22.37.56;	author -;	state -;
+branches;
+next	360.1;
+
+360.1
+date	2006.02.02.22.34.41;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+360.2
+log
+@-
+@
+text
+@// $Id: stack.h,v 360.1 2006-02-02 14:34:41-08 - - $
+//
+// Generic stack.
+//
+
+#ifndef __STACK_H__
+#define __STACK_H__
+
+template <typename item_t>
+class stack {
+   private:
+      template <typename item_t> class node {
+            friend class stack<item_t>;
+         private:
+            item_t item;
+            node *link;
+            node (const item_t &item, node *link):
+                  item(item), link(link) {};
+      };
+      node<item_t> *top;
+   public:
+      stack (): top(0) {};
+      ~stack ();
+      bool empty () const {return top == 0; };
+      void push (const item_t &);
+      item_t pop ();
+      enum emptyexn {};
+};
+
+#endif
+
+@
+
+
+360.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stack.h,v 360.1 2006-02-02 14:29:22-08 - - $
+d6 3
+d30 2
+@

@@ -1,0 +1,1 @@
+("6.1" ("8e1f62714816c8238a51cc1d77fb3bb80a863b62" . "6d0198d25833b14018fc6a96dd344a5680b8f3b1") (collects #"eopl" #"tests" #"chapter4" #"mutable-pairs" #"pairval2.rkt") (collects #"eopl" #"main.rkt") (collects #"eopl" #"lang" #"reader.rkt"))

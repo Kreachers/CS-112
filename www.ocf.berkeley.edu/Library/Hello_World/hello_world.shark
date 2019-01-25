@@ -1,0 +1,4 @@
+/* hello.shark */
+hello:
+  writeln("Hello, world")
+end

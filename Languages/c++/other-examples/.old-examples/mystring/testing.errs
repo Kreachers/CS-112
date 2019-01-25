@@ -1,0 +1,94 @@
+
+Actual leaks report    (actual leaks:        10  total size:   74033 bytes)
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 65537 bytes at address 0xb8010
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] mystring::mystring() at line 87 in "mystring.cc"
+	[3] main() at line 43 in "teststring.cc"
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 4096 bytes at address 0xb5fe0
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] main() at line 41 in "teststring.cc"
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 4096 bytes at address 0xb6ff8
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] main() at line 42 in "teststring.cc"
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 128 bytes at address 0xc8030
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] mystring::mystring() at line 21 in "mystring.cc"
+	[3] main() at line 44 in "teststring.cc"
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 56 bytes at address 0xb5f90
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] mystring::mystring() at line 28 in "mystring.cc"
+	[3] main() at line 40 in "teststring.cc"
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 56 bytes at address 0xb5f40
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] mystring::mystring() at line 80 in "mystring.cc"
+	[3] main() at line 39 in "teststring.cc"
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 16 bytes at address 0xb5608
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] main() at line 40 in "teststring.cc"
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 16 bytes at address 0xb55e0
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] main() at line 39 in "teststring.cc"
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 16 bytes at address 0xb5658
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] main() at line 44 in "teststring.cc"
+
+<rtc> Memory Leak (mel):
+Found leaked block of size 16 bytes at address 0xb5630
+At time of allocation, the call stack was:
+	[1] operator new() at 0xfd5064c8 
+	[2] main() at line 43 in "teststring.cc"
+
+ 
+
+Possible leaks report  (possible leaks:       0  total size:       0 bytes)
+
+ 
+
+Blocks in use report   (blocks in use:       24  total size:    2347 bytes)
+
+ Total  % of Num of  Avg     Allocation call stack
+ Size    All Blocks  Size
+======= ==== ====== ======  =======================================
+   1539  65%      3    513  operator new < std::basic_filebuf<char,std::char_traits<char> >::basic_filebuf 
+     80   3%      1     80  operator new < __rwstd::facet_maker<std::numpunct<char> >::maker_func < std::locale::__make_explicit < __rwstd::digit_handler_base_1<char>::digit_handler_base_1 #Nvariant 1 < __rwstd::digit_writer<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::digit_writer < std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::do_put < std::basic_ostream<char,std::char_traits<char> >::operator<< < main 
+     80   3%      2     40  operator new < __rwstd::locale_vector<__rwstd::facet_imp*>::locale_vector #Nvariant 1 
+     80   3%      1     80  operator new < __rwstd::facet_maker<std::ctype<char> >::maker_func < std::locale::__make_explicit < __rwstd::digit_handler_base_1<char>::digit_handler_base_1 #Nvariant 1 < __rwstd::digit_writer<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::digit_writer < std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > >::do_put < std::basic_ostream<char,std::char_traits<char> >::operator<< < main 
+     80   3%      1     80  operator new < __rwstd::facet_maker<std::ctype<char> >::maker_func < std::locale::__make_explicit < std::basic_ios<char,std::char_traits<char> >::init < std::basic_ios<char,std::char_traits<char> >::basic_ios #Nvariant 1 < std::basic_istream<char,std::char_traits<char> >::basic_istream < std::ios_base::Init::Init #Nvariant 1 < __SUNW_init_iostreams 
+     72   3%      3     24  operator new < std::basic_filebuf<char,std::char_traits<char> >::basic_filebuf 
+     72   3%      3     24  operator new < std::basic_filebuf<char,std::char_traits<char> >::basic_filebuf 
+     64   2%      1     64  operator new < std::locale::init < std::basic_streambuf<char,std::char_traits<char> >::basic_streambuf < std::basic_filebuf<char,std::char_traits<char> >::basic_filebuf < std::ios_base::Init::Init #Nvariant 1 < __SUNW_init_iostreams < __Cimpl::cplus_init < 0xfd507f44
+     64   2%      1     64  operator new < std::locale::init < std::basic_streambuf<char,std::char_traits<char> >::basic_streambuf < std::basic_filebuf<char,std::char_traits<char> >::basic_filebuf < std::ios_base::Init::Init #Nvariant 1 < __SUNW_init_iostreams < __Cimpl::cplus_init < 0xfd507f44
+     52   2%      2     26  operator new < std::ctype<char>::ctype 
+     52   2%      2     26  operator new < std::ctype<char>::ctype 
+     40   1%      1     40  operator new < __rwstd::facet_maker<std::codecvt<char,char,__mbstate_t> >::maker_func < std::locale::__make_explicit < std::basic_filebuf<char,std::char_traits<char> >::overflow < std::basic_filebuf<char,std::char_traits<char> >::sync < std::operator<< < main 
+     40   1%      1     40  operator new < __rwstd::facet_maker<std::num_put<char,std::ostreambuf_iterator<char,std::char_traits<char> > > >::maker_func < std::locale::__make_explicit < std::basic_ostream<char,std::char_traits<char> >::operator<< < main 
+     24   1%      1     24  operator new < __Cimpl::__type_info_hash::insert < __Cimpl::__type_info_friend::new_type_info < mystring::dump < mystring::mystring < main 
+      8  <1%      1      8  operator new < __Cimpl::__type_info_hash::insert < __Cimpl::__type_info_friend::new_type_info < mystring::dump < mystring::mystring < main 
+ 

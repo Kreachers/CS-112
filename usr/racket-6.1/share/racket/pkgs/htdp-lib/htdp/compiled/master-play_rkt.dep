@@ -1,0 +1,1 @@
+("6.1" ("de57965da8313c844e2cda77280f658d5ee995e4" . "b7b7e41a86ce297acee7eea01cd00170c1586a89") (collects #"mzscheme" #"main.rkt") (collects #"lang" #"prim.rkt") (collects #"htdp" #"master.rkt"))

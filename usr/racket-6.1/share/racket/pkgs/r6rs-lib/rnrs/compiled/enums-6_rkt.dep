@@ -1,0 +1,1 @@
+("6.1" ("9620d3719645ecb37be35e195395feba140fc027" . "481861b4e83490ec0fe121cf09762203f1182113") (collects #"scheme" #"base.rkt") (collects #"rnrs" #"arithmetic" #"bitwise-6.rkt") (collects #"scheme" #"mpair.rkt") (collects #"scheme" #"runtime-config.rkt"))

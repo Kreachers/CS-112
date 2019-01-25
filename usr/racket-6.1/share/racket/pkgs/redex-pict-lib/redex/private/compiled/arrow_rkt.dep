@@ -1,0 +1,1 @@
+("6.1" ("289609ecd261325517e72ffa8d4128d98d153990" . "657d175fd2d1eb1af405af421d4a0102f8e85b24") (collects #"texpict" #"mrpict.rkt") (collects #"racket" #"contract.rkt") (collects #"racket" #"class.rkt") (collects #"racket" #"draw.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))
